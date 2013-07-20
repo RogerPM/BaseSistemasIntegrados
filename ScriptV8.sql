@@ -1,4 +1,3 @@
-
 use master
 if exists(select * from sysdatabases where name='TECAv8')
 drop database TECAv8
@@ -33,7 +32,7 @@ go
 create schema Taller
 go
 
---crear las tablas y a�adirlas al esquema de su repectivo modulo
+--crear las tablas y anadirlas al esquema de su repectivo modulo
 
 create table  Seguridad.Estado
 (
@@ -71,6 +70,7 @@ create table Seguridad.Empresa
 	 FechaInicioSistema    datetime   NOT NULL,
 	 IdCorreo int,
 	 SitioWeb varchar(50),
+	 Descripcion varchar(200),
 	 IdEstado int references Seguridad.Estado --E agregado	 
 )
 go
@@ -101,7 +101,7 @@ Apellido varchar(50),
 FechaNacimiento datetime null,
 genero varchar(10)not null,
 TipoIdentificacion varchar (11) not null,
-direcci�n varchar (100) not null,
+direccion varchar (100) not null,
 telefono int not null,
 mail varchar (50) not null,
 IdEmpresa int not null,
@@ -1021,7 +1021,7 @@ create table Inventario.TipoArticulo
 (
 IdEmpresa			int,
 IdTipoArticulo		int not null,
-Descripci�n			varchar(500)not null,
+Descripcion			varchar(500)not null,
 IdGrupo				int,
 IdUsuario			int,
 IdEstado			int,
@@ -2204,7 +2204,7 @@ IdCodigoBarra int not null,
 serie numeric not null,
 IdMarca int not null,--relacion tablas de inventario
 fecha_depreciacion date not null,
-a�o_vidaUtil int not null,
+ano_vidaUtil int not null,
 IdEstado int not null,--relacion tabla general de Estado
 fecha_registro date not null,
 --haciendo las referencias constraint
@@ -2365,7 +2365,7 @@ IdProveedor int not null,
 FechaConstruccion date not null,
 CodigoCatastral int not null,
 NumeroPisos int not null,
-A�osVidaUtil int not null,
+AnosVidaUtil int not null,
 Ubicacion varchar(100)not null, 
 DimensionAncho numeric not null,
 DimensionLargo numeric not null,
@@ -2809,5 +2809,3 @@ CREATE TABLE Taller.SalidaVehiculo
 	foreign key(IdOrdenTrabajo)references Taller.OrdenTrabajo
 )
 go
-
- 
