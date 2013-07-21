@@ -60,18 +60,19 @@ go
 create table Seguridad.Empresa
 (
 	 IdEmpresa    int   primary key,
-	 RazonSocial    varchar  (50) NOT NULL,
-	 NombreComercial    varchar  (50) NOT NULL,
-	 Ruc    int NOT NULL,
+	 RazonSocial    varchar  (50),
+	 NombreComercial    varchar  (50),
+	 Ruc    int,
 	 Direccion varchar(200) ,
-	 IdImagen	int not null,
-	 Logo    varchar(50)   NULL,
-	 Fondo    varchar(50)   NULL,
-	 FechaInicioSistema    datetime   NOT NULL,
-	 IdCorreo int,
-	 SitioWeb varchar(50),
-	 Descripcion varchar(200),
-	 IdEstado int references Seguridad.Estado --E agregado	 
+	 IdImagen	int references Seguridad.Imagen,
+	 Logo    varchar(50),
+	 Fondo    varchar(50),
+	 Logotipo image,
+	 FechaInicioSistema    datetime   not null,
+	 Correo varchar(70),
+	 SitioWeb varchar(70),
+	 Descripcion varchar(250),
+	 IdEstado int references Seguridad.Estado 	 
 )
 go
 
@@ -185,13 +186,14 @@ go
 /*USUARIO*/
 create table Seguridad.Usuario
 (
-	 IdUsuario    int references RecursosHumanos.Persona,
+	 IdUsuario    int,
 	 NombreUsuario varchar(20),
 	 Contrasena    varchar  (20) NULL,
 	 IdEstado    int NULL references Seguridad.Estado,
 	 IdImagen int references Seguridad.Imagen,
 	 IdPerfil int,
-	 primary key(IdUsuario)
+	 primary key(IdUsuario),
+	 foreign key (IdUsuario) references RecursosHumanos.Persona --el id usuario es el mismo q id persona
 )
 go
 
@@ -730,10 +732,43 @@ create table Seguridad.Perfil
 )
 go
 
+create table Seguridad.Horario
+(
+	IdHorario	int,
+	IdPerfil	int	not null references Seguridad.Perfil,
+	dia	varchar(10),
+	H00	bit	not null,
+	H01	bit	not null,
+	H02	bit	not null,
+	H03	bit	not null,
+	H04	bit	not null,
+	H05	bit	not null,
+	H06	bit	not null,
+	H07	bit	not null,
+	H08	bit	not null,
+	H09	bit	not null,
+	H10	bit	not null,
+	H11	bit	not null,
+	H12	bit	not null,
+	H13	bit	not null,
+	H14	bit	not null,
+	H15	bit	not null,
+	H16	bit	not null,
+	H17	bit	not null,
+	H18	bit	not null,
+	H19	bit	not null,
+	H20	bit	not null,
+	H21	bit	not null,
+	H22	bit	not null,
+	H23	bit	not null,
+	primary key (IdHorario,IdPerfil)
+)
+go
+
 /*PERMISO*/
 create table Seguridad.Permiso
 (
-	 IdPerfil    int   primary key references Seguridad.Perfil,
+	 IdPerfil    int references Seguridad.Perfil,
 	 IdPermiso    int NOT NULL, --secuencia
 	 IdPersona int references Seguridad.Usuario,
 	 IdEmpresa int references Seguridad.Empresa,
@@ -741,7 +776,8 @@ create table Seguridad.Permiso
 	 IdModulo int references Seguridad.Modulo,
 	 Lectura    bit   NOT NULL,
 	 Escritura    bit   NOT NULL,
-	 Eliminacion    bit   NOT NULL
+	 Eliminacion    bit   NOT NULL,
+	 primary key (IdPerfil,IdPermiso)
 )
 go
 
