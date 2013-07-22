@@ -2685,7 +2685,7 @@ IdTipoIdentificacion int  NOT NULL,
 Foto                 varchar(100)  NOT NULL ,
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdTipoPersona)references RecursosHumanos.TipoPersona
+foreign key (IdTipoPersona)references RecursosHumanos.TipoPersona,
 foreign key (IdTipoIdentificacion)references RecursosHumanos.TipoIdentificacion
 )
 go
@@ -2709,6 +2709,7 @@ create table Taller.Empleado
 IdEmpleado int not null primary key,
 Nombre varchar(50)not null,
 Identificacion int not null,
+IdEmpresa int,
 IdEstado  int not null,
 Sueldo 	  numeric(10,0) not null,
 foreign key (IdEmpresa)references Seguridad.Empresa,
