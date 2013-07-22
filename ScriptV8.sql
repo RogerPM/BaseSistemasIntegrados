@@ -67,7 +67,6 @@ create table Seguridad.Empresa
 	 IdImagen				int				references Seguridad.Imagen,
 	 Logo					varchar  (50),
 	 Fondo					varchar  (50),
-	 Logotipo				image,
 	 FechaInicioSistema		datetime,
 	 Correo					varchar  (70),
 	 SitioWeb				varchar  (70),
