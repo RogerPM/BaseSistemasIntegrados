@@ -1,0 +1,29 @@
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\obj\Debug\clases.csprojResolveAssemblyReference.cache
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\clases\obj\Debug\clases.csprojResolveAssemblyReference.cache
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\clases\obj\Debug\clases.csprojResolveAssemblyReference.cache
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v2\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v2\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v2\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v2\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v2\SistemasIntegrados\clases\obj\Debug\clases.pdb
