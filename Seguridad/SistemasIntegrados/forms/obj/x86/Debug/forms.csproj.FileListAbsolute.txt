@@ -1,0 +1,184 @@
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\bin\Debug\forms.exe
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\bin\Debug\forms.pdb
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\bin\Debug\clases.dll
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\bin\Debug\datos.dll
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\bin\Debug\clases.pdb
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\bin\Debug\datos.pdb
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\obj\x86\Debug\forms.csprojResolveAssemblyReference.cache
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\obj\x86\Debug\forms.frmPrincipal.resources
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\obj\x86\Debug\forms.Properties.Resources.resources
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\obj\x86\Debug\forms.csproj.GenerateResource.Cache
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\obj\x86\Debug\forms.exe
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\obj\x86\Debug\forms.pdb
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\obj\x86\Debug\forms.exe.licenses
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\bin\Debug\forms.exe.config
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\obj\x86\Debug\forms.frmPrincipalTECA.resources
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\obj\x86\Debug\forms.frmGUImetro.resources
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\forms\obj\x86\Debug\forms.frmSesion.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\bin\Debug\forms.exe.config
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.exe
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\bin\Debug\forms.exe
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\bin\Debug\forms.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\bin\Debug\clases.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\bin\Debug\datos.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\bin\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\bin\Debug\datos.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.csprojResolveAssemblyReference.cache
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.frmGUImetro.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.frmPrincipal.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.frmSesion.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.Properties.Resources.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.csproj.GenerateResource.Cache
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.exe.licenses
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCambiarContrasena.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCrearUsuario.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptAccesoxUsuario.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptEstadoxUsuario.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptHorarioAccesoxUsuario.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptPrivilegiosxUsuario.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCrearPerfil.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmAsignarPerfil.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmMonitoreoUsuarios.resources
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv1\SistemasIntegrados\forms\bin\Debug\forms.exe.config
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv1\SistemasIntegrados\forms\obj\x86\Debug\forms.exe
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv1\SistemasIntegrados\forms\obj\x86\Debug\forms.pdb
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\bin\Debug\forms.exe.config
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\bin\Debug\forms.exe
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\bin\Debug\forms.pdb
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\bin\Debug\clases.dll
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\bin\Debug\datos.dll
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\bin\Debug\clases.pdb
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\bin\Debug\datos.pdb
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.frmGUImetro.resources
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.frmPrincipal.resources
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.frmSesion.resources
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.Properties.Resources.resources
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmAsignarPerfil.resources
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCambiarContrasena.resources
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCrearPerfil.resources
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCrearUsuario.resources
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmMonitoreoUsuarios.resources
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptAccesoxUsuario.resources
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptEstadoxUsuario.resources
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptHorarioAccesoxUsuario.resources
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptPrivilegiosxUsuario.resources
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.exe.licenses
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.exe
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\forms\obj\x86\Debug\forms.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\bin\Debug\forms.exe.config
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.exe
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\bin\Debug\forms.exe
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\bin\Debug\clases.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\bin\Debug\datos.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\bin\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\bin\Debug\datos.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.csprojResolveAssemblyReference.cache
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.frmGUImetro.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.frmPrincipal.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.frmSesion.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Properties.Resources.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmAsignarPerfil.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCambiarContrasena.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCrearPerfil.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCrearUsuario.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmMonitoreoUsuarios.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptAccesoxUsuario.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptEstadoxUsuario.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptHorarioAccesoxUsuario.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptPrivilegiosxUsuario.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.csproj.GenerateResource.Cache
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.exe.licenses
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\bin\Debug\forms.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmEmpresa.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmFotoSeguridad.resources
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\tmp\SistemasIntegrados\forms\bin\Debug\forms.exe.config
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\tmp\SistemasIntegrados\forms\obj\x86\Debug\forms.exe
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\tmp\SistemasIntegrados\forms\obj\x86\Debug\forms.pdb
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\bin\Debug\forms.exe.config
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.exe
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.pdb
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\bin\Debug\forms.exe
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\bin\Debug\forms.pdb
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\bin\Debug\clases.dll
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\bin\Debug\datos.dll
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\bin\Debug\clases.pdb
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\bin\Debug\datos.pdb
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.csprojResolveAssemblyReference.cache
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.frmGUImetro.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.frmPrincipal.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.frmSesion.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Properties.Resources.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmAsignarPerfil.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCambiarContrasena.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCrearPerfil.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCrearUsuario.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmEmpresa.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmFotoSeguridad.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmMonitoreoUsuarios.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptAccesoxUsuario.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptEstadoxUsuario.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptHorarioAccesoxUsuario.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptPrivilegiosxUsuario.resources
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.csproj.GenerateResource.Cache
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\forms\obj\x86\Debug\forms.exe.licenses
+E:\SI\Development\v2\SistemasIntegrados\forms\bin\Debug\forms.exe.config
+E:\SI\Development\v2\SistemasIntegrados\forms\bin\Debug\forms.exe
+E:\SI\Development\v2\SistemasIntegrados\forms\bin\Debug\forms.pdb
+E:\SI\Development\v2\SistemasIntegrados\forms\bin\Debug\clases.dll
+E:\SI\Development\v2\SistemasIntegrados\forms\bin\Debug\datos.dll
+E:\SI\Development\v2\SistemasIntegrados\forms\bin\Debug\clases.pdb
+E:\SI\Development\v2\SistemasIntegrados\forms\bin\Debug\datos.pdb
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.csprojResolveAssemblyReference.cache
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.frmGUImetro.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.frmPrincipal.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.frmSesion.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.Properties.Resources.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmAsignarPerfil.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCambiarContrasena.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.FrmConsultar.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCrearPerfil.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCrearUsuario.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmEmpresa.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmFotoSeguridad.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmMonitoreoUsuarios.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptAccesoxUsuario.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptEstadoxUsuario.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptHorarioAccesoxUsuario.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptPrivilegiosxUsuario.resources
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.csproj.GenerateResource.Cache
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.exe.licenses
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.exe
+E:\SI\Development\v2\SistemasIntegrados\forms\obj\x86\Debug\forms.pdb
+E:\GitHub_Seguridad\SistemasIntegrados\forms\bin\Debug\forms.exe.config
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.exe
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.pdb
+E:\GitHub_Seguridad\SistemasIntegrados\forms\bin\Debug\forms.exe
+E:\GitHub_Seguridad\SistemasIntegrados\forms\bin\Debug\forms.pdb
+E:\GitHub_Seguridad\SistemasIntegrados\forms\bin\Debug\clases.dll
+E:\GitHub_Seguridad\SistemasIntegrados\forms\bin\Debug\datos.dll
+E:\GitHub_Seguridad\SistemasIntegrados\forms\bin\Debug\clases.pdb
+E:\GitHub_Seguridad\SistemasIntegrados\forms\bin\Debug\datos.pdb
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.csprojResolveAssemblyReference.cache
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.frmGUImetro.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.frmPrincipal.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.frmSesion.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Properties.Resources.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmAsignarPerfil.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCambiarContrasena.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.FrmConsultar.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCrearPerfil.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmCrearUsuario.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmEmpresa.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmFotoSeguridad.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmMonitoreoUsuarios.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptAccesoxUsuario.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptEstadoxUsuario.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptHorarioAccesoxUsuario.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptPrivilegiosxUsuario.resources
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.csproj.GenerateResource.Cache
+E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.exe.licenses
