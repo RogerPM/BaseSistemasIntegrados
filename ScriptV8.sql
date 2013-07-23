@@ -41,19 +41,12 @@ create table  Seguridad.Estado
 ) 
 go
 
-create table  Seguridad.TipoImagen
-(
-	 IdTipoImagen		int			primary key,
-	 Descripcion		varchar(50)
-) 
-go
 
 create table  Seguridad.Imagen
 (
 	 IdImagen			int			primary key,
 	 Descripcion		varchar(50),
-	 Imagen				image,
-	 IdTipoImagen		int			references Seguridad.TipoImagen --E agregado sintaxis
+	 Imagen				image
 )
 go
 
