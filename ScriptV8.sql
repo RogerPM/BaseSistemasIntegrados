@@ -726,6 +726,7 @@ create table Seguridad.Horario
 (
 	IdHorario int,
 	IdPerfil int	not null references Seguridad.Perfil,
+	Secuencia int not null,
 	dia	varchar(10),
 	H00	bit	not null,
 	H01	bit	not null,
@@ -751,7 +752,7 @@ create table Seguridad.Horario
 	H21	bit	not null,
 	H22	bit	not null,
 	H23	bit	not null,
-	primary key (IdHorario,IdPerfil)
+	primary key (IdHorario,IdPerfil,Secuencia)
 )
 go
 
