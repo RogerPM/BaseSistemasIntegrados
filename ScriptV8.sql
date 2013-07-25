@@ -2866,11 +2866,12 @@ CREATE TABLE Taller.ManoObra
 	Total			 numeric(10,0) not null,
 	IdEstado 	     int  not null,
 	IdEmpresa		 int  not null,
-	foreign key (IdEstado)references Seguridad.Estado,
+	foreign key (IdEstado)references Taller.Estado,
 	foreign key (IdEmpresa)references Seguridad.Empresa,
 	foreign key (IdPresupuesto)references Taller.Presupuesto,
 	foreign key (IdOrdenTrabajo)references Taller.OrdenTrabajo,
-	foreign key (IdManoObra)references Taller.ManoObra
+	foreign key (IdManoObra)references Taller.ManoObra,
+	foreign key (IdTipoTrabajo)references Taller.TipoTrabajo
 )
 go
 
