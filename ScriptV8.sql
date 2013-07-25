@@ -1,15 +1,15 @@
 use master
-if exists(select * from sysdatabases where name='TECA')
-drop database TECA
-PRINT N'base eliminada'
+if exists(select * from sysdatabases where name='TECAv8')
+drop database TECAv8
+PRINT N'1.base eliminada'
 go
 
-create database TECA
-PRINT N'base creada'
+create database TECAv8
+PRINT N'2.base creada'
 go
 
 --crear los esquemas respectivos para cada Modulo
-use TECA
+use TECAv8
 go
 create schema Seguridad
 go
