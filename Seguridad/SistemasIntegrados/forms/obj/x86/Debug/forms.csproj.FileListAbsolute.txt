@@ -182,3 +182,6 @@ E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRp
 E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.Seguridad.frmRptPrivilegiosxUsuario.resources
 E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.csproj.GenerateResource.Cache
 E:\GitHub_Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.exe.licenses
+C:\Users\Jaime\Desktop\BaseSistemasIntegrados\Seguridad\SistemasIntegrados\forms\bin\Debug\forms.exe.config
+C:\Users\Jaime\Desktop\BaseSistemasIntegrados\Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.exe
+C:\Users\Jaime\Desktop\BaseSistemasIntegrados\Seguridad\SistemasIntegrados\forms\obj\x86\Debug\forms.pdb
