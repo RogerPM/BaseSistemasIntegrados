@@ -5,7 +5,7 @@ PRINT N'1.base eliminada'
 go
 
 create database TECA
-PRINT N'2.base creada'
+PRINT N'2.base creada '
 go
 
 --crear los esquemas respectivos para cada Modulo
