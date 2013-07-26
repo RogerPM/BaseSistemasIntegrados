@@ -916,33 +916,18 @@ create table Contabilidad.ModeloAsiento
 go
 
 --Inventario 
-create table Inventario.SubGrupo
-(
-IdEmpresa	int,
-IdSubGrupo	int not null,
-Descripcion	varchar(100) not null,
-IdEstado	int,
-IdUsuario	int
-primary key (IdSubGrupo),
-foreign key (IdEmpresa) references Seguridad.Empresa,
-foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
-)
-go
 
 create table Inventario.Grupo
 (
 IdEmpresa	int,
 IdGrupo	int not null,
 Descripcion	varchar(100) not null,
-IdSubGrupo	int,
 IdEstado	int,
 IdUsuario	int
 primary key (IdGrupo),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
 foreign key (IdUsuario) references Seguridad.Usuario,
-foreign key (IdSubGrupo)references Inventario.SubGrupo,
 )
 go
 
@@ -961,6 +946,7 @@ foreign key (IdUsuario) references Seguridad.Usuario,
 foreign key (IdGrupo)references Inventario.Grupo,
 )
 go
+
 
 create table Compras.Proveedor
 (
@@ -1057,7 +1043,7 @@ IdBodega	int not null,
 IdTelefono	int not null,
 primary key(IdBodega,IdTelefono)
 )
-go  
+go
 
 create table Inventario.IngresoEgresoCab
 (
@@ -1160,27 +1146,12 @@ foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
 
-create table Inventario.Modelo
-(
-IdEmpresa	int,
-IdModelo	int not null,
-Descripcion	varchar(100) not null,
-IdUsuario	int,
-IdEstado	int,
-Fecha datetime,
-primary key (IdModelo),
-foreign key (IdEmpresa) references Seguridad.Empresa,
-foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
-)
-go
 
 create table Inventario.Marca
 (
 IdEmpresa	int,
 IdMarca	int not null,
 Descripcion	varchar(100) not null,
-IdModelo	int,
 IdUsuario	int,
 IdEstado	int,
 Fecha datetime,
@@ -1188,7 +1159,23 @@ primary key (IdMarca),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
 foreign key (IdUsuario) references Seguridad.Usuario,
-foreign key (IdModelo) references Inventario.Modelo,
+)
+go
+
+create table Inventario.Modelo
+(
+IdEmpresa	int,
+IdModelo	int not null,
+Descripcion	varchar(100) not null,
+IdMarca int,
+IdUsuario	int,
+IdEstado	int,
+Fecha datetime,
+primary key (IdModelo),
+foreign key (IdEmpresa) references Seguridad.Empresa,
+foreign key (IdEstado) references Seguridad.Estado,
+foreign key (IdUsuario) references Seguridad.Usuario,
+foreign key (IdMarca) references Inventario.Marca,
 )
 go
 
@@ -1220,7 +1207,7 @@ IdUnidadMedida	int not null,
 FechaCaducidad	date,
 IdTipoArticulo	int not null,
 IdGrupo	int not null,
-IdSubGrupo	int,
+--IdSubgrupo int,
 IdChasis	int,
 IdTipoMotor	int,
 NroPlaca	int,
@@ -1239,7 +1226,7 @@ foreign key(IdEmpresa)references Seguridad.Empresa,
 foreign key(IdUnidadMedida)references Inventario.UnidadMedida,
 foreign key (IdTipoArticulo)references Inventario.TipoArticulo,
 foreign key (IdGrupo)references Inventario.Grupo,
-foreign key (IdSubGrupo)references Inventario.SubGrupo,
+--foreign key (IdSubgrupo)references ActivoFijo.Subgrupo,
 foreign key (IdChasis)references Inventario.Chasis,
 foreign key (IdTipoMotor)references Inventario.TipoMotor,
 foreign key (IdTipoCombustible)references Inventario.TipoCombustible,
@@ -1368,7 +1355,7 @@ IdTransaccion	int,
 NroMovimiento	int not null,
 IdArticulo	int,
 IdGrupo	int,
-IdSubGrupo	int,
+IdSubgrupo 	int,
 IdUnidadMedida	int,
 Cantidad	int,
 Costo	numeric(5,2),
@@ -1380,7 +1367,7 @@ primary key (NroMovimiento),
 foreign key(IdTransaccion)references Contabilidad.TipoTransaccion,
 foreign key(IdArticulo,IdEmpresa)references Inventario.Articulo,
 foreign key(IdGrupo)references Inventario.Grupo,
-foreign key(IdSubGrupo)references Inventario.SubGrupo,
+--foreign key (IdSubgrupo)references ActivoFijo.Subgrupo,
 foreign key(IdUnidadMedida)references Inventario.UnidadMedida,
 foreign key(IdResponsable)references RecursosHumanos.Persona,
 foreign key(IdUsuario)references Seguridad.Usuario
@@ -2279,7 +2266,7 @@ create table ActivoFijo.ActivoFijo
 	IdUsuario 				int not null,     --relacion tablas de RHHH de la tabla Personal
 	IdTipo 					int not null,--relacion tablas de inventario que es el tipo de articulo que ellos poseen
 	IdGrupo 				int not null,--relacion tablas de inventario
-	IdSubgrupo 				int not null,--relacion tablas de inventario
+	--IdSubgrupo 				int not null,--relacion tablas de inventario
 	IdArticulo 				int not null,--relacion tablas de inventario
 	descripcion				char,
 	valor_nomial			float not null,
@@ -2300,7 +2287,7 @@ create table ActivoFijo.ActivoFijo
 	foreign key (IdUsuario)references Seguridad.Usuario,--relacaion tablas de RRHH
 	foreign key (IdTipo)references Inventario.TipoArticulo,--relacion tablas de inventario,
 	foreign key (IdGrupo)references Inventario.Grupo,--relacion tablas de inventario,
-	foreign key (IdSubgrupo)references Inventario.SubGrupo,--relacion tablas de inventario,
+	--foreign key (IdSubgrupo)references Inventario.SubGrupo,--relacion tablas de inventario,
 	foreign key (IdArticulo,IdEmpresa)references Inventario.Articulo,--relacion tablas de inventario,
 	foreign key (IdMarca)references Inventario.Marca,--relacion tablas de inventario,
 	foreign key (IdCodigoBarra) references ActivoFijo.CodigoBarra,
@@ -2782,7 +2769,7 @@ IdUnidadMedida	int not null,
 FechaCaducidad	date,
 IdTipoArticulo	int not null,
 IdGrupo			int not null,
-IdSubGrupo		int, 
+--IdSubGrupo		int, 
 IdChasis		int, 
 IdTipoMotor		int,
 NroPlaca		int,
@@ -2800,7 +2787,7 @@ foreign key(IdEmpresa)references Seguridad.Empresa,
 foreign key(IdUnidadMedida)references Inventario.UnidadMedida,
 foreign key (IdTipoArticulo)references Inventario.TipoArticulo,
 foreign key (IdGrupo)references Inventario.Grupo,
-foreign key (IdSubGrupo)references Inventario.SubGrupo,
+--foreign key (IdSubGrupo)references Inventario.SubGrupo,
 foreign key (IdChasis)references Inventario.Chasis,
 foreign key (IdTipoMotor)references Inventario.TipoMotor,
 foreign key (IdTipoCombustible)references Inventario.TipoCombustible,
