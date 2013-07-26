@@ -1,15 +1,15 @@
 use master
-if exists(select * from sysdatabases where name='TECAv8')
-drop database TECAv8
+if exists(select * from sysdatabases where name='TECA')
+drop database TECA
 PRINT N'1.base eliminada'
 go
 
-create database TECAv8
+create database TECA
 PRINT N'2.base creada'
 go
 
 --crear los esquemas respectivos para cada Modulo
-use TECAv8
+use TECA
 go
 create schema Seguridad
 go
@@ -912,22 +912,20 @@ create table Contabilidad.ModeloAsiento
 go
 
 /*para integrar compras con inventario*/
-CREATE TABLE Compras.Cotizacion  --ok
+CREATE TABLE Compras.Cotizacion --100%
 (
-	Numero				int   NOT NULL,
-	idEmpresa			int   NOT NULL,
-    IdUsuario			int NOT NULL,
-	idProveedor			int   NOT NULL,
-	--NumeroPedido		int   NOT NULL,
-	Fecha				date NOT NULL,
-    FechaModificacion	datetime NOT NULL,
-	idEstado			int   NOT NULL,
- 	foreign key(IdEmpresa)references Seguridad.Empresa,
-    foreign key(IdUsuario)references Seguridad.Usuario,
- 	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (idProveedor) references RecursosHumanos.Proveedor,	
-	--foreign key (NumeroPedido) references Compras.Pedido,
-	primary key(Numero,IdEmpresa)
+Numero				int NOT NULL,
+idEmpresa			int NOT NULL,
+IdUsuario			int NOT NULL,
+--NumeroPedido		int NOT NULL,
+Fecha				date NOT NULL,
+FechaModificacion	datetime NOT NULL,
+idEstado			int NOT NULL,
+foreign key(IdEmpresa)references Seguridad.Empresa,
+foreign key(IdUsuario)references Seguridad.Usuario,
+foreign key (IdEstado) references Seguridad.Estado,
+--foreign key (NumeroPedido) references Compras.Pedido,
+primary key(Numero,IdEmpresa)
 )
  GO
 
@@ -950,6 +948,81 @@ CREATE TABLE Compras.OrdenCompra  --ok
 	primary key(IdOrdenCompra,IdEmpresa)
 )
 GO
+
+--Inventario 
+create table Inventario.SubGrupo
+(
+IdEmpresa	int,
+IdSubGrupo	int not null,
+Descripcion	varchar(100) not null,
+IdEstado	int,
+IdUsuario	int
+primary key (IdSubGrupo),
+foreign key (IdEmpresa) references Seguridad.Empresa,
+foreign key (IdEstado) references Seguridad.Estado,
+foreign key (IdUsuario) references Seguridad.Usuario,
+)
+go
+
+create table Inventario.Grupo
+(
+IdEmpresa	int,
+IdGrupo	int not null,
+Descripcion	varchar(100) not null,
+IdSubGrupo	int,
+IdEstado	int,
+IdUsuario	int
+primary key (IdGrupo),
+foreign key (IdEmpresa) references Seguridad.Empresa,
+foreign key (IdEstado) references Seguridad.Estado,
+foreign key (IdUsuario) references Seguridad.Usuario,
+foreign key (IdSubGrupo)references Inventario.SubGrupo,
+)
+go
+
+create table Inventario.TipoArticulo
+(
+IdEmpresa	int,
+IdTipoArticulo	int not null,
+Descripcion	varchar(500)not null,
+IdGrupo	int,
+IdUsuario	int,
+IdEstado	int,
+primary key (IdTipoArticulo),
+foreign key (IdEmpresa) references Seguridad.Empresa,
+foreign key (IdEstado) references Seguridad.Estado,
+foreign key (IdUsuario) references Seguridad.Usuario,
+foreign key (IdGrupo)references Inventario.Grupo,
+)
+go
+/*PROVEEDOR compras*/
+create table Compras.Proveedor
+(
+IdProveedor			int not null primary key,
+IdEmpresa			int not null,
+Identificacion		int not null,
+IdTipoArticulo		int not null,
+Estado				int not null,
+foreign key (Identificacion)references RecursosHumanos.Persona,
+foreign key (IdEmpresa)references Seguridad.Empresa,
+foreign key (IdTipoArticulo)references Inventario.TipoArticulo,
+foreign key (Estado) references Seguridad.Estado
+)
+go
+
+ Create Table Compras.ProveedorXCotizacion--100%
+(
+Numero				int not null,
+idEmpresa			int	not null,
+idProveedor			int not null,
+foreign key (Numero, IdEmpresa) references Compras.Cotizacion,
+
+foreign key (idProveedor) references Compras.Proveedor,
+Primary key (Numero,idEmpresa,IdProveedor)
+)
+go
+
+
 
 /********************************INVENTARIO************************/
 
@@ -1020,54 +1093,7 @@ foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
 
-create table Inventario.SubGrupo
-(
-IdEmpresa	int,
-IdSubGrupo	int not null,
-Descripcion	varchar(100) not null,
-IdEstado	int,
-IdUsuario	int,
-Fecha datetime,
-primary key (IdSubGrupo),
-foreign key (IdEmpresa) references Seguridad.Empresa,
-foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
-)
-go
 
-create table Inventario.Grupo
-(
-IdEmpresa	int,
-IdGrupo	int not null,
-Descripcion	varchar(100) not null,
-IdSubGrupo	int,
-IdEstado	int,
-IdUsuario	int,
-Fecha datetime,
-primary key (IdGrupo),
-foreign key (IdEmpresa) references Seguridad.Empresa,
-foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
-foreign key (IdSubGrupo)references Inventario.SubGrupo,
-)
-go
-
-create table Inventario.TipoArticulo
-(
-IdEmpresa	int,
-IdTipoArticulo	int not null,
-Descripcion	varchar(500)not null,
-IdGrupo	int,
-IdUsuario	int,
-IdEstado	int,
-Fecha datetime,
-primary key (IdTipoArticulo),
-foreign key (IdEmpresa) references Seguridad.Empresa,
-foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
-foreign key (IdGrupo)references Inventario.Grupo,
-)
-go
 
 create table Inventario.Chasis
 (
@@ -2677,6 +2703,8 @@ CREATE TABLE Compras.CotizacionDet  --ok
 	foreign key (NumeroPedido,IdEmpresa) references Compras.Pedido,	
 	primary key(Numero,IdEmpresa)
 )
+PRINT N'Compras: Falta que implementen bien la forma de pago'
+go
 
 
 /**************************TALLER************************/
@@ -2866,7 +2894,7 @@ CREATE TABLE Taller.ManoObra
 	Total			 numeric(10,0) not null,
 	IdEstado 	     int  not null,
 	IdEmpresa		 int  not null,
-	foreign key (IdEstado)references Taller.Estado,
+	foreign key (IdEstado)references Seguridad.Estado,
 	foreign key (IdEmpresa)references Seguridad.Empresa,
 	foreign key (IdPresupuesto)references Taller.Presupuesto,
 	foreign key (IdOrdenTrabajo)references Taller.OrdenTrabajo,
