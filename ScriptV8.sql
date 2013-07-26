@@ -58,12 +58,15 @@ create table Seguridad.Empresa
 	 NombreComercial		varchar  (50),
 	 Ruc					varchar  (20),
 	 Direccion				varchar	 (200),
+	 Logo varchar(50),
+     Fondo varchar(50),
 	 Logotipo				image,
 	 FechaInicioSistema		datetime,
 	 Correo					varchar  (70),
 	 SitioWeb				varchar  (70),
 	 Descripcion			varchar  (250),
-	 IdEstado				int				references Seguridad.Estado 	 
+	 IdEstado				int				references Seguridad.Estado,
+	  	 
 )
 go
 
