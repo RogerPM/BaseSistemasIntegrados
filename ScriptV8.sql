@@ -188,7 +188,7 @@ create table Seguridad.Usuario
 )
 go
 
-/*PROVEEDOR*/
+/*PROVEEDOR REasignado a Compras.Proveedor hasta que RRHH tome la batuta*/
 create table RecursosHumanos.Proveedor
 (
 	IdProveedor int not null primary key,
@@ -912,44 +912,6 @@ create table Contabilidad.ModeloAsiento
 )
 go
 
-/*para integrar compras con inventario*/
-CREATE TABLE Compras.Cotizacion --100%
-(
-Numero				int NOT NULL,
-idEmpresa			int NOT NULL,
-IdUsuario			int NOT NULL,
---NumeroPedido		int NOT NULL,
-Fecha				date NOT NULL,
-FechaModificacion	datetime NOT NULL,
-idEstado			int NOT NULL,
-foreign key(IdEmpresa)references Seguridad.Empresa,
-foreign key(IdUsuario)references Seguridad.Usuario,
-foreign key (IdEstado) references Seguridad.Estado,
---foreign key (NumeroPedido) references Compras.Pedido,
-primary key(Numero,IdEmpresa)
-)
- GO
-
-CREATE TABLE Compras.OrdenCompra  --ok
-(
-	IdOrdenCompra		int		NOT NULL,
-	idEmpresa			int		NOT NULL,
-    IdUsuario			int		NOT NULL,
-	Fecha				date	NOT NULL,
-    FechaModificacion	datetime NOT NULL,
-	idProveedor			int		NOT NULL,
-    NumeroCotizacion    int		NOT NULL,
-	idEstado			int   NOT NULL,
-	Observaciones		varchar   (300),
-	foreign key(IdEmpresa)references Seguridad.Empresa,
-    foreign key(IdUsuario)references Seguridad.Usuario,
-	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key(idProveedor)references RecursosHumanos.Proveedor,
-	foreign key (idEmpresa,NumeroCotizacion) references Compras.Cotizacion,
-	primary key(IdOrdenCompra,IdEmpresa)
-)
-GO
-
 --Inventario 
 create table Inventario.SubGrupo
 (
@@ -996,7 +958,7 @@ foreign key (IdUsuario) references Seguridad.Usuario,
 foreign key (IdGrupo)references Inventario.Grupo,
 )
 go
-/*PROVEEDOR compras*/
+
 create table Compras.Proveedor
 (
 IdProveedor			int not null primary key,
@@ -1011,7 +973,46 @@ foreign key (Estado) references Seguridad.Estado
 )
 go
 
- Create Table Compras.ProveedorXCotizacion--100%
+/*para integrar compras con inventario*/
+CREATE TABLE Compras.Cotizacion --100%
+(
+Numero				int NOT NULL,
+idEmpresa			int NOT NULL,
+IdUsuario			int NOT NULL,
+--NumeroPedido		int NOT NULL,
+Fecha				date NOT NULL,
+FechaModificacion	datetime NOT NULL,
+idEstado			int NOT NULL,
+foreign key(IdEmpresa)references Seguridad.Empresa,
+foreign key(IdUsuario)references Seguridad.Usuario,
+foreign key (IdEstado) references Seguridad.Estado,
+--foreign key (NumeroPedido) references Compras.Pedido,
+primary key(Numero,IdEmpresa)
+)
+ GO
+
+CREATE TABLE Compras.OrdenCompra  --ok
+(
+	IdOrdenCompra		int		NOT NULL,
+	idEmpresa			int		NOT NULL,
+    IdUsuario			int		NOT NULL,
+	Fecha				date	NOT NULL,
+    FechaModificacion	datetime NOT NULL,
+	idProveedor			int		NOT NULL,
+    NumeroCotizacion    int		NOT NULL,
+	idEstado			int   NOT NULL,
+	Observaciones		varchar   (300),
+	foreign key(IdEmpresa)references Seguridad.Empresa,
+    foreign key(IdUsuario)references Seguridad.Usuario,
+	foreign key (IdEstado) references Seguridad.Estado,
+	foreign key(idProveedor)references Compras.Proveedor,
+	foreign key (idEmpresa,NumeroCotizacion) references Compras.Cotizacion,
+	primary key(IdOrdenCompra,IdEmpresa)
+)
+GO
+
+
+Create Table Compras.ProveedorXCotizacion--100%
 (
 Numero				int not null,
 idEmpresa			int	not null,
@@ -2324,7 +2325,7 @@ create table ActivoFijo.Terreno
 	FechaLegalizacion		date not null,
 	--haciendo las referencias constraint
 	foreign key (IdActivoFijo) references ActivoFijo.ActivoFijo,
-	foreign key (IdProveedor) references RecursosHumanos.Proveedor,
+	foreign key (IdProveedor) references Compras.Proveedor,
 	foreign key (IdTipoTerreno) references ActivoFijo.TipoTerreno
 )
 go
@@ -2449,7 +2450,7 @@ create table ActivoFijo.Edifico
 	observacion 				varchar(180)not null,
 	--haciendo las referencias constraint
 	foreign key (IdActivoFijo) references ActivoFijo.ActivoFijo,
-	foreign key (IdProveedor) references RecursosHumanos.Proveedor
+	foreign key (IdProveedor) references Compras.Proveedor
 )
 go
 
@@ -2576,7 +2577,7 @@ CREATE TABLE Compras.DevolucionCompra  --ok
  	foreign key(IdEmpresa)references Seguridad.Empresa,
     foreign key(IdUsuario)references Seguridad.Usuario,
  	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (idProveedor) references RecursosHumanos.Proveedor,
+	foreign key (idProveedor) references Compras.Proveedor,
 	foreign key (idEmpleado,IdEmpresa) references RecursosHumanos.Empleado,
 	primary key(Numero,IdEmpresa)
 )
