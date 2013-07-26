@@ -1989,7 +1989,7 @@ create table CuentaxPagar.CuentaBancaria
 (
 	Serie 				int not null,
 	FechaActual			date not null,
-	TipoCuenta			char not null,
+	TipoCuenta			int not null,
 	NroCta 				int not null,
 	IdBanco 			int not null,
 	IdEmpresa 			int not null,
