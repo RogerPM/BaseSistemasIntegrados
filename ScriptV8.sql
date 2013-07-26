@@ -33,6 +33,7 @@ create schema Taller
 go
 
 --crear las tablas y anadirlas al esquema de su repectivo modulo
+--seguridad
 
 create table  Seguridad.Estado
 (
