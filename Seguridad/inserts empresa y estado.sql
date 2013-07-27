@@ -6,7 +6,7 @@ go
 insert into Seguridad.Estado values(2,'Inactiva')
 go
 insert into Seguridad.Estado values(3,'Remodelacion')
-
+go
 go
 insert into Seguridad.Estado values(4,'Bancarota')
 go
