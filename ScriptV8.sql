@@ -179,7 +179,7 @@ go
 /*USUARIO*/
 create table Seguridad.Usuario
 (
-	 IdUsuario			int				references RecursosHumanos.Persona, 
+	 IdUsuario			int, 
 	 NombreUsuario		varchar(20),
 	 Contrasena			varchar(20),
 	 IdEstado			int					references Seguridad.Estado,
