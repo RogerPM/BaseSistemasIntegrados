@@ -1988,7 +1988,6 @@ go
 create table CuentaxPagar.CuentaBancaria
 (
 	Serie 				int not null,
-	FechaActual			date not null,
 	TipoCuenta			int not null,
 	NroCta 				int not null,
 	IdBanco 			int not null,
