@@ -932,28 +932,31 @@ create table Inventario.Grupo
 IdEmpresa	int,
 IdGrupo	int not null,
 Descripcion	varchar(100) not null,
+IdTipoArticulo int,
 IdEstado	int,
 IdUsuario	int
 primary key (IdGrupo),
 foreign key (IdEmpresa) references Seguridad.Empresa,
+foreign key (IdTipoArticulo) references Inventario.TipoArticulo,
 foreign key (IdEstado) references Seguridad.Estado,
 foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
+
+
+
 
 create table Inventario.TipoArticulo
 (
 IdEmpresa	int,
 IdTipoArticulo	int not null,
 Descripcion	varchar(500)not null,
-IdGrupo	int,
 IdUsuario	int,
 IdEstado	int,
 primary key (IdTipoArticulo),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
 foreign key (IdUsuario) references Seguridad.Usuario,
-foreign key (IdGrupo)references Inventario.Grupo,
 )
 go
 
