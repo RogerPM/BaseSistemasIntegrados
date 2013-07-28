@@ -63,6 +63,7 @@ create table Seguridad.Empresa
 	 FechaInicioSistema		datetime,
 	 Correo					varchar  (70),
 	 SitioWeb				varchar  (70),
+	 Sector					varchar(20),
 	 Descripcion			varchar  (250),
 	 IdEstado				int				references Seguridad.Estado
 )
