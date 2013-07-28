@@ -9,7 +9,6 @@ insert into Seguridad.Estado values(2,'Inactiva')
 go
 insert into Seguridad.Estado values(3,'Remodelacion')
 go
-go
 insert into Seguridad.Estado values(4,'Bancarota')
 go
 insert into Seguridad.Estado values(5,'Proceso de Fusion')
@@ -17,6 +16,10 @@ go
 insert into Seguridad.Estado values(6,'Incautada')
 go
 insert into Seguridad.Estado values(7,'Clausurada')
+go
+insert into Seguridad.Estado values(8,'Nuevo')
+go
+insert into Seguridad.Estado values(9,'Usado')
 go
 
 /*********************EMPRESA*****************/
