@@ -87,11 +87,11 @@
     <Compile Include="frmGUImetro.Designer.cs">
       <DependentUpon>frmGUImetro.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="Seguridad\frmPrincipalSeguridad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <Compile Include="Seguridad\frmPrincipalSeguridad.Designer.cs">
+      <DependentUpon>frmPrincipalSeguridad.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSesion.cs">
       <SubType>Form</SubType>
@@ -176,8 +176,8 @@
     <EmbeddedResource Include="frmGUImetro.resx">
       <DependentUpon>frmGUImetro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="Seguridad\frmPrincipalSeguridad.resx">
+      <DependentUpon>frmPrincipalSeguridad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSesion.resx">
       <DependentUpon>frmSesion.cs</DependentUpon>
@@ -234,6 +234,7 @@
     </None>
     <None Include="Properties\DataSources\clases.Class1.datasource" />
     <None Include="Properties\DataSources\clases.Seguridad.clsEmpresa.datasource" />
+    <None Include="Properties\DataSources\clases.Seguridad.clsEstado.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -395,6 +396,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16-em-plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

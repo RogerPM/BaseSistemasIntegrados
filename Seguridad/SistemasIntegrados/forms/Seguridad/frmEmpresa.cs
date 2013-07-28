@@ -20,7 +20,6 @@ namespace forms.Seguridad
         datEmpresa oDatEmpresa=new datEmpresa();
         public clsEstado oClsEstadoEmpresa = new clsEstado(); //se hace instancia generica para estado de la empresa
         datEstado oDatEstado = new datEstado();
-        MemoryStream ms = new MemoryStream();//para imagen
         
         public frmEmpresa()
         {
@@ -30,31 +29,49 @@ namespace forms.Seguridad
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             borrar();
+            btnModificar.Enabled = false;
+            habilitar(true);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             FrmConsultar f = new FrmConsultar();
             f.ShowDialog();
-            oEmpresa = f.e;
+            oEmpresa = f.cls; 
             txtcodigo.Text = Convert.ToString(oEmpresa.idEmpresa);
             txtRazonSocial.Text = Convert.ToString(oEmpresa.razonSocial);
             txtNombreComercial.Text = Convert.ToString(oEmpresa.nombreComercial);
             txtRuc.Text = Convert.ToString(oEmpresa.ruc);
-            //cbxTipoEmp.SelectedText = Convert.ToString(oEmpresa.tipoEmpresa);//agregar a tabla
             txtDireccion.Text = Convert.ToString(oEmpresa.direccion);
+            rdbSector.EditValue = Convert.ToString(oEmpresa.sector);
             txtDescripcion.Text = Convert.ToString(oEmpresa.descripcion);
-            cbxEstado.Text = oDatEstado.getDescripcionSegunId(oEmpresa.idEstado);
+            cbxEstado.EditValue = oDatEstado.getDescripcionSegunId(oEmpresa.idEstado);
             txtCorreoElectronico.Text = Convert.ToString(oEmpresa.correo);
             txtPaginaWeb.Text = Convert.ToString(oEmpresa.sitioWeb);
-         //   pictureBox1.Image = null;
-         //   pictureBox1.Image = Image.FromStream(new System.IO.MemoryStream(oEmpresa.logotipo.ToArray()));
-            //pictureBox1.BackgroundImage = Image.FromStream(ms);
+            txtFotoUrl.Text = "";
+            if (oEmpresa.logotipo != null)
+            {
+                MemoryStream s = new MemoryStream(oEmpresa.logotipo);
+                //pictureBox1.Image = Image.FromStream(s);
+                pictureBox1.BackgroundImage = Image.FromStream(s);
+                pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            }
+            else
+            {
+                pictureBox1.BackgroundImage = null;
+            }
+            habilitar(false);
+            btnModificar.Enabled = true;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult r;
+            r = MessageBox.Show(msj.Salir, msj.Titulo, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            if (r == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -68,15 +85,55 @@ namespace forms.Seguridad
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            getValores();
-            if (oDatEmpresa.Guardar(oEmpresa))
+            if (getValores())
             {
-                MessageBox.Show(msj.Guardar_ok, msj.Titulo, MessageBoxButtons.OK);
+                if (oEmpresa.idEmpresa==0)
+                {
+                    if (oDatEmpresa.Guardar(oEmpresa))
+                    {
+                        MessageBox.Show(msj.Guardar_ok, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btnModificar.Enabled = true;
+                        habilitar(false);
+                        borrar();
+                    }
+                    else
+                    {
+                        MessageBox.Show(msj.Guardar_error, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    if (oDatEmpresa.Modificar(oEmpresa))
+                    {
+                        MessageBox.Show(msj.Editar_ok, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btnModificar.Enabled = true;
+                        btnModificar.Enabled = false;
+                        borrar();
+                    }
+                    else
+                    {
+                        MessageBox.Show(msj.Editar_error, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
             else
             {
-                MessageBox.Show(msj.Guardar_error, msj.Titulo, MessageBoxButtons.OK);
+                MessageBox.Show(msj.Vacio, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        public void habilitar(bool valor) {
+            txtRazonSocial.Enabled = valor;
+            txtNombreComercial.Enabled = valor;
+            txtNombreComercial.Enabled = valor;
+            txtRuc.Enabled = valor;
+            rdbSector.Enabled = valor;
+            txtDireccion.Enabled = valor;
+            txtDescripcion.Enabled = valor;
+            cbxEstado.Enabled = valor;
+            txtPaginaWeb.Enabled = valor;
+            txtCorreoElectronico.Enabled = valor;
+            simpleButton2.Enabled = valor;
         }
 
         public void borrar() {
@@ -87,17 +144,16 @@ namespace forms.Seguridad
             txtRuc.Text = "";
             txtDireccion.Text = "";
             txtDescripcion.Text = "";
-            cbxEstado.SelectedText = "";
+            cbxEstado.EditValue = "";
             txtCorreoElectronico.Text = "";
             txtPaginaWeb.Text = "";
             txtFotoUrl.Text = "";
-            txtTelefono.Text = "";
+           // e.logotipo = null;
             pictureBox1.BackgroundImage = null;
-
         }
 
-        public void getValores(){
-            if (txtcodigo.Text=="")
+        public bool getValores(){
+            if (txtcodigo.Text=="" || txtcodigo.Text=="0")
             {
                 oEmpresa.idEmpresa = 0;//PK
             }
@@ -105,32 +161,73 @@ namespace forms.Seguridad
             {
                 oEmpresa.idEmpresa = Convert.ToInt32(txtcodigo.Text);
             }
-            oEmpresa.razonSocial=txtRazonSocial.Text;
+            if ((txtRazonSocial.Text==null || txtRazonSocial.Text=="") ||
+                (txtNombreComercial.Text==null || txtNombreComercial.Text=="") ||
+                (txtRuc.Text==null || txtRuc.Text=="") ||
+                (txtDireccion.Text==null || txtDireccion.Text=="") ||
+                (pictureBox1.BackgroundImage==null)||
+                (txtCorreoElectronico.Text==null || txtCorreoElectronico.Text=="") ||
+                (rdbSector.EditValue==null)||
+                (txtPaginaWeb.Text==null || txtPaginaWeb.Text=="") ||
+                (txtDescripcion.Text==null || txtDescripcion.Text=="") ||
+                cbxEstado.EditValue==null)
+            {
+                return false;
+            }
+
+
+            oEmpresa.razonSocial = txtRazonSocial.Text;
             oEmpresa.nombreComercial = txtNombreComercial.Text;
             oEmpresa.ruc = txtRuc.Text;
             oEmpresa.direccion = txtDireccion.Text;
-            //oEmpresa.idImagen = 0;
-            Image.FromFile(txtFotoUrl.Text).Save(ms,System.Drawing.Imaging.ImageFormat.Jpeg);
-            oEmpresa.logotipo=ms.ToArray();//transformando de memory stream-->matriz de array-->arreglo de byte
+            if (txtFotoUrl.Text != "")
+            {
+                MemoryStream ms = new MemoryStream();
+                Image.FromFile(txtFotoUrl.Text).Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                oEmpresa.logotipo = ms.ToArray();//transformando de memory stream-->matriz de array-->arreglo de byte
+                
+            }
             //oEmpresa.fechaInicioSistema=null;
             oEmpresa.correo=txtCorreoElectronico.Text;
             oEmpresa.sitioWeb=txtPaginaWeb.Text;
-            oEmpresa.descripcion=txtDescripcion.Text;     
-            
-            oClsEstadoEmpresa.descripcion=Convert.ToString(cbxEstado.SelectedItem);
+            oEmpresa.descripcion=txtDescripcion.Text;
+            oEmpresa.sector = Convert.ToString(rdbSector.EditValue);   
+            oClsEstadoEmpresa.descripcion = Convert.ToString(cbxEstado.EditValue);
             oEmpresa.idEstado=Convert.ToInt32(oDatEstado.getIdSegunDescripcion(oClsEstadoEmpresa.descripcion));//en caso q no exista idEstado=0
+            return true;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            habilitar(true);
+            btnModificar.Enabled = false;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
             getValores();
-            if (oDatEmpresa.Modificar(oEmpresa)) {
-                MessageBox.Show(msj.Editar_ok, msj.Titulo, MessageBoxButtons.OK);
-            }
-            else
+            DialogResult r;
+            r = MessageBox.Show(msj.Eliminar_confirmacion, msj.Titulo, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            if (r == DialogResult.Yes)
             {
-                MessageBox.Show(msj.Editar_error, msj.Titulo, MessageBoxButtons.OK);
+                if (oDatEmpresa.Eliminar(oEmpresa))
+                {
+                    MessageBox.Show(msj.Eliminar_ok, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    borrar();
+                }
+                else
+                {
+                    MessageBox.Show(msj.Eliminar_error, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+        }
+
+        private void frmEmpresa_Load(object sender, EventArgs e)
+        {
+            this.cbxEstado.Properties.DataSource = oDatEstado.ConsultaTodos();
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.BackgroundImage = null;
+            btnModificar.Enabled = false;
         }
     }
 }

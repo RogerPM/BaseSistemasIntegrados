@@ -40,17 +40,13 @@ namespace datos.Seguridad
                     e.razonSocial = item.RazonSocial;
                     e.nombreComercial = item.NombreComercial;
                     e.ruc = item.Ruc;
-                    //e.idTelefono = Convert.ToInt32(item.IdTelefono); //tabla de Recursos humanos
                     e.direccion = item.Direccion;
-                    //e.idImagen = item.IdImagen;
-                    e.idImagen = 0;
-                    e.logo = null;
-                    e.fondo = null;
                     e.logotipo = item.Logotipo;
                     //e.fechaInicioSistema = Convert.ToDateTime(item.FechaInicioSistema);
                     e.fechaInicioSistema = DateTime.Today;
                     e.correo = item.Correo;
                     e.sitioWeb = item.SitioWeb;
+                    e.sector = item.Sector;
                     e.descripcion = item.Descripcion;
                     e.idEstado = Convert.ToInt32(item.IdEstado);
                     listaEmpresa.Add(e);
@@ -86,6 +82,7 @@ namespace datos.Seguridad
                         //FechaInicioSistema = e.fechaInicioSistema,
                         Correo = e.correo,
                         SitioWeb = e.sitioWeb,
+                        Sector=e.sector,
                         Descripcion = e.descripcion,
                         IdEstado = e.idEstado
                     };
@@ -117,6 +114,16 @@ namespace datos.Seguridad
                 var x = (from a in ent.Empresa where a.NombreComercial == nombre select a).First();
                 return x.IdEmpresa;
             }
+        }
+
+        //metodo que devuelve el Id de la empresa segun Razon social que se le envia
+        public int ConsultarPorRazonSocial(string razon)
+        {
+            using (TECAv8Entities ent = new TECAv8Entities())
+            {
+                var x = (from a in ent.Empresa where a.RazonSocial == razon select a).First();
+                return x.IdEmpresa;
+            }
         } 
 
         public bool Modificar(clsEmpresa e){
@@ -133,8 +140,10 @@ namespace datos.Seguridad
                // x.Logo = e.logo;
               //  x.Fondo = e.fondo;
               //  x.FechaInicioSistema = e.fechaInicioSistema;
+                x.Logotipo = e.logotipo;
                 x.Correo = e.correo;
                 x.SitioWeb = e.sitioWeb;
+                x.Sector = e.sector;
                 x.Descripcion = e.descripcion;
                 x.IdEstado = e.idEstado;
                 ent.SaveChanges();
@@ -150,13 +159,23 @@ namespace datos.Seguridad
         }
 
         //eliminado fisico.. no usar solo seguridad
-        public void Eliminar(clsEmpresa e){
-            using (TECAv8Entities ent = new TECAv8Entities())
+        public bool Eliminar(clsEmpresa e){
+            try
             {
+                using (TECAv8Entities ent = new TECAv8Entities())
+                {
                 //busca por PK el primero que encuentre lo coge
                 var x = (from a in ent.Empresa where a.IdEmpresa == e.idEmpresa select a).First();
                 ent.DeleteObject(x);//elimina el registro
                 ent.SaveChanges();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Eliminar Error: " +ex);
+                return false;
+                
             }
         }
   

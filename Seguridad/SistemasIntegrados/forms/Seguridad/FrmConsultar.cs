@@ -14,7 +14,9 @@ namespace forms.Seguridad
 {
     public partial class FrmConsultar : Form
     {
-        public clsEmpresa e = new clsEmpresa();
+        public clsMensajeSeguridad msj = new clsMensajeSeguridad();
+      //  public clsEmpresa e = new clsEmpresa();
+        public clsEmpresa cls = new clsEmpresa();
         public FrmConsultar()
         {
             InitializeComponent();
@@ -29,30 +31,57 @@ namespace forms.Seguridad
         {
             datEmpresa datEmp = new datEmpresa();
             gridControl1.DataSource = datEmp.Consultar();
+            if (gridControl1.DataSource==null)
+            {
+                MessageBox.Show(msj.NoDatos,msj.Titulo,MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
         }
 
-        private void btnSelec_Click(object sender, EventArgs e)
+        #region "En desuso no utilizar"
+        //public void getSeleccion() 
+        //{
+        //    e.idEmpresa = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colidEmpresa));
+        //    e.razonSocial = Convert.ToString(gridView1.GetFocusedRowCellValue(colrazonSocial));
+        //    e.nombreComercial = Convert.ToString(gridView1.GetFocusedRowCellValue(colnombreComercial));
+        //    e.ruc = Convert.ToString(gridView1.GetFocusedRowCellValue(colruc));
+        //    e.direccion = Convert.ToString(gridView1.GetFocusedRowCellValue(coldireccion));
+        //    e.logotipo=(byte[])(gridView1.GetFocusedRowCellValue(collogotipo));
+        //    e.fechaInicioSistema = Convert.ToDateTime(gridView1.GetFocusedRowCellValue(colfechaInicioSistema));
+        //    e.correo = Convert.ToString(gridView1.GetFocusedRowCellValue(colcorreo));
+        //    e.sitioWeb = Convert.ToString(gridView1.GetFocusedRowCellValue(colsitioWeb));
+        //    e.sector = Convert.ToString(gridView1.GetFocusedRowCellValue(colsector));
+        //    e.descripcion = Convert.ToString(gridView1.GetFocusedRowCellValue(coldescripcion));
+        //    e.idEstado = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colidEstado));
+        //}
+        #endregion
+
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            getSeleccion();
             this.Close();
         }
 
-        public void getSeleccion()
+        private void gridControl1_Click(object sender, EventArgs e)
         {
-            e.idEmpresa = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colidEmpresa));
-            e.razonSocial = Convert.ToString(gridView1.GetFocusedRowCellValue(colrazonSocial));
-            e.nombreComercial = Convert.ToString(gridView1.GetFocusedRowCellValue(colnombreComercial));
-            e.ruc = Convert.ToString(gridView1.GetFocusedRowCellValue(colruc));
-            e.direccion = Convert.ToString(gridView1.GetFocusedRowCellValue(coldireccion));
-            //e.idImagen = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colidImagen));
-            e.logo = Convert.ToString(gridView1.GetFocusedRowCellValue(collogo));
-            e.fondo = Convert.ToString(gridView1.GetFocusedRowCellValue(colfondo));
-          //  e.logotipo=gridView1.GetFocusedRowCellValue(collogotipo);
-            e.fechaInicioSistema = Convert.ToDateTime(gridView1.GetFocusedRowCellValue(colfechaInicioSistema));
-            e.correo = Convert.ToString(gridView1.GetFocusedRowCellValue(colcorreo));
-            e.sitioWeb = Convert.ToString(gridView1.GetFocusedRowCellValue(colsitioWeb));
-            e.descripcion = Convert.ToString(gridView1.GetFocusedRowCellValue(coldescripcion));
-            e.idEstado = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colidEstado));
+            //evento click pero del GridControl.
+        }
+
+        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {   //evento clic del gridView (elegirlo en el disenador)
+            cls=getRow((DevExpress.XtraGrid.Views.Grid.GridView)sender);
+            Close();
+        }
+
+        private clsEmpresa getRow(DevExpress.XtraGrid.Views.Grid.GridView view) {
+            try
+            {
+                return (clsEmpresa)view.GetRow(view.FocusedRowHandle);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        
         }
 
     }

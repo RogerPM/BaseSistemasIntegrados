@@ -1,13 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="TECAv8Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
   <EntityContainer Name="TECAv8Entities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Empresa" EntityType="TECAv8Model.Empresa" />
     <EntitySet Name="Estado" EntityType="TECAv8Model.Estado" />
-    <AssociationSet Name="FK__Empresa__IdEstad__0EA330E9" Association="TECAv8Model.FK__Empresa__IdEstad__0EA330E9">
+    <EntitySet Name="Empresa" EntityType="TECAv8Model.Empresa" />
+    <AssociationSet Name="FK__Empresa__IdEstad__0DAF0CB0" Association="TECAv8Model.FK__Empresa__IdEstad__0DAF0CB0">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="Empresa" EntitySet="Empresa" />
     </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Type="Int32" Name="IdEstado" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="220" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Empresa" Relationship="TECAv8Model.FK__Empresa__IdEstad__0DAF0CB0" FromRole="Estado" ToRole="Empresa" />
+  </EntityType>
   <EntityType Name="Empresa">
     <Key>
       <PropertyRef Name="IdEmpresa" />
@@ -17,26 +25,16 @@
     <Property Type="String" Name="NombreComercial" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="Ruc" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="Direccion" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="IdImagen" />
-    <Property Type="String" Name="Logo" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Fondo" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="Binary" Name="Logotipo" MaxLength="Max" FixedLength="false" />
     <Property Type="DateTime" Name="FechaInicioSistema" />
     <Property Type="String" Name="Correo" MaxLength="70" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="SitioWeb" MaxLength="70" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="Descripcion" MaxLength="250" FixedLength="false" Unicode="false" />
     <Property Type="Int32" Name="IdEstado" Nullable="false" />
-    <NavigationProperty Name="Estado" Relationship="TECAv8Model.FK__Empresa__IdEstad__0EA330E9" FromRole="Empresa" ToRole="Estado" />
+    <NavigationProperty Name="Estado" Relationship="TECAv8Model.FK__Empresa__IdEstad__0DAF0CB0" FromRole="Empresa" ToRole="Estado" />
+    <Property Type="String" Name="Sector" MaxLength="20" FixedLength="false" Unicode="false" />
   </EntityType>
-  <EntityType Name="Estado">
-    <Key>
-      <PropertyRef Name="IdEstado" />
-    </Key>
-    <Property Type="Int32" Name="IdEstado" Nullable="false" />
-    <Property Type="String" Name="Descripcion" MaxLength="220" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Empresa" Relationship="TECAv8Model.FK__Empresa__IdEstad__0EA330E9" FromRole="Estado" ToRole="Empresa" />
-  </EntityType>
-  <Association Name="FK__Empresa__IdEstad__0EA330E9">
+  <Association Name="FK__Empresa__IdEstad__0DAF0CB0">
     <End Type="TECAv8Model.Estado" Role="Estado" Multiplicity="1" />
     <End Type="TECAv8Model.Empresa" Role="Empresa" Multiplicity="*" />
     <ReferentialConstraint>

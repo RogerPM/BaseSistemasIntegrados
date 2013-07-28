@@ -16,6 +16,7 @@ namespace forms
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmGUImetro());
+            //Application.Run(new frmPrincipal());
         }
     }
 }

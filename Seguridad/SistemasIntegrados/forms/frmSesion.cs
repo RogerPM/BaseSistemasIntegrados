@@ -6,11 +6,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using forms.Seguridad;
 
 namespace forms
 {
     public partial class frmSesion : Form
     {
+        public string NombreModulo;
         public frmSesion()
         {
             InitializeComponent();
@@ -18,7 +20,7 @@ namespace forms
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            frmPrincipal f = new frmPrincipal();
+            frmPrincipalSeguridad f = new frmPrincipalSeguridad();
             f.ShowDialog();
         }
 

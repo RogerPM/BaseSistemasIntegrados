@@ -31,16 +31,21 @@
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.gridLookUpEdit1 = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // textEdit1
@@ -52,7 +57,7 @@
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(105, 63);
+            this.textEdit2.Location = new System.Drawing.Point(105, 50);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.PasswordChar = '*';
             this.textEdit2.Size = new System.Drawing.Size(100, 20);
@@ -64,14 +69,37 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(241, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(249, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(32, 111);
+            this.toolStrip1.Size = new System.Drawing.Size(24, 111);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::forms.Properties.Resources._24_aceptar;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton1.Text = "Continuar";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::forms.Properties.Resources._24_cancelar;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton2.Text = "Regresar al inicio";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.gridLookUpEdit1);
+            this.groupControl1.Controls.Add(this.labelControl3);
             this.groupControl1.Controls.Add(this.labelControl2);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.textEdit1);
@@ -79,13 +107,13 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(241, 111);
+            this.groupControl1.Size = new System.Drawing.Size(249, 111);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Sesión";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(39, 66);
+            this.labelControl2.Location = new System.Drawing.Point(39, 53);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(60, 13);
             this.labelControl2.TabIndex = 5;
@@ -99,26 +127,30 @@
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Nombre de usuario:";
             // 
-            // toolStripButton1
+            // labelControl3
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::forms.Properties.Resources._24_aceptar;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 20);
-            this.toolStripButton1.Text = "Continuar";
-            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.labelControl3.Location = new System.Drawing.Point(54, 82);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(45, 13);
+            this.labelControl3.TabIndex = 7;
+            this.labelControl3.Text = "Empresa:";
             // 
-            // toolStripButton2
+            // gridLookUpEdit1
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::forms.Properties.Resources._24_cancelar;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(29, 20);
-            this.toolStripButton2.Text = "Regresar al inicio";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.gridLookUpEdit1.Location = new System.Drawing.Point(105, 79);
+            this.gridLookUpEdit1.Name = "gridLookUpEdit1";
+            this.gridLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.gridLookUpEdit1.Properties.View = this.gridLookUpEdit1View;
+            this.gridLookUpEdit1.Size = new System.Drawing.Size(100, 20);
+            this.gridLookUpEdit1.TabIndex = 8;
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // frmSesion
             // 
@@ -139,6 +171,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,6 +188,9 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.GridLookUpEdit gridLookUpEdit1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
 
     }
 }

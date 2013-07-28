@@ -41,3 +41,11 @@ E:\SI\Development\v2\SistemasIntegrados\datos\bin\Debug\clases.pdb
 E:\SI\Development\v2\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
 E:\SI\Development\v2\SistemasIntegrados\datos\obj\Debug\datos.dll
 E:\SI\Development\v2\SistemasIntegrados\datos\obj\Debug\datos.pdb
+C:\Users\luismi\Desktop\tmp\Empresa\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+C:\Users\luismi\Desktop\tmp\Empresa\SistemasIntegrados\datos\bin\Debug\datos.dll
+C:\Users\luismi\Desktop\tmp\Empresa\SistemasIntegrados\datos\bin\Debug\datos.pdb
+C:\Users\luismi\Desktop\tmp\Empresa\SistemasIntegrados\datos\bin\Debug\clases.dll
+C:\Users\luismi\Desktop\tmp\Empresa\SistemasIntegrados\datos\bin\Debug\clases.pdb
+C:\Users\luismi\Desktop\tmp\Empresa\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+C:\Users\luismi\Desktop\tmp\Empresa\SistemasIntegrados\datos\obj\Debug\datos.dll
+C:\Users\luismi\Desktop\tmp\Empresa\SistemasIntegrados\datos\obj\Debug\datos.pdb

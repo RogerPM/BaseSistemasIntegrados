@@ -3,7 +3,7 @@
   <EntityContainer Name="TECAv8ModelStoreContainer">
     <EntitySet Name="Empresa" EntityType="TECAv8Model.Store.Empresa" store:Type="Tables" Schema="Seguridad" />
     <EntitySet Name="Estado" EntityType="TECAv8Model.Store.Estado" store:Type="Tables" Schema="Seguridad" />
-    <AssociationSet Name="FK__Empresa__IdEstad__0EA330E9" Association="TECAv8Model.Store.FK__Empresa__IdEstad__0EA330E9">
+    <AssociationSet Name="FK__Empresa__IdEstad__08EA5793" Association="TECAv8Model.Store.FK__Empresa__IdEstad__08EA5793">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="Empresa" EntitySet="Empresa" />
     </AssociationSet>
@@ -13,19 +13,17 @@
       <PropertyRef Name="IdEmpresa" />
     </Key>
     <Property Name="IdEmpresa" Type="int" Nullable="false" />
-    <Property Name="RazonSocial" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="NombreComercial" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="Ruc" Type="varchar" Nullable="false" MaxLength="15" />
-    <Property Name="Direccion" Type="varchar" Nullable="false" MaxLength="200" />
-    <Property Name="IdImagen" Type="int" />
-    <Property Name="Logo" Type="varchar" MaxLength="50" />
-    <Property Name="Fondo" Type="varchar" MaxLength="50" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="50" />
+    <Property Name="NombreComercial" Type="varchar" MaxLength="50" />
+    <Property Name="Ruc" Type="varchar" MaxLength="20" />
+    <Property Name="Direccion" Type="varchar" MaxLength="200" />
     <Property Name="Logotipo" Type="image" />
     <Property Name="FechaInicioSistema" Type="datetime" />
     <Property Name="Correo" Type="varchar" MaxLength="70" />
     <Property Name="SitioWeb" Type="varchar" MaxLength="70" />
+    <Property Name="Sector" Type="varchar" MaxLength="20" />
     <Property Name="Descripcion" Type="varchar" MaxLength="250" />
-    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" />
   </EntityType>
   <EntityType Name="Estado">
     <Key>
@@ -34,8 +32,8 @@
     <Property Name="IdEstado" Type="int" Nullable="false" />
     <Property Name="Descripcion" Type="varchar" MaxLength="220" />
   </EntityType>
-  <Association Name="FK__Empresa__IdEstad__0EA330E9">
-    <End Role="Estado" Type="TECAv8Model.Store.Estado" Multiplicity="1" />
+  <Association Name="FK__Empresa__IdEstad__08EA5793">
+    <End Role="Estado" Type="TECAv8Model.Store.Estado" Multiplicity="0..1" />
     <End Role="Empresa" Type="TECAv8Model.Store.Empresa" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Estado">

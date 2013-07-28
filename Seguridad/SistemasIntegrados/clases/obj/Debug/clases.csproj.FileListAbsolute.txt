@@ -27,3 +27,10 @@ E:\SI\Development\v2\SistemasIntegrados\clases\bin\Debug\clases.dll
 E:\SI\Development\v2\SistemasIntegrados\clases\bin\Debug\clases.pdb
 E:\SI\Development\v2\SistemasIntegrados\clases\obj\Debug\clases.dll
 E:\SI\Development\v2\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v2\SistemasIntegrados\clases\obj\Debug\clases.csprojResolveAssemblyReference.cache
+C:\Users\luismi\Desktop\tmp\Empresa\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+C:\Users\luismi\Desktop\tmp\Empresa\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\luismi\Desktop\tmp\Empresa\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\luismi\Desktop\tmp\Empresa\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\luismi\Desktop\tmp\Empresa\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\Users\luismi\Desktop\tmp\Empresa\SistemasIntegrados\clases\obj\Debug\clases.csprojResolveAssemblyReference.cache
