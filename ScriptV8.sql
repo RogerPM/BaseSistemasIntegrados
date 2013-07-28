@@ -45,11 +45,12 @@ go
 
 create table  Seguridad.Imagen
 (
-	 IdImagen			int			primary key,
-	 Descripcion		varchar(50),
-	 Imagen				image
+	 IdImagen				int				primary key,
+	 Descripcion			varchar(50),
+	 Imagen					image
 )
 go
+
 
 create table Seguridad.Empresa
 (
@@ -63,8 +64,7 @@ create table Seguridad.Empresa
 	 Correo					varchar  (70),
 	 SitioWeb				varchar  (70),
 	 Descripcion			varchar  (250),
-	 IdEstado				int				references Seguridad.Estado,
-	  	 
+	 IdEstado				int				references Seguridad.Estado
 )
 go
 
@@ -178,16 +178,16 @@ go
 /*USUARIO*/
 create table Seguridad.Usuario
 (
-	 IdUsuario				int,
-	 NombreUsuario			varchar(20),
-	 Contrasena				varchar  (20) NULL,
-	 IdEstado				int NULL			references Seguridad.Estado,
-	 IdImagen				int					references Seguridad.Imagen,
-	 IdPerfil				int,
+	 IdUsuario			int,				references RecursosHumanos.Persona, 
+	 NombreUsuario		varchar(20),
+	 Contrasena			varchar(20),
+	 IdEstado			int					references Seguridad.Estado,
+	 IdImagen			int					references Seguridad.Imagen,
 	 primary key(IdUsuario),
 	 foreign key (IdUsuario) references RecursosHumanos.Persona --el id usuario es el mismo q id persona
 )
 go
+
 
 /*PROVEEDOR REasignado a Compras.Proveedor hasta que RRHH tome la batuta*/
 create table RecursosHumanos.Proveedor
@@ -670,8 +670,8 @@ go
 /*USUARIO POR EMPRESA*/
 create table Seguridad.UsuarioPorEmpresa
 (
-	IdUsuario 				int,
-	IdEmpresa 				int,
+	IdUsuario		int,
+	IdEmpresa		int,
 	foreign key(IdUsuario)references Seguridad.Usuario,
 	foreign key(IdEmpresa)references Seguridad.Empresa,
 	primary key(IdUsuario,IdEmpresa)
@@ -681,54 +681,54 @@ go
 /*MODULO*/
 create table  Seguridad.Modulo
 (
-	 IdModulo   				int primary key,
-	 Nombre						varchar(50),
-	 IdEstado 					int,
-	 Logo						varchar(50)
+	 IdModulo		int				primary key,
+	 Nombre			varchar(50),
+	 IdEstado		int				references Seguridad.Estado,
+	 Logo			varchar(50)
 ) 
 go
 
 /*MENU*/
 create table  Seguridad.Menu 
 (
-	 IdMenu   					int  primary key,
-	 IdModulo   				int references Seguridad.Modulo  ,
-	 IdPadre 					int,
-	 Descripcion				varchar (255),
-	 NombreForm					varchar (255), 
-	 NombreAssembly				varchar (200) , 
-	 IdEstado 					int,
+	 IdMenu				int					primary key,
+	 IdModulo			int					references Seguridad.Modulo,
+	 IdPadre			int					references Seguridad.Menu,
+	 Descripcion		varchar (255),
+	 NombreForm			varchar (255), 
+	 NombreAssembly		varchar (200), 
+	 IdEstado			int					references Seguridad.Estado,
 )
 go
 
 /*MENU POR EMPRESA*/
 create table Seguridad.MenuPorEmpresa
 (
-	 IdEmpresa    				int,
-	 IdMenu    					int,
-	 IdEstado 					int references Seguridad.Estado,
-	 NombreAsamblyPorEmpresa    varchar  (200),--E
-	 NomFormularioPorEmpresa    varchar  (200), --E
-	 foreign key(IdMenu)references Seguridad.Menu,
-	 foreign key(IdEmpresa)references Seguridad.Empresa,
+	 IdEmpresa					int				references Seguridad.Empresa,
+	 IdMenu						int				references Seguridad.Menu,
+	 NombreAsamblyPorEmpresa    varchar  (200),
+	 NomFormularioPorEmpresa    varchar  (200), 
+	 IdEstado					int				references Seguridad.Estado,
 	 primary key(IdMenu,IdEmpresa)
 )
 go
 
+
 /*PERFIL*/
 create table Seguridad.Perfil 
 (
-	 IdPerfil   				int primary key,
-	 Descripcion				varchar (70),
-	 IdEstado   				int,   
+	 IdPerfil		int							primary key,
+	 Descripcion	varchar (70),
+	 IdEstado		int							references Seguridad.Estado,   
 )
 go
 
+
 create table Seguridad.Horario
 (
-	IdHorario int,
-	IdPerfil int	not null references Seguridad.Perfil,
-	Secuencia int not null,
+	IdHorario					int,
+	IdPerfil					int				references Seguridad.Perfil,
+	Secuencia					int ,
 	dia	varchar(10),
 	H00	bit	not null,
 	H01	bit	not null,
@@ -761,25 +761,36 @@ go
 /*PERMISO*/
 create table Seguridad.Permiso
 (
-	 IdPerfil    				int references Seguridad.Perfil,
-	 IdPermiso    				int NOT NULL, --secuencia
-	 IdPersona 				int references Seguridad.Usuario,
-	 IdEmpresa 				int references Seguridad.Empresa,
-	 IdMenu 				int references Seguridad.Menu,
-	 IdModulo 				int references Seguridad.Modulo,
-	 Lectura    bit   NOT NULL,
-	 Escritura    bit   NOT NULL,
-	 Eliminacion    bit   NOT NULL,
+	 IdPerfil		int				references Seguridad.Perfil,
+	 IdPermiso		int, 
+	 IdMenu			int				references Seguridad.Menu,
+	 IdModulo		int				references Seguridad.Modulo,
+	 Lectura		bit				not null,
+	 Escritura		bit				not null,
+	 Eliminacion    bit				not null,
 	 primary key (IdPerfil,IdPermiso)
+)
+go
+
+
+/*PERFIL POR USUARIO*/
+create table Seguridad.PerfilUsuario
+(
+	 IdUsuario		int ,
+	 IdPerfil		int ,
+	 IdEmpresa		int ,
+	 primary key (IdPerfil,IdUsuario),
+	 foreign key (IdUsuario,IdEmpresa) references Seguridad.UsuarioPorEmpresa(IdUsuario,IdEmpresa),
+	 foreign key (IdPerfil) references Seguridad.Perfil,
 )
 go
 
 /*TELEFONO POR EMPRESA*/
 create table  Seguridad.TelefonoEmpresa --E editada agregado
 (
-	IdEmpresa 				int references Seguridad.Empresa,
-	idTelefono 				int references RecursosHumanos.Telefono,
-	primary key(IdEmpresa,IdTelefono)
+	IdEmpresa		int references Seguridad.Empresa,
+	IdTelefono		int references RecursosHumanos.Telefono,
+	primary key (IdEmpresa,IdTelefono)
 ) 
 go
 
