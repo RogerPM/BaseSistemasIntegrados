@@ -171,14 +171,14 @@ create table RecursosHumanos.Departamento
 	IdDepartamento			int not null		primary key,
 	Descripcion				varchar(50)not null,
 	IdEstado				int not null,
-	foreign key (IdEstado) references Seguridad.Estado,
+	foreign key (IdEstado) references Seguridad.Estado
 )
 go
 
 /*USUARIO*/
 create table Seguridad.Usuario
 (
-	 IdUsuario			int,				references RecursosHumanos.Persona, 
+	 IdUsuario			int				references RecursosHumanos.Persona, 
 	 NombreUsuario		varchar(20),
 	 Contrasena			varchar(20),
 	 IdEstado			int					references Seguridad.Estado,
