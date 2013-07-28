@@ -1014,20 +1014,6 @@ CREATE TABLE Compras.OrdenCompra  --ok
 GO
 
 
-Create Table Compras.ProveedorXCotizacion--100%
-(
-Numero				int not null,
-idEmpresa			int	not null,
-idProveedor			int not null,
-foreign key (Numero, IdEmpresa) references Compras.Cotizacion,
-
-foreign key (idProveedor) references Compras.Proveedor,
-Primary key (Numero,idEmpresa,IdProveedor)
-)
-go
-
-
-
 /********************************INVENTARIO************************/
 
 create table Inventario.Bodega
@@ -2710,7 +2696,7 @@ CREATE TABLE Compras.CotizacionDet  --ok
 	foreign key (NumeroPedido,IdEmpresa) references Compras.Pedido,	
 	primary key(Numero,IdEmpresa)
 )
-PRINT N'Compras: Falta que implementen bien la forma de pago'
+PRINT N'Mensaje de Compras: Falta que implementen bien la forma de pago que se necesita para facturas, notas debito, notas credito'
 go
 
 
