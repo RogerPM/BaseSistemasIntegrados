@@ -927,6 +927,21 @@ go
 
 --Inventario 
 
+
+create table Inventario.TipoArticulo
+(
+IdEmpresa	int,
+IdTipoArticulo	int not null,
+Descripcion	varchar(500)not null,
+IdUsuario	int,
+IdEstado	int,
+primary key (IdTipoArticulo),
+foreign key (IdEmpresa) references Seguridad.Empresa,
+foreign key (IdEstado) references Seguridad.Estado,
+foreign key (IdUsuario) references Seguridad.Usuario,
+)
+go
+
 create table Inventario.Grupo
 (
 IdEmpresa	int,
@@ -944,21 +959,6 @@ foreign key (IdUsuario) references Seguridad.Usuario,
 go
 
 
-
-
-create table Inventario.TipoArticulo
-(
-IdEmpresa	int,
-IdTipoArticulo	int not null,
-Descripcion	varchar(500)not null,
-IdUsuario	int,
-IdEstado	int,
-primary key (IdTipoArticulo),
-foreign key (IdEmpresa) references Seguridad.Empresa,
-foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
-)
-go
 
 
 create table Compras.Proveedor
