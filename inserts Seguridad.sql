@@ -24,7 +24,7 @@ insert into Seguridad.Empresa values(1,'Empresa XYZ SA','XYZ','0981357236001','M
 go
 insert into Seguridad.Empresa values(2,'Sandy Corporation','Veterinarias Sandy','0944254432001','Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas',null,null,'info@sandy.com.ec','www.sandy.blogspot.com' ,'Sector privado','Dedicada al cuidado de animales en general',4)
 go
-insert into Seguridad.Empresa values(3,'Bayerische Motoren Werke','BMW','0977281371001','Alemania',null,null,'bavarian@bmw.gr','Sector privado','Proveedor internacional de vehiculos',5)
+insert into Seguridad.Empresa values(3,'Bayerische Motoren Werke','BMW','0977281371001','Alemania',null,null,'bavarian@bmw.gr','www.bmw.gr','Sector privado','Proveedor internacional de vehiculos',5)
 go
 insert into Seguridad.Empresa values(4,'Textiles Judas SA','Prendas Judas','0972254938001','Km 5.5 via samborondon',null,null,'pedidos@judas.com','www.sanjudas.com.ec','Sector privado','Empresa dedicada a la manofactura de vestimentas',3)
 go
