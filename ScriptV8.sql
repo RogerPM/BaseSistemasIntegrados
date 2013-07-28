@@ -63,7 +63,6 @@ create table Seguridad.Empresa
 	 FechaInicioSistema		datetime,
 	 Correo					varchar  (70),
 	 SitioWeb				varchar  (70),
-	 Sector					varchar(20),
 	 Descripcion			varchar  (250),
 	 IdEstado				int				references Seguridad.Estado
 )
@@ -179,7 +178,7 @@ go
 /*USUARIO*/
 create table Seguridad.Usuario
 (
-	 IdUsuario			int, 
+	 IdUsuario			int,
 	 NombreUsuario		varchar(20),
 	 Contrasena			varchar(20),
 	 IdEstado			int					references Seguridad.Estado,
