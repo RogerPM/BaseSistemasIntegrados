@@ -1907,7 +1907,7 @@ go
 	
 create table CuentaxPagar.EmpresaServicio
 (
-	IdEmpresaServicio 		int not null,
+	IdEmpresaServicio 		numeric (13,0) not null,
 	fechaRegistro			date not null,
 	RazonSocial				nvarchar(30) not null,
 	Direccion				nvarchar(30)not null,
