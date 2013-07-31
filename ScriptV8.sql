@@ -1,4 +1,4 @@
- use master
+use master
 if exists(select * from sysdatabases where name='TECA')
 drop database TECA
 PRINT N'1.base eliminada'
@@ -1907,7 +1907,7 @@ go
 	
 create table CuentaxPagar.EmpresaServicio
 (
-	IdEmpresaServicio 		numeric (13,0) not null,
+	IdEmpresaServicio 		nvarchar(13) not null,
 	fechaRegistro			date not null,
 	RazonSocial				nvarchar(30) not null,
 	Direccion				nvarchar(30)not null,
@@ -1925,11 +1925,10 @@ create table CuentaxPagar.EmpresaServicio
 )
 go
 	
-	
 create table CuentaxPagar.TelefonoEmpresaServicio
 (
 		IdEmpresa 				int not null,
-		IdEmpresaServicio 		numeric(13,0) not null,
+		IdEmpresaServicio 		nvarchar(13) not null,
 		IdTelefono 				int not null,
 		Serie 					int not null,
 		foreign key (IdEmpresa)references Seguridad.Empresa, 
@@ -1937,7 +1936,8 @@ create table CuentaxPagar.TelefonoEmpresaServicio
 		foreign key (IdTelefono)references RecursosHumanos.Telefono, 
 		primary key(IdEmpresaServicio,IdEmpresa, Serie, IdTelefono)	
 )
-go	
+go}
+
 	
 	
 create table CuentaxPagar.Impuesto
@@ -1978,13 +1978,15 @@ create table CuentaxPagar.CuentaBancaria
 	NroCta 				int not null,
 	IdBanco 			int not null,
 	IdEmpresa 			int not null,
-	IdEmpresaServicio	numeric(13,0) not null,
+	IdEmpresaServicio 	nvarchar(13) not null,
 	foreign key (IdEmpresaServicio, IdEmpresa)references CuentaxPagar.EmpresaServicio,
 	foreign key (IdBanco)references CuentasPorCobrar.Banco,
 	foreign key (IdEmpresa)references Seguridad.Empresa,
 	primary key(Serie,IdEmpresaServicio)
 )
 go
+
+
 
 /*********************COMPRAS****************/
 -- TABLA DE COMPRAS (cabecera)
