@@ -1,4 +1,4 @@
- use master
+use master
 if exists(select * from sysdatabases where name='TECA')
 drop database TECA
 PRINT N'1.base eliminada'
