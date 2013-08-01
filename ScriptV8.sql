@@ -176,6 +176,16 @@ create table RecursosHumanos.Departamento
 )
 go
 
+/*PERFIL*/
+create table Seguridad.Perfil 
+(
+	 IdPerfil		int							primary key,
+	 Descripcion	varchar (70),
+	 IdEstado		int							references Seguridad.Estado,   
+)
+go
+
+
 /*USUARIO*/
 create table Seguridad.Usuario
 (
@@ -716,14 +726,6 @@ create table Seguridad.MenuPorEmpresa
 go
 
 
-/*PERFIL*/
-create table Seguridad.Perfil 
-(
-	 IdPerfil		int							primary key,
-	 Descripcion	varchar (70),
-	 IdEstado		int							references Seguridad.Estado,   
-)
-go
 
 
 create table Seguridad.Horario
