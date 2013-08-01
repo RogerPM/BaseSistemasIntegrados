@@ -1,4 +1,4 @@
- use master
+  use master
 if exists(select * from sysdatabases where name='TECA')
 drop database TECA
 PRINT N'1.base eliminada'
@@ -88,22 +88,28 @@ go
 /*PERSONA*/
 create table RecursosHumanos.Persona
 (
-	Identificacion			int not null primary key,
-	IdTipoPersona			int not null,
-	NombreRazonSocial		varchar(100) not null,
-	Apellido				varchar(50),
-	FechaNacimiento			datetime null,
-	genero					varchar(10)not null,
-	TipoIdentificacion		varchar (11) not null,
-	direccion				varchar (100) not null,
-	telefono				int not null,
-	mail					varchar (50) not null,
-	IdEmpresa				int not null,
-	IdEstado				int not null,
-	Foto					image null,
-	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (IdTipoPersona)references RecursosHumanos.TipoPersona
+	
+	Identificacion		int not null primary key,
+	IdEmpresa			int not null,
+	IdTipoPersona		int not null,
+	NombreRazonSocial	varchar(100) not null,
+	Apellido			varchar(50)null,
+	FechaNacimiento		datetime null,
+	genero				char(1)not null,
+	TipoIdentificacion	int not null,
+	direccion			varchar (100) not null,
+	TelefonoGneral		numeric(10,0)null,
+	TelefonoMovil		numeric(11,0)not null,
+	TelefonoCasa		numeric (8,0) not null,
+	TelefonoOtros		numeric (11,0) null,
+	mail				varchar (50) not null,
+	IdEstado			int not null,
+	IdFoto				int null,
+
+foreign key (IdFoto) references Seguridad.Imagen,
+foreign key (IdEmpresa) references Seguridad.Empresa,
+foreign key (IdEstado) references Seguridad.Estado,
+foreign key (IdTipoPersona)references RecursosHumanos.TipoPersona
 )
 go
 
@@ -121,34 +127,9 @@ create table RecursosHumanos.TipoIdentificacion
 )
 go
 
-/*CLIENTE*/
-create table RecursosHumanos.Cliente
-(
-	IdCliente				int not null primary key,
-	IdPersona				int not null,
-	IdEmpresa				int not null,
-	IdEstado				int not null,
-	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (IdPersona) references RecursosHumanos.Persona
-)
-go
 
 
-/*EMPLEADO*/
-create table RecursosHumanos.Empleado
-(
-	IdEmpresa				int not null,
-	IdEmpleado				int not null,
-	IdPersona				int not null,
-	IdEstado				int not null,
-	Sueldo					money not null,
-	primary key (IdEmpresa,IdPersona),
-	foreign key (IdEstado)references Seguridad.Estado,
-	foreign key (IdEmpresa)references Seguridad.Empresa,
-	foreign key (IdPersona)references RecursosHumanos.Persona
-)
-go
+
 
 /*MATERNIDAD*/
 create table RecursosHumanos.Maternidad
@@ -162,7 +143,7 @@ create table RecursosHumanos.Maternidad
 	FechaModificacion		datetime,
 	IdEstado				int not null,
 	foreign key (IdEstado)references Seguridad.Estado,
-	foreign key (IdEmpleado,IdEmpresa)references RecursosHumanos.Empleado
+	foreign key (IdEmpleado)references RecursosHumanos.Persona
 )
 go
 
@@ -255,13 +236,7 @@ create table RecursosHumanos.Telefono
 )
 go
 
-/*Telefono por persona*/
-create table RecursosHumanos.TelefonoPersona
-(
-	IdPersona				int					references RecursosHumanos.Persona,
-	IdTelefono				int					references RecursosHumanos.Telefono,
-	primary key (Idpersona,Idtelefono)
-)
+
 
 /*TITULO*/
 create table RecursosHumanos.Titulo
@@ -465,7 +440,7 @@ create table RecursosHumanos.AnticipoCab
 	Observacion				varchar(50) null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	foreign key (IdEmpleado,idempresa) references RecursosHumanos.Empleado,
+	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdEstado) references Seguridad.Estado,
 	primary key (NumAnticipo, IdEmpresa)
@@ -507,7 +482,7 @@ create table RecursosHumanos.NominaCab
 	IdEstado				int not null,
 	IdEmpresa				int not null,
 	Observacion				varchar(50) null,
-	foreign key (IdEmpleado,idempresa) references RecursosHumanos.Empleado,
+	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (IdEstado) references Seguridad.Estado,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	primary key (NumNomina, IdEmpresa)
@@ -590,7 +565,7 @@ create table RecursosHumanos.Permiso
 	IdEstado				int not null,
 	IdEmpresa				int not null,
 	foreign key (IdUsuario) references Seguridad.Usuario,
-	foreign key (IdEmpleado,idempresa) references RecursosHumanos.Empleado,
+	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (IdTipoPermiso) references RecursosHumanos.TipoPermiso,
 	foreign key (IdEstado) references Seguridad.Estado,
 	foreign key (IdEmpresa) references Seguridad.Empresa
@@ -630,7 +605,7 @@ create table RecursosHumanos.Vacacion
 	FechaFin				date not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	foreign key (IdEmpleado,idempresa) references RecursosHumanos.Empleado,
+	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdEstado) references Seguridad.Estado
 )
@@ -1208,9 +1183,7 @@ create table Inventario.Articulo
 	IdGrupo	int not null,
 	--IdSubgrupo int,
 	IdChasis	int,
-	SerieChasis	varchar(17),
 	IdTipoMotor	int,
-	SerieMotor	varchar(13),
 	NroPlaca	int,
 	IdTipoCombustible int,
 	IdColor	int,
@@ -1426,7 +1399,7 @@ CREATE TABLE Facturacion.Cotizacion
 	Seguro					bit NULL,
 	idEstado 				int NOT NULL,
 	primary key(IdNumeroCotizacion),	
-	foreign key (idCliente) references RecursosHumanos.CLiente,
+	foreign key (idCliente) references RecursosHumanos.Persona,
 	foreign key(idFormaPago)references CuentasPorCobrar.FormaPago,
 	foreign key (idEmpresa) references Seguridad.Empresa,
 	foreign key (idUsuario) references Seguridad.Usuario,
@@ -1507,7 +1480,7 @@ CREATE TABLE Facturacion.Factura
 	idEstado 				int NOT NULL,
 	primary key(IdNumeroFactura),	
 	foreign key (IdEmpresa,cabecera_comprobante)references Contabilidad.CabeceraComprobante,
-	foreign key (idCliente) references RecursosHumanos.CLiente,
+	foreign key (idCliente) references RecursosHumanos.Persona,
 	foreign key (IdNumeroCotizacion) references Facturacion.Cotizacion,
 	foreign key (IdPromocion) references Facturacion.Promocion,
 	foreign key(idFormaPago)references CuentasPorCobrar.FormaPago,	
@@ -1569,7 +1542,7 @@ CREATE TABLE Facturacion.ComisionDet
 	primary key(Linea,IdNumeroComision),
 	foreign key (IdNumeroComision) references Facturacion.Comision,
 	foreign key (IdNumeroFactura) references Facturacion.Factura,	
-	foreign key (IdEmpleado,idempresa) references RecursosHumanos.Empleado,
+	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (idEmpresa) references Seguridad.Empresa,
 	foreign key (idUsuario) references Seguridad.Usuario,
 	foreign key (idEstado) references Seguridad.Estado
@@ -2015,7 +1988,7 @@ CREATE TABLE CuentasPorCobrar.Cobro
 	foreign key (idUsuario) references Seguridad.Usuario,
 	foreign key (idTransaccion) references Facturacion.Factura,
 	foreign key (idFactura) references Facturacion.Factura,
-	foreign key (idCliente) references RecursosHumanos.CLiente,
+	foreign key (idCliente) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa,idCabeceraComprobante) references Contabilidad.CabeceraComprobante,
 	foreign key (idEstado) references Seguridad.Estado
 )
@@ -2284,7 +2257,7 @@ create table ActivoFijo.ActivoFijo
 	foreign key (IdEmpresa) references Seguridad.Empresa,--relacion tablas de Seguridad
 	foreign key (IdDepartamento)references RecursosHumanos.Departamento,--relacaion tablas de RRHH
 	foreign key (IdArticuloBodega)references Inventario.ArticuloBodega,--relacion tablas de inventario,
-	foreign key (IdResponsable,IdEmpresa)references RecursosHumanos.Empleado,--relacaion tablas de RRHH
+	foreign key (IdResponsable)references RecursosHumanos.Persona,--relacaion tablas de RRHH
 	foreign key (IdUsuario)references Seguridad.Usuario,--relacaion tablas de RRHH
 	foreign key (IdTipo)references Inventario.TipoArticulo,--relacion tablas de inventario,
 	foreign key (IdGrupo)references Inventario.Grupo,--relacion tablas de inventario,
@@ -2421,7 +2394,7 @@ create table ActivoFijo.Transferencia
 	 foreign key (IdActivoFijo) references ActivoFijo.ActivoFijo,
 	 foreign key (IdTipoTransferencia) references ActivoFijo.TipoTransferencia,
 	foreign key (IdDepartamento)references RecursosHumanos.Departamento,--relacaion tablas de RRHH
-	foreign key (IdResponsableFuturo,IdEmpresa)references RecursosHumanos.Empleado,--relacaion tablas de RRHH
+	foreign key (IdResponsableFuturo)references RecursosHumanos.Persona,--relacaion tablas de RRHH
 	foreign key (IdBodegaFuturo,IdEmpresa)references Inventario.Bodega,--relacaion con Inventario 
 )
 go
@@ -2572,7 +2545,7 @@ CREATE TABLE Compras.DevolucionCompra  --ok
     foreign key(IdUsuario)references Seguridad.Usuario,
  	foreign key (IdEstado) references Seguridad.Estado,
 	foreign key (idProveedor) references Compras.Proveedor,
-	foreign key (idEmpleado,IdEmpresa) references RecursosHumanos.Empleado,
+	foreign key (idEmpleado) references RecursosHumanos.Persona,
 	primary key(Numero,IdEmpresa)
 )
 GO
@@ -2606,7 +2579,7 @@ CREATE TABLE Compras.OrdenDespacho --ok
 	foreign key(IdEmpresa)references Seguridad.Empresa,
     foreign key(IdUsuario)references Seguridad.Usuario,
  	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (idEmpleado,IdEmpresa) references RecursosHumanos.Empleado,
+	foreign key (idEmpleado) references RecursosHumanos.Persona,
 	foreign key (idDepartamento) references RecursosHumanos.Departamento,
 	primary key(Numero,IdEmpresa)
  )
@@ -2640,7 +2613,7 @@ CREATE TABLE Compras.Solicitud  --ok
     foreign key(IdUsuario)references Seguridad.Usuario,
 	foreign key (IdEstado) references Seguridad.Estado,
 	foreign key (idArticulo,IdEmpresa) references Inventario.Articulo,
-	foreign key (idEmpleado,IdEmpresa) references RecursosHumanos.Empleado,
+	foreign key (idEmpleado) references RecursosHumanos.Persona,
 	primary key(Numero,IdEmpresa)
 )
 GO
