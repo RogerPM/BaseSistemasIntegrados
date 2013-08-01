@@ -171,14 +171,6 @@ create table Seguridad.Usuario
 go
 
 
-/*PROVEEDOR REasignado a Compras.Proveedor hasta que RRHH tome la batuta*/
-create table RecursosHumanos.Proveedor
-(
-	IdProveedor int not null primary key,
-	IdPersona int not null,
-	foreign key (IdPersona)references RecursosHumanos.Persona
-)
-go
 
 /*CURSO*/
 create table RecursosHumanos.Curso
