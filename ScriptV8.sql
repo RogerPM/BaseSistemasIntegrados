@@ -160,7 +160,6 @@ create table RecursosHumanos.Maternidad
 	FechaInicio				datetime not null,
 	FechaFin				datetime not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
 	IdEstado				int not null,
 	foreign key (IdEstado)references Seguridad.Estado,
 	foreign key (IdEmpleado,IdEmpresa)references RecursosHumanos.Empleado
@@ -307,7 +306,7 @@ create table RecursosHumanos.Jornada
 	IdJornada				int not null primary key,
 	Fecha					datetime not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
+	IdUsuarioModificacion	int,
 	HoraInicio				time not null,
 	HoraFinal				time not null,
 	IdEmpresa				int not null,
@@ -315,6 +314,7 @@ create table RecursosHumanos.Jornada
 	IdPersona				int not null,
 	foreign key (IdTipoJornada) references RecursosHumanos.TipoJornada,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
+	foreign key (IdUsuarioModificaion) references Seguridad.Usuario,
 	foreign key (IdPersona) references RecursosHumanos.Persona
 )
 go
@@ -339,11 +339,12 @@ create table RecursosHumanos.MultaxPersona
 	IdMulta					int not null,
 	FechaEmision			date not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
+	IdUsuarioModificacion	int,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
 	primary key (idpersona,idmulta),
 	foreign key (IdMulta) references RecursosHumanos.Multa,
+	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdEstado) references Seguridad.Estado,
 	foreign key (IdPersona) references RecursosHumanos.Persona
@@ -383,10 +384,11 @@ create table RecursosHumanos.CargoxDepartamento
 	IdCargo					int not null,
 	FechaCreacion			date not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
+	IdUsuarioModificacion	int,
 	IdEstado				int not null,
 	primary key (idCargo,idDepartamento),
 	foreign key (IdCargo) references RecursosHumanos.Cargo,
+	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
 	foreign key (IdEstado) references Seguridad.Estado,
 	foreign key (IdDepartamento) references RecursosHumanos.Departamento
 )
@@ -430,10 +432,11 @@ create table RecursosHumanos.PersonaxCargo
 	IdEmpresa				int not null,
 	IdCargo					int not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
+	IdUsuarioModificacion	int,
 	IdEstado				int not null,
 	primary key (idPersona,IdCargo),
 	foreign key (IdEstado) references Seguridad.Estado,
+	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (Idcargo) references RecursosHumanos.Cargo
@@ -461,10 +464,11 @@ create table RecursosHumanos.CargaFamiliar
 	FechaNacimiento			date not null,
 	FechaRegistro			date not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
+	IdUsuarioModificacion	int,
 	IdEstado				int not null,
 	primary key (idpersona,idparentesco),
 	foreign key (IdEstado) references Seguridad.Estado,
+	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdParentesco) references RecursosHumanos.Parentesco
@@ -478,12 +482,13 @@ create table RecursosHumanos.AnticipoCab
 	IdEmpleado				int not null,
 	Fecha					date not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
+	IdUsuarioModificacion	int,
 	Total					numeric(10,2) not null,
 	Observacion				varchar(50) null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
 	foreign key (IdEmpleado,idempresa) references RecursosHumanos.Empleado,
+	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdEstado) references Seguridad.Estado,
 	primary key (NumAnticipo, IdEmpresa)
@@ -497,9 +502,10 @@ create table RecursosHumanos.AnticipoDet
 	NumAnticipo				int not null,
 	FechaCobro				date not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
+	IdUsuarioModificacion	int,
 	IdEmpresa int not null references Seguridad.Empresa,
 	foreign key (NumAnticipo, IdEmpresa) references RecursosHumanos.AnticipoCab,
+	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
 	primary key (NumLinea,IdEmpresa)
 )
 go
@@ -521,13 +527,14 @@ create table RecursosHumanos.NominaCab
 	NumNomina				int not null,
 	FechaEmision			date not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
+	IdUsuarioModificacion	int,
 	Total					numeric(10,2) not null,
 	IdEmpleado				int not null,
 	IdEstado				int not null,
 	IdEmpresa				int not null,
 	Observacion				varchar(50) null,
 	foreign key (IdEmpleado,idempresa) references RecursosHumanos.Empleado,
+	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
 	foreign key (IdEstado) references Seguridad.Estado,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	primary key (NumNomina, IdEmpresa)
@@ -571,13 +578,14 @@ create table RecursosHumanos.Contrato
 	IdEmpresa				int not null,
 	Fecha					date not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
+	IdUsuarioModificacion	int,
 	Remuneracion			numeric(10,2) not null,
 	IdJornada				int not null,
 	PeriodoPrueba			bit not null,
 	IdEstado				int not null,
 	primary key (IdPersona,NumContrato,idEmpresa),
 	foreign key (IdEstado) references Seguridad.Estado,
+	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdTipoContrato) references RecursosHumanos.TipoContrato,
@@ -608,7 +616,6 @@ create table RecursosHumanos.Permiso
 	FechaInicio				datetime not null,
 	FechaFinal				datetime not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
 	IdEstado				int not null,
 	IdEmpresa				int not null,
 	foreign key (IdUsuario) references Seguridad.Usuario,
@@ -628,7 +635,7 @@ create table RecursosHumanos.Liquidacion
 	IdEmpresa				int not null,
 	Fecha					datetime not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
+	IdUsuarioModificacion	int,
 	Causa					varchar(150) not null,
 	FechaSalida				datetime not null,
 	Ingresos				numeric(10,2) not null,
@@ -638,6 +645,7 @@ create table RecursosHumanos.Liquidacion
 	primary key (NumLiquidacion,IdEmpresa,Idpersona),
 	foreign key (IdPersona,NumContrato,IdEmpresa) references RecursosHumanos.Contrato,
 	foreign key (IdEstado) references Seguridad.Estado,
+	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
 	foreign key (IdPersona) references RecursosHumanos.persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 )
@@ -649,12 +657,13 @@ create table RecursosHumanos.Vacacion
 	NumVacacion				int not null primary key,
 	IdEmpleado				int not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
+	IdUsuarioModificacion	int,
 	FechaInicio				date not null,
 	FechaFin				date not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
 	foreign key (IdEmpleado,idempresa) references RecursosHumanos.Empleado,
+	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdEstado) references Seguridad.Estado
 )
@@ -679,13 +688,14 @@ create table RecursosHumanos.Prestamo
 	IdTipoPrestamo 			int not null,
 	IdPersona 				int not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
+	IdUsuarioModificacion	int,
 	Monto					money not null,
 	Pago					money not null,
 	IdEstado 				int not null,
 	IdEmpresa 				int not null,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
+	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
 	foreign key (IdEstado) references Seguridad.Estado,
 	foreign key (IdTipoPrestamo) references RecursosHumanos.TipoPrestamo,
 )
@@ -827,7 +837,6 @@ create table Contabilidad.AnoFiscal
 	inicio_periodo			date not null,
 	IdUsuario 				int,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
 )
 go
 
@@ -848,10 +857,8 @@ create table Contabilidad.PeriodoContable
 	FechaInicio				date not null,
 	FechaFin				date not null,
 	IdEstado 				int not null references Seguridad.Estado,
-	IdUsuario 				int not null references Seguridad.Usuario, --E agregado
+	IdUsuario 				int not null references Seguridad.Usuario,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
-	foreign key (IdUsuario) references Seguridad.Usuario,
 	PRIMARY KEY(IdEmpresa,IdPeriodoContable,IdAFiscal)
 )
 go
@@ -866,10 +873,8 @@ create table Contabilidad.Cuenta
 	IdNivelCuenta			numeric(2,0)not null references Contabilidad.NivelCuenta,
 	IdTipoCuenta			numeric(2,0) not null references Contabilidad.TipoCuenta,
 	naturaleza_cuenta		varchar(50) not null,
-	IdUsuario 				int not null references Seguridad.Usuario, --E agregado
+	IdUsuario 				int not null references Seguridad.Usuario, 
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
-	foreign key (IdUsuario) references Seguridad.Usuario,
 	PRIMARY KEY(IdEmpresa, IdCuenta)
 )
 go
@@ -884,7 +889,6 @@ create table Contabilidad.CabeceraComprobante
 	periodo_contable_IdAFiscal numeric(4,0),
 	IdUsuario 				int,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
 	primary key(IdEmpresa, numero_comprobante),
 	foreign key(IdEmpresa,periodo_contable,periodo_contable_IdAFiscal) references Contabilidad.PeriodoContable,
 	foreign key(IdEmpresa) references Seguridad.Empresa
@@ -942,7 +946,6 @@ create table Contabilidad.ModeloAsiento
 	haber					varchar(50),
 	IdUsuario 				int,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
 	PRIMARY KEY(IdEmpresa,numero,IdTransaccion)
 )
 go
@@ -1717,7 +1720,6 @@ CREATE TABLE CuentasPorCobrar.CierreCaja
 	idCierreCaja 			int NOT NULL,
 	FechaCierre				date NOT NULL,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
 	MontoApertura			money NOT NULL,
 	TotalDeposito			money NOT NULL,
 	TotalTransferencia		money NOT NULL,
@@ -1788,7 +1790,6 @@ CREATE TABLE CuentasPorCobrar.MovimientoBancario
 	Observacion				varchar(150) NOT NULL,
 	Fecha					date NOT NULL,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
 	Valor					money NOT NULL,
 	idEstado 				int NOT NULL,
 	primary key (idMovimientoBancario),
@@ -1813,7 +1814,6 @@ CREATE TABLE CuentasPorCobrar.Inversion
 	Porcentaje				numeric(18, 0) NOT NULL,
 	Fecha					date NOT NULL,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
 	FechaInicio				date NOT NULL,
 	FechaFinal				date NOT NULL,
 	idEstado				int NOT NULL,
@@ -1834,7 +1834,6 @@ CREATE TABLE CuentasPorCobrar.AperturaCaja
 	idAperturaCaja 			int NOT NULL,
 	Fecha					date NOT NULL,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
 	Monto					money NOT NULL,
 	idEstado 				int NOT NULL,
 	primary key (idAperturaCaja),
@@ -1874,7 +1873,6 @@ CREATE TABLE CuentasPorCobrar.ConciliacionBancaria
 	idBanco 				int NOT NULL,
 	NumeroCuenta 			int NOT NULL,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
 	FechaConciliacion		date NOT NULL,
 	FechaDesde				date NOT NULL,
 	FechaHasta				date NOT NULL,
@@ -2042,7 +2040,6 @@ CREATE TABLE CuentasPorCobrar.Cobro
 	idCabeceraComprobante	numeric(4,0) NOT NULL,
 	Fecha					date NOT NULL,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
 	NumeroCuota 			int NOT NULL,
 	ValorCuota				money NOT NULL,
 	Interes					money NOT NULL,
@@ -2098,7 +2095,6 @@ CREATE TABLE CuentasPorCobrar.CuentaxCobrarDet
 	fecha_cobro				date NOT NULL,
 	fecha_vencimiento		date NOT NULL,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
 	idEstado int NOT NULL,
 	primary key (idCuentaxCobrar, numero),
 	foreign key (idEmpresa) references Seguridad.Empresa,
@@ -2120,7 +2116,6 @@ create table CuentaxPagar.CuentaPorPagar
 	FechaIngreso			date not null,
 	Factura 				int not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
 	FechaTransaccion		date not null,
 	IdPersona 				int null,
 	IdEmpresaServicio		varchar(13) null,
@@ -2157,7 +2152,6 @@ create table CuentaxPagar.DeudaDet--esta tabla debe llamarse CuentaPorPagarDetal
 	FechaVencimiento		date not null,
 	FechaPagoReal			date not null,
 	FechaModificacion		datetime, 
-	UsuarioModificacion		int,
 	IdEstado 				int not null,
     foreign key (IdEstado) references Seguridad.Estado,
     foreign key (NumCuentaPorPagar, IdEmpresa) references CuentaxPagar.CuentaPorPagar,
