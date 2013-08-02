@@ -1948,12 +1948,12 @@ go
 	
 create table CuentaxPagar.EmpresaServicio
 (
-	IdEmpresaServicio 		nvarchar (13) not null,
+	IdEmpresaServicio 		varchar (13) not null,
 	fechaRegistro			date not null,
-	RazonSocial				nvarchar(30) not null,
-	Direccion				nvarchar(30)not null,
-	email					nvarchar(50) null,
-	webpage					nvarchar(50) null,
+	RazonSocial				varchar(30) not null,
+	Direccion				varchar(30)not null,
+	email					varchar(50) null,
+	webpage					varchar(50) null,
 	IdEstado				int not null,
 	IdTipoPersona 			int not null,
 	IdEmpresa 				int not null,
@@ -1970,7 +1970,7 @@ go
 create table CuentaxPagar.TelefonoEmpresaServicio
 (
 		IdEmpresa 				int not null,
-		IdEmpresaServicio 		nvarchar(13) not null,
+		IdEmpresaServicio 		varchar(13) not null,
 		IdTelefono 				int not null,
 		Serie 					int not null,
 		foreign key (IdEmpresa)references Seguridad.Empresa, 
@@ -1984,7 +1984,7 @@ go
 create table CuentaxPagar.Impuesto
 (
 	IdImpuesto 				int not null,
-	Descripcion				nvarchar(30) not null,
+	Descripcion				varchar(30) not null,
 	Porcentaje				decimal(3,2)not null,
 	FechaRegistro			date not null,
 	IdEstado 				int not null,
@@ -2000,7 +2000,7 @@ go
 create table CuentaxPagar.FrecuenciaPago
 (
 	IdFrecuenciaPago 		int not null,
-	Descripcion				nvarchar(30) not null,
+	Descripcion				varchar(30) not null,
 	FechaActual				date not null,
 	IdEstado 				int not null,
 	IdUsuario 				int not null,
@@ -2019,7 +2019,7 @@ create table CuentaxPagar.CuentaBancaria
 	NroCta 				int not null,
 	IdBanco 			int not null,
 	IdEmpresa 			int not null,
-	IdEmpresaServicio	nvarchar(13) not null,
+	IdEmpresaServicio	varchar(13) not null,
 	foreign key (IdEmpresaServicio, IdEmpresa)references CuentaxPagar.EmpresaServicio,
 	foreign key (IdBanco)references CuentasPorCobrar.Banco,
 	foreign key (IdEmpresa)references Seguridad.Empresa,
@@ -2123,7 +2123,7 @@ create table CuentaxPagar.CuentaPorPagar
 	UsuarioModificacion		int,
 	FechaTransaccion		date not null,
 	IdPersona 				int null,
-	IdEmpresaServicio		nvarchar(13) null,
+	IdEmpresaServicio		varchar(13) null,
 	Motivo					varchar(30) not null,
 	detalle					varchar(30) not null,
 	Subtotal				numeric(10,0) not null,
