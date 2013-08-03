@@ -1935,11 +1935,10 @@ create table CuentaxPagar.MedioPago
 	IdMedioPago 			int not null ,
 	Descripcion				varchar(30) not null,
 	fechaRegistro			date not null,
-	IdEstado 				int not null,
+	Estado 				int not null,
 	IdEmpresa 				int not null references Seguridad.Empresa,
 	IdUsuario 				int not null,
 	foreign key (IdUsuario) references Seguridad.Usuario,
-	foreign key (IdEstado)references Seguridad.Estado,
 	primary key(IdMedioPago, IdEmpresa) 
 )
 go
@@ -1947,17 +1946,16 @@ go
 create table CuentaxPagar.EmpresaServicio
 (
 	IdEmpresaServicio 		varchar (13) not null,
-	fechaRegistro			date not null,
+	FechaRegistro			date not null,
 	RazonSocial				varchar(30) not null,
 	Direccion				varchar(30)not null,
-	email					varchar(50) null,
-	webpage					varchar(50) null,
-	IdEstado				int not null,
+	Email					varchar(50) null,
+	Webpage					varchar(50) null,
+	Estado					int not null,
 	IdTipoPersona 			int not null,
 	IdEmpresa 				int not null,
 	IdUsuario 				int not null,
 	foreign key (IdTipoPersona)references RecursosHumanos.TipoPersona,
-	foreign key (IdEstado)references Seguridad.Estado,
 	foreign key (IdEmpresa)references Seguridad.Empresa, 
 	foreign key (IdUsuario)references Seguridad.Usuario,
 	primary key(IdEmpresaServicio,IdEmpresa)
@@ -1985,12 +1983,11 @@ create table CuentaxPagar.Impuesto
 	Descripcion				varchar(30) not null,
 	Porcentaje				decimal(3,2)not null,
 	FechaRegistro			date not null,
-	IdEstado 				int not null,
+	Estado 					int not null,
 	IdEmpresa 				int not null,
 	IdUsuario 				int not null,
 	foreign key (IdUsuario)references Seguridad.Usuario,
-	foreign key (IdEmpresa)references Seguridad.Empresa, 
-	foreign key (IdEstado)references Seguridad.Estado,
+	foreign key (IdEmpresa)references Seguridad.Empresa,
 	primary key (IdImpuesto, IdEmpresa)
 )
 go
@@ -2000,12 +1997,11 @@ create table CuentaxPagar.FrecuenciaPago
 	IdFrecuenciaPago 		int not null,
 	Descripcion				varchar(30) not null,
 	FechaActual				date not null,
-	IdEstado 				int not null,
+	Estado 					int not null,
 	IdUsuario 				int not null,
 	IdEmpresa 				int not null,
 	foreign key (IdUsuario)references Seguridad.Usuario,
-	foreign key (IdEmpresa)references Seguridad.Empresa, 
-	foreign key(IdEstado)references Seguridad.Estado,
+	foreign key (IdEmpresa)references Seguridad.Empresa,
 	primary key(IdFrecuenciaPago,IdEmpresa)
 )
 go
