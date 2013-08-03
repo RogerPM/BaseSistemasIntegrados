@@ -958,12 +958,10 @@ create table Inventario.TipoArticulo
 IdEmpresa	int,
 IdTipoArticulo	int not null,
 Descripcion	varchar(500)not null,
-IdUsuario	int,
 IdEstado	int,
 primary key (IdTipoArticulo),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
 
@@ -974,12 +972,10 @@ IdGrupo	int not null,
 Descripcion	varchar(100) not null,
 IdTipoArticulo int,
 IdEstado	int,
-IdUsuario	int
 primary key (IdGrupo),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdTipoArticulo) references Inventario.TipoArticulo,
 foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
 
@@ -1065,12 +1061,10 @@ IdResponsable	int not null,
 Direccion	varchar(100),
 Perchas	numeric(10,0),
 IdEstado	int,
-IdUsuario	int,
 primary key (IdBodega, IdEmpresa),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdResponsable) references RecursosHumanos.Persona,
 foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
 
@@ -1113,11 +1107,9 @@ IdEmpresa	int,
 IdUnidadMedida	int not null,
 Descripcion	varchar(100) not null,
 IdEstado	int,
-IdUsuario	int,
 primary key (IdUnidadMedida),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
 
@@ -1128,12 +1120,10 @@ create table Inventario.Chasis
 IdEmpresa	int,
 IdChasis	int not null,
 Descripcion	varchar(100) not null,
-IdUsuario	int,
 IdEstado	int,
 primary key (IdChasis),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
 
@@ -1142,12 +1132,10 @@ create table Inventario.TipoMotor
 IdEmpresa	int,
 IdTipoMotor	int not null,
 Descripcion	varchar(100),
-IdUsuario	int,
 IdEstado	int,
 primary key (IdTipoMotor),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
 
@@ -1156,12 +1144,10 @@ create table Inventario.TipoCombustible
 IdEmpresa	int,
 IdTipoCombustible	int not null,
 Descripcion	varchar(100),
-IdUsuario	int,
 IdEstado	int,
 primary key (IdTipoCombustible),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
 
@@ -1170,12 +1156,10 @@ create table Inventario.Color
 IdEmpresa	int,
 IdColor	int not null,
 Descripcion	varchar(100) not null,
-IdUsuario	int,
 IdEstado	int,
 primary key (IdColor),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
 
@@ -1185,12 +1169,10 @@ create table Inventario.Marca
 IdEmpresa	int,
 IdMarca	int not null,
 Descripcion	varchar(100) not null,
-IdUsuario	int,
 IdEstado	int,
 primary key (IdMarca),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
 
@@ -1200,12 +1182,10 @@ IdEmpresa	int,
 IdModelo	int not null,
 Descripcion	varchar(100) not null,
 IdMarca int,
-IdUsuario	int,
 IdEstado	int,
 primary key (IdModelo),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
 foreign key (IdMarca) references Inventario.Marca,
 )
 go
@@ -1215,12 +1195,10 @@ create table Inventario.TipoMaterial
 IdEmpresa	int,
 IdTipoMaterial	int not null,
 Descripcion	varchar(100),
-IdUsuario	int,
 IdEstado	int,
 primary key (IdTipoMaterial),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
-foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
 
@@ -1249,7 +1227,6 @@ create table Inventario.Articulo
 	IdModelo	int,
 	IdTipoMaterial	int,
 	Observacion	varchar(100),
-	IdUsuario	int,
 	IdEstado	int,
 	primary key (IdArticulo, IdEmpresa),
 	foreign key(IdEstado)references Seguridad.Estado,
@@ -1257,7 +1234,6 @@ create table Inventario.Articulo
 	foreign key(IdUnidadMedida)references Inventario.UnidadMedida,
 	foreign key (IdTipoArticulo)references Inventario.TipoArticulo,
 	foreign key (IdGrupo)references Inventario.Grupo,
-	--foreign key (IdSubgrupo)references ActivoFijo.Subgrupo,
 	foreign key (IdChasis)references Inventario.Chasis,
 	foreign key (IdTipoMotor)references Inventario.TipoMotor,
 	foreign key (IdTipoCombustible)references Inventario.TipoCombustible,
@@ -1277,12 +1253,10 @@ create table Inventario.Percha
 	Nro_Divisiones	numeric(10,0) not null,
 	IdBodega	int not null,
 	IdEstado	int,
-	IdUsuario	int,
 	primary key (IdPercha),
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdBodega, IdEmpresa) references Inventario.Bodega,
 	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
 
@@ -1292,11 +1266,9 @@ create table Inventario.Motivo
 	IdMotivo	int not null,
 	Descripcion	varchar(100) not null,
 	IdEstado	int,
-	IdUsuario	int,
 	primary key (IdMotivo),
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (IdUsuario) references Seguridad.Usuario,
 )
 go
 
