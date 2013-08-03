@@ -306,7 +306,7 @@ create table RecursosHumanos.Jornada
 	IdJornada				int not null primary key,
 	Fecha					datetime not null,
 	FechaModificacion		datetime, 
-	IdUsuarioModificacion	int,
+	IdUsuario				int,
 	HoraInicio				time not null,
 	HoraFinal				time not null,
 	IdEmpresa				int not null,
@@ -314,7 +314,7 @@ create table RecursosHumanos.Jornada
 	IdPersona				int not null,
 	foreign key (IdTipoJornada) references RecursosHumanos.TipoJornada,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdUsuarioModificaion) references Seguridad.Usuario,
+	foreign key (IdUsuario) references Seguridad.Usuario,
 	foreign key (IdPersona) references RecursosHumanos.Persona
 )
 go
