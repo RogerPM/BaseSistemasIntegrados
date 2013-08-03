@@ -2401,9 +2401,11 @@ create table ActivoFijo.DepreciacionCab
 (
 	Secuencia_DepreciacionCab int,
 	IdEmpresa				  int,
+	IdUsuario 				  int   not null,
 	fecha					  date  not null,
 	observacion				  varchar(150)  not null
 	primary key (Secuencia_DepreciacionCab,IdEmpresa),
+	foreign key (IdUsuario)references Seguridad.Usuario,--relacaion tablas de RRHH
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 )
 go
@@ -2415,7 +2417,7 @@ create table ActivoFijo.DepreciacionDet
 	IdCabecera 				  int,
 	Secuencia_DepreciacionDet int,
 	IdActivoFijo 		      int  not null,
-	IdEmpresa				  int not null,
+	IdEmpresa				  int  not null,
 	valor_nominal			  numeric(10,2)  not null,
 	valor_actual			  numeric(10,2)  not null
 	--haciendo las referencias constraint
@@ -2548,6 +2550,7 @@ create table ActivoFijo.VentaGarageCab
 (
 	idVentaGarage 				int,
 	IdEmpresa 					int,
+	IdUsuario 				    int  not null,
 	NombreCliente  				varchar(50)  not null,
 	Direccion 					varchar(150)  not null,
 	Identificador 				int  not null,
@@ -2561,6 +2564,7 @@ create table ActivoFijo.VentaGarageCab
 	CantidadCheque 				int  not null,
 	--haciendo las referencias constraint
 	primary key (idVentaGarage,IdEmpresa),
+	foreign key (IdUsuario)references Seguridad.Usuario,--relacaion tablas de RRHH
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdFormaPagoMedioPago, IdEmpresa) references CuentaxPagar.MedioPago
 )
