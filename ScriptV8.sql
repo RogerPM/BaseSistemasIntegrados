@@ -1932,7 +1932,7 @@ create table CuentaxPagar.Impuesto
 (
 	IdImpuesto 				int not null,
 	Descripcion				varchar(30) not null,
-	Porcentaje				decimal(3,2)not null,
+	Porcentaje				decimal(4,2)not null,
 	FechaRegistro			date not null,
 	Estado 					int not null,
 	IdEmpresa 				int not null,
