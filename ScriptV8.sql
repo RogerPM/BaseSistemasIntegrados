@@ -2718,8 +2718,6 @@ go
 
 
 /**************************TALLER************************/
-
-
 --PERSONA
 create table Taller.Persona
 (
@@ -2735,7 +2733,6 @@ Telefono             int  NOT NULL ,
 Mail                 varchar(50)  NOT NULL ,
 IdEstado             int  NOT NULL ,
 IdEmpresa            int  NOT NULL ,
-Foto                 image null ,
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
 foreign key (IdTipoPersona)references RecursosHumanos.TipoPersona,
