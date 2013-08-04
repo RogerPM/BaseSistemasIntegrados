@@ -2719,70 +2719,46 @@ go
 
 /**************************TALLER************************/
 
+
 --PERSONA
 create table Taller.Persona
 (
 Identificacion       int  NOT NULL primary key,
+IdTipoPersona        int  NOT NULL ,
+NombreRazonSocial    varchar(50)  NOT NULL ,
+Apellido             varchar(50)  NOT NULL ,
+FechaNacimiento      datetime  NOT NULL ,
+Genero				 varchar(10)not null,
+TipoIdentificacion   int  NOT NULL ,
 Direccion            varchar(100)  NOT NULL ,
 Telefono             int  NOT NULL ,
 Mail                 varchar(50)  NOT NULL ,
-IdTipoPersona        int  NOT NULL ,
 IdEstado             int  NOT NULL ,
 IdEmpresa            int  NOT NULL ,
-Nombre               varchar(50)  NOT NULL ,
-Apellido             varchar(50)  NOT NULL ,
-FechaNacimiento      datetime  NOT NULL ,
-Genero               char(10)  NOT NULL ,
-IdTipoIdentificacion int  NOT NULL, 
-Foto                 varchar(100)  NOT NULL ,
+Foto                 image null ,
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
 foreign key (IdTipoPersona)references RecursosHumanos.TipoPersona,
-foreign key (IdTipoIdentificacion)references RecursosHumanos.TipoIdentificacion
+foreign key (TipoIdentificacion )references RecursosHumanos.TipoIdentificacion ,
 )
 go
 
---CLIENTE
-CREATE TABLE Taller.Cliente
-( 
-	IdCliente int not null primary key,
-	IdPersona int not null,
-	IdEmpresa int not null,
-	IdEstado  int not null, 
-	foreign key(IdEmpresa)references Seguridad.Empresa,
-	foreign key(IdEstado)references Seguridad.Estado,
-	foreign key (IdPersona) references Taller.Persona
-)
-go
 
---EMPLEADO
-create table Taller.Empleado
-(
-IdEmpleado int not null primary key,
-Nombre varchar(50)not null,
-Identificacion int not null,
-IdEmpresa int,
-IdEstado  int not null,
-Sueldo 	  numeric(10,0) not null,
-foreign key (IdEmpresa)references Seguridad.Empresa,
-foreign key (Identificacion)references Taller.Persona,
-foreign key(IdEstado)references Seguridad.Estado
-)
-go
+
 
 
 --ARTICULO
 create table Taller.Articulo(
 IdEmpresa		int not null,
-IdArticulo		int not null,
+IdArticulo		int not null primary key,
 Descripcion		varchar(100) not null,
 FechaProduccion date,
 CantidadMinima	numeric(5,0),
 CantidadMaxima	numeric(5,0),
 CantidadActual	numeric(5,0),
-IdUnidadMedida	int not null,
-FechaCaducidad	date,
-IdTipoArticulo	int not null,
+IdUnidadMedida	int,
+--FechaCaducidad	date,
+--IdTipoArticulo	int not null,
 IdGrupo			int not null,
 --IdSubGrupo		int, 
 IdChasis		int, 
@@ -2796,11 +2772,11 @@ IdTipoMaterial	int,
 Observacion		varchar(100),
 IdUsuario		int,
 IdEstado		int,
-primary key (IdArticulo, IdEmpresa),
+foreign key (IdEmpresa)references Seguridad.Empresa,
 foreign key(IdEstado)references Seguridad.Estado,
 foreign key(IdEmpresa)references Seguridad.Empresa,
 foreign key(IdUnidadMedida)references Inventario.UnidadMedida,
-foreign key (IdTipoArticulo)references Inventario.TipoArticulo,
+--foreign key (IdTipoArticulo)references Taller.TipoArticulo,
 foreign key (IdGrupo)references Inventario.Grupo,
 --foreign key (IdSubGrupo)references Inventario.SubGrupo,
 foreign key (IdChasis)references Inventario.Chasis,
@@ -2812,6 +2788,10 @@ foreign key (IdModelo)references Inventario.Modelo,
 foreign key (IdTipoMaterial)references Inventario.TipoMaterial
 )
 go
+
+
+
+
 
 
 --EMPRESA ASEGURADORA
@@ -2842,7 +2822,7 @@ go
 CREATE TABLE Taller.Presupuesto
 ( 
 	IdPresupuesto        int  not null primary key,
-	IdCliente            int  not null, 
+	IdPersona            int  not null, 
 	Fecha                date  not null,
 	IdSeguro             int  not null,
 	TotalTiempoTrabajo   int  not null,
@@ -2854,7 +2834,7 @@ CREATE TABLE Taller.Presupuesto
 	IdEmpresa		 int  not null,
 	foreign key (IdEmpresa)references Seguridad.Empresa,
 	foreign key (IdEstado)references Seguridad.Estado,
-	foreign key(IdCliente)references Taller.Cliente, 
+	foreign key(IdPersona)references Taller.Persona, 
 	foreign key(IdSeguro)references Taller.Seguro	
 )
 go
