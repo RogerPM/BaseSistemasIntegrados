@@ -801,18 +801,6 @@ create table Seguridad.Permiso
 go
 
 
-/*PERFIL POR USUARIO*/
-create table Seguridad.PerfilUsuario
-(
-	 IdUsuario		int ,
-	 IdPerfil		int ,
-	 IdEmpresa		int ,
-	 primary key (IdPerfil,IdUsuario),
-	 foreign key (IdUsuario,IdEmpresa) references Seguridad.UsuarioPorEmpresa(IdUsuario,IdEmpresa),
-	 foreign key (IdPerfil) references Seguridad.Perfil,
-)
-go
-
 /*TELEFONO POR EMPRESA*/
 create table  Seguridad.TelefonoEmpresa --E editada agregado
 (
