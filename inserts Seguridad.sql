@@ -35,6 +35,16 @@ go
 insert into Seguridad.Empresa values(4,'Textiles Judas SA','Prendas Judas','0972254938001','Km 5.5 via samborondon',null,null,'pedidos@judas.com','www.sanjudas.com.ec','Sector privado','Empresa dedicada a la manofactura de vestimentas',3)
 go
 
+/***************tipo de persona*************/
+insert into RecursosHumanos.TipoPersona values (1,'Natural',1,1)
+go
+insert into RecursosHumanos.TipoPersona values (2,'Juridica',1,1)
+go
+
+/*****************PERSONA******************/
+insert into RecursosHumanos.Persona values (1,1,'Master','SA',null,'masculino','primary key','Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas','0994996660','info@telcom.com.ec',1,1,null)
+go
+
 truncate table Seguridad.Usuario
 /********************USUARIO*******************/
 insert into Seguridad.Usuario values(11,'lquinter','rebeca',1,null)
