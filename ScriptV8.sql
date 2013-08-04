@@ -1208,7 +1208,7 @@ create table Inventario.Articulo
 	SerieChasis     varchar(17),
 	IdTipoMotor	int,
 	SerieMotor      varchar(11),
-	NroPlaca	int,
+	NroPlaca	varchar(8),
 	IdTipoCombustible int,
 	IdColor	int,
 	IdMarca	int,
