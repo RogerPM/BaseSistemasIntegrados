@@ -44,18 +44,43 @@ go
 /*****************PERSONA******************/
 insert into RecursosHumanos.Persona values (1,1,'Master','SA',null,'masculino','primary key','Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas','0994996660','info@telcom.com.ec',1,1,null)
 go
+insert into RecursosHumanos.Persona values (11,1,'Luis Miguel','Quintero',null,'cualquira','cedula','Bosque cerca de guayaquil, llegando al templo de Barcelona','0994996660','lquinter@espol.edu.ec',1,1,null)
+go
+insert into RecursosHumanos.Persona values (21,1,'Roberto Enrique','Arias',null,'indefinido','carnet','geranio','0994996660','enriques@gmail.com',1,1,null)
+go
+insert into RecursosHumanos.Persona values (31,1,'Roger','Peñafiel',null,'masculino','pasaporte','a dos cuadras del capwell ','0990144207','rpenafie@espol.edu.ec',1,1,null)
+go
+insert into RecursosHumanos.Persona values (41,1,'Marco','Castro',null,'no answer','ruc','bastion','0994996660','macastro@espol.edu.ec',1,1,null)
+go
+insert into RecursosHumanos.Persona values (51,1,'Stalin','Vanegas',null,'pendiente','seguro','lejos de guayaquil','0994996660','info@sandi.com.ec',1,1,null)
+go
+
+truncate table Seguridad.Perfil
+/****************PERFIL********************/
+insert into Seguridad.Perfil values(1,'Administrador',1)
+go
+insert into Seguridad.Perfil values(2,'Auditor',1)
+go
+insert into Seguridad.Perfil values(3,'Contador',1)
+go
+insert into Seguridad.Perfil values(4,'Vendedor',1)
+go
+insert into Seguridad.Perfil values(5,'Supervisor',1)
+go
 
 truncate table Seguridad.Usuario
 /********************USUARIO*******************/
-insert into Seguridad.Usuario values(11,'lquinter','rebeca',1,null)
+insert into Seguridad.Usuario values(1,'Admin','Admin',1,null,null)
 go
-insert into Seguridad.Usuario values(21,'rbaria','sukubo',1,null)
+insert into Seguridad.Usuario values(11,'lquinter','rebeca',1,null,null)
 go
-insert into Seguridad.Usuario values(31,'robafiel','TK',1,null)
+insert into Seguridad.Usuario values(21,'rbaria','sukubo',1,null,null)
 go
-insert into Seguridad.Usuario values(41,'macastro','callado',1,null)
+insert into Seguridad.Usuario values(31,'robafiel','TK',1,null,null)
 go
-insert into Seguridad.Usuario values(51,'barceman','dianarulers',1,null)
+insert into Seguridad.Usuario values(41,'macastro','callado',1,null,null)
+go
+insert into Seguridad.Usuario values(51,'barceman','dianarulers',1,null,null)
 go
 
 
@@ -435,20 +460,6 @@ insert into Seguridad.MenuPorEmpresa  values(1,8,'Seguridad.frmCambiarContrasena
 go
 
 
-truncate table Seguridad.Perfil
-/****************PERFIL********************/
-insert into Seguridad.Perfil values(1,'Administrador',1)
-go
-insert into Seguridad.Perfil values(2,'Auditor',1)
-go
-insert into Seguridad.Perfil values(3,'Contador',1)
-go
-insert into Seguridad.Perfil values(4,'Vendedor',1)
-go
-insert into Seguridad.Perfil values(5,'Supervisor',1)
-go
-
-
 truncate table Seguridad.Permiso
 /***************PERMISO******************/
 insert into Seguridad.Permiso values(2,1,100,7,1,0,0)
@@ -470,20 +481,6 @@ go
 insert into Seguridad.Permiso values(2,10,109,7,1,0,0)
 go
 insert into Seguridad.Permiso values(5,11,120,8,1,0,0)
-go
-
-
-truncate table Seguridad.PerfilUsuario
-/**************PERFIL POR USUARIO*/
-insert into Seguridad.PerfilUsuario values(11,2,1)
-go
-insert into Seguridad.PerfilUsuario values(21,2,1)
-go
-insert into Seguridad.PerfilUsuario values(31,2,1)
-go
-insert into Seguridad.PerfilUsuario values(41,2,1)
-go
-insert into Seguridad.PerfilUsuario values(51,5,2)
 go
 
 
