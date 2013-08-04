@@ -2739,7 +2739,7 @@ Foto                 image null ,
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
 foreign key (IdTipoPersona)references RecursosHumanos.TipoPersona,
-foreign key (TipoIdentificacion )references RecursosHumanos.TipoIdentificacion ,
+foreign key (TipoIdentificacion)references RecursosHumanos.TipoIdentificacion
 )
 go
 
