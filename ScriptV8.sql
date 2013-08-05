@@ -191,7 +191,7 @@ create table Seguridad.Usuario
 (
 	 IdUsuario			int,
 	 NombreUsuario		varchar(20),
-	 Contrasena			varchar(20),
+	 Contrasena			varchar(220),
 	 IdEstado			int					references Seguridad.Estado,
 	 IdImagen			int					references Seguridad.Imagen,
 	 IdPerfil int references Seguridad.Perfil,
