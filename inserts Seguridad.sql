@@ -1,9 +1,8 @@
 use TECA
 go
-
-truncate table Seguridad.Estado
-go
-/*******************ESTADO********************/
+--truncate table Seguridad.Estado
+--go
+/******************ESTADO********************/
 insert into Seguridad.Estado values(1,'Activa')
 go
 insert into Seguridad.Estado values(2,'Inactiva')
@@ -24,7 +23,7 @@ insert into Seguridad.Estado values(9,'Usado')
 go
 
 
-truncate table Seguridad.Empresa
+--truncate table Seguridad.Empresa
 /*********************EMPRESA*****************/
 insert into Seguridad.Empresa values(1,'Empresa XYZ SA','XYZ','0981357236001','Mexico DF',null,null,'informacion@xyz.org','www.xyzmundial.org','Sector publico','Institucion publica conocida mundialmente dedicada al analisis financiero',1)
 go
@@ -55,7 +54,7 @@ go
 insert into RecursosHumanos.Persona values (51,1,'Stalin','Vanegas',null,'pendiente','seguro','lejos de guayaquil','0994996660','info@sandi.com.ec',1,1,null)
 go
 
-truncate table Seguridad.Perfil
+--truncate table Seguridad.Perfil
 /****************PERFIL********************/
 insert into Seguridad.Perfil values(1,'Administrador',1)
 go
@@ -68,7 +67,7 @@ go
 insert into Seguridad.Perfil values(5,'Supervisor',1)
 go
 
-truncate table Seguridad.Usuario
+--truncate table Seguridad.Usuario
 /********************USUARIO*******************/
 insert into Seguridad.Usuario values(1,'Admin','Admin',1,null,null)
 go
@@ -84,7 +83,7 @@ insert into Seguridad.Usuario values(51,'barceman','dianarulers',1,null,null)
 go
 
 
-truncate table Seguridad.UsuarioPorEmpresa
+--truncate table Seguridad.UsuarioPorEmpresa
 /*****************USUARIO POR EMPRESA***********/
 insert into Seguridad.UsuarioPorEmpresa values(11,1)
 go
@@ -98,7 +97,7 @@ insert into Seguridad.UsuarioPorEmpresa values(51,2)
 go
 
 
-truncate table Seguridad.Modulo
+--truncate table Seguridad.Modulo
 /*********************MODULO*******************/
 insert into Seguridad.Modulo  values(1,'Seguridad Acceso',1,'seguridad')
 go
@@ -122,7 +121,7 @@ insert into Seguridad.Modulo  values (10,'Taller',1,'shelf02')
 go
 
 
-truncate table Seguridad.Menu
+--truncate table Seguridad.Menu
 /*********************MENU**********************/
 insert into Seguridad.Menu values(1,1,NULL,'Mantenimiento','NULL','NULL',1)  
 go
@@ -444,7 +443,7 @@ insert into Seguridad.Menu values(159,10,156,'Orden de Compra','NULL','forms',1)
 go
 
 
-truncate table Seguridad.MenuPorEmpresa
+--truncate table Seguridad.MenuPorEmpresa
 /**************************MENU POR EMPRESA********************/
 insert into Seguridad.MenuPorEmpresa  values(1,2,'Seguridad.frmCrearUsuario','forms',1)
 go
@@ -460,7 +459,7 @@ insert into Seguridad.MenuPorEmpresa  values(1,8,'Seguridad.frmCambiarContrasena
 go
 
 
-truncate table Seguridad.Permiso
+--truncate table Seguridad.Permiso
 /***************PERMISO******************/
 insert into Seguridad.Permiso values(2,1,100,7,1,0,0)
 go
@@ -484,7 +483,7 @@ insert into Seguridad.Permiso values(5,11,120,8,1,0,0)
 go
 
 
-truncate table Seguridad.TelefonoEmpresa
+--truncate table Seguridad.TelefonoEmpresa
 /*************TELEFONO POR EMPRESA*************/
 insert into Seguridad.TelefonoEmpresa values(1,1)
 go
