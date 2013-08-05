@@ -1,0 +1,6 @@
+C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\clases\bin\Debug\clases.dll.config
+C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\clases\bin\Debug\clases.dll
+C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\clases\bin\Debug\clases.pdb
+C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\clases\obj\Debug\clases.dll
+C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\clases\obj\Debug\clases.pdb

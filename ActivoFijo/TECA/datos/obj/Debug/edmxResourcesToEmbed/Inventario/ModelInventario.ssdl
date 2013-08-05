@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InventarioModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="InventarioModelStoreContainer">
+    <EntitySet Name="Grupo" EntityType="InventarioModel.Store.Grupo" store:Type="Tables" Schema="Inventario" />
+  </EntityContainer>
+  <EntityType Name="Grupo">
+    <Key>
+      <PropertyRef Name="IdGrupo" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdGrupo" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IdTipoArticulo" Type="int" />
+    <Property Name="IdEstado" Type="int" />
+    <Property Name="IdUsuario" Type="int" />
+  </EntityType>
+</Schema>
