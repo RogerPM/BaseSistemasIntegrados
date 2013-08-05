@@ -16,46 +16,36 @@ namespace forms.ActivoFijo.Mantenimiento
             InitializeComponent();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        public Boolean Temp { get; set; }
 
         private void mntCodigoBarra_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void dtFormato_EditValueChanged(object sender, EventArgs e)
+        private void btnbuscar_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            int bandera = 0;
-            if (bandera ==0)
-	        {
-                HabilitaMetodoUno();
-                bandera = 1;
-	        }else{
-                HabilitaMetodoDos();
-                bandera = 0;
-	        }
-
+            this.Close();
         }
 
-        public void HabilitaMetodoUno()
-        {
-            txtFormato.Enabled = true;
-            dtFormato.Enabled = false;
-        }
 
-        public void HabilitaMetodoDos()
+        private void SentidoLectur()
         {
-            txtFormato.Enabled = false ;
-            dtFormato.Enabled = true;
+            if (cbxSentidoLectura.SelectedIndex == 0)
+            {
+                Temp = true;
+            }
+            else
+            {
+                if (cbxSentidoLectura.SelectedIndex == 1)
+                Temp = false;
+                
+            }
         }
-
     }
 }

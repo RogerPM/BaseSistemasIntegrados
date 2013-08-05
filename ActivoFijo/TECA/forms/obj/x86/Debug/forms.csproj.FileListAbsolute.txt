@@ -41,3 +41,4 @@ C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\forms\obj\x86\Debug\forms.e
 C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\forms\obj\x86\Debug\forms.exe
 C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\forms\obj\x86\Debug\forms.pdb
 C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\forms\obj\x86\Debug\forms.ActivoFijo.Mantenimiento.PruebaPantalla.resources
+C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\forms\obj\x86\Debug\forms.ActivoFijo.Mantenimiento.VtnCodigoBarra.resources

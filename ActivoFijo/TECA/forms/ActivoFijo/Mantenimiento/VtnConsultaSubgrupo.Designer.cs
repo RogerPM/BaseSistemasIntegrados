@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VtnConsultaSubgrupo));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.tslEnBlanco = new System.Windows.Forms.ToolStripLabel();
             this.GridConsultaGrupo = new DevExpress.XtraGrid.GridControl();
@@ -52,7 +51,6 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnModificar,
             this.btnCancelar,
             this.tslEnBlanco});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -60,15 +58,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(607, 25);
             this.toolStrip1.TabIndex = 298;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Image = global::forms.Properties.Resources.guardar;
-            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(78, 22);
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnCancelar
             // 
@@ -179,7 +168,6 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton btnModificar;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private System.Windows.Forms.ToolStripLabel tslEnBlanco;
         private DevExpress.XtraGrid.GridControl GridConsultaGrupo;

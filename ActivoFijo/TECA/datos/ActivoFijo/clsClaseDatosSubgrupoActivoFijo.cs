@@ -38,51 +38,85 @@ namespace datos.ActivoFijo
             }
         }
 
-        public void modificar (clsSubgrupoActivoFijo SubActivo){
-           using (ActivoFijoEntities ent = new ActivoFijoEntities())
+        public Boolean  modificar (clsSubgrupoActivoFijo SubActivo){
+            try
             {
-               //Se hace un primary key codigo 
-                var x = (from q in ent.SubGrupos where  q.IdSubGrupo==SubActivo.Codigo select q ).First();
-                 //First obtiene un registro que coincida con el codigo y luego mas a bajo
-                 //modifico dicho registro y guardo eso lo modifica en la base 
-                 x.IdSubGrupo= SubActivo.Codigo ;
-                 x.Descripcion= SubActivo.descripcion ;
-                 x.fecha      = SubActivo.Fecha;
-                 x.IdEstado   = SubActivo.IdEstado;
-                 x.IdEmpresa  = SubActivo.Empresa;
-                 ent.SaveChanges();
-             }
+                using (ActivoFijoEntities ent = new ActivoFijoEntities())
+                {
+                    //Se hace un primary key codigo 
+                    var x = (from q in ent.SubGrupos where q.IdSubGrupo == SubActivo.Codigo select q).First();
+                    //First obtiene un registro que coincida con el codigo y luego mas a bajo
+                    //modifico dicho registro y guardo eso lo modifica en la base 
+                    x.IdSubGrupo = SubActivo.Codigo;
+                    x.IdGrupo = SubActivo.Grupo;
+                    x.Descripcion = SubActivo.descripcion;
+                    x.fecha = SubActivo.Fecha;
+                    x.IdEstado = SubActivo.IdEstado;
+                    x.IdEmpresa = SubActivo.Empresa;
+                    ent.SaveChanges();
+                }
+                return true;
+            }
+            catch (Exception)
+            {
+                
+                return false;
+            }
+           
                 
         }
 
-        public void guardar(clsSubgrupoActivoFijo  SubActivo)
+        public Boolean guardar(clsSubgrupoActivoFijo  SubActivo)
         {
-            using (ActivoFijoEntities ent = new ActivoFijoEntities())
+            try
             {
-                SubGrupos Sub = new SubGrupos(){
-                    IdSubGrupo = SubActivo.Codigo,
-                    IdGrupo    =SubActivo.Grupo,
-                    Descripcion = SubActivo.descripcion,
-                    fecha = SubActivo.Fecha,
-                    IdEstado = Convert.ToInt32(SubActivo.IdEstado),
-                    IdEmpresa = SubActivo.Empresa,
-                };
-                ent.AddToSubGrupos(Sub);
-                ent.SaveChanges();
+                using (ActivoFijoEntities ent = new ActivoFijoEntities())
+                {
+                    SubGrupos Sub = new SubGrupos()
+                    {
+                        IdSubGrupo = SubActivo.Codigo,
+                        IdGrupo = SubActivo.Grupo,
+                        Descripcion = SubActivo.descripcion,
+                        fecha = SubActivo.Fecha,
+                        IdEstado = Convert.ToInt32(SubActivo.IdEstado),
+                        IdEmpresa = Convert.ToInt32(SubActivo.Empresa),
+
+                    };
+
+                    ent.AddToSubGrupos(Sub);
+                    ent.SaveChanges();
+                }
+                return true;
             }
+            catch (Exception)
+            {
+                
+                return false;
+            }
+            
         }
 
-        public void eliminar(clsSubgrupoActivoFijo SubActivo)
+        public Boolean  eliminar(clsSubgrupoActivoFijo SubActivo)
         {
-            using (ActivoFijoEntities ent = new ActivoFijoEntities())
+            try
             {
-                //Hago un wehere por el primaryKey codigo
-                var x = (from q in ent.SubGrupos where q.IdSubGrupo == SubActivo.Codigo select q).First();
-                //Eliminar es muy parecido
-                //Eliminar el registro que me trajpp el select
-                ent.DeleteObject(x);
-                ent.SaveChanges();
+                using (ActivoFijoEntities ent = new ActivoFijoEntities())
+                {
+                    //Hago un wehere por el primaryKey codigo
+                    var x = (from q in ent.SubGrupos where q.IdSubGrupo == SubActivo.Codigo select q).First();
+                    //Eliminar es muy parecido
+                    //Eliminar el registro que me trajpp el select
+                    ent.DeleteObject(x);
+                    ent.SaveChanges();
+                }
+                return true;
             }
+            catch (Exception)
+            {
+                
+                return false;
+            }
+            
 
         }
 

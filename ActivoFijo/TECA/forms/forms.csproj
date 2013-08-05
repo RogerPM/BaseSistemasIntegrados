@@ -107,6 +107,12 @@
     <Compile Include="ActivoFijo\Mantenimiento\PruebaPantalla.Designer.cs">
       <DependentUpon>PruebaPantalla.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActivoFijo\Mantenimiento\VtnCodigoBarra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivoFijo\Mantenimiento\VtnCodigoBarra.Designer.cs">
+      <DependentUpon>VtnCodigoBarra.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActivoFijo\Procesos\VtnConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ActivoFijo\Mantenimiento\PruebaPantalla.resx">
       <DependentUpon>PruebaPantalla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivoFijo\Mantenimiento\VtnCodigoBarra.resx">
+      <DependentUpon>VtnCodigoBarra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ActivoFijo\Procesos\VtnConsulta.resx">
       <DependentUpon>VtnConsulta.cs</DependentUpon>

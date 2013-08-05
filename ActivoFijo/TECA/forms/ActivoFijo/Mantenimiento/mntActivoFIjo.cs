@@ -18,10 +18,11 @@ namespace forms.ActivoFijo.Mantenimiento
         {
             InitializeComponent();
         }
-
+     
 
         //Declare una instancia de la clase de Subgrupos para poder llenar los datos
         public clsSubgrupoActivoFijo clase = new clsSubgrupoActivoFijo();
+        clsClaseDatosSubgrupoActivoFijo  dato = new clsClaseDatosSubgrupoActivoFijo();
         public char accion { get; set; }
         
 
@@ -33,27 +34,29 @@ namespace forms.ActivoFijo.Mantenimiento
         }
 
 
-        //Esta es una funcion que se hizo para poder seter todos los campos 
-        public void set(clsSubgrupoActivoFijo clas)
+
+        public void set()
         {
 
-            txtCodigoActivo.Text =Convert.ToString(clas.Codigo);
-            ComboGrupo.EditValue = clas.Grupo; 
-            txtSubgrupo.Text = clas.descripcion;
-            dtFecha.EditValue  = clas.Fecha;
-            cbxEstado.SelectedIndex = (clas.IdEstado)-1;
-            cbxEmpresa.SelectedIndex = (clas.Empresa)-1;
+            txtCodigoActivo.Text =Convert.ToString(clase.Codigo);
+            ComboGrupo.EditValue = clase.Grupo; 
+            txtSubgrupo.Text = clase.descripcion;
+            dtFecha.EditValue  = clase.Fecha;
+            cbxEstado.SelectedIndex = (clase.IdEstado)-1;
+            txtEmpresa.Text =Convert.ToString(clase.Empresa);
         }
 
-        public void get(clsSubgrupoActivoFijo clas)
+
+        public void get()
         {
-            clas.Codigo  =Convert.ToInt32(txtCodigoActivo.Text);
-            clas.Grupo = 0 ;
-            //clas.Grupo   =Convert.ToInt32(ComboGrupo.EditValue);
-            clas.descripcion=txtSubgrupo.Text ;
-            clas.Fecha   =Convert.ToDateTime(dtFecha.EditValue);
-            clas.IdEstado =cbxEstado.SelectedIndex;
-            clas.Empresa  =cbxEmpresa.SelectedIndex;
+            clase.Codigo  =Convert.ToInt32 (txtCodigoActivo.Text);
+            //clase.Grupo = 1 ;
+            //clase.Grupo   =(int)(ComboGrupo.EditValue);
+            clase.Grupo = 1;
+            clase.descripcion=txtSubgrupo.Text ;
+            clase.Fecha   =Convert.ToDateTime(dtFecha.EditValue);
+            clase.IdEstado =1;
+            clase.Empresa  =Convert.ToInt32(txtEmpresa.Text);
         }
 
 
@@ -68,70 +71,95 @@ namespace forms.ActivoFijo.Mantenimiento
             VtnConsultaSubgrupo  frm = new VtnConsultaSubgrupo ();
             frm.ShowDialog();
             clase = frm.cls;
-            set(clase);
+            set();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            accion = 'E';
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            //accion = 'M';
-            //set(clase);
-            //VtnConsultaSubgrupo frm = new VtnConsultaSubgrupo();
-            //frm.ShowDialog();
-        }
-
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            HabilitarControles();
-            limpiarControles();
-        }
 
         private void HabilitarControles()
         {
             btnGuardar.Enabled = true;
             btnModificar.Enabled = true;
             btnEliminar.Enabled = true;
+            btnbuscar.Enabled = true;
             txtCodigoActivo.Enabled = true;
-            cbxGrupo.Enabled = true;
+            ComboGrupo.Enabled = true;
             txtSubgrupo.Enabled = true;
             dtFecha.Enabled = true;
-            cbxEmpresa.Enabled = true;
+            txtEmpresa.Enabled = true;
 
         }
 
         private void limpiarControles()
         {
             txtCodigoActivo.Text = " ";
-            cbxGrupo.SelectedIndex = 0;
+            ComboGrupo.EditValue = 0;
             txtSubgrupo.Text = " ";
             dtFecha.EditValue = " ";
-            cbxEstado.SelectedIndex = 0;
-            cbxEmpresa.SelectedIndex = 0;
+            cbxEstado.Text  = "ACTIVO";
+            txtEmpresa.Text = " ";
 
         }
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            HabilitarControles();
+            limpiarControles();
+        }
+
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
+            get();
             accion = 'G';
-            clsSubgrupoActivoFijo cls= new clsSubgrupoActivoFijo ();
-            clsClaseDatosSubgrupoActivoFijo datosub = new clsClaseDatosSubgrupoActivoFijo();
-            //clsClaseDatosGrupo datogrup = new clsClaseDatosGrupo();
-            get(cls);
-            datosub.guardar(cls);
-            
-            //cls.Codigo      =Convert.ToInt32(txtCodigoActivo.Text);
-            //cls.descripcion = txtSubgrupo.Text;
-            //cls.Fecha    = Convert.ToDateTime(dtFecha);
-            //cls.IdEstado = cbxEstado.SelectedIndex;
-            //cls.Empresa  = cbxEmpresa.SelectedIndex;
-            //clsClaseDatosSubgrupoActivoFijo clas = new clsClaseDatosSubgrupoActivoFijo();
-            //clas.guardar(cls);
+            if (accion == 'G')
+            {
+                if (dato.guardar(clase))
+                {
+                    MessageBox.Show("guardado con exito");
+                }
+                else
+                {
+                    MessageBox.Show("Error al Guardar");
+                }
+
+            }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            accion = 'E';
+            if (accion == 'E')
+            {
+                if (dato.eliminar(clase))
+                {
+                    MessageBox.Show("Eliminado Exitoso");
+                }
+                else
+                {
+                    MessageBox.Show("Error al eliminar");
+                }
+
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            accion = 'M';
+            if (accion == 'M')
+            {
+                if (dato.modificar(clase))
+                {
+                    MessageBox.Show("Registro Modificado");
+                    limpiarControles();
+                }
+                else
+                {
+                    MessageBox.Show("Error al Modificar");
+                }
+
+            }
+          
+        }
+
 
         private void btnPrueba_Click(object sender, EventArgs e)
         {

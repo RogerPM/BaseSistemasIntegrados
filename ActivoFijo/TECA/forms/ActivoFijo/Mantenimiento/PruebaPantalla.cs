@@ -29,15 +29,15 @@ namespace forms.ActivoFijo.Mantenimiento
             accion='G';
             if(accion=='G')
             {
-                dato.guardar(clase);
-            //    if (dato.guardar(clase))
-            //    {
-            //        MessageBox.Show("guardado con exito");
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Error al guardar");
-            //    }
+               // dato.guardar(clase);
+                if (dato.guardar(clase))
+                {
+                    MessageBox.Show("guardado con exito");
+                }
+                else
+                {
+                    MessageBox.Show("Error al guardar");
+                }
             } 
         }
 
