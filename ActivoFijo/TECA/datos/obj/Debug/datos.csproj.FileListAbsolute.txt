@@ -1,8 +1,0 @@
-C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\datos\bin\Debug\datos.dll.config
-C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\datos\bin\Debug\datos.dll
-C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\datos\bin\Debug\datos.pdb
-C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\datos\bin\Debug\clases.dll
-C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\datos\bin\Debug\clases.pdb
-C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\datos\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\datos\obj\Debug\datos.dll
-C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA\datos\obj\Debug\datos.pdb
