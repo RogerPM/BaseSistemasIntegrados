@@ -85,27 +85,7 @@ create table RecursosHumanos.TipoPersona
 go
 
 
-/*PERSONA*/
-create table RecursosHumanos.Persona
-(
-	Identificacion			int			 primary key,
-	IdTipoPersona			int,
-	NombreRazonSocial		varchar(100),
-	Apellido				varchar(50),
-	FechaNacimiento			datetime,
-	genero					varchar(10),
-	TipoIdentificacion		varchar (11),
-	direccion				varchar (100),
-	telefono				int,
-	mail					varchar (50),
-	IdEmpresa				int,
-	IdEstado				int,
-	Foto					image,
-	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (IdTipoPersona)references RecursosHumanos.TipoPersona
-)
-go
+
 
 /*TIPO IDENTIFICACION*/
 create table RecursosHumanos.TipoIdentificacion
@@ -114,10 +94,38 @@ create table RecursosHumanos.TipoIdentificacion
 	descripcion				varchar (50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	IdPersona				int not null,
-	foreign key (IdPersona) references RecursosHumanos.Persona,
+	
+	
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdEstado) references Seguridad.Estado
+	
+)
+go
+/*PERSONA*/
+create table RecursosHumanos.Persona
+(
+	IdPersona			int not null primary key,
+	Identificacion		numeric(14,0) not null,
+	IdEmpresa			int not null,
+	IdTipoPersona		int not null,
+	
+	NombreRazonSocial	varchar(100) not null,
+	Apellido			varchar(50)null,
+	FechaNacimiento		datetime null,
+	genero				char(1) null,
+	TipoIdentificacion	int not null,
+	direccion			varchar (100) not null,
+	TelefonoGneral		numeric(14,0)null,
+	TelefonoMovil		numeric(14,0)not null,
+	TelefonoCasa		numeric (14,0) not null,
+	TelefonoOtros		numeric (14,0) null,
+	mail				varchar (50) not null,
+	IdEstado			int not null,
+	
+
+foreign key (IdEmpresa) references Seguridad.Empresa,
+foreign key (IdTipoPersona)references RecursosHumanos.TipoPersona,
+foreign key (TipoIdentificacion)references RecursosHumanos.TipoIdentificacion
+
 )
 go
 
@@ -172,7 +180,7 @@ create table RecursosHumanos.Departamento
 	IdDepartamento			int not null		primary key,
 	Descripcion				varchar(50)not null,
 	IdEstado				int not null,
-	foreign key (IdEstado) references Seguridad.Estado
+	
 )
 go
 
@@ -266,13 +274,6 @@ create table RecursosHumanos.Telefono
 )
 go
 
-/*Telefono por persona*/
-create table RecursosHumanos.TelefonoPersona
-(
-	IdPersona				int					references RecursosHumanos.Persona,
-	IdTelefono				int					references RecursosHumanos.Telefono,
-	primary key (Idpersona,Idtelefono)
-)
 
 /*TITULO*/
 create table RecursosHumanos.Titulo
@@ -286,7 +287,7 @@ create table RecursosHumanos.Titulo
 	IdEmpresa				int not null,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdUniversidad)references RecursosHumanos.Universidad,
-	foreign key (IdEstado)references Seguridad.Estado
+	
 )
 go
 
@@ -305,8 +306,7 @@ create table RecursosHumanos.Jornada
 (
 	IdJornada				int not null primary key,
 	Fecha					datetime not null,
-	FechaModificacion		datetime, 
-	IdUsuario				int,
+	FechaModificacion		datetime,
 	HoraInicio				time not null,
 	HoraFinal				time not null,
 	IdEmpresa				int not null,
@@ -314,7 +314,6 @@ create table RecursosHumanos.Jornada
 	IdPersona				int not null,
 	foreign key (IdTipoJornada) references RecursosHumanos.TipoJornada,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdUsuario) references Seguridad.Usuario,
 	foreign key (IdPersona) references RecursosHumanos.Persona
 )
 go
@@ -328,7 +327,7 @@ create table RecursosHumanos.Multa
 	IdEmpresa				int not null,
 	IdEstado				int not null,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdEstado) references Seguridad.Estado
+
 )
 go
 
@@ -338,15 +337,13 @@ create table RecursosHumanos.MultaxPersona
 	IdPersona				int not null,
 	IdMulta					int not null,
 	FechaEmision			date not null,
-	FechaModificacion		datetime, 
-	IdUsuarioModificacion	int,
+	FechaModificacion		datetime,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
 	primary key (idpersona,idmulta),
 	foreign key (IdMulta) references RecursosHumanos.Multa,
-	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdEstado) references Seguridad.Estado,
+	
 	foreign key (IdPersona) references RecursosHumanos.Persona
 )
 go
@@ -361,7 +358,7 @@ create table RecursosHumanos.PersonaxDepartamento
 	primary key (idpersona,iddepartamento),
 	foreign key (IdDepartamento) references RecursosHumanos.Departamento,
 	foreign key (IdEmpresa)references Seguridad.Empresa,
-	foreign key (IdEstado) references Seguridad.Estado,
+	
 	foreign key (IdPersona) references RecursosHumanos.Persona
 )
 go
@@ -373,7 +370,7 @@ create table RecursosHumanos.Cargo
 	Descripcion				varchar(45) not null,
 	Sueldo					numeric(10,2) not null,
 	IdEstado				int not null,
-	foreign key (IdEstado) references Seguridad.Estado
+	
 )
 go
 
@@ -383,13 +380,11 @@ create table RecursosHumanos.CargoxDepartamento
 	IdDepartamento			int not null,
 	IdCargo					int not null,
 	FechaCreacion			date not null,
-	FechaModificacion		datetime, 
-	IdUsuarioModificacion	int,
+	FechaModificacion		datetime null,
 	IdEstado				int not null,
 	primary key (idCargo,idDepartamento),
 	foreign key (IdCargo) references RecursosHumanos.Cargo,
-	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
-	foreign key (IdEstado) references Seguridad.Estado,
+	
 	foreign key (IdDepartamento) references RecursosHumanos.Departamento
 )
 go
@@ -405,7 +400,7 @@ create table RecursosHumanos.Rubro
 	IdCargo					int not null,
 	IdDepartamento			int not null,
 	foreign key (IdCargo,IdDepartamento) references RecursosHumanos.CargoxDepartamento,
-	foreign key (IdEstado) references Seguridad.Estado,
+	
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -418,7 +413,7 @@ create table RecursosHumanos.PersonaxTitulo
 	IdPersona				int not null,
 	IdEstado				int not null,
 	primary key (idpersona,idtitulo),
-	foreign key (IdEstado) references Seguridad.Estado,
+	
 	foreign key (IdTitulo) references RecursosHumanos.Titulo,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdPersona) references RecursosHumanos.Persona
@@ -431,12 +426,10 @@ create table RecursosHumanos.PersonaxCargo
 	IdPersona				int not null,
 	IdEmpresa				int not null,
 	IdCargo					int not null,
-	FechaModificacion		datetime, 
-	IdUsuarioModificacion	int,
+	FechaIngreso			datetime not null,
+	FechaModificacion		datetime null,
 	IdEstado				int not null,
 	primary key (idPersona,IdCargo),
-	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (Idcargo) references RecursosHumanos.Cargo
@@ -450,7 +443,7 @@ create  table RecursosHumanos.Parentesco
 	Descripcion				varchar(50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	foreign key (IdEstado) references Seguridad.Estado,
+	
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -463,12 +456,10 @@ create table RecursosHumanos.CargaFamiliar
 	IdEmpresa				int not null,
 	FechaNacimiento			date not null,
 	FechaRegistro			date not null,
-	FechaModificacion		datetime, 
-	IdUsuarioModificacion	int,
+	FechaModificacion		datetime,
 	IdEstado				int not null,
 	primary key (idpersona,idparentesco),
-	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
+	
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdParentesco) references RecursosHumanos.Parentesco
@@ -481,16 +472,14 @@ create table RecursosHumanos.AnticipoCab
 	NumAnticipo				int not null,
 	IdEmpleado				int not null,
 	Fecha					date not null,
-	FechaModificacion		datetime, 
-	IdUsuarioModificacion	int,
+	FechaModificacion		datetime,
 	Total					numeric(10,2) not null,
 	Observacion				varchar(50) null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	foreign key (IdEmpleado,idempresa) references RecursosHumanos.Empleado,
-	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
+	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdEstado) references Seguridad.Estado,
+	
 	primary key (NumAnticipo, IdEmpresa)
 )
 go
@@ -501,11 +490,9 @@ create table RecursosHumanos.AnticipoDet
 	NumLinea				int not null,
 	NumAnticipo				int not null,
 	FechaCobro				date not null,
-	FechaModificacion		datetime, 
-	IdUsuarioModificacion	int,
+	FechaModificacion		datetime,
 	IdEmpresa int not null references Seguridad.Empresa,
 	foreign key (NumAnticipo, IdEmpresa) references RecursosHumanos.AnticipoCab,
-	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
 	primary key (NumLinea,IdEmpresa)
 )
 go
@@ -526,16 +513,14 @@ create table RecursosHumanos.NominaCab
 (
 	NumNomina				int not null,
 	FechaEmision			date not null,
-	FechaModificacion		datetime, 
-	IdUsuarioModificacion	int,
+	FechaModificacion		datetime,
 	Total					numeric(10,2) not null,
 	IdEmpleado				int not null,
 	IdEstado				int not null,
 	IdEmpresa				int not null,
 	Observacion				varchar(50) null,
-	foreign key (IdEmpleado,idempresa) references RecursosHumanos.Empleado,
-	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
-	foreign key (IdEstado) references Seguridad.Estado,
+	foreign key (IdEmpleado) references RecursosHumanos.Persona,
+	
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	primary key (NumNomina, IdEmpresa)
 )
@@ -561,9 +546,11 @@ create table RecursosHumanos.TipoContrato
 (
 	IdTipoContrato			int not null primary key,
 	Descripcion				varchar(50) not null,
+	Periodo					varchar(50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	foreign key (IdEstado) references Seguridad.Estado,
+	
+	
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -577,15 +564,13 @@ create table RecursosHumanos.Contrato
 	IdCargo					int not null,
 	IdEmpresa				int not null,
 	Fecha					date not null,
-	FechaModificacion		datetime, 
-	IdUsuarioModificacion	int,
+	FechaModificacion		datetime,
 	Remuneracion			numeric(10,2) not null,
 	IdJornada				int not null,
 	PeriodoPrueba			bit not null,
 	IdEstado				int not null,
 	primary key (IdPersona,NumContrato,idEmpresa),
-	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
+	
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdTipoContrato) references RecursosHumanos.TipoContrato,
@@ -601,7 +586,7 @@ create table RecursosHumanos.TipoPermiso
 	Descripcion				varchar(50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	foreign key (IdEstado) references Seguridad.Estado,
+	
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -615,13 +600,13 @@ create table RecursosHumanos.Permiso
 	IdTipoPermiso			int not null,
 	FechaInicio				datetime not null,
 	FechaFinal				datetime not null,
-	FechaModificacion		datetime, 
+	FechaModificacion		datetime,
 	IdEstado				int not null,
 	IdEmpresa				int not null,
 	foreign key (IdUsuario) references Seguridad.Usuario,
-	foreign key (IdEmpleado,idempresa) references RecursosHumanos.Empleado,
+	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (IdTipoPermiso) references RecursosHumanos.TipoPermiso,
-	foreign key (IdEstado) references Seguridad.Estado,
+	
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -634,8 +619,7 @@ create table RecursosHumanos.Liquidacion
 	NumContrato				int not null,
 	IdEmpresa				int not null,
 	Fecha					datetime not null,
-	FechaModificacion		datetime, 
-	IdUsuarioModificacion	int,
+	FechaModificacion		datetime,
 	Causa					varchar(150) not null,
 	FechaSalida				datetime not null,
 	Ingresos				numeric(10,2) not null,
@@ -644,8 +628,7 @@ create table RecursosHumanos.Liquidacion
 	IdEstado				int not null,
 	primary key (NumLiquidacion,IdEmpresa,Idpersona),
 	foreign key (IdPersona,NumContrato,IdEmpresa) references RecursosHumanos.Contrato,
-	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
+	
 	foreign key (IdPersona) references RecursosHumanos.persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 )
@@ -656,16 +639,14 @@ create table RecursosHumanos.Vacacion
 (
 	NumVacacion				int not null primary key,
 	IdEmpleado				int not null,
-	FechaModificacion		datetime, 
-	IdUsuarioModificacion	int,
+	FechaModificacion		datetime,
 	FechaInicio				date not null,
 	FechaFin				date not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	foreign key (IdEmpleado,idempresa) references RecursosHumanos.Empleado,
-	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
+	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdEstado) references Seguridad.Estado
+	
 )
 go
 
@@ -676,7 +657,7 @@ create table RecursosHumanos.TipoPrestamo
 	Nombre					varchar(50) not null,
 	IdEmpresa 				int not null,
 	IdEstado 				int not null,
-	foreign key (IdEstado) references Seguridad.Estado,
+
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -687,20 +668,17 @@ create table RecursosHumanos.Prestamo
 	IdPrestamo 				int not null primary key,
 	IdTipoPrestamo 			int not null,
 	IdPersona 				int not null,
-	FechaModificacion		datetime, 
-	IdUsuarioModificacion	int,
+	FechaModificacion		datetime,
 	Monto					money not null,
 	Pago					money not null,
 	IdEstado 				int not null,
 	IdEmpresa 				int not null,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdUsuarioModificacion) references Seguridad.Usuario,
-	foreign key (IdEstado) references Seguridad.Estado,
+	
 	foreign key (IdTipoPrestamo) references RecursosHumanos.TipoPrestamo,
 )
 go
-
 
 
 /*USUARIO POR EMPRESA*/
