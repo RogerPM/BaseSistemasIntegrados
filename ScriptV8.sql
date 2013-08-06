@@ -1356,23 +1356,6 @@ create table Inventario.ArticuloBodega
 )
 go
 
-
-/*************para integrar cuentas por cobrar con facturacion******************/
-
-CREATE TABLE CuentasPorCobrar.FormaPago
-(
-	idEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	idFormaPago 			int NOT NULL,
-	Descripcion				varchar(100) NOT NULL,
-	idEstado 				int NOT NULL,
-	primary key(idFormaPago),
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado
-)
-go
-
 /************************MODULO DE FACTURACION INTEGRACION********************/
 
 CREATE TABLE Facturacion.Cotizacion
@@ -1380,7 +1363,7 @@ CREATE TABLE Facturacion.Cotizacion
 	IdEmpresa 				int NOT NULL,
 	idUsuario 				int NOT NULL,
 	IdNumeroCotizacion 		int NOT NULL,
-	idFormaPago 			int NOT NULL,
+	FormaPago 			    varchar(150) NOT NULL,/*Desvinculada de CXP.FormaPago*/
 	idCliente 				int NOT NULL,
 	Fecha					date NULL,
 	PorcentajeEntrada		money NULL,
@@ -1393,7 +1376,6 @@ CREATE TABLE Facturacion.Cotizacion
 	idEstado 				int NOT NULL,
 	primary key(IdNumeroCotizacion),	
 	foreign key (idCliente) references RecursosHumanos.CLiente,
-	foreign key(idFormaPago)references CuentasPorCobrar.FormaPago,
 	foreign key (idEmpresa) references Seguridad.Empresa,
 	foreign key (idUsuario) references Seguridad.Usuario,
 	foreign key (idEstado) references Seguridad.Estado
@@ -1425,12 +1407,11 @@ CREATE TABLE Facturacion.PorcentajeComision
 	IdNumeroPorcComision 	int NOT NULL,
 	Fecha					date NULL,
 	descripcion				varchar(100) NULL,
-	idFormaPago 			int NULL,
+	FormaPago 				varchar(150) NOT NULL,/*Desvinculada de CXP.FormaPago*/
 	Porcentaje				money NULL,
 	MontoVenta				money NULL,
 	idEstado 				int NOT NULL,
 	primary key(IdNumeroPorcComision),
-	foreign key(idFormaPago)references CuentasPorCobrar.FormaPago,
 	foreign key (idEmpresa) references Seguridad.Empresa,
 	foreign key (idUsuario) references Seguridad.Usuario,
 	foreign key (idEstado) references Seguridad.Estado
@@ -1464,7 +1445,7 @@ CREATE TABLE Facturacion.Factura
 	IdNumeroFactura 		int NOT NULL,
 	IdNumeroCotizacion 		int NULL,
 	IdPromocion 			int NULL,
-	idFormaPago 			int NULL,
+	FormaPago 				varchar(150) NOT NULL,/*Desvinculada de CXP.FormaPago*/
 	idCliente 				int NULL,
 	Fecha					date NULL,
 	ValorEntrada			money NULL,
@@ -1475,8 +1456,7 @@ CREATE TABLE Facturacion.Factura
 	foreign key (IdEmpresa,cabecera_comprobante)references Contabilidad.CabeceraComprobante,
 	foreign key (idCliente) references RecursosHumanos.CLiente,
 	foreign key (IdNumeroCotizacion) references Facturacion.Cotizacion,
-	foreign key (IdPromocion) references Facturacion.Promocion,
-	foreign key(idFormaPago)references CuentasPorCobrar.FormaPago,	
+	foreign key (IdPromocion) references Facturacion.Promocion,	
 	foreign key (idUsuario) references Seguridad.Usuario,
 	foreign key (idEstado) references Seguridad.Estado
 ) 
@@ -1617,26 +1597,39 @@ GO
 /************************************************************/
 /*necesita de modulo facturacion*/
 
+create table CuentaxPagar.MedioPago/*TABLA SUBIDA PORQUE LA USA CXP.COBRO*/
+(
+	IdMedioPago 			int not null ,
+	Descripcion				varchar(30) not null,
+	fechaRegistro			date not null,
+	Estado 				int not null,
+	IdEmpresa 				int not null references Seguridad.Empresa,
+	IdUsuario 				int not null,
+	foreign key (IdUsuario) references Seguridad.Usuario,
+	primary key(IdMedioPago, IdEmpresa) 
+)
+go
+
 create table CuentasPorCobrar.UnidadTiempo
 (
-	idUnidadTiempo 				int not null,
-	descripcion					varchar(25) not null,
-	primary key(idUnidadTiempo)
+	idEmpresa 				int NOT NULL,/*Agrego Campo Empresa*/
+	idUnidadTiempo 			int not null,
+	Descripcion				varchar(25) not null,
+	Estado					char(1),/*'A' activo 'I' Inactivo*/
+	primary key(idUnidadTiempo),
+	foreign key (idEmpresa) references Seguridad.Empresa
 )
 go
 	
 CREATE TABLE CuentasPorCobrar.MonetarioDet
 (
 	idEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
 	idDetalleMonetario 		int NOT NULL,
 	Descripcion				varchar(100) NOT NULL,
 	Valor					money NOT NULL,
-	idEstado 				int NOT NULL,
+	Estado				    char(1),/*'A' activo 'I' Inactivo*/
 	primary key (idDetalleMonetario),
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado
+	foreign key (idEmpresa) references Seguridad.Empresa
 )
 go
 
@@ -1667,44 +1660,35 @@ go
 CREATE TABLE CuentasPorCobrar.TipoInversion
 (
 	idEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
 	idTipoInversion 		int NOT NULL,
 	Descripcion				varchar(100) NOT NULL,
-	idEstado 				int NOT NULL,
+	Estado				    char(1),/*'A' activo 'I' Inactivo*/
 	primary key (idTipoInversion),
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado
+	foreign key (idEmpresa) references Seguridad.Empresa
 )
 go
 
 CREATE TABLE CuentasPorCobrar.Banco
 (
 	idEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
 	idBanco 				int NOT NULL,
 	Nombre					varchar(100) NOT NULL,
-	idEstado 				int NOT NULL,
+	Estado				    char(1),/*'A' activo 'I' Inactivo*/
 	primary key (idBanco),
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado
+	foreign key (idEmpresa) references Seguridad.Empresa
  )
 go
 
 CREATE TABLE CuentasPorCobrar.TarjetaCredito
 (
 	idEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
 	idTarjeta 				int NOT NULL,
 	descripcion				varchar(100) NOT NULL,
 	idBanco 				int NOT NULL,
-	idEstado 				int NOT NULL,
+	Estado				    char(1),/*'A' activo 'I' Inactivo*/
 	primary key (idTarjeta),
 	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
 	foreign key (idBanco) references CuentasPorCobrar.Banco,
-	foreign key (idEstado) references Seguridad.Estado
  )
  go
 
@@ -1775,22 +1759,17 @@ CREATE TABLE CuentasPorCobrar.AperturaCaja
 CREATE TABLE CuentasPorCobrar.CuentaBancaria
 (
 	idEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
 	idCuentaBancaria 		int NOT NULL,
 	idBanco 				int NOT NULL,
-	idTitularNatural 		int NULL,
-	idTitularJuridico 		int NULL,
+	idTitular        		int NULL,/*se ha modificado a un solo campo*/
 	NumeroCuenta 			int NOT NULL,
 	TipoCuenta				varchar(100) NOT NULL,
 	Saldo					money NOT NULL,
-	idEstado 				int NOT NULL,
+	Estado				    char(1),/*'A' activo 'I' Inactivo*/
 	primary key (idCuentaBancaria),
 	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
 	foreign key (idBanco) references CuentasPorCobrar.Banco,
-	foreign key (idTitularNatural) references RecursosHumanos.Persona,
-	foreign key (idTitularJuridico) references RecursosHumanos.Persona,
-	foreign key (idEstado) references Seguridad.Estado
+	foreign key (idTitular) references RecursosHumanos.Persona,/*Referencia unica*/
 )
 go
 
@@ -1818,6 +1797,35 @@ CREATE TABLE CuentasPorCobrar.ConciliacionBancaria
  )
  go
  
+ CREATE TABLE CuentasPorCobrar.Cobro
+(
+	idEmpresa 				int NOT NULL,
+	idUsuario 				int NOT NULL,
+	idCobro 				int NOT NULL,
+	idTransaccion 			int NOT NULL,
+	idFactura 				int NOT NULL,
+	idCliente 				int NOT NULL,
+	idCabeceraComprobante	numeric(4,0) NOT NULL,
+	Fecha					date NOT NULL,
+	FechaModificacion		datetime, 
+	NumeroCuota 			int NOT NULL,
+	ValorCuota				money NOT NULL,
+	Interes					money NOT NULL,
+	Mora					money NOT NULL,
+	ValorPagado				money NOT NULL,
+	Saldo					money NOT NULL,
+	idEstado 				int NOT NULL,
+	primary key (idCobro),
+	foreign key (idEmpresa) references Seguridad.Empresa,
+	foreign key (idUsuario) references Seguridad.Usuario,
+	foreign key (idTransaccion) references Facturacion.Factura,
+	foreign key (idFactura) references Facturacion.Factura,
+	foreign key (idCliente) references RecursosHumanos.CLiente,
+	foreign key (IdEmpresa,idCabeceraComprobante) references Contabilidad.CabeceraComprobante,
+	foreign key (idEstado) references Seguridad.Estado
+)
+go
+ 
 CREATE TABLE CuentasPorCobrar.CobroDet
 (
 	idEmpresa 				int NOT NULL,
@@ -1825,7 +1833,7 @@ CREATE TABLE CuentasPorCobrar.CobroDet
 	idCobro 				int NOT NULL,
 	numero 					int NOT NULL,
 	idBanco 				int NOT NULL,
-	idFormaPago 			int NOT NULL,
+	idMedioPago 			int NOT NULL,/*se establece referencia MEDIOPAGO de CXP*/
 	Valor					money NOT NULL,
 	NumeroDocumento 		int NOT NULL,
 	Observacion				varchar(150) NOT NULL,
@@ -1833,8 +1841,9 @@ CREATE TABLE CuentasPorCobrar.CobroDet
 	primary key(idCobro,numero),
 	foreign key(idEmpresa)references Seguridad.Empresa,
 	foreign key(idUsuario)references Seguridad.Usuario,
+	foreign key(idCobro)references CuentasPorCobrar.Cobro,/*Se agrego la referencia a cobro que le quitaron*/
 	foreign key(idBanco)references CuentasPorCobrar.Banco,
-	foreign key(idFormaPago)references CuentasPorCobrar.FormaPago,
+	foreign key (idMedioPago, idEmpresa)references CuentaxPagar.MedioPago,/*se corrige la referencia*/
 	foreign key (idEstado) references Seguridad.Estado 
  )
  go
@@ -1859,19 +1868,6 @@ go
 
 /***************Cuentas por Pagar**************************************************/
 
-create table CuentaxPagar.MedioPago
-(
-	IdMedioPago 			int not null ,
-	Descripcion				varchar(30) not null,
-	fechaRegistro			date not null,
-	Estado 				int not null,
-	IdEmpresa 				int not null references Seguridad.Empresa,
-	IdUsuario 				int not null,
-	foreign key (IdUsuario) references Seguridad.Usuario,
-	primary key(IdMedioPago, IdEmpresa) 
-)
-go
-	
 create table CuentaxPagar.EmpresaServicio
 (
 	IdEmpresaServicio 		varchar (13) not null,
@@ -1952,37 +1948,6 @@ go
 
 /*********************COMPRAS****************/
 -- TABLA DE COMPRAS (cabecera)
-/*cuentas por cobrar*/
-
-CREATE TABLE CuentasPorCobrar.Cobro
-(
-	idEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	idCobro 				int NOT NULL,
-	idTransaccion 			int NOT NULL,
-	idFactura 				int NOT NULL,
-	idCliente 				int NOT NULL,
-	idCabeceraComprobante	numeric(4,0) NOT NULL,
-	Fecha					date NOT NULL,
-	FechaModificacion		datetime, 
-	NumeroCuota 			int NOT NULL,
-	ValorCuota				money NOT NULL,
-	Interes					money NOT NULL,
-	Mora					money NOT NULL,
-	ValorPagado				money NOT NULL,
-	Saldo					money NOT NULL,
-	idEstado 				int NOT NULL,
-	primary key (idCobro),
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idTransaccion) references Facturacion.Factura,
-	foreign key (idFactura) references Facturacion.Factura,
-	foreign key (idCliente) references RecursosHumanos.CLiente,
-	foreign key (IdEmpresa,idCabeceraComprobante) references Contabilidad.CabeceraComprobante,
-	foreign key (idEstado) references Seguridad.Estado
-)
-go
-
 
 create table CuentasPorCobrar.CuentaxCobrar
 (
