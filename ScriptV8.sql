@@ -966,10 +966,10 @@ create table Compras.Proveedor
 (
 IdProveedor			int not null primary key,
 IdEmpresa			int not null,
-Identificacion		int not null,
+IdPersona			int not null,
 IdTipoArticulo		int not null,
 Estado				int not null,
-foreign key (Identificacion)references RecursosHumanos.Persona,
+foreign key (IdPersona)references RecursosHumanos.Persona,
 foreign key (IdEmpresa)references Seguridad.Empresa,
 foreign key (IdTipoArticulo)references Inventario.TipoArticulo,
 foreign key (Estado) references Seguridad.Estado
