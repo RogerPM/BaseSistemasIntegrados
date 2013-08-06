@@ -686,6 +686,7 @@ create table Seguridad.UsuarioPorEmpresa
 (
 	IdUsuario		int,
 	IdEmpresa		int,
+	Descripcion     varchar(1),
 	foreign key(IdUsuario)references Seguridad.Usuario,
 	foreign key(IdEmpresa)references Seguridad.Empresa,
 	primary key(IdUsuario,IdEmpresa)
