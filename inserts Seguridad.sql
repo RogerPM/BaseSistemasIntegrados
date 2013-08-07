@@ -1,4 +1,4 @@
-use TECA
+use TECA 
 go
 --truncate table Seguridad.Estado
 --go
@@ -40,18 +40,29 @@ go
 insert into RecursosHumanos.TipoPersona values (2,'Juridica',1,1)
 go
 
+/*tipo de identificacion*/
+insert into RecursosHumanos.TipoIdentificacion values (1,'Cedula',1,1)
+go
+insert into RecursosHumanos.TipoIdentificacion values (2,'Ruc',1,1)
+go
+insert into RecursosHumanos.TipoIdentificacion values (3,'Pasaporte',1,1)
+go
+insert into RecursosHumanos.TipoIdentificacion values (4,'carnet',1,1)
+go
+
+
 /*****************PERSONA******************/
-insert into RecursosHumanos.Persona values (1,1,'Master','SA',null,'masculino','primary key','Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas','0994996660','info@telcom.com.ec',1,1,null)
+insert into RecursosHumanos.Persona values (1,09222222,1,1,'Master','SA',null,'m',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (11,1,'Luis Miguel','Quintero',null,'cualquira','cedula','Bosque cerca de guayaquil, llegando al templo de Barcelona','0994996660','lquinter@espol.edu.ec',1,1,null)
+insert into RecursosHumanos.Persona values (11,09222222,1,1,'Luis Miguel','Quintero',null,'m',1,'Bosque cerca de guayaquil, llegando al templo de Barcelona',0994996660, 0994996660, 0994996660, 0994996660,'lquinter@espol.edu.ec',1)
 go
-insert into RecursosHumanos.Persona values (21,1,'Roberto Enrique','Arias',null,'indefinido','carnet','geranio','0994996660','enriques@gmail.com',1,1,null)
+insert into RecursosHumanos.Persona values (21,09222222,1,2,'Roberto Enrique','Arias',null,'m',1,'geranio', 0994996660, 0994996660, 0994996660, 0994996660,'enriques@gmail.com',1)
 go
-insert into RecursosHumanos.Persona values (31,1,'Roger','Peñafiel',null,'masculino','pasaporte','a dos cuadras del capwell ','0990144207','rpenafie@espol.edu.ec',1,1,null)
+insert into RecursosHumanos.Persona values (31,09222222,1,1,'Roger','Peñafiel',null,'m',1,'a dos cuadras del capwell', 0990144207, 0994996660, 0994996660, 0994996660,'rpenafie@espol.edu.ec',1)
 go
-insert into RecursosHumanos.Persona values (41,1,'Marco','Castro',null,'no answer','ruc','bastion','0994996660','macastro@espol.edu.ec',1,1,null)
+insert into RecursosHumanos.Persona values (41,09222222,1,1,'Marco','Castro',null,'m',1,'bastion', 0994996660, 0994996660, 0994996660, 0994996660,'macastro@espol.edu.ec',1)
 go
-insert into RecursosHumanos.Persona values (51,1,'Stalin','Vanegas',null,'pendiente','seguro','lejos de guayaquil','0994996660','info@sandi.com.ec',1,1,null)
+insert into RecursosHumanos.Persona values (51,09222222,1,1,'Stalin','Vanegas',null,'m',1,'lejos de guayaquil', 0994996660, 0994996660, 0994996660, 0994996660,'info@sandi.com.ec',1)
 go
 
 --truncate table Seguridad.Perfil
@@ -85,15 +96,15 @@ go
 
 --truncate table Seguridad.UsuarioPorEmpresa
 /*****************USUARIO POR EMPRESA***********/
-insert into Seguridad.UsuarioPorEmpresa values(11,1)
+insert into Seguridad.UsuarioPorEmpresa values(11,1,'a')
 go
-insert into Seguridad.UsuarioPorEmpresa values(21,1)
+insert into Seguridad.UsuarioPorEmpresa values(21,1,'a')
 go
-insert into Seguridad.UsuarioPorEmpresa values(31,1)
+insert into Seguridad.UsuarioPorEmpresa values(31,1,'a')
 go
-insert into Seguridad.UsuarioPorEmpresa values(41,1)
+insert into Seguridad.UsuarioPorEmpresa values(41,1,'a')
 go
-insert into Seguridad.UsuarioPorEmpresa values(51,2)
+insert into Seguridad.UsuarioPorEmpresa values(51,2,'a')
 go
 
 
@@ -485,27 +496,27 @@ go
 
 --truncate table Seguridad.TelefonoEmpresa
 /*************TELEFONO POR EMPRESA*************/
-insert into Seguridad.TelefonoEmpresa values(1,1)
-go
-insert into Seguridad.TelefonoEmpresa values(1,2)
-go
-insert into Seguridad.TelefonoEmpresa values(1,3)
-go
-insert into Seguridad.TelefonoEmpresa values(2,1)
-go
-insert into Seguridad.TelefonoEmpresa values(2,2)
-go
-insert into Seguridad.TelefonoEmpresa values(2,3)
-go
-insert into Seguridad.TelefonoEmpresa values(3,1)
-go
-insert into Seguridad.TelefonoEmpresa values(3,2)
-go
-insert into Seguridad.TelefonoEmpresa values(3,3)
-go
-insert into Seguridad.TelefonoEmpresa values(4,1)
-go
-insert into Seguridad.TelefonoEmpresa values(4,2)
-go
-insert into Seguridad.TelefonoEmpresa values(4,3)
-go
+--insert into Seguridad.TelefonoEmpresa values(1,1)
+--go
+--insert into Seguridad.TelefonoEmpresa values(1,2)
+--go
+--insert into Seguridad.TelefonoEmpresa values(1,3)
+--go
+--insert into Seguridad.TelefonoEmpresa values(2,1)
+--go
+--insert into Seguridad.TelefonoEmpresa values(2,2)
+--go
+--insert into Seguridad.TelefonoEmpresa values(2,3)
+--go
+--insert into Seguridad.TelefonoEmpresa values(3,1)
+--go
+--insert into Seguridad.TelefonoEmpresa values(3,2)
+--go
+--insert into Seguridad.TelefonoEmpresa values(3,3)
+--go
+--insert into Seguridad.TelefonoEmpresa values(4,1)
+--go
+--insert into Seguridad.TelefonoEmpresa values(4,2)
+--go
+--insert into Seguridad.TelefonoEmpresa values(4,3)
+--go
