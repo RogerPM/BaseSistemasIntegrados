@@ -1,0 +1,888 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelRecursosHumanos.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModelRecursosHumanosStoreContainer">
+    <EntitySet Name="CargaFamiliar" EntityType="ModelRecursosHumanos.Store.CargaFamiliar" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Cargo" EntityType="ModelRecursosHumanos.Store.Cargo" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="CargoxDepartamento" EntityType="ModelRecursosHumanos.Store.CargoxDepartamento" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Contrato" EntityType="ModelRecursosHumanos.Store.Contrato" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Departamento" EntityType="ModelRecursosHumanos.Store.Departamento" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Empleado" EntityType="ModelRecursosHumanos.Store.Empleado" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Maternidad" EntityType="ModelRecursosHumanos.Store.Maternidad" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Permiso" EntityType="ModelRecursosHumanos.Store.Permiso" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Persona" EntityType="ModelRecursosHumanos.Store.Persona" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="PersonaxCargo" EntityType="ModelRecursosHumanos.Store.PersonaxCargo" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Prestamo" EntityType="ModelRecursosHumanos.Store.Prestamo" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Telefono" EntityType="ModelRecursosHumanos.Store.Telefono" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoContrato" EntityType="ModelRecursosHumanos.Store.TipoContrato" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoIdentificacion" EntityType="ModelRecursosHumanos.Store.TipoIdentificacion" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoPermiso" EntityType="ModelRecursosHumanos.Store.TipoPermiso" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoPersona" EntityType="ModelRecursosHumanos.Store.TipoPersona" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoPrestamo" EntityType="ModelRecursosHumanos.Store.TipoPrestamo" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoTelefono" EntityType="ModelRecursosHumanos.Store.TipoTelefono" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Titulo" EntityType="ModelRecursosHumanos.Store.Titulo" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Universidad" EntityType="ModelRecursosHumanos.Store.Universidad" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Vacacion" EntityType="ModelRecursosHumanos.Store.Vacacion" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Empresa" EntityType="ModelRecursosHumanos.Store.Empresa" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Usuario" EntityType="ModelRecursosHumanos.Store.Usuario" store:Type="Tables" Schema="Seguridad" />
+    <AssociationSet Name="FK__CargaFami__IdEmp__25518C17" Association="ModelRecursosHumanos.Store.FK__CargaFami__IdEmp__25518C17">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CargaFamiliar" EntitySet="CargaFamiliar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CargaFami__IdPer__2645B050" Association="ModelRecursosHumanos.Store.FK__CargaFami__IdPer__2645B050">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="CargaFamiliar" EntitySet="CargaFamiliar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CargoxDep__IdCar__07C12930" Association="ModelRecursosHumanos.Store.FK__CargoxDep__IdCar__07C12930">
+      <End Role="Cargo" EntitySet="Cargo" />
+      <End Role="CargoxDepartamento" EntitySet="CargoxDepartamento" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CargoxDep__IdDep__08B54D69" Association="ModelRecursosHumanos.Store.FK__CargoxDep__IdDep__08B54D69">
+      <End Role="Departamento" EntitySet="Departamento" />
+      <End Role="CargoxDepartamento" EntitySet="CargoxDepartamento" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Contrato__IdCarg__503BEA1C" Association="ModelRecursosHumanos.Store.FK__Contrato__IdCarg__503BEA1C">
+      <End Role="Cargo" EntitySet="Cargo" />
+      <End Role="Contrato" EntitySet="Contrato" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Contrato__IdEmpr__4D5F7D71" Association="ModelRecursosHumanos.Store.FK__Contrato__IdEmpr__4D5F7D71">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Contrato" EntitySet="Contrato" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Contrato__IdPers__4E53A1AA" Association="ModelRecursosHumanos.Store.FK__Contrato__IdPers__4E53A1AA">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Contrato" EntitySet="Contrato" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Contrato__IdTipo__4F47C5E3" Association="ModelRecursosHumanos.Store.FK__Contrato__IdTipo__4F47C5E3">
+      <End Role="TipoContrato" EntitySet="TipoContrato" />
+      <End Role="Contrato" EntitySet="Contrato" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__IdEmpr__267ABA7A" Association="ModelRecursosHumanos.Store.FK__Empleado__IdEmpr__267ABA7A">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__IdPers__276EDEB3" Association="ModelRecursosHumanos.Store.FK__Empleado__IdPers__276EDEB3">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Maternidad__2D27B809" Association="ModelRecursosHumanos.Store.FK__Maternidad__2D27B809">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Maternidad" EntitySet="Maternidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permiso__IdEmple__5BAD9CC8" Association="ModelRecursosHumanos.Store.FK__Permiso__IdEmple__5BAD9CC8">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Permiso" EntitySet="Permiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permiso__IdEmpre__5D95E53A" Association="ModelRecursosHumanos.Store.FK__Permiso__IdEmpre__5D95E53A">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Permiso" EntitySet="Permiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permiso__IdTipoP__5CA1C101" Association="ModelRecursosHumanos.Store.FK__Permiso__IdTipoP__5CA1C101">
+      <End Role="TipoPermiso" EntitySet="TipoPermiso" />
+      <End Role="Permiso" EntitySet="Permiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permiso__IdUsuar__5AB9788F" Association="ModelRecursosHumanos.Store.FK__Permiso__IdUsuar__5AB9788F">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Permiso" EntitySet="Permiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__IdEmpre__182C9B23" Association="ModelRecursosHumanos.Store.FK__Persona__IdEmpre__182C9B23">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__IdTipoP__1920BF5C" Association="ModelRecursosHumanos.Store.FK__Persona__IdTipoP__1920BF5C">
+      <End Role="TipoPersona" EntitySet="TipoPersona" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__TipoIde__1A14E395" Association="ModelRecursosHumanos.Store.FK__Persona__TipoIde__1A14E395">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PersonaxC__IdCar__1BC821DD" Association="ModelRecursosHumanos.Store.FK__PersonaxC__IdCar__1BC821DD">
+      <End Role="Cargo" EntitySet="Cargo" />
+      <End Role="PersonaxCargo" EntitySet="PersonaxCargo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PersonaxC__IdEmp__1AD3FDA4" Association="ModelRecursosHumanos.Store.FK__PersonaxC__IdEmp__1AD3FDA4">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="PersonaxCargo" EntitySet="PersonaxCargo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PersonaxC__IdPer__19DFD96B" Association="ModelRecursosHumanos.Store.FK__PersonaxC__IdPer__19DFD96B">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="PersonaxCargo" EntitySet="PersonaxCargo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prestamo__IdEmpr__74794A92" Association="ModelRecursosHumanos.Store.FK__Prestamo__IdEmpr__74794A92">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Prestamo" EntitySet="Prestamo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prestamo__IdPers__73852659" Association="ModelRecursosHumanos.Store.FK__Prestamo__IdPers__73852659">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Prestamo" EntitySet="Prestamo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prestamo__IdTipo__756D6ECB" Association="ModelRecursosHumanos.Store.FK__Prestamo__IdTipo__756D6ECB">
+      <End Role="TipoPrestamo" EntitySet="TipoPrestamo" />
+      <End Role="Prestamo" EntitySet="Prestamo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Telefono__IdTipo__5BE2A6F2" Association="ModelRecursosHumanos.Store.FK__Telefono__IdTipo__5BE2A6F2">
+      <End Role="TipoTelefono" EntitySet="TipoTelefono" />
+      <End Role="Telefono" EntitySet="Telefono" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoContr__IdEmp__489AC854" Association="ModelRecursosHumanos.Store.FK__TipoContr__IdEmp__489AC854">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoContrato" EntitySet="TipoContrato" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoIdent__IdEmp__1367E606" Association="ModelRecursosHumanos.Store.FK__TipoIdent__IdEmp__1367E606">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoPermi__IdEmp__55F4C372" Association="ModelRecursosHumanos.Store.FK__TipoPermi__IdEmp__55F4C372">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoPermiso" EntitySet="TipoPermiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoPerso__IdEmp__0DAF0CB0" Association="ModelRecursosHumanos.Store.FK__TipoPerso__IdEmp__0DAF0CB0">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoPersona" EntitySet="TipoPersona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoPrest__IdEmp__6EC0713C" Association="ModelRecursosHumanos.Store.FK__TipoPrest__IdEmp__6EC0713C">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoPrestamo" EntitySet="TipoPrestamo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoTelef__IdEmp__571DF1D5" Association="ModelRecursosHumanos.Store.FK__TipoTelef__IdEmp__571DF1D5">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoTelefono" EntitySet="TipoTelefono" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Titulo__IdEmpres__60A75C0F" Association="ModelRecursosHumanos.Store.FK__Titulo__IdEmpres__60A75C0F">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Titulo" EntitySet="Titulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Titulo__IdUniver__619B8048" Association="ModelRecursosHumanos.Store.FK__Titulo__IdUniver__619B8048">
+      <End Role="Universidad" EntitySet="Universidad" />
+      <End Role="Titulo" EntitySet="Titulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Universid__IdEmp__4AB81AF0" Association="ModelRecursosHumanos.Store.FK__Universid__IdEmp__4AB81AF0">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Universidad" EntitySet="Universidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdUsuar__3C69FB99" Association="ModelRecursosHumanos.Store.FK__Usuario__IdUsuar__3C69FB99">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Vacacion__IdEmpl__690797E6" Association="ModelRecursosHumanos.Store.FK__Vacacion__IdEmpl__690797E6">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Vacacion" EntitySet="Vacacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Vacacion__IdEmpr__69FBBC1F" Association="ModelRecursosHumanos.Store.FK__Vacacion__IdEmpr__69FBBC1F">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Vacacion" EntitySet="Vacacion" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CargaFamiliar">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+      <PropertyRef Name="IdParentesco" />
+    </Key>
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="IdParentesco" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="date" Nullable="false" />
+    <Property Name="FechaRegistro" Type="date" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cargo">
+    <Key>
+      <PropertyRef Name="IdCargo" />
+    </Key>
+    <Property Name="IdCargo" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Sueldo" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CargoxDepartamento">
+    <Key>
+      <PropertyRef Name="IdDepartamento" />
+      <PropertyRef Name="IdCargo" />
+    </Key>
+    <Property Name="IdDepartamento" Type="int" Nullable="false" />
+    <Property Name="IdCargo" Type="int" Nullable="false" />
+    <Property Name="FechaCreacion" Type="date" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contrato">
+    <Key>
+      <PropertyRef Name="NumContrato" />
+      <PropertyRef Name="IdPersona" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="NumContrato" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="IdTipoContrato" Type="int" Nullable="false" />
+    <Property Name="IdCargo" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="Remuneracion" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="IdJornada" Type="int" Nullable="false" />
+    <Property Name="PeriodoPrueba" Type="bit" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="IdDepartamento" />
+    </Key>
+    <Property Name="IdDepartamento" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEmpleado" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="Sueldo" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Maternidad">
+    <Key>
+      <PropertyRef Name="NumMaternidad" />
+    </Key>
+    <Property Name="NumMaternidad" Type="int" Nullable="false" />
+    <Property Name="IdEmpleado" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="FechaParto" Type="datetime" Nullable="false" />
+    <Property Name="FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="FechaFin" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Permiso">
+    <Key>
+      <PropertyRef Name="NumPermiso" />
+    </Key>
+    <Property Name="NumPermiso" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="IdEmpleado" Type="int" Nullable="false" />
+    <Property Name="IdTipoPermiso" Type="int" Nullable="false" />
+    <Property Name="FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="FechaFinal" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="Identificacion" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdTipoPersona" Type="int" Nullable="false" />
+    <Property Name="NombreRazonSocial" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Apellido" Type="varchar" MaxLength="50" />
+    <Property Name="FechaNacimiento" Type="datetime" />
+    <Property Name="genero" Type="char" MaxLength="1" />
+    <Property Name="TipoIdentificacion" Type="int" Nullable="false" />
+    <Property Name="direccion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TelefonoGneral" Type="numeric" Precision="14" />
+    <Property Name="TelefonoMovil" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="TelefonoCasa" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="TelefonoOtros" Type="numeric" Precision="14" />
+    <Property Name="mail" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonaxCargo">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+      <PropertyRef Name="IdCargo" />
+    </Key>
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdCargo" Type="int" Nullable="false" />
+    <Property Name="FechaIngreso" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Prestamo">
+    <Key>
+      <PropertyRef Name="IdPrestamo" />
+    </Key>
+    <Property Name="IdPrestamo" Type="int" Nullable="false" />
+    <Property Name="IdTipoPrestamo" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="Monto" Type="money" Nullable="false" />
+    <Property Name="Pago" Type="money" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Telefono">
+    <Key>
+      <PropertyRef Name="IdTelefono" />
+    </Key>
+    <Property Name="IdTelefono" Type="int" Nullable="false" />
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="IdTipoTelefono" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoContrato">
+    <Key>
+      <PropertyRef Name="IdTipoContrato" />
+    </Key>
+    <Property Name="IdTipoContrato" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Periodo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoIdentificacion">
+    <Key>
+      <PropertyRef Name="IdTipoIdentificacion" />
+    </Key>
+    <Property Name="IdTipoIdentificacion" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoPermiso">
+    <Key>
+      <PropertyRef Name="IdTipoPermiso" />
+    </Key>
+    <Property Name="IdTipoPermiso" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoPersona">
+    <Key>
+      <PropertyRef Name="IdTipoPersona" />
+    </Key>
+    <Property Name="IdTipoPersona" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoPrestamo">
+    <Key>
+      <PropertyRef Name="IdTipoPrestamo" />
+    </Key>
+    <Property Name="IdTipoPrestamo" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoTelefono">
+    <Key>
+      <PropertyRef Name="IdTipoTelefono" />
+    </Key>
+    <Property Name="IdTipoTelefono" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Titulo">
+    <Key>
+      <PropertyRef Name="IdTitulo" />
+    </Key>
+    <Property Name="IdTitulo" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" />
+    <Property Name="FechaInicio" Type="date" Nullable="false" />
+    <Property Name="FechaFinal" Type="date" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="IdUniversidad" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Universidad">
+    <Key>
+      <PropertyRef Name="IdUniversidad" />
+    </Key>
+    <Property Name="IdUniversidad" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Vacacion">
+    <Key>
+      <PropertyRef Name="NumVacacion" />
+    </Key>
+    <Property Name="NumVacacion" Type="int" Nullable="false" />
+    <Property Name="IdEmpleado" Type="int" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="FechaInicio" Type="date" Nullable="false" />
+    <Property Name="FechaFin" Type="date" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="50" />
+    <Property Name="NombreComercial" Type="varchar" MaxLength="50" />
+    <Property Name="Ruc" Type="varchar" MaxLength="20" />
+    <Property Name="Direccion" Type="varchar" MaxLength="200" />
+    <Property Name="Logotipo" Type="image" />
+    <Property Name="FechaInicioSistema" Type="datetime" />
+    <Property Name="Correo" Type="varchar" MaxLength="70" />
+    <Property Name="SitioWeb" Type="varchar" MaxLength="70" />
+    <Property Name="Sector" Type="varchar" MaxLength="15" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="250" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="NombreUsuario" Type="varchar" MaxLength="20" />
+    <Property Name="Contrasena" Type="varchar" MaxLength="220" />
+    <Property Name="IdEstado" Type="int" />
+    <Property Name="IdImagen" Type="int" />
+    <Property Name="IdPerfil" Type="int" />
+  </EntityType>
+  <Association Name="FK__CargaFami__IdEmp__25518C17">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="CargaFamiliar" Type="ModelRecursosHumanos.Store.CargaFamiliar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CargaFamiliar">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CargaFami__IdPer__2645B050">
+    <End Role="Persona" Type="ModelRecursosHumanos.Store.Persona" Multiplicity="1" />
+    <End Role="CargaFamiliar" Type="ModelRecursosHumanos.Store.CargaFamiliar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="CargaFamiliar">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CargoxDep__IdCar__07C12930">
+    <End Role="Cargo" Type="ModelRecursosHumanos.Store.Cargo" Multiplicity="1" />
+    <End Role="CargoxDepartamento" Type="ModelRecursosHumanos.Store.CargoxDepartamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo">
+        <PropertyRef Name="IdCargo" />
+      </Principal>
+      <Dependent Role="CargoxDepartamento">
+        <PropertyRef Name="IdCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CargoxDep__IdDep__08B54D69">
+    <End Role="Departamento" Type="ModelRecursosHumanos.Store.Departamento" Multiplicity="1" />
+    <End Role="CargoxDepartamento" Type="ModelRecursosHumanos.Store.CargoxDepartamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamento">
+        <PropertyRef Name="IdDepartamento" />
+      </Principal>
+      <Dependent Role="CargoxDepartamento">
+        <PropertyRef Name="IdDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Contrato__IdCarg__503BEA1C">
+    <End Role="Cargo" Type="ModelRecursosHumanos.Store.Cargo" Multiplicity="1" />
+    <End Role="Contrato" Type="ModelRecursosHumanos.Store.Contrato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo">
+        <PropertyRef Name="IdCargo" />
+      </Principal>
+      <Dependent Role="Contrato">
+        <PropertyRef Name="IdCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Contrato__IdEmpr__4D5F7D71">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="Contrato" Type="ModelRecursosHumanos.Store.Contrato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Contrato">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Contrato__IdPers__4E53A1AA">
+    <End Role="Persona" Type="ModelRecursosHumanos.Store.Persona" Multiplicity="1" />
+    <End Role="Contrato" Type="ModelRecursosHumanos.Store.Contrato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Contrato">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Contrato__IdTipo__4F47C5E3">
+    <End Role="TipoContrato" Type="ModelRecursosHumanos.Store.TipoContrato" Multiplicity="1" />
+    <End Role="Contrato" Type="ModelRecursosHumanos.Store.Contrato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoContrato">
+        <PropertyRef Name="IdTipoContrato" />
+      </Principal>
+      <Dependent Role="Contrato">
+        <PropertyRef Name="IdTipoContrato" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__IdEmpr__267ABA7A">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="Empleado" Type="ModelRecursosHumanos.Store.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__IdPers__276EDEB3">
+    <End Role="Persona" Type="ModelRecursosHumanos.Store.Persona" Multiplicity="1" />
+    <End Role="Empleado" Type="ModelRecursosHumanos.Store.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Maternidad__2D27B809">
+    <End Role="Empleado" Type="ModelRecursosHumanos.Store.Empleado" Multiplicity="1" />
+    <End Role="Maternidad" Type="ModelRecursosHumanos.Store.Maternidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Maternidad">
+        <PropertyRef Name="IdEmpleado" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permiso__IdEmple__5BAD9CC8">
+    <End Role="Persona" Type="ModelRecursosHumanos.Store.Persona" Multiplicity="1" />
+    <End Role="Permiso" Type="ModelRecursosHumanos.Store.Permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Permiso">
+        <PropertyRef Name="IdEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permiso__IdEmpre__5D95E53A">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="Permiso" Type="ModelRecursosHumanos.Store.Permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Permiso">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permiso__IdTipoP__5CA1C101">
+    <End Role="TipoPermiso" Type="ModelRecursosHumanos.Store.TipoPermiso" Multiplicity="1" />
+    <End Role="Permiso" Type="ModelRecursosHumanos.Store.Permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPermiso">
+        <PropertyRef Name="IdTipoPermiso" />
+      </Principal>
+      <Dependent Role="Permiso">
+        <PropertyRef Name="IdTipoPermiso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permiso__IdUsuar__5AB9788F">
+    <End Role="Usuario" Type="ModelRecursosHumanos.Store.Usuario" Multiplicity="1" />
+    <End Role="Permiso" Type="ModelRecursosHumanos.Store.Permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Permiso">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__IdEmpre__182C9B23">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="Persona" Type="ModelRecursosHumanos.Store.Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__IdTipoP__1920BF5C">
+    <End Role="TipoPersona" Type="ModelRecursosHumanos.Store.TipoPersona" Multiplicity="1" />
+    <End Role="Persona" Type="ModelRecursosHumanos.Store.Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPersona">
+        <PropertyRef Name="IdTipoPersona" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="IdTipoPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__TipoIde__1A14E395">
+    <End Role="TipoIdentificacion" Type="ModelRecursosHumanos.Store.TipoIdentificacion" Multiplicity="1" />
+    <End Role="Persona" Type="ModelRecursosHumanos.Store.Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="IdTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="TipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PersonaxC__IdCar__1BC821DD">
+    <End Role="Cargo" Type="ModelRecursosHumanos.Store.Cargo" Multiplicity="1" />
+    <End Role="PersonaxCargo" Type="ModelRecursosHumanos.Store.PersonaxCargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo">
+        <PropertyRef Name="IdCargo" />
+      </Principal>
+      <Dependent Role="PersonaxCargo">
+        <PropertyRef Name="IdCargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PersonaxC__IdEmp__1AD3FDA4">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="PersonaxCargo" Type="ModelRecursosHumanos.Store.PersonaxCargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="PersonaxCargo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PersonaxC__IdPer__19DFD96B">
+    <End Role="Persona" Type="ModelRecursosHumanos.Store.Persona" Multiplicity="1" />
+    <End Role="PersonaxCargo" Type="ModelRecursosHumanos.Store.PersonaxCargo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="PersonaxCargo">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prestamo__IdEmpr__74794A92">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="Prestamo" Type="ModelRecursosHumanos.Store.Prestamo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Prestamo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prestamo__IdPers__73852659">
+    <End Role="Persona" Type="ModelRecursosHumanos.Store.Persona" Multiplicity="1" />
+    <End Role="Prestamo" Type="ModelRecursosHumanos.Store.Prestamo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Prestamo">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prestamo__IdTipo__756D6ECB">
+    <End Role="TipoPrestamo" Type="ModelRecursosHumanos.Store.TipoPrestamo" Multiplicity="1" />
+    <End Role="Prestamo" Type="ModelRecursosHumanos.Store.Prestamo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPrestamo">
+        <PropertyRef Name="IdTipoPrestamo" />
+      </Principal>
+      <Dependent Role="Prestamo">
+        <PropertyRef Name="IdTipoPrestamo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Telefono__IdTipo__5BE2A6F2">
+    <End Role="TipoTelefono" Type="ModelRecursosHumanos.Store.TipoTelefono" Multiplicity="1" />
+    <End Role="Telefono" Type="ModelRecursosHumanos.Store.Telefono" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoTelefono">
+        <PropertyRef Name="IdTipoTelefono" />
+      </Principal>
+      <Dependent Role="Telefono">
+        <PropertyRef Name="IdTipoTelefono" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoContr__IdEmp__489AC854">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoContrato" Type="ModelRecursosHumanos.Store.TipoContrato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoContrato">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoIdent__IdEmp__1367E606">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoIdentificacion" Type="ModelRecursosHumanos.Store.TipoIdentificacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoIdentificacion">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoPermi__IdEmp__55F4C372">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoPermiso" Type="ModelRecursosHumanos.Store.TipoPermiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoPermiso">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoPerso__IdEmp__0DAF0CB0">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoPersona" Type="ModelRecursosHumanos.Store.TipoPersona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoPersona">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoPrest__IdEmp__6EC0713C">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoPrestamo" Type="ModelRecursosHumanos.Store.TipoPrestamo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoPrestamo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoTelef__IdEmp__571DF1D5">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoTelefono" Type="ModelRecursosHumanos.Store.TipoTelefono" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoTelefono">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Titulo__IdEmpres__60A75C0F">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="Titulo" Type="ModelRecursosHumanos.Store.Titulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Titulo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Titulo__IdUniver__619B8048">
+    <End Role="Universidad" Type="ModelRecursosHumanos.Store.Universidad" Multiplicity="1" />
+    <End Role="Titulo" Type="ModelRecursosHumanos.Store.Titulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Universidad">
+        <PropertyRef Name="IdUniversidad" />
+      </Principal>
+      <Dependent Role="Titulo">
+        <PropertyRef Name="IdUniversidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Universid__IdEmp__4AB81AF0">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="Universidad" Type="ModelRecursosHumanos.Store.Universidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Universidad">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdUsuar__3C69FB99">
+    <End Role="Persona" Type="ModelRecursosHumanos.Store.Persona" Multiplicity="1" />
+    <End Role="Usuario" Type="ModelRecursosHumanos.Store.Usuario" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Vacacion__IdEmpl__690797E6">
+    <End Role="Persona" Type="ModelRecursosHumanos.Store.Persona" Multiplicity="1" />
+    <End Role="Vacacion" Type="ModelRecursosHumanos.Store.Vacacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Vacacion">
+        <PropertyRef Name="IdEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Vacacion__IdEmpr__69FBBC1F">
+    <End Role="Empresa" Type="ModelRecursosHumanos.Store.Empresa" Multiplicity="1" />
+    <End Role="Vacacion" Type="ModelRecursosHumanos.Store.Vacacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Vacacion">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

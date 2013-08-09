@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataSIsCon">
+  <DataContextMoniker Name="/DataSIsConDataContext" />
+  <nestedChildShapes>
+    <classShape Id="63f77347-568f-44a5-a4ce-5e4e747a3b24" absoluteBounds="3.125, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataSIsConDataContext/TipoTransaccion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be219c9d-47b3-4c2b-b663-06135efa762f" absoluteBounds="3.1399999999999997, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ba28df46-f9d4-4940-89cc-ba5b80856bf2" absoluteBounds="3.25, 3.625, 2, 2.5401025390625">
+      <DataClassMoniker Name="/DataSIsConDataContext/ModeloAsiento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="21ed9542-91a4-4e2b-b796-a1add98ab07a" absoluteBounds="3.2649999999999997, 4.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.1875 : 2.07859537760417); (4.1875 : 3.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataSIsConDataContext/TipoTransaccion/TipoTransaccion_ModeloAsiento" />
+      <nodes>
+        <classShapeMoniker Id="63f77347-568f-44a5-a4ce-5e4e747a3b24" />
+        <classShapeMoniker Id="ba28df46-f9d4-4940-89cc-ba5b80856bf2" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

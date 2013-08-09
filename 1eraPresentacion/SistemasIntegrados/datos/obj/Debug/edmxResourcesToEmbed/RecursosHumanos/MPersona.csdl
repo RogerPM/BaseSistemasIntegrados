@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TECAv8Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="TECAv8Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Persona" EntityType="TECAv8Model1.Persona" />
+  </EntityContainer>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="Identificacion" />
+    </Key>
+    <Property Name="Identificacion" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoPersona" Type="Int32" />
+    <Property Name="NombreRazonSocial" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Apellido" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FechaNacimiento" Type="DateTime" />
+    <Property Name="genero" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TipoIdentificacion" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
+    <Property Name="direccion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="telefono" Type="Int32" />
+    <Property Name="mail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdEmpresa" Type="Int32" />
+    <Property Name="IdEstado" Type="Int32" />
+    <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+</Schema>

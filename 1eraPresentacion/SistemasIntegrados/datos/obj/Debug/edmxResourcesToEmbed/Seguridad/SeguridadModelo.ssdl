@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TECAv8Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TECAv8ModelStoreContainer">
+    <EntitySet Name="Empresa" EntityType="TECAv8Model.Store.Empresa" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Estado" EntityType="TECAv8Model.Store.Estado" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Horario" EntityType="TECAv8Model.Store.Horario" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Imagen" EntityType="TECAv8Model.Store.Imagen" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Menu" EntityType="TECAv8Model.Store.Menu" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="MenuPorEmpresa" EntityType="TECAv8Model.Store.MenuPorEmpresa" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Modulo" EntityType="TECAv8Model.Store.Modulo" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Perfil" EntityType="TECAv8Model.Store.Perfil" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Permiso" EntityType="TECAv8Model.Store.Permiso" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="TelefonoEmpresa" EntityType="TECAv8Model.Store.TelefonoEmpresa" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Usuario" EntityType="TECAv8Model.Store.Usuario" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="UsuarioPorEmpresa" EntityType="TECAv8Model.Store.UsuarioPorEmpresa" store:Type="Tables" Schema="Seguridad" />
+    <AssociationSet Name="FK__Empresa__IdEstad__08EA5793" Association="TECAv8Model.Store.FK__Empresa__IdEstad__08EA5793">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Horario__IdPerfi__2AD55B43" Association="TECAv8Model.Store.FK__Horario__IdPerfi__2AD55B43">
+      <End Role="Perfil" EntitySet="Perfil" />
+      <End Role="Horario" EntitySet="Horario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Menu__IdModulo__1B9317B3" Association="TECAv8Model.Store.FK__Menu__IdModulo__1B9317B3">
+      <End Role="Modulo" EntitySet="Modulo" />
+      <End Role="Menu" EntitySet="Menu" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MenuPorEm__IdEmp__22401542" Association="TECAv8Model.Store.FK__MenuPorEm__IdEmp__22401542">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="MenuPorEmpresa" EntitySet="MenuPorEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MenuPorEm__IdEst__2057CCD0" Association="TECAv8Model.Store.FK__MenuPorEm__IdEst__2057CCD0">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="MenuPorEmpresa" EntitySet="MenuPorEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MenuPorEm__IdMen__214BF109" Association="TECAv8Model.Store.FK__MenuPorEm__IdMen__214BF109">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="MenuPorEmpresa" EntitySet="MenuPorEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permiso__IdEmpre__318258D2" Association="TECAv8Model.Store.FK__Permiso__IdEmpre__318258D2">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Permiso" EntitySet="Permiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permiso__IdMenu__32767D0B" Association="TECAv8Model.Store.FK__Permiso__IdMenu__32767D0B">
+      <End Role="Menu" EntitySet="Menu" />
+      <End Role="Permiso" EntitySet="Permiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permiso__IdModul__336AA144" Association="TECAv8Model.Store.FK__Permiso__IdModul__336AA144">
+      <End Role="Modulo" EntitySet="Modulo" />
+      <End Role="Permiso" EntitySet="Permiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permiso__IdPerfi__2F9A1060" Association="TECAv8Model.Store.FK__Permiso__IdPerfi__2F9A1060">
+      <End Role="Perfil" EntitySet="Perfil" />
+      <End Role="Permiso" EntitySet="Permiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Permiso__IdPerso__308E3499" Association="TECAv8Model.Store.FK__Permiso__IdPerso__308E3499">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Permiso" EntitySet="Permiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TelefonoE__IdEmp__382F5661" Association="TECAv8Model.Store.FK__TelefonoE__IdEmp__382F5661">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TelefonoEmpresa" EntitySet="TelefonoEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdEstad__38996AB5" Association="TECAv8Model.Store.FK__Usuario__IdEstad__38996AB5">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdImage__398D8EEE" Association="TECAv8Model.Store.FK__Usuario__IdImage__398D8EEE">
+      <End Role="Imagen" EntitySet="Imagen" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UsuarioPo__IdEmp__12FDD1B2" Association="TECAv8Model.Store.FK__UsuarioPo__IdEmp__12FDD1B2">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="UsuarioPorEmpresa" EntitySet="UsuarioPorEmpresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UsuarioPo__IdUsu__1209AD79" Association="TECAv8Model.Store.FK__UsuarioPo__IdUsu__1209AD79">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="UsuarioPorEmpresa" EntitySet="UsuarioPorEmpresa" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="50" />
+    <Property Name="NombreComercial" Type="varchar" MaxLength="50" />
+    <Property Name="Ruc" Type="varchar" MaxLength="20" />
+    <Property Name="Direccion" Type="varchar" MaxLength="200" />
+    <Property Name="Logotipo" Type="image" />
+    <Property Name="FechaInicioSistema" Type="datetime" />
+    <Property Name="Correo" Type="varchar" MaxLength="70" />
+    <Property Name="SitioWeb" Type="varchar" MaxLength="70" />
+    <Property Name="Sector" Type="varchar" MaxLength="20" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="250" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="220" />
+  </EntityType>
+  <EntityType Name="Horario">
+    <Key>
+      <PropertyRef Name="IdHorario" />
+      <PropertyRef Name="IdPerfil" />
+      <PropertyRef Name="Secuencia" />
+    </Key>
+    <Property Name="IdHorario" Type="int" Nullable="false" />
+    <Property Name="IdPerfil" Type="int" Nullable="false" />
+    <Property Name="Secuencia" Type="int" Nullable="false" />
+    <Property Name="dia" Type="varchar" MaxLength="10" />
+    <Property Name="H00" Type="bit" Nullable="false" />
+    <Property Name="H01" Type="bit" Nullable="false" />
+    <Property Name="H02" Type="bit" Nullable="false" />
+    <Property Name="H03" Type="bit" Nullable="false" />
+    <Property Name="H04" Type="bit" Nullable="false" />
+    <Property Name="H05" Type="bit" Nullable="false" />
+    <Property Name="H06" Type="bit" Nullable="false" />
+    <Property Name="H07" Type="bit" Nullable="false" />
+    <Property Name="H08" Type="bit" Nullable="false" />
+    <Property Name="H09" Type="bit" Nullable="false" />
+    <Property Name="H10" Type="bit" Nullable="false" />
+    <Property Name="H11" Type="bit" Nullable="false" />
+    <Property Name="H12" Type="bit" Nullable="false" />
+    <Property Name="H13" Type="bit" Nullable="false" />
+    <Property Name="H14" Type="bit" Nullable="false" />
+    <Property Name="H15" Type="bit" Nullable="false" />
+    <Property Name="H16" Type="bit" Nullable="false" />
+    <Property Name="H17" Type="bit" Nullable="false" />
+    <Property Name="H18" Type="bit" Nullable="false" />
+    <Property Name="H19" Type="bit" Nullable="false" />
+    <Property Name="H20" Type="bit" Nullable="false" />
+    <Property Name="H21" Type="bit" Nullable="false" />
+    <Property Name="H22" Type="bit" Nullable="false" />
+    <Property Name="H23" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Imagen">
+    <Key>
+      <PropertyRef Name="IdImagen" />
+    </Key>
+    <Property Name="IdImagen" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+    <Property Name="Imagen" Type="image" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="IdMenu" />
+    </Key>
+    <Property Name="IdMenu" Type="int" Nullable="false" />
+    <Property Name="IdModulo" Type="int" />
+    <Property Name="IdPadre" Type="int" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+    <Property Name="NombreForm" Type="varchar" MaxLength="255" />
+    <Property Name="NombreAssembly" Type="varchar" MaxLength="200" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="MenuPorEmpresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdMenu" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdMenu" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" />
+    <Property Name="NombreAsamblyPorEmpresa" Type="varchar" MaxLength="200" />
+    <Property Name="NomFormularioPorEmpresa" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Modulo">
+    <Key>
+      <PropertyRef Name="IdModulo" />
+    </Key>
+    <Property Name="IdModulo" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" />
+    <Property Name="IdEstado" Type="int" />
+    <Property Name="Logo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Perfil">
+    <Key>
+      <PropertyRef Name="IdPerfil" />
+    </Key>
+    <Property Name="IdPerfil" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="70" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Permiso">
+    <Key>
+      <PropertyRef Name="IdPerfil" />
+      <PropertyRef Name="IdPermiso" />
+    </Key>
+    <Property Name="IdPerfil" Type="int" Nullable="false" />
+    <Property Name="IdPermiso" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" />
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdMenu" Type="int" />
+    <Property Name="IdModulo" Type="int" />
+    <Property Name="Lectura" Type="bit" Nullable="false" />
+    <Property Name="Escritura" Type="bit" Nullable="false" />
+    <Property Name="Eliminacion" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TelefonoEmpresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="idTelefono" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="idTelefono" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="NombreUsuario" Type="varchar" MaxLength="20" />
+    <Property Name="Contrasena" Type="varchar" MaxLength="20" />
+    <Property Name="IdEstado" Type="int" />
+    <Property Name="IdImagen" Type="int" />
+    <Property Name="IdPerfil" Type="int" />
+  </EntityType>
+  <EntityType Name="UsuarioPorEmpresa">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Empresa__IdEstad__08EA5793">
+    <End Role="Estado" Type="TECAv8Model.Store.Estado" Multiplicity="0..1" />
+    <End Role="Empresa" Type="TECAv8Model.Store.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Horario__IdPerfi__2AD55B43">
+    <End Role="Perfil" Type="TECAv8Model.Store.Perfil" Multiplicity="1" />
+    <End Role="Horario" Type="TECAv8Model.Store.Horario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Perfil">
+        <PropertyRef Name="IdPerfil" />
+      </Principal>
+      <Dependent Role="Horario">
+        <PropertyRef Name="IdPerfil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Menu__IdModulo__1B9317B3">
+    <End Role="Modulo" Type="TECAv8Model.Store.Modulo" Multiplicity="0..1" />
+    <End Role="Menu" Type="TECAv8Model.Store.Menu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo">
+        <PropertyRef Name="IdModulo" />
+      </Principal>
+      <Dependent Role="Menu">
+        <PropertyRef Name="IdModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MenuPorEm__IdEmp__22401542">
+    <End Role="Empresa" Type="TECAv8Model.Store.Empresa" Multiplicity="1" />
+    <End Role="MenuPorEmpresa" Type="TECAv8Model.Store.MenuPorEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="MenuPorEmpresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MenuPorEm__IdEst__2057CCD0">
+    <End Role="Estado" Type="TECAv8Model.Store.Estado" Multiplicity="0..1" />
+    <End Role="MenuPorEmpresa" Type="TECAv8Model.Store.MenuPorEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="MenuPorEmpresa">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MenuPorEm__IdMen__214BF109">
+    <End Role="Menu" Type="TECAv8Model.Store.Menu" Multiplicity="1" />
+    <End Role="MenuPorEmpresa" Type="TECAv8Model.Store.MenuPorEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="IdMenu" />
+      </Principal>
+      <Dependent Role="MenuPorEmpresa">
+        <PropertyRef Name="IdMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permiso__IdEmpre__318258D2">
+    <End Role="Empresa" Type="TECAv8Model.Store.Empresa" Multiplicity="0..1" />
+    <End Role="Permiso" Type="TECAv8Model.Store.Permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Permiso">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permiso__IdMenu__32767D0B">
+    <End Role="Menu" Type="TECAv8Model.Store.Menu" Multiplicity="0..1" />
+    <End Role="Permiso" Type="TECAv8Model.Store.Permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menu">
+        <PropertyRef Name="IdMenu" />
+      </Principal>
+      <Dependent Role="Permiso">
+        <PropertyRef Name="IdMenu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permiso__IdModul__336AA144">
+    <End Role="Modulo" Type="TECAv8Model.Store.Modulo" Multiplicity="0..1" />
+    <End Role="Permiso" Type="TECAv8Model.Store.Permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulo">
+        <PropertyRef Name="IdModulo" />
+      </Principal>
+      <Dependent Role="Permiso">
+        <PropertyRef Name="IdModulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permiso__IdPerfi__2F9A1060">
+    <End Role="Perfil" Type="TECAv8Model.Store.Perfil" Multiplicity="1" />
+    <End Role="Permiso" Type="TECAv8Model.Store.Permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Perfil">
+        <PropertyRef Name="IdPerfil" />
+      </Principal>
+      <Dependent Role="Permiso">
+        <PropertyRef Name="IdPerfil" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Permiso__IdPerso__308E3499">
+    <End Role="Usuario" Type="TECAv8Model.Store.Usuario" Multiplicity="0..1" />
+    <End Role="Permiso" Type="TECAv8Model.Store.Permiso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Permiso">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TelefonoE__IdEmp__382F5661">
+    <End Role="Empresa" Type="TECAv8Model.Store.Empresa" Multiplicity="1" />
+    <End Role="TelefonoEmpresa" Type="TECAv8Model.Store.TelefonoEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TelefonoEmpresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdEstad__38996AB5">
+    <End Role="Estado" Type="TECAv8Model.Store.Estado" Multiplicity="0..1" />
+    <End Role="Usuario" Type="TECAv8Model.Store.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdImage__398D8EEE">
+    <End Role="Imagen" Type="TECAv8Model.Store.Imagen" Multiplicity="0..1" />
+    <End Role="Usuario" Type="TECAv8Model.Store.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Imagen">
+        <PropertyRef Name="IdImagen" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdImagen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UsuarioPo__IdEmp__12FDD1B2">
+    <End Role="Empresa" Type="TECAv8Model.Store.Empresa" Multiplicity="1" />
+    <End Role="UsuarioPorEmpresa" Type="TECAv8Model.Store.UsuarioPorEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="UsuarioPorEmpresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UsuarioPo__IdUsu__1209AD79">
+    <End Role="Usuario" Type="TECAv8Model.Store.Usuario" Multiplicity="1" />
+    <End Role="UsuarioPorEmpresa" Type="TECAv8Model.Store.UsuarioPorEmpresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="UsuarioPorEmpresa">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

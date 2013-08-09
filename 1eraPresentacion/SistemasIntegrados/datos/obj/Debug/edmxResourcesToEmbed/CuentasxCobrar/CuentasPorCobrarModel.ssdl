@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CuentasPorCobrarModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="CuentasPorCobrarModelStoreContainer">
+    <EntitySet Name="Banco" EntityType="CuentasPorCobrarModel.Store.Banco" store:Type="Tables" Schema="CuentasPorCobrar" />
+    <EntitySet Name="CuentaBancaria" EntityType="CuentasPorCobrarModel.Store.CuentaBancaria" store:Type="Tables" Schema="CuentasPorCobrar" />
+    <EntitySet Name="MonetarioDet" EntityType="CuentasPorCobrarModel.Store.MonetarioDet" store:Type="Tables" Schema="CuentasPorCobrar" />
+    <EntitySet Name="TarjetaCredito" EntityType="CuentasPorCobrarModel.Store.TarjetaCredito" store:Type="Tables" Schema="CuentasPorCobrar" />
+    <EntitySet Name="TipoInversion" EntityType="CuentasPorCobrarModel.Store.TipoInversion" store:Type="Tables" Schema="CuentasPorCobrar" />
+    <EntitySet Name="UnidadTiempo" EntityType="CuentasPorCobrarModel.Store.UnidadTiempo" store:Type="Tables" Schema="CuentasPorCobrar" />
+    <EntitySet Name="Persona" EntityType="CuentasPorCobrarModel.Store.Persona" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Empresa" EntityType="CuentasPorCobrarModel.Store.Empresa" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Estado" EntityType="CuentasPorCobrarModel.Store.Estado" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Usuario" EntityType="CuentasPorCobrarModel.Store.Usuario" store:Type="Tables" Schema="Seguridad" />
+    <AssociationSet Name="FK__Banco__idEmpresa__09C96D33" Association="CuentasPorCobrarModel.Store.FK__Banco__idEmpresa__09C96D33">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Banco" EntitySet="Banco" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaBan__idBan__2E06CDA9" Association="CuentasPorCobrarModel.Store.FK__CuentaBan__idBan__2E06CDA9">
+      <End Role="Banco" EntitySet="Banco" />
+      <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaBan__idEmp__2D12A970" Association="CuentasPorCobrarModel.Store.FK__CuentaBan__idEmp__2D12A970">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaBan__idTit__2EFAF1E2" Association="CuentasPorCobrarModel.Store.FK__CuentaBan__idTit__2EFAF1E2">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empresa__IdEstad__08EA5793" Association="CuentasPorCobrarModel.Store.FK__Empresa__IdEstad__08EA5793">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Monetario__idEmp__7993056A" Association="CuentasPorCobrarModel.Store.FK__Monetario__idEmp__7993056A">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="MonetarioDet" EntitySet="MonetarioDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__IdEmpre__182C9B23" Association="CuentasPorCobrarModel.Store.FK__Persona__IdEmpre__182C9B23">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TarjetaCr__idBan__0F824689" Association="CuentasPorCobrarModel.Store.FK__TarjetaCr__idBan__0F824689">
+      <End Role="Banco" EntitySet="Banco" />
+      <End Role="TarjetaCredito" EntitySet="TarjetaCredito" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TarjetaCr__idEmp__0E8E2250" Association="CuentasPorCobrarModel.Store.FK__TarjetaCr__idEmp__0E8E2250">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TarjetaCredito" EntitySet="TarjetaCredito" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoInver__idEmp__0504B816" Association="CuentasPorCobrarModel.Store.FK__TipoInver__idEmp__0504B816">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoInversion" EntitySet="TipoInversion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UnidadTie__idEmp__74CE504D" Association="CuentasPorCobrarModel.Store.FK__UnidadTie__idEmp__74CE504D">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="UnidadTiempo" EntitySet="UnidadTiempo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdEstad__3A81B327" Association="CuentasPorCobrarModel.Store.FK__Usuario__IdEstad__3A81B327">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdUsuar__3C69FB99" Association="CuentasPorCobrarModel.Store.FK__Usuario__IdUsuar__3C69FB99">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Banco">
+    <Key>
+      <PropertyRef Name="idBanco" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idBanco" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="CuentaBancaria">
+    <Key>
+      <PropertyRef Name="idCuentaBancaria" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idCuentaBancaria" Type="int" Nullable="false" />
+    <Property Name="idBanco" Type="int" Nullable="false" />
+    <Property Name="idTitular" Type="int" />
+    <Property Name="NumeroCuenta" Type="int" Nullable="false" />
+    <Property Name="TipoCuenta" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Saldo" Type="money" Nullable="false" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="MonetarioDet">
+    <Key>
+      <PropertyRef Name="idDetalleMonetario" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idDetalleMonetario" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Valor" Type="money" Nullable="false" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="TarjetaCredito">
+    <Key>
+      <PropertyRef Name="idTarjeta" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idTarjeta" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="idBanco" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="TipoInversion">
+    <Key>
+      <PropertyRef Name="idTipoInversion" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idTipoInversion" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="UnidadTiempo">
+    <Key>
+      <PropertyRef Name="idUnidadTiempo" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUnidadTiempo" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="Identificacion" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdTipoPersona" Type="int" Nullable="false" />
+    <Property Name="NombreRazonSocial" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Apellido" Type="varchar" MaxLength="50" />
+    <Property Name="FechaNacimiento" Type="datetime" />
+    <Property Name="genero" Type="char" MaxLength="1" />
+    <Property Name="TipoIdentificacion" Type="int" Nullable="false" />
+    <Property Name="direccion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TelefonoGneral" Type="numeric" Precision="14" />
+    <Property Name="TelefonoMovil" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="TelefonoCasa" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="TelefonoOtros" Type="numeric" Precision="14" />
+    <Property Name="mail" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="50" />
+    <Property Name="NombreComercial" Type="varchar" MaxLength="50" />
+    <Property Name="Ruc" Type="varchar" MaxLength="20" />
+    <Property Name="Direccion" Type="varchar" MaxLength="200" />
+    <Property Name="Logotipo" Type="image" />
+    <Property Name="FechaInicioSistema" Type="datetime" />
+    <Property Name="Correo" Type="varchar" MaxLength="70" />
+    <Property Name="SitioWeb" Type="varchar" MaxLength="70" />
+    <Property Name="Sector" Type="varchar" MaxLength="15" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="250" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="220" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="NombreUsuario" Type="varchar" MaxLength="20" />
+    <Property Name="Contrasena" Type="varchar" MaxLength="220" />
+    <Property Name="IdEstado" Type="int" />
+    <Property Name="IdImagen" Type="int" />
+    <Property Name="IdPerfil" Type="int" />
+  </EntityType>
+  <Association Name="FK__Banco__idEmpresa__09C96D33">
+    <End Role="Empresa" Type="CuentasPorCobrarModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Banco" Type="CuentasPorCobrarModel.Store.Banco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Banco">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaBan__idBan__2E06CDA9">
+    <End Role="Banco" Type="CuentasPorCobrarModel.Store.Banco" Multiplicity="1" />
+    <End Role="CuentaBancaria" Type="CuentasPorCobrarModel.Store.CuentaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco">
+        <PropertyRef Name="idBanco" />
+      </Principal>
+      <Dependent Role="CuentaBancaria">
+        <PropertyRef Name="idBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaBan__idEmp__2D12A970">
+    <End Role="Empresa" Type="CuentasPorCobrarModel.Store.Empresa" Multiplicity="1" />
+    <End Role="CuentaBancaria" Type="CuentasPorCobrarModel.Store.CuentaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaBancaria">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaBan__idTit__2EFAF1E2">
+    <End Role="Persona" Type="CuentasPorCobrarModel.Store.Persona" Multiplicity="0..1" />
+    <End Role="CuentaBancaria" Type="CuentasPorCobrarModel.Store.CuentaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="CuentaBancaria">
+        <PropertyRef Name="idTitular" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empresa__IdEstad__08EA5793">
+    <End Role="Estado" Type="CuentasPorCobrarModel.Store.Estado" Multiplicity="0..1" />
+    <End Role="Empresa" Type="CuentasPorCobrarModel.Store.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Monetario__idEmp__7993056A">
+    <End Role="Empresa" Type="CuentasPorCobrarModel.Store.Empresa" Multiplicity="1" />
+    <End Role="MonetarioDet" Type="CuentasPorCobrarModel.Store.MonetarioDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="MonetarioDet">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__IdEmpre__182C9B23">
+    <End Role="Empresa" Type="CuentasPorCobrarModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Persona" Type="CuentasPorCobrarModel.Store.Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TarjetaCr__idBan__0F824689">
+    <End Role="Banco" Type="CuentasPorCobrarModel.Store.Banco" Multiplicity="1" />
+    <End Role="TarjetaCredito" Type="CuentasPorCobrarModel.Store.TarjetaCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco">
+        <PropertyRef Name="idBanco" />
+      </Principal>
+      <Dependent Role="TarjetaCredito">
+        <PropertyRef Name="idBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TarjetaCr__idEmp__0E8E2250">
+    <End Role="Empresa" Type="CuentasPorCobrarModel.Store.Empresa" Multiplicity="1" />
+    <End Role="TarjetaCredito" Type="CuentasPorCobrarModel.Store.TarjetaCredito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TarjetaCredito">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoInver__idEmp__0504B816">
+    <End Role="Empresa" Type="CuentasPorCobrarModel.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoInversion" Type="CuentasPorCobrarModel.Store.TipoInversion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoInversion">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UnidadTie__idEmp__74CE504D">
+    <End Role="Empresa" Type="CuentasPorCobrarModel.Store.Empresa" Multiplicity="1" />
+    <End Role="UnidadTiempo" Type="CuentasPorCobrarModel.Store.UnidadTiempo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="UnidadTiempo">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdEstad__3A81B327">
+    <End Role="Estado" Type="CuentasPorCobrarModel.Store.Estado" Multiplicity="0..1" />
+    <End Role="Usuario" Type="CuentasPorCobrarModel.Store.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdUsuar__3C69FB99">
+    <End Role="Persona" Type="CuentasPorCobrarModel.Store.Persona" Multiplicity="1" />
+    <End Role="Usuario" Type="CuentasPorCobrarModel.Store.Usuario" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

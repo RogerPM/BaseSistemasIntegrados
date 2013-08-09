@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TECAv8Model2.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TECAv8Model2StoreContainer">
+    <EntitySet Name="UsuarioPorEmpresa" EntityType="TECAv8Model2.Store.UsuarioPorEmpresa" store:Type="Tables" Schema="Seguridad" />
+  </EntityContainer>
+  <EntityType Name="UsuarioPorEmpresa">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>

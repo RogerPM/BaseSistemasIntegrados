@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ComprasModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ComprasModelStoreContainer">
+    <EntitySet Name="Proveedor" EntityType="ComprasModel.Store.Proveedor" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="Persona" EntityType="ComprasModel.Store.Persona" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="ProveedorDescripcion" EntityType="ComprasModel.Store.ProveedorDescripcion" store:Type="Views" store:Schema="Compras" store:Name="ProveedorDescripcion">
+      <DefiningQuery>SELECT 
+      [ProveedorDescripcion].[IdProveedor] AS [IdProveedor], 
+      [ProveedorDescripcion].[IdPersona] AS [IdPersona], 
+      [ProveedorDescripcion].[NombreRazonSocial] AS [NombreRazonSocial], 
+      [ProveedorDescripcion].[IdEmpresa] AS [IdEmpresa], 
+      [ProveedorDescripcion].[RazonSocial] AS [RazonSocial], 
+      [ProveedorDescripcion].[IdTipoArticulo] AS [IdTipoArticulo], 
+      [ProveedorDescripcion].[Descripcion] AS [Descripcion], 
+      [ProveedorDescripcion].[Estado] AS [Estado]
+      FROM [Compras].[ProveedorDescripcion] AS [ProveedorDescripcion]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Proveedor__IdPer__6F7F8B4B" Association="ComprasModel.Store.FK__Proveedor__IdPer__6F7F8B4B">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="IdProveedor" />
+    </Key>
+    <Property Name="IdProveedor" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="IdTipoArticulo" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="Identificacion" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdTipoPersona" Type="int" Nullable="false" />
+    <Property Name="NombreRazonSocial" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Apellido" Type="varchar" MaxLength="50" />
+    <Property Name="FechaNacimiento" Type="datetime" />
+    <Property Name="genero" Type="char" MaxLength="1" />
+    <Property Name="TipoIdentificacion" Type="int" Nullable="false" />
+    <Property Name="direccion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TelefonoGneral" Type="numeric" Precision="14" />
+    <Property Name="TelefonoMovil" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="TelefonoCasa" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="TelefonoOtros" Type="numeric" Precision="14" />
+    <Property Name="mail" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.Compras.ProveedorDescripcion' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="ProveedorDescripcion">
+    <Key>
+      <PropertyRef Name="IdProveedor" />
+      <PropertyRef Name="IdPersona" />
+      <PropertyRef Name="NombreRazonSocial" />
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdTipoArticulo" />
+      <PropertyRef Name="Descripcion" />
+      <PropertyRef Name="Estado" />
+    </Key>
+    <Property Name="IdProveedor" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="NombreRazonSocial" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="50" />
+    <Property Name="IdTipoArticulo" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Proveedor__IdPer__6F7F8B4B">
+    <End Role="Persona" Type="ComprasModel.Store.Persona" Multiplicity="1" />
+    <End Role="Proveedor" Type="ComprasModel.Store.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

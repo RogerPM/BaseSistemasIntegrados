@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ComprasModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ComprasModelStoreContainer">
+          <EntitySet Name="Proveedor" EntityType="ComprasModel.Store.Proveedor" store:Type="Tables" Schema="Compras" />
+          <EntitySet Name="Persona" EntityType="ComprasModel.Store.Persona" store:Type="Tables" Schema="RecursosHumanos" />
+          <EntitySet Name="ProveedorDescripcion" EntityType="ComprasModel.Store.ProveedorDescripcion" store:Type="Views" store:Schema="Compras" store:Name="ProveedorDescripcion">
+            <DefiningQuery>SELECT 
+      [ProveedorDescripcion].[IdProveedor] AS [IdProveedor], 
+      [ProveedorDescripcion].[IdPersona] AS [IdPersona], 
+      [ProveedorDescripcion].[NombreRazonSocial] AS [NombreRazonSocial], 
+      [ProveedorDescripcion].[IdEmpresa] AS [IdEmpresa], 
+      [ProveedorDescripcion].[RazonSocial] AS [RazonSocial], 
+      [ProveedorDescripcion].[IdTipoArticulo] AS [IdTipoArticulo], 
+      [ProveedorDescripcion].[Descripcion] AS [Descripcion], 
+      [ProveedorDescripcion].[Estado] AS [Estado]
+      FROM [Compras].[ProveedorDescripcion] AS [ProveedorDescripcion]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Proveedor__IdPer__6F7F8B4B" Association="ComprasModel.Store.FK__Proveedor__IdPer__6F7F8B4B">
+            <End Role="Persona" EntitySet="Persona" />
+            <End Role="Proveedor" EntitySet="Proveedor" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Proveedor">
+          <Key>
+            <PropertyRef Name="IdProveedor" />
+          </Key>
+          <Property Name="IdProveedor" Type="int" Nullable="false" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="IdPersona" Type="int" Nullable="false" />
+          <Property Name="IdTipoArticulo" Type="int" Nullable="false" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Persona">
+          <Key>
+            <PropertyRef Name="IdPersona" />
+          </Key>
+          <Property Name="IdPersona" Type="int" Nullable="false" />
+          <Property Name="Identificacion" Type="numeric" Nullable="false" Precision="14" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="IdTipoPersona" Type="int" Nullable="false" />
+          <Property Name="NombreRazonSocial" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Apellido" Type="varchar" MaxLength="50" />
+          <Property Name="FechaNacimiento" Type="datetime" />
+          <Property Name="genero" Type="char" MaxLength="1" />
+          <Property Name="TipoIdentificacion" Type="int" Nullable="false" />
+          <Property Name="direccion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="TelefonoGneral" Type="numeric" Precision="14" />
+          <Property Name="TelefonoMovil" Type="numeric" Nullable="false" Precision="14" />
+          <Property Name="TelefonoCasa" Type="numeric" Nullable="false" Precision="14" />
+          <Property Name="TelefonoOtros" Type="numeric" Precision="14" />
+          <Property Name="mail" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.Compras.ProveedorDescripcion' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="ProveedorDescripcion">
+          <Key>
+            <PropertyRef Name="IdProveedor" />
+            <PropertyRef Name="IdPersona" />
+            <PropertyRef Name="NombreRazonSocial" />
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdTipoArticulo" />
+            <PropertyRef Name="Descripcion" />
+            <PropertyRef Name="Estado" />
+          </Key>
+          <Property Name="IdProveedor" Type="int" Nullable="false" />
+          <Property Name="IdPersona" Type="int" Nullable="false" />
+          <Property Name="NombreRazonSocial" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="RazonSocial" Type="varchar" MaxLength="50" />
+          <Property Name="IdTipoArticulo" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Estado" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Proveedor__IdPer__6F7F8B4B">
+          <End Role="Persona" Type="ComprasModel.Store.Persona" Multiplicity="1" />
+          <End Role="Proveedor" Type="ComprasModel.Store.Proveedor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persona">
+              <PropertyRef Name="IdPersona" />
+            </Principal>
+            <Dependent Role="Proveedor">
+              <PropertyRef Name="IdPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ComprasModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="CompraEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Proveedor" EntityType="ComprasModel.Proveedor" />
+          <EntitySet Name="Persona" EntityType="ComprasModel.Persona" />
+          <EntitySet Name="ProveedorDescripcion" EntityType="ComprasModel.ProveedorDescripcion" />
+          <AssociationSet Name="FK__Proveedor__IdPer__6F7F8B4B" Association="ComprasModel.FK__Proveedor__IdPer__6F7F8B4B">
+            <End Role="Persona" EntitySet="Persona" />
+            <End Role="Proveedor" EntitySet="Proveedor" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Proveedor">
+          <Key>
+            <PropertyRef Name="IdProveedor" />
+          </Key>
+          <Property Name="IdProveedor" Type="Int32" Nullable="false" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="IdPersona" Type="Int32" Nullable="false" />
+          <Property Name="IdTipoArticulo" Type="Int32" Nullable="false" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Persona" Relationship="ComprasModel.FK__Proveedor__IdPer__6F7F8B4B" FromRole="Proveedor" ToRole="Persona" />
+        </EntityType>
+        <EntityType Name="Persona">
+          <Key>
+            <PropertyRef Name="IdPersona" />
+          </Key>
+          <Property Name="IdPersona" Type="Int32" Nullable="false" />
+          <Property Name="Identificacion" Type="Decimal" Nullable="false" Precision="14" Scale="0" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="IdTipoPersona" Type="Int32" Nullable="false" />
+          <Property Name="NombreRazonSocial" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Apellido" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" />
+          <Property Name="genero" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="TipoIdentificacion" Type="Int32" Nullable="false" />
+          <Property Name="direccion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TelefonoGneral" Type="Decimal" Precision="14" Scale="0" />
+          <Property Name="TelefonoMovil" Type="Decimal" Nullable="false" Precision="14" Scale="0" />
+          <Property Name="TelefonoCasa" Type="Decimal" Nullable="false" Precision="14" Scale="0" />
+          <Property Name="TelefonoOtros" Type="Decimal" Precision="14" Scale="0" />
+          <Property Name="mail" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Proveedor" Relationship="ComprasModel.FK__Proveedor__IdPer__6F7F8B4B" FromRole="Persona" ToRole="Proveedor" />
+        </EntityType>
+        <EntityType Name="ProveedorDescripcion">
+          <Key>
+            <PropertyRef Name="IdProveedor" />
+            <PropertyRef Name="IdPersona" />
+            <PropertyRef Name="NombreRazonSocial" />
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdTipoArticulo" />
+            <PropertyRef Name="Descripcion" />
+            <PropertyRef Name="Estado" />
+          </Key>
+          <Property Name="IdProveedor" Type="Int32" Nullable="false" />
+          <Property Name="IdPersona" Type="Int32" Nullable="false" />
+          <Property Name="NombreRazonSocial" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="RazonSocial" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IdTipoArticulo" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Estado" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Proveedor__IdPer__6F7F8B4B">
+          <End Role="Persona" Type="ComprasModel.Persona" Multiplicity="1" />
+          <End Role="Proveedor" Type="ComprasModel.Proveedor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persona">
+              <PropertyRef Name="IdPersona" />
+            </Principal>
+            <Dependent Role="Proveedor">
+              <PropertyRef Name="IdPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ComprasModelStoreContainer" CdmEntityContainer="CompraEntities">
+          <EntitySetMapping Name="Proveedor">
+            <EntityTypeMapping TypeName="ComprasModel.Proveedor">
+              <MappingFragment StoreEntitySet="Proveedor">
+                <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+                <ScalarProperty Name="IdTipoArticulo" ColumnName="IdTipoArticulo" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Persona">
+            <EntityTypeMapping TypeName="ComprasModel.Persona">
+              <MappingFragment StoreEntitySet="Persona">
+                <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdTipoPersona" ColumnName="IdTipoPersona" />
+                <ScalarProperty Name="NombreRazonSocial" ColumnName="NombreRazonSocial" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="genero" ColumnName="genero" />
+                <ScalarProperty Name="TipoIdentificacion" ColumnName="TipoIdentificacion" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="TelefonoGneral" ColumnName="TelefonoGneral" />
+                <ScalarProperty Name="TelefonoMovil" ColumnName="TelefonoMovil" />
+                <ScalarProperty Name="TelefonoCasa" ColumnName="TelefonoCasa" />
+                <ScalarProperty Name="TelefonoOtros" ColumnName="TelefonoOtros" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProveedorDescripcion">
+            <EntityTypeMapping TypeName="ComprasModel.ProveedorDescripcion">
+              <MappingFragment StoreEntitySet="ProveedorDescripcion">
+                <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+                <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+                <ScalarProperty Name="NombreRazonSocial" ColumnName="NombreRazonSocial" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+                <ScalarProperty Name="IdTipoArticulo" ColumnName="IdTipoArticulo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModelCompras">
+        <EntityTypeShape EntityType="ComprasModel.Proveedor" Width="1.5" PointX="3" PointY="2" Height="2.0478930664062496" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComprasModel.Persona" Width="1.5" PointX="0.75" PointY="1" Height="4.0108040364583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComprasModel.ProveedorDescripcion" Width="1.5" PointX="5.75" PointY="0.75" Height="2.4047859700520835" IsExpanded="true" />
+        <AssociationConnector Association="ComprasModel.FK__Proveedor__IdPer__6F7F8B4B" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="3.0239465332031248" />
+          <ConnectorPoint PointX="3" PointY="3.0239465332031248" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F21733E-0C7C-425E-8690-455EE38E7369}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>clases</RootNamespace>
+    <AssemblyName>clases</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivoFijo\clsActivoFijo.cs" />
+    <Compile Include="ActivoFijo\clsBajaActivo.cs" />
+    <Compile Include="ActivoFijo\clsCodigoBarra.cs" />
+    <Compile Include="ActivoFijo\clsSubgrupoActivoFijo.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Compras\clsComprasPersona.cs" />
+    <Compile Include="Compras\clsProveedor.cs" />
+    <Compile Include="Compras\clsProveedorDescripcion.cs" />
+    <Compile Include="Compras\MensajesCompras.cs" />
+    <Compile Include="Contabilidad\clsCuenta.cs" />
+    <Compile Include="Contabilidad\clsModulo.cs" />
+    <Compile Include="Contabilidad\clsTipoCuenta.cs" />
+    <Compile Include="Contabilidad\clsTipoTransaccion.cs" />
+    <Compile Include="Contabilidad\DataSIsCon.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSIsCon.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\EModeloAsiento.cs" />
+    <Compile Include="Contabilidad\NModeloAsiento.cs" />
+    <Compile Include="CuentasxCobrar\clsBanco.cs" />
+    <Compile Include="CuentasxCobrar\clsCuentaBancaria.cs" />
+    <Compile Include="CuentasxCobrar\clsMensajeCCobrar.cs" />
+    <Compile Include="CuentasxCobrar\clsMonetarioDetalle.cs" />
+    <Compile Include="CuentasxCobrar\clsTarjetaCredito.cs" />
+    <Compile Include="CuentasxCobrar\clsTipoInversion.cs" />
+    <Compile Include="CuentasxCobrar\clsUnidadTiempo.cs" />
+    <Compile Include="CuentasxCobrar\ObjetoGenerico.cs" />
+    <Compile Include="Cuentasxpagar\clsCuentaBancaria.cs" />
+    <Compile Include="Cuentasxpagar\clsEmpresaServicio.cs" />
+    <Compile Include="Cuentasxpagar\clsFrecuenciaPago.cs" />
+    <Compile Include="Cuentasxpagar\clsImpuesto.cs" />
+    <Compile Include="Cuentasxpagar\clsMedioPago.cs" />
+    <Compile Include="Cuentasxpagar\clsMensaje.cs" />
+    <Compile Include="Inventario\clsGrupo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsCargo.cs" />
+    <Compile Include="RecursosHumanos\clsCargoxDepartamento.cs" />
+    <Compile Include="RecursosHumanos\clsDepartamento.cs" />
+    <Compile Include="RecursosHumanos\clsGenero.cs" />
+    <Compile Include="RecursosHumanos\clsMaternidad.cs" />
+    <Compile Include="RecursosHumanos\clsMensaje.cs" />
+    <Compile Include="RecursosHumanos\clsPersona.cs" />
+    <Compile Include="RecursosHumanos\clsPersonaxCargo.cs" />
+    <Compile Include="RecursosHumanos\clsTipoContrato.cs" />
+    <Compile Include="RecursosHumanos\clsTipoPermiso.cs" />
+    <Compile Include="RecursosHumanos\clsTipoPrestamo.cs" />
+    <Compile Include="RecursosHumanos\clsTitulo.cs" />
+    <Compile Include="RecursosHumanos\clsUniversidad.cs" />
+    <Compile Include="Seguridad\clsEmpresa.cs" />
+    <Compile Include="Seguridad\clsEstado.cs" />
+    <Compile Include="Seguridad\clsHorario.cs" />
+    <Compile Include="Seguridad\clsImagen.cs" />
+    <Compile Include="Seguridad\clsMensajesSeguridad.cs" />
+    <Compile Include="Seguridad\clsUsuario.cs" />
+    <Compile Include="Seguridad\clsUsuarioPorEmpresa.cs" />
+    <Compile Include="Taller\clsArticulo.cs" />
+    <Compile Include="Taller\clsCliente.cs" />
+    <Compile Include="Taller\clsMensajesTaller.cs" />
+    <Compile Include="Taller\clsTiposTrabajos.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Facturacion\" />
+    <Folder Include="_Otro\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Contabilidad\DataSIsCon.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataSIsCon.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\clases.Seguridad.clsImagen.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Contabilidad\DataSIsCon.dbml.layout">
+      <DependentUpon>DataSIsCon.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

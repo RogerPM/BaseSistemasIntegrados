@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TECAv8Model2" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="TECAv8Entities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UsuarioPorEmpresa" EntityType="TECAv8Model2.UsuarioPorEmpresa" />
+  </EntityContainer>
+  <EntityType Name="UsuarioPorEmpresa">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

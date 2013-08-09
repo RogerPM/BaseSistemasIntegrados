@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TECAv8" Class="DataSIsConDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=TECAv8;Integrated Security=True" SettingsObjectName="clases.Properties.Settings" SettingsPropertyName="TECAv8ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="Contabilidad.TipoTransaccion" Member="TipoTransaccions">
+    <Type Name="TipoTransaccion">
+      <Column Name="IdTransaccion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="modulo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoDocumento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TipoTransaccion_ModeloAsiento" Member="ModeloAsientos" ThisKey="IdTransaccion" OtherKey="IdTransaccion" Type="ModeloAsiento" />
+    </Type>
+  </Table>
+  <Table Name="Contabilidad.ModeloAsiento" Member="ModeloAsientos">
+    <Type Name="ModeloAsiento">
+      <Column Name="IdEmpresa" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="modulo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdTransaccion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="secuencia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="debe" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="haber" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechaModificacion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="TipoTransaccion_ModeloAsiento" Member="TipoTransaccion" ThisKey="IdTransaccion" OtherKey="IdTransaccion" Type="TipoTransaccion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ModeloAsientos_Delete" Method="ModeloAsientos_Delete">
+    <Parameter Name="IdEmpresa" Parameter="idEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdTransaccion" Parameter="idTransaccion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="modulo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="secuencial" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ModeloAsientos_Update" Method="ModeloAsientos_Update">
+    <Parameter Name="IdEmpresa" Parameter="idEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdTransaccion" Parameter="idTransaccion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="modulo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="secuencial" Type="System.Int32" DbType="Int" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="debe" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="haber" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="FechaModificacion" Parameter="fechaModificacion" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ModeloAsientos_Insertar" Method="ModeloAsientos_Insertar">
+    <Parameter Name="IdEmpresa" Parameter="idEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdTransaccion" Parameter="idTransaccion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="modulo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="debe" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="haber" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="IdUsuario" Parameter="idUsuario" Type="System.String" DbType="VarChar(1)" />
+    <Parameter Name="FechaModificacion" Parameter="fechaModificacion" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
