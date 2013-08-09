@@ -202,8 +202,9 @@ create table Seguridad.Usuario
 	 Contrasena			varchar(220),
 	 IdEstado			int					references Seguridad.Estado,
 	 IdImagen			int					references Seguridad.Imagen,
-	 IdPerfil int references Seguridad.Perfil,
+	 IdPerfil int ,
 	 primary key(IdUsuario),
+	 -- foreign key(IdPerfil) references Seguridad.Perfil,
 	 foreign key (IdUsuario) references RecursosHumanos.Persona --el id usuario es el mismo q id persona
 )
 go
