@@ -3,7 +3,7 @@ if exists(select * from sysdatabases where name='TECA')
 drop database TECA
 PRINT N'1.base eliminada'
 go
-
+ 
 create database TECA
 PRINT N'2.base creada '
 go
@@ -2221,8 +2221,8 @@ create table ActivoFijo.ActivoFijo
 	valor_residual			numeric(10,2)   null,
 	valor_actualserie		numeric(10,2)   null,
 	IdCodigoBarra 			int   null,
-	serie					varchar(30)   null,
-	IdMarca 				int   null,--relacion tablas de inventario
+	--serie					varchar(30)   null,
+	--IdMarca 				int   null,--relacion tablas de inventario
 	fecha_depreciacion		date   null,
 	ano_vidaUtil 			numeric   null,
 	IdEstado 				int   null,--relacion tabla general de Estado
@@ -2238,7 +2238,7 @@ create table ActivoFijo.ActivoFijo
 	foreign key (IdSubgrupo)references ActivoFijo.SubGrupos,--relacion tablas de inventario,
 	foreign key (IdArticulo,IdEmpresa)references Inventario.Articulo,--relacion tablas de inventario,
 	foreign key (IdProveedor) references Compras.Proveedor,
-	foreign key (IdMarca)references Inventario.Marca,--relacion tablas de inventario,
+	--foreign key (IdMarca)references Inventario.Marca,--relacion tablas de inventario,
 	foreign key (IdCodigoBarra) references ActivoFijo.CodigoBarra,
 	foreign key (IdEstado) references Seguridad.Estado--relacion tabla general de Estado
 ) 
@@ -2329,6 +2329,7 @@ create table ActivoFijo.Vehiculo
 	IdModelo 				int   null,--relacion tablas de inventario
 	IdColor 				int   null,--relacion tablas de inventario,
 	IdMotor 				int   null,--relacion tablas de inventario,
+	serie					varchar(17)	  null,
 	IdChasis 				int   null,
 	placa					varchar(10)   null,
 	numeropuerta			numeric       null,
