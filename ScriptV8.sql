@@ -711,7 +711,7 @@ create table  Seguridad.Menu
 	 IdModulo			int					references Seguridad.Modulo,
 	 IdPadre			int					references Seguridad.Menu,
 	 Descripcion		varchar (255),
-	 NombreForm			varchar (255), 
+	 NombreFormulario	varchar (255), 
 	 NombreAssembly		varchar (200), 
 	 IdEstado			int					references Seguridad.Estado,
 )
