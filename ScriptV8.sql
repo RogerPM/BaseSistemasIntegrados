@@ -413,6 +413,7 @@ create table RecursosHumanos.PersonaxTitulo
 	IdEmpresa				int not null,
 	IdPersona				int not null,
 	IdEstado				int not null,
+	ano				         datetime,
 	primary key (idpersona,idtitulo),
 	
 	foreign key (IdTitulo) references RecursosHumanos.Titulo,
