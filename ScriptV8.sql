@@ -413,6 +413,7 @@ create table RecursosHumanos.PersonaxTitulo
 	IdEmpresa				int not null,
 	IdPersona				int not null,
 	IdEstado				int not null,
+	
 	primary key (idpersona,idtitulo),
 	
 	foreign key (IdTitulo) references RecursosHumanos.Titulo,
@@ -420,6 +421,24 @@ create table RecursosHumanos.PersonaxTitulo
 	foreign key (IdPersona) references RecursosHumanos.Persona
 )
 go
+
+/*ACADEMICO*/
+create table RecursosHumanos.Academico
+(
+	IdAcademico				int not null,
+	IdPersona				int not null,
+	IdTitulo				int not null,
+	IdEmpresa				int not null,
+	IdUniversidad			int not null,
+	IdEstado				int not null,
+	primary key (IdAcademico),
+	foreign key (IdPersona) references RecursosHumanos.Persona,
+	foreign key (IdTitulo) references RecursosHumanos.Titulo,
+	foreign key (IdEmpresa) references Seguridad.Empresa,
+	foreign key (IdUniversidad) references RecursosHumanos.Universidad,
+)
+go
+
 
 /*PERSONAxCARGO*/
 create table RecursosHumanos.PersonaxCargo
@@ -556,7 +575,6 @@ create table RecursosHumanos.TipoContrato
 )
 go
 
-/*CONTRATO*/
 create table RecursosHumanos.Contrato
 (
 	NumContrato				int not null,
@@ -564,12 +582,17 @@ create table RecursosHumanos.Contrato
 	IdTipoContrato			int not null,
 	IdCargo					int not null,
 	IdEmpresa				int not null,
-	Fecha					date not null,
+	Fecha					datetime not null,
 	FechaModificacion		datetime,
 	Remuneracion			numeric(10,2) not null,
 	IdJornada				int not null,
 	PeriodoPrueba			bit not null,
+	Discapacidad			bit,
+	grado					int,
+	TipoDiscapacidad		int,
+	Carnet					numeric(29,0),
 	IdEstado				int not null,
+	
 	primary key (IdPersona,NumContrato,idEmpresa),
 	
 	foreign key (IdEmpresa) references Seguridad.Empresa,
