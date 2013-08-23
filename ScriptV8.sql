@@ -1045,24 +1045,17 @@ create table Inventario.Bodega
 (
 IdEmpresa	int not null,
 IdBodega	int not null,
-Decripcion	varchar(100) not null,
-Capacidad	numeric(5,0) not null,
-IdResponsable	int not null,
+Decripcion	varchar(100),
+Capacidadm2	int,
+IdResponsable	int,
+IdPercha	int,
 Direccion	varchar(100),
-Perchas	numeric(10,0),
+Telefono int,
 IdEstado	int,
 primary key (IdBodega, IdEmpresa),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdResponsable) references RecursosHumanos.Persona,
 foreign key (IdEstado) references Seguridad.Estado,
-)
-go
-
-create table Inventario.TelefonoBodega
-(
-IdBodega	int not null,
-IdTelefono	int not null,
-primary key(IdBodega,IdTelefono)
 )
 go
 
@@ -1201,7 +1194,7 @@ create table Inventario.Articulo
 	CantidadMinima	numeric(5,0),
 	CantidadMaxima	numeric(5,0),
 	CantidadActual	numeric(5,0),
-	IdUnidadMedida	int not null,
+	IdUnidadMedida	int,
 	FechaCaducidad	date,
 	IdTipoArticulo	int not null,
 	IdGrupo	int not null,
