@@ -1,17 +1,12 @@
---Inventario
-
-
---++++++++++++++++++++++++++++++++++ TIPO_ARTICULO +++++++++++++++++++++++++++++++++++++
-
+----------- INSERTS INVENTARIO ------------------
+-- TIPO ARTICULO
 insert into Inventario.TipoArticulo values (1,1,'SuministrosdeOficina',1)
 insert into Inventario.TipoArticulo values (2,2,'SuministrosdeLimpieza',1)
 insert into Inventario.TipoArticulo values (3,3,'Mercaderia',1)
 insert into Inventario.TipoArticulo values (4,4,'ActivoFijo',1)
-
 go
 
---++++++++++++++++++++++++++++++++++ GRUPO +++++++++++++++++++++++++++++++++++++
-
+-- GRUPO
 insert into Inventario.Grupo values (1,1, 'Papeleria', 1, 1)
 insert into Inventario.Grupo values (2,2, 'InsumosdeOficina',1, 1)
 insert into Inventario.Grupo values (3,3, 'Detergentes', 2,1)
@@ -26,38 +21,26 @@ insert into Inventario.Grupo values (3,11, 'EquiposdeComputo',4, 1)
 
 go
 
---++++++++++++++++++++++++++++++++++ BODEGA +++++++++++++++++++++++++++++++++++++
+-- BODEGA
 
-
-insert into Inventario.Bodega values(1,1,'BodegaA','2m2',1,'Centro Norte','4',1)
-insert into Inventario.Bodega values(2,2,'BodegaB','3m2',2,'Centro Sur','5',2)
-insert into Inventario.Bodega values(3,1,'BodegaA','2m2',2,'Centro Norte','8',3)
-insert into Inventario.Bodega values(4,3,'BodegaC','4m2',3,'Ceibos Oeste','2',4)
-insert into Inventario.Bodega values(1,2,'BodegaB','3m2',4,'Centro Sur','4',5)
-
-go
-
---++++++++++++++++++++++++++++++++++ TELEFONO_BODEGA +++++++++++++++++++++++++++++++++++++
-
-
-insert into Inventario.TelefonoBodega values(1,1)
-insert into Inventario.TelefonoBodega values(2,3)
-insert into Inventario.TelefonoBodega values(3,2)
-insert into Inventario.TelefonoBodega values(1,4)
-insert into Inventario.TelefonoBodega values(2,3)
-insert into Inventario.TelefonoBodega values(2,1)
+insert into Inventario.Bodega values(1,1,'BodegaA',2,1,1,'Centro Norte',2799003,1)
+insert into Inventario.Bodega values(2,2,'BodegaB',3,1,1,'Centro Sur',2799003,2)
+insert into Inventario.Bodega values(3,1,'BodegaA',4,1,2,'Centro Norte',2799003,1)
+insert into Inventario.Bodega values(4,3,'BodegaC',2,1,3,'Ceibos Oeste',2799003,1)
+insert into Inventario.Bodega values(1,2,'BodegaB',3,1,3,'Centro Sur',2799003,2)
 
 go
 
---++++++++++++++++++++++++++++++++++ UNIDAD_MEDIDA +++++++++++++++++++++++++++++++++++++
+-- UNIDAD_MEDIDA 
 
 
 insert into Inventario.UnidadMedida values (1,1, 'lts.', 1)
 insert into Inventario.UnidadMedida values (2,2, 'kg', 2)
 insert into Inventario.UnidadMedida values (3,3, 'lb', 3)
 insert into Inventario.UnidadMedida values (4,4, 'gr', 2)
+go
 
---++++++++++++++++++++++++++++++++++ CHASIS +++++++++++++++++++++++++++++++++++++
+-- CHASIS 
 
 
 insert into Inventario.Chasis values (2,1, 'En escalera', 1)
@@ -67,15 +50,15 @@ insert into Inventario.Chasis values (1,4, 'Cercha', 1)
 insert into Inventario.Chasis values (2,5, 'MonoCasco', 3)
 go
 
---++++++++++++++++++++++++++++++++++ TIPO_MOTOR +++++++++++++++++++++++++++++++++++++
+--TIPO_MOTOR 
 
 
 insert into Inventario.TipoMotor values (1,1, 'Motor Electrico', 1)
 insert into Inventario.TipoMotor values (2,2, 'Motor de Combustion Interna', 1)
-insert into Inventario.TipoMotor values (2,2, 'Motor Hibrido', 1)
+insert into Inventario.TipoMotor values (2,3, 'Motor Hibrido', 1)
 go
 
---++++++++++++++++++++++++++++++++++ TIPO_COMBUSTIBLE +++++++++++++++++++++++++++++++++++++
+--TIPO_COMBUSTIBLE 
 
 
 insert into Inventario.TipoCombustible values (2,1, 'Gasolina', 1)
@@ -85,7 +68,7 @@ insert into Inventario.TipoCombustible values (3,4, 'Electricidad', 1)
 
 go
 
---++++++++++++++++++++++++++++++++++ COLOR +++++++++++++++++++++++++++++++++++++
+-- COLOR 
 
 
 insert into Inventario.Color values (1,1, 'Gris', 2)
@@ -95,19 +78,19 @@ insert into Inventario.Color values (3,4, 'Azul', 2)
 insert into Inventario.Color values (1,5, 'Rojo', 1)
 go
 
---++++++++++++++++++++++++++++++++++ MARCA +++++++++++++++++++++++++++++++++++++
+-- MARCA 
 
 insert into Inventario.Marca values (1,1, 'Renault', 1)
 insert into Inventario.Marca values (2,2, 'Chevrolet',1)
 insert into Inventario.Marca values (3,3, 'Peugeot', 2)
 insert into Inventario.Marca values (4,4, 'Toyota', 1)
 insert into Inventario.Marca values (1,5, 'Suzuki', 1)
-insert into Inventario.Marca values (2,6, 'BIC',  1)
+insert into Inventario.Marca values (2,6, 'BIC', 1)
 insert into Inventario.Marca values (3,7, 'CopyLaser', 1)
 insert into Inventario.Marca values (4,8, 'Deja', 1)
 go
 
---++++++++++++++++++++++++++++++++++ MODELO +++++++++++++++++++++++++++++++++++++
+--MODELO 
 
 
 insert into Inventario.Modelo values (1,1,'Sandero',1,1)
@@ -115,8 +98,8 @@ insert into Inventario.Modelo values (2,2,'Sail',2,1)
 insert into Inventario.Modelo values (3,3,'RCZ',3,2)
 insert into Inventario.Modelo values (4,4,'Corolla',4,1)
 insert into Inventario.Modelo values (1,5,'Grand Vitara',5,1)
-
---++++++++++++++++++++++++++++++++++ TIPO_MATERIAL +++++++++++++++++++++++++++++++++++++
+go
+--TIPO_MATERIAL 
 
 
 insert into Inventario.TipoMaterial values (1,1, 'Acero', 1)
@@ -125,32 +108,24 @@ insert into Inventario.TipoMaterial values (3,3, 'Hierro', 3)
 insert into Inventario.TipoMaterial values (1,5, 'Titanio', 4)
 insert into Inventario.TipoMaterial values (2,4, 'Madera', 3)
 insert into Inventario.TipoMaterial values (1,6, 'Plastico',3)
+go
 
-
---++++++++++++++++++++++++++++++++++ ARTICULO +++++++++++++++++++++++++++++++++++++
-insert into Inventario.Articulo values (1,1,'Vehiculo para la venta','12/01/2010',1,4,1,2,'null',3,6,1,'9FBLA040E4L812129',1,'B701Q001308','GHD-134',1,1,1,1,1,'Vehiculo en perfecto estado',8)
-insert into Inventario.Articulo values (2,2,'Resma de Papel bond A4','12/01/2010',1,20,6,3,'null',1,1,'null','null','null',3,7,'null',5,1,'Papeles para uso de oficinas',1)
-
---++++++++++++++++++++++++++++++++++ PERCHA +++++++++++++++++++++++++++++++++++++
-
+-- ARTICULO 
+insert into Inventario.Articulo values (1,1,'Vehiculo para la venta','2013-07-12',1,4,1,2,null,3,6,1,'9FBLA040E4L812129',1,'B701Q001308','GSP-0492',1,1,1,1,1,'Vehiculo en perfecto estado',8)
+insert into Inventario.Articulo values (2,2,'Resma de Papel bond A4','2013-07-13',1,20,6,3,null,1,1,null,null,null,null,null,null,3,7,null,5,'Papeles para uso de oficinas',1)
+go
+-- PERCHA 
 insert into Inventario.Percha values (1,1,4,1,1)
 insert into Inventario.Percha values (2,2,4,2,1)
-insert into Inventario.Percha values (3,3,2,4,1)
-
---++++++++++++++++++++++++++++++++++ MOTIVO +++++++++++++++++++++++++++++++++++++
+insert into Inventario.Percha values (3,3,2,1,1)
+go
+-- MOTIVO 
 
 
 insert into Inventario.Motivo values (1,1,'Devolucion',1)
 insert into Inventario.Motivo values (2,2,'Donacion',1)
 insert into Inventario.Motivo values (3,3,'Compra',1)
 insert into Inventario.Motivo values (4,4,'Venta',1)
-
-
---++++++++++++++++++++++++++++++++++ ARTICULO_BODEGA +++++++++++++++++++++++++++++++++++++
-
-insert into Inventario.ArticuloBodega values (1,1,1,1,2,'27/07/2013')
-insert into Inventario.ArticuloBodega values (2,2,2,3,6,'27/07/2013')
-insert into Inventario.ArticuloBodega values (3,3,1,4,1,'27/07/2013')
-
-
+insert into Inventario.Motivo values (1,5,'Ajuste de Inventario',1)
+insert into Inventario.Motivo values (2,6,'Perdida de Articulos',1)
 go
