@@ -17,7 +17,8 @@ insert into Inventario.Grupo values (3,7, 'Accesorios',3, 1)
 insert into Inventario.Grupo values (4,8, 'Edificio',4, 1)
 insert into Inventario.Grupo values (1,9, 'Terreno', 4,1)
 insert into Inventario.Grupo values (2,10, 'MueblesyEnseres',4, 1)
-insert into Inventario.Grupo values (3,11, 'EquiposdeComputo',4, 1)
+insert into Inventario.Grupo values (3,11, 'Equipos',4, 1)
+insert into Inventario.Grupo values (4,12, 'Maquinarias',4, 1)
 
 go
 
