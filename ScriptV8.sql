@@ -1951,8 +1951,8 @@ go
 create table CuentaxPagar.CuentaBancaria
 (
 	Serie 				int not null,
-	TipoCuenta			int not null,
-	NroCta 				int not null,
+	TipoCuenta			varchar (10) not null,
+	NroCta 				varchar(13) not null,
 	IdBanco 			int not null,
 	IdEmpresa 			int not null,
 	IdEmpresaServicio	varchar(13) not null,

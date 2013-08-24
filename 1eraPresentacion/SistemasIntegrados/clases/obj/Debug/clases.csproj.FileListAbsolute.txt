@@ -89,3 +89,9 @@ E:\SI\Development\v10\SistemasIntegrados\clases\bin\Debug\clases.dll
 E:\SI\Development\v10\SistemasIntegrados\clases\bin\Debug\clases.pdb
 E:\SI\Development\v10\SistemasIntegrados\clases\obj\Debug\clases.dll
 E:\SI\Development\v10\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\Users\Daviks Mks\Documents\GitHub\BaseSistemasIntegrados\1eraPresentacion\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+C:\Users\Daviks Mks\Documents\GitHub\BaseSistemasIntegrados\1eraPresentacion\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\Daviks Mks\Documents\GitHub\BaseSistemasIntegrados\1eraPresentacion\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\Daviks Mks\Documents\GitHub\BaseSistemasIntegrados\1eraPresentacion\SistemasIntegrados\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daviks Mks\Documents\GitHub\BaseSistemasIntegrados\1eraPresentacion\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\Daviks Mks\Documents\GitHub\BaseSistemasIntegrados\1eraPresentacion\SistemasIntegrados\clases\obj\Debug\clases.pdb
