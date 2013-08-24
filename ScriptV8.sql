@@ -2188,14 +2188,15 @@ go
 create table ActivoFijo.TipoFormato
 (
 	IdTipoFormato 			int primary key,
-	descripcion				varchar(50)  null	
+	descripcion				varchar(50)  null,
 )
 go
 --Nueva TablaV1 Esta es la tabla TipoFormato
 create table ActivoFijo.Imagen
 (
 	IdImagen			    int primary key,
-	descripcion				image   null
+	descripcion				varchar(250) null,
+	Imagen					image null,	
 )
 go
 
@@ -2222,6 +2223,7 @@ go
 create table ActivoFijo.ActivoFijo
 (
 	IdActivoFijo 			int primary key,
+	cantidad				int   null,
 	IdEmpresa 				int   null,--relacion tablas de Seguridad
 	IdDepartamento 			int   null,--relacaion tablas de RRHH
 	IdResponsable 			int   null,--relacaion tablas de RHHH de la tabla Personal
@@ -2239,7 +2241,7 @@ create table ActivoFijo.ActivoFijo
 	IdCodigoBarra 			int   null,
 	--serie					varchar(30)   null,
 	--IdMarca 				int   null,--relacion tablas de inventario
-	fecha_depreciacion		date   null,
+	fecha_Adquisicion		date   null,
 	ano_vidaUtil 			numeric   null,
 	IdEstado 				int   null,--relacion tabla general de Estado
 	fecha_registro			date   null,
@@ -2248,7 +2250,7 @@ create table ActivoFijo.ActivoFijo
 	foreign key (IdDepartamento)references RecursosHumanos.Departamento,--relacaion tablas de RRHH
 	foreign key (IdArticuloBodega)references Inventario.ArticuloBodega,--relacion tablas de inventario,
 	foreign key (IdResponsable,IdEmpresa)references RecursosHumanos.Empleado,--relacaion tablas de RRHH
-	foreign key (IdUsuario)references Seguridad.Usuario,--relacaion tablas de RRHH
+	foreign key (IdUsuario)references Seguridad.Usuario,
 	foreign key (IdTipo)references Inventario.TipoArticulo,--relacion tablas de inventario,
 	foreign key (IdGrupo)references Inventario.Grupo,
 	foreign key (IdSubgrupo)references ActivoFijo.SubGrupos,--relacion tablas de inventario,
@@ -2260,28 +2262,20 @@ create table ActivoFijo.ActivoFijo
 ) 
 go
 
---3 Esta es la tabla de TipoTerreno
-create table ActivoFijo.TipoTerreno
-(
-	IdTipoTerreno 			int primary key,
-	Descripcion				varchar(50)  null
-)
-go
-
 
 --2 Esta es la tabla de Terreno
 create table ActivoFijo.Terreno
 (
-	IdTerreno 				int primary key,
-	IdActivoFijo 			int   null,
+	IdActivoFijo 			int primary key,
 	direccion				varchar(100)  null, 
-	observacion				varchar(180)  null,
-	IdTipoTerreno 			int   null,
+	observacion				varchar(450)  null,
+	--IdTipoTerreno 			int   null,
+	codigoCatatral          varchar (40) null,
 	DimensionAncho			numeric(10,2)   null,
 	DimensionLargo			numeric(10,2)   null,
 	FechaLegalizacion		date   null,
 	foreign key (IdActivoFijo) references ActivoFijo.ActivoFijo,
-	foreign key (IdTipoTerreno) references ActivoFijo.TipoTerreno
+	--foreign key (IdTipoTerreno) references ActivoFijo.TipoTerreno
 )
 go
 
@@ -2293,7 +2287,12 @@ create table ActivoFijo.EquipoMaquinariaMuebles
 	IdMarca 				int   null,--relacion tablas de inventario,
 	IdModelo 				int   null,--relacion tablas de inventario
 	IdColor 				int   null,--relacion tablas de inventario,
-	Descripcion				varchar(50) null,
+	Carga					int   null,
+	AniosDepreciados		int   null,
+	DimensionAncho			numeric(10,2)   null,
+	DimensionLargo			numeric(10,2)   null,
+	DimensionAlto			numeric(10,2)   null,
+	observacion				varchar(450) null, 
 
 	--haciendo las referencias constraint
 	foreign key (IdActivoFijo) references ActivoFijo.ActivoFijo,
@@ -2310,6 +2309,7 @@ create table ActivoFijo.DepreciacionCab
 	IdEmpresa				  int,
 	IdUsuario 				  int   null,
 	fecha					  date   null,
+	fechaModificacion		  date   null,
 	observacion				  varchar(150)   null
 	primary key (Secuencia_DepreciacionCab,IdEmpresa),
 	foreign key (IdUsuario)references Seguridad.Usuario,--relacaion tablas de RRHH
@@ -2324,6 +2324,7 @@ create table ActivoFijo.DepreciacionDet
 	IdCabecera 				  int,
 	Secuencia_DepreciacionDet int,
 	IdActivoFijo 		      int   null,
+	Periodo                   int null,
 	IdEmpresa				  int   null,
 	valor_nominal			  numeric(10,2)   null,
 	valor_actual			  numeric(10,2)   null
@@ -2348,14 +2349,16 @@ create table ActivoFijo.Vehiculo
 	serie					varchar(17)	  null,
 	IdChasis 				int   null,
 	placa					varchar(10)   null,
-	numeropuerta			numeric       null,
+	numeropuerta			int    null,
+	AniosDepreciados        int    null,
 	descripcion				varchar (50)  null,
-	IdMaterial 				int  not null,--relacion tablas de inventario,
+	IdMaterial 				int     null,--relacion tablas de inventario,
 	matricula				varchar (50)  null,
 	transmision				varchar (30)  null,
 	carga					numeric(10,2) null,
 	capacidad				numeric(10,2) null,
 	kilometraje				numeric(10,2) null,
+	fechaCreacion			date null,
 	--haciendo las referencias constraint
 	 foreign key (IdActivoFijo) references ActivoFijo.ActivoFijo,
 	 foreign key (IdMarca)references Inventario.Marca,--relacion tablas de inventario,
@@ -2367,13 +2370,25 @@ create table ActivoFijo.Vehiculo
 )
 go
 
---10 Esta es la tabla de Transferencia
-create table ActivoFijo.TipoTransferencia
-(
-	IdTipoTransferencia 	int primary key,
-	Observaciones			varchar(250)  null
-)
 go
+create table ActivoFijo.Articulos_SuministrosOficina
+(
+	IdActivoFijo 			int primary key, 
+	IdMarca 				int   null,--relacion tablas de inventario,
+	IdModelo 				int   null,--relacion tablas de inventario
+	IdColor 				int   null,--relacion tablas de inventario,
+	IdMaterial 				int   null,
+	observacion				varchar(450) null, 
+	--haciendo las referencias constraint
+	foreign key (IdActivoFijo) references ActivoFijo.ActivoFijo,
+	foreign key (IdMarca)references Inventario.Marca,--relacion tablas de inventario,
+	foreign key (IdModelo)references Inventario.Modelo,--relacion tablas de inventario,
+	foreign key (IdColor)references Inventario.Color,--relacion tablas de inventario,
+	foreign key (IdMaterial)references Inventario.TipoMaterial--relacion tablas de inventario
+)
+go 
+
+
 
 --9 Esta es la tabla de Transferencia
 create table ActivoFijo.Transferencia
@@ -2381,7 +2396,7 @@ create table ActivoFijo.Transferencia
 	Idtransferencia 			int primary key,
 	IdActivoFijo 				int   null,
 	fecha						date  null,
-	IdTipoTransferencia 		int   null,
+	--IdTipoTransferencia 		int   null,
 	IdEmpresa 					int   null,
 	IdResponsableFuturo 		int   null,
 	IdBodegaFuturo 				int   null,
@@ -2389,7 +2404,7 @@ create table ActivoFijo.Transferencia
 	Observaciones				varchar(250),
 	--haciendo las referencias constraint
 	foreign key (IdActivoFijo) references ActivoFijo.ActivoFijo,
-	foreign key (IdTipoTransferencia) references ActivoFijo.TipoTransferencia,
+	--foreign key (IdTipoTransferencia) references ActivoFijo.TipoTransferencia,
 	foreign key (IdDepartamento)references RecursosHumanos.Departamento,--relacaion tablas de RRHH
 	foreign key (IdResponsableFuturo,IdEmpresa)references RecursosHumanos.Empleado,--relacaion tablas de RRHH
 	foreign key (IdBodegaFuturo,IdEmpresa)references Inventario.Bodega,--relacaion con Inventario 
@@ -2405,12 +2420,12 @@ create table ActivoFijo.Edifico
 	FechaConstruccion			date  null,
 	CodigoCatastral 			int   null,
 	NumeroPisos 				int   null,
-	AnosVidaUtil 				int   null,
+	AniosDepreciados 			int   null,
 	Ubicacion 					varchar(100)  null, 
 	DimensionAncho				numeric(10,2) null,
 	DimensionLargo				numeric(10,2) null,
-	Avaluo						numeric(10,2) null,
-	observacion 				varchar(180)  null,
+	--Avaluo						numeric(10,2) null,
+	observacion 				varchar(450)  null,
 	--haciendo las referencias constraint
 	foreign key (IdActivoFijo) references ActivoFijo.ActivoFijo,
 )
@@ -2419,10 +2434,13 @@ go
 create table ActivoFijo.revalorizacion
 (
 	IdRevalorizacion 			int primary key,
+	IdUsuario 				    int  null,
+	Fecha						date null,
 	IdActivoFijo 				int   null,
 	ValorAtual					numeric(10,2)   null,
 	ValorRevalorizado			numeric(10,2)   null,
 	ValorResidual				numeric(10,2)   null,
+	foreign key (IdUsuario)references Seguridad.Usuario,
 	foreign key (IdActivoFijo) references ActivoFijo.ActivoFijo--relacion tabla general de Estado
 )
 go
@@ -2438,17 +2456,19 @@ create table ActivoFijo.BajaActivo
 	IdEmpresa 					int  null,
 	Descripcion 				varchar(50)   null,
 	Motivo 						varchar(25)   null,
-	IdProveedor					int  null,
+	--IdProveedor					int  null,
 	IdCabeceraComprobante		numeric(4,0)  null,
 	Observacion 				varchar(300)  null,
+	IdImagen				int  null,
 	--haciendo las referencias constraint
 	foreign key (IdActivoFIjo) references ActivoFijo.ActivoFijo,
 	foreign key (IdGrupo)references Inventario.Grupo,
-	foreign key (IdSubgrupo)references ActivoFijo.SubGrupos,--relacion tablas de inventario,
-	foreign key (IdEstado) references Seguridad.Estado,--relacion tabla general de Estado
-	foreign key (IdEmpresa) references Seguridad.Empresa,--relacion tablas de Seguridad
-	foreign key (IdProveedor) references Compras.Proveedor,
+	foreign key (IdSubgrupo)references ActivoFijo.SubGrupos,
+	foreign key (IdEstado) references Seguridad.Estado,
+	foreign key (IdEmpresa) references Seguridad.Empresa,
+	--foreign key (IdProveedor) references Compras.Proveedor,
 	--foreign key (IdProveedor) references RecursosHumanos.Proveedor,
+	FOREIGN KEY (IdImagen)REFERENCES ActivoFijo.Imagen,
 	foreign key (IdEmpresa, IdCabeceraComprobante) references Contabilidad.CabeceraComprobante
 )
 go
@@ -2463,6 +2483,7 @@ create table ActivoFijo.VentaGarageCab
 	Direccion 					varchar(150)  null,
 	Identificador 				int   null,
 	Fecha						date  null,
+	fechaModificacion		    date  null,
 	Telefono 					int   null,
 	IdFormaPagoMedioPago 		int   null,
 	CantidadEfectivo 			int   null,
@@ -2472,7 +2493,7 @@ create table ActivoFijo.VentaGarageCab
 	CantidadCheque 				int   null,
 	--haciendo las referencias constraint
 	primary key (idVentaGarage,IdEmpresa),
-	foreign key (IdUsuario)references Seguridad.Usuario,--relacaion tablas de RRHH
+	foreign key (IdUsuario)references Seguridad.Usuario,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdFormaPagoMedioPago, IdEmpresa) references CuentaxPagar.MedioPago
 )
@@ -2483,7 +2504,7 @@ create table ActivoFijo.VentaGarageDet
 	IdCabecera 				int not null,
 	IdVentaGarageDet 		int,
 	IdEmpresa 				int,
-	IdBajaActivo 			int   null,
+	--IdBajaActivo 			int   null,
 	cantidad 				int   null,
 	ValorUnitario 			int   null,
 	ValorTotal 				int   null,
@@ -2494,7 +2515,7 @@ create table ActivoFijo.VentaGarageDet
 	--haciendo las referencias constraint
 	primary key (IdCabecera,IdVentaGarageDet),
 	foreign key (IdCabecera,IdEmpresa)references ActivoFijo.VentaGarageCab,
-	foreign key (IdBajaActivo) references ActivoFijo.BajaActivo,
+	--foreign key (IdBajaActivo) references ActivoFijo.BajaActivo,
 	foreign key (IdEmpresa, IdCabeceraComprobante) references Contabilidad.CabeceraComprobante,
 )
 go
