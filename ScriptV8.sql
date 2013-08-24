@@ -2456,7 +2456,7 @@ create table ActivoFijo.BajaActivo
 	IdEmpresa 					int  null,
 	Descripcion 				varchar(50)   null,
 	Motivo 						varchar(25)   null,
-	--IdProveedor					int  null,
+	IdProveedor					int  null,
 	IdCabeceraComprobante		numeric(4,0)  null,
 	Observacion 				varchar(300)  null,
 	IdImagen				int  null,
@@ -2466,8 +2466,7 @@ create table ActivoFijo.BajaActivo
 	foreign key (IdSubgrupo)references ActivoFijo.SubGrupos,
 	foreign key (IdEstado) references Seguridad.Estado,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	--foreign key (IdProveedor) references Compras.Proveedor,
-	--foreign key (IdProveedor) references RecursosHumanos.Proveedor,
+	foreign key (IdProveedor) references Compras.Proveedor,
 	FOREIGN KEY (IdImagen)REFERENCES ActivoFijo.Imagen,
 	foreign key (IdEmpresa, IdCabeceraComprobante) references Contabilidad.CabeceraComprobante
 )
