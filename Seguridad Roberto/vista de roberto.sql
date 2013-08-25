@@ -1,6 +1,8 @@
-create view Menu_X_Usuario
-select a.NombreUsuario,a.Contrasena,d.* ,c.*from Seguridad.Usuario a inner join Seguridad.Perfil b on a.IdPerfil = b.IdPerfil inner join Seguridad.Permiso c on a.IdPerfil = c.IdPerfil and b.IdPerfil = b.IdPerfil inner join Seguridad.Menu d on c.IdMenu = d.IdMenu
-sube esa vista
+create view Menu_X_Usuario 
+as 
+select e.IdEmpresa,a.NombreUsuario,a.Contrasena,d.* ,c.*
+from Seguridad.Usuario a inner join Seguridad.Perfil b on a.IdPerfil = b.IdPerfil inner join Seguridad.Permiso c on a.IdPerfil = c.IdPerfil and b.IdPerfil = b.IdPerfil inner join Seguridad.Menu d on c.IdMenu = d.IdMenu inner join Seguridad.MenuPorEmpresa e on e.IdMenu = c.IdMenu and e.IdMenu = d.IdMenu
+go
 
 
 
