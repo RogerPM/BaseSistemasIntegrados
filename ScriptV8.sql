@@ -94,10 +94,10 @@ create table RecursosHumanos.TipoIdentificacion
 	descripcion				varchar (50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	
-	
+
+
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	
+
 )
 go
 /*PERSONA*/
@@ -107,7 +107,7 @@ create table RecursosHumanos.Persona
 	Identificacion		numeric(14,0) not null,
 	IdEmpresa			int not null,
 	IdTipoPersona		int not null,
-	
+
 	NombreRazonSocial	varchar(100) not null,
 	Apellido			varchar(50)null,
 	FechaNacimiento		datetime null,
@@ -120,7 +120,7 @@ create table RecursosHumanos.Persona
 	TelefonoOtros		numeric (14,0) null,
 	mail				varchar (50) not null,
 	IdEstado			int not null,
-	
+
 
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdTipoPersona)references RecursosHumanos.TipoPersona,
@@ -180,7 +180,7 @@ create table RecursosHumanos.Departamento
 	IdDepartamento			int not null		primary key,
 	Descripcion				varchar(50)not null,
 	IdEstado				int not null,
-	
+
 )
 go
 
@@ -288,7 +288,7 @@ create table RecursosHumanos.Titulo
 	IdEmpresa				int not null,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdUniversidad)references RecursosHumanos.Universidad,
-	
+
 )
 go
 
@@ -344,7 +344,7 @@ create table RecursosHumanos.MultaxPersona
 	primary key (idpersona,idmulta),
 	foreign key (IdMulta) references RecursosHumanos.Multa,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	
+
 	foreign key (IdPersona) references RecursosHumanos.Persona
 )
 go
@@ -359,7 +359,7 @@ create table RecursosHumanos.PersonaxDepartamento
 	primary key (idpersona,iddepartamento),
 	foreign key (IdDepartamento) references RecursosHumanos.Departamento,
 	foreign key (IdEmpresa)references Seguridad.Empresa,
-	
+
 	foreign key (IdPersona) references RecursosHumanos.Persona
 )
 go
@@ -371,7 +371,7 @@ create table RecursosHumanos.Cargo
 	Descripcion				varchar(45) not null,
 	Sueldo					numeric(10,2) not null,
 	IdEstado				int not null,
-	
+
 )
 go
 
@@ -385,7 +385,7 @@ create table RecursosHumanos.CargoxDepartamento
 	IdEstado				int not null,
 	primary key (idCargo,idDepartamento),
 	foreign key (IdCargo) references RecursosHumanos.Cargo,
-	
+
 	foreign key (IdDepartamento) references RecursosHumanos.Departamento
 )
 go
@@ -401,7 +401,7 @@ create table RecursosHumanos.Rubro
 	IdCargo					int not null,
 	IdDepartamento			int not null,
 	foreign key (IdCargo,IdDepartamento) references RecursosHumanos.CargoxDepartamento,
-	
+
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -413,9 +413,9 @@ create table RecursosHumanos.PersonaxTitulo
 	IdEmpresa				int not null,
 	IdPersona				int not null,
 	IdEstado				int not null,
-	
+
 	primary key (idpersona,idtitulo),
-	
+
 	foreign key (IdTitulo) references RecursosHumanos.Titulo,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdPersona) references RecursosHumanos.Persona
@@ -463,7 +463,7 @@ create  table RecursosHumanos.Parentesco
 	Descripcion				varchar(50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	
+
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -479,7 +479,7 @@ create table RecursosHumanos.CargaFamiliar
 	FechaModificacion		datetime,
 	IdEstado				int not null,
 	primary key (idpersona,idparentesco),
-	
+
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdParentesco) references RecursosHumanos.Parentesco
@@ -499,7 +499,7 @@ create table RecursosHumanos.AnticipoCab
 	IdEstado				int not null,
 	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	
+
 	primary key (NumAnticipo, IdEmpresa)
 )
 go
@@ -540,7 +540,7 @@ create table RecursosHumanos.NominaCab
 	IdEmpresa				int not null,
 	Observacion				varchar(50) null,
 	foreign key (IdEmpleado) references RecursosHumanos.Persona,
-	
+
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	primary key (NumNomina, IdEmpresa)
 )
@@ -569,8 +569,8 @@ create table RecursosHumanos.TipoContrato
 	Periodo					varchar(50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	
-	
+
+
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -592,9 +592,9 @@ create table RecursosHumanos.Contrato
 	TipoDiscapacidad		int,
 	Carnet					numeric(29,0),
 	IdEstado				int not null,
-	
+
 	primary key (IdPersona,NumContrato,idEmpresa),
-	
+
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdTipoContrato) references RecursosHumanos.TipoContrato,
@@ -610,7 +610,7 @@ create table RecursosHumanos.TipoPermiso
 	Descripcion				varchar(50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	
+
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -630,7 +630,7 @@ create table RecursosHumanos.Permiso
 	foreign key (IdUsuario) references Seguridad.Usuario,
 	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (IdTipoPermiso) references RecursosHumanos.TipoPermiso,
-	
+
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -652,7 +652,7 @@ create table RecursosHumanos.Liquidacion
 	IdEstado				int not null,
 	primary key (NumLiquidacion,IdEmpresa,Idpersona),
 	foreign key (IdPersona,NumContrato,IdEmpresa) references RecursosHumanos.Contrato,
-	
+
 	foreign key (IdPersona) references RecursosHumanos.persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 )
@@ -670,7 +670,7 @@ create table RecursosHumanos.Vacacion
 	IdEstado				int not null,
 	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	
+
 )
 go
 
@@ -699,7 +699,7 @@ create table RecursosHumanos.Prestamo
 	IdEmpresa 				int not null,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	
+
 	foreign key (IdTipoPrestamo) references RecursosHumanos.TipoPrestamo,
 )
 go
@@ -1637,7 +1637,7 @@ create table CuentasPorCobrar.UnidadTiempo
 	foreign key (idEmpresa) references Seguridad.Empresa
 )
 go
-	
+
 CREATE TABLE CuentasPorCobrar.MonetarioDet
 (
 	idEmpresa 				int NOT NULL,
@@ -1813,6 +1813,51 @@ CREATE TABLE CuentasPorCobrar.ConciliacionBancaria
 	foreign key (idEstado) references Seguridad.Estado
  )
  go
+/*subida la tabla de cxc y cxcdet*/
+create table CuentasPorCobrar.CuentaxCobrar
+(
+	idEmpresa 				int NOT NULL,
+	idUsuario 				int NOT NULL,
+	idCuentaxCobrar 		int NOT NULL,	
+	numero_comprobante		numeric(4,0),
+	idTransaccion 			int NOT NULL,
+	idFactura 				int NOT NULL,
+	idCabeceraComprobante 	int NOT NULL,
+	TotalCuotas 			int NOT NULL,
+	porcentaje_interes		numeric NOT NULL,
+	idEstado 				int NOT NULL,
+	primary key (idCuentaxCobrar),
+	foreign key (idEmpresa) references Seguridad.Empresa,
+	foreign key (idUsuario) references Seguridad.Usuario,
+	foreign key (idTransaccion) references Facturacion.Factura,
+	foreign key (idFactura) references Facturacion.Factura,
+	foreign key (IdEmpresa, numero_comprobante) references Contabilidad.CabeceraComprobante,
+	foreign key (idEstado) references Seguridad.Estado
+)
+go
+
+CREATE TABLE CuentasPorCobrar.CuentaxCobrarDet
+(
+	idEmpresa 				int NOT NULL,
+	idUsuario 				int NOT NULL,
+	idCuentaxCobrar 		int NOT NULL,
+	/*idCobro 				int NOT NULL,*//*se cambio logica de referencia a cobro*/
+	Numero 					int NOT NULL,
+	numero_cuota 			int NOT NULL,
+	valor_cuota				money NOT NULL,
+	valor_interes			money NOT NULL,
+	valor_mora				money NOT NULL,
+	fecha_cobro				date NOT NULL,
+	fecha_vencimiento		date NOT NULL,
+	FechaModificacion		datetime, 
+	idEstado int NOT NULL,
+	primary key (idCuentaxCobrar, numero),
+	foreign key (idEmpresa) references Seguridad.Empresa,
+	foreign key (idUsuario) references Seguridad.Usuario,
+	/*foreign key (idCobro) references CuentasPorCobrar.Cobro,*/
+	foreign key (idEstado) references Seguridad.Estado
+)
+go
  
  CREATE TABLE CuentasPorCobrar.Cobro
 (
@@ -1823,6 +1868,8 @@ CREATE TABLE CuentasPorCobrar.ConciliacionBancaria
 	idFactura 				int NOT NULL,
 	idCliente 				int NOT NULL,
 	idCabeceraComprobante	numeric(4,0) NOT NULL,
+	idCuentaxCobrar			int NOT NULL,/*AGREGADO CAMBIO LOGICA*/
+	numeroCuentaxCobrar		int NOT NULL,/*AGREGADO CAMBIO LOGICA*/
 	Fecha					date NOT NULL,
 	FechaModificacion		datetime, 
 	NumeroCuota 			int NOT NULL,
@@ -1839,6 +1886,7 @@ CREATE TABLE CuentasPorCobrar.ConciliacionBancaria
 	foreign key (idFactura) references Facturacion.Factura,
 	foreign key (idCliente) references RecursosHumanos.CLiente,
 	foreign key (IdEmpresa,idCabeceraComprobante) references Contabilidad.CabeceraComprobante,
+	foreign key (idCuentaxCobrar, numeroCuentaxCobrar) references CuentasPorCobrar.CuentaxCobrarDet,/*agregada ref de cambio de log*/
 	foreign key (idEstado) references Seguridad.Estado
 )
 go
@@ -1903,8 +1951,8 @@ create table CuentaxPagar.EmpresaServicio
 	primary key(IdEmpresaServicio,IdEmpresa)
 )
 go
-	
-	
+
+
 create table CuentaxPagar.TelefonoEmpresaServicio
 (
 		IdEmpresa 				int not null,
@@ -1917,8 +1965,8 @@ create table CuentaxPagar.TelefonoEmpresaServicio
 		primary key(IdEmpresaServicio,IdEmpresa, Serie, IdTelefono)	
 )
 go	
-	
-	
+
+
 create table CuentaxPagar.Impuesto
 (
 	IdImpuesto 				int not null,
@@ -1962,57 +2010,6 @@ create table CuentaxPagar.CuentaBancaria
 	primary key(Serie,IdEmpresaServicio)
 )
 go
-
-/*********************COMPRAS****************/
--- TABLA DE COMPRAS (cabecera)
-
-create table CuentasPorCobrar.CuentaxCobrar
-(
-	idEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	idCuentaxCobrar 		int NOT NULL,	
-	numero_comprobante		numeric(4,0),
-	idTransaccion 			int NOT NULL,
-	idFactura 				int NOT NULL,
-	idCabeceraComprobante 	int NOT NULL,
-	TotalCuotas 			int NOT NULL,
-	porcentaje_interes		numeric NOT NULL,
-	idEstado 				int NOT NULL,
-	primary key (idCuentaxCobrar),
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idTransaccion) references Facturacion.Factura,
-	foreign key (idFactura) references Facturacion.Factura,
-	foreign key (IdEmpresa, numero_comprobante) references Contabilidad.CabeceraComprobante,
-	foreign key (idEstado) references Seguridad.Estado
-)
-go
-
-CREATE TABLE CuentasPorCobrar.CuentaxCobrarDet
-(
-	idEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	idCuentaxCobrar 		int NOT NULL,
-	idCobro 				int NOT NULL,
-	Numero 					int NOT NULL,
-	numero_cuota 			int NOT NULL,
-	valor_cuota				money NOT NULL,
-	valor_interes			money NOT NULL,
-	valor_mora				money NOT NULL,
-	fecha_cobro				date NOT NULL,
-	fecha_vencimiento		date NOT NULL,
-	FechaModificacion		datetime, 
-	idEstado int NOT NULL,
-	primary key (idCuentaxCobrar, numero),
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idCobro) references CuentasPorCobrar.Cobro,
-	foreign key (idEstado) references Seguridad.Estado
-)
-go
-
-
-
 
 /************************cuentas por pagar*************/
 
@@ -2145,7 +2142,7 @@ create table CuentaxPagar.PagoCab
 	IdEmpresa 				int not null,
 	IdEstado 				int not null,
     NumComprobante			numeric(4)not  null,
-	
+
 	foreign key (IdUsuario)references Seguridad.Usuario,
     foreign key (IdEmpresa)references Seguridad.Empresa, 
     foreign key (NumOrdenPago, IdEmpresa)references CuentaxPagar.OrdenPagoCab,
