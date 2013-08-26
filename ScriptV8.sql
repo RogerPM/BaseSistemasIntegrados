@@ -978,6 +978,7 @@ create table ActivoFijo.SubGrupos
 	Descripcion			varchar(100)  null,
 	fecha				date   null,
 	IdEstado			int   null,
+	EstadoProceso	    varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	IdEmpresa			int   null,
 	primary key (IdSubGrupo),
 	foreign key (IdGrupo)  references Inventario.Grupo,
@@ -2211,6 +2212,7 @@ create table ActivoFijo.CodigoBarra
 	sentido_lectura			bit   null,
 	Idformato				int   null,
 	IdImagen				int  null,
+	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	--haciendo las referencias constraint
 	foreign key (Idformato) references ActivoFijo.TipoFormato,--relacion tablas de Seguridad
 	FOREIGN KEY (IdImagen)REFERENCES ActivoFijo.Imagen
@@ -2236,8 +2238,7 @@ create table ActivoFijo.ActivoFijo
 	valor_residual			numeric(10,2)   null,
 	valor_actualserie		numeric(10,2)   null,
 	IdCodigoBarra 			int   null,
-	--serie					varchar(30)   null,
-	--IdMarca 				int   null,--relacion tablas de inventario
+	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	fecha_Adquisicion		date   null,
 	ano_vidaUtil 			numeric   null,
 	IdEstado 				int   null,--relacion tabla general de Estado
@@ -2305,6 +2306,7 @@ create table ActivoFijo.DepreciacionCab
 	Secuencia_DepreciacionCab int,
 	IdEmpresa				  int,
 	IdUsuario 				  int   null,
+	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	fecha					  date   null,
 	fechaModificacion		  date   null,
 	observacion				  varchar(150)   null
@@ -2391,6 +2393,7 @@ go
 create table ActivoFijo.Transferencia
 (
 	Idtransferencia 			int primary key,
+	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	IdActivoFijo 				int   null,
 	fecha						date  null,
 	--IdTipoTransferencia 		int   null,
@@ -2432,6 +2435,7 @@ create table ActivoFijo.revalorizacion
 (
 	IdRevalorizacion 			int primary key,
 	IdUsuario 				    int  null,
+	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	Fecha						date null,
 	IdActivoFijo 				int   null,
 	ValorAtual					numeric(10,2)   null,
@@ -2445,6 +2449,7 @@ go
 create table ActivoFijo.BajaActivo
 (
 	idBajaActivo 				int primary key,
+	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	IdActivoFIjo 				int   null,
 	IdGrupo						int  null,
 	IdSubgrupo					int  null,
@@ -2487,6 +2492,7 @@ create table ActivoFijo.VentaGarageCab
 	CantidadTransferencia 		int   null,
 	CantidadDeposito 			int   null,
 	CantidadCheque 				int   null,
+	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	--haciendo las referencias constraint
 	primary key (idVentaGarage,IdEmpresa),
 	foreign key (IdUsuario)references Seguridad.Usuario,
