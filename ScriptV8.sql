@@ -717,6 +717,33 @@ create table Seguridad.UsuarioPorEmpresa
 )
 go
 
+/*TRABAJO DIARIO CABECERA*/
+create table RecursosHumanos.TrabajoDiarioCab
+(
+	NumTrabajo				int not null,
+	Fecha					datetime not null,
+	IdEstado				int not null,
+	IdEmpresa				int not null,
+	Observacion				varchar(50) null,
+	
+	foreign key (IdEmpresa) references Seguridad.Empresa,
+	primary key (NumTrabajo, IdEmpresa)
+)
+go
+
+/*TRABAJO DIARIO DETALLE*/
+create table RecursosHumanos.TrabajoDiarioDet
+(
+	NumLinea				int not null,
+	NumTrabajo				int not null,
+	IdPersona				int not null,
+	Asistencia				char not null,
+	IdEmpresa				int not null
+	foreign key (IdPersona) references RecursosHumanos.Persona,
+	foreign key (NumTrabajo,IdEmpresa)references RecursosHumanos.TrabajoDiarioCab,
+	primary key (NumLinea, IdEmpresa)
+)
+go
 /*MODULO*/
 create table  Seguridad.Modulo
 (
