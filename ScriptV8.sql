@@ -1014,6 +1014,8 @@ create table ActivoFijo.SubGrupos
 )
 go
 
+
+/***********************Tabla de compras********************************/
 create table Compras.Proveedor
 (
 IdProveedor			int not null primary key,
