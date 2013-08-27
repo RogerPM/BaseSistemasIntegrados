@@ -65,7 +65,7 @@ create table Seguridad.Empresa
 	 SitioWeb				varchar  (70),
 	 Sector					varchar  (15),
 	 Descripcion			varchar  (250),
-	 IdEstado				int				references Seguridad.Estado
+	 IdEstado				int				foreign key references Seguridad.Estado on delete cascade
 )
 go
 
@@ -79,8 +79,8 @@ create table RecursosHumanos.TipoPersona
 	Descripcion				varchar(50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdEstado) references Seguridad.Estado
+	foreign key (IdEmpresa) references Seguridad.Empresa on delete cascade,
+	foreign key (IdEstado) references Seguridad.Estado on delete cascade
 )
 go
 
@@ -189,7 +189,7 @@ create table Seguridad.Perfil
 (
 	 IdPerfil		int							primary key,
 	 Descripcion	varchar (70),
-	 IdEstado		int							references Seguridad.Estado,   
+	 IdEstado		int							references Seguridad.Estado on delete cascade,   
 )
 go
 
@@ -200,12 +200,12 @@ create table Seguridad.Usuario
 	 IdUsuario			int,
 	 NombreUsuario		varchar(20),
 	 Contrasena			varchar(220),
-	 IdEstado			int					references Seguridad.Estado,
-	 IdImagen			int					references Seguridad.Imagen,
+	 IdEstado			int					references Seguridad.Estado on delete cascade,
+	 IdImagen			int					references Seguridad.Imagen on delete cascade,
 	 IdPerfil int ,
 	 primary key(IdUsuario),
 	 -- foreign key(IdPerfil) references Seguridad.Perfil,
-	 foreign key (IdUsuario) references RecursosHumanos.Persona --el id usuario es el mismo q id persona
+	 foreign key (IdUsuario) references RecursosHumanos.Persona on delete cascade --el id usuario es el mismo q id persona
 )
 go
 
@@ -705,14 +705,15 @@ create table RecursosHumanos.Prestamo
 go
 
 
+/****************************SEGURIDAD****************************/
 /*USUARIO POR EMPRESA*/
 create table Seguridad.UsuarioPorEmpresa
 (
 	IdUsuario		int,
 	IdEmpresa		int,
 	Descripcion     varchar(1),
-	foreign key(IdUsuario)references Seguridad.Usuario,
-	foreign key(IdEmpresa)references Seguridad.Empresa,
+	foreign key(IdUsuario)references Seguridad.Usuario on delete cascade,
+	foreign key(IdEmpresa)references Seguridad.Empresa on delete cascade,
 	primary key(IdUsuario,IdEmpresa)
 )
 go
@@ -749,7 +750,7 @@ create table  Seguridad.Modulo
 (
 	 IdModulo		int				primary key,
 	 Nombre			varchar(50),
-	 IdEstado		int				references Seguridad.Estado,
+	 IdEstado		int				references Seguridad.Estado on delete cascade,
 	 Logo			varchar(50)
 ) 
 go
@@ -758,23 +759,23 @@ go
 create table  Seguridad.Menu 
 (
 	 IdMenu				int					primary key,
-	 IdModulo			int					references Seguridad.Modulo,
-	 IdPadre			int					references Seguridad.Menu,
+	 IdModulo			int					references Seguridad.Modulo on delete cascade,
+	 IdPadre			int					references Seguridad.Menu on delete cascade,
 	 Descripcion		varchar (255),
 	 NombreFormulario	varchar (255), 
 	 NombreAssembly		varchar (200), 
-	 IdEstado			int					references Seguridad.Estado,
+	 IdEstado			int					references Seguridad.Estado on delete cascade,
 )
 go
 
 /*MENU POR EMPRESA*/
 create table Seguridad.MenuPorEmpresa
 (
-	 IdEmpresa					int				references Seguridad.Empresa,
-	 IdMenu						int				references Seguridad.Menu,
+	 IdEmpresa					int				references Seguridad.Empresa on delete cascade,
+	 IdMenu						int				references Seguridad.Menu on delete cascade,
 	 NombreAsamblyPorEmpresa    varchar  (200),
 	 NomFormularioPorEmpresa    varchar  (200), 
-	 IdEstado					int				references Seguridad.Estado,
+	 IdEstado					int				references Seguridad.Estado on delete cascade,
 	 primary key(IdMenu,IdEmpresa)
 )
 go
@@ -785,7 +786,7 @@ go
 create table Seguridad.Horario
 (
 	IdHorario					int,
-	IdPerfil					int				references Seguridad.Perfil,
+	IdPerfil					int				references Seguridad.Perfil on delete cascade,
 	Secuencia					int ,
 	dia	varchar(10),
 	H00	bit	not null,
@@ -819,10 +820,10 @@ go
 /*PERMISO*/
 create table Seguridad.Permiso
 (
-	 IdPerfil		int				references Seguridad.Perfil,
+	 IdPerfil		int				references Seguridad.Perfil on delete cascade,
 	 IdPermiso		int, 
-	 IdMenu			int				references Seguridad.Menu,
-	 IdModulo		int				references Seguridad.Modulo,
+	 IdMenu			int				references Seguridad.Menu on delete cascade,
+	 IdModulo		int				references Seguridad.Modulo on delete cascade,
 	 Lectura		bit				not null,
 	 Escritura		bit				not null,
 	 Eliminacion    bit				not null,
@@ -834,8 +835,8 @@ go
 /*TELEFONO POR EMPRESA*/
 create table  Seguridad.TelefonoEmpresa --E editada agregado
 (
-	IdEmpresa		int references Seguridad.Empresa,
-	IdTelefono		int references RecursosHumanos.Telefono,
+	IdEmpresa		int references Seguridad.Empresa on delete cascade,
+	IdTelefono		int references RecursosHumanos.Telefono on delete cascade,
 	primary key (IdEmpresa,IdTelefono)
 ) 
 go
