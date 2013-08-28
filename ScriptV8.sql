@@ -79,8 +79,8 @@ create table RecursosHumanos.TipoPersona
 	Descripcion				varchar(50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	foreign key (IdEmpresa) references Seguridad.Empresa on delete cascade,
-	foreign key (IdEstado) references Seguridad.Estado on delete cascade
+	foreign key (IdEmpresa) references Seguridad.Empresa ,
+	foreign key (IdEstado) references Seguridad.Estado
 )
 go
 
@@ -712,7 +712,7 @@ create table Seguridad.UsuarioPorEmpresa
 	IdUsuario		int,
 	IdEmpresa		int,
 	Descripcion     varchar(1),
-	foreign key(IdUsuario)references Seguridad.Usuario on delete cascade,
+	foreign key(IdUsuario)references Seguridad.Usuario,
 	foreign key(IdEmpresa)references Seguridad.Empresa on delete cascade,
 	primary key(IdUsuario,IdEmpresa)
 )
@@ -760,11 +760,11 @@ create table  Seguridad.Menu
 (
 	 IdMenu				int					primary key,
 	 IdModulo			int					references Seguridad.Modulo on delete cascade,
-	 IdPadre			int					references Seguridad.Menu on delete cascade,
+	 IdPadre			int					references Seguridad.Menu,
 	 Descripcion		varchar (255),
 	 NombreFormulario	varchar (255), 
 	 NombreAssembly		varchar (200), 
-	 IdEstado			int					references Seguridad.Estado on delete cascade,
+	 IdEstado			int					references Seguridad.Estado,
 )
 go
 
@@ -772,10 +772,10 @@ go
 create table Seguridad.MenuPorEmpresa
 (
 	 IdEmpresa					int				references Seguridad.Empresa on delete cascade,
-	 IdMenu						int				references Seguridad.Menu on delete cascade,
+	 IdMenu						int				references Seguridad.Menu,
 	 NombreAsamblyPorEmpresa    varchar  (200),
 	 NomFormularioPorEmpresa    varchar  (200), 
-	 IdEstado					int				references Seguridad.Estado on delete cascade,
+	 IdEstado					int				references Seguridad.Estado,
 	 primary key(IdMenu,IdEmpresa)
 )
 go
@@ -822,8 +822,8 @@ create table Seguridad.Permiso
 (
 	 IdPerfil		int				references Seguridad.Perfil on delete cascade,
 	 IdPermiso		int, 
-	 IdMenu			int				references Seguridad.Menu on delete cascade,
-	 IdModulo		int				references Seguridad.Modulo on delete cascade,
+	 IdMenu			int				references Seguridad.Menu,
+	 IdModulo		int				references Seguridad.Modulo,
 	 Lectura		bit				not null,
 	 Escritura		bit				not null,
 	 Eliminacion    bit				not null,
