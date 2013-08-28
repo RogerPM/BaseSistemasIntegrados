@@ -712,8 +712,8 @@ create table Seguridad.UsuarioPorEmpresa
 	IdUsuario		int,
 	IdEmpresa		int,
 	Descripcion     varchar(1),
-	foreign key(IdUsuario)references Seguridad.Usuario,
-	foreign key(IdEmpresa)references Seguridad.Empresa on delete cascade,
+	foreign key(IdUsuario)references Seguridad.Usuario on delete cascade,
+	foreign key(IdEmpresa)references Seguridad.Empresa,
 	primary key(IdUsuario,IdEmpresa)
 )
 go
