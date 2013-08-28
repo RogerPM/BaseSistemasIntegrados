@@ -2737,14 +2737,17 @@ go
 
 
 /**************************TALLER************************/
+
+
 --PERSONA
 create table Taller.Persona
 (
-Identificacion       int  NOT NULL primary key,
+IdPersona			 int not null primary key,
+Identificacion       numeric(14,0) not null unique,
 IdTipoPersona        int  NOT NULL ,
 NombreRazonSocial    varchar(50)  NOT NULL ,
 Apellido             varchar(50)  NOT NULL ,
-FechaNacimiento      datetime  NOT NULL ,
+FechaNacimiento      date  NOT NULL ,
 Genero				 varchar(10)not null,
 TipoIdentificacion   int  NOT NULL ,
 Direccion            varchar(100)  NOT NULL ,
@@ -2767,34 +2770,32 @@ go
 create table Taller.Articulo(
 IdEmpresa		int not null,
 IdArticulo		int not null primary key,
+IdPersona		int,
 Descripcion		varchar(100) not null,
 FechaProduccion date,
 CantidadMinima	numeric(5,0),
 CantidadMaxima	numeric(5,0),
 CantidadActual	numeric(5,0),
 IdUnidadMedida	int,
---FechaCaducidad	date,
---IdTipoArticulo	int not null,
 IdGrupo			int not null,
---IdSubGrupo		int, 
 IdChasis		int, 
 IdTipoMotor		int,
-NroPlaca		int,
+NroPlaca		varchar(8) null,
 IdTipoCombustible int,
 IdColor			int,
 IdMarca			int,
 IdModelo		int,
 IdTipoMaterial	int,
+PrecioUnitario  decimal(18,2),
 Observacion		varchar(100),
 IdUsuario		int,
 IdEstado		int,
 foreign key (IdEmpresa)references Seguridad.Empresa,
+foreign key (IdPersona)references Taller.Persona,
 foreign key(IdEstado)references Seguridad.Estado,
 foreign key(IdEmpresa)references Seguridad.Empresa,
 foreign key(IdUnidadMedida)references Inventario.UnidadMedida,
---foreign key (IdTipoArticulo)references Taller.TipoArticulo,
 foreign key (IdGrupo)references Inventario.Grupo,
---foreign key (IdSubGrupo)references Inventario.SubGrupo,
 foreign key (IdChasis)references Inventario.Chasis,
 foreign key (IdTipoMotor)references Inventario.TipoMotor,
 foreign key (IdTipoCombustible)references Inventario.TipoCombustible,
@@ -2808,50 +2809,23 @@ go
 
 
 
-
-
---EMPRESA ASEGURADORA
-CREATE TABLE Taller.EmpresaAseguradora
-( 
-	IdEmpresaAseguradora int not null primary key,
-	Descripcion          varchar(50)  not null,
-	IdEstado 	     int not null,
-	foreign key (IdEstado)references Seguridad.Estado
-)
-go
-
-
---SEGURO
-CREATE TABLE Taller.Seguro
-( 
-	IdSeguro             int  not null primary key,
-	NroSeguro            int  not null,
-	IdEmpresaAseguradora int  not null,
-	IdEstado 	     int not null,
-	foreign key (IdEstado)references Seguridad.Estado,
-	foreign key(IdEmpresaAseguradora)references Taller.EmpresaAseguradora	
-)
-go
-
-
 --PRESUPUESTO
 CREATE TABLE Taller.Presupuesto
 ( 
 	IdPresupuesto        int  not null primary key,
-	IdPersona            int  not null, 
+	IdPersona            int  not null,
+	IdArticulo			 int  not null,
 	Fecha                date  not null,
-	IdSeguro             int  not null,
-	TotalTiempoTrabajo   int  not null,
-	TotalManoObra        numeric(10,0) not null,
-	Iva                  numeric(10,0) not null,
-	TotalPresupuesto     numeric(10,0) not null,
-	Observacion          varchar(100)  null,
+	Iva                  decimal(18,2) not null,
+	Subtotal             decimal(18,2) not null,
+	TotalPresupuesto     decimal(18,2) not null,
+	Observacion          varchar(100) not null,
 	IdEstado 	     int not null,
 	IdEmpresa		 int  not null,
 	foreign key (IdEmpresa)references Seguridad.Empresa,
 	foreign key (IdEstado)references Seguridad.Estado,
 	foreign key(IdPersona)references Taller.Persona, 
-	foreign key(IdSeguro)references Taller.Seguro	
+	foreign key(IdArticulo)references Taller.Articulo, 
 )
 go
 
@@ -2860,7 +2834,7 @@ go
 CREATE TABLE Taller.TipoTrabajo
 ( 
 	IdTipoTrabajo        int  not null primary key,
-	Descripcion          varchar(50)  not null, 
+	Descripcion          varchar(50)  not null,
 	Observación			 varchar(100)  not null, 
 	IdEstado 			 int not null,
 	foreign key (IdEstado)references Seguridad.Estado
@@ -2873,19 +2847,27 @@ CREATE TABLE Taller.OrdenTrabajo
 ( 
 	IdOrdenTrabajo       int  not null primary key,
 	IdPresupuesto        int  not null,
+	IdPersona			 int  not null,
+	IdArticulo			 int  not null,
+	Kilometraje			 int  not null,
+	Deposito			 int  not null,
 	FechaRecepcion       date  not null,
 	InicioReparacion     date  not null,
-	FechaIngresoVehiculo date  not null,
-	HoraIngreso          date  not null,
-	FechaEstimadaEntrega date  not null,
-	IdEstado 	         int not null, 
-	IdEmpresa		 int  not null,
+	FechaIngreso	     datetime  not null,
+	FechaEntrega		 date  not null,
+	TotalTrabajos 	     decimal(18,2) not null,
+	TotalRepuestos 	     decimal(18,2) not null,
+	TotalOtros 	         decimal(18,2) not null,
+	Observacion			 varchar(100), 
+	IdEstado 	         int not null,
+	IdEmpresa		     int  not null,
 	foreign key(IdEstado)references Seguridad.Estado,
 	foreign key (IdEmpresa)references Seguridad.Empresa,
-	foreign key(IdPresupuesto)references Taller.Presupuesto
+	foreign key(IdPresupuesto)references Taller.Presupuesto,
+	foreign key(IdPersona)references Taller.Persona,
+	foreign key(IdArticulo)references Taller.Articulo
 )
 go
-
 
 
 --MANO DE OBRA
@@ -2893,21 +2875,34 @@ CREATE TABLE Taller.ManoObra
 ( 
 	IdManoObra       int  not null primary key,
 	IdTipoTrabajo    int  not null,
-	IdPresupuesto    int  not null, 
-	IdOrdenTrabajo   int  not null,
-	PrecioHora		 numeric(10,0) not null,
+	PrecioHora		 decimal(18,2) not null,
 	Horas			 int  not null,
-	Total			 numeric(10,0) not null,
+	Total			 decimal(18,2) not null,
+	Observacion      varchar(100),
 	IdEstado 	     int  not null,
 	IdEmpresa		 int  not null,
 	foreign key (IdEstado)references Seguridad.Estado,
 	foreign key (IdEmpresa)references Seguridad.Empresa,
-	foreign key (IdPresupuesto)references Taller.Presupuesto,
-	foreign key (IdOrdenTrabajo)references Taller.OrdenTrabajo,
-	foreign key (IdManoObra)references Taller.ManoObra,
 	foreign key (IdTipoTrabajo)references Taller.TipoTrabajo
 )
 go
+
+
+--PRESUPUESTO POR MANO DE OBRA
+CREATE TABLE Taller.PresupuestoxManoObra
+( 
+	IdPresupuestoMO       int  not null primary key,
+    IdPresupuesto    int  not null,
+	IdManoObra       int  not null,
+	IdTrabajo		 int  not null,
+	PrecioHora		 decimal(18,2) not null,
+	Horas			 int  not null,
+	Total			 decimal(18,2) not null,
+	foreign key (IdPresupuesto)references Taller.Presupuesto,
+	foreign key (IdManoObra)references Taller.ManoObra
+)
+go
+
 
 
 --REPUESTOS
@@ -2916,17 +2911,11 @@ CREATE TABLE Taller.Repuestos
 	IdRepuestos      int  not null primary key,
 	IdArticulo		 int  not null,
 	IdOrdenTrabajo   int  not null,
-	IdManoObra		 int  not null,
-	Descripcion      varchar(50)  not null,
 	Cantidad	     int  not null,
-	PrecioUnitario	 numeric(10,0) not null,
-	Total			 numeric(10,0) not null,
-	IdEstado 	     int  not null,
-	IdEmpresa		 int  not null,
-	foreign key (IdEstado)references Seguridad.Estado,
-	foreign key (IdEmpresa)references Seguridad.Empresa,
+	PrecioUnitario	 decimal(18,2) not null,
+	Total			 decimal(18,2) not null,
 	foreign key (IdOrdenTrabajo)references Taller.OrdenTrabajo,
-	foreign key (IdManoObra)references Taller.ManoObra
+	foreign key(IdArticulo)references Taller.Articulo
 )
 go
 
@@ -2936,24 +2925,20 @@ CREATE TABLE Taller.Otros
 ( 
 	IdOtros      int  not null primary key,
 	IdOrdenTrabajo   int  not null,
-	Descripcion      varchar(50)  not null,
-	Precio			 numeric(10,0) not null,
-	IdEstado 	     int  not null,
-	IdEmpresa		 int  not null,
-	foreign key (IdEstado)references Seguridad.Estado,
-	foreign key (IdEmpresa)references Seguridad.Empresa,
+	Descripcion      varchar(100)  not null,
+	Precio			 decimal(18,2) not null,
 	foreign key (IdOrdenTrabajo)references Taller.OrdenTrabajo
 )
 go
-
 
 --SALIDA VEHICULO
 CREATE TABLE Taller.Liquidacion
 ( 
 	IdLiquidacion     int  not null primary key,
-	Fecha             date not null,
 	IdOrdenTrabajo    int  not null,
-	TotalPagar		  numeric(10,0) not null,
+	Fecha             date not null,	
+	TotalPagar		  decimal(18,2) not null,
+	Observacion       varchar(100),
 	IdEstado 	      int not null, 
 	IdEmpresa		  int  not null,
 	foreign key(IdEstado)references Seguridad.Estado,
