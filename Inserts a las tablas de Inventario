@@ -89,6 +89,15 @@ insert into Inventario.Marca values (1,5, 'Suzuki', 1)
 insert into Inventario.Marca values (2,6, 'BIC', 1)
 insert into Inventario.Marca values (3,7, 'CopyLaser', 1)
 insert into Inventario.Marca values (4,8, 'Deja', 1)
+-- Marcas de Repuestos para el Modulo Taller
+insert into Inventario.Marca values (1,9, 'Bosch', 1)
+insert into Inventario.Marca values (2,10, 'Iridium NGK', 1)
+insert into Inventario.Marca values (3,11, 'Corvens', 1)
+insert into Inventario.Marca values (4,12, 'Super Stop', 1)
+insert into Inventario.Marca values (1,13, 'Mac Pherson', 1)
+insert into Inventario.Marca values (2,14, 'PlusPower', 1)
+insert into Inventario.Marca values (3,15, 'Enzo', 1)
+insert into Inventario.Marca values (4,16, 'Kit Bixenon', 1)
 go
 
 --MODELO 
