@@ -118,6 +118,7 @@ insert into Inventario.TipoMaterial values (3,3, 'Hierro', 3)
 insert into Inventario.TipoMaterial values (1,5, 'Titanio', 4)
 insert into Inventario.TipoMaterial values (2,4, 'Madera', 3)
 insert into Inventario.TipoMaterial values (1,6, 'Plastico',3)
+insert into Inventario.TipoMaterial values (2,7, 'Caucho',3)
 go
 
 -- ARTICULO 
