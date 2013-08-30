@@ -2738,12 +2738,11 @@ go
 
 /**************************TALLER************************/
 
-
 --PERSONA
 create table Taller.Persona
 (
 IdPersona			 int not null primary key,
-Identificacion       numeric(14,0) not null unique,
+Identificacion       varchar(14) not null unique,
 IdTipoPersona        int  NOT NULL ,
 NombreRazonSocial    varchar(50)  NOT NULL ,
 Apellido             varchar(50)  NOT NULL ,
@@ -2751,7 +2750,7 @@ FechaNacimiento      date  NOT NULL ,
 Genero				 varchar(10)not null,
 TipoIdentificacion   int  NOT NULL ,
 Direccion            varchar(100)  NOT NULL ,
-Telefono             int  NOT NULL ,
+Telefono             varchar(10) not null,
 Mail                 varchar(50)  NOT NULL ,
 IdEstado             int  NOT NULL ,
 IdEmpresa            int  NOT NULL ,
@@ -2816,6 +2815,7 @@ CREATE TABLE Taller.Presupuesto
 	IdPersona            int  not null,
 	IdArticulo			 int  not null,
 	Fecha                date  not null,
+	TotalTiempoTrabajo   int  not null,
 	Iva                  decimal(18,2) not null,
 	Subtotal             decimal(18,2) not null,
 	TotalPresupuesto     decimal(18,2) not null,
@@ -2931,6 +2931,7 @@ CREATE TABLE Taller.Otros
 )
 go
 
+
 --SALIDA VEHICULO
 CREATE TABLE Taller.Liquidacion
 ( 
@@ -2946,6 +2947,7 @@ CREATE TABLE Taller.Liquidacion
 	foreign key(IdOrdenTrabajo)references Taller.OrdenTrabajo
 )
 go
+
 -- de aqui en adelante sera para creacion de vistas, stored procedures, etc
 -- siempre y cuando no afecten la integridad funcional de este script
 
