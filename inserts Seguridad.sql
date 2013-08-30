@@ -171,6 +171,10 @@ insert into Seguridad.Menu values(9,1,7,'Asignar Permisos','Seguridad.frmAsignar
 go
 insert into Seguridad.Menu values(10,1,7,'Monitoreo de Usuarios','Seguridad.frmMonitoreoUsuarios','forms',1)
 go
+insert into Seguridad.Menu values(160,1,7,'Monitoreo de Usuarios','Seguridad.frmAsignarPantallaAPerfil','forms',1)
+go
+insert into Seguridad.Menu values(161,1,7,'Monitoreo de Usuarios','Seguridad.frmAsignarUsuariosAEmpresa','forms',1)
+go
 insert into Seguridad.Menu values(11,1,NULL,'Reportes',NULL,NULL,1)
 go
 insert into Seguridad.Menu values(12,1,11,'Acceso de Usuarios','Seguridad.frmRptAccesoxUsuario','forms',1)
@@ -469,7 +473,7 @@ insert into Seguridad.Menu values(158,10,156,'Consolidacion',NULL,'forms',1)
 go
 insert into Seguridad.Menu values(159,10,156,'Orden de Compra',NULL,'forms',1)
 go
-
+-- 162
 
 --truncate table Seguridad.MenuPorEmpresa
 /**************************MENU POR EMPRESA********************/
