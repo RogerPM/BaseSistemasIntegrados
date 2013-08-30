@@ -98,19 +98,18 @@ go
 
 --truncate table Seguridad.Usuario
 /********************USUARIO*******************/
-insert into Seguridad.Usuario values(1,'Admin','Admin',1,null,null)
+insert into Seguridad.Usuario values(1,'Admin','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,null,null)
 go
-insert into Seguridad.Usuario values(11,'lquinter','rebeca',1,null,null)
+insert into Seguridad.Usuario values(11,'lquinter','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,null,null)
 go
-insert into Seguridad.Usuario values(21,'rbaria','sukubo',1,null,null)
+insert into Seguridad.Usuario values(21,'rbaria','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,null,null)
 go
-insert into Seguridad.Usuario values(31,'robafiel','TK',1,null,null)
+insert into Seguridad.Usuario values(31,'robafiel','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,null,null)
 go
-insert into Seguridad.Usuario values(41,'macastro','callado',1,null,null)
+insert into Seguridad.Usuario values(41,'macastro','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,null,null)
 go
-insert into Seguridad.Usuario values(51,'barceman','dianarulers',1,null,null)
+insert into Seguridad.Usuario values(51,'barceman','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,null,null)
 go
-
 
 --truncate table Seguridad.UsuarioPorEmpresa
 /*****************USUARIO POR EMPRESA***********/
