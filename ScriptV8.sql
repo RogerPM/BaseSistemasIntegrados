@@ -2028,7 +2028,7 @@ create table CuentaxPagar.FrecuenciaPago
 )
 go
 
-create table CuentaxPagar.CuentaBancaria
+create table CuentaxPagar.CuentaBancaria2
 (
 	Serie 				int not null,
 	TipoCuenta			varchar (10) not null,
@@ -2086,10 +2086,7 @@ create table CuentaxPagar.DeudaDet--esta tabla debe llamarse CuentaPorPagarDetal
 	NumDetalleDeuda 		int not null,
 	ValorLetra				numeric(10,2) not null,
 	FechaVencimiento		date not null,
-	FechaPagoReal			date not null,
-	FechaModificacion		datetime, 
-	IdEstado 				int not null,
-    foreign key (IdEstado) references Seguridad.Estado,
+	Estado 				int not null,
     foreign key (NumCuentaPorPagar, IdEmpresa) references CuentaxPagar.CuentaPorPagar,
 	primary key(IdEmpresa, NumCuentaPorPagar, NumDetalleDeuda)
 )
@@ -2117,13 +2114,12 @@ create table CuentaxPagar.OrdenPagoCab
 	NumOrdenPago 			int not null,
 	fechadeEmision			date not null,
 	IdPersona 				int null,
-	IdEstado 				int not null,
+	Estado 				int not null,
 	TotalPagar				numeric(10,2) not null,
 	TipoOrdenPago			char not null,
 	IdUsuario 				int not null,
     IdEmpresa 				int not null,
     foreign key (IdUsuario)references Seguridad.Usuario,
-    foreign key (IdEstado) references Seguridad.Estado,
     foreign key (IdEmpresa)references Seguridad.Empresa, 
 	primary key (NumOrdenPago, IdEmpresa) 
 )
@@ -2172,13 +2168,12 @@ create table CuentaxPagar.PagoCab
 	TotalPagar				numeric(10,0) not null,
 	IdUsuario 				int not null,
 	IdEmpresa 				int not null,
-	IdEstado 				int not null,
+	Estado 					int not null,
     NumComprobante			numeric(4)not  null,
 
 	foreign key (IdUsuario)references Seguridad.Usuario,
     foreign key (IdEmpresa)references Seguridad.Empresa, 
     foreign key (NumOrdenPago, IdEmpresa)references CuentaxPagar.OrdenPagoCab,
-    foreign key (IdEstado)references Seguridad.Estado,
     primary key (NumPago,IdEmpresa)				
 )
 go

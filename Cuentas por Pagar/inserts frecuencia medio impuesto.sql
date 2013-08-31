@@ -1,4 +1,4 @@
-use TECAv8
+use TECA
 go
 
 insert into CuentaxPagar.FrecuenciaPago  values(1,'Dias', '2013-07-27',1,1,1)
