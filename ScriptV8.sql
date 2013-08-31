@@ -2960,7 +2960,17 @@ FROM         Seguridad.Perfil INNER JOIN
                       Seguridad.Modulo ON Seguridad.Permiso.IdModulo = Seguridad.Modulo.IdModulo INNER JOIN
                       Seguridad.Menu ON Seguridad.Permiso.IdMenu = Seguridad.Menu.IdMenu AND Seguridad.Modulo.IdModulo = Seguridad.Menu.IdModulo INNER JOIN
                       Seguridad.Usuario ON Seguridad.Perfil.IdPerfil = Seguridad.Usuario.IdPerfil
-go                      
+go     
+
+create view Seguridad.UsuarioInformacion as
+SELECT distinct usu.IdUsuario, usu.NombreUsuario, usu.Contrasena, usu.IdEstado, est.Descripcion, emp.IdEmpresa, emp.NombreComercial,
+					emp.RazonSocial, emp.Ruc
+FROM Seguridad.Usuario usu, Seguridad.Empresa emp, Seguridad.UsuarioPorEmpresa uxe, Seguridad.Estado est
+WHERE uxe.IdEmpresa = emp.IdEmpresa
+AND uxe.IdUsuario = usu.IdUsuario
+AND usu.IdEstado = est.IdEstado
+go
+                 
 -- vista alternativa
 create view Menu_X_Usuario as
 SELECT     e.IdEmpresa, a.NombreUsuario, a.Contrasena, d.IdMenu, d.IdModulo, d.IdPadre, d.Descripcion, d.NombreFormulario, d.NombreAssembly, d.IdEstado, c.IdPerfil, c.IdPermiso, c.IdMenu AS Expr1, 
