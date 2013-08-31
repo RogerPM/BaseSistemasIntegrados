@@ -2097,7 +2097,6 @@ create table CuentaxPagar.ImpuestoCuenta
 	NumCuentaPorPagar 		int not null,
 	Valor					numeric(10,0) not null,
     IdEmpresa 				int not null references Seguridad.Empresa,
-    foreign key (IdUsuario)references Seguridad.Usuario,
     foreign key (IdImpuesto, IdEmpresa)references CuentaxPagar.Impuesto, 
     foreign key (NumCuentaPorPagar, IdEmpresa)references CuentaxPagar.CuentaPorPagar, 
     primary key(IdEmpresa, IdImpuesto, NumcuentaPorPagar) 	
