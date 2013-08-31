@@ -25,9 +25,9 @@ go
 
 --truncate table Seguridad.Empresa
 /*********************EMPRESA*****************/
-insert into Seguridad.Empresa values(1,'Empresa XYZ SA','XYZ','0981357236001','Mexico DF',null,null,'informacion@xyz.org','www.xyzmundial.org','Sector publico','Institucion publica conocida mundialmente dedicada al analisis financiero',1)
+insert into Seguridad.Empresa values(1,'Empresa XYZ SA','XYZ','0981357236001','Mexico DF',NULL,NULL,'informacion@xyz.org','www.xyzmundial.org','Sector publico','Institucion publica conocida mundialmente dedicada al analisis financiero',1)
 go
-insert into Seguridad.Empresa values(2,'Sandy Corporation','Veterinarias Sandy','0944254432001','Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas',null,null,'info@sandy.com.ec','www.sandy.blogspot.com' ,'Sector privado','Dedicada al cuidado de animales en general',4)
+insert into Seguridad.Empresa values(2,'Sandy Corporation','Veterinarias Sandy','0944254432001','Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas',NULL,null,'info@sandy.com.ec','www.sandy.blogspot.com' ,'Sector privado','Dedicada al cuidado de animales en general',4)
 go
 insert into Seguridad.Empresa values(3,'Bayerische Motoren Werke','BMW','0977281371001','Alemania',null,null,'bavarian@bmw.gr','www.bmw.gr','Sector privado','Proveedor internacional de vehiculos',5)
 go
@@ -95,7 +95,8 @@ insert into Seguridad.Perfil values(4,'Vendedor',1)
 go
 insert into Seguridad.Perfil values(5,'Supervisor',1)
 go
-
+insert into Seguridad.Perfil values(6,'Desarrollo',1)
+go
 --truncate table Seguridad.Usuario
 /********************USUARIO*******************/
 insert into Seguridad.Usuario values(1,'Admin','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,null,null)
@@ -113,6 +114,8 @@ go
 
 --truncate table Seguridad.UsuarioPorEmpresa
 /*****************USUARIO POR EMPRESA***********/
+insert into Seguridad.UsuarioPorEmpresa values(1,1,'a')
+go
 insert into Seguridad.UsuarioPorEmpresa values(11,1,'a')
 go
 insert into Seguridad.UsuarioPorEmpresa values(21,1,'a')
@@ -127,7 +130,7 @@ go
 
 --truncate table Seguridad.Modulo
 /*********************MODULO*******************/
-insert into Seguridad.Modulo  values(1,'Seguridad Acceso',1,'seguridad')
+insert into Seguridad.Modulo  values(1,'Seguridad',1,'seguridad')
 go
 insert into Seguridad.Modulo  values (2,'Compras',1,'compras')
 go
@@ -477,67 +480,223 @@ go
 
 --truncate table Seguridad.MenuPorEmpresa
 /**************************MENU POR EMPRESA********************/
-insert into Seguridad.MenuPorEmpresa  values(1,2,'Seguridad.frmCrearUsuario','forms',1)
-go
-insert into Seguridad.MenuPorEmpresa  values(1,3,'Seguridad.frmCrearPerfil','forms',1)
-go
-insert into Seguridad.MenuPorEmpresa  values(1,4,'Seguridad.frmMonitoreoUsuarios','forms',1)
-go
-insert into Seguridad.MenuPorEmpresa  values(1,5,'Seguridad.frmEmpresa','forms',1)
-go
-insert into Seguridad.MenuPorEmpresa  values(1,6,'Seguridad.frmFotoSeguridad','forms',1)
-go
-insert into Seguridad.MenuPorEmpresa  values(1,8,'Seguridad.frmCambiarContrasena','forms',1)
+insert seguridad.menuporempresa values (1, 1, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 2, 'forms', 'seguridad.frmcrearusuario', 1)
+insert seguridad.menuporempresa values (1, 3, 'forms', 'seguridad.frmcrearperfil', 1)
+insert seguridad.menuporempresa values (1, 4, 'forms', 'seguridad.frmmonitoreousuarios', 1)
+insert seguridad.menuporempresa values (1, 5, 'forms', 'seguridad.frmempresa', 1)
+insert seguridad.menuporempresa values (1, 6, 'forms', 'seguridad.frmfotoseguridad', 1)
+insert seguridad.menuporempresa values (1, 7, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 8, 'forms', 'seguridad.frmcambiarcontrasena', 1)
+insert seguridad.menuporempresa values (1, 9, 'forms', 'seguridad.frmasignarperfil', 1)
+insert seguridad.menuporempresa values (1, 10, 'forms', 'seguridad.frmmonitoreousuarios', 1)
+insert seguridad.menuporempresa values (1, 11, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 12, 'forms', 'seguridad.frmrptaccesoxusuario', 1)
+insert seguridad.menuporempresa values (1, 13, 'forms', 'seguridad.frmrpthorarioaccesoxusuario', 1)
+insert seguridad.menuporempresa values (1, 14, 'forms', 'seguridad.frmrptestadoxusuario', 1)
+insert seguridad.menuporempresa values (1, 15, 'forms', 'seguridad.frmrptprivilegiosxusuario', 1)
+insert seguridad.menuporempresa values (1, 16, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 17, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 18, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 19, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 20, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 21, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 22, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 23, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 24, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 25, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 26, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 27, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 28, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 29, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 30, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 31, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 32, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 33, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 34, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 35, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 36, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 37, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 38, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 39, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 40, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 41, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 42, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 43, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 44, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 45, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 46, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 47, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 48, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 49, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 50, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 51, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 52, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 53, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 54, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 55, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 56, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 57, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 58, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 59, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 60, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 61, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 62, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 63, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 64, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 65, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 66, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 67, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 68, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 69, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 70, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 71, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 72, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 73, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 74, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 75, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 76, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 77, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 78, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 79, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 80, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 81, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 82, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 83, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 84, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 85, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 86, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 87, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 88, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 89, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 90, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 91, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 92, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 93, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 94, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 95, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 96, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 97, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 98, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 99, NULL, NULL, 1)
+insert seguridad.menuporempresa values (1, 100, 'forms', NULL, 1)
+insert seguridad.menuporempresa values (1, 101, 'forms', NULL, 1)
 go
 
 
 --truncate table Seguridad.Permiso
 /***************PERMISO******************/
-insert into Seguridad.Permiso values(2,1,100,7,1,0,0)
+insert Seguridad.Permiso VALUES (1, 8, 16, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 9, 17, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 10, 18, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 11, 19, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 12, 20, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 13, 21, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 14, 22, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 15, 23, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 16, 24, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 17, 25, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 18, 26, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 19, 27, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 20, 16, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 21, 17, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 22, 18, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 23, 19, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 24, 20, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 25, 21, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 26, 22, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 27, 23, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 28, 24, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 29, 25, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 30, 26, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 31, 27, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 48, 28, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 49, 29, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 50, 30, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 51, 31, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 52, 32, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 53, 33, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 54, 34, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 55, 35, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 56, 36, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 57, 37, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 58, 38, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 59, 39, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 89, 99, 7, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 90, 101, 7, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 91, 103, 7, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 92, 106, 7, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 93, 107, 7, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 94, 108, 7, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 95, 1, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 96, 2, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 97, 3, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 98, 4, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 99, 5, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 100, 6, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 101, 160, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 102, 161, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 103, 7, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 104, 8, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 105, 9, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 106, 10, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 107, 11, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 108, 12, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 109, 13, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 110, 14, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (1, 111, 15, 1, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 16, 16, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 17, 17, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 18, 18, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 19, 19, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 20, 20, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 21, 21, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 22, 22, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 23, 23, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 24, 24, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 25, 25, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 26, 26, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 27, 27, 2, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 28, 28, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 29, 29, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 30, 30, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 31, 31, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 32, 32, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 33, 33, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 34, 34, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 35, 35, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 36, 36, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 37, 37, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 38, 38, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 39, 39, 3, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 84, 84, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 85, 85, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 86, 86, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 87, 87, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 88, 88, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 89, 89, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 90, 90, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 91, 91, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 92, 92, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 93, 93, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 94, 94, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 95, 95, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 96, 96, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 97, 97, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (2, 98, 98, 6, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 1, 145, 10, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 2, 146, 10, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 3, 147, 10, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 4, 148, 10, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 5, 149, 10, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 6, 150, 10, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 7, 151, 10, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 8, 152, 10, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 9, 153, 10, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 10, 154, 10, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 11, 155, 10, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 12, 156, 10, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 13, 157, 10, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 14, 158, 10, 0, 0, 0)
+insert Seguridad.Permiso VALUES (6, 15, 159, 10, 0, 0, 0)
 go
-insert into Seguridad.Permiso values(2,2,101,7,1,0,0)
-go
-insert into Seguridad.Permiso values(2,3,102,7,1,0,0)
-go
-insert into Seguridad.Permiso values(2,4,104,7,1,0,0)
-go
-insert into Seguridad.Permiso values(2,5,105,7,1,0,0)
-go
-insert into Seguridad.Permiso values(2,7,106,7,1,0,0)
-go
-insert into Seguridad.Permiso values(2,8,107,7,1,0,0)
-go
-insert into Seguridad.Permiso values(2,9,108,7,1,0,0)
-go
-insert into Seguridad.Permiso values(2,10,109,7,1,0,0)
-go
-insert into Seguridad.Permiso values(5,11,120,8,1,0,0)
-go
-
-
---truncate table Seguridad.TelefonoEmpresa
-/*************TELEFONO POR EMPRESA*************/
---insert into Seguridad.TelefonoEmpresa values(1,1)
---go
---insert into Seguridad.TelefonoEmpresa values(1,2)
---go
---insert into Seguridad.TelefonoEmpresa values(1,3)
---go
---insert into Seguridad.TelefonoEmpresa values(2,1)
---go
---insert into Seguridad.TelefonoEmpresa values(2,2)
---go
---insert into Seguridad.TelefonoEmpresa values(2,3)
---go
---insert into Seguridad.TelefonoEmpresa values(3,1)
---go
---insert into Seguridad.TelefonoEmpresa values(3,2)
---go
---insert into Seguridad.TelefonoEmpresa values(3,3)
---go
---insert into Seguridad.TelefonoEmpresa values(4,1)
---go
---insert into Seguridad.TelefonoEmpresa values(4,2)
---go
---insert into Seguridad.TelefonoEmpresa values(4,3)
---go
