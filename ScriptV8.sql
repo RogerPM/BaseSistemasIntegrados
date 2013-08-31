@@ -2050,23 +2050,21 @@ create table CuentaxPagar.CuentaPorPagar
 	NumCuentaPorPagar 		int not null ,--
 	NumIngresoEgreso 		int not null,--
 	FechaIngreso			date not null,
-	Factura 				int not null,
-	FechaModificacion		datetime, 
+	Factura 				int not null, 
 	FechaTransaccion		date not null,
 	IdPersona 				int null,
 	IdEmpresaServicio		varchar(13) null,
 	Motivo					varchar(30) not null,
-	detalle					varchar(30) not null,
-	Subtotal				numeric(10,0) not null,
-	Descuento				numeric(10,0) not null,
-	Total					numeric (10,0) not null,
+	detalle					varchar(150) not null,
+	Subtotal				numeric(10,2) not null,
+	Descuento				numeric(10,2) not null,
+	Total					numeric (10,2) not null,
 	FormaPago				char not null,--
-	ValorEntrada			numeric(10,0) null,--
+	ValorEntrada			numeric(10,2) null,--
 	NumeroLetra				int null,
 	IdFrecuencia 			int null,
-	ValorLetra				numeric(10,0) null,
-	SaldoDeuda				numeric(10,0) null,
-	LetraPendientePago		int null,
+	ValorLetra				numeric(10,2) null,
+	SaldoDeuda				numeric(10,2) null,
 	IdUsuario 				int not null,
     IdEmpresa 				int not null references Seguridad.Empresa,
     foreign key (IdUsuario)references Seguridad.Usuario,
@@ -2097,14 +2095,12 @@ create table CuentaxPagar.ImpuestoCuenta
 (
 	IdImpuesto 				int,
 	NumCuentaPorPagar 		int not null,
-	Linea 					int not null,
 	Valor					numeric(10,0) not null,
-	IdUsuario 				int not null,
     IdEmpresa 				int not null references Seguridad.Empresa,
     foreign key (IdUsuario)references Seguridad.Usuario,
     foreign key (IdImpuesto, IdEmpresa)references CuentaxPagar.Impuesto, 
     foreign key (NumCuentaPorPagar, IdEmpresa)references CuentaxPagar.CuentaPorPagar, 
-    primary key(IdImpuesto, NumcuentaPorPagar, Linea) 	
+    primary key(IdEmpresa, IdImpuesto, NumcuentaPorPagar) 	
 )
 go
 
