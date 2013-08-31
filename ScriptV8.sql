@@ -2971,3 +2971,13 @@ FROM         Seguridad.Usuario AS a INNER JOIN
                       Seguridad.Menu AS d ON c.IdMenu = d.IdMenu INNER JOIN
                       Seguridad.MenuPorEmpresa AS e ON e.IdMenu = c.IdMenu AND e.IdMenu = d.IdMenu                      
 go
+--Mejorando
+create view Menu_X_Usuario as
+select e.IdEmpresa, a.NombreUsuario, a.Contrasena, d.IdMenu, d.IdModulo, d.IdPadre, d.Descripcion, d.NombreFormulario, d.NombreAssembly, d.IdEstado, c.IdPerfil, 
+                      c.IdPermiso, c.IdMenu AS Expr1, c.IdModulo AS Expr2, c.Lectura, c.Escritura, c.Eliminacion
+from		Seguridad.Usuario a inner join 
+			Seguridad.Perfil b on a.IdPerfil = b.IdPerfil inner join 
+			Seguridad.Permiso c on a.IdPerfil = c.IdPerfil and b.IdPerfil = b.IdPerfil inner join 
+			Seguridad.Menu d on c.IdMenu = d.IdMenu inner join
+			Seguridad.UsuarioPorEmpresa e on e.IdUsuario = a.IdUsuario
+go
