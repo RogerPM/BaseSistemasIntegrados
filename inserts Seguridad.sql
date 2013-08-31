@@ -99,15 +99,15 @@ insert into Seguridad.Perfil values(6,'Desarrollo',1)
 go
 --truncate table Seguridad.Usuario
 /********************USUARIO*******************/
-insert into Seguridad.Usuario values(1,'Admin','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,null,null)
+insert into Seguridad.Usuario values(1,'Admin','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,null,1)
 go
-insert into Seguridad.Usuario values(11,'lquinter','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,null,null)
+insert into Seguridad.Usuario values(11,'lquinter','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,null,1)
 go
 insert into Seguridad.Usuario values(21,'rbaria','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,null,null)
 go
 insert into Seguridad.Usuario values(31,'robafiel','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,null,null)
 go
-insert into Seguridad.Usuario values(41,'macastro','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,null,null)
+insert into Seguridad.Usuario values(41,'macastro','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,null,1)
 go
 insert into Seguridad.Usuario values(51,'barceman','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,null,null)
 go
