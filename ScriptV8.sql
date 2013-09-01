@@ -2942,23 +2942,24 @@ go
 -- siempre y cuando no afecten la integridad funcional de este script
 PRINT N'3.creando vistas'
 --SEGURIDAD
+go
 create view Seguridad.UsuarioPermisos as
-select distinct row_number() over(order by seguridad.usuario.idusuario) as id,seguridad.usuario.idusuario, seguridad.usuario.nombreusuario, seguridad.perfil.descripcion, seguridad.modulo.idmodulo, seguridad.modulo.nombre, seguridad.menu.nombreformulario, 
-                      seguridad.permiso.lectura, seguridad.permiso.escritura, seguridad.permiso.eliminacion
-from         seguridad.perfil inner join
-                      seguridad.permiso on seguridad.perfil.idperfil = seguridad.permiso.idperfil inner join
-                      seguridad.modulo on seguridad.permiso.idmodulo = seguridad.modulo.idmodulo inner join
-                      seguridad.menu on seguridad.permiso.idmenu = seguridad.menu.idmenu and seguridad.modulo.idmodulo = seguridad.menu.idmodulo inner join
-                      seguridad.usuario on seguridad.perfil.idperfil = seguridad.usuario.idperfil
-go                      
+SELECT distinct ROW_NUMBER() OVER(ORDER BY Seguridad.Usuario.IdUsuario) AS id,Seguridad.Usuario.IdUsuario, Seguridad.Usuario.NombreUsuario, Seguridad.Perfil.Descripcion, Seguridad.Modulo.IdModulo, Seguridad.Modulo.Nombre, Seguridad.Menu.NombreFormulario, 
+                      Seguridad.Permiso.Lectura, Seguridad.Permiso.Escritura, Seguridad.Permiso.Eliminacion
+FROM         Seguridad.Perfil INNER JOIN
+                      Seguridad.Permiso ON Seguridad.Perfil.IdPerfil = Seguridad.Permiso.IdPerfil INNER JOIN
+                      Seguridad.Modulo ON Seguridad.Permiso.IdModulo = Seguridad.Modulo.IdModulo INNER JOIN
+                      Seguridad.Menu ON Seguridad.Permiso.IdMenu = Seguridad.Menu.IdMenu AND Seguridad.Modulo.IdModulo = Seguridad.Menu.IdModulo INNER JOIN
+                      Seguridad.Usuario ON Seguridad.Perfil.IdPerfil = Seguridad.Usuario.IdPerfil
+go                                        
   
 create view Seguridad.UsuarioInformacion as
-select distinct usu.idusuario, usu.nombreusuario, usu.contrasena, usu.idestado, est.descripcion, emp.idempresa, emp.nombrecomercial,
-					emp.razonsocial, emp.ruc
-from seguridad.usuario usu, seguridad.empresa emp, seguridad.usuarioporempresa uxe, seguridad.estado est
-where uxe.idempresa = emp.idempresa
-and uxe.idusuario = usu.idusuario
-and usu.idestado = est.idestado
+SELECT distinct usu.IdUsuario, usu.NombreUsuario, usu.Contrasena, usu.IdEstado, est.Descripcion, emp.IdEmpresa, emp.NombreComercial,
+					emp.RazonSocial, emp.Ruc
+FROM Seguridad.Usuario usu, Seguridad.Empresa emp, Seguridad.UsuarioPorEmpresa uxe, Seguridad.Estado est
+WHERE uxe.IdEmpresa = emp.IdEmpresa
+AND uxe.IdUsuario = usu.IdUsuario
+AND usu.IdEstado = est.IdEstado
 go
                  
 -- view in disuse
