@@ -2943,7 +2943,7 @@ go
 PRINT N'3.creando vistas'
 --SEGURIDAD
 go
-create view Seguridad.UsuarioPermisos as
+create view Seguridad.UsuariodPermisos as
 SELECT distinct ROW_NUMBER() OVER(ORDER BY Seguridad.Usuario.IdUsuario) AS id,Seguridad.Usuario.IdUsuario, Seguridad.Usuario.NombreUsuario, Seguridad.Perfil.Descripcion, Seguridad.Modulo.IdModulo, Seguridad.Modulo.Nombre, Seguridad.Menu.NombreFormulario, 
                       Seguridad.Permiso.Lectura, Seguridad.Permiso.Escritura, Seguridad.Permiso.Eliminacion
 FROM         Seguridad.Perfil INNER JOIN
@@ -2951,8 +2951,8 @@ FROM         Seguridad.Perfil INNER JOIN
                       Seguridad.Modulo ON Seguridad.Permiso.IdModulo = Seguridad.Modulo.IdModulo INNER JOIN
                       Seguridad.Menu ON Seguridad.Permiso.IdMenu = Seguridad.Menu.IdMenu AND Seguridad.Modulo.IdModulo = Seguridad.Menu.IdModulo INNER JOIN
                       Seguridad.Usuario ON Seguridad.Perfil.IdPerfil = Seguridad.Usuario.IdPerfil
-go                                        
-  
+go   
+
 create view Seguridad.UsuarioInformacion as
 SELECT distinct usu.IdUsuario, usu.NombreUsuario, usu.Contrasena, usu.IdEstado, est.Descripcion, emp.IdEmpresa, emp.NombreComercial,
 					emp.RazonSocial, emp.Ruc
