@@ -167,7 +167,7 @@ insert into Seguridad.Menu values(3,1,1,'Creacion Perfiles','Seguridad.frmCrearP
 go
 insert into Seguridad.Menu values(4,1,1,'Monitoreo de Usuarios','Seguridad.frmMonitoreoUsuarios','forms',1)
 go
-insert into Seguridad.Menu values(5,1,1,'Datos de la Empresa','Seguridad.frmEmpresa','forms',1)
+insert into Seguridad.Menu values(5,1,1,'Registrar empresa','Seguridad.frmEmpresa','forms',1)
 go
 insert into Seguridad.Menu values(6,1,1,'Imagen de Seguridad','Seguridad.frmFotoSeguridad','forms',1)
 go
@@ -175,13 +175,13 @@ insert into Seguridad.Menu values(7,1,NULL,'Proceso',NULL,NULL,1)
 go
 insert into Seguridad.Menu values(8,1,7,'Cambio de Contraseña','Seguridad.frmCambiarContrasena','forms',1)
 go
-insert into Seguridad.Menu values(9,1,7,'Asignar Permisos','Seguridad.frmAsignarPerfil','forms',1)
+insert into Seguridad.Menu values(9,1,7,'Asignar perfil a usuario','Seguridad.frmAsignarPerfil','forms',1)
 go
 insert into Seguridad.Menu values(10,1,7,'Monitoreo de Usuarios','Seguridad.frmMonitoreoUsuarios','forms',1)
 go
-insert into Seguridad.Menu values(160,1,7,'Monitoreo de Usuarios','Seguridad.frmAsignarPantallaAPerfil','forms',1)
+insert into Seguridad.Menu values(160,1,7,'Acceso a pantallas','Seguridad.frmAsignarPantallaAPerfil','forms',1)
 go
-insert into Seguridad.Menu values(161,1,7,'Monitoreo de Usuarios','Seguridad.frmAsignarUsuariosAEmpresa','forms',1)
+insert into Seguridad.Menu values(161,1,7,'Asignar usuario a empresa','Seguridad.frmAsignarUsuariosAEmpresa','forms',1)
 go
 insert into Seguridad.Menu values(11,1,NULL,'Reportes',NULL,NULL,1)
 go
