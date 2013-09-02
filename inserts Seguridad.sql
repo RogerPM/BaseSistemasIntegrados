@@ -52,35 +52,35 @@ go
 
 
 /*****************PERSONA******************/
-insert into RecursosHumanos.Persona values (1,09222222,1,1,'Master','SA',null,'m',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
+insert into RecursosHumanos.Persona values (1,09222222,1,'Master','SA',null,'m',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (2,09222222,1,1,'Compras','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
+insert into RecursosHumanos.Persona values (2,09222222,1,'Compras','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (3,09222222,1,1,'Inventario','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
+insert into RecursosHumanos.Persona values (3,09222222,1,'Inventario','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (4,09222222,1,1,'Facturacion','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
+insert into RecursosHumanos.Persona values (4,09222222,1,'Facturacion','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (5,09222222,1,1,'Cuentas Por Pagar','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
+insert into RecursosHumanos.Persona values (5,09222222,1,'Cuentas Por Pagar','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (6,09222222,1,1,'Cuentas Por Cobrar','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
+insert into RecursosHumanos.Persona values (6,09222222,1,'Cuentas Por Cobrar','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (7,09222222,1,1,'Contabilidad','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
+insert into RecursosHumanos.Persona values (7,09222222,1,'Contabilidad','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (8,09222222,1,1,'Recursos Humanos','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
+insert into RecursosHumanos.Persona values (8,09222222,1,'Recursos Humanos','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (9,09222222,1,1,'Activo Fijo','SA',null,'m',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
+insert into RecursosHumanos.Persona values (9,09222222,1,'Activo Fijo','SA',null,'m',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (10,09222222,1,1,'Taller','SA',null,'m',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
+insert into RecursosHumanos.Persona values (10,09222222,1,'Taller','SA',null,'m',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (11,09222222,1,1,'Luis Miguel','Quintero',null,'m',1,'Bosque cerca de guayaquil, llegando al templo de Barcelona',0994996660, 0994996660, 0994996660, 0994996660,'lquinter@espol.edu.ec',1)
+insert into RecursosHumanos.Persona values (11,09222222,1,'Luis Miguel','Quintero',null,'m',1,'Bosque cerca de guayaquil, llegando al templo de Barcelona',0994996660, 0994996660, 0994996660, 0994996660,'lquinter@espol.edu.ec',1)
 go
-insert into RecursosHumanos.Persona values (21,09222222,1,2,'Roberto Enrique','Arias',null,'m',1,'geranio', 0994996660, 0994996660, 0994996660, 0994996660,'enriques@gmail.com',1)
+insert into RecursosHumanos.Persona values (21,09222222,2,'Roberto Enrique','Arias',null,'m',1,'geranio', 0994996660, 0994996660, 0994996660, 0994996660,'enriques@gmail.com',1)
 go
-insert into RecursosHumanos.Persona values (31,09222222,1,1,'Roger','Peñafiel',null,'m',1,'a dos cuadras del capwell', 0990144207, 0994996660, 0994996660, 0994996660,'rpenafie@espol.edu.ec',1)
+insert into RecursosHumanos.Persona values (31,09222222,1,'Roger','Peñafiel',null,'m',1,'a dos cuadras del capwell', 0990144207, 0994996660, 0994996660, 0994996660,'rpenafie@espol.edu.ec',1)
 go
-insert into RecursosHumanos.Persona values (41,09222222,1,1,'Marco','Castro',null,'m',1,'bastion', 0994996660, 0994996660, 0994996660, 0994996660,'macastro@espol.edu.ec',1)
+insert into RecursosHumanos.Persona values (41,09222222,1,'Marco','Castro',null,'m',1,'bastion', 0994996660, 0994996660, 0994996660, 0994996660,'macastro@espol.edu.ec',1)
 go
-insert into RecursosHumanos.Persona values (51,09222222,1,1,'Stalin','Vanegas',null,'m',1,'lejos de guayaquil', 0994996660, 0994996660, 0994996660, 0994996660,'info@sandi.com.ec',1)
+insert into RecursosHumanos.Persona values (51,09222222,1,'Stalin','Vanegas',null,'m',1,'lejos de guayaquil', 0994996660, 0994996660, 0994996660, 0994996660,'info@sandi.com.ec',1)
 go
 
 --truncate table Seguridad.Perfil
