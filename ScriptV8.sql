@@ -105,7 +105,6 @@ create table RecursosHumanos.Persona
 (
 	IdPersona			int not null primary key,
 	Identificacion		numeric(14,0) not null,
-	IdEmpresa			int not null,
 	IdTipoPersona		int not null,
 
 	NombreRazonSocial	varchar(100) not null,
@@ -130,17 +129,17 @@ foreign key (TipoIdentificacion)references RecursosHumanos.TipoIdentificacion
 go
 
 /*CLIENTE*/
-create table RecursosHumanos.Cliente
-(
-	IdCliente				int not null primary key,
-	IdPersona				int not null,
-	IdEmpresa				int not null,
-	IdEstado				int not null,
-	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (IdPersona) references RecursosHumanos.Persona
-)
-go
+--create table RecursosHumanos.Cliente
+--(
+--	IdCliente				int not null primary key,
+--	IdPersona				int not null,
+--	IdEmpresa				int not null,
+--	IdEstado				int not null,
+--	foreign key (IdEmpresa) references Seguridad.Empresa,
+--	foreign key (IdEstado) references Seguridad.Estado,
+--	foreign key (IdPersona) references RecursosHumanos.Persona
+--)
+--go
 
 
 /*EMPLEADO*/
