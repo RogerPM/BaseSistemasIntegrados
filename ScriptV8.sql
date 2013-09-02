@@ -1854,6 +1854,7 @@ create table CuentasPorCobrar.CuentaxCobrar
 	numero_comprobante		numeric(4,0),
 	idTransaccion 			int NOT NULL,
 	idFactura 				int NOT NULL,
+	Modulo				int NOT NULL,
 	idCabeceraComprobante 	int NOT NULL,
 	TotalCuotas 			int NOT NULL,
 	porcentaje_interes		numeric NOT NULL,
