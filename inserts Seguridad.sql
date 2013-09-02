@@ -111,9 +111,9 @@ insert into Seguridad.Usuario values(1,'Admin','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,
 go
 insert into Seguridad.Usuario values(11,'lquinter','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,1,1)
 go
-insert into Seguridad.Usuario values(21,'rbaria','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,2,null)
+insert into Seguridad.Usuario values(21,'rbaria','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,2,2)
 go
-insert into Seguridad.Usuario values(31,'robafiel','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,2,null)
+insert into Seguridad.Usuario values(31,'robafiel','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,2,1)
 go
 insert into Seguridad.Usuario values(41,'macastro','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,1,1)
 go
