@@ -82,7 +82,7 @@ insert into RecursosHumanos.Persona values (41,09151515,1,'Marco','Castro',null,
 go
 insert into RecursosHumanos.Persona values (51,091616161,1,'Stalin','Vanegas',null,'m',1,'lejos de guayaquil', 0994996660, 0994996660, 0994996660, 0994996660,'info@sandi.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (61,091717171,1,'Stalin','Vanegas',null,'m',1,'lejos de guayaquil', 0994996660, 0994996660, 0994996660, 0994996660,'info@sandi.com.ec',1)
+insert into RecursosHumanos.Persona values (61,091717171,1,'Marcelo','Romero',null,'f',1,'guayacanes', 0994996660, 0994996660, 0994996660, 0994996660,'hecmar@padrino.com',1)
 go
 
 --truncate table Seguridad.Perfil
