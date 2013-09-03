@@ -3,7 +3,7 @@ if exists(select * from sys.databases where name='TECA')-- solo existen los obje
 drop database TECA
 PRINT N'1.base eliminada'
 go
- 
+
 create database TECA
 PRINT N'2.base creada '
 go
@@ -112,24 +112,25 @@ go
 create table RecursosHumanos.Persona
 (
 	IdPersona			int not null primary key,
-	Identificacion		numeric(14,0) not null unique,
+	Identificacion		numeric(14,0) not null,
 	IdTipoPersona		int not null,
-
+	IdEmpresa			int not null,
 	NombreRazonSocial	varchar(100) not null,
-	Apellido			varchar(50),
-	FechaNacimiento		datetime ,
-	genero				char(1) ,
+	Apellido			varchar(50)null,
+	FechaNacimiento		datetime null,
+	genero				char(1) null,
 	TipoIdentificacion	int not null,
 	direccion			varchar (100) not null,
-	TelefonoGneral		numeric(14,0),
-	TelefonoMovil		numeric(14,0),
-	TelefonoCasa		numeric (14,0) ,
-	TelefonoOtros		numeric (14,0),
-	mail				varchar (50),
+	TelefonoGneral		numeric(14,0)null,
+	TelefonoMovil		numeric(14,0)not null,
+	TelefonoCasa		numeric (14,0) not null,
+	TelefonoOtros		numeric (14,0) null,
+	mail				varchar (50) not null,
 	IdEstado			int not null,
 
 
 
+foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdTipoPersona)references RecursosHumanos.TipoPersona,
 foreign key (TipoIdentificacion)references RecursosHumanos.TipoIdentificacion
 
