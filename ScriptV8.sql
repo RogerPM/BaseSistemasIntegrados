@@ -1,5 +1,5 @@
 use master
-if exists(select * from sysdatabases where name='TECA')
+if exists(select * from sys.databases where name='TECA')-- solo existen los objetos sys.databases y sys.sysdatabases
 drop database TECA
 PRINT N'1.base eliminada'
 go
@@ -40,6 +40,13 @@ create table  Seguridad.Estado
 	 IdEstado			int			primary key,
 	 Descripcion		varchar(220)
 ) 
+go
+--Estado usados en procesos de compras
+Create table Compras.Estado
+(
+	idEstado			int		primary key,
+	Descripcion			varchar (100)
+)
 go
 
 
@@ -1037,13 +1044,16 @@ CREATE TABLE Compras.Cotizacion --100%
 Numero				int NOT NULL,
 idEmpresa			int NOT NULL,
 IdUsuario			int NOT NULL,
+idProveedor			int NOT NULL,
 --NumeroPedido		int NOT NULL,
-Fecha				date NOT NULL,
-FechaModificacion	datetime NOT NULL,
+Fecha				date NOT NULL Default Getdate(),
+FechaModificacion	date NOT NULL Default Getdate(),
+Ruta				varchar (250),
 idEstado			int NOT NULL,
 foreign key(IdEmpresa)references Seguridad.Empresa,
 foreign key(IdUsuario)references Seguridad.Usuario,
-foreign key (IdEstado) references Seguridad.Estado,
+foreign key (idProveedor) references Compras.Proveedor,
+foreign key (IdEstado) references Compras.Estado,
 --foreign key (NumeroPedido) references Compras.Pedido,
 primary key(Numero,IdEmpresa)
 )
@@ -1054,22 +1064,49 @@ CREATE TABLE Compras.OrdenCompra  --ok
 	IdOrdenCompra		int		NOT NULL,
 	idEmpresa			int		NOT NULL,
     IdUsuario			int		NOT NULL,
-	Fecha				date	NOT NULL,
-    FechaModificacion	datetime NOT NULL,
+	Fecha				date	NOT NULL Default Getdate(),
+    FechaModificacion	date    NOT NULL Default Getdate(),
 	idProveedor			int		NOT NULL,
     NumeroCotizacion    int		NOT NULL,
-	idEstado			int   NOT NULL,
+	idEstado			int     NOT NULL,
 	Observaciones		varchar   (300),
 	foreign key(IdEmpresa)references Seguridad.Empresa,
     foreign key(IdUsuario)references Seguridad.Usuario,
-	foreign key (IdEstado) references Seguridad.Estado,
+	foreign key (IdEstado) references Compras.Estado,
 	foreign key(idProveedor)references Compras.Proveedor,
 	foreign key (idEmpresa,NumeroCotizacion) references Compras.Cotizacion,
 	primary key(IdOrdenCompra,IdEmpresa)
 )
 GO
 
+CREATE TABLE Compras.Compra  --ok
+(
+	Numero				int		NOT NULL,
+	idEmpresa			int		NOT NULL,
+    IdUsuario			int		NOT NULL,
+    idOrdenCompra		int		not null,
+	Fecha				date	NOT NULL Default Getdate(),
+    FechaModificacion	date    NOT NULL Default Getdate(),
+	idEstado			int     NOT NULL,
+	foreign key(IdEmpresa)references Seguridad.Empresa,
+    foreign key(IdUsuario)references Seguridad.Usuario,
+	foreign key (IdEstado) references Compras.Estado,
+	foreign key (idEmpresa,idOrdenCompra) references Compras.OrdenCompra,
+	primary key(Numero,IdEmpresa)
+)
+GO
 
+Create Table Compras.CompraDet
+(
+	Numero		int		Not null,
+	idEmpresa	int		not null,
+	Linea		int		not null,
+	idArticulo	int		not null,
+	Cantidad	int		not null,
+	foreign key(Numero,IdEmpresa)references Compras.Compra,
+	primary key(Numero,IdEmpresa, Linea)
+)
+go
 /********************************INVENTARIO************************/
 
 create table Inventario.Bodega
@@ -2587,19 +2624,19 @@ CREATE TABLE Compras.DevolucionCompra  --ok
 	idEmpresa			int   NOT NULL,
     IdUsuario			int   NOT NULL,
 	idProveedor			int   NOT NULL,
-	idEmpleado			int   NOT NULL,
+--	idEmpleado			int   NOT NULL,
 	NumeroFactura		int   NOT NULL, -- no es clave foranea
-    Fecha				date NOT NULL,
-    FechaModificacion	datetime NOT NULL,
+    Fecha				date  NOT NULL Default Getdate(),
+    FechaModificacion	date  NOT NULL Default Getdate(),
 	idEstado			int   NOT NULL,
  	foreign key(IdEmpresa)references Seguridad.Empresa,
     foreign key(IdUsuario)references Seguridad.Usuario,
- 	foreign key (IdEstado) references Seguridad.Estado,
+ 	foreign key (IdEstado) references Compras.Estado,
 	foreign key (idProveedor) references Compras.Proveedor,
-	foreign key (idEmpleado,IdEmpresa) references RecursosHumanos.Empleado,
+--	foreign key (idEmpleado,IdEmpresa) references RecursosHumanos.Empleado,
 	primary key(Numero,IdEmpresa)
 )
-GO
+go
 
 CREATE TABLE Compras.DevolucionCompraDet  --OK
 (
@@ -2621,16 +2658,16 @@ CREATE TABLE Compras.OrdenDespacho --ok
 (
 	Numero						int   NOT NULL,
 	idEmpresa					int   NOT NULL,
-    idUsuario					int NOT NULL,
-    idDepartamento 				int not null,
-	idEmpleado					int   NOT NULL,
-	Fecha						date NOT NULL,
-    FechaModificacion			datetime NOT NULL,
+    idUsuario					int   NOT NULL,
+    idDepartamento 				int   not null,
+--	idEmpleado					int   NOT NULL,
+	Fecha						date  NOT NULL Default Getdate() ,
+    FechaModificacion			date  NOT NULL Default Getdate(),
 	idEstado					int   NOT NULL,
 	foreign key(IdEmpresa)references Seguridad.Empresa,
     foreign key(IdUsuario)references Seguridad.Usuario,
- 	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (idEmpleado,IdEmpresa) references RecursosHumanos.Empleado,
+ 	foreign key (IdEstado) references Compras.Estado,
+--	foreign key (idEmpleado,IdEmpresa) references RecursosHumanos.Empleado,
 	foreign key (idDepartamento) references RecursosHumanos.Departamento,
 	primary key(Numero,IdEmpresa)
  )
@@ -2648,26 +2685,25 @@ CREATE TABLE Compras.OrdenDespachoDet  --ok
 	primary key(Numero,IdEmpresa,Linea)
 )
 GO
-
 CREATE TABLE Compras.Solicitud  --ok
 (
 	Numero			int		NOT NULL,
 	idEmpresa		int		NOT NULL,
+	IdTipoArticulo	int		NOT NULL,
     IdUsuario		int		NOT NULL,
-	IdArticulo		int		NOT NULL,
 	idDepartamento	int		NOT NULL,
-	idEmpleado		int		NOT NULL,
-	Fecha			date	NOT NULL,
-    FechaModificacion datetime NOT NULL,
+	Fecha			date	NOT NULL Default Getdate(),
+    FechaModificacion date  NOT NULL Default Getdate(),
 	idEstado		int   NOT NULL,
 	foreign key(IdEmpresa)references Seguridad.Empresa,
     foreign key(IdUsuario)references Seguridad.Usuario,
-	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (idArticulo,IdEmpresa) references Inventario.Articulo,
-	foreign key (idEmpleado,IdEmpresa) references RecursosHumanos.Empleado,
+	foreign key (IdEstado) references Compras.Estado,
+	foreign key (idTipoArticulo) references Inventario.TipoArticulo,
 	primary key(Numero,IdEmpresa)
+	--select * from Inventario.TipoArticulo
 )
 GO
+
 
 CREATE TABLE Compras.SolicitudDet  --ok
 (
@@ -2681,20 +2717,21 @@ CREATE TABLE Compras.SolicitudDet  --ok
 	primary key(Numero,IdEmpresa,Linea)
  )
 GO
-
 CREATE TABLE Compras.Pedido --ok 
 (
 	Numero			int		NOT NULL,
 	idEmpresa		int		NOT NULL, 
     idUsuario		int		NOT NULL,
-	idDepartamento	int		NOT NULL,
-	Fecha			date	NOT NULL,
-    FechaModificacion datetime NOT NULL,
+    idTipoArticulo  int     not null,
+	--idDepartamento	int		NOT NULL,
+	Fecha			date	NOT NULL Default Getdate(),
+    FechaModificacion date  NOT NULL Default Getdate(),
 	idEstado		int		NOT NULL,
  	foreign key(IdEmpresa)references Seguridad.Empresa,
     foreign key(IdUsuario)references Seguridad.Usuario,
- 	foreign key (IdEstado) references Seguridad.Estado,
-	foreign key (idDepartamento) references RecursosHumanos.Departamento,	
+    foreign key (idTipoArticulo) references inventario.tipoArticulo,
+ 	foreign key (IdEstado) references Compras.Estado,
+	--foreign key (idDepartamento) references RecursosHumanos.Departamento,	
 	primary key(Numero,IdEmpresa)
 )
 GO
@@ -2711,7 +2748,6 @@ CREATE TABLE Compras.PedidoDet  --ok
 	primary key(Numero,IdEmpresa,Linea)
 ) 
 go
-
  
 CREATE TABLE Compras.CotizacionDet  --ok
 (
@@ -2723,9 +2759,40 @@ CREATE TABLE Compras.CotizacionDet  --ok
 	foreign key (NumeroPedido,IdEmpresa) references Compras.Pedido,	
 	primary key(Numero,IdEmpresa)
 )
-PRINT N'Mensaje de Compras: Falta que implementen bien la forma de pago que se necesita para facturas, notas debito, notas credito'
 go
 
+Create table Compras.NotaDebito
+(
+	Numero					int		not null,
+	idEmpresa				int		not null,
+	NumeroDevolucionCompra	int		not null,
+	Fecha			date	NOT NULL Default Getdate(),
+    FechaModificacion date  NOT NULL Default Getdate(),
+	SubTotal				int		not null,
+	Descuento				int		not null,
+	idEstado				int		not null
+	foreign key (idEmpresa)	references Seguridad.Empresa,
+	foreign key (NumeroDevolucionCompra, idEmpresa) references Compras.DevolucionCompra,
+	foreign key (idEstado) references Compras.Estado,
+	primary key (Numero, idEmpresa)
+	
+)
+go
+Create table Compras.NotaDebitoDet
+(
+	Numero					int		not null,
+	idEmpresa				int		not null,
+	Linea					int		not null,
+	idArticulo				int		not null,
+	Cantidad				int		not null
+	
+	foreign key (Numero,idEmpresa) references Compras.NotaDebito,
+	primary key (Numero, idEmpresa,Linea)		
+
+)
+go
+
+PRINT 'de Compras: Listo las tablas notadebito y compras'
 
 /**************************TALLER************************/
 
