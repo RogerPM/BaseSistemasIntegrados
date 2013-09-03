@@ -204,8 +204,8 @@ go
 create table Seguridad.Usuario
 (
 	 IdUsuario			int,
-	 NombreUsuario		varchar(20),
-	 Contrasena			varchar(220),
+	 NombreUsuario		varchar(20)			not null unique,
+	 Contrasena			varchar(220)		not null,
 	 IdEstado			int					references Seguridad.Estado on delete cascade,
 	 IdImagen			int					references Seguridad.Imagen on delete cascade,
 	 IdPerfil int ,
