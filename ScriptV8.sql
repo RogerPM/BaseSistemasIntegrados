@@ -107,29 +107,28 @@ create table RecursosHumanos.TipoIdentificacion
 
 )
 go
-
 /*PERSONA*/
 create table RecursosHumanos.Persona
 (
 	IdPersona			int not null primary key,
-	Identificacion		numeric(14,0) not null unique,
+	Identificacion		numeric(14,0) not null,
 	IdTipoPersona		int not null,
 
 	NombreRazonSocial	varchar(100) not null,
-	Apellido			varchar(50),
-	FechaNacimiento		datetime ,
-	genero				char(1) ,
+	Apellido			varchar(50)null,
+	FechaNacimiento		datetime null,
+	genero				char(1) null,
 	TipoIdentificacion	int not null,
 	direccion			varchar (100) not null,
-	TelefonoGneral		numeric(14,0),
-	TelefonoMovil		numeric(14,0),
-	TelefonoCasa		numeric (14,0) ,
-	TelefonoOtros		numeric (14,0),
-	mail				varchar (50),
+	TelefonoGneral		numeric(14,0)null,
+	TelefonoMovil		numeric(14,0)not null,
+	TelefonoCasa		numeric (14,0) not null,
+	TelefonoOtros		numeric (14,0) null,
+	mail				varchar (50) not null,
 	IdEstado			int not null,
 
 
-
+foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdTipoPersona)references RecursosHumanos.TipoPersona,
 foreign key (TipoIdentificacion)references RecursosHumanos.TipoIdentificacion
 
@@ -1461,7 +1460,7 @@ CREATE TABLE Facturacion.Cotizacion
 	Seguro					bit NULL,
 	idEstado 				int NOT NULL,
 	primary key(IdNumeroCotizacion),	
-	foreign key (idCliente) references RecursosHumanos.Persona,
+	foreign key (idCliente) references RecursosHumanos.CLiente,
 	foreign key (idEmpresa) references Seguridad.Empresa,
 	foreign key (idUsuario) references Seguridad.Usuario,
 	foreign key (idEstado) references Seguridad.Estado
@@ -1540,7 +1539,7 @@ CREATE TABLE Facturacion.Factura
 	idEstado 				int NOT NULL,
 	primary key(IdNumeroFactura),	
 	foreign key (IdEmpresa,cabecera_comprobante)references Contabilidad.CabeceraComprobante,
-	foreign key (idCliente) references RecursosHumanos.Persona,
+	foreign key (idCliente) references RecursosHumanos.CLiente,
 	foreign key (IdNumeroCotizacion) references Facturacion.Cotizacion,
 	foreign key (IdPromocion) references Facturacion.Promocion,	
 	foreign key (idUsuario) references Seguridad.Usuario,
@@ -1954,7 +1953,7 @@ go
 	foreign key (idUsuario) references Seguridad.Usuario,
 	foreign key (idTransaccion) references Facturacion.Factura,
 	foreign key (idFactura) references Facturacion.Factura,
-	foreign key (idCliente) references RecursosHumanos.Persona,
+	foreign key (idCliente) references RecursosHumanos.CLiente,
 	foreign key (IdEmpresa,idCabeceraComprobante) references Contabilidad.CabeceraComprobante,
 	foreign key (idCuentaxCobrar, numeroCuentaxCobrar) references CuentasPorCobrar.CuentaxCobrarDet,/*agregada ref de cambio de log*/
 	foreign key (idEstado) references Seguridad.Estado
