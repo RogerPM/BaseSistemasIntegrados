@@ -113,15 +113,17 @@ go
 /********************USUARIO*******************/
 insert into Seguridad.Usuario values(1,'Admin','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,1,1)
 go
-insert into Seguridad.Usuario values(11,'lquinter','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,1,1)
+insert into Seguridad.Usuario values(11,'lquinter','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,1,2)
 go
 insert into Seguridad.Usuario values(21,'rbaria','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,2,2)
 go
-insert into Seguridad.Usuario values(31,'robafiel','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,2,1)
+insert into Seguridad.Usuario values(31,'rogerax','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,2,1)
 go
 insert into Seguridad.Usuario values(41,'macastro','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,1,1)
 go
 insert into Seguridad.Usuario values(51,'barceman','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,2,null)
+go
+insert into Seguridad.Usuario values(61,'hecmar','2Kn1OBOdBjiSr8Ey6Jc2uwffp/8=',1,2,null)
 go
 insert into Seguridad.Usuario (IdUsuario,NombreUsuario,Contrasena,IdEstado)
 values (117,'compras2013','compras',1)
@@ -139,6 +141,12 @@ go
 insert into Seguridad.UsuarioPorEmpresa values(41,1,'a')
 go
 insert into Seguridad.UsuarioPorEmpresa values(51,2,'a')
+go
+insert into Seguridad.UsuarioPorEmpresa values(61,1,'a')
+go
+insert into Seguridad.UsuarioPorEmpresa values(31,3,'a')
+go
+insert into Seguridad.UsuarioPorEmpresa values(31,4,'a')
 go
 
 
