@@ -84,6 +84,10 @@ insert into RecursosHumanos.Persona values (51,091616161,1,1,'Stalin','Vanegas',
 go
 insert into RecursosHumanos.Persona values (61,091717171,1,1,'Marcelo','Romero',null,'f',1,'guayacanes', 0994996660, 0994996660, 0994996660, 0994996660,'hecmar@padrino.com',1)
 go
+insert into RecursosHumanos.Persona (IdPersona,Identificacion,IdTipoPersona,IdEmpresa,NombreRazonSocial,
+Apellido,TipoIdentificacion,direccion,TelefonoMovil,TelefonoCasa,mail,IdEstado)
+values(117,0998889293,1,1,'Luis','Cuenca',1,'Sur',0981252627,04398373,'LuisC_@hotmail.com',1)
+go
 
 --truncate table Seguridad.Perfil
 /****************PERFIL********************/
@@ -119,6 +123,8 @@ insert into Seguridad.Usuario values(41,'macastro','bKVXJkA70wzCRu8X5dZ79Z+SmHU=
 go
 insert into Seguridad.Usuario values(51,'barceman','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,2,null)
 go
+insert into Seguridad.Usuario (IdUsuario,NombreUsuario,Contrasena,IdEstado)
+values (117,'compras2013','compras',1)
 
 --truncate table Seguridad.UsuarioPorEmpresa
 /*****************USUARIO POR EMPRESA***********/
