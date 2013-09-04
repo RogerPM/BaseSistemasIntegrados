@@ -2331,6 +2331,7 @@ create table ActivoFijo.ActivoFijo
 	IdProveedor				int  null,
 	descripcion				varchar(150)   null,
 	valor_nomial			numeric(10,2)   null,
+	ValorAdquisicion		numeric (10,2)  null,--Campo nuevo ingresado******
 	valor_residual			numeric(10,2)   null,
 	valor_actualserie		numeric(10,2)   null,
 	IdCodigoBarra 			int   null,
@@ -2421,6 +2422,8 @@ create table ActivoFijo.DepreciacionDet
 	IdActivoFijo 		      int   null,
 	Periodo                   int null,
 	IdEmpresa				  int   null,
+	DepreAnual				  numeric(10,2)   null,--campos nuevos insertados*******
+	DepreAcumulada		      numeric(10,2)   null,--campos nuevos insertados*******
 	valor_nominal			  numeric(10,2)   null,
 	valor_actual			  numeric(10,2)   null
 	--haciendo las referencias constraint
