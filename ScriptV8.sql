@@ -712,20 +712,6 @@ create table RecursosHumanos.Prestamo
 )
 go
 
-
-/****************************SEGURIDAD****************************/
-/*USUARIO POR EMPRESA*/
-create table Seguridad.UsuarioPorEmpresa
-(
-	IdUsuario		int,
-	IdEmpresa		int,
-	Descripcion     varchar(1),
-	foreign key(IdUsuario)references Seguridad.Usuario on delete cascade,
-	foreign key(IdEmpresa)references Seguridad.Empresa,
-	primary key(IdUsuario,IdEmpresa)
-)
-go
-
 /*TRABAJO DIARIO CABECERA*/
 create table RecursosHumanos.TrabajoDiarioCab
 (
@@ -753,6 +739,21 @@ create table RecursosHumanos.TrabajoDiarioDet
 	primary key (NumLinea, IdEmpresa)
 )
 go
+
+/****************************SEGURIDAD****************************/
+/*USUARIO POR EMPRESA*/
+create table Seguridad.UsuarioPorEmpresa
+(
+	IdUsuario		int,
+	IdEmpresa		int,
+	Descripcion     varchar(1),
+	foreign key(IdUsuario)references Seguridad.Usuario on delete cascade,
+	foreign key(IdEmpresa)references Seguridad.Empresa,
+	primary key(IdUsuario,IdEmpresa)
+)
+go
+
+
 /*MODULO*/
 create table  Seguridad.Modulo
 (
@@ -775,20 +776,6 @@ create table  Seguridad.Menu
 	 IdEstado			int					references Seguridad.Estado,
 )
 go
-
-/*MENU POR EMPRESA*/
-create table Seguridad.MenuPorEmpresa
-(
-	 IdEmpresa					int				references Seguridad.Empresa on delete cascade,
-	 IdMenu						int				references Seguridad.Menu,
-	 NombreAsamblyPorEmpresa    varchar  (200),
-	 NomFormularioPorEmpresa    varchar  (200), 
-	 IdEstado					int				references Seguridad.Estado,
-	 primary key(IdMenu,IdEmpresa)
-)
-go
-
-
 
 
 create table Seguridad.Horario
@@ -1444,240 +1431,289 @@ foreign key (IdPercha) references Inventario.Percha,
 go
 
 /************************MODULO DE FACTURACION INTEGRACION********************/
+CREATE TABLE Facturacion.FormaPago
+(
+IdEmpresa int NOT NULL,
+idUsuario int NOT NULL,
+IdFormaPago int NOT NULL,
+Descripcion varchar (250) NULL,
+idEstado int NOT NULL,
+primary key(IdFormaPago),	
+foreign key (idEmpresa) references Seguridad.Empresa,
+foreign key (idUsuario) references Seguridad.Usuario,
+foreign key (idEstado) references Seguridad.Estado
+)
+GO
+
+CREATE TABLE Facturacion.ClienteDefactura
+(
+IdEmpresa int NOT NULL,
+idUsuario int NOT NULL,
+IdNumeroCliente int NOT NULL,
+Identificacion int NOT NULL,
+Fecha	date NOT NULL,
+NombreRazonSocial varchar(50) NOT NULL,
+Apellido varchar(50) NULL,
+FechaNacimiento date NULL,
+Genero varchar(10) NULL,
+Direccion varchar(100) NOT NULL,
+Telefono int NOT NULL,
+Celular int NOT NULL,
+CorreoElectronico varchar(50) NULL,
+idEstado int NOT NULL,
+primary key(IdNumeroCliente),	
+foreign key (idEmpresa) references Seguridad.Empresa,
+foreign key (idUsuario) references Seguridad.Usuario,
+foreign key (idEstado) references Seguridad.Estado
+)
+GO
 
 CREATE TABLE Facturacion.Cotizacion
 (
-	IdEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	IdNumeroCotizacion 		int NOT NULL,
-	FormaPago 			    varchar(150) NOT NULL,/*Desvinculada de CXP.FormaPago*/
-	idCliente 				int NOT NULL,
-	Fecha					date NULL,
-	PorcentajeEntrada		money NULL,
-	ValorEntrada			money NULL,
-	EntradaMinimaRequerida	money NULL,
-	ValorCancelar			money NULL,
-	FechaInicialPago		date NULL,
-	FechaFinalPago			date NULL,
-	Seguro					bit NULL,
-	idEstado 				int NOT NULL,
-	primary key(IdNumeroCotizacion),	
-	foreign key (idCliente) references RecursosHumanos.Persona,
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado
-) 
+IdEmpresa int NOT NULL,
+idUsuario int NOT NULL,
+IdNumeroCotizacion int NOT NULL,
+IdFormaPago int NOT NULL,/*Desvinculada de CXP.FormaPago*/
+IdNumeroCliente int NOT NULL,
+Fecha	date NULL,
+PorcentajeEntrada	money NULL,
+ValorEntrada	money NULL,
+EntradaMinimaRequerida	money NULL,
+ValorCancelar	money NULL,
+FechaInicialPago	date NULL,
+FechaFinalPago	date NULL,
+Seguro	bit NULL,
+idEstado int NOT NULL,
+primary key(IdNumeroCotizacion),	
+foreign key (IdNumeroCliente) references Facturacion.ClienteDeFactura,
+foreign key (IdFormaPago) references Facturacion.FormaPago,
+foreign key (idEmpresa) references Seguridad.Empresa,
+foreign key (idUsuario) references Seguridad.Usuario,
+foreign key (idEstado) references Seguridad.Estado
+)
 GO
 
 CREATE TABLE Facturacion.Promocion
 (
-	IdEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	IdPromocion 			int NOT NULL,
-	descripcion				varchar(50),
-	FechaInicio				date ,
-	FechaFin				date NULL,
-	tipoPromocion			varchar(50) NULL,
-	pordescuento			decimal(18, 2) NULL,
-	idEstado 				int NOT NULL,
-	primary key(IdPromocion),
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado 
-) 
+IdEmpresa int NOT NULL,
+idUsuario int NOT NULL,
+IdPromocion int NOT NULL,
+descripcion	varchar(50),
+FechaInicio	date NULL,
+FechaFin	date NULL,
+tipoPromocion	varchar(50) NULL,
+pordescuento	decimal(18, 2) NULL,
+idEstado int NOT NULL,
+primary key(IdPromocion),
+foreign key (idEmpresa) references Seguridad.Empresa,
+foreign key (idUsuario) references Seguridad.Usuario,
+foreign key (idEstado) references Seguridad.Estado
+)
 GO
 
 CREATE TABLE Facturacion.PorcentajeComision
 (
-	IdEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	IdNumeroPorcComision 	int NOT NULL,
-	Fecha					date NULL,
-	descripcion				varchar(100) NULL,
-	FormaPago 				varchar(150) NOT NULL,/*Desvinculada de CXP.FormaPago*/
-	Porcentaje				money NULL,
-	MontoVenta				money NULL,
-	idEstado 				int NOT NULL,
-	primary key(IdNumeroPorcComision),
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado
-) 
+IdEmpresa int NOT NULL,
+idUsuario int NOT NULL,
+IdNumeroPorcComision int NOT NULL,
+Fecha	date NULL,
+descripcion	varchar(100) NULL,
+IdFormaPago int NOT NULL,/*Desvinculada de CXP.FormaPago*/
+Porcentaje	money NULL,
+MontoVenta	money NULL,
+idEstado int NOT NULL,
+primary key(IdNumeroPorcComision),
+foreign key (IdFormaPago) references Facturacion.FormaPago,
+foreign key (idEmpresa) references Seguridad.Empresa,
+foreign key (idUsuario) references Seguridad.Usuario,
+foreign key (idEstado) references Seguridad.Estado
+)
 GO
+
 
 CREATE TABLE Facturacion.GuiaRemision
 (
-	IdEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	IdNumeroGuiaRemision 	int NOT NULL,
-	FechaEmision			date NULL,
-	SitioSalida				varchar(50) NULL,
-	Sitiollegada			varchar(50) NULL,
-	FechaTraslado			date NULL,
-	IdPesonaNatural 		int NOT NULL,
-	idEstado 				int NOT NULL,
-	primary key(IdNumeroGuiaRemision),
-	foreign key (IdPesonaNatural) references RecursosHumanos.Persona,
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado
-) 
+IdEmpresa int NOT NULL,
+idUsuario int NOT NULL,
+IdNumeroGuiaRemision int NOT NULL,
+FechaEmision	date NULL,
+SitioSalida	varchar(50) NULL,
+Sitiollegada	varchar(50) NULL,
+FechaTraslado	date NULL,
+IdPesonaNatural int NOT NULL,
+idEstado int NOT NULL,
+primary key(IdNumeroGuiaRemision),
+foreign key (IdPesonaNatural) references RecursosHumanos.Persona,
+foreign key (idEmpresa) references Seguridad.Empresa,
+foreign key (idUsuario) references Seguridad.Usuario,
+foreign key (idEstado) references Seguridad.Estado
+)
 GO
 
 CREATE TABLE Facturacion.Factura
 (
-	IdEmpresa 				int NOT NULL,
-	cabecera_comprobante	numeric (4),
-	idUsuario 				int NOT NULL,
-	IdNumeroFactura 		int NOT NULL,
-	IdNumeroCotizacion 		int NULL,
-	IdPromocion 			int NULL,
-	FormaPago 				varchar(150) NOT NULL,/*Desvinculada de CXP.FormaPago*/
-	idCliente 				int NULL,
-	Fecha					date NULL,
-	ValorEntrada			money NULL,
-	NumeroCuotaMensual 		int NULL,
-	TotalPagar				money NULL,
-	idEstado 				int NOT NULL,
-	primary key(IdNumeroFactura),	
-	foreign key (IdEmpresa,cabecera_comprobante)references Contabilidad.CabeceraComprobante,
-	foreign key (idCliente) references RecursosHumanos.Persona,
-	foreign key (IdNumeroCotizacion) references Facturacion.Cotizacion,
-	foreign key (IdPromocion) references Facturacion.Promocion,	
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado
-) 
+IdEmpresa int NOT NULL,
+cabecera_comprobante	numeric (4),
+idUsuario int NOT NULL,
+IdNumeroFactura int NOT NULL,
+IdNumeroCotizacion int NULL,
+IdPromocion int NULL,
+IdFormaPago int NOT NULL,/*Desvinculada de CXP.FormaPago*/
+IdNumeroCliente int NULL,
+Fecha	date NULL,
+ValorEntrada	money NULL,
+NumeroCuotaMensual int NULL,
+Subtotal money NULL,
+Iva money NULL,
+Ice money NULL,
+Descuento money NULL,
+TotalPagar	money NULL,
+idEstado int NOT NULL,
+primary key(IdNumeroFactura),
+foreign key (IdFormaPago) references Facturacion.FormaPago,	
+foreign key (IdEmpresa,cabecera_comprobante)references Contabilidad.CabeceraComprobante,
+foreign key (IdNumeroCliente) references Facturacion.ClienteDeFactura,
+foreign key (IdNumeroCotizacion) references Facturacion.Cotizacion,
+foreign key (IdPromocion) references Facturacion.Promocion,	
+foreign key (idUsuario) references Seguridad.Usuario,
+foreign key (idEstado) references Seguridad.Estado
+)
 GO
 
 CREATE TABLE Facturacion.Comision
 (
-	IdEmpresa 				int NOT NULL,
-	cabecera_comprobante	numeric (4),
-	idUsuario 				int NOT NULL,
-	IdNumeroComision 		int NOT NULL,
-	FechaInicial			date NULL,
-	FechaFinal				date NULL,
-	IdNumeroPorcComision 	int NOT NULL,
-	MontoVenta				money NULL,
-	idEstado 				int NOT NULL,
-	primary key(IdNumeroComision),
-	foreign key (IdNumeroPorcComision) references Facturacion.PorcentajeComision,
-	foreign key (IdEmpresa,cabecera_comprobante)references Contabilidad.CabeceraComprobante,	
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado
+IdEmpresa int NOT NULL,
+cabecera_comprobante	numeric (4),
+idUsuario int NOT NULL,
+IdNumeroComision int NOT NULL,
+FechaInicial	date NULL,
+FechaFinal	date NULL,
+IdNumeroPorcComision int NOT NULL,
+MontoVenta	money NULL,
+idEstado int NOT NULL,
+primary key(IdNumeroComision),
+foreign key (IdNumeroPorcComision) references Facturacion.PorcentajeComision,
+foreign key (IdEmpresa,cabecera_comprobante)references Contabilidad.CabeceraComprobante,	
+foreign key (idUsuario) references Seguridad.Usuario,
+foreign key (idEstado) references Seguridad.Estado
 )
 GO
 
 CREATE TABLE Facturacion.CotizacionDet
 (
-	IdEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	Linea 					int NOT NULL,
-	IdNumeroCotizacion 		int NOT NULL,
-	IdArticulo 				int NULL,
-	CuotaMensual 			int NULL,
-	Interes					money NULL,
-	FechaPago				date NULL,
-	FechaMaximaPago			date NULL,
-	idEstado				int NOT NULL,
-	primary key(Linea,IdNumeroCotizacion),
-	foreign key (IdNumeroCotizacion) references Facturacion.Cotizacion,
-	foreign key(IdArticulo, IdEmpresa) references Inventario.Articulo,	
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado 
-) 
+IdEmpresa int NOT NULL,
+idUsuario int NOT NULL,
+Linea int NOT NULL,
+IdNumeroCotizacion int NOT NULL,
+IdArticulo int NULL,
+CuotaMensual int NULL,
+Interes	money NULL,
+FechaPago	date NULL,
+FechaMaximaPago	date NULL,
+precio money NULL,
+cantidad int NULL,
+idEstado	int NOT NULL,
+primary key(Linea,IdNumeroCotizacion),
+foreign key (IdNumeroCotizacion) references Facturacion.Cotizacion,
+foreign key(IdArticulo, IdEmpresa) references Inventario.Articulo,	
+foreign key (idUsuario) references Seguridad.Usuario,
+foreign key (idEstado) references Seguridad.Estado
+)
 GO
 
 CREATE TABLE Facturacion.ComisionDet
 (
-	IdEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	Linea 					int NOT NULL,
-	IdNumeroComision 		int NOT NULL,
-	idEmpleado 				int NULL,
-	IdNumeroFactura 		int NULL,
-	MontoComision			money NULL,
-	FechaPago				date NULL,
-	idEstado 				int NOT NULL,
-	primary key(Linea,IdNumeroComision),
-	foreign key (IdNumeroComision) references Facturacion.Comision,
-	foreign key (IdNumeroFactura) references Facturacion.Factura,	
-	foreign key (IdEmpleado,idempresa) references RecursosHumanos.Empleado,
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado
-) 
+IdEmpresa int NOT NULL,
+idUsuario int NOT NULL,
+Linea int NOT NULL,
+IdNumeroComision int NOT NULL,
+idEmpleado int NULL,
+IdNumeroFactura int NULL,
+MontoComision	money NULL,
+FechaPago	date NULL,
+idEstado int NOT NULL,
+primary key(Linea,IdNumeroComision),
+foreign key (IdNumeroComision) references Facturacion.Comision,
+foreign key (IdNumeroFactura) references Facturacion.Factura,	
+foreign key (IdEmpleado,idempresa) references RecursosHumanos.Empleado,
+foreign key (idEmpresa) references Seguridad.Empresa,
+foreign key (idUsuario) references Seguridad.Usuario,
+foreign key (idEstado) references Seguridad.Estado
+)
 GO
 
 CREATE TABLE Facturacion.DevolucionVenta
 (
-	IdEmpresa 				int NOT NULL,
-	cabecera_comprobante	numeric (4),
-	idUsuario 				int NOT NULL,
-	IdNumeroDevolucion 		int NOT NULL,
-	IdNumeroFactura 		int NULL,
-	Fecha					date NULL,
-	idEstado 				int NOT NULL,
-	primary key(IdNumeroDevolucion),
-	foreign key (IdNumeroFactura) references Facturacion.Factura,	
-	foreign key (IdEmpresa,cabecera_comprobante)references Contabilidad.CabeceraComprobante,	
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado
-) 
+IdEmpresa int NOT NULL,
+cabecera_comprobante	numeric (4),
+idUsuario int NOT NULL,
+IdNumeroDevolucion int NOT NULL,
+IdNumeroFactura int NULL,
+Fecha	date NULL,
+idEstado int NOT NULL,
+primary key(IdNumeroDevolucion),
+foreign key (IdNumeroFactura) references Facturacion.Factura,	
+foreign key (IdEmpresa,cabecera_comprobante)references Contabilidad.CabeceraComprobante,	
+foreign key (idUsuario) references Seguridad.Usuario,
+foreign key (idEstado) references Seguridad.Estado
+)
 GO
 
 CREATE TABLE Facturacion.GuiaRemisionDet
 (
-	IdEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	Linea 					int NOT NULL,
-	IdNumeroGuiaRemision 	int NOT NULL,
-	IdNumeroFactura 		int NULL,
-	FechaEntrega			date NULL,
-	idEstado 				int NOT NULL, 
-	primary key(Linea,IdNumeroGuiaRemision),
-	foreign key (IdNumeroFactura) references Facturacion.Factura,	
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado
-) 
+IdEmpresa int NOT NULL,
+idUsuario int NOT NULL,
+Linea int NOT NULL,
+IdNumeroGuiaRemision int NOT NULL,
+IdNumeroFactura int NULL,
+FechaEntrega	date NULL,
+idEstado int NOT NULL,
+primary key(Linea,IdNumeroGuiaRemision),
+foreign key (IdNumeroFactura) references Facturacion.Factura,	
+foreign key (idEmpresa) references Seguridad.Empresa,
+foreign key (idUsuario) references Seguridad.Usuario,
+foreign key (idEstado) references Seguridad.Estado
+)
 GO
 
 CREATE TABLE Facturacion.FacturaDet
 (
-	IdEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	Linea 					int NOT NULL,
-	IdNumeroFactura 		int NOT NULL,
-	IdArticulo 				int NULL,
-	CuotaMensual			money NULL,
-	Interes					money NULL,
-	FechaPago				date NULL,
-	FechaMaximaPago			date NULL,
-	idEstado				int NOT NULL,
-	primary key(Linea,IdNumeroFactura),
-	foreign key (IdNumeroFactura) references Facturacion.Factura,	
-	foreign key(IdArticulo, IdEmpresa) references Inventario.Articulo,	
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado 
-) 
+IdEmpresa int NOT NULL,
+idUsuario int NOT NULL,
+Linea int NOT NULL,
+IdNumeroFactura int NOT NULL,
+IdArticulo int NULL,
+CuotaMensual	money NULL,
+Interes	money NULL,
+FechaPago	date NULL,
+FechaMaximaPago	date NULL,
+precio money NULL,
+cantidad int NULL,
+idEstado	int NOT NULL,
+primary key(Linea,IdNumeroFactura),
+foreign key (IdNumeroFactura) references Facturacion.Factura,	
+foreign key(IdArticulo, IdEmpresa) references Inventario.Articulo,	
+foreign key (idUsuario) references Seguridad.Usuario,
+foreign key (idEstado) references Seguridad.Estado
+)
 GO
 
 CREATE TABLE Facturacion.DevolucionDet
 (
-	IdEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	Linea 					int NOT NULL,
-	IdNumeroDevolucion 		int NOT NULL,
-	IdArticulo 				int NULL,
-	Observacion				varchar(300) NULL,
-	idEstado				int NOT NULL,
-	primary key(Linea,IdNumeroDevolucion),
-	foreign key (IdNumeroDevolucion) references Facturacion.DevolucionVenta,	
-	foreign key(IdArticulo, IdEmpresa) references Inventario.Articulo,	
-	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idEstado) references Seguridad.Estado 
-) 
+IdEmpresa int NOT NULL,
+idUsuario int NOT NULL,
+Linea int NOT NULL,
+IdNumeroDevolucion int NOT NULL,
+IdArticulo int NULL,
+Observacion	varchar(300) NULL,
+cantidad int NULL,
+idEstado	int NOT NULL,
+primary key(Linea,IdNumeroDevolucion),
+foreign key (IdNumeroDevolucion) references Facturacion.DevolucionVenta,	
+foreign key(IdArticulo, IdEmpresa) references Inventario.Articulo,	
+foreign key (idUsuario) references Seguridad.Usuario,
+foreign key (idEstado) references Seguridad.Estado
+)
 GO
 
 /****************** Cuentas por cobrar **********************/
