@@ -2,7 +2,7 @@ use TECA
 go
 --truncate table Seguridad.Estado
 --go
-/******************ESTADO********************/
+/******************ESTADO************************/
 insert into Seguridad.Estado values(1,'Activa')
 go
 insert into Seguridad.Estado values(2,'Inactiva')
