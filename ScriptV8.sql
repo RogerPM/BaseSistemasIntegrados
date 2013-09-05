@@ -2266,8 +2266,7 @@ create table CuentaxPagar.PagoCab
 (
 	NumPago 				int not null,
 	FechaIngreso			date not null,
-	NumOrdenPago 			int not null,
-	TipoPago				bit not null,
+	NumOrdenPago 			int null,
 	TotalPagar				numeric(10,0) not null,
 	IdUsuario 				int not null,
 	IdEmpresa 				int not null,
