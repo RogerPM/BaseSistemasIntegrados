@@ -972,14 +972,16 @@ go
 create table Contabilidad.ModeloAsiento
 (
 	IdEmpresa 				int references Seguridad.Empresa,
-	numero					varchar(4),
+	modulo					int references Seguridad.Modulo,
 	IdTransaccion 			int references Contabilidad.TipoTransaccion,
+	secuencia				int , 
 	descripcion				varchar(50) not null,
 	debe					varchar(50),
 	haber					varchar(50),
 	IdUsuario 				int,
 	FechaModificacion		datetime, 
-	PRIMARY KEY(IdEmpresa,numero,IdTransaccion)
+	PRIMARY KEY(IdEmpresa,secuencia,IdTransaccion)
+	
 )
 go
 
