@@ -3072,8 +3072,10 @@ go
 create view Seguridad.UsuarioInformacion as
 SELECT distinct usu.IdUsuario, usu.NombreUsuario, usu.Contrasena, usu.IdEstado, est.Descripcion, emp.IdEmpresa, emp.NombreComercial,
 					emp.RazonSocial, emp.Ruc
-FROM Seguridad.Usuario usu, Seguridad.Empresa emp, Seguridad.Estado est
-WHERE usu.IdEstado = est.IdEstado
+FROM Seguridad.Usuario usu, Seguridad.Empresa emp, Seguridad.UsuarioPorEmpresa uxe, Seguridad.Estado est
+WHERE uxe.IdEmpresa = emp.IdEmpresa
+AND uxe.IdUsuario = usu.IdUsuario
+AND usu.IdEstado = est.IdEstado
 go
                  
 -- view in disuse
