@@ -786,16 +786,16 @@ create table  Seguridad.Menu
 go
 
 /*MENU POR EMPRESA*/
-create table Seguridad.MenuPorEmpresa
-(
-	 IdEmpresa					int				references Seguridad.Empresa on delete cascade,
-	 IdMenu						int				references Seguridad.Menu,
-	 NombreAsamblyPorEmpresa    varchar  (200),
-	 NomFormularioPorEmpresa    varchar  (200), 
-	 IdEstado					int				references Seguridad.Estado,
-	 primary key(IdMenu,IdEmpresa)
-)
-go
+--create table Seguridad.MenuPorEmpresa
+--(
+--	 IdEmpresa					int				references Seguridad.Empresa on delete cascade,
+--	 IdMenu						int				references Seguridad.Menu,
+--	 NombreAsamblyPorEmpresa    varchar  (200),
+--	 NomFormularioPorEmpresa    varchar  (200), 
+--	 IdEstado					int				references Seguridad.Estado,
+--	 primary key(IdMenu,IdEmpresa)
+--)
+--go
 
 create table Seguridad.Horario
 (
