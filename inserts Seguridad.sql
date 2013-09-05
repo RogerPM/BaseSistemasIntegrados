@@ -146,24 +146,24 @@ values (117,'compras2013','compras',1)
 
 --truncate table Seguridad.UsuarioPorEmpresa
 /*****************USUARIO POR EMPRESA***********/
---insert into Seguridad.UsuarioPorEmpresa values(1,1,'a')
---go
---insert into Seguridad.UsuarioPorEmpresa values(11,1,'a')
---go
---insert into Seguridad.UsuarioPorEmpresa values(21,1,'a')
---go
---insert into Seguridad.UsuarioPorEmpresa values(31,1,'a')
---go
---insert into Seguridad.UsuarioPorEmpresa values(41,1,'a')
---go
---insert into Seguridad.UsuarioPorEmpresa values(51,2,'a')
---go
---insert into Seguridad.UsuarioPorEmpresa values(61,1,'a')
---go
---insert into Seguridad.UsuarioPorEmpresa values(31,3,'a')
---go
---insert into Seguridad.UsuarioPorEmpresa values(31,4,'a')
---go
+insert into Seguridad.UsuarioPorEmpresa values(1,1,'a')
+go
+insert into Seguridad.UsuarioPorEmpresa values(11,1,'a')
+go
+insert into Seguridad.UsuarioPorEmpresa values(21,1,'a')
+go
+insert into Seguridad.UsuarioPorEmpresa values(31,1,'a')
+go
+insert into Seguridad.UsuarioPorEmpresa values(41,1,'a')
+go
+insert into Seguridad.UsuarioPorEmpresa values(51,2,'a')
+go
+insert into Seguridad.UsuarioPorEmpresa values(61,1,'a')
+go
+insert into Seguridad.UsuarioPorEmpresa values(31,3,'a')
+go
+insert into Seguridad.UsuarioPorEmpresa values(31,4,'a')
+go
 
 
 --truncate table Seguridad.Modulo
