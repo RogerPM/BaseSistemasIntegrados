@@ -540,17 +540,16 @@ go
 create table RecursosHumanos.NominaCab
 (
 	NumNomina				int not null,
-	FechaEmision			date not null,
+	Fecha					date not null,
 	FechaModificacion		datetime,
-	Total					numeric(10,2) not null,
-	IdEmpleado				int not null,
+	Periodo					int not null,
+	Total					money not null,
 	IdEstado				int not null,
 	IdEmpresa				int not null,
 	Observacion				varchar(50) null,
-	foreign key (IdEmpleado) references RecursosHumanos.Persona,
-
+	
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	primary key (NumNomina, IdEmpresa)
+	primary key (NumNomina,IdEmpresa)
 )
 go
 
@@ -559,13 +558,16 @@ create table RecursosHumanos.NominaDet
 (
 	NumLinea				int not null,
 	NumNomina				int not null,
-	IdBeneficios			int not null,
-	IdMulta					int not null,
+	IdPersona				int not null,
+	SueldoNominal			money not null,
+	SueldoGanado			money not null,
+	Iess					money not null,
+	Prestamo				money null,
+	Anticipo				money null,
+	ValorLiquido			money not null,
 	IdEmpresa				int not null,
-	foreign key (IdMulta) references RecursosHumanos.Multa,
-	foreign key (IdBeneficios) references RecursosHumanos.Beneficios,
 	foreign key (NumNomina,IdEmpresa)references RecursosHumanos.NominaCab,
-	primary key (NumLinea, IdEmpresa)
+	primary key (NumLinea)
 )
 go
 
@@ -583,6 +585,7 @@ create table RecursosHumanos.TipoContrato
 )
 go
 
+/*CONTRATO*/
 create table RecursosHumanos.Contrato
 (
 	NumContrato				int not null,
@@ -732,7 +735,12 @@ create table RecursosHumanos.TrabajoDiarioDet
 	NumLinea				int not null,
 	NumTrabajo				int not null,
 	IdPersona				int not null,
-	Asistencia				char not null,
+	HoraEntrada				varchar(50) not null,
+	HoraSalida				varchar(50) not null,
+	HoraTrabajada			int not null,
+	HoraExtraM				int null,
+	HoraExtraT				int null,
+	HoraRango				int not null,
 	IdEmpresa				int not null
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (NumTrabajo,IdEmpresa)references RecursosHumanos.TrabajoDiarioCab,
