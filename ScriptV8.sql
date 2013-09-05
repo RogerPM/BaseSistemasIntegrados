@@ -1123,30 +1123,7 @@ foreign key (IdEstado) references Seguridad.Estado,
 )
 go
 
-create table Inventario.IngresoEgresoCab
-(
-IdEmpresa	int not null,
-NroMovimiento	int,
-TipoMovimiento	char(1),
-FechaMovimiento	date,
-FechaModificacion datetime,
-NroDocumento	numeric(10,0),
-IdTransaccion	int,
-TipoDocumento	numeric(10,0),
-IdOrdenCompra	int,
-IdBodega	int,
-TotalPagar	numeric(7,2),
-IdUsuario	int,
-Observacion	varchar(150),
-IdEstado	int,
-primary key(IdEmpresa,NroMovimiento),
-foreign key(IdOrdenCompra,IdEmpresa)references Compras.OrdenCompra,
-foreign key(IdEstado)references Seguridad.Estado,
-foreign key(IdTransaccion)references Contabilidad.TipoTransaccion,
-foreign key(IdBodega,IdEmpresa)references Inventario.Bodega,
-foreign key(IdUsuario)references Seguridad.Usuario
-)
- go
+
  
  
 create table Inventario.UnidadMedida
@@ -1397,28 +1374,15 @@ foreign key(IdArticulo, IdEmpresa) references Inventario.Articulo,
 )
 go
 
-
-create table Inventario.IngresoEgresoDet
+create table Inventario.TipoMovimiento
 (
 IdEmpresa	int,
-IdTransaccion	int,
-NroMovimiento	int not null,
-IdArticulo	int,
-IdGrupo	int,
-IdSubgrupo int,
-IdUnidadMedida	int,
-Cantidad	int,
-Costo	numeric(5,2),
-IdResponsable	int,
-Subtotal	numeric(5,2),
-ValorIVA	numeric(5,2),
-primary key (NroMovimiento),
-foreign key(IdTransaccion)references Contabilidad.TipoTransaccion,
-foreign key(IdArticulo,IdEmpresa)references Inventario.Articulo,
-foreign key(IdGrupo)references Inventario.Grupo,
---foreign key (IdSubgrupo)references ActivoFijo.Subgrupo,
-foreign key(IdUnidadMedida)references Inventario.UnidadMedida,
-foreign key(IdResponsable)references RecursosHumanos.Persona,
+IdTipoMovimiento	int,
+Descripcion	varchar(25),
+IdEstado	int,
+primary key (IdTipoMovimiento),
+foreign key (IdEmpresa) references Seguridad.Empresa,
+foreign key (IdEstado) references Seguridad.Estado,
 )
 go
 
@@ -1723,6 +1687,56 @@ foreign key (idUsuario) references Seguridad.Usuario,
 foreign key (idEstado) references Seguridad.Estado
 )
 GO
+
+
+create table Inventario.IngresoEgresoCab
+(
+IdEmpresa	int not null,
+NroMovimiento	int,
+IdTipoMovimiento	int,
+FechaMovimiento	date,
+IdOrdenCompra	int,
+IdMotivo		int,
+IdBodega	int,
+IdResponsable	int,
+TotalPagar	numeric(7,2),
+Observacion	varchar(150),
+IdUsuario	int,
+IdEstado	int,
+primary key(IdEmpresa,NroMovimiento),
+foreign key(IdOrdenCompra,IdEmpresa)references Compras.OrdenCompra,
+foreign key (IdTipoMovimiento) references Inventario.TipoMovimiento,
+foreign key(IdEstado)references Seguridad.Estado,
+foreign key (IdMotivo) references Inventario.Motivo,
+foreign key(IdBodega,IdEmpresa)references Inventario.Bodega,
+foreign key(IdResponsable)references RecursosHumanos.Persona,
+foreign key(IdUsuario)references Seguridad.Usuario
+)
+ go
+ 
+ create table Inventario.IngresoEgresoDet
+(
+IdEmpresa	int,
+NroMovimiento	int not null,
+numero int not null,
+IdTipoArticulo int,
+IdArticulo	int,
+IdGrupo	int,
+IdMarca int,
+CantidadPedida	int,
+CantidadLlegada int,
+Costo	numeric(5,2),
+Subtotal	numeric(5,2),
+ValorIVA	numeric(5,2),
+ValorTotal	numeric(5,2),
+primary key (NroMovimiento, numero),
+foreign key(IdTipoArticulo)references Inventario.TipoArticulo,
+foreign key (IdEmpresa, NroMovimiento) references Inventario.IngresoEgresoCab,
+foreign key(IdArticulo,IdEmpresa)references Inventario.Articulo,
+foreign key(IdGrupo)references Inventario.Grupo,
+foreign key(IdMarca)references Inventario.Marca,
+)
+go
 
 /****************** Cuentas por cobrar **********************/
 /************************************************************/
