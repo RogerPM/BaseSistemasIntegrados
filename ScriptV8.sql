@@ -1747,7 +1747,7 @@ foreign key(IdTipoArticulo)references Inventario.TipoArticulo,
 foreign key (IdEmpresa, NroMovimiento) references Inventario.IngresoEgresoCab,
 foreign key(IdArticulo,IdEmpresa)references Inventario.Articulo,
 foreign key(IdGrupo)references Inventario.Grupo,
-foreign key(IdMarca)references Inventario.Marca,
+foreign key(IdPercha)references Inventario.Percha,
 )
 go
 
