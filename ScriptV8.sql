@@ -1881,22 +1881,25 @@ CREATE TABLE CuentasPorCobrar.Inversion
 	idTipoInversion 		int NOT NULL,
 	Tiempo 					int NOT NULL,
 	idUnidadTiempo 			int NOT NULL,
+	idBanco					int,
 	Valor					money NOT NULL,
 	Porcentaje				numeric(18, 0) NOT NULL,
+	Ganancia				decimal(18, 2),
 	Fecha					date NOT NULL,
 	FechaModificacion		datetime, 
 	FechaInicio				date NOT NULL,
 	FechaFinal				date NOT NULL,
-	idEstado				int NOT NULL,
+	idEstado				varchar(1) NOT NULL,
 	primary key (idInversion),
 	foreign key (idEmpresa) references Seguridad.Empresa,
 	foreign key (idUsuario) references Seguridad.Usuario,
 	foreign key (idEntidad) references RecursosHumanos.Persona,
 	foreign key (idTipoInversion) references CuentasPorCobrar.TipoInversion,
 	foreign key (idUnidadTiempo) references CuentasPorCobrar.UnidadTiempo,
-	foreign key (idEstado) references Seguridad.Estado
+	foreign key (idBanco) references CuentasPorCobrar.Banco
  )
  go
+
  
 CREATE TABLE CuentasPorCobrar.AperturaCaja
 (
