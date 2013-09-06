@@ -127,7 +127,7 @@ insert Seguridad.Imagen values (2, 'TECA y ...', 0xFFD8FFE000104A464946000101010
 go
 --truncate table Seguridad.Usuario
 /********************USUARIO*******************/
-insert into Seguridad.Usuario values(1,'Admin','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,1,1)
+insert into Seguridad.Usuario values(71,'Admin','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,1,1)
 go
 insert into Seguridad.Usuario values(11,'lquinter','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,1,2)
 go
@@ -143,10 +143,11 @@ insert into Seguridad.Usuario values(61,'hecmar','2Kn1OBOdBjiSr8Ey6Jc2uwffp/8=',
 go
 insert into Seguridad.Usuario (IdUsuario,NombreUsuario,Contrasena,IdEstado)
 values (117,'compras2013','compras',1)
+go
 
 --truncate table Seguridad.UsuarioPorEmpresa
 /*****************USUARIO POR EMPRESA***********/
-insert into Seguridad.UsuarioPorEmpresa values(1,1,'a')
+insert into Seguridad.UsuarioPorEmpresa values(71,1,'a')
 go
 insert into Seguridad.UsuarioPorEmpresa values(11,1,'a')
 go
