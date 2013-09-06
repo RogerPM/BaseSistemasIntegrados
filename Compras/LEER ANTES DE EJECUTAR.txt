@@ -1,0 +1,3 @@
+El Script de los inserts contiene todos los inserts necesarios para que el modulo de Compras trabaje correctamente.
+Lo unico que hay que hacer es ejecutarlo por partes y revisar de no meter datos duplicados en tablas maestras,
+dependiendo los registros que uds tengan en cada tabla.

@@ -1083,7 +1083,7 @@ CREATE TABLE Compras.OrdenCompra  --ok
     foreign key(IdUsuario)references Seguridad.Usuario,
 	foreign key (IdEstado) references Compras.Estado,
 	foreign key(idProveedor)references Compras.Proveedor,
-	foreign key (idEmpresa,NumeroCotizacion) references Compras.Cotizacion,
+	foreign key (NumeroCotizacion, idEmpresa) references Compras.Cotizacion,
 	primary key(IdOrdenCompra,IdEmpresa)
 )
 GO
@@ -2866,7 +2866,7 @@ Create table Compras.NotaDebitoDet
 )
 go
 
-PRINT 'de Compras: Listo las tablas notadebito y compras'
+PRINT 'De Compras: Listo las tablas notadebito y compras, Actualizacion de Tablas, no afectan otros modulos.'
 
 /**************************TALLER************************/
 
