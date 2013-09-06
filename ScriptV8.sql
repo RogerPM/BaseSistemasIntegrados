@@ -2454,7 +2454,7 @@ create table ActivoFijo.DepreciacionDet
 	IdCabecera 				  int,
 	Secuencia_DepreciacionDet int,
 	IdActivoFijo 		      int   null,
-	Periodo                   date null,
+	Periodo                   int null,
 	IdEmpresa				  int   null,
 	DepreAnual				  numeric(10,2)   null,--campos nuevos insertados*******
 	DepreAcumulada		      numeric(10,2)   null,--campos nuevos insertados*******
