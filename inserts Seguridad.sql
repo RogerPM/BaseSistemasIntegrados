@@ -72,7 +72,7 @@ insert into RecursosHumanos.Persona values (79,091010101,1,1,'Activo Fijo','SA',
 go
 insert into RecursosHumanos.Persona values (80,09111111,1,1,'Taller','SA',null,'m',1,'Villamil Playas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (11,0911212,1,1,'Luis Miguel','Quintero',null,'m',1,'Bosque cerca de guayaquil, llegando al templo de Barcelona',0994996660, 0994996660, 0994996660, 0994996660,'lquinter@espol.edu.ec',1)
+insert into RecursosHumanos.Persona values (11,0930654125,1,1,'Luis Miguel','Quintero',null,'m',1,'Bosque cerca de guayaquil, llegando al templo de Barcelona',0994996660, 0994996660, 0994996660, 0994996660,'lquinter@espol.edu.ec',1)
 go
 insert into RecursosHumanos.Persona values (21,0921331,2,1,'Roberto Enrique','Arias',null,'m',1,'geranios a un paso del fin del mundo', 0994996660, 0994996660, 0994996660, 0994996660,'enriques@gmail.com',1)
 go
