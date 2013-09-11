@@ -47,7 +47,7 @@ insert into RecursosHumanos.TipoIdentificacion values (2,'Ruc',1,1)
 go
 insert into RecursosHumanos.TipoIdentificacion values (3,'Pasaporte',1,1)
 go
-insert into RecursosHumanos.TipoIdentificacion values (4,'carnet',1,1)
+insert into RecursosHumanos.TipoIdentificacion values (4,'Carnet',1,1)
 go
 
 
@@ -70,19 +70,19 @@ insert into RecursosHumanos.Persona values (78,099999999,1,1,'Recursos Humanos',
 go
 insert into RecursosHumanos.Persona values (79,091010101,1,1,'Activo Fijo','SA',null,'m',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (80,09111111,1,1,'Taller','SA',null,'m',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
+insert into RecursosHumanos.Persona values (80,09111111,1,1,'Taller','SA',null,'m',1,'Villamil Playas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
 insert into RecursosHumanos.Persona values (11,0911212,1,1,'Luis Miguel','Quintero',null,'m',1,'Bosque cerca de guayaquil, llegando al templo de Barcelona',0994996660, 0994996660, 0994996660, 0994996660,'lquinter@espol.edu.ec',1)
 go
-insert into RecursosHumanos.Persona values (21,0921331,2,1,'Roberto Enrique','Arias',null,'m',1,'geranio', 0994996660, 0994996660, 0994996660, 0994996660,'enriques@gmail.com',1)
+insert into RecursosHumanos.Persona values (21,0921331,2,1,'Roberto Enrique','Arias',null,'m',1,'geranios a un paso del fin del mundo', 0994996660, 0994996660, 0994996660, 0994996660,'enriques@gmail.com',1)
 go
 insert into RecursosHumanos.Persona values (31,09141414,1,1,'Roger','Peñafiel',null,'m',1,'a dos cuadras del capwell', 0990144207, 0994996660, 0994996660, 0994996660,'rpenafie@espol.edu.ec',1)
 go
-insert into RecursosHumanos.Persona values (41,09151515,1,1,'Marco','Castro',null,'m',1,'bastion', 0994996660, 0994996660, 0994996660, 0994996660,'macastro@espol.edu.ec',1)
+insert into RecursosHumanos.Persona values (41,09151515,1,1,'Marco','Castro',null,'m',1,'Cdla.Residencial privada cerca de Bastion popular', 0994996660, 0994996660, 0994996660, 0994996660,'macastro@espol.edu.ec',1)
 go
 insert into RecursosHumanos.Persona values (51,091616161,1,1,'Stalin','Vanegas',null,'m',1,'lejos de guayaquil', 0994996660, 0994996660, 0994996660, 0994996660,'info@sandi.com.ec',1)
 go
-insert into RecursosHumanos.Persona values (61,091717171,1,1,'Marcelo','Romero',null,'f',1,'guayacanes', 0994996660, 0994996660, 0994996660, 0994996660,'hecmar@padrino.com',1)
+insert into RecursosHumanos.Persona values (61,091717171,1,1,'Marcelo','Romero',null,'f',1,'Guayacanes', 0994996660, 0994996660, 0994996660, 0994996660,'hecmar@padrino.com',1)
 go
 insert into RecursosHumanos.Persona (IdPersona,Identificacion,IdTipoPersona,IdEmpresa,NombreRazonSocial,
 Apellido,TipoIdentificacion,direccion,TelefonoMovil,TelefonoCasa,mail,IdEstado)
@@ -133,7 +133,7 @@ insert into Seguridad.Usuario values(11,'lquinter','MkiUR45qvk9IJL1Wm0iHnv8383Q=
 go
 insert into Seguridad.Usuario values(21,'rbaria','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,2,2)
 go
-insert into Seguridad.Usuario values(31,'rogerax','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,2,1)
+insert into Seguridad.Usuario values(31,'rogerax','dvFi9R1QfxM/YEuEC4E/tB9k0iQ=',1,2,1)
 go
 insert into Seguridad.Usuario values(41,'macastro','bKVXJkA70wzCRu8X5dZ79Z+SmHU=',1,1,1)
 go
