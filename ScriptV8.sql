@@ -2157,9 +2157,9 @@ go
 create table CuentaxPagar.CuentaPorPagar 
 (
 	NumCuentaPorPagar 		int not null ,
-	NumIngresoEgreso 		int not null,
+	NumIngresoEgreso 		int null,
 	FechaIngreso			date not null,
-	Factura 				int not null,
+	NumeroFactura 			varchar(16) not null,
 	FechaTransaccion		date not null,
 	IdPersona 				int null,
 	IdEmpresaServicio		varchar(13) null,
