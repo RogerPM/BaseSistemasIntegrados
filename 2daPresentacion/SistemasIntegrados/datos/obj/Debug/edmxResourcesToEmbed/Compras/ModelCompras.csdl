@@ -1,0 +1,1001 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CompraModelo" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="CompraEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SubGrupos" EntityType="CompraModelo.SubGrupos" />
+    <EntitySet Name="Compra" EntityType="CompraModelo.Compra" />
+    <EntitySet Name="CompraDet" EntityType="CompraModelo.CompraDet" />
+    <EntitySet Name="Cotizacion" EntityType="CompraModelo.Cotizacion" />
+    <EntitySet Name="CotizacionDet" EntityType="CompraModelo.CotizacionDet" />
+    <EntitySet Name="DevolucionCompra" EntityType="CompraModelo.DevolucionCompra" />
+    <EntitySet Name="DevolucionCompraDet" EntityType="CompraModelo.DevolucionCompraDet" />
+    <EntitySet Name="Estado" EntityType="CompraModelo.Estado" />
+    <EntitySet Name="NotaDebito" EntityType="CompraModelo.NotaDebito" />
+    <EntitySet Name="NotaDebitoDet" EntityType="CompraModelo.NotaDebitoDet" />
+    <EntitySet Name="OrdenCompra" EntityType="CompraModelo.OrdenCompra" />
+    <EntitySet Name="OrdenCompraDet" EntityType="CompraModelo.OrdenCompraDet" />
+    <EntitySet Name="OrdenDespacho" EntityType="CompraModelo.OrdenDespacho" />
+    <EntitySet Name="OrdenDespachoDet" EntityType="CompraModelo.OrdenDespachoDet" />
+    <EntitySet Name="Pedido" EntityType="CompraModelo.Pedido" />
+    <EntitySet Name="PedidoDet" EntityType="CompraModelo.PedidoDet" />
+    <EntitySet Name="Proveedor" EntityType="CompraModelo.Proveedor" />
+    <EntitySet Name="Solicitud" EntityType="CompraModelo.Solicitud" />
+    <EntitySet Name="SolicitudDet" EntityType="CompraModelo.SolicitudDet" />
+    <EntitySet Name="Grupo" EntityType="CompraModelo.Grupo" />
+    <EntitySet Name="Persona" EntityType="CompraModelo.Persona" />
+    <EntitySet Name="Articulo_Vista" EntityType="CompraModelo.Articulo_Vista" />
+    <EntitySet Name="CotizacionCab_Vista" EntityType="CompraModelo.CotizacionCab_Vista" />
+    <EntitySet Name="OrdenCompraCab_Vista" EntityType="CompraModelo.OrdenCompraCab_Vista" />
+    <EntitySet Name="OrdenCompraDetalle_Vista" EntityType="CompraModelo.OrdenCompraDetalle_Vista" />
+    <EntitySet Name="PedidoCabecera_Vista" EntityType="CompraModelo.PedidoCabecera_Vista" />
+    <EntitySet Name="PedidoDetalle_Vista" EntityType="CompraModelo.PedidoDetalle_Vista" />
+    <EntitySet Name="ProveedorDescripcion" EntityType="CompraModelo.ProveedorDescripcion" />
+    <EntitySet Name="SolicitudCab" EntityType="CompraModelo.SolicitudCab" />
+    <EntitySet Name="SolicitudDetalle" EntityType="CompraModelo.SolicitudDetalle" />
+    <EntitySet Name="Vehiculo_Vista" EntityType="CompraModelo.Vehiculo_Vista" />
+    <AssociationSet Name="FK__SubGrupos__IdGru__7167D3BD" Association="CompraModelo.FK__SubGrupos__IdGru__7167D3BD">
+      <End Role="Grupo" EntitySet="Grupo" />
+      <End Role="SubGrupos" EntitySet="SubGrupos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Compra__1881A0DE" Association="CompraModelo.FK__Compra__1881A0DE">
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Compra__idEstado__178D7CA5" Association="CompraModelo.FK__Compra__idEstado__178D7CA5">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CompraDet__1D4655FB" Association="CompraModelo.FK__CompraDet__1D4655FB">
+      <End Role="Compra" EntitySet="Compra" />
+      <End Role="CompraDet" EntitySet="CompraDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cotizacio__idEst__047AA831" Association="CompraModelo.FK__Cotizacio__idEst__047AA831">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cotizacio__idPro__038683F8" Association="CompraModelo.FK__Cotizacio__idPro__038683F8">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenCompra__0EF836A4" Association="CompraModelo.FK__OrdenCompra__0EF836A4">
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CotizacionDet__28A2FA0E" Association="CompraModelo.FK__CotizacionDet__28A2FA0E">
+      <End Role="Pedido" EntitySet="Pedido" />
+      <End Role="CotizacionDet" EntitySet="CotizacionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Devolucio__idEst__6D823440" Association="CompraModelo.FK__Devolucio__idEst__6D823440">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="DevolucionCompra" EntitySet="DevolucionCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Devolucio__idPro__6E765879" Association="CompraModelo.FK__Devolucio__idPro__6E765879">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="DevolucionCompra" EntitySet="DevolucionCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DevolucionCompra__733B0D96" Association="CompraModelo.FK__DevolucionCompra__733B0D96">
+      <End Role="DevolucionCompra" EntitySet="DevolucionCompra" />
+      <End Role="DevolucionCompraDet" EntitySet="DevolucionCompraDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NotaDebito__30441BD6" Association="CompraModelo.FK__NotaDebito__30441BD6">
+      <End Role="DevolucionCompra" EntitySet="DevolucionCompra" />
+      <End Role="NotaDebito" EntitySet="NotaDebito" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NotaDebit__idEst__3138400F" Association="CompraModelo.FK__NotaDebit__idEst__3138400F">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="NotaDebito" EntitySet="NotaDebito" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenComp__idEst__0D0FEE32" Association="CompraModelo.FK__OrdenComp__idEst__0D0FEE32">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenDesp__idEst__7DB89C09" Association="CompraModelo.FK__OrdenDesp__idEst__7DB89C09">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="OrdenDespacho" EntitySet="OrdenDespacho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pedido__idEstado__1D314762" Association="CompraModelo.FK__Pedido__idEstado__1D314762">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Pedido" EntitySet="Pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Solicitud__idEst__0CFADF99" Association="CompraModelo.FK__Solicitud__idEst__0CFADF99">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Solicitud" EntitySet="Solicitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NotaDebit__Canti__35FCF52C" Association="CompraModelo.FK__NotaDebit__Canti__35FCF52C">
+      <End Role="NotaDebito" EntitySet="NotaDebito" />
+      <End Role="NotaDebitoDet" EntitySet="NotaDebitoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenComp__idPro__0E04126B" Association="CompraModelo.FK__OrdenComp__idPro__0E04126B">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenCompraDet__63F8CA06" Association="CompraModelo.FK__OrdenCompraDet__63F8CA06">
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+      <End Role="OrdenCompraDet" EntitySet="OrdenCompraDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenDespachoDet__0371755F" Association="CompraModelo.FK__OrdenDespachoDet__0371755F">
+      <End Role="OrdenDespacho" EntitySet="OrdenDespacho" />
+      <End Role="OrdenDespachoDet" EntitySet="OrdenDespachoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PedidoDet__21F5FC7F" Association="CompraModelo.FK__PedidoDet__21F5FC7F">
+      <End Role="Pedido" EntitySet="Pedido" />
+      <End Role="PedidoDet" EntitySet="PedidoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Proveedor__IdPer__7814D14C" Association="CompraModelo.FK__Proveedor__IdPer__7814D14C">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SolicitudDet__12B3B8EF" Association="CompraModelo.FK__SolicitudDet__12B3B8EF">
+      <End Role="Solicitud" EntitySet="Solicitud" />
+      <End Role="SolicitudDet" EntitySet="SolicitudDet" />
+    </AssociationSet>
+    <EntitySet Name="CotizacionDetalle_Vista" EntityType="CompraModelo.CotizacionDetalle_Vista" />
+  </EntityContainer>
+  <EntityType Name="SubGrupos">
+    <Key>
+      <PropertyRef Name="IdSubGrupo" />
+    </Key>
+    <Property Name="IdSubGrupo" Type="Int32" Nullable="false" />
+    <Property Name="IdGrupo" Type="Int32" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="fecha" Type="DateTime" />
+    <Property Name="IdEstado" Type="Int32" />
+    <Property Name="EstadoProceso" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="IdEmpresa" Type="Int32" />
+    <NavigationProperty Name="Grupo" Relationship="CompraModelo.FK__SubGrupos__IdGru__7167D3BD" FromRole="SubGrupos" ToRole="Grupo" />
+  </EntityType>
+  <EntityType Name="Compra">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="idOrdenCompra" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="OrdenCompra" Relationship="CompraModelo.FK__Compra__1881A0DE" FromRole="Compra" ToRole="OrdenCompra" />
+    <NavigationProperty Name="Estado" Relationship="CompraModelo.FK__Compra__idEstado__178D7CA5" FromRole="Compra" ToRole="Estado" />
+    <NavigationProperty Name="CompraDet" Relationship="CompraModelo.FK__CompraDet__1D4655FB" FromRole="Compra" ToRole="CompraDet" />
+  </EntityType>
+  <EntityType Name="CompraDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Linea" Type="Int32" Nullable="false" />
+    <Property Name="idArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Compra" Relationship="CompraModelo.FK__CompraDet__1D4655FB" FromRole="CompraDet" ToRole="Compra" />
+  </EntityType>
+  <EntityType Name="Cotizacion">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="idProveedor" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="Ruta" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado" Relationship="CompraModelo.FK__Cotizacio__idEst__047AA831" FromRole="Cotizacion" ToRole="Estado" />
+    <NavigationProperty Name="Proveedor" Relationship="CompraModelo.FK__Cotizacio__idPro__038683F8" FromRole="Cotizacion" ToRole="Proveedor" />
+    <NavigationProperty Name="OrdenCompra" Relationship="CompraModelo.FK__OrdenCompra__0EF836A4" FromRole="Cotizacion" ToRole="OrdenCompra" />
+  </EntityType>
+  <EntityType Name="CotizacionDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Linea" Type="Int32" Nullable="false" />
+    <Property Name="NumeroPedido" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Pedido" Relationship="CompraModelo.FK__CotizacionDet__28A2FA0E" FromRole="CotizacionDet" ToRole="Pedido" />
+  </EntityType>
+  <EntityType Name="DevolucionCompra">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="idProveedor" Type="Int32" Nullable="false" />
+    <Property Name="NumeroFactura" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado" Relationship="CompraModelo.FK__Devolucio__idEst__6D823440" FromRole="DevolucionCompra" ToRole="Estado" />
+    <NavigationProperty Name="Proveedor" Relationship="CompraModelo.FK__Devolucio__idPro__6E765879" FromRole="DevolucionCompra" ToRole="Proveedor" />
+    <NavigationProperty Name="DevolucionCompraDet" Relationship="CompraModelo.FK__DevolucionCompra__733B0D96" FromRole="DevolucionCompra" ToRole="DevolucionCompraDet" />
+    <NavigationProperty Name="NotaDebito" Relationship="CompraModelo.FK__NotaDebito__30441BD6" FromRole="DevolucionCompra" ToRole="NotaDebito" />
+  </EntityType>
+  <EntityType Name="DevolucionCompraDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Linea" Type="Int32" Nullable="false" />
+    <Property Name="idArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="idMotivo" Type="Int32" Nullable="false" />
+    <Property Name="Obervaciones" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="DevolucionCompra" Relationship="CompraModelo.FK__DevolucionCompra__733B0D96" FromRole="DevolucionCompraDet" ToRole="DevolucionCompra" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="idEstado" />
+    </Key>
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Compra" Relationship="CompraModelo.FK__Compra__idEstado__178D7CA5" FromRole="Estado" ToRole="Compra" />
+    <NavigationProperty Name="Cotizacion" Relationship="CompraModelo.FK__Cotizacio__idEst__047AA831" FromRole="Estado" ToRole="Cotizacion" />
+    <NavigationProperty Name="DevolucionCompra" Relationship="CompraModelo.FK__Devolucio__idEst__6D823440" FromRole="Estado" ToRole="DevolucionCompra" />
+    <NavigationProperty Name="NotaDebito" Relationship="CompraModelo.FK__NotaDebit__idEst__3138400F" FromRole="Estado" ToRole="NotaDebito" />
+    <NavigationProperty Name="OrdenCompra" Relationship="CompraModelo.FK__OrdenComp__idEst__0D0FEE32" FromRole="Estado" ToRole="OrdenCompra" />
+    <NavigationProperty Name="OrdenDespacho" Relationship="CompraModelo.FK__OrdenDesp__idEst__7DB89C09" FromRole="Estado" ToRole="OrdenDespacho" />
+    <NavigationProperty Name="Pedido" Relationship="CompraModelo.FK__Pedido__idEstado__1D314762" FromRole="Estado" ToRole="Pedido" />
+    <NavigationProperty Name="Solicitud" Relationship="CompraModelo.FK__Solicitud__idEst__0CFADF99" FromRole="Estado" ToRole="Solicitud" />
+  </EntityType>
+  <EntityType Name="NotaDebito">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="NumeroDevolucionCompra" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="SubTotal" Type="Int32" Nullable="false" />
+    <Property Name="Descuento" Type="Int32" Nullable="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DevolucionCompra" Relationship="CompraModelo.FK__NotaDebito__30441BD6" FromRole="NotaDebito" ToRole="DevolucionCompra" />
+    <NavigationProperty Name="Estado" Relationship="CompraModelo.FK__NotaDebit__idEst__3138400F" FromRole="NotaDebito" ToRole="Estado" />
+    <NavigationProperty Name="NotaDebitoDet" Relationship="CompraModelo.FK__NotaDebit__Canti__35FCF52C" FromRole="NotaDebito" ToRole="NotaDebitoDet" />
+  </EntityType>
+  <EntityType Name="NotaDebitoDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Linea" Type="Int32" Nullable="false" />
+    <Property Name="idArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="NotaDebito" Relationship="CompraModelo.FK__NotaDebit__Canti__35FCF52C" FromRole="NotaDebitoDet" ToRole="NotaDebito" />
+  </EntityType>
+  <EntityType Name="OrdenCompra">
+    <Key>
+      <PropertyRef Name="IdOrdenCompra" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="IdOrdenCompra" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="idProveedor" Type="Int32" Nullable="false" />
+    <Property Name="NumeroCotizacion" Type="Int32" Nullable="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <Property Name="Observaciones" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Compra" Relationship="CompraModelo.FK__Compra__1881A0DE" FromRole="OrdenCompra" ToRole="Compra" />
+    <NavigationProperty Name="Cotizacion" Relationship="CompraModelo.FK__OrdenCompra__0EF836A4" FromRole="OrdenCompra" ToRole="Cotizacion" />
+    <NavigationProperty Name="Estado" Relationship="CompraModelo.FK__OrdenComp__idEst__0D0FEE32" FromRole="OrdenCompra" ToRole="Estado" />
+    <NavigationProperty Name="Proveedor" Relationship="CompraModelo.FK__OrdenComp__idPro__0E04126B" FromRole="OrdenCompra" ToRole="Proveedor" />
+    <NavigationProperty Name="OrdenCompraDet" Relationship="CompraModelo.FK__OrdenCompraDet__63F8CA06" FromRole="OrdenCompra" ToRole="OrdenCompraDet" />
+  </EntityType>
+  <EntityType Name="OrdenCompraDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Linea" Type="Int32" Nullable="false" />
+    <Property Name="IdArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="Precio" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="OrdenCompra" Relationship="CompraModelo.FK__OrdenCompraDet__63F8CA06" FromRole="OrdenCompraDet" ToRole="OrdenCompra" />
+  </EntityType>
+  <EntityType Name="OrdenDespacho">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="idDepartamento" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado" Relationship="CompraModelo.FK__OrdenDesp__idEst__7DB89C09" FromRole="OrdenDespacho" ToRole="Estado" />
+    <NavigationProperty Name="OrdenDespachoDet" Relationship="CompraModelo.FK__OrdenDespachoDet__0371755F" FromRole="OrdenDespacho" ToRole="OrdenDespachoDet" />
+  </EntityType>
+  <EntityType Name="OrdenDespachoDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Linea" Type="Int32" Nullable="false" />
+    <Property Name="idArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="OrdenDespacho" Relationship="CompraModelo.FK__OrdenDespachoDet__0371755F" FromRole="OrdenDespachoDet" ToRole="OrdenDespacho" />
+  </EntityType>
+  <EntityType Name="Pedido">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="idTipoArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CotizacionDet" Relationship="CompraModelo.FK__CotizacionDet__28A2FA0E" FromRole="Pedido" ToRole="CotizacionDet" />
+    <NavigationProperty Name="Estado" Relationship="CompraModelo.FK__Pedido__idEstado__1D314762" FromRole="Pedido" ToRole="Estado" />
+    <NavigationProperty Name="PedidoDet" Relationship="CompraModelo.FK__PedidoDet__21F5FC7F" FromRole="Pedido" ToRole="PedidoDet" />
+  </EntityType>
+  <EntityType Name="PedidoDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Linea" Type="Int32" Nullable="false" />
+    <Property Name="idArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Pedido" Relationship="CompraModelo.FK__PedidoDet__21F5FC7F" FromRole="PedidoDet" ToRole="Pedido" />
+  </EntityType>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="IdProveedor" />
+    </Key>
+    <Property Name="IdProveedor" Type="Int32" Nullable="false" />
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="IdPersona" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cotizacion" Relationship="CompraModelo.FK__Cotizacio__idPro__038683F8" FromRole="Proveedor" ToRole="Cotizacion" />
+    <NavigationProperty Name="DevolucionCompra" Relationship="CompraModelo.FK__Devolucio__idPro__6E765879" FromRole="Proveedor" ToRole="DevolucionCompra" />
+    <NavigationProperty Name="OrdenCompra" Relationship="CompraModelo.FK__OrdenComp__idPro__0E04126B" FromRole="Proveedor" ToRole="OrdenCompra" />
+    <NavigationProperty Name="Persona" Relationship="CompraModelo.FK__Proveedor__IdPer__7814D14C" FromRole="Proveedor" ToRole="Persona" />
+  </EntityType>
+  <EntityType Name="Solicitud">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="IdTipoArticulo" Type="Int32" Nullable="false" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="idDepartamento" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estado" Relationship="CompraModelo.FK__Solicitud__idEst__0CFADF99" FromRole="Solicitud" ToRole="Estado" />
+    <NavigationProperty Name="SolicitudDet" Relationship="CompraModelo.FK__SolicitudDet__12B3B8EF" FromRole="Solicitud" ToRole="SolicitudDet" />
+  </EntityType>
+  <EntityType Name="SolicitudDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Linea" Type="Int32" Nullable="false" />
+    <Property Name="idArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Solicitud" Relationship="CompraModelo.FK__SolicitudDet__12B3B8EF" FromRole="SolicitudDet" ToRole="Solicitud" />
+  </EntityType>
+  <EntityType Name="Grupo">
+    <Key>
+      <PropertyRef Name="IdGrupo" />
+    </Key>
+    <Property Name="IdEmpresa" Type="Int32" />
+    <Property Name="IdGrupo" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IdTipoArticulo" Type="Int32" />
+    <Property Name="IdEstado" Type="Int32" />
+    <NavigationProperty Name="SubGrupos" Relationship="CompraModelo.FK__SubGrupos__IdGru__7167D3BD" FromRole="Grupo" ToRole="SubGrupos" />
+  </EntityType>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Name="IdPersona" Type="Int32" Nullable="false" />
+    <Property Name="Identificacion" Type="Decimal" Nullable="false" Precision="14" Scale="0" />
+    <Property Name="IdTipoPersona" Type="Int32" Nullable="false" />
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="NombreRazonSocial" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Apellido" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FechaNacimiento" Type="DateTime" />
+    <Property Name="genero" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TipoIdentificacion" Type="Int32" Nullable="false" />
+    <Property Name="direccion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TelefonoGneral" Type="Decimal" Precision="14" Scale="0" />
+    <Property Name="TelefonoMovil" Type="Decimal" Nullable="false" Precision="14" Scale="0" />
+    <Property Name="TelefonoCasa" Type="Decimal" Nullable="false" Precision="14" Scale="0" />
+    <Property Name="TelefonoOtros" Type="Decimal" Precision="14" Scale="0" />
+    <Property Name="mail" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdEstado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Proveedor" Relationship="CompraModelo.FK__Proveedor__IdPer__7814D14C" FromRole="Persona" ToRole="Proveedor" />
+  </EntityType>
+  <EntityType Name="Articulo_Vista">
+    <Key>
+      <PropertyRef Name="IdArticulo" />
+      <PropertyRef Name="Descripcion" />
+      <PropertyRef Name="IdTipoArticulo" />
+      <PropertyRef Name="TipoArticulo" />
+      <PropertyRef Name="IdGrupo" />
+      <PropertyRef Name="Grupo" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="CantidadActual" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="IdTipoArticulo" Type="Int32" Nullable="false" />
+    <Property Name="TipoArticulo" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="IdGrupo" Type="Int32" Nullable="false" />
+    <Property Name="Grupo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="NombreComercial" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdEstado" Type="Int32" />
+    <Property Name="Estado" Type="String" MaxLength="220" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="CotizacionCab_Vista">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idproveedor" />
+      <PropertyRef Name="Proveedor" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="idEstado" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="Usuario" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idproveedor" Type="Int32" Nullable="false" />
+    <Property Name="Proveedor" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Empresa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="OrdenCompraCab_Vista">
+    <Key>
+      <PropertyRef Name="IdOrdenCompra" />
+      <PropertyRef Name="idProveedor" />
+      <PropertyRef Name="Proveedor" />
+      <PropertyRef Name="NumeroCotizacion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="NombreUsuario" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="idEstado" />
+    </Key>
+    <Property Name="IdOrdenCompra" Type="Int32" Nullable="false" />
+    <Property Name="idProveedor" Type="Int32" Nullable="false" />
+    <Property Name="Proveedor" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="NumeroCotizacion" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="NombreUsuario" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="NombreComercial" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Observaciones" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="OrdenCompraDetalle_Vista">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="IdArticulo" />
+      <PropertyRef Name="Articulo" />
+      <PropertyRef Name="Cantidad" />
+      <PropertyRef Name="Precio" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="Linea" Type="Int32" Nullable="false" />
+    <Property Name="IdArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Articulo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="Precio" Type="Int32" Nullable="false" />
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="NombreComercial" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="PedidoCabecera_Vista">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idTipoArticulo" />
+      <PropertyRef Name="TipoArticulo" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="idUsuario" />
+      <PropertyRef Name="Usuario" />
+      <PropertyRef Name="idEstado" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idTipoArticulo" Type="Int32" Nullable="false" />
+    <Property Name="TipoArticulo" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Empresa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="PedidoDetalle_Vista">
+    <Key>
+      <PropertyRef Name="numero" />
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="idArticulo" />
+      <PropertyRef Name="Articulo" />
+      <PropertyRef Name="Cantidad" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="numero" Type="Int32" Nullable="false" />
+    <Property Name="Linea" Type="Int32" Nullable="false" />
+    <Property Name="idArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Articulo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Empresa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ProveedorDescripcion">
+    <Key>
+      <PropertyRef Name="IdProveedor" />
+      <PropertyRef Name="IdPersona" />
+      <PropertyRef Name="NombreRazonSocial" />
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdTipoArticulo" />
+      <PropertyRef Name="Descripcion" />
+      <PropertyRef Name="Estado" />
+    </Key>
+    <Property Name="IdProveedor" Type="Int32" Nullable="false" />
+    <Property Name="IdPersona" Type="Int32" Nullable="false" />
+    <Property Name="NombreRazonSocial" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="RazonSocial" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdTipoArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SolicitudCab">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="idtipoArticulo" />
+      <PropertyRef Name="TipoArticulo" />
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="Usuario" />
+      <PropertyRef Name="idDepartamento" />
+      <PropertyRef Name="Departamento" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="idEstado" />
+    </Key>
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Empresa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="idtipoArticulo" Type="Int32" Nullable="false" />
+    <Property Name="TipoArticulo" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="idDepartamento" Type="Int32" Nullable="false" />
+    <Property Name="Departamento" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SolicitudDetalle">
+    <Key>
+      <PropertyRef Name="numero" />
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="idArticulo" />
+      <PropertyRef Name="Articulo" />
+      <PropertyRef Name="Cantidad" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="numero" Type="Int32" Nullable="false" />
+    <Property Name="Linea" Type="Int32" Nullable="false" />
+    <Property Name="idArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Articulo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Cantidad" Type="Int32" Nullable="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Empresa" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Vehiculo_Vista">
+    <Key>
+      <PropertyRef Name="IdArticulo" />
+      <PropertyRef Name="Descripcion" />
+      <PropertyRef Name="IdTipoArticulo" />
+      <PropertyRef Name="TipoArticulo" />
+      <PropertyRef Name="IdGrupo" />
+      <PropertyRef Name="Grupo" />
+      <PropertyRef Name="Chasis" />
+      <PropertyRef Name="Color" />
+      <PropertyRef Name="Marca" />
+      <PropertyRef Name="Modelo" />
+    </Key>
+    <Property Name="NombreComercial" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="IdArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="CantidadActual" Type="Decimal" Precision="5" Scale="0" />
+    <Property Name="IdTipoArticulo" Type="Int32" Nullable="false" />
+    <Property Name="TipoArticulo" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="IdGrupo" Type="Int32" Nullable="false" />
+    <Property Name="Grupo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Chasis" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TipoMotor" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TipoComb" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Color" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Marca" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Modelo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TipoMaterial" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="idestado" Type="Int32" />
+    <Property Name="Estado" Type="String" MaxLength="220" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__SubGrupos__IdGru__7167D3BD">
+    <End Role="Grupo" Type="CompraModelo.Grupo" Multiplicity="0..1" />
+    <End Role="SubGrupos" Type="CompraModelo.SubGrupos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="IdGrupo" />
+      </Principal>
+      <Dependent Role="SubGrupos">
+        <PropertyRef Name="IdGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Compra__1881A0DE">
+    <End Role="OrdenCompra" Type="CompraModelo.OrdenCompra" Multiplicity="1" />
+    <End Role="Compra" Type="CompraModelo.Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenCompra">
+        <PropertyRef Name="IdOrdenCompra" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="idEmpresa" />
+        <PropertyRef Name="idOrdenCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Compra__idEstado__178D7CA5">
+    <End Role="Estado" Type="CompraModelo.Estado" Multiplicity="1" />
+    <End Role="Compra" Type="CompraModelo.Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CompraDet__1D4655FB">
+    <End Role="Compra" Type="CompraModelo.Compra" Multiplicity="1" />
+    <End Role="CompraDet" Type="CompraModelo.CompraDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Compra">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="CompraDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cotizacio__idEst__047AA831">
+    <End Role="Estado" Type="CompraModelo.Estado" Multiplicity="1" />
+    <End Role="Cotizacion" Type="CompraModelo.Cotizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="Cotizacion">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cotizacio__idPro__038683F8">
+    <End Role="Proveedor" Type="CompraModelo.Proveedor" Multiplicity="1" />
+    <End Role="Cotizacion" Type="CompraModelo.Cotizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="Cotizacion">
+        <PropertyRef Name="idProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenCompra__0EF836A4">
+    <End Role="Cotizacion" Type="CompraModelo.Cotizacion" Multiplicity="1" />
+    <End Role="OrdenCompra" Type="CompraModelo.OrdenCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cotizacion">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenCompra">
+        <PropertyRef Name="NumeroCotizacion" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CotizacionDet__28A2FA0E">
+    <End Role="Pedido" Type="CompraModelo.Pedido" Multiplicity="1" />
+    <End Role="CotizacionDet" Type="CompraModelo.CotizacionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedido">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="CotizacionDet">
+        <PropertyRef Name="NumeroPedido" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Devolucio__idEst__6D823440">
+    <End Role="Estado" Type="CompraModelo.Estado" Multiplicity="1" />
+    <End Role="DevolucionCompra" Type="CompraModelo.DevolucionCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="DevolucionCompra">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Devolucio__idPro__6E765879">
+    <End Role="Proveedor" Type="CompraModelo.Proveedor" Multiplicity="1" />
+    <End Role="DevolucionCompra" Type="CompraModelo.DevolucionCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="DevolucionCompra">
+        <PropertyRef Name="idProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DevolucionCompra__733B0D96">
+    <End Role="DevolucionCompra" Type="CompraModelo.DevolucionCompra" Multiplicity="1" />
+    <End Role="DevolucionCompraDet" Type="CompraModelo.DevolucionCompraDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DevolucionCompra">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="DevolucionCompraDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NotaDebito__30441BD6">
+    <End Role="DevolucionCompra" Type="CompraModelo.DevolucionCompra" Multiplicity="1" />
+    <End Role="NotaDebito" Type="CompraModelo.NotaDebito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DevolucionCompra">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="NotaDebito">
+        <PropertyRef Name="NumeroDevolucionCompra" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NotaDebit__idEst__3138400F">
+    <End Role="Estado" Type="CompraModelo.Estado" Multiplicity="1" />
+    <End Role="NotaDebito" Type="CompraModelo.NotaDebito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="NotaDebito">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenComp__idEst__0D0FEE32">
+    <End Role="Estado" Type="CompraModelo.Estado" Multiplicity="1" />
+    <End Role="OrdenCompra" Type="CompraModelo.OrdenCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="OrdenCompra">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenDesp__idEst__7DB89C09">
+    <End Role="Estado" Type="CompraModelo.Estado" Multiplicity="1" />
+    <End Role="OrdenDespacho" Type="CompraModelo.OrdenDespacho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="OrdenDespacho">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pedido__idEstado__1D314762">
+    <End Role="Estado" Type="CompraModelo.Estado" Multiplicity="1" />
+    <End Role="Pedido" Type="CompraModelo.Pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="Pedido">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Solicitud__idEst__0CFADF99">
+    <End Role="Estado" Type="CompraModelo.Estado" Multiplicity="1" />
+    <End Role="Solicitud" Type="CompraModelo.Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="Solicitud">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NotaDebit__Canti__35FCF52C">
+    <End Role="NotaDebito" Type="CompraModelo.NotaDebito" Multiplicity="1" />
+    <End Role="NotaDebitoDet" Type="CompraModelo.NotaDebitoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NotaDebito">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="NotaDebitoDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenComp__idPro__0E04126B">
+    <End Role="Proveedor" Type="CompraModelo.Proveedor" Multiplicity="1" />
+    <End Role="OrdenCompra" Type="CompraModelo.OrdenCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="OrdenCompra">
+        <PropertyRef Name="idProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenCompraDet__63F8CA06">
+    <End Role="OrdenCompra" Type="CompraModelo.OrdenCompra" Multiplicity="1" />
+    <End Role="OrdenCompraDet" Type="CompraModelo.OrdenCompraDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenCompra">
+        <PropertyRef Name="IdOrdenCompra" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenCompraDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenDespachoDet__0371755F">
+    <End Role="OrdenDespacho" Type="CompraModelo.OrdenDespacho" Multiplicity="1" />
+    <End Role="OrdenDespachoDet" Type="CompraModelo.OrdenDespachoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenDespacho">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenDespachoDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PedidoDet__21F5FC7F">
+    <End Role="Pedido" Type="CompraModelo.Pedido" Multiplicity="1" />
+    <End Role="PedidoDet" Type="CompraModelo.PedidoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedido">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="PedidoDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Proveedor__IdPer__7814D14C">
+    <End Role="Persona" Type="CompraModelo.Persona" Multiplicity="1" />
+    <End Role="Proveedor" Type="CompraModelo.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SolicitudDet__12B3B8EF">
+    <End Role="Solicitud" Type="CompraModelo.Solicitud" Multiplicity="1" />
+    <End Role="SolicitudDet" Type="CompraModelo.SolicitudDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="SolicitudDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CotizacionDetalle_Vista">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="NumeroPedido" />
+      <PropertyRef Name="idUsuario" />
+      <PropertyRef Name="NombreUsuario" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="idTipoArticulo" />
+      <PropertyRef Name="TipoArticulo" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Type="Int32" Name="Numero" Nullable="false" />
+    <Property Type="Int32" Name="Linea" Nullable="false" />
+    <Property Type="Int32" Name="NumeroPedido" Nullable="false" />
+    <Property Type="Int32" Name="idUsuario" Nullable="false" />
+    <Property Type="String" Name="NombreUsuario" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" />
+    <Property Type="Int32" Name="idTipoArticulo" Nullable="false" />
+    <Property Type="String" Name="TipoArticulo" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="idEmpresa" Nullable="false" />
+    <Property Type="String" Name="Empresa" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

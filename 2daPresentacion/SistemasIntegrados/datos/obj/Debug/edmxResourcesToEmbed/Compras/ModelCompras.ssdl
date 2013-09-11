@@ -1,0 +1,1131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CompraModelo.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="CompraModeloStoreContainer">
+    <EntitySet Name="SubGrupos" EntityType="CompraModelo.Store.SubGrupos" store:Type="Tables" Schema="ActivoFijo" />
+    <EntitySet Name="Compra" EntityType="CompraModelo.Store.Compra" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="CompraDet" EntityType="CompraModelo.Store.CompraDet" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="Cotizacion" EntityType="CompraModelo.Store.Cotizacion" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="CotizacionDet" EntityType="CompraModelo.Store.CotizacionDet" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="DevolucionCompra" EntityType="CompraModelo.Store.DevolucionCompra" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="DevolucionCompraDet" EntityType="CompraModelo.Store.DevolucionCompraDet" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="Estado" EntityType="CompraModelo.Store.Estado" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="NotaDebito" EntityType="CompraModelo.Store.NotaDebito" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="NotaDebitoDet" EntityType="CompraModelo.Store.NotaDebitoDet" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="OrdenCompra" EntityType="CompraModelo.Store.OrdenCompra" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="OrdenCompraDet" EntityType="CompraModelo.Store.OrdenCompraDet" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="OrdenDespacho" EntityType="CompraModelo.Store.OrdenDespacho" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="OrdenDespachoDet" EntityType="CompraModelo.Store.OrdenDespachoDet" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="Pedido" EntityType="CompraModelo.Store.Pedido" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="PedidoDet" EntityType="CompraModelo.Store.PedidoDet" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="Proveedor" EntityType="CompraModelo.Store.Proveedor" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="Solicitud" EntityType="CompraModelo.Store.Solicitud" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="SolicitudDet" EntityType="CompraModelo.Store.SolicitudDet" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="Grupo" EntityType="CompraModelo.Store.Grupo" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="Persona" EntityType="CompraModelo.Store.Persona" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Articulo_Vista" EntityType="CompraModelo.Store.Articulo_Vista" store:Type="Views" store:Schema="Compras" store:Name="Articulo_Vista">
+      <DefiningQuery>SELECT 
+      [Articulo_Vista].[IdArticulo] AS [IdArticulo], 
+      [Articulo_Vista].[Descripcion] AS [Descripcion], 
+      [Articulo_Vista].[CantidadActual] AS [CantidadActual], 
+      [Articulo_Vista].[IdTipoArticulo] AS [IdTipoArticulo], 
+      [Articulo_Vista].[TipoArticulo] AS [TipoArticulo], 
+      [Articulo_Vista].[IdGrupo] AS [IdGrupo], 
+      [Articulo_Vista].[Grupo] AS [Grupo], 
+      [Articulo_Vista].[IdEmpresa] AS [IdEmpresa], 
+      [Articulo_Vista].[NombreComercial] AS [NombreComercial], 
+      [Articulo_Vista].[IdEstado] AS [IdEstado], 
+      [Articulo_Vista].[Estado] AS [Estado]
+      FROM [Compras].[Articulo_Vista] AS [Articulo_Vista]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CotizacionCab_Vista" EntityType="CompraModelo.Store.CotizacionCab_Vista" store:Type="Views" store:Schema="Compras" store:Name="CotizacionCab_Vista">
+      <DefiningQuery>SELECT 
+      [CotizacionCab_Vista].[Numero] AS [Numero], 
+      [CotizacionCab_Vista].[idproveedor] AS [idproveedor], 
+      [CotizacionCab_Vista].[Proveedor] AS [Proveedor], 
+      [CotizacionCab_Vista].[Fecha] AS [Fecha], 
+      [CotizacionCab_Vista].[idEstado] AS [idEstado], 
+      [CotizacionCab_Vista].[Estado] AS [Estado], 
+      [CotizacionCab_Vista].[idEmpresa] AS [idEmpresa], 
+      [CotizacionCab_Vista].[Empresa] AS [Empresa], 
+      [CotizacionCab_Vista].[IdUsuario] AS [IdUsuario], 
+      [CotizacionCab_Vista].[Usuario] AS [Usuario]
+      FROM [Compras].[CotizacionCab_Vista] AS [CotizacionCab_Vista]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CotizacionDetalle_Vista" EntityType="CompraModelo.Store.CotizacionDetalle_Vista" store:Type="Views" store:Schema="Compras" store:Name="CotizacionDetalle_Vista">
+      <DefiningQuery>SELECT 
+      [CotizacionDetalle_Vista].[Numero] AS [Numero], 
+      [CotizacionDetalle_Vista].[Linea] AS [Linea], 
+      [CotizacionDetalle_Vista].[NumeroPedido] AS [NumeroPedido], 
+      [CotizacionDetalle_Vista].[idUsuario] AS [idUsuario], 
+      [CotizacionDetalle_Vista].[NombreUsuario] AS [NombreUsuario], 
+      [CotizacionDetalle_Vista].[Fecha] AS [Fecha], 
+      [CotizacionDetalle_Vista].[idTipoArticulo] AS [idTipoArticulo], 
+      [CotizacionDetalle_Vista].[TipoArticulo] AS [TipoArticulo], 
+      [CotizacionDetalle_Vista].[idEmpresa] AS [idEmpresa], 
+      [CotizacionDetalle_Vista].[Empresa] AS [Empresa]
+      FROM [Compras].[CotizacionDetalle_Vista] AS [CotizacionDetalle_Vista]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OrdenCompraCab_Vista" EntityType="CompraModelo.Store.OrdenCompraCab_Vista" store:Type="Views" store:Schema="Compras" store:Name="OrdenCompraCab_Vista">
+      <DefiningQuery>SELECT 
+      [OrdenCompraCab_Vista].[IdOrdenCompra] AS [IdOrdenCompra], 
+      [OrdenCompraCab_Vista].[idProveedor] AS [idProveedor], 
+      [OrdenCompraCab_Vista].[Proveedor] AS [Proveedor], 
+      [OrdenCompraCab_Vista].[NumeroCotizacion] AS [NumeroCotizacion], 
+      [OrdenCompraCab_Vista].[Fecha] AS [Fecha], 
+      [OrdenCompraCab_Vista].[IdUsuario] AS [IdUsuario], 
+      [OrdenCompraCab_Vista].[NombreUsuario] AS [NombreUsuario], 
+      [OrdenCompraCab_Vista].[idEmpresa] AS [idEmpresa], 
+      [OrdenCompraCab_Vista].[NombreComercial] AS [NombreComercial], 
+      [OrdenCompraCab_Vista].[idEstado] AS [idEstado], 
+      [OrdenCompraCab_Vista].[Estado] AS [Estado], 
+      [OrdenCompraCab_Vista].[Observaciones] AS [Observaciones]
+      FROM [Compras].[OrdenCompraCab_Vista] AS [OrdenCompraCab_Vista]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OrdenCompraDetalle_Vista" EntityType="CompraModelo.Store.OrdenCompraDetalle_Vista" store:Type="Views" store:Schema="Compras" store:Name="OrdenCompraDetalle_Vista">
+      <DefiningQuery>SELECT 
+      [OrdenCompraDetalle_Vista].[Numero] AS [Numero], 
+      [OrdenCompraDetalle_Vista].[Linea] AS [Linea], 
+      [OrdenCompraDetalle_Vista].[IdArticulo] AS [IdArticulo], 
+      [OrdenCompraDetalle_Vista].[Articulo] AS [Articulo], 
+      [OrdenCompraDetalle_Vista].[Cantidad] AS [Cantidad], 
+      [OrdenCompraDetalle_Vista].[Precio] AS [Precio], 
+      [OrdenCompraDetalle_Vista].[IdEmpresa] AS [IdEmpresa], 
+      [OrdenCompraDetalle_Vista].[NombreComercial] AS [NombreComercial]
+      FROM [Compras].[OrdenCompraDetalle_Vista] AS [OrdenCompraDetalle_Vista]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PedidoCabecera_Vista" EntityType="CompraModelo.Store.PedidoCabecera_Vista" store:Type="Views" store:Schema="Compras" store:Name="PedidoCabecera_Vista">
+      <DefiningQuery>SELECT 
+      [PedidoCabecera_Vista].[Numero] AS [Numero], 
+      [PedidoCabecera_Vista].[idTipoArticulo] AS [idTipoArticulo], 
+      [PedidoCabecera_Vista].[TipoArticulo] AS [TipoArticulo], 
+      [PedidoCabecera_Vista].[Fecha] AS [Fecha], 
+      [PedidoCabecera_Vista].[idEmpresa] AS [idEmpresa], 
+      [PedidoCabecera_Vista].[Empresa] AS [Empresa], 
+      [PedidoCabecera_Vista].[idUsuario] AS [idUsuario], 
+      [PedidoCabecera_Vista].[Usuario] AS [Usuario], 
+      [PedidoCabecera_Vista].[idEstado] AS [idEstado], 
+      [PedidoCabecera_Vista].[Estado] AS [Estado]
+      FROM [Compras].[PedidoCabecera_Vista] AS [PedidoCabecera_Vista]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PedidoDetalle_Vista" EntityType="CompraModelo.Store.PedidoDetalle_Vista" store:Type="Views" store:Schema="Compras" store:Name="PedidoDetalle_Vista">
+      <DefiningQuery>SELECT 
+      [PedidoDetalle_Vista].[numero] AS [numero], 
+      [PedidoDetalle_Vista].[Linea] AS [Linea], 
+      [PedidoDetalle_Vista].[idArticulo] AS [idArticulo], 
+      [PedidoDetalle_Vista].[Articulo] AS [Articulo], 
+      [PedidoDetalle_Vista].[Cantidad] AS [Cantidad], 
+      [PedidoDetalle_Vista].[idEmpresa] AS [idEmpresa], 
+      [PedidoDetalle_Vista].[Empresa] AS [Empresa]
+      FROM [Compras].[PedidoDetalle_Vista] AS [PedidoDetalle_Vista]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ProveedorDescripcion" EntityType="CompraModelo.Store.ProveedorDescripcion" store:Type="Views" store:Schema="Compras" store:Name="ProveedorDescripcion">
+      <DefiningQuery>SELECT 
+      [ProveedorDescripcion].[IdProveedor] AS [IdProveedor], 
+      [ProveedorDescripcion].[IdPersona] AS [IdPersona], 
+      [ProveedorDescripcion].[NombreRazonSocial] AS [NombreRazonSocial], 
+      [ProveedorDescripcion].[IdEmpresa] AS [IdEmpresa], 
+      [ProveedorDescripcion].[RazonSocial] AS [RazonSocial], 
+      [ProveedorDescripcion].[IdTipoArticulo] AS [IdTipoArticulo], 
+      [ProveedorDescripcion].[Descripcion] AS [Descripcion], 
+      [ProveedorDescripcion].[Estado] AS [Estado]
+      FROM [Compras].[ProveedorDescripcion] AS [ProveedorDescripcion]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SolicitudCab" EntityType="CompraModelo.Store.SolicitudCab" store:Type="Views" store:Schema="Compras" store:Name="SolicitudCab">
+      <DefiningQuery>SELECT 
+      [SolicitudCab].[Numero] AS [Numero], 
+      [SolicitudCab].[idEmpresa] AS [idEmpresa], 
+      [SolicitudCab].[Empresa] AS [Empresa], 
+      [SolicitudCab].[idtipoArticulo] AS [idtipoArticulo], 
+      [SolicitudCab].[TipoArticulo] AS [TipoArticulo], 
+      [SolicitudCab].[IdUsuario] AS [IdUsuario], 
+      [SolicitudCab].[Usuario] AS [Usuario], 
+      [SolicitudCab].[idDepartamento] AS [idDepartamento], 
+      [SolicitudCab].[Departamento] AS [Departamento], 
+      [SolicitudCab].[Fecha] AS [Fecha], 
+      [SolicitudCab].[idEstado] AS [idEstado], 
+      [SolicitudCab].[Estado] AS [Estado]
+      FROM [Compras].[SolicitudCab] AS [SolicitudCab]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SolicitudDetalle" EntityType="CompraModelo.Store.SolicitudDetalle" store:Type="Views" store:Schema="Compras" store:Name="SolicitudDetalle">
+      <DefiningQuery>SELECT 
+      [SolicitudDetalle].[numero] AS [numero], 
+      [SolicitudDetalle].[Linea] AS [Linea], 
+      [SolicitudDetalle].[idArticulo] AS [idArticulo], 
+      [SolicitudDetalle].[Articulo] AS [Articulo], 
+      [SolicitudDetalle].[Cantidad] AS [Cantidad], 
+      [SolicitudDetalle].[idEmpresa] AS [idEmpresa], 
+      [SolicitudDetalle].[Empresa] AS [Empresa]
+      FROM [Compras].[SolicitudDetalle] AS [SolicitudDetalle]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vehiculo_Vista" EntityType="CompraModelo.Store.Vehiculo_Vista" store:Type="Views" store:Schema="Compras" store:Name="Vehiculo_Vista">
+      <DefiningQuery>SELECT 
+      [Vehiculo_Vista].[NombreComercial] AS [NombreComercial], 
+      [Vehiculo_Vista].[IdArticulo] AS [IdArticulo], 
+      [Vehiculo_Vista].[Descripcion] AS [Descripcion], 
+      [Vehiculo_Vista].[CantidadActual] AS [CantidadActual], 
+      [Vehiculo_Vista].[IdTipoArticulo] AS [IdTipoArticulo], 
+      [Vehiculo_Vista].[TipoArticulo] AS [TipoArticulo], 
+      [Vehiculo_Vista].[IdGrupo] AS [IdGrupo], 
+      [Vehiculo_Vista].[Grupo] AS [Grupo], 
+      [Vehiculo_Vista].[Chasis] AS [Chasis], 
+      [Vehiculo_Vista].[TipoMotor] AS [TipoMotor], 
+      [Vehiculo_Vista].[TipoComb] AS [TipoComb], 
+      [Vehiculo_Vista].[Color] AS [Color], 
+      [Vehiculo_Vista].[Marca] AS [Marca], 
+      [Vehiculo_Vista].[Modelo] AS [Modelo], 
+      [Vehiculo_Vista].[TipoMaterial] AS [TipoMaterial], 
+      [Vehiculo_Vista].[idestado] AS [idestado], 
+      [Vehiculo_Vista].[Estado] AS [Estado]
+      FROM [Compras].[Vehiculo_Vista] AS [Vehiculo_Vista]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Compra__1881A0DE" Association="CompraModelo.Store.FK__Compra__1881A0DE">
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Compra__idEstado__178D7CA5" Association="CompraModelo.Store.FK__Compra__idEstado__178D7CA5">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CompraDet__1D4655FB" Association="CompraModelo.Store.FK__CompraDet__1D4655FB">
+      <End Role="Compra" EntitySet="Compra" />
+      <End Role="CompraDet" EntitySet="CompraDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cotizacio__idEst__047AA831" Association="CompraModelo.Store.FK__Cotizacio__idEst__047AA831">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cotizacio__idPro__038683F8" Association="CompraModelo.Store.FK__Cotizacio__idPro__038683F8">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CotizacionDet__28A2FA0E" Association="CompraModelo.Store.FK__CotizacionDet__28A2FA0E">
+      <End Role="Pedido" EntitySet="Pedido" />
+      <End Role="CotizacionDet" EntitySet="CotizacionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Devolucio__idEst__6D823440" Association="CompraModelo.Store.FK__Devolucio__idEst__6D823440">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="DevolucionCompra" EntitySet="DevolucionCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Devolucio__idPro__6E765879" Association="CompraModelo.Store.FK__Devolucio__idPro__6E765879">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="DevolucionCompra" EntitySet="DevolucionCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DevolucionCompra__733B0D96" Association="CompraModelo.Store.FK__DevolucionCompra__733B0D96">
+      <End Role="DevolucionCompra" EntitySet="DevolucionCompra" />
+      <End Role="DevolucionCompraDet" EntitySet="DevolucionCompraDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NotaDebit__Canti__35FCF52C" Association="CompraModelo.Store.FK__NotaDebit__Canti__35FCF52C">
+      <End Role="NotaDebito" EntitySet="NotaDebito" />
+      <End Role="NotaDebitoDet" EntitySet="NotaDebitoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NotaDebit__idEst__3138400F" Association="CompraModelo.Store.FK__NotaDebit__idEst__3138400F">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="NotaDebito" EntitySet="NotaDebito" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NotaDebito__30441BD6" Association="CompraModelo.Store.FK__NotaDebito__30441BD6">
+      <End Role="DevolucionCompra" EntitySet="DevolucionCompra" />
+      <End Role="NotaDebito" EntitySet="NotaDebito" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenComp__idEst__0D0FEE32" Association="CompraModelo.Store.FK__OrdenComp__idEst__0D0FEE32">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenComp__idPro__0E04126B" Association="CompraModelo.Store.FK__OrdenComp__idPro__0E04126B">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenCompra__0EF836A4" Association="CompraModelo.Store.FK__OrdenCompra__0EF836A4">
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenCompraDet__63F8CA06" Association="CompraModelo.Store.FK__OrdenCompraDet__63F8CA06">
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+      <End Role="OrdenCompraDet" EntitySet="OrdenCompraDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenDesp__idEst__7DB89C09" Association="CompraModelo.Store.FK__OrdenDesp__idEst__7DB89C09">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="OrdenDespacho" EntitySet="OrdenDespacho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenDespachoDet__0371755F" Association="CompraModelo.Store.FK__OrdenDespachoDet__0371755F">
+      <End Role="OrdenDespacho" EntitySet="OrdenDespacho" />
+      <End Role="OrdenDespachoDet" EntitySet="OrdenDespachoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pedido__idEstado__1D314762" Association="CompraModelo.Store.FK__Pedido__idEstado__1D314762">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Pedido" EntitySet="Pedido" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PedidoDet__21F5FC7F" Association="CompraModelo.Store.FK__PedidoDet__21F5FC7F">
+      <End Role="Pedido" EntitySet="Pedido" />
+      <End Role="PedidoDet" EntitySet="PedidoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Proveedor__IdPer__7814D14C" Association="CompraModelo.Store.FK__Proveedor__IdPer__7814D14C">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Solicitud__idEst__0CFADF99" Association="CompraModelo.Store.FK__Solicitud__idEst__0CFADF99">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Solicitud" EntitySet="Solicitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SolicitudDet__12B3B8EF" Association="CompraModelo.Store.FK__SolicitudDet__12B3B8EF">
+      <End Role="Solicitud" EntitySet="Solicitud" />
+      <End Role="SolicitudDet" EntitySet="SolicitudDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SubGrupos__IdGru__7167D3BD" Association="CompraModelo.Store.FK__SubGrupos__IdGru__7167D3BD">
+      <End Role="Grupo" EntitySet="Grupo" />
+      <End Role="SubGrupos" EntitySet="SubGrupos" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="SubGrupos">
+    <Key>
+      <PropertyRef Name="IdSubGrupo" />
+    </Key>
+    <Property Name="IdSubGrupo" Type="int" Nullable="false" />
+    <Property Name="IdGrupo" Type="int" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="fecha" Type="date" />
+    <Property Name="IdEstado" Type="int" />
+    <Property Name="EstadoProceso" Type="varchar" MaxLength="30" />
+    <Property Name="IdEmpresa" Type="int" />
+  </EntityType>
+  <EntityType Name="Compra">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="idOrdenCompra" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="FechaModificacion" Type="date" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CompraDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="idArticulo" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cotizacion">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="idProveedor" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="FechaModificacion" Type="date" Nullable="false" />
+    <Property Name="Ruta" Type="varchar" MaxLength="250" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CotizacionDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="NumeroPedido" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DevolucionCompra">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="idProveedor" Type="int" Nullable="false" />
+    <Property Name="NumeroFactura" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="FechaModificacion" Type="date" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DevolucionCompraDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="idArticulo" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="idMotivo" Type="int" Nullable="false" />
+    <Property Name="Obervaciones" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="idEstado" />
+    </Key>
+    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="NotaDebito">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="NumeroDevolucionCompra" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="FechaModificacion" Type="date" Nullable="false" />
+    <Property Name="SubTotal" Type="int" Nullable="false" />
+    <Property Name="Descuento" Type="int" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NotaDebitoDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="idArticulo" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdenCompra">
+    <Key>
+      <PropertyRef Name="IdOrdenCompra" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="IdOrdenCompra" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="FechaModificacion" Type="date" Nullable="false" />
+    <Property Name="idProveedor" Type="int" Nullable="false" />
+    <Property Name="NumeroCotizacion" Type="int" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="Observaciones" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="OrdenCompraDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="IdArticulo" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Precio" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdenDespacho">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="idDepartamento" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="FechaModificacion" Type="date" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdenDespachoDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="idArticulo" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pedido">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="idTipoArticulo" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="FechaModificacion" Type="date" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PedidoDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="idArticulo" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="IdProveedor" />
+    </Key>
+    <Property Name="IdProveedor" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="IdTipoArticulo" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solicitud">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdTipoArticulo" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="idDepartamento" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="FechaModificacion" Type="date" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SolicitudDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="idArticulo" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grupo">
+    <Key>
+      <PropertyRef Name="IdGrupo" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdGrupo" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IdTipoArticulo" Type="int" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="Identificacion" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="IdTipoPersona" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="NombreRazonSocial" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Apellido" Type="varchar" MaxLength="50" />
+    <Property Name="FechaNacimiento" Type="datetime" />
+    <Property Name="genero" Type="char" MaxLength="1" />
+    <Property Name="TipoIdentificacion" Type="int" Nullable="false" />
+    <Property Name="direccion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TelefonoGneral" Type="numeric" Precision="14" />
+    <Property Name="TelefonoMovil" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="TelefonoCasa" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="TelefonoOtros" Type="numeric" Precision="14" />
+    <Property Name="mail" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TECA.Compras.Articulo_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Articulo_Vista">
+    <Key>
+      <PropertyRef Name="IdArticulo" />
+      <PropertyRef Name="Descripcion" />
+      <PropertyRef Name="IdTipoArticulo" />
+      <PropertyRef Name="TipoArticulo" />
+      <PropertyRef Name="IdGrupo" />
+      <PropertyRef Name="Grupo" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdArticulo" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CantidadActual" Type="numeric" Precision="5" />
+    <Property Name="IdTipoArticulo" Type="int" Nullable="false" />
+    <Property Name="TipoArticulo" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="IdGrupo" Type="int" Nullable="false" />
+    <Property Name="Grupo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="NombreComercial" Type="varchar" MaxLength="50" />
+    <Property Name="IdEstado" Type="int" />
+    <Property Name="Estado" Type="varchar" MaxLength="220" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TECA.Compras.CotizacionCab_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CotizacionCab_Vista">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idproveedor" />
+      <PropertyRef Name="Proveedor" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="idEstado" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="Usuario" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idproveedor" Type="int" Nullable="false" />
+    <Property Name="Proveedor" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="100" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="Empresa" Type="varchar" MaxLength="50" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TECA.Compras.CotizacionDetalle_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CotizacionDetalle_Vista">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="NumeroPedido" />
+      <PropertyRef Name="idUsuario" />
+      <PropertyRef Name="NombreUsuario" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="idTipoArticulo" />
+      <PropertyRef Name="TipoArticulo" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="NumeroPedido" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="NombreUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="idTipoArticulo" Type="int" Nullable="false" />
+    <Property Name="TipoArticulo" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="Empresa" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TECA.Compras.OrdenCompraCab_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="OrdenCompraCab_Vista">
+    <Key>
+      <PropertyRef Name="IdOrdenCompra" />
+      <PropertyRef Name="idProveedor" />
+      <PropertyRef Name="Proveedor" />
+      <PropertyRef Name="NumeroCotizacion" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="NombreUsuario" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="idEstado" />
+    </Key>
+    <Property Name="IdOrdenCompra" Type="int" Nullable="false" />
+    <Property Name="idProveedor" Type="int" Nullable="false" />
+    <Property Name="Proveedor" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="NumeroCotizacion" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="NombreUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="NombreComercial" Type="varchar" MaxLength="50" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="100" />
+    <Property Name="Observaciones" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TECA.Compras.OrdenCompraDetalle_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="OrdenCompraDetalle_Vista">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="IdArticulo" />
+      <PropertyRef Name="Articulo" />
+      <PropertyRef Name="Cantidad" />
+      <PropertyRef Name="Precio" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="IdArticulo" Type="int" Nullable="false" />
+    <Property Name="Articulo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Precio" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="NombreComercial" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TECA.Compras.PedidoCabecera_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="PedidoCabecera_Vista">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idTipoArticulo" />
+      <PropertyRef Name="TipoArticulo" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="idUsuario" />
+      <PropertyRef Name="Usuario" />
+      <PropertyRef Name="idEstado" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idTipoArticulo" Type="int" Nullable="false" />
+    <Property Name="TipoArticulo" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="Empresa" Type="varchar" MaxLength="50" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TECA.Compras.PedidoDetalle_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="PedidoDetalle_Vista">
+    <Key>
+      <PropertyRef Name="numero" />
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="idArticulo" />
+      <PropertyRef Name="Articulo" />
+      <PropertyRef Name="Cantidad" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="idArticulo" Type="int" Nullable="false" />
+    <Property Name="Articulo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="Empresa" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TECA.Compras.ProveedorDescripcion' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ProveedorDescripcion">
+    <Key>
+      <PropertyRef Name="IdProveedor" />
+      <PropertyRef Name="IdPersona" />
+      <PropertyRef Name="NombreRazonSocial" />
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdTipoArticulo" />
+      <PropertyRef Name="Descripcion" />
+      <PropertyRef Name="Estado" />
+    </Key>
+    <Property Name="IdProveedor" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="NombreRazonSocial" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="50" />
+    <Property Name="IdTipoArticulo" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TECA.Compras.SolicitudCab' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="SolicitudCab">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="idtipoArticulo" />
+      <PropertyRef Name="TipoArticulo" />
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="Usuario" />
+      <PropertyRef Name="idDepartamento" />
+      <PropertyRef Name="Departamento" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="idEstado" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="Empresa" Type="varchar" MaxLength="50" />
+    <Property Name="idtipoArticulo" Type="int" Nullable="false" />
+    <Property Name="TipoArticulo" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="Usuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="idDepartamento" Type="int" Nullable="false" />
+    <Property Name="Departamento" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TECA.Compras.SolicitudDetalle' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="SolicitudDetalle">
+    <Key>
+      <PropertyRef Name="numero" />
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="idArticulo" />
+      <PropertyRef Name="Articulo" />
+      <PropertyRef Name="Cantidad" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="idArticulo" Type="int" Nullable="false" />
+    <Property Name="Articulo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="Empresa" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'TECA.Compras.Vehiculo_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Vehiculo_Vista">
+    <Key>
+      <PropertyRef Name="IdArticulo" />
+      <PropertyRef Name="Descripcion" />
+      <PropertyRef Name="IdTipoArticulo" />
+      <PropertyRef Name="TipoArticulo" />
+      <PropertyRef Name="IdGrupo" />
+      <PropertyRef Name="Grupo" />
+      <PropertyRef Name="Chasis" />
+      <PropertyRef Name="Color" />
+      <PropertyRef Name="Marca" />
+      <PropertyRef Name="Modelo" />
+    </Key>
+    <Property Name="NombreComercial" Type="varchar" MaxLength="50" />
+    <Property Name="IdArticulo" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CantidadActual" Type="numeric" Precision="5" />
+    <Property Name="IdTipoArticulo" Type="int" Nullable="false" />
+    <Property Name="TipoArticulo" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="IdGrupo" Type="int" Nullable="false" />
+    <Property Name="Grupo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Chasis" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TipoMotor" Type="varchar" MaxLength="100" />
+    <Property Name="TipoComb" Type="varchar" MaxLength="100" />
+    <Property Name="Color" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Marca" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Modelo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TipoMaterial" Type="varchar" MaxLength="100" />
+    <Property Name="idestado" Type="int" />
+    <Property Name="Estado" Type="varchar" MaxLength="220" />
+  </EntityType>
+  <Association Name="FK__Compra__1881A0DE">
+    <End Role="OrdenCompra" Type="CompraModelo.Store.OrdenCompra" Multiplicity="1" />
+    <End Role="Compra" Type="CompraModelo.Store.Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenCompra">
+        <PropertyRef Name="IdOrdenCompra" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="idEmpresa" />
+        <PropertyRef Name="idOrdenCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Compra__idEstado__178D7CA5">
+    <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
+    <End Role="Compra" Type="CompraModelo.Store.Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CompraDet__1D4655FB">
+    <End Role="Compra" Type="CompraModelo.Store.Compra" Multiplicity="1" />
+    <End Role="CompraDet" Type="CompraModelo.Store.CompraDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Compra">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="CompraDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cotizacio__idEst__047AA831">
+    <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
+    <End Role="Cotizacion" Type="CompraModelo.Store.Cotizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="Cotizacion">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cotizacio__idPro__038683F8">
+    <End Role="Proveedor" Type="CompraModelo.Store.Proveedor" Multiplicity="1" />
+    <End Role="Cotizacion" Type="CompraModelo.Store.Cotizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="Cotizacion">
+        <PropertyRef Name="idProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CotizacionDet__28A2FA0E">
+    <End Role="Pedido" Type="CompraModelo.Store.Pedido" Multiplicity="1" />
+    <End Role="CotizacionDet" Type="CompraModelo.Store.CotizacionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedido">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="CotizacionDet">
+        <PropertyRef Name="NumeroPedido" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Devolucio__idEst__6D823440">
+    <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
+    <End Role="DevolucionCompra" Type="CompraModelo.Store.DevolucionCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="DevolucionCompra">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Devolucio__idPro__6E765879">
+    <End Role="Proveedor" Type="CompraModelo.Store.Proveedor" Multiplicity="1" />
+    <End Role="DevolucionCompra" Type="CompraModelo.Store.DevolucionCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="DevolucionCompra">
+        <PropertyRef Name="idProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DevolucionCompra__733B0D96">
+    <End Role="DevolucionCompra" Type="CompraModelo.Store.DevolucionCompra" Multiplicity="1" />
+    <End Role="DevolucionCompraDet" Type="CompraModelo.Store.DevolucionCompraDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DevolucionCompra">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="DevolucionCompraDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NotaDebit__Canti__35FCF52C">
+    <End Role="NotaDebito" Type="CompraModelo.Store.NotaDebito" Multiplicity="1" />
+    <End Role="NotaDebitoDet" Type="CompraModelo.Store.NotaDebitoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NotaDebito">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="NotaDebitoDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NotaDebit__idEst__3138400F">
+    <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
+    <End Role="NotaDebito" Type="CompraModelo.Store.NotaDebito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="NotaDebito">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NotaDebito__30441BD6">
+    <End Role="DevolucionCompra" Type="CompraModelo.Store.DevolucionCompra" Multiplicity="1" />
+    <End Role="NotaDebito" Type="CompraModelo.Store.NotaDebito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DevolucionCompra">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="NotaDebito">
+        <PropertyRef Name="NumeroDevolucionCompra" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenComp__idEst__0D0FEE32">
+    <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
+    <End Role="OrdenCompra" Type="CompraModelo.Store.OrdenCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="OrdenCompra">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenComp__idPro__0E04126B">
+    <End Role="Proveedor" Type="CompraModelo.Store.Proveedor" Multiplicity="1" />
+    <End Role="OrdenCompra" Type="CompraModelo.Store.OrdenCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="OrdenCompra">
+        <PropertyRef Name="idProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenCompra__0EF836A4">
+    <End Role="Cotizacion" Type="CompraModelo.Store.Cotizacion" Multiplicity="1" />
+    <End Role="OrdenCompra" Type="CompraModelo.Store.OrdenCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cotizacion">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenCompra">
+        <PropertyRef Name="NumeroCotizacion" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenCompraDet__63F8CA06">
+    <End Role="OrdenCompra" Type="CompraModelo.Store.OrdenCompra" Multiplicity="1" />
+    <End Role="OrdenCompraDet" Type="CompraModelo.Store.OrdenCompraDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenCompra">
+        <PropertyRef Name="IdOrdenCompra" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenCompraDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenDesp__idEst__7DB89C09">
+    <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
+    <End Role="OrdenDespacho" Type="CompraModelo.Store.OrdenDespacho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="OrdenDespacho">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenDespachoDet__0371755F">
+    <End Role="OrdenDespacho" Type="CompraModelo.Store.OrdenDespacho" Multiplicity="1" />
+    <End Role="OrdenDespachoDet" Type="CompraModelo.Store.OrdenDespachoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenDespacho">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenDespachoDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pedido__idEstado__1D314762">
+    <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
+    <End Role="Pedido" Type="CompraModelo.Store.Pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="Pedido">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PedidoDet__21F5FC7F">
+    <End Role="Pedido" Type="CompraModelo.Store.Pedido" Multiplicity="1" />
+    <End Role="PedidoDet" Type="CompraModelo.Store.PedidoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pedido">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="PedidoDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Proveedor__IdPer__7814D14C">
+    <End Role="Persona" Type="CompraModelo.Store.Persona" Multiplicity="1" />
+    <End Role="Proveedor" Type="CompraModelo.Store.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Solicitud__idEst__0CFADF99">
+    <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
+    <End Role="Solicitud" Type="CompraModelo.Store.Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="idEstado" />
+      </Principal>
+      <Dependent Role="Solicitud">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SolicitudDet__12B3B8EF">
+    <End Role="Solicitud" Type="CompraModelo.Store.Solicitud" Multiplicity="1" />
+    <End Role="SolicitudDet" Type="CompraModelo.Store.SolicitudDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="SolicitudDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SubGrupos__IdGru__7167D3BD">
+    <End Role="Grupo" Type="CompraModelo.Store.Grupo" Multiplicity="0..1" />
+    <End Role="SubGrupos" Type="CompraModelo.Store.SubGrupos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="IdGrupo" />
+      </Principal>
+      <Dependent Role="SubGrupos">
+        <PropertyRef Name="IdGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

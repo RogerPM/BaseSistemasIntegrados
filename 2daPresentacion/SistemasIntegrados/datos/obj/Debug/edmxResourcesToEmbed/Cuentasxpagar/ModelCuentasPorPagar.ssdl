@@ -1,0 +1,1667 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelCuentasPorPagar.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModelCuentasPorPagarStoreContainer">
+    <EntitySet Name="CabeceraComprobante" EntityType="ModelCuentasPorPagar.Store.CabeceraComprobante" store:Type="Tables" Schema="Contabilidad" />
+    <EntitySet Name="DetalleComprobante" EntityType="ModelCuentasPorPagar.Store.DetalleComprobante" store:Type="Tables" Schema="Contabilidad" />
+    <EntitySet Name="Banco" EntityType="ModelCuentasPorPagar.Store.Banco" store:Type="Tables" Schema="CuentasPorCobrar" />
+    <EntitySet Name="CuentaBancaria" EntityType="ModelCuentasPorPagar.Store.CuentaBancaria" store:Type="Tables" Schema="CuentasPorCobrar" />
+    <EntitySet Name="CuentaBancaria2" EntityType="ModelCuentasPorPagar.Store.CuentaBancaria2" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="CuentaPorPagar" EntityType="ModelCuentasPorPagar.Store.CuentaPorPagar" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="DeudaDet" EntityType="ModelCuentasPorPagar.Store.DeudaDet" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="EmpresaServicio" EntityType="ModelCuentasPorPagar.Store.EmpresaServicio" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="FrecuenciaPago" EntityType="ModelCuentasPorPagar.Store.FrecuenciaPago" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="Impuesto" EntityType="ModelCuentasPorPagar.Store.Impuesto" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="ImpuestoCuenta" EntityType="ModelCuentasPorPagar.Store.ImpuestoCuenta" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="MedioPago" EntityType="ModelCuentasPorPagar.Store.MedioPago" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="OrdenPagoCab" EntityType="ModelCuentasPorPagar.Store.OrdenPagoCab" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="OrdenPagoDet" EntityType="ModelCuentasPorPagar.Store.OrdenPagoDet" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="OrdenPagoEmpleadoDet" EntityType="ModelCuentasPorPagar.Store.OrdenPagoEmpleadoDet" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="PagoCab" EntityType="ModelCuentasPorPagar.Store.PagoCab" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="PagoDet" EntityType="ModelCuentasPorPagar.Store.PagoDet" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="TelefonoEmpresaServicio" EntityType="ModelCuentasPorPagar.Store.TelefonoEmpresaServicio" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="Comision" EntityType="ModelCuentasPorPagar.Store.Comision" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="ComisionDet" EntityType="ModelCuentasPorPagar.Store.ComisionDet" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="IngresoEgresoCab" EntityType="ModelCuentasPorPagar.Store.IngresoEgresoCab" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="IngresoEgresoDet" EntityType="ModelCuentasPorPagar.Store.IngresoEgresoDet" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="Empleado" EntityType="ModelCuentasPorPagar.Store.Empleado" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Liquidacion" EntityType="ModelCuentasPorPagar.Store.Liquidacion" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="NominaCab" EntityType="ModelCuentasPorPagar.Store.NominaCab" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="NominaDet" EntityType="ModelCuentasPorPagar.Store.NominaDet" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Persona" EntityType="ModelCuentasPorPagar.Store.Persona" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoIdentificacion" EntityType="ModelCuentasPorPagar.Store.TipoIdentificacion" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoPersona" EntityType="ModelCuentasPorPagar.Store.TipoPersona" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoTelefono" EntityType="ModelCuentasPorPagar.Store.TipoTelefono" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Empresa" EntityType="ModelCuentasPorPagar.Store.Empresa" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Usuario" EntityType="ModelCuentasPorPagar.Store.Usuario" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Liquidacion1" EntityType="ModelCuentasPorPagar.Store.Liquidacion1" store:Type="Tables" Schema="Taller" Table="Liquidacion" />
+    <AssociationSet Name="FK__Banco__idEmpresa__39788055" Association="ModelCuentasPorPagar.Store.FK__Banco__idEmpresa__39788055">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Banco" EntitySet="Banco" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CabeceraC__IdEmp__4865BE2A" Association="ModelCuentasPorPagar.Store.FK__CabeceraC__IdEmp__4865BE2A">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comision__5555A4F4" Association="ModelCuentasPorPagar.Store.FK__Comision__5555A4F4">
+      <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+      <End Role="Comision" EntitySet="Comision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comision__idUsua__5649C92D" Association="ModelCuentasPorPagar.Store.FK__Comision__idUsua__5649C92D">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Comision" EntitySet="Comision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ComisionD__IdEmp__668030F6" Association="ModelCuentasPorPagar.Store.FK__ComisionD__IdEmp__668030F6">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="ComisionDet" EntitySet="ComisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ComisionD__IdNum__63A3C44B" Association="ModelCuentasPorPagar.Store.FK__ComisionD__IdNum__63A3C44B">
+      <End Role="Comision" EntitySet="Comision" />
+      <End Role="ComisionDet" EntitySet="ComisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ComisionD__idUsu__6774552F" Association="ModelCuentasPorPagar.Store.FK__ComisionD__idUsu__6774552F">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="ComisionDet" EntitySet="ComisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ComisionDet__658C0CBD" Association="ModelCuentasPorPagar.Store.FK__ComisionDet__658C0CBD">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="ComisionDet" EntitySet="ComisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaBan__IdBan__31A25463" Association="ModelCuentasPorPagar.Store.FK__CuentaBan__IdBan__31A25463">
+      <End Role="Banco" EntitySet="Banco" />
+      <End Role="CuentaBancaria2" EntitySet="CuentaBancaria2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaBan__idBan__5DB5E0CB" Association="ModelCuentasPorPagar.Store.FK__CuentaBan__idBan__5DB5E0CB">
+      <End Role="Banco" EntitySet="Banco" />
+      <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaBan__IdEmp__3296789C" Association="ModelCuentasPorPagar.Store.FK__CuentaBan__IdEmp__3296789C">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CuentaBancaria2" EntitySet="CuentaBancaria2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaBan__idEmp__5CC1BC92" Association="ModelCuentasPorPagar.Store.FK__CuentaBan__idEmp__5CC1BC92">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaBan__idTit__5EAA0504" Association="ModelCuentasPorPagar.Store.FK__CuentaBan__idTit__5EAA0504">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaBancaria2__30AE302A" Association="ModelCuentasPorPagar.Store.FK__CuentaBancaria2__30AE302A">
+      <End Role="EmpresaServicio" EntitySet="EmpresaServicio" />
+      <End Role="CuentaBancaria2" EntitySet="CuentaBancaria2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaPor__IdEmp__375B2DB9" Association="ModelCuentasPorPagar.Store.FK__CuentaPor__IdEmp__375B2DB9">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaPor__IdEmp__3D14070F" Association="ModelCuentasPorPagar.Store.FK__CuentaPor__IdEmp__3D14070F">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaPor__IdPer__3B2BBE9D" Association="ModelCuentasPorPagar.Store.FK__CuentaPor__IdPer__3B2BBE9D">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaPor__IdUsu__384F51F2" Association="ModelCuentasPorPagar.Store.FK__CuentaPor__IdUsu__384F51F2">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaPorPagar__3943762B" Association="ModelCuentasPorPagar.Store.FK__CuentaPorPagar__3943762B">
+      <End Role="FrecuenciaPago" EntitySet="FrecuenciaPago" />
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaPorPagar__3A379A64" Association="ModelCuentasPorPagar.Store.FK__CuentaPorPagar__3A379A64">
+      <End Role="EmpresaServicio" EntitySet="EmpresaServicio" />
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaPorPagar__3C1FE2D6" Association="ModelCuentasPorPagar.Store.FK__CuentaPorPagar__3C1FE2D6">
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleCo__IdEmp__4D2A7347" Association="ModelCuentasPorPagar.Store.FK__DetalleCo__IdEmp__4D2A7347">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="DetalleComprobante" EntitySet="DetalleComprobante" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleComproban__4F12BBB9" Association="ModelCuentasPorPagar.Store.FK__DetalleComproban__4F12BBB9">
+      <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+      <End Role="DetalleComprobante" EntitySet="DetalleComprobante" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DeudaDet__41D8BC2C" Association="ModelCuentasPorPagar.Store.FK__DeudaDet__41D8BC2C">
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+      <End Role="DeudaDet" EntitySet="DeudaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__IdEmpr__239E4DCF" Association="ModelCuentasPorPagar.Store.FK__Empleado__IdEmpr__239E4DCF">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__IdPers__24927208" Association="ModelCuentasPorPagar.Store.FK__Empleado__IdPers__24927208">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EmpresaSe__IdEmp__18D6A699" Association="ModelCuentasPorPagar.Store.FK__EmpresaSe__IdEmp__18D6A699">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EmpresaServicio" EntitySet="EmpresaServicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EmpresaSe__IdTip__17E28260" Association="ModelCuentasPorPagar.Store.FK__EmpresaSe__IdTip__17E28260">
+      <End Role="TipoPersona" EntitySet="TipoPersona" />
+      <End Role="EmpresaServicio" EntitySet="EmpresaServicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EmpresaSe__IdUsu__19CACAD2" Association="ModelCuentasPorPagar.Store.FK__EmpresaSe__IdUsu__19CACAD2">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EmpresaServicio" EntitySet="EmpresaServicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Frecuenci__IdEmp__2BE97B0D" Association="ModelCuentasPorPagar.Store.FK__Frecuenci__IdEmp__2BE97B0D">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="FrecuenciaPago" EntitySet="FrecuenciaPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Frecuenci__IdUsu__2AF556D4" Association="ModelCuentasPorPagar.Store.FK__Frecuenci__IdUsu__2AF556D4">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="FrecuenciaPago" EntitySet="FrecuenciaPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Impuesto__IdEmpr__2630A1B7" Association="ModelCuentasPorPagar.Store.FK__Impuesto__IdEmpr__2630A1B7">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Impuesto" EntitySet="Impuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Impuesto__IdUsua__253C7D7E" Association="ModelCuentasPorPagar.Store.FK__Impuesto__IdUsua__253C7D7E">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Impuesto" EntitySet="Impuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ImpuestoC__IdEmp__469D7149" Association="ModelCuentasPorPagar.Store.FK__ImpuestoC__IdEmp__469D7149">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="ImpuestoCuenta" EntitySet="ImpuestoCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ImpuestoCuenta__47919582" Association="ModelCuentasPorPagar.Store.FK__ImpuestoCuenta__47919582">
+      <End Role="Impuesto" EntitySet="Impuesto" />
+      <End Role="ImpuestoCuenta" EntitySet="ImpuestoCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ImpuestoCuenta__4885B9BB" Association="ModelCuentasPorPagar.Store.FK__ImpuestoCuenta__4885B9BB">
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+      <End Role="ImpuestoCuenta" EntitySet="ImpuestoCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdRes__10766AC2" Association="ModelCuentasPorPagar.Store.FK__IngresoEg__IdRes__10766AC2">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdUsu__116A8EFB" Association="ModelCuentasPorPagar.Store.FK__IngresoEg__IdUsu__116A8EFB">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEgresoDet__17236851" Association="ModelCuentasPorPagar.Store.FK__IngresoEgresoDet__17236851">
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Liquidaci__IdEmp__024846FC" Association="ModelCuentasPorPagar.Store.FK__Liquidaci__IdEmp__024846FC">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Liquidacion1" EntitySet="Liquidacion1" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Liquidaci__IdEmp__690797E6" Association="ModelCuentasPorPagar.Store.FK__Liquidaci__IdEmp__690797E6">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Liquidacion" EntitySet="Liquidacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Liquidaci__IdPer__681373AD" Association="ModelCuentasPorPagar.Store.FK__Liquidaci__IdPer__681373AD">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Liquidacion" EntitySet="Liquidacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MedioPago__IdEmp__1EC48A19" Association="ModelCuentasPorPagar.Store.FK__MedioPago__IdEmp__1EC48A19">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="MedioPago" EntitySet="MedioPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MedioPago__IdUsu__1FB8AE52" Association="ModelCuentasPorPagar.Store.FK__MedioPago__IdUsu__1FB8AE52">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="MedioPago" EntitySet="MedioPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NominaCab__IdEmp__43D61337" Association="ModelCuentasPorPagar.Store.FK__NominaCab__IdEmp__43D61337">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="NominaCab" EntitySet="NominaCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NominaDet__489AC854" Association="ModelCuentasPorPagar.Store.FK__NominaDet__489AC854">
+      <End Role="NominaCab" EntitySet="NominaCab" />
+      <End Role="NominaDet" EntitySet="NominaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenPago__IdEmp__4E3E9311" Association="ModelCuentasPorPagar.Store.FK__OrdenPago__IdEmp__4E3E9311">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="OrdenPagoCab" EntitySet="OrdenPagoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenPago__IdEmp__53F76C67" Association="ModelCuentasPorPagar.Store.FK__OrdenPago__IdEmp__53F76C67">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="OrdenPagoEmpleadoDet" EntitySet="OrdenPagoEmpleadoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenPago__IdUsu__4D4A6ED8" Association="ModelCuentasPorPagar.Store.FK__OrdenPago__IdUsu__4D4A6ED8">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="OrdenPagoCab" EntitySet="OrdenPagoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenPagoDet__58BC2184" Association="ModelCuentasPorPagar.Store.FK__OrdenPagoDet__58BC2184">
+      <End Role="OrdenPagoCab" EntitySet="OrdenPagoCab" />
+      <End Role="OrdenPagoDet" EntitySet="OrdenPagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenPagoDet__59B045BD" Association="ModelCuentasPorPagar.Store.FK__OrdenPagoDet__59B045BD">
+      <End Role="DeudaDet" EntitySet="DeudaDet" />
+      <End Role="OrdenPagoDet" EntitySet="OrdenPagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenPagoEmplead__5303482E" Association="ModelCuentasPorPagar.Store.FK__OrdenPagoEmplead__5303482E">
+      <End Role="OrdenPagoCab" EntitySet="OrdenPagoCab" />
+      <End Role="OrdenPagoEmpleadoDet" EntitySet="OrdenPagoEmpleadoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoCab__605D434C" Association="ModelCuentasPorPagar.Store.FK__PagoCab__605D434C">
+      <End Role="OrdenPagoCab" EntitySet="OrdenPagoCab" />
+      <End Role="PagoCab" EntitySet="PagoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoCab__IdEmpre__5F691F13" Association="ModelCuentasPorPagar.Store.FK__PagoCab__IdEmpre__5F691F13">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="PagoCab" EntitySet="PagoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoCab__IdUsuar__5E74FADA" Association="ModelCuentasPorPagar.Store.FK__PagoCab__IdUsuar__5E74FADA">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="PagoCab" EntitySet="PagoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoDet__6521F869" Association="ModelCuentasPorPagar.Store.FK__PagoDet__6521F869">
+      <End Role="PagoCab" EntitySet="PagoCab" />
+      <End Role="PagoDet" EntitySet="PagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoDet__670A40DB" Association="ModelCuentasPorPagar.Store.FK__PagoDet__670A40DB">
+      <End Role="NominaCab" EntitySet="NominaCab" />
+      <End Role="PagoDet" EntitySet="PagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoDet__67FE6514" Association="ModelCuentasPorPagar.Store.FK__PagoDet__67FE6514">
+      <End Role="MedioPago" EntitySet="MedioPago" />
+      <End Role="PagoDet" EntitySet="PagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoDet__68F2894D" Association="ModelCuentasPorPagar.Store.FK__PagoDet__68F2894D">
+      <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+      <End Role="PagoDet" EntitySet="PagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoDet__IdBanco__69E6AD86" Association="ModelCuentasPorPagar.Store.FK__PagoDet__IdBanco__69E6AD86">
+      <End Role="Banco" EntitySet="Banco" />
+      <End Role="PagoDet" EntitySet="PagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoDet__NumComi__66161CA2" Association="ModelCuentasPorPagar.Store.FK__PagoDet__NumComi__66161CA2">
+      <End Role="Comision" EntitySet="Comision" />
+      <End Role="PagoDet" EntitySet="PagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__IdEmpre__1BFD2C07" Association="ModelCuentasPorPagar.Store.FK__Persona__IdEmpre__1BFD2C07">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__IdTipoP__1CF15040" Association="ModelCuentasPorPagar.Store.FK__Persona__IdTipoP__1CF15040">
+      <End Role="TipoPersona" EntitySet="TipoPersona" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__TipoIde__1DE57479" Association="ModelCuentasPorPagar.Store.FK__Persona__TipoIde__1DE57479">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TelefonoE__IdEmp__1E8F7FEF" Association="ModelCuentasPorPagar.Store.FK__TelefonoE__IdEmp__1E8F7FEF">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TelefonoEmpresaServicio" EntitySet="TelefonoEmpresaServicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TelefonoEmpresaS__1F83A428" Association="ModelCuentasPorPagar.Store.FK__TelefonoEmpresaS__1F83A428">
+      <End Role="EmpresaServicio" EntitySet="EmpresaServicio" />
+      <End Role="TelefonoEmpresaServicio" EntitySet="TelefonoEmpresaServicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoIdent__IdEmp__173876EA" Association="ModelCuentasPorPagar.Store.FK__TipoIdent__IdEmp__173876EA">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoPerso__IdEmp__117F9D94" Association="ModelCuentasPorPagar.Store.FK__TipoPerso__IdEmp__117F9D94">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoPersona" EntitySet="TipoPersona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoTelef__IdEmp__571DF1D5" Association="ModelCuentasPorPagar.Store.FK__TipoTelef__IdEmp__571DF1D5">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoTelefono" EntitySet="TipoTelefono" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdUsuar__3C69FB99" Association="ModelCuentasPorPagar.Store.FK__Usuario__IdUsuar__3C69FB99">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CabeceraComprobante">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="numero_comprobante" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="numero_comprobante" Type="numeric" Nullable="false" Precision="4" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="glosa" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="periodo_contable" Type="numeric" Precision="6" />
+    <Property Name="periodo_contable_IdAFiscal" Type="numeric" Precision="4" />
+    <Property Name="IdUsuario" Type="int" />
+    <Property Name="FechaModificacion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="DetalleComprobante">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="cabecera_comprobante" />
+      <PropertyRef Name="linea_comprobante" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="cabecera_comprobante" Type="numeric" Nullable="false" Precision="4" />
+    <Property Name="linea_comprobante" Type="numeric" Nullable="false" Precision="2" />
+    <Property Name="cuenta" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="debe" Type="decimal" Nullable="false" Precision="14" Scale="2" />
+    <Property Name="haber" Type="decimal" Nullable="false" Precision="14" Scale="2" />
+  </EntityType>
+  <EntityType Name="Banco">
+    <Key>
+      <PropertyRef Name="idBanco" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idBanco" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="CuentaBancaria">
+    <Key>
+      <PropertyRef Name="idCuentaBancaria" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idCuentaBancaria" Type="int" Nullable="false" />
+    <Property Name="idBanco" Type="int" Nullable="false" />
+    <Property Name="idTitular" Type="int" />
+    <Property Name="NumeroCuenta" Type="int" Nullable="false" />
+    <Property Name="TipoCuenta" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Saldo" Type="money" Nullable="false" />
+    <Property Name="Estado" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="CuentaBancaria2">
+    <Key>
+      <PropertyRef Name="Serie" />
+      <PropertyRef Name="IdEmpresaServicio" />
+    </Key>
+    <Property Name="Serie" Type="int" Nullable="false" />
+    <Property Name="TipoCuenta" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="NroCta" Type="varchar" Nullable="false" MaxLength="13" />
+    <Property Name="IdBanco" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEmpresaServicio" Type="varchar" Nullable="false" MaxLength="13" />
+  </EntityType>
+  <EntityType Name="CuentaPorPagar">
+    <Key>
+      <PropertyRef Name="NumCuentaPorPagar" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="NumCuentaPorPagar" Type="int" Nullable="false" />
+    <Property Name="NumIngresoEgreso" Type="int" Nullable="false" />
+    <Property Name="FechaIngreso" Type="date" Nullable="false" />
+    <Property Name="Factura" Type="int" Nullable="false" />
+    <Property Name="FechaTransaccion" Type="date" Nullable="false" />
+    <Property Name="IdPersona" Type="int" />
+    <Property Name="IdEmpresaServicio" Type="varchar" MaxLength="13" />
+    <Property Name="Motivo" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Detalle" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="Subtotal" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Descuento" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Total" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="FormaPago" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="ValorEntrada" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="NumeroLetra" Type="int" />
+    <Property Name="IdFrecuencia" Type="int" />
+    <Property Name="ValorLetra" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="SaldoDeuda" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DeudaDet">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="NumCuentaPorPagar" />
+      <PropertyRef Name="NumDetalleDeuda" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="NumCuentaPorPagar" Type="int" Nullable="false" />
+    <Property Name="NumDetalleDeuda" Type="int" Nullable="false" />
+    <Property Name="ValorLetra" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="FechaVencimiento" Type="date" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmpresaServicio">
+    <Key>
+      <PropertyRef Name="IdEmpresaServicio" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresaServicio" Type="varchar" Nullable="false" MaxLength="13" />
+    <Property Name="FechaRegistro" Type="date" Nullable="false" />
+    <Property Name="RazonSocial" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Direccion" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Webpage" Type="varchar" MaxLength="50" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="IdTipoPersona" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FrecuenciaPago">
+    <Key>
+      <PropertyRef Name="IdFrecuenciaPago" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdFrecuenciaPago" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="FechaActual" Type="date" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Impuesto">
+    <Key>
+      <PropertyRef Name="IdImpuesto" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdImpuesto" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Porcentaje" Type="decimal" Nullable="false" Precision="4" Scale="2" />
+    <Property Name="FechaRegistro" Type="date" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ImpuestoCuenta">
+    <Key>
+      <PropertyRef Name="IdImpuesto" />
+      <PropertyRef Name="NumCuentaPorPagar" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdImpuesto" Type="int" Nullable="false" />
+    <Property Name="NumCuentaPorPagar" Type="int" Nullable="false" />
+    <Property Name="Valor" Type="numeric" Nullable="false" Precision="10" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MedioPago">
+    <Key>
+      <PropertyRef Name="IdMedioPago" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdMedioPago" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="fechaRegistro" Type="date" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdenPagoCab">
+    <Key>
+      <PropertyRef Name="NumOrdenPago" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="NumOrdenPago" Type="int" Nullable="false" />
+    <Property Name="fechadeEmision" Type="date" Nullable="false" />
+    <Property Name="IdPersona" Type="int" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="TotalPagar" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="TipoOrdenPago" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdenPagoDet">
+    <Key>
+      <PropertyRef Name="NumLinea" />
+      <PropertyRef Name="NumOrdenCab" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="NumLinea" Type="int" Nullable="false" />
+    <Property Name="NumCuentaPorPagar" Type="int" Nullable="false" />
+    <Property Name="NumDetalleDeuda" Type="int" Nullable="false" />
+    <Property Name="SaldoDeuda" Type="numeric" Nullable="false" Precision="10" />
+    <Property Name="NumeroPagosRealizar" Type="int" Nullable="false" />
+    <Property Name="NumOrdenCab" Type="int" Nullable="false" />
+    <Property Name="TotalPagar" Type="numeric" Nullable="false" Precision="10" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdenPagoEmpleadoDet">
+    <Key>
+      <PropertyRef Name="NumOrdenPago" />
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="NumOrdenPago" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="SueldoTotal" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="IngresoAdicional" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DescuentoTotal" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="PagoNeto" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="PagoCab">
+    <Key>
+      <PropertyRef Name="NumPago" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="NumPago" Type="int" Nullable="false" />
+    <Property Name="FechaIngreso" Type="date" Nullable="false" />
+    <Property Name="NumOrdenPago" Type="int" />
+    <Property Name="TotalPagar" Type="numeric" Nullable="false" Precision="10" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="NumComprobante" Type="numeric" Nullable="false" Precision="4" />
+  </EntityType>
+  <EntityType Name="PagoDet">
+    <Key>
+      <PropertyRef Name="NumLinea" />
+      <PropertyRef Name="NumPago" />
+    </Key>
+    <Property Name="NumLinea" Type="int" Nullable="false" />
+    <Property Name="IdMedioPago" Type="int" Nullable="false" />
+    <Property Name="Monto" Type="numeric" Nullable="false" Precision="10" />
+    <Property Name="NumeroCuenta" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdBanco" Type="int" Nullable="false" />
+    <Property Name="NumComprobante" Type="numeric" Nullable="false" Precision="4" />
+    <Property Name="NumComision" Type="int" />
+    <Property Name="NumNominaCab" Type="int" />
+    <Property Name="NumPago" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TelefonoEmpresaServicio">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdEmpresaServicio" />
+      <PropertyRef Name="IdTelefono" />
+      <PropertyRef Name="Serie" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEmpresaServicio" Type="varchar" Nullable="false" MaxLength="13" />
+    <Property Name="IdTelefono" Type="int" Nullable="false" />
+    <Property Name="Serie" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Comision">
+    <Key>
+      <PropertyRef Name="IdNumeroComision" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="cabecera_comprobante" Type="numeric" Precision="4" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="IdNumeroComision" Type="int" Nullable="false" />
+    <Property Name="FechaInicial" Type="date" />
+    <Property Name="FechaFinal" Type="date" />
+    <Property Name="IdNumeroPorcComision" Type="int" Nullable="false" />
+    <Property Name="MontoVenta" Type="money" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ComisionDet">
+    <Key>
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="IdNumeroComision" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="IdNumeroComision" Type="int" Nullable="false" />
+    <Property Name="idEmpleado" Type="int" />
+    <Property Name="IdNumeroFactura" Type="int" />
+    <Property Name="MontoComision" Type="money" />
+    <Property Name="FechaPago" Type="date" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IngresoEgresoCab">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="NroMovimiento" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="NroMovimiento" Type="int" Nullable="false" />
+    <Property Name="IdTipoMovimiento" Type="int" />
+    <Property Name="FechaMovimiento" Type="date" />
+    <Property Name="IdOrdenCompra" Type="int" />
+    <Property Name="IdMotivo" Type="int" />
+    <Property Name="IdBodega" Type="int" />
+    <Property Name="IdResponsable" Type="int" />
+    <Property Name="TotalPagar" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="Observacion" Type="varchar" MaxLength="150" />
+    <Property Name="IdUsuario" Type="int" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="IngresoEgresoDet">
+    <Key>
+      <PropertyRef Name="NroMovimiento" />
+      <PropertyRef Name="numero" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="NroMovimiento" Type="int" Nullable="false" />
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="IdTipoArticulo" Type="int" />
+    <Property Name="IdArticulo" Type="int" />
+    <Property Name="IdGrupo" Type="int" />
+    <Property Name="IdPercha" Type="int" />
+    <Property Name="CantidadPedida" Type="int" />
+    <Property Name="CantidadLlegada" Type="int" />
+    <Property Name="Costo" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="Subtotal" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="ValorIVA" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="ValorTotal" Type="numeric" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEmpleado" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="Sueldo" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Liquidacion">
+    <Key>
+      <PropertyRef Name="NumLiquidacion" />
+      <PropertyRef Name="IdPersona" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="NumLiquidacion" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="NumContrato" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="Causa" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="FechaSalida" Type="datetime" Nullable="false" />
+    <Property Name="Ingresos" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Egresos" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Total" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NominaCab">
+    <Key>
+      <PropertyRef Name="NumNomina" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="NumNomina" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="Periodo" Type="int" Nullable="false" />
+    <Property Name="Total" Type="money" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Observacion" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NominaDet">
+    <Key>
+      <PropertyRef Name="NumLinea" />
+    </Key>
+    <Property Name="NumLinea" Type="int" Nullable="false" />
+    <Property Name="NumNomina" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="SueldoNominal" Type="money" Nullable="false" />
+    <Property Name="SueldoGanado" Type="money" Nullable="false" />
+    <Property Name="Iess" Type="money" Nullable="false" />
+    <Property Name="Prestamo" Type="money" />
+    <Property Name="Anticipo" Type="money" />
+    <Property Name="ValorLiquido" Type="money" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="Identificacion" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="IdTipoPersona" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="NombreRazonSocial" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Apellido" Type="varchar" MaxLength="50" />
+    <Property Name="FechaNacimiento" Type="datetime" />
+    <Property Name="genero" Type="char" MaxLength="1" />
+    <Property Name="TipoIdentificacion" Type="int" Nullable="false" />
+    <Property Name="direccion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TelefonoGneral" Type="numeric" Precision="14" />
+    <Property Name="TelefonoMovil" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="TelefonoCasa" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="TelefonoOtros" Type="numeric" Precision="14" />
+    <Property Name="mail" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoIdentificacion">
+    <Key>
+      <PropertyRef Name="IdTipoIdentificacion" />
+    </Key>
+    <Property Name="IdTipoIdentificacion" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoPersona">
+    <Key>
+      <PropertyRef Name="IdTipoPersona" />
+    </Key>
+    <Property Name="IdTipoPersona" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoTelefono">
+    <Key>
+      <PropertyRef Name="IdTipoTelefono" />
+    </Key>
+    <Property Name="IdTipoTelefono" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="50" />
+    <Property Name="NombreComercial" Type="varchar" MaxLength="50" />
+    <Property Name="Ruc" Type="varchar" MaxLength="20" />
+    <Property Name="Direccion" Type="varchar" MaxLength="200" />
+    <Property Name="Logotipo" Type="image" />
+    <Property Name="FechaInicioSistema" Type="datetime" />
+    <Property Name="Correo" Type="varchar" MaxLength="70" />
+    <Property Name="SitioWeb" Type="varchar" MaxLength="70" />
+    <Property Name="Sector" Type="varchar" MaxLength="15" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="250" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="NombreUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Contrasena" Type="varchar" Nullable="false" MaxLength="220" />
+    <Property Name="IdEstado" Type="int" />
+    <Property Name="IdImagen" Type="int" />
+    <Property Name="IdPerfil" Type="int" />
+  </EntityType>
+  <EntityType Name="Liquidacion1">
+    <Key>
+      <PropertyRef Name="IdLiquidacion" />
+    </Key>
+    <Property Name="IdLiquidacion" Type="int" Nullable="false" />
+    <Property Name="IdOrdenTrabajo" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="TotalPagar" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Observacion" Type="varchar" MaxLength="100" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Banco__idEmpresa__39788055">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="Banco" Type="ModelCuentasPorPagar.Store.Banco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Banco">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CabeceraC__IdEmp__4865BE2A">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="CabeceraComprobante" Type="ModelCuentasPorPagar.Store.CabeceraComprobante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CabeceraComprobante">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comision__5555A4F4">
+    <End Role="CabeceraComprobante" Type="ModelCuentasPorPagar.Store.CabeceraComprobante" Multiplicity="0..1" />
+    <End Role="Comision" Type="ModelCuentasPorPagar.Store.Comision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CabeceraComprobante">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="numero_comprobante" />
+      </Principal>
+      <Dependent Role="Comision">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="cabecera_comprobante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comision__idUsua__5649C92D">
+    <End Role="Usuario" Type="ModelCuentasPorPagar.Store.Usuario" Multiplicity="1" />
+    <End Role="Comision" Type="ModelCuentasPorPagar.Store.Comision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Comision">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ComisionD__IdEmp__668030F6">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="ComisionDet" Type="ModelCuentasPorPagar.Store.ComisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="ComisionDet">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ComisionD__IdNum__63A3C44B">
+    <End Role="Comision" Type="ModelCuentasPorPagar.Store.Comision" Multiplicity="1" />
+    <End Role="ComisionDet" Type="ModelCuentasPorPagar.Store.ComisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comision">
+        <PropertyRef Name="IdNumeroComision" />
+      </Principal>
+      <Dependent Role="ComisionDet">
+        <PropertyRef Name="IdNumeroComision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ComisionD__idUsu__6774552F">
+    <End Role="Usuario" Type="ModelCuentasPorPagar.Store.Usuario" Multiplicity="1" />
+    <End Role="ComisionDet" Type="ModelCuentasPorPagar.Store.ComisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="ComisionDet">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ComisionDet__658C0CBD">
+    <End Role="Empleado" Type="ModelCuentasPorPagar.Store.Empleado" Multiplicity="0..1" />
+    <End Role="ComisionDet" Type="ModelCuentasPorPagar.Store.ComisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="ComisionDet">
+        <PropertyRef Name="idEmpleado" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaBan__IdBan__31A25463">
+    <End Role="Banco" Type="ModelCuentasPorPagar.Store.Banco" Multiplicity="1" />
+    <End Role="CuentaBancaria2" Type="ModelCuentasPorPagar.Store.CuentaBancaria2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco">
+        <PropertyRef Name="idBanco" />
+      </Principal>
+      <Dependent Role="CuentaBancaria2">
+        <PropertyRef Name="IdBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaBan__idBan__5DB5E0CB">
+    <End Role="Banco" Type="ModelCuentasPorPagar.Store.Banco" Multiplicity="1" />
+    <End Role="CuentaBancaria" Type="ModelCuentasPorPagar.Store.CuentaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco">
+        <PropertyRef Name="idBanco" />
+      </Principal>
+      <Dependent Role="CuentaBancaria">
+        <PropertyRef Name="idBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaBan__IdEmp__3296789C">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="CuentaBancaria2" Type="ModelCuentasPorPagar.Store.CuentaBancaria2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaBancaria2">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaBan__idEmp__5CC1BC92">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="CuentaBancaria" Type="ModelCuentasPorPagar.Store.CuentaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaBancaria">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaBan__idTit__5EAA0504">
+    <End Role="Persona" Type="ModelCuentasPorPagar.Store.Persona" Multiplicity="0..1" />
+    <End Role="CuentaBancaria" Type="ModelCuentasPorPagar.Store.CuentaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="CuentaBancaria">
+        <PropertyRef Name="idTitular" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaBancaria2__30AE302A">
+    <End Role="EmpresaServicio" Type="ModelCuentasPorPagar.Store.EmpresaServicio" Multiplicity="1" />
+    <End Role="CuentaBancaria2" Type="ModelCuentasPorPagar.Store.CuentaBancaria2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaServicio">
+        <PropertyRef Name="IdEmpresaServicio" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaBancaria2">
+        <PropertyRef Name="IdEmpresaServicio" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaPor__IdEmp__375B2DB9">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="CuentaPorPagar" Type="ModelCuentasPorPagar.Store.CuentaPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaPorPagar">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaPor__IdEmp__3D14070F">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="CuentaPorPagar" Type="ModelCuentasPorPagar.Store.CuentaPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaPorPagar">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaPor__IdPer__3B2BBE9D">
+    <End Role="Persona" Type="ModelCuentasPorPagar.Store.Persona" Multiplicity="0..1" />
+    <End Role="CuentaPorPagar" Type="ModelCuentasPorPagar.Store.CuentaPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="CuentaPorPagar">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaPor__IdUsu__384F51F2">
+    <End Role="Usuario" Type="ModelCuentasPorPagar.Store.Usuario" Multiplicity="1" />
+    <End Role="CuentaPorPagar" Type="ModelCuentasPorPagar.Store.CuentaPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="CuentaPorPagar">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaPorPagar__3943762B">
+    <End Role="FrecuenciaPago" Type="ModelCuentasPorPagar.Store.FrecuenciaPago" Multiplicity="0..1" />
+    <End Role="CuentaPorPagar" Type="ModelCuentasPorPagar.Store.CuentaPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FrecuenciaPago">
+        <PropertyRef Name="IdFrecuenciaPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaPorPagar">
+        <PropertyRef Name="IdFrecuencia" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaPorPagar__3A379A64">
+    <End Role="EmpresaServicio" Type="ModelCuentasPorPagar.Store.EmpresaServicio" Multiplicity="0..1" />
+    <End Role="CuentaPorPagar" Type="ModelCuentasPorPagar.Store.CuentaPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaServicio">
+        <PropertyRef Name="IdEmpresaServicio" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaPorPagar">
+        <PropertyRef Name="IdEmpresaServicio" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaPorPagar__3C1FE2D6">
+    <End Role="IngresoEgresoCab" Type="ModelCuentasPorPagar.Store.IngresoEgresoCab" Multiplicity="1" />
+    <End Role="CuentaPorPagar" Type="ModelCuentasPorPagar.Store.CuentaPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IngresoEgresoCab">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NroMovimiento" />
+      </Principal>
+      <Dependent Role="CuentaPorPagar">
+        <PropertyRef Name="NumIngresoEgreso" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleCo__IdEmp__4D2A7347">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="DetalleComprobante" Type="ModelCuentasPorPagar.Store.DetalleComprobante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="DetalleComprobante">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleComproban__4F12BBB9">
+    <End Role="CabeceraComprobante" Type="ModelCuentasPorPagar.Store.CabeceraComprobante" Multiplicity="1" />
+    <End Role="DetalleComprobante" Type="ModelCuentasPorPagar.Store.DetalleComprobante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CabeceraComprobante">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="numero_comprobante" />
+      </Principal>
+      <Dependent Role="DetalleComprobante">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="cabecera_comprobante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DeudaDet__41D8BC2C">
+    <End Role="CuentaPorPagar" Type="ModelCuentasPorPagar.Store.CuentaPorPagar" Multiplicity="1" />
+    <End Role="DeudaDet" Type="ModelCuentasPorPagar.Store.DeudaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentaPorPagar">
+        <PropertyRef Name="NumCuentaPorPagar" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="DeudaDet">
+        <PropertyRef Name="NumCuentaPorPagar" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__IdEmpr__239E4DCF">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="Empleado" Type="ModelCuentasPorPagar.Store.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__IdPers__24927208">
+    <End Role="Persona" Type="ModelCuentasPorPagar.Store.Persona" Multiplicity="1" />
+    <End Role="Empleado" Type="ModelCuentasPorPagar.Store.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EmpresaSe__IdEmp__18D6A699">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="EmpresaServicio" Type="ModelCuentasPorPagar.Store.EmpresaServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="EmpresaServicio">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EmpresaSe__IdTip__17E28260">
+    <End Role="TipoPersona" Type="ModelCuentasPorPagar.Store.TipoPersona" Multiplicity="1" />
+    <End Role="EmpresaServicio" Type="ModelCuentasPorPagar.Store.EmpresaServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPersona">
+        <PropertyRef Name="IdTipoPersona" />
+      </Principal>
+      <Dependent Role="EmpresaServicio">
+        <PropertyRef Name="IdTipoPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EmpresaSe__IdUsu__19CACAD2">
+    <End Role="Usuario" Type="ModelCuentasPorPagar.Store.Usuario" Multiplicity="1" />
+    <End Role="EmpresaServicio" Type="ModelCuentasPorPagar.Store.EmpresaServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="EmpresaServicio">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Frecuenci__IdEmp__2BE97B0D">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="FrecuenciaPago" Type="ModelCuentasPorPagar.Store.FrecuenciaPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="FrecuenciaPago">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Frecuenci__IdUsu__2AF556D4">
+    <End Role="Usuario" Type="ModelCuentasPorPagar.Store.Usuario" Multiplicity="1" />
+    <End Role="FrecuenciaPago" Type="ModelCuentasPorPagar.Store.FrecuenciaPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="FrecuenciaPago">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Impuesto__IdEmpr__2630A1B7">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="Impuesto" Type="ModelCuentasPorPagar.Store.Impuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Impuesto">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Impuesto__IdUsua__253C7D7E">
+    <End Role="Usuario" Type="ModelCuentasPorPagar.Store.Usuario" Multiplicity="1" />
+    <End Role="Impuesto" Type="ModelCuentasPorPagar.Store.Impuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Impuesto">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ImpuestoC__IdEmp__469D7149">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="ImpuestoCuenta" Type="ModelCuentasPorPagar.Store.ImpuestoCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="ImpuestoCuenta">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ImpuestoCuenta__47919582">
+    <End Role="Impuesto" Type="ModelCuentasPorPagar.Store.Impuesto" Multiplicity="1" />
+    <End Role="ImpuestoCuenta" Type="ModelCuentasPorPagar.Store.ImpuestoCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Impuesto">
+        <PropertyRef Name="IdImpuesto" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="ImpuestoCuenta">
+        <PropertyRef Name="IdImpuesto" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ImpuestoCuenta__4885B9BB">
+    <End Role="CuentaPorPagar" Type="ModelCuentasPorPagar.Store.CuentaPorPagar" Multiplicity="1" />
+    <End Role="ImpuestoCuenta" Type="ModelCuentasPorPagar.Store.ImpuestoCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentaPorPagar">
+        <PropertyRef Name="NumCuentaPorPagar" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="ImpuestoCuenta">
+        <PropertyRef Name="NumCuentaPorPagar" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdRes__10766AC2">
+    <End Role="Persona" Type="ModelCuentasPorPagar.Store.Persona" Multiplicity="0..1" />
+    <End Role="IngresoEgresoCab" Type="ModelCuentasPorPagar.Store.IngresoEgresoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="IngresoEgresoCab">
+        <PropertyRef Name="IdResponsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdUsu__116A8EFB">
+    <End Role="Usuario" Type="ModelCuentasPorPagar.Store.Usuario" Multiplicity="0..1" />
+    <End Role="IngresoEgresoCab" Type="ModelCuentasPorPagar.Store.IngresoEgresoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="IngresoEgresoCab">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEgresoDet__17236851">
+    <End Role="IngresoEgresoCab" Type="ModelCuentasPorPagar.Store.IngresoEgresoCab" Multiplicity="0..1" />
+    <End Role="IngresoEgresoDet" Type="ModelCuentasPorPagar.Store.IngresoEgresoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IngresoEgresoCab">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NroMovimiento" />
+      </Principal>
+      <Dependent Role="IngresoEgresoDet">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NroMovimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Liquidaci__IdEmp__024846FC">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="Liquidacion1" Type="ModelCuentasPorPagar.Store.Liquidacion1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Liquidacion1">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Liquidaci__IdEmp__690797E6">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="Liquidacion" Type="ModelCuentasPorPagar.Store.Liquidacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Liquidacion">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Liquidaci__IdPer__681373AD">
+    <End Role="Persona" Type="ModelCuentasPorPagar.Store.Persona" Multiplicity="1" />
+    <End Role="Liquidacion" Type="ModelCuentasPorPagar.Store.Liquidacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Liquidacion">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MedioPago__IdEmp__1EC48A19">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="MedioPago" Type="ModelCuentasPorPagar.Store.MedioPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="MedioPago">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MedioPago__IdUsu__1FB8AE52">
+    <End Role="Usuario" Type="ModelCuentasPorPagar.Store.Usuario" Multiplicity="1" />
+    <End Role="MedioPago" Type="ModelCuentasPorPagar.Store.MedioPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="MedioPago">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NominaCab__IdEmp__43D61337">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="NominaCab" Type="ModelCuentasPorPagar.Store.NominaCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="NominaCab">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NominaDet__489AC854">
+    <End Role="NominaCab" Type="ModelCuentasPorPagar.Store.NominaCab" Multiplicity="1" />
+    <End Role="NominaDet" Type="ModelCuentasPorPagar.Store.NominaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NominaCab">
+        <PropertyRef Name="NumNomina" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="NominaDet">
+        <PropertyRef Name="NumNomina" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenPago__IdEmp__4E3E9311">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="OrdenPagoCab" Type="ModelCuentasPorPagar.Store.OrdenPagoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenPagoCab">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenPago__IdEmp__53F76C67">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="OrdenPagoEmpleadoDet" Type="ModelCuentasPorPagar.Store.OrdenPagoEmpleadoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenPagoEmpleadoDet">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenPago__IdUsu__4D4A6ED8">
+    <End Role="Usuario" Type="ModelCuentasPorPagar.Store.Usuario" Multiplicity="1" />
+    <End Role="OrdenPagoCab" Type="ModelCuentasPorPagar.Store.OrdenPagoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="OrdenPagoCab">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenPagoDet__58BC2184">
+    <End Role="OrdenPagoCab" Type="ModelCuentasPorPagar.Store.OrdenPagoCab" Multiplicity="1" />
+    <End Role="OrdenPagoDet" Type="ModelCuentasPorPagar.Store.OrdenPagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenPagoCab">
+        <PropertyRef Name="NumOrdenPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenPagoDet">
+        <PropertyRef Name="NumOrdenCab" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenPagoDet__59B045BD">
+    <End Role="DeudaDet" Type="ModelCuentasPorPagar.Store.DeudaDet" Multiplicity="1" />
+    <End Role="OrdenPagoDet" Type="ModelCuentasPorPagar.Store.OrdenPagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeudaDet">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NumCuentaPorPagar" />
+        <PropertyRef Name="NumDetalleDeuda" />
+      </Principal>
+      <Dependent Role="OrdenPagoDet">
+        <PropertyRef Name="NumDetalleDeuda" />
+        <PropertyRef Name="NumCuentaPorPagar" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenPagoEmplead__5303482E">
+    <End Role="OrdenPagoCab" Type="ModelCuentasPorPagar.Store.OrdenPagoCab" Multiplicity="1" />
+    <End Role="OrdenPagoEmpleadoDet" Type="ModelCuentasPorPagar.Store.OrdenPagoEmpleadoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenPagoCab">
+        <PropertyRef Name="NumOrdenPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenPagoEmpleadoDet">
+        <PropertyRef Name="NumOrdenPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoCab__605D434C">
+    <End Role="OrdenPagoCab" Type="ModelCuentasPorPagar.Store.OrdenPagoCab" Multiplicity="0..1" />
+    <End Role="PagoCab" Type="ModelCuentasPorPagar.Store.PagoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenPagoCab">
+        <PropertyRef Name="NumOrdenPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="PagoCab">
+        <PropertyRef Name="NumOrdenPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoCab__IdEmpre__5F691F13">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="PagoCab" Type="ModelCuentasPorPagar.Store.PagoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="PagoCab">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoCab__IdUsuar__5E74FADA">
+    <End Role="Usuario" Type="ModelCuentasPorPagar.Store.Usuario" Multiplicity="1" />
+    <End Role="PagoCab" Type="ModelCuentasPorPagar.Store.PagoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="PagoCab">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoDet__6521F869">
+    <End Role="PagoCab" Type="ModelCuentasPorPagar.Store.PagoCab" Multiplicity="1" />
+    <End Role="PagoDet" Type="ModelCuentasPorPagar.Store.PagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PagoCab">
+        <PropertyRef Name="NumPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="PagoDet">
+        <PropertyRef Name="NumPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoDet__670A40DB">
+    <End Role="NominaCab" Type="ModelCuentasPorPagar.Store.NominaCab" Multiplicity="0..1" />
+    <End Role="PagoDet" Type="ModelCuentasPorPagar.Store.PagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NominaCab">
+        <PropertyRef Name="NumNomina" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="PagoDet">
+        <PropertyRef Name="NumNominaCab" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoDet__67FE6514">
+    <End Role="MedioPago" Type="ModelCuentasPorPagar.Store.MedioPago" Multiplicity="1" />
+    <End Role="PagoDet" Type="ModelCuentasPorPagar.Store.PagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedioPago">
+        <PropertyRef Name="IdMedioPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="PagoDet">
+        <PropertyRef Name="IdMedioPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoDet__68F2894D">
+    <End Role="CabeceraComprobante" Type="ModelCuentasPorPagar.Store.CabeceraComprobante" Multiplicity="1" />
+    <End Role="PagoDet" Type="ModelCuentasPorPagar.Store.PagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CabeceraComprobante">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="numero_comprobante" />
+      </Principal>
+      <Dependent Role="PagoDet">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NumComprobante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoDet__IdBanco__69E6AD86">
+    <End Role="Banco" Type="ModelCuentasPorPagar.Store.Banco" Multiplicity="1" />
+    <End Role="PagoDet" Type="ModelCuentasPorPagar.Store.PagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco">
+        <PropertyRef Name="idBanco" />
+      </Principal>
+      <Dependent Role="PagoDet">
+        <PropertyRef Name="IdBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoDet__NumComi__66161CA2">
+    <End Role="Comision" Type="ModelCuentasPorPagar.Store.Comision" Multiplicity="0..1" />
+    <End Role="PagoDet" Type="ModelCuentasPorPagar.Store.PagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comision">
+        <PropertyRef Name="IdNumeroComision" />
+      </Principal>
+      <Dependent Role="PagoDet">
+        <PropertyRef Name="NumComision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__IdEmpre__1BFD2C07">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="Persona" Type="ModelCuentasPorPagar.Store.Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__IdTipoP__1CF15040">
+    <End Role="TipoPersona" Type="ModelCuentasPorPagar.Store.TipoPersona" Multiplicity="1" />
+    <End Role="Persona" Type="ModelCuentasPorPagar.Store.Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPersona">
+        <PropertyRef Name="IdTipoPersona" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="IdTipoPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__TipoIde__1DE57479">
+    <End Role="TipoIdentificacion" Type="ModelCuentasPorPagar.Store.TipoIdentificacion" Multiplicity="1" />
+    <End Role="Persona" Type="ModelCuentasPorPagar.Store.Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="IdTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="TipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TelefonoE__IdEmp__1E8F7FEF">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="TelefonoEmpresaServicio" Type="ModelCuentasPorPagar.Store.TelefonoEmpresaServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TelefonoEmpresaServicio">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TelefonoEmpresaS__1F83A428">
+    <End Role="EmpresaServicio" Type="ModelCuentasPorPagar.Store.EmpresaServicio" Multiplicity="1" />
+    <End Role="TelefonoEmpresaServicio" Type="ModelCuentasPorPagar.Store.TelefonoEmpresaServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaServicio">
+        <PropertyRef Name="IdEmpresaServicio" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TelefonoEmpresaServicio">
+        <PropertyRef Name="IdEmpresaServicio" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoIdent__IdEmp__173876EA">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoIdentificacion" Type="ModelCuentasPorPagar.Store.TipoIdentificacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoIdentificacion">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoPerso__IdEmp__117F9D94">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoPersona" Type="ModelCuentasPorPagar.Store.TipoPersona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoPersona">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoTelef__IdEmp__571DF1D5">
+    <End Role="Empresa" Type="ModelCuentasPorPagar.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoTelefono" Type="ModelCuentasPorPagar.Store.TipoTelefono" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoTelefono">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdUsuar__3C69FB99">
+    <End Role="Persona" Type="ModelCuentasPorPagar.Store.Persona" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Usuario" Type="ModelCuentasPorPagar.Store.Usuario" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

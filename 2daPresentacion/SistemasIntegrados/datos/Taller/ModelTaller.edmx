@@ -1,0 +1,1828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TallerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TallerModelStoreContainer">
+          <EntitySet Name="Chasis" EntityType="TallerModel.Store.Chasis" store:Type="Tables" Schema="Inventario" />
+          <EntitySet Name="Color" EntityType="TallerModel.Store.Color" store:Type="Tables" Schema="Inventario" />
+          <EntitySet Name="Grupo" EntityType="TallerModel.Store.Grupo" store:Type="Tables" Schema="Inventario" />
+          <EntitySet Name="Marca" EntityType="TallerModel.Store.Marca" store:Type="Tables" Schema="Inventario" />
+          <EntitySet Name="Modelo" EntityType="TallerModel.Store.Modelo" store:Type="Tables" Schema="Inventario" />
+          <EntitySet Name="TipoCombustible" EntityType="TallerModel.Store.TipoCombustible" store:Type="Tables" Schema="Inventario" />
+          <EntitySet Name="TipoMaterial" EntityType="TallerModel.Store.TipoMaterial" store:Type="Tables" Schema="Inventario" />
+          <EntitySet Name="TipoMotor" EntityType="TallerModel.Store.TipoMotor" store:Type="Tables" Schema="Inventario" />
+          <EntitySet Name="UnidadMedida" EntityType="TallerModel.Store.UnidadMedida" store:Type="Tables" Schema="Inventario" />
+          <EntitySet Name="TipoIdentificacion" EntityType="TallerModel.Store.TipoIdentificacion" store:Type="Tables" Schema="RecursosHumanos" />
+          <EntitySet Name="TipoPersona" EntityType="TallerModel.Store.TipoPersona" store:Type="Tables" Schema="RecursosHumanos" />
+          <EntitySet Name="Articulo" EntityType="TallerModel.Store.Articulo" store:Type="Tables" Schema="Taller" />
+          <EntitySet Name="EmpresaAseguradora" EntityType="TallerModel.Store.EmpresaAseguradora" store:Type="Tables" Schema="Taller" />
+          <EntitySet Name="Liquidacion" EntityType="TallerModel.Store.Liquidacion" store:Type="Tables" Schema="Taller" />
+          <EntitySet Name="ManoObra" EntityType="TallerModel.Store.ManoObra" store:Type="Tables" Schema="Taller" />
+          <EntitySet Name="OrdenTrabajo" EntityType="TallerModel.Store.OrdenTrabajo" store:Type="Tables" Schema="Taller" />
+          <EntitySet Name="Otros" EntityType="TallerModel.Store.Otros" store:Type="Tables" Schema="Taller" />
+          <EntitySet Name="Persona" EntityType="TallerModel.Store.Persona" store:Type="Tables" Schema="Taller" />
+          <EntitySet Name="Presupuesto" EntityType="TallerModel.Store.Presupuesto" store:Type="Tables" Schema="Taller" />
+          <EntitySet Name="Repuestos" EntityType="TallerModel.Store.Repuestos" store:Type="Tables" Schema="Taller" />
+          <EntitySet Name="Seguro" EntityType="TallerModel.Store.Seguro" store:Type="Tables" Schema="Taller" />
+          <EntitySet Name="TipoTrabajo" EntityType="TallerModel.Store.TipoTrabajo" store:Type="Tables" Schema="Taller" />
+          <AssociationSet Name="FK__Articulo__IdChas__1D314762" Association="TallerModel.Store.FK__Articulo__IdChas__1D314762">
+            <End Role="Chasis" EntitySet="Chasis" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdColo__200DB40D" Association="TallerModel.Store.FK__Articulo__IdColo__200DB40D">
+            <End Role="Color" EntitySet="Color" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdGrup__1C3D2329" Association="TallerModel.Store.FK__Articulo__IdGrup__1C3D2329">
+            <End Role="Grupo" EntitySet="Grupo" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdMarc__2101D846" Association="TallerModel.Store.FK__Articulo__IdMarc__2101D846">
+            <End Role="Marca" EntitySet="Marca" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdMode__21F5FC7F" Association="TallerModel.Store.FK__Articulo__IdMode__21F5FC7F">
+            <End Role="Modelo" EntitySet="Modelo" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdTipo__1E256B9B" Association="TallerModel.Store.FK__Articulo__IdTipo__1E256B9B">
+            <End Role="TipoMotor" EntitySet="TipoMotor" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdTipo__1F198FD4" Association="TallerModel.Store.FK__Articulo__IdTipo__1F198FD4">
+            <End Role="TipoCombustible" EntitySet="TipoCombustible" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdTipo__22EA20B8" Association="TallerModel.Store.FK__Articulo__IdTipo__22EA20B8">
+            <End Role="TipoMaterial" EntitySet="TipoMaterial" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdUnid__1B48FEF0" Association="TallerModel.Store.FK__Articulo__IdUnid__1B48FEF0">
+            <End Role="UnidadMedida" EntitySet="UnidadMedida" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Liquidaci__IdOrd__5EFF0ABF" Association="TallerModel.Store.FK__Liquidaci__IdOrd__5EFF0ABF">
+            <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+            <End Role="Liquidacion" EntitySet="Liquidacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ManoObra__IdMano__490FC9A0" Association="TallerModel.Store.FK__ManoObra__IdMano__490FC9A0">
+            <End Role="ManoObra" EntitySet="ManoObra" />
+            <End Role="ManoObra1" EntitySet="ManoObra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ManoObra__IdOrde__481BA567" Association="TallerModel.Store.FK__ManoObra__IdOrde__481BA567">
+            <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+            <End Role="ManoObra" EntitySet="ManoObra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ManoObra__IdPres__4727812E" Association="TallerModel.Store.FK__ManoObra__IdPres__4727812E">
+            <End Role="Presupuesto" EntitySet="Presupuesto" />
+            <End Role="ManoObra" EntitySet="ManoObra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ManoObra__IdTipo__4A03EDD9" Association="TallerModel.Store.FK__ManoObra__IdTipo__4A03EDD9">
+            <End Role="TipoTrabajo" EntitySet="TipoTrabajo" />
+            <End Role="ManoObra" EntitySet="ManoObra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Modelo__IdMarca__3DB3258D" Association="TallerModel.Store.FK__Modelo__IdMarca__3DB3258D">
+            <End Role="Marca" EntitySet="Marca" />
+            <End Role="Modelo" EntitySet="Modelo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrdenTrab__IdPre__407A839F" Association="TallerModel.Store.FK__OrdenTrab__IdPre__407A839F">
+            <End Role="Presupuesto" EntitySet="Presupuesto" />
+            <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Otros__IdOrdenTr__58520D30" Association="TallerModel.Store.FK__Otros__IdOrdenTr__58520D30">
+            <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+            <End Role="Otros" EntitySet="Otros" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Persona__IdTipoP__12B3B8EF" Association="TallerModel.Store.FK__Persona__IdTipoP__12B3B8EF">
+            <End Role="TipoPersona" EntitySet="TipoPersona" />
+            <End Role="Persona" EntitySet="Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Persona__TipoIde__13A7DD28" Association="TallerModel.Store.FK__Persona__TipoIde__13A7DD28">
+            <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+            <End Role="Persona" EntitySet="Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Presupues__IdPer__3414ACBA" Association="TallerModel.Store.FK__Presupues__IdPer__3414ACBA">
+            <End Role="Persona" EntitySet="Persona" />
+            <End Role="Presupuesto" EntitySet="Presupuesto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Presupues__IdSeg__3508D0F3" Association="TallerModel.Store.FK__Presupues__IdSeg__3508D0F3">
+            <End Role="Seguro" EntitySet="Seguro" />
+            <End Role="Presupuesto" EntitySet="Presupuesto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Repuestos__IdMan__51A50FA1" Association="TallerModel.Store.FK__Repuestos__IdMan__51A50FA1">
+            <End Role="ManoObra" EntitySet="ManoObra" />
+            <End Role="Repuestos" EntitySet="Repuestos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Repuestos__IdOrd__50B0EB68" Association="TallerModel.Store.FK__Repuestos__IdOrd__50B0EB68">
+            <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+            <End Role="Repuestos" EntitySet="Repuestos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Seguro__IdEmpres__2D67AF2B" Association="TallerModel.Store.FK__Seguro__IdEmpres__2D67AF2B">
+            <End Role="EmpresaAseguradora" EntitySet="EmpresaAseguradora" />
+            <End Role="Seguro" EntitySet="Seguro" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Chasis">
+          <Key>
+            <PropertyRef Name="IdChasis" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="IdChasis" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="IdEstado" Type="int" />
+        </EntityType>
+        <EntityType Name="Color">
+          <Key>
+            <PropertyRef Name="IdColor" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="IdColor" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="IdEstado" Type="int" />
+        </EntityType>
+        <EntityType Name="Grupo">
+          <Key>
+            <PropertyRef Name="IdGrupo" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="IdGrupo" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="IdTipoArticulo" Type="int" />
+          <Property Name="IdEstado" Type="int" />
+        </EntityType>
+        <EntityType Name="Marca">
+          <Key>
+            <PropertyRef Name="IdMarca" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="IdMarca" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="IdEstado" Type="int" />
+        </EntityType>
+        <EntityType Name="Modelo">
+          <Key>
+            <PropertyRef Name="IdModelo" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="IdModelo" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="IdMarca" Type="int" />
+          <Property Name="IdEstado" Type="int" />
+        </EntityType>
+        <EntityType Name="TipoCombustible">
+          <Key>
+            <PropertyRef Name="IdTipoCombustible" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="IdTipoCombustible" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+          <Property Name="IdEstado" Type="int" />
+        </EntityType>
+        <EntityType Name="TipoMaterial">
+          <Key>
+            <PropertyRef Name="IdTipoMaterial" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="IdTipoMaterial" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+          <Property Name="IdEstado" Type="int" />
+        </EntityType>
+        <EntityType Name="TipoMotor">
+          <Key>
+            <PropertyRef Name="IdTipoMotor" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="IdTipoMotor" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+          <Property Name="IdEstado" Type="int" />
+        </EntityType>
+        <EntityType Name="UnidadMedida">
+          <Key>
+            <PropertyRef Name="IdUnidadMedida" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" />
+          <Property Name="IdUnidadMedida" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="IdEstado" Type="int" />
+        </EntityType>
+        <EntityType Name="TipoIdentificacion">
+          <Key>
+            <PropertyRef Name="IdTipoIdentificacion" />
+          </Key>
+          <Property Name="IdTipoIdentificacion" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoPersona">
+          <Key>
+            <PropertyRef Name="IdTipoPersona" />
+          </Key>
+          <Property Name="IdTipoPersona" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Articulo">
+          <Key>
+            <PropertyRef Name="IdArticulo" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="IdArticulo" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="FechaProduccion" Type="date" />
+          <Property Name="CantidadMinima" Type="numeric" Precision="5" />
+          <Property Name="CantidadMaxima" Type="numeric" Precision="5" />
+          <Property Name="CantidadActual" Type="numeric" Precision="5" />
+          <Property Name="IdUnidadMedida" Type="int" />
+          <Property Name="IdGrupo" Type="int" Nullable="false" />
+          <Property Name="IdChasis" Type="int" />
+          <Property Name="IdTipoMotor" Type="int" />
+          <Property Name="NroPlaca" Type="int" />
+          <Property Name="IdTipoCombustible" Type="int" />
+          <Property Name="IdColor" Type="int" />
+          <Property Name="IdMarca" Type="int" />
+          <Property Name="IdModelo" Type="int" />
+          <Property Name="IdTipoMaterial" Type="int" />
+          <Property Name="Observacion" Type="varchar" MaxLength="100" />
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="IdEstado" Type="int" />
+        </EntityType>
+        <EntityType Name="EmpresaAseguradora">
+          <Key>
+            <PropertyRef Name="IdEmpresaAseguradora" />
+          </Key>
+          <Property Name="IdEmpresaAseguradora" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Liquidacion">
+          <Key>
+            <PropertyRef Name="IdLiquidacion" />
+          </Key>
+          <Property Name="IdLiquidacion" Type="int" Nullable="false" />
+          <Property Name="Fecha" Type="date" Nullable="false" />
+          <Property Name="IdOrdenTrabajo" Type="int" Nullable="false" />
+          <Property Name="TotalPagar" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ManoObra">
+          <Key>
+            <PropertyRef Name="IdManoObra" />
+          </Key>
+          <Property Name="IdManoObra" Type="int" Nullable="false" />
+          <Property Name="IdTipoTrabajo" Type="int" Nullable="false" />
+          <Property Name="IdPresupuesto" Type="int" Nullable="false" />
+          <Property Name="IdOrdenTrabajo" Type="int" Nullable="false" />
+          <Property Name="PrecioHora" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="Horas" Type="int" Nullable="false" />
+          <Property Name="Total" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrdenTrabajo">
+          <Key>
+            <PropertyRef Name="IdOrdenTrabajo" />
+          </Key>
+          <Property Name="IdOrdenTrabajo" Type="int" Nullable="false" />
+          <Property Name="IdPresupuesto" Type="int" Nullable="false" />
+          <Property Name="FechaRecepcion" Type="date" Nullable="false" />
+          <Property Name="InicioReparacion" Type="date" Nullable="false" />
+          <Property Name="FechaIngresoVehiculo" Type="date" Nullable="false" />
+          <Property Name="HoraIngreso" Type="date" Nullable="false" />
+          <Property Name="FechaEstimadaEntrega" Type="date" Nullable="false" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Otros">
+          <Key>
+            <PropertyRef Name="IdOtros" />
+          </Key>
+          <Property Name="IdOtros" Type="int" Nullable="false" />
+          <Property Name="IdOrdenTrabajo" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Precio" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Persona">
+          <Key>
+            <PropertyRef Name="Identificacion" />
+          </Key>
+          <Property Name="Identificacion" Type="int" Nullable="false" />
+          <Property Name="IdTipoPersona" Type="int" Nullable="false" />
+          <Property Name="NombreRazonSocial" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Apellido" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="FechaNacimiento" Type="datetime" Nullable="false" />
+          <Property Name="Genero" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="TipoIdentificacion" Type="int" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Telefono" Type="int" Nullable="false" />
+          <Property Name="Mail" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Presupuesto">
+          <Key>
+            <PropertyRef Name="IdPresupuesto" />
+          </Key>
+          <Property Name="IdPresupuesto" Type="int" Nullable="false" />
+          <Property Name="IdPersona" Type="int" Nullable="false" />
+          <Property Name="Fecha" Type="date" Nullable="false" />
+          <Property Name="IdSeguro" Type="int" Nullable="false" />
+          <Property Name="TotalTiempoTrabajo" Type="int" Nullable="false" />
+          <Property Name="TotalManoObra" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="Iva" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="TotalPresupuesto" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="Observacion" Type="varchar" MaxLength="100" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Repuestos">
+          <Key>
+            <PropertyRef Name="IdRepuestos" />
+          </Key>
+          <Property Name="IdRepuestos" Type="int" Nullable="false" />
+          <Property Name="IdArticulo" Type="int" Nullable="false" />
+          <Property Name="IdOrdenTrabajo" Type="int" Nullable="false" />
+          <Property Name="IdManoObra" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Cantidad" Type="int" Nullable="false" />
+          <Property Name="PrecioUnitario" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="Total" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Seguro">
+          <Key>
+            <PropertyRef Name="IdSeguro" />
+          </Key>
+          <Property Name="IdSeguro" Type="int" Nullable="false" />
+          <Property Name="NroSeguro" Type="int" Nullable="false" />
+          <Property Name="IdEmpresaAseguradora" Type="int" Nullable="false" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoTrabajo">
+          <Key>
+            <PropertyRef Name="IdTipoTrabajo" />
+          </Key>
+          <Property Name="IdTipoTrabajo" Type="int" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Observación" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Articulo__IdChas__1D314762">
+          <End Role="Chasis" Type="TallerModel.Store.Chasis" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Store.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Chasis">
+              <PropertyRef Name="IdChasis" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdChasis" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdColo__200DB40D">
+          <End Role="Color" Type="TallerModel.Store.Color" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Store.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Color">
+              <PropertyRef Name="IdColor" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdColor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdGrup__1C3D2329">
+          <End Role="Grupo" Type="TallerModel.Store.Grupo" Multiplicity="1" />
+          <End Role="Articulo" Type="TallerModel.Store.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grupo">
+              <PropertyRef Name="IdGrupo" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdGrupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdMarc__2101D846">
+          <End Role="Marca" Type="TallerModel.Store.Marca" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Store.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Marca">
+              <PropertyRef Name="IdMarca" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdMarca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdMode__21F5FC7F">
+          <End Role="Modelo" Type="TallerModel.Store.Modelo" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Store.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modelo">
+              <PropertyRef Name="IdModelo" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdModelo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdTipo__1E256B9B">
+          <End Role="TipoMotor" Type="TallerModel.Store.TipoMotor" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Store.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoMotor">
+              <PropertyRef Name="IdTipoMotor" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdTipoMotor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdTipo__1F198FD4">
+          <End Role="TipoCombustible" Type="TallerModel.Store.TipoCombustible" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Store.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoCombustible">
+              <PropertyRef Name="IdTipoCombustible" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdTipoCombustible" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdTipo__22EA20B8">
+          <End Role="TipoMaterial" Type="TallerModel.Store.TipoMaterial" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Store.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoMaterial">
+              <PropertyRef Name="IdTipoMaterial" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdTipoMaterial" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdUnid__1B48FEF0">
+          <End Role="UnidadMedida" Type="TallerModel.Store.UnidadMedida" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Store.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UnidadMedida">
+              <PropertyRef Name="IdUnidadMedida" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdUnidadMedida" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Liquidaci__IdOrd__5EFF0ABF">
+          <End Role="OrdenTrabajo" Type="TallerModel.Store.OrdenTrabajo" Multiplicity="1" />
+          <End Role="Liquidacion" Type="TallerModel.Store.Liquidacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrdenTrabajo">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Principal>
+            <Dependent Role="Liquidacion">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ManoObra__IdMano__490FC9A0">
+          <End Role="ManoObra" Type="TallerModel.Store.ManoObra" Multiplicity="1" />
+          <End Role="ManoObra1" Type="TallerModel.Store.ManoObra" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="ManoObra">
+              <PropertyRef Name="IdManoObra" />
+            </Principal>
+            <Dependent Role="ManoObra1">
+              <PropertyRef Name="IdManoObra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ManoObra__IdOrde__481BA567">
+          <End Role="OrdenTrabajo" Type="TallerModel.Store.OrdenTrabajo" Multiplicity="1" />
+          <End Role="ManoObra" Type="TallerModel.Store.ManoObra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrdenTrabajo">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Principal>
+            <Dependent Role="ManoObra">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ManoObra__IdPres__4727812E">
+          <End Role="Presupuesto" Type="TallerModel.Store.Presupuesto" Multiplicity="1" />
+          <End Role="ManoObra" Type="TallerModel.Store.ManoObra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Presupuesto">
+              <PropertyRef Name="IdPresupuesto" />
+            </Principal>
+            <Dependent Role="ManoObra">
+              <PropertyRef Name="IdPresupuesto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ManoObra__IdTipo__4A03EDD9">
+          <End Role="TipoTrabajo" Type="TallerModel.Store.TipoTrabajo" Multiplicity="1" />
+          <End Role="ManoObra" Type="TallerModel.Store.ManoObra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoTrabajo">
+              <PropertyRef Name="IdTipoTrabajo" />
+            </Principal>
+            <Dependent Role="ManoObra">
+              <PropertyRef Name="IdTipoTrabajo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Modelo__IdMarca__3DB3258D">
+          <End Role="Marca" Type="TallerModel.Store.Marca" Multiplicity="0..1" />
+          <End Role="Modelo" Type="TallerModel.Store.Modelo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Marca">
+              <PropertyRef Name="IdMarca" />
+            </Principal>
+            <Dependent Role="Modelo">
+              <PropertyRef Name="IdMarca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrdenTrab__IdPre__407A839F">
+          <End Role="Presupuesto" Type="TallerModel.Store.Presupuesto" Multiplicity="1" />
+          <End Role="OrdenTrabajo" Type="TallerModel.Store.OrdenTrabajo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Presupuesto">
+              <PropertyRef Name="IdPresupuesto" />
+            </Principal>
+            <Dependent Role="OrdenTrabajo">
+              <PropertyRef Name="IdPresupuesto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Otros__IdOrdenTr__58520D30">
+          <End Role="OrdenTrabajo" Type="TallerModel.Store.OrdenTrabajo" Multiplicity="1" />
+          <End Role="Otros" Type="TallerModel.Store.Otros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrdenTrabajo">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Principal>
+            <Dependent Role="Otros">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Persona__IdTipoP__12B3B8EF">
+          <End Role="TipoPersona" Type="TallerModel.Store.TipoPersona" Multiplicity="1" />
+          <End Role="Persona" Type="TallerModel.Store.Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoPersona">
+              <PropertyRef Name="IdTipoPersona" />
+            </Principal>
+            <Dependent Role="Persona">
+              <PropertyRef Name="IdTipoPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Persona__TipoIde__13A7DD28">
+          <End Role="TipoIdentificacion" Type="TallerModel.Store.TipoIdentificacion" Multiplicity="1" />
+          <End Role="Persona" Type="TallerModel.Store.Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoIdentificacion">
+              <PropertyRef Name="IdTipoIdentificacion" />
+            </Principal>
+            <Dependent Role="Persona">
+              <PropertyRef Name="TipoIdentificacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Presupues__IdPer__3414ACBA">
+          <End Role="Persona" Type="TallerModel.Store.Persona" Multiplicity="1" />
+          <End Role="Presupuesto" Type="TallerModel.Store.Presupuesto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persona">
+              <PropertyRef Name="Identificacion" />
+            </Principal>
+            <Dependent Role="Presupuesto">
+              <PropertyRef Name="IdPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Presupues__IdSeg__3508D0F3">
+          <End Role="Seguro" Type="TallerModel.Store.Seguro" Multiplicity="1" />
+          <End Role="Presupuesto" Type="TallerModel.Store.Presupuesto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Seguro">
+              <PropertyRef Name="IdSeguro" />
+            </Principal>
+            <Dependent Role="Presupuesto">
+              <PropertyRef Name="IdSeguro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Repuestos__IdMan__51A50FA1">
+          <End Role="ManoObra" Type="TallerModel.Store.ManoObra" Multiplicity="1" />
+          <End Role="Repuestos" Type="TallerModel.Store.Repuestos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ManoObra">
+              <PropertyRef Name="IdManoObra" />
+            </Principal>
+            <Dependent Role="Repuestos">
+              <PropertyRef Name="IdManoObra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Repuestos__IdOrd__50B0EB68">
+          <End Role="OrdenTrabajo" Type="TallerModel.Store.OrdenTrabajo" Multiplicity="1" />
+          <End Role="Repuestos" Type="TallerModel.Store.Repuestos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrdenTrabajo">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Principal>
+            <Dependent Role="Repuestos">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Seguro__IdEmpres__2D67AF2B">
+          <End Role="EmpresaAseguradora" Type="TallerModel.Store.EmpresaAseguradora" Multiplicity="1" />
+          <End Role="Seguro" Type="TallerModel.Store.Seguro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmpresaAseguradora">
+              <PropertyRef Name="IdEmpresaAseguradora" />
+            </Principal>
+            <Dependent Role="Seguro">
+              <PropertyRef Name="IdEmpresaAseguradora" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TallerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="TallerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Chasis" EntityType="TallerModel.Chasis" />
+          <EntitySet Name="Color" EntityType="TallerModel.Color" />
+          <EntitySet Name="Grupo" EntityType="TallerModel.Grupo" />
+          <EntitySet Name="Marca" EntityType="TallerModel.Marca" />
+          <EntitySet Name="Modelo" EntityType="TallerModel.Modelo" />
+          <EntitySet Name="TipoCombustible" EntityType="TallerModel.TipoCombustible" />
+          <EntitySet Name="TipoMaterial" EntityType="TallerModel.TipoMaterial" />
+          <EntitySet Name="TipoMotor" EntityType="TallerModel.TipoMotor" />
+          <EntitySet Name="UnidadMedida" EntityType="TallerModel.UnidadMedida" />
+          <EntitySet Name="TipoIdentificacion" EntityType="TallerModel.TipoIdentificacion" />
+          <EntitySet Name="TipoPersona" EntityType="TallerModel.TipoPersona" />
+          <EntitySet Name="Articulo" EntityType="TallerModel.Articulo" />
+          <EntitySet Name="EmpresaAseguradora" EntityType="TallerModel.EmpresaAseguradora" />
+          <EntitySet Name="Liquidacion" EntityType="TallerModel.Liquidacion" />
+          <EntitySet Name="ManoObra" EntityType="TallerModel.ManoObra" />
+          <EntitySet Name="OrdenTrabajo" EntityType="TallerModel.OrdenTrabajo" />
+          <EntitySet Name="Otros" EntityType="TallerModel.Otros" />
+          <EntitySet Name="Persona" EntityType="TallerModel.Persona" />
+          <EntitySet Name="Presupuesto" EntityType="TallerModel.Presupuesto" />
+          <EntitySet Name="Repuestos" EntityType="TallerModel.Repuestos" />
+          <EntitySet Name="Seguro" EntityType="TallerModel.Seguro" />
+          <EntitySet Name="TipoTrabajo" EntityType="TallerModel.TipoTrabajo" />
+          <AssociationSet Name="FK__Articulo__IdChas__1D314762" Association="TallerModel.FK__Articulo__IdChas__1D314762">
+            <End Role="Chasis" EntitySet="Chasis" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdColo__200DB40D" Association="TallerModel.FK__Articulo__IdColo__200DB40D">
+            <End Role="Color" EntitySet="Color" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdGrup__1C3D2329" Association="TallerModel.FK__Articulo__IdGrup__1C3D2329">
+            <End Role="Grupo" EntitySet="Grupo" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdMarc__2101D846" Association="TallerModel.FK__Articulo__IdMarc__2101D846">
+            <End Role="Marca" EntitySet="Marca" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Modelo__IdMarca__3DB3258D" Association="TallerModel.FK__Modelo__IdMarca__3DB3258D">
+            <End Role="Marca" EntitySet="Marca" />
+            <End Role="Modelo" EntitySet="Modelo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdMode__21F5FC7F" Association="TallerModel.FK__Articulo__IdMode__21F5FC7F">
+            <End Role="Modelo" EntitySet="Modelo" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdTipo__1F198FD4" Association="TallerModel.FK__Articulo__IdTipo__1F198FD4">
+            <End Role="TipoCombustible" EntitySet="TipoCombustible" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdTipo__22EA20B8" Association="TallerModel.FK__Articulo__IdTipo__22EA20B8">
+            <End Role="TipoMaterial" EntitySet="TipoMaterial" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdTipo__1E256B9B" Association="TallerModel.FK__Articulo__IdTipo__1E256B9B">
+            <End Role="TipoMotor" EntitySet="TipoMotor" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Articulo__IdUnid__1B48FEF0" Association="TallerModel.FK__Articulo__IdUnid__1B48FEF0">
+            <End Role="UnidadMedida" EntitySet="UnidadMedida" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Persona__TipoIde__13A7DD28" Association="TallerModel.FK__Persona__TipoIde__13A7DD28">
+            <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+            <End Role="Persona" EntitySet="Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Persona__IdTipoP__12B3B8EF" Association="TallerModel.FK__Persona__IdTipoP__12B3B8EF">
+            <End Role="TipoPersona" EntitySet="TipoPersona" />
+            <End Role="Persona" EntitySet="Persona" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Seguro__IdEmpres__2D67AF2B" Association="TallerModel.FK__Seguro__IdEmpres__2D67AF2B">
+            <End Role="EmpresaAseguradora" EntitySet="EmpresaAseguradora" />
+            <End Role="Seguro" EntitySet="Seguro" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Liquidaci__IdOrd__5EFF0ABF" Association="TallerModel.FK__Liquidaci__IdOrd__5EFF0ABF">
+            <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+            <End Role="Liquidacion" EntitySet="Liquidacion" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ManoObra__IdMano__490FC9A0" Association="TallerModel.FK__ManoObra__IdMano__490FC9A0">
+            <End Role="ManoObra" EntitySet="ManoObra" />
+            <End Role="ManoObra1" EntitySet="ManoObra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ManoObra__IdOrde__481BA567" Association="TallerModel.FK__ManoObra__IdOrde__481BA567">
+            <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+            <End Role="ManoObra" EntitySet="ManoObra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ManoObra__IdPres__4727812E" Association="TallerModel.FK__ManoObra__IdPres__4727812E">
+            <End Role="Presupuesto" EntitySet="Presupuesto" />
+            <End Role="ManoObra" EntitySet="ManoObra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ManoObra__IdTipo__4A03EDD9" Association="TallerModel.FK__ManoObra__IdTipo__4A03EDD9">
+            <End Role="TipoTrabajo" EntitySet="TipoTrabajo" />
+            <End Role="ManoObra" EntitySet="ManoObra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Repuestos__IdMan__51A50FA1" Association="TallerModel.FK__Repuestos__IdMan__51A50FA1">
+            <End Role="ManoObra" EntitySet="ManoObra" />
+            <End Role="Repuestos" EntitySet="Repuestos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__OrdenTrab__IdPre__407A839F" Association="TallerModel.FK__OrdenTrab__IdPre__407A839F">
+            <End Role="Presupuesto" EntitySet="Presupuesto" />
+            <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Otros__IdOrdenTr__58520D30" Association="TallerModel.FK__Otros__IdOrdenTr__58520D30">
+            <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+            <End Role="Otros" EntitySet="Otros" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Repuestos__IdOrd__50B0EB68" Association="TallerModel.FK__Repuestos__IdOrd__50B0EB68">
+            <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+            <End Role="Repuestos" EntitySet="Repuestos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Presupues__IdPer__3414ACBA" Association="TallerModel.FK__Presupues__IdPer__3414ACBA">
+            <End Role="Persona" EntitySet="Persona" />
+            <End Role="Presupuesto" EntitySet="Presupuesto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Presupues__IdSeg__3508D0F3" Association="TallerModel.FK__Presupues__IdSeg__3508D0F3">
+            <End Role="Seguro" EntitySet="Seguro" />
+            <End Role="Presupuesto" EntitySet="Presupuesto" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Chasis">
+          <Key>
+            <PropertyRef Name="IdChasis" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="IdChasis" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IdEstado" Type="Int32" />
+          <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdChas__1D314762" FromRole="Chasis" ToRole="Articulo" />
+        </EntityType>
+        <EntityType Name="Color">
+          <Key>
+            <PropertyRef Name="IdColor" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="IdColor" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IdEstado" Type="Int32" />
+          <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdColo__200DB40D" FromRole="Color" ToRole="Articulo" />
+        </EntityType>
+        <EntityType Name="Grupo">
+          <Key>
+            <PropertyRef Name="IdGrupo" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="IdGrupo" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IdTipoArticulo" Type="Int32" />
+          <Property Name="IdEstado" Type="Int32" />
+          <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdGrup__1C3D2329" FromRole="Grupo" ToRole="Articulo" />
+        </EntityType>
+        <EntityType Name="Marca">
+          <Key>
+            <PropertyRef Name="IdMarca" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="IdMarca" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IdEstado" Type="Int32" />
+          <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdMarc__2101D846" FromRole="Marca" ToRole="Articulo" />
+          <NavigationProperty Name="Modelo" Relationship="TallerModel.FK__Modelo__IdMarca__3DB3258D" FromRole="Marca" ToRole="Modelo" />
+        </EntityType>
+        <EntityType Name="Modelo">
+          <Key>
+            <PropertyRef Name="IdModelo" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="IdModelo" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IdMarca" Type="Int32" />
+          <Property Name="IdEstado" Type="Int32" />
+          <NavigationProperty Name="Marca" Relationship="TallerModel.FK__Modelo__IdMarca__3DB3258D" FromRole="Modelo" ToRole="Marca" />
+          <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdMode__21F5FC7F" FromRole="Modelo" ToRole="Articulo" />
+        </EntityType>
+        <EntityType Name="TipoCombustible">
+          <Key>
+            <PropertyRef Name="IdTipoCombustible" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="IdTipoCombustible" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IdEstado" Type="Int32" />
+          <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdTipo__1F198FD4" FromRole="TipoCombustible" ToRole="Articulo" />
+        </EntityType>
+        <EntityType Name="TipoMaterial">
+          <Key>
+            <PropertyRef Name="IdTipoMaterial" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="IdTipoMaterial" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IdEstado" Type="Int32" />
+          <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdTipo__22EA20B8" FromRole="TipoMaterial" ToRole="Articulo" />
+        </EntityType>
+        <EntityType Name="TipoMotor">
+          <Key>
+            <PropertyRef Name="IdTipoMotor" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="IdTipoMotor" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IdEstado" Type="Int32" />
+          <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdTipo__1E256B9B" FromRole="TipoMotor" ToRole="Articulo" />
+        </EntityType>
+        <EntityType Name="UnidadMedida">
+          <Key>
+            <PropertyRef Name="IdUnidadMedida" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" />
+          <Property Name="IdUnidadMedida" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IdEstado" Type="Int32" />
+          <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdUnid__1B48FEF0" FromRole="UnidadMedida" ToRole="Articulo" />
+        </EntityType>
+        <EntityType Name="TipoIdentificacion">
+          <Key>
+            <PropertyRef Name="IdTipoIdentificacion" />
+          </Key>
+          <Property Name="IdTipoIdentificacion" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Persona" Relationship="TallerModel.FK__Persona__TipoIde__13A7DD28" FromRole="TipoIdentificacion" ToRole="Persona" />
+        </EntityType>
+        <EntityType Name="TipoPersona">
+          <Key>
+            <PropertyRef Name="IdTipoPersona" />
+          </Key>
+          <Property Name="IdTipoPersona" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Persona" Relationship="TallerModel.FK__Persona__IdTipoP__12B3B8EF" FromRole="TipoPersona" ToRole="Persona" />
+        </EntityType>
+        <EntityType Name="Articulo">
+          <Key>
+            <PropertyRef Name="IdArticulo" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="IdArticulo" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="FechaProduccion" Type="DateTime" />
+          <Property Name="CantidadMinima" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="CantidadMaxima" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="CantidadActual" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="IdUnidadMedida" Type="Int32" />
+          <Property Name="IdGrupo" Type="Int32" Nullable="false" />
+          <Property Name="IdChasis" Type="Int32" />
+          <Property Name="IdTipoMotor" Type="Int32" />
+          <Property Name="NroPlaca" Type="Int32" />
+          <Property Name="IdTipoCombustible" Type="Int32" />
+          <Property Name="IdColor" Type="Int32" />
+          <Property Name="IdMarca" Type="Int32" />
+          <Property Name="IdModelo" Type="Int32" />
+          <Property Name="IdTipoMaterial" Type="Int32" />
+          <Property Name="Observacion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="IdEstado" Type="Int32" />
+          <NavigationProperty Name="Chasis" Relationship="TallerModel.FK__Articulo__IdChas__1D314762" FromRole="Articulo" ToRole="Chasis" />
+          <NavigationProperty Name="Color" Relationship="TallerModel.FK__Articulo__IdColo__200DB40D" FromRole="Articulo" ToRole="Color" />
+          <NavigationProperty Name="Grupo" Relationship="TallerModel.FK__Articulo__IdGrup__1C3D2329" FromRole="Articulo" ToRole="Grupo" />
+          <NavigationProperty Name="Marca" Relationship="TallerModel.FK__Articulo__IdMarc__2101D846" FromRole="Articulo" ToRole="Marca" />
+          <NavigationProperty Name="Modelo" Relationship="TallerModel.FK__Articulo__IdMode__21F5FC7F" FromRole="Articulo" ToRole="Modelo" />
+          <NavigationProperty Name="TipoCombustible" Relationship="TallerModel.FK__Articulo__IdTipo__1F198FD4" FromRole="Articulo" ToRole="TipoCombustible" />
+          <NavigationProperty Name="TipoMaterial" Relationship="TallerModel.FK__Articulo__IdTipo__22EA20B8" FromRole="Articulo" ToRole="TipoMaterial" />
+          <NavigationProperty Name="TipoMotor" Relationship="TallerModel.FK__Articulo__IdTipo__1E256B9B" FromRole="Articulo" ToRole="TipoMotor" />
+          <NavigationProperty Name="UnidadMedida" Relationship="TallerModel.FK__Articulo__IdUnid__1B48FEF0" FromRole="Articulo" ToRole="UnidadMedida" />
+        </EntityType>
+        <EntityType Name="EmpresaAseguradora">
+          <Key>
+            <PropertyRef Name="IdEmpresaAseguradora" />
+          </Key>
+          <Property Name="IdEmpresaAseguradora" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Seguro" Relationship="TallerModel.FK__Seguro__IdEmpres__2D67AF2B" FromRole="EmpresaAseguradora" ToRole="Seguro" />
+        </EntityType>
+        <EntityType Name="Liquidacion">
+          <Key>
+            <PropertyRef Name="IdLiquidacion" />
+          </Key>
+          <Property Name="IdLiquidacion" Type="Int32" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" />
+          <Property Name="IdOrdenTrabajo" Type="Int32" Nullable="false" />
+          <Property Name="TotalPagar" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="OrdenTrabajo" Relationship="TallerModel.FK__Liquidaci__IdOrd__5EFF0ABF" FromRole="Liquidacion" ToRole="OrdenTrabajo" />
+        </EntityType>
+        <EntityType Name="ManoObra">
+          <Key>
+            <PropertyRef Name="IdManoObra" />
+          </Key>
+          <Property Name="IdManoObra" Type="Int32" Nullable="false" />
+          <Property Name="IdTipoTrabajo" Type="Int32" Nullable="false" />
+          <Property Name="IdPresupuesto" Type="Int32" Nullable="false" />
+          <Property Name="IdOrdenTrabajo" Type="Int32" Nullable="false" />
+          <Property Name="PrecioHora" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="Horas" Type="Int32" Nullable="false" />
+          <Property Name="Total" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ManoObra1" Relationship="TallerModel.FK__ManoObra__IdMano__490FC9A0" FromRole="ManoObra" ToRole="ManoObra1" />
+          <NavigationProperty Name="ManoObra2" Relationship="TallerModel.FK__ManoObra__IdMano__490FC9A0" FromRole="ManoObra1" ToRole="ManoObra" />
+          <NavigationProperty Name="OrdenTrabajo" Relationship="TallerModel.FK__ManoObra__IdOrde__481BA567" FromRole="ManoObra" ToRole="OrdenTrabajo" />
+          <NavigationProperty Name="Presupuesto" Relationship="TallerModel.FK__ManoObra__IdPres__4727812E" FromRole="ManoObra" ToRole="Presupuesto" />
+          <NavigationProperty Name="TipoTrabajo" Relationship="TallerModel.FK__ManoObra__IdTipo__4A03EDD9" FromRole="ManoObra" ToRole="TipoTrabajo" />
+          <NavigationProperty Name="Repuestos" Relationship="TallerModel.FK__Repuestos__IdMan__51A50FA1" FromRole="ManoObra" ToRole="Repuestos" />
+        </EntityType>
+        <EntityType Name="OrdenTrabajo">
+          <Key>
+            <PropertyRef Name="IdOrdenTrabajo" />
+          </Key>
+          <Property Name="IdOrdenTrabajo" Type="Int32" Nullable="false" />
+          <Property Name="IdPresupuesto" Type="Int32" Nullable="false" />
+          <Property Name="FechaRecepcion" Type="DateTime" Nullable="false" />
+          <Property Name="InicioReparacion" Type="DateTime" Nullable="false" />
+          <Property Name="FechaIngresoVehiculo" Type="DateTime" Nullable="false" />
+          <Property Name="HoraIngreso" Type="DateTime" Nullable="false" />
+          <Property Name="FechaEstimadaEntrega" Type="DateTime" Nullable="false" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Liquidacion" Relationship="TallerModel.FK__Liquidaci__IdOrd__5EFF0ABF" FromRole="OrdenTrabajo" ToRole="Liquidacion" />
+          <NavigationProperty Name="ManoObra" Relationship="TallerModel.FK__ManoObra__IdOrde__481BA567" FromRole="OrdenTrabajo" ToRole="ManoObra" />
+          <NavigationProperty Name="Presupuesto" Relationship="TallerModel.FK__OrdenTrab__IdPre__407A839F" FromRole="OrdenTrabajo" ToRole="Presupuesto" />
+          <NavigationProperty Name="Otros" Relationship="TallerModel.FK__Otros__IdOrdenTr__58520D30" FromRole="OrdenTrabajo" ToRole="Otros" />
+          <NavigationProperty Name="Repuestos" Relationship="TallerModel.FK__Repuestos__IdOrd__50B0EB68" FromRole="OrdenTrabajo" ToRole="Repuestos" />
+        </EntityType>
+        <EntityType Name="Otros">
+          <Key>
+            <PropertyRef Name="IdOtros" />
+          </Key>
+          <Property Name="IdOtros" Type="Int32" Nullable="false" />
+          <Property Name="IdOrdenTrabajo" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Precio" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="OrdenTrabajo" Relationship="TallerModel.FK__Otros__IdOrdenTr__58520D30" FromRole="Otros" ToRole="OrdenTrabajo" />
+        </EntityType>
+        <EntityType Name="Persona">
+          <Key>
+            <PropertyRef Name="Identificacion" />
+          </Key>
+          <Property Name="Identificacion" Type="Int32" Nullable="false" />
+          <Property Name="IdTipoPersona" Type="Int32" Nullable="false" />
+          <Property Name="NombreRazonSocial" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Apellido" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" Nullable="false" />
+          <Property Name="Genero" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="TipoIdentificacion" Type="Int32" Nullable="false" />
+          <Property Name="Direccion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Telefono" Type="Int32" Nullable="false" />
+          <Property Name="Mail" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TipoIdentificacion1" Relationship="TallerModel.FK__Persona__TipoIde__13A7DD28" FromRole="Persona" ToRole="TipoIdentificacion" />
+          <NavigationProperty Name="TipoPersona" Relationship="TallerModel.FK__Persona__IdTipoP__12B3B8EF" FromRole="Persona" ToRole="TipoPersona" />
+          <NavigationProperty Name="Presupuesto" Relationship="TallerModel.FK__Presupues__IdPer__3414ACBA" FromRole="Persona" ToRole="Presupuesto" />
+        </EntityType>
+        <EntityType Name="Presupuesto">
+          <Key>
+            <PropertyRef Name="IdPresupuesto" />
+          </Key>
+          <Property Name="IdPresupuesto" Type="Int32" Nullable="false" />
+          <Property Name="IdPersona" Type="Int32" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" />
+          <Property Name="IdSeguro" Type="Int32" Nullable="false" />
+          <Property Name="TotalTiempoTrabajo" Type="Int32" Nullable="false" />
+          <Property Name="TotalManoObra" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="Iva" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="TotalPresupuesto" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="Observacion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ManoObra" Relationship="TallerModel.FK__ManoObra__IdPres__4727812E" FromRole="Presupuesto" ToRole="ManoObra" />
+          <NavigationProperty Name="OrdenTrabajo" Relationship="TallerModel.FK__OrdenTrab__IdPre__407A839F" FromRole="Presupuesto" ToRole="OrdenTrabajo" />
+          <NavigationProperty Name="Persona" Relationship="TallerModel.FK__Presupues__IdPer__3414ACBA" FromRole="Presupuesto" ToRole="Persona" />
+          <NavigationProperty Name="Seguro" Relationship="TallerModel.FK__Presupues__IdSeg__3508D0F3" FromRole="Presupuesto" ToRole="Seguro" />
+        </EntityType>
+        <EntityType Name="Repuestos">
+          <Key>
+            <PropertyRef Name="IdRepuestos" />
+          </Key>
+          <Property Name="IdRepuestos" Type="Int32" Nullable="false" />
+          <Property Name="IdArticulo" Type="Int32" Nullable="false" />
+          <Property Name="IdOrdenTrabajo" Type="Int32" Nullable="false" />
+          <Property Name="IdManoObra" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Cantidad" Type="Int32" Nullable="false" />
+          <Property Name="PrecioUnitario" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="Total" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ManoObra" Relationship="TallerModel.FK__Repuestos__IdMan__51A50FA1" FromRole="Repuestos" ToRole="ManoObra" />
+          <NavigationProperty Name="OrdenTrabajo" Relationship="TallerModel.FK__Repuestos__IdOrd__50B0EB68" FromRole="Repuestos" ToRole="OrdenTrabajo" />
+        </EntityType>
+        <EntityType Name="Seguro">
+          <Key>
+            <PropertyRef Name="IdSeguro" />
+          </Key>
+          <Property Name="IdSeguro" Type="Int32" Nullable="false" />
+          <Property Name="NroSeguro" Type="Int32" Nullable="false" />
+          <Property Name="IdEmpresaAseguradora" Type="Int32" Nullable="false" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EmpresaAseguradora" Relationship="TallerModel.FK__Seguro__IdEmpres__2D67AF2B" FromRole="Seguro" ToRole="EmpresaAseguradora" />
+          <NavigationProperty Name="Presupuesto" Relationship="TallerModel.FK__Presupues__IdSeg__3508D0F3" FromRole="Seguro" ToRole="Presupuesto" />
+        </EntityType>
+        <EntityType Name="TipoTrabajo">
+          <Key>
+            <PropertyRef Name="IdTipoTrabajo" />
+          </Key>
+          <Property Name="IdTipoTrabajo" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Observación" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ManoObra" Relationship="TallerModel.FK__ManoObra__IdTipo__4A03EDD9" FromRole="TipoTrabajo" ToRole="ManoObra" />
+        </EntityType>
+        <Association Name="FK__Articulo__IdChas__1D314762">
+          <End Role="Chasis" Type="TallerModel.Chasis" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Chasis">
+              <PropertyRef Name="IdChasis" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdChasis" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdColo__200DB40D">
+          <End Role="Color" Type="TallerModel.Color" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Color">
+              <PropertyRef Name="IdColor" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdColor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdGrup__1C3D2329">
+          <End Role="Grupo" Type="TallerModel.Grupo" Multiplicity="1" />
+          <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Grupo">
+              <PropertyRef Name="IdGrupo" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdGrupo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdMarc__2101D846">
+          <End Role="Marca" Type="TallerModel.Marca" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Marca">
+              <PropertyRef Name="IdMarca" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdMarca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Modelo__IdMarca__3DB3258D">
+          <End Role="Marca" Type="TallerModel.Marca" Multiplicity="0..1" />
+          <End Role="Modelo" Type="TallerModel.Modelo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Marca">
+              <PropertyRef Name="IdMarca" />
+            </Principal>
+            <Dependent Role="Modelo">
+              <PropertyRef Name="IdMarca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdMode__21F5FC7F">
+          <End Role="Modelo" Type="TallerModel.Modelo" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modelo">
+              <PropertyRef Name="IdModelo" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdModelo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdTipo__1F198FD4">
+          <End Role="TipoCombustible" Type="TallerModel.TipoCombustible" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoCombustible">
+              <PropertyRef Name="IdTipoCombustible" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdTipoCombustible" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdTipo__22EA20B8">
+          <End Role="TipoMaterial" Type="TallerModel.TipoMaterial" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoMaterial">
+              <PropertyRef Name="IdTipoMaterial" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdTipoMaterial" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdTipo__1E256B9B">
+          <End Role="TipoMotor" Type="TallerModel.TipoMotor" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoMotor">
+              <PropertyRef Name="IdTipoMotor" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdTipoMotor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Articulo__IdUnid__1B48FEF0">
+          <End Role="UnidadMedida" Type="TallerModel.UnidadMedida" Multiplicity="0..1" />
+          <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UnidadMedida">
+              <PropertyRef Name="IdUnidadMedida" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="IdUnidadMedida" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Persona__TipoIde__13A7DD28">
+          <End Role="TipoIdentificacion" Type="TallerModel.TipoIdentificacion" Multiplicity="1" />
+          <End Role="Persona" Type="TallerModel.Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoIdentificacion">
+              <PropertyRef Name="IdTipoIdentificacion" />
+            </Principal>
+            <Dependent Role="Persona">
+              <PropertyRef Name="TipoIdentificacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Persona__IdTipoP__12B3B8EF">
+          <End Role="TipoPersona" Type="TallerModel.TipoPersona" Multiplicity="1" />
+          <End Role="Persona" Type="TallerModel.Persona" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoPersona">
+              <PropertyRef Name="IdTipoPersona" />
+            </Principal>
+            <Dependent Role="Persona">
+              <PropertyRef Name="IdTipoPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Seguro__IdEmpres__2D67AF2B">
+          <End Role="EmpresaAseguradora" Type="TallerModel.EmpresaAseguradora" Multiplicity="1" />
+          <End Role="Seguro" Type="TallerModel.Seguro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmpresaAseguradora">
+              <PropertyRef Name="IdEmpresaAseguradora" />
+            </Principal>
+            <Dependent Role="Seguro">
+              <PropertyRef Name="IdEmpresaAseguradora" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Liquidaci__IdOrd__5EFF0ABF">
+          <End Role="OrdenTrabajo" Type="TallerModel.OrdenTrabajo" Multiplicity="1" />
+          <End Role="Liquidacion" Type="TallerModel.Liquidacion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrdenTrabajo">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Principal>
+            <Dependent Role="Liquidacion">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ManoObra__IdMano__490FC9A0">
+          <End Role="ManoObra" Type="TallerModel.ManoObra" Multiplicity="1" />
+          <End Role="ManoObra1" Type="TallerModel.ManoObra" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="ManoObra">
+              <PropertyRef Name="IdManoObra" />
+            </Principal>
+            <Dependent Role="ManoObra1">
+              <PropertyRef Name="IdManoObra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ManoObra__IdOrde__481BA567">
+          <End Role="OrdenTrabajo" Type="TallerModel.OrdenTrabajo" Multiplicity="1" />
+          <End Role="ManoObra" Type="TallerModel.ManoObra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrdenTrabajo">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Principal>
+            <Dependent Role="ManoObra">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ManoObra__IdPres__4727812E">
+          <End Role="Presupuesto" Type="TallerModel.Presupuesto" Multiplicity="1" />
+          <End Role="ManoObra" Type="TallerModel.ManoObra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Presupuesto">
+              <PropertyRef Name="IdPresupuesto" />
+            </Principal>
+            <Dependent Role="ManoObra">
+              <PropertyRef Name="IdPresupuesto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ManoObra__IdTipo__4A03EDD9">
+          <End Role="TipoTrabajo" Type="TallerModel.TipoTrabajo" Multiplicity="1" />
+          <End Role="ManoObra" Type="TallerModel.ManoObra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoTrabajo">
+              <PropertyRef Name="IdTipoTrabajo" />
+            </Principal>
+            <Dependent Role="ManoObra">
+              <PropertyRef Name="IdTipoTrabajo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Repuestos__IdMan__51A50FA1">
+          <End Role="ManoObra" Type="TallerModel.ManoObra" Multiplicity="1" />
+          <End Role="Repuestos" Type="TallerModel.Repuestos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ManoObra">
+              <PropertyRef Name="IdManoObra" />
+            </Principal>
+            <Dependent Role="Repuestos">
+              <PropertyRef Name="IdManoObra" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__OrdenTrab__IdPre__407A839F">
+          <End Role="Presupuesto" Type="TallerModel.Presupuesto" Multiplicity="1" />
+          <End Role="OrdenTrabajo" Type="TallerModel.OrdenTrabajo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Presupuesto">
+              <PropertyRef Name="IdPresupuesto" />
+            </Principal>
+            <Dependent Role="OrdenTrabajo">
+              <PropertyRef Name="IdPresupuesto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Otros__IdOrdenTr__58520D30">
+          <End Role="OrdenTrabajo" Type="TallerModel.OrdenTrabajo" Multiplicity="1" />
+          <End Role="Otros" Type="TallerModel.Otros" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrdenTrabajo">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Principal>
+            <Dependent Role="Otros">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Repuestos__IdOrd__50B0EB68">
+          <End Role="OrdenTrabajo" Type="TallerModel.OrdenTrabajo" Multiplicity="1" />
+          <End Role="Repuestos" Type="TallerModel.Repuestos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrdenTrabajo">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Principal>
+            <Dependent Role="Repuestos">
+              <PropertyRef Name="IdOrdenTrabajo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Presupues__IdPer__3414ACBA">
+          <End Role="Persona" Type="TallerModel.Persona" Multiplicity="1" />
+          <End Role="Presupuesto" Type="TallerModel.Presupuesto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persona">
+              <PropertyRef Name="Identificacion" />
+            </Principal>
+            <Dependent Role="Presupuesto">
+              <PropertyRef Name="IdPersona" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Presupues__IdSeg__3508D0F3">
+          <End Role="Seguro" Type="TallerModel.Seguro" Multiplicity="1" />
+          <End Role="Presupuesto" Type="TallerModel.Presupuesto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Seguro">
+              <PropertyRef Name="IdSeguro" />
+            </Principal>
+            <Dependent Role="Presupuesto">
+              <PropertyRef Name="IdSeguro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TallerModelStoreContainer" CdmEntityContainer="TallerEntities">
+          <EntitySetMapping Name="Chasis">
+            <EntityTypeMapping TypeName="TallerModel.Chasis">
+              <MappingFragment StoreEntitySet="Chasis">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdChasis" ColumnName="IdChasis" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Color">
+            <EntityTypeMapping TypeName="TallerModel.Color">
+              <MappingFragment StoreEntitySet="Color">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdColor" ColumnName="IdColor" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grupo">
+            <EntityTypeMapping TypeName="TallerModel.Grupo">
+              <MappingFragment StoreEntitySet="Grupo">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdTipoArticulo" ColumnName="IdTipoArticulo" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Marca">
+            <EntityTypeMapping TypeName="TallerModel.Marca">
+              <MappingFragment StoreEntitySet="Marca">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdMarca" ColumnName="IdMarca" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Modelo">
+            <EntityTypeMapping TypeName="TallerModel.Modelo">
+              <MappingFragment StoreEntitySet="Modelo">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdModelo" ColumnName="IdModelo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdMarca" ColumnName="IdMarca" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoCombustible">
+            <EntityTypeMapping TypeName="TallerModel.TipoCombustible">
+              <MappingFragment StoreEntitySet="TipoCombustible">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdTipoCombustible" ColumnName="IdTipoCombustible" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoMaterial">
+            <EntityTypeMapping TypeName="TallerModel.TipoMaterial">
+              <MappingFragment StoreEntitySet="TipoMaterial">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdTipoMaterial" ColumnName="IdTipoMaterial" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoMotor">
+            <EntityTypeMapping TypeName="TallerModel.TipoMotor">
+              <MappingFragment StoreEntitySet="TipoMotor">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdTipoMotor" ColumnName="IdTipoMotor" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UnidadMedida">
+            <EntityTypeMapping TypeName="TallerModel.UnidadMedida">
+              <MappingFragment StoreEntitySet="UnidadMedida">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdUnidadMedida" ColumnName="IdUnidadMedida" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoIdentificacion">
+            <EntityTypeMapping TypeName="TallerModel.TipoIdentificacion">
+              <MappingFragment StoreEntitySet="TipoIdentificacion">
+                <ScalarProperty Name="IdTipoIdentificacion" ColumnName="IdTipoIdentificacion" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoPersona">
+            <EntityTypeMapping TypeName="TallerModel.TipoPersona">
+              <MappingFragment StoreEntitySet="TipoPersona">
+                <ScalarProperty Name="IdTipoPersona" ColumnName="IdTipoPersona" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Articulo">
+            <EntityTypeMapping TypeName="TallerModel.Articulo">
+              <MappingFragment StoreEntitySet="Articulo">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdArticulo" ColumnName="IdArticulo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="FechaProduccion" ColumnName="FechaProduccion" />
+                <ScalarProperty Name="CantidadMinima" ColumnName="CantidadMinima" />
+                <ScalarProperty Name="CantidadMaxima" ColumnName="CantidadMaxima" />
+                <ScalarProperty Name="CantidadActual" ColumnName="CantidadActual" />
+                <ScalarProperty Name="IdUnidadMedida" ColumnName="IdUnidadMedida" />
+                <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+                <ScalarProperty Name="IdChasis" ColumnName="IdChasis" />
+                <ScalarProperty Name="IdTipoMotor" ColumnName="IdTipoMotor" />
+                <ScalarProperty Name="NroPlaca" ColumnName="NroPlaca" />
+                <ScalarProperty Name="IdTipoCombustible" ColumnName="IdTipoCombustible" />
+                <ScalarProperty Name="IdColor" ColumnName="IdColor" />
+                <ScalarProperty Name="IdMarca" ColumnName="IdMarca" />
+                <ScalarProperty Name="IdModelo" ColumnName="IdModelo" />
+                <ScalarProperty Name="IdTipoMaterial" ColumnName="IdTipoMaterial" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmpresaAseguradora">
+            <EntityTypeMapping TypeName="TallerModel.EmpresaAseguradora">
+              <MappingFragment StoreEntitySet="EmpresaAseguradora">
+                <ScalarProperty Name="IdEmpresaAseguradora" ColumnName="IdEmpresaAseguradora" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Liquidacion">
+            <EntityTypeMapping TypeName="TallerModel.Liquidacion">
+              <MappingFragment StoreEntitySet="Liquidacion">
+                <ScalarProperty Name="IdLiquidacion" ColumnName="IdLiquidacion" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="IdOrdenTrabajo" ColumnName="IdOrdenTrabajo" />
+                <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ManoObra">
+            <EntityTypeMapping TypeName="TallerModel.ManoObra">
+              <MappingFragment StoreEntitySet="ManoObra">
+                <ScalarProperty Name="IdManoObra" ColumnName="IdManoObra" />
+                <ScalarProperty Name="IdTipoTrabajo" ColumnName="IdTipoTrabajo" />
+                <ScalarProperty Name="IdPresupuesto" ColumnName="IdPresupuesto" />
+                <ScalarProperty Name="IdOrdenTrabajo" ColumnName="IdOrdenTrabajo" />
+                <ScalarProperty Name="PrecioHora" ColumnName="PrecioHora" />
+                <ScalarProperty Name="Horas" ColumnName="Horas" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrdenTrabajo">
+            <EntityTypeMapping TypeName="TallerModel.OrdenTrabajo">
+              <MappingFragment StoreEntitySet="OrdenTrabajo">
+                <ScalarProperty Name="IdOrdenTrabajo" ColumnName="IdOrdenTrabajo" />
+                <ScalarProperty Name="IdPresupuesto" ColumnName="IdPresupuesto" />
+                <ScalarProperty Name="FechaRecepcion" ColumnName="FechaRecepcion" />
+                <ScalarProperty Name="InicioReparacion" ColumnName="InicioReparacion" />
+                <ScalarProperty Name="FechaIngresoVehiculo" ColumnName="FechaIngresoVehiculo" />
+                <ScalarProperty Name="HoraIngreso" ColumnName="HoraIngreso" />
+                <ScalarProperty Name="FechaEstimadaEntrega" ColumnName="FechaEstimadaEntrega" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Otros">
+            <EntityTypeMapping TypeName="TallerModel.Otros">
+              <MappingFragment StoreEntitySet="Otros">
+                <ScalarProperty Name="IdOtros" ColumnName="IdOtros" />
+                <ScalarProperty Name="IdOrdenTrabajo" ColumnName="IdOrdenTrabajo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Persona">
+            <EntityTypeMapping TypeName="TallerModel.Persona">
+              <MappingFragment StoreEntitySet="Persona">
+                <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+                <ScalarProperty Name="IdTipoPersona" ColumnName="IdTipoPersona" />
+                <ScalarProperty Name="NombreRazonSocial" ColumnName="NombreRazonSocial" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="Genero" ColumnName="Genero" />
+                <ScalarProperty Name="TipoIdentificacion" ColumnName="TipoIdentificacion" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Presupuesto">
+            <EntityTypeMapping TypeName="TallerModel.Presupuesto">
+              <MappingFragment StoreEntitySet="Presupuesto">
+                <ScalarProperty Name="IdPresupuesto" ColumnName="IdPresupuesto" />
+                <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="IdSeguro" ColumnName="IdSeguro" />
+                <ScalarProperty Name="TotalTiempoTrabajo" ColumnName="TotalTiempoTrabajo" />
+                <ScalarProperty Name="TotalManoObra" ColumnName="TotalManoObra" />
+                <ScalarProperty Name="Iva" ColumnName="Iva" />
+                <ScalarProperty Name="TotalPresupuesto" ColumnName="TotalPresupuesto" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Repuestos">
+            <EntityTypeMapping TypeName="TallerModel.Repuestos">
+              <MappingFragment StoreEntitySet="Repuestos">
+                <ScalarProperty Name="IdRepuestos" ColumnName="IdRepuestos" />
+                <ScalarProperty Name="IdArticulo" ColumnName="IdArticulo" />
+                <ScalarProperty Name="IdOrdenTrabajo" ColumnName="IdOrdenTrabajo" />
+                <ScalarProperty Name="IdManoObra" ColumnName="IdManoObra" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Seguro">
+            <EntityTypeMapping TypeName="TallerModel.Seguro">
+              <MappingFragment StoreEntitySet="Seguro">
+                <ScalarProperty Name="IdSeguro" ColumnName="IdSeguro" />
+                <ScalarProperty Name="NroSeguro" ColumnName="NroSeguro" />
+                <ScalarProperty Name="IdEmpresaAseguradora" ColumnName="IdEmpresaAseguradora" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoTrabajo">
+            <EntityTypeMapping TypeName="TallerModel.TipoTrabajo">
+              <MappingFragment StoreEntitySet="TipoTrabajo">
+                <ScalarProperty Name="IdTipoTrabajo" ColumnName="IdTipoTrabajo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Observación" ColumnName="Observación" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModelTaller">
+        <EntityTypeShape EntityType="TallerModel.Chasis" Width="1.5" PointX="3" PointY="8.5" Height="1.8694466145833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.Color" Width="1.5" PointX="3" PointY="11.125" Height="1.8694466145833353" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.Grupo" Width="1.5" PointX="3" PointY="13.75" Height="2.0478930664062496" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.Marca" Width="1.5" PointX="0.75" PointY="4.875" Height="2.0478930664062496" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.Modelo" Width="1.5" PointX="3" PointY="4.75" Height="2.2263395182291656" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.TipoCombustible" Width="1.5" PointX="3" PointY="16.5" Height="1.8694466145833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.TipoMaterial" Width="1.5" PointX="3" PointY="19.125" Height="1.8694466145833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.TipoMotor" Width="1.5" PointX="3" PointY="21.75" Height="1.8694466145833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.UnidadMedida" Width="1.5" PointX="3" PointY="24.375" Height="1.8694466145833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.TipoIdentificacion" Width="1.5" PointX="7.75" PointY="5.125" Height="1.8694466145833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.TipoPersona" Width="1.5" PointX="7.75" PointY="2.125" Height="1.8694466145833353" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.Articulo" Width="1.5" PointX="5.25" PointY="2.75" Height="6.1521614583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.EmpresaAseguradora" Width="1.5" PointX="7.75" PointY="9.25" Height="1.6910001627604174" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.Liquidacion" Width="1.5" PointX="16.75" PointY="7.875" Height="2.2263395182291674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.ManoObra" Width="1.5" PointX="16.75" PointY="3.5" Height="3.6539111328125031" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.OrdenTrabajo" Width="1.5" PointX="14.5" PointY="8.75" Height="3.4754646809895888" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.Otros" Width="1.5" PointX="16.75" PointY="10.875" Height="2.2263395182291674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.Persona" Width="1.5" PointX="10" PointY="4.25" Height="3.6539111328125031" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.Presupuesto" Width="1.5" PointX="12.25" PointY="4.25" Height="3.6539111328125031" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.Repuestos" Width="1.5" PointX="19" PointY="6.25" Height="3.1185717773437469" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.Seguro" Width="1.5" PointX="10" PointY="9.125" Height="2.047893066406246" IsExpanded="true" />
+        <EntityTypeShape EntityType="TallerModel.TipoTrabajo" Width="1.5" PointX="14.5" PointY="4.375" Height="1.8694466145833282" IsExpanded="true" />
+        <AssociationConnector Association="TallerModel.FK__Articulo__IdChas__1D314762" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="8.7010807291666659" />
+          <ConnectorPoint PointX="5.25" PointY="8.7010807291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Articulo__IdColo__200DB40D" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="12.059723307291668" />
+          <ConnectorPoint PointX="5.3072879166666675" PointY="12.059723307291668" />
+          <ConnectorPoint PointX="5.4739545833333336" PointY="12.059723307291668" />
+          <ConnectorPoint PointX="5.5104141666666671" PointY="12.059723307291668" />
+          <ConnectorPoint PointX="5.6770808333333331" PointY="12.059723307291668" />
+          <ConnectorPoint PointX="5.7135404166666666" PointY="12.059723307291668" />
+          <ConnectorPoint PointX="5.8802070833333326" PointY="12.059723307291668" />
+          <ConnectorPoint PointX="6" PointY="12.059723307291668" />
+          <ConnectorPoint PointX="6" PointY="8.9021614583333317" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Articulo__IdGrup__1C3D2329" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="14.773946533203125" />
+          <ConnectorPoint PointX="5.3072879166666675" PointY="14.773946533203125" />
+          <ConnectorPoint PointX="5.4739545833333336" PointY="14.773946533203125" />
+          <ConnectorPoint PointX="5.5937475" PointY="14.773946533203125" />
+          <ConnectorPoint PointX="5.5937475" PointY="8.9021614583333317" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Articulo__IdMarc__2101D846" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="6.92289306640625" />
+          <ConnectorPoint PointX="1.5" PointY="7.7381697591145828" />
+          <ConnectorPoint PointX="5.25" PointY="7.7381697591145828" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Modelo__IdMarca__3DB3258D" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="5.8989465332031248" />
+          <ConnectorPoint PointX="3" PointY="5.8989465332031248" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Articulo__IdMode__21F5FC7F" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="5.8631697591145828" />
+          <ConnectorPoint PointX="5.25" PointY="5.8631697591145828" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Articulo__IdTipo__1F198FD4" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="17.434723307291666" />
+          <ConnectorPoint PointX="5.3072879166666675" PointY="17.434723307291666" />
+          <ConnectorPoint PointX="5.4739545833333336" PointY="17.434723307291666" />
+          <ConnectorPoint PointX="5.7135404166666666" PointY="17.434723307291666" />
+          <ConnectorPoint PointX="5.8802070833333326" PointY="17.434723307291666" />
+          <ConnectorPoint PointX="6.1197929166666674" PointY="17.434723307291666" />
+          <ConnectorPoint PointX="6.2864595833333334" PointY="17.434723307291666" />
+          <ConnectorPoint PointX="6.4062525" PointY="17.434723307291666" />
+          <ConnectorPoint PointX="6.4062525" PointY="8.9021614583333317" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Articulo__IdTipo__22EA20B8" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="20.059723307291666" />
+          <ConnectorPoint PointX="5.3906212500000006" PointY="20.059723307291666" />
+          <ConnectorPoint PointX="5.3906212500000006" PointY="8.9021614583333317" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Articulo__IdTipo__1E256B9B" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="22.684723307291666" />
+          <ConnectorPoint PointX="5.79687375" PointY="22.684723307291666" />
+          <ConnectorPoint PointX="5.79687375" PointY="8.9021614583333317" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Articulo__IdUnid__1B48FEF0" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="25.309723307291666" />
+          <ConnectorPoint PointX="6.20312625" PointY="25.309723307291666" />
+          <ConnectorPoint PointX="6.20312625" PointY="8.9021614583333317" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Persona__TipoIde__13A7DD28" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.25" PointY="6.0597233072916659" />
+          <ConnectorPoint PointX="10" PointY="6.0597233072916659" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Persona__IdTipoP__12B3B8EF" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.25" PointY="3.0597233072916676" />
+          <ConnectorPoint PointX="10.75" PointY="3.0597233072916676" />
+          <ConnectorPoint PointX="10.75" PointY="4.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Seguro__IdEmpres__2D67AF2B" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.25" PointY="10.095500081380209" />
+          <ConnectorPoint PointX="10" PointY="10.095500081380209" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Liquidaci__IdOrd__5EFF0ABF" ManuallyRouted="false">
+          <ConnectorPoint PointX="16" PointY="9.4256697591145837" />
+          <ConnectorPoint PointX="16.75" PointY="9.4256697591145837" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__ManoObra__IdMano__490FC9A0" ManuallyRouted="false">
+          <ConnectorPoint PointX="17.281923076923075" PointY="7.1539111328125031" />
+          <ConnectorPoint PointX="17.281923076923075" PointY="7.4039111328125031" />
+          <ConnectorPoint PointX="17.728461538461538" PointY="7.4039111328125031" />
+          <ConnectorPoint PointX="17.728461538461538" PointY="7.1539111328125031" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__ManoObra__IdOrde__481BA567" ManuallyRouted="false">
+          <ConnectorPoint PointX="16" PointY="8.75" />
+          <ConnectorPoint PointX="16.375" PointY="8.375" />
+          <ConnectorPoint PointX="16.375" PointY="5.3269555664062516" />
+          <ConnectorPoint PointX="16.75" PointY="5.3269555664062516" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__ManoObra__IdPres__4727812E" ManuallyRouted="false">
+          <ConnectorPoint PointX="13.75" PointY="6.7304288736979156" />
+          <ConnectorPoint PointX="16.291666666666668" PointY="6.7304288736979148" />
+          <ConnectorPoint PointX="16.458333333333332" PointY="6.7304288736979156" />
+          <ConnectorPoint PointX="16.75" PointY="6.7304288736979156" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__ManoObra__IdTipo__4A03EDD9" ManuallyRouted="false">
+          <ConnectorPoint PointX="16" PointY="4.7884777832031258" />
+          <ConnectorPoint PointX="16.75" PointY="4.7884777832031258" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Repuestos__IdMan__51A50FA1" ManuallyRouted="false">
+          <ConnectorPoint PointX="18.25" PointY="6.7019555664062516" />
+          <ConnectorPoint PointX="19" PointY="6.7019555664062516" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__OrdenTrab__IdPre__407A839F" ManuallyRouted="false">
+          <ConnectorPoint PointX="13" PointY="7.9039111328125031" />
+          <ConnectorPoint PointX="13" PointY="10.487732340494794" />
+          <ConnectorPoint PointX="14.5" PointY="10.487732340494794" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Otros__IdOrdenTr__58520D30" ManuallyRouted="false">
+          <ConnectorPoint PointX="16" PointY="11.550232340494794" />
+          <ConnectorPoint PointX="16.75" PointY="11.550232340494794" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Repuestos__IdOrd__50B0EB68" ManuallyRouted="false">
+          <ConnectorPoint PointX="16" PointY="10.488169759114584" />
+          <ConnectorPoint PointX="19.75" PointY="10.488169759114584" />
+          <ConnectorPoint PointX="19.75" PointY="9.368571777343746" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Presupues__IdPer__3414ACBA" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.5" PointY="6.0769555664062516" />
+          <ConnectorPoint PointX="12.25" PointY="6.0769555664062516" />
+        </AssociationConnector>
+        <AssociationConnector Association="TallerModel.FK__Presupues__IdSeg__3508D0F3" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.5" PointY="9.8063661702473972" />
+          <ConnectorPoint PointX="12.5937475" PointY="9.8063661702473972" />
+          <ConnectorPoint PointX="12.5937475" PointY="7.9039111328125031" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

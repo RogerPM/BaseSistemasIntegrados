@@ -1,0 +1,2253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TECAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TECAModelStoreContainer">
+    <EntitySet Name="OrdenCompra" EntityType="TECAModel.Store.OrdenCompra" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="OrdenCompraDet" EntityType="TECAModel.Store.OrdenCompraDet" store:Type="Tables" Schema="Compras" />
+    <EntitySet Name="CuentaxCobrar" EntityType="TECAModel.Store.CuentaxCobrar" store:Type="Tables" Schema="CuentasPorCobrar" />
+    <EntitySet Name="CuentaxCobrarDet" EntityType="TECAModel.Store.CuentaxCobrarDet" store:Type="Tables" Schema="CuentasPorCobrar" />
+    <EntitySet Name="ClienteDefactura" EntityType="TECAModel.Store.ClienteDefactura" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="Comision" EntityType="TECAModel.Store.Comision" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="ComisionDet" EntityType="TECAModel.Store.ComisionDet" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="Cotizacion" EntityType="TECAModel.Store.Cotizacion" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="CotizacionDet" EntityType="TECAModel.Store.CotizacionDet" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="DevolucionDet" EntityType="TECAModel.Store.DevolucionDet" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="DevolucionVenta" EntityType="TECAModel.Store.DevolucionVenta" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="Factura" EntityType="TECAModel.Store.Factura" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="FacturaDet" EntityType="TECAModel.Store.FacturaDet" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="FormaPago" EntityType="TECAModel.Store.FormaPago" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="GuiaRemision" EntityType="TECAModel.Store.GuiaRemision" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="GuiaRemisionDet" EntityType="TECAModel.Store.GuiaRemisionDet" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="PorcentajeComision" EntityType="TECAModel.Store.PorcentajeComision" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="Promocion" EntityType="TECAModel.Store.Promocion" store:Type="Tables" Schema="Facturacion" />
+    <EntitySet Name="Articulo" EntityType="TECAModel.Store.Articulo" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="Chasis" EntityType="TECAModel.Store.Chasis" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="Color" EntityType="TECAModel.Store.Color" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="Grupo" EntityType="TECAModel.Store.Grupo" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="Marca" EntityType="TECAModel.Store.Marca" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="Modelo" EntityType="TECAModel.Store.Modelo" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="Percha" EntityType="TECAModel.Store.Percha" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="TipoArticulo" EntityType="TECAModel.Store.TipoArticulo" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="TipoCombustible" EntityType="TECAModel.Store.TipoCombustible" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="TipoMaterial" EntityType="TECAModel.Store.TipoMaterial" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="TipoMotor" EntityType="TECAModel.Store.TipoMotor" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="Empleado" EntityType="TECAModel.Store.Empleado" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Persona" EntityType="TECAModel.Store.Persona" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Empresa" EntityType="TECAModel.Store.Empresa" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Estado" EntityType="TECAModel.Store.Estado" store:Type="Tables" Schema="Seguridad" />
+    <EntitySet Name="Usuario" EntityType="TECAModel.Store.Usuario" store:Type="Tables" Schema="Seguridad" />
+    <AssociationSet Name="FK__Articulo__IdChas__5C37ACAD" Association="TECAModel.Store.FK__Articulo__IdChas__5C37ACAD">
+      <End Role="Chasis" EntitySet="Chasis" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdColo__5F141958" Association="TECAModel.Store.FK__Articulo__IdColo__5F141958">
+      <End Role="Color" EntitySet="Color" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdEmpr__58671BC9" Association="TECAModel.Store.FK__Articulo__IdEmpr__58671BC9">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdEsta__5772F790" Association="TECAModel.Store.FK__Articulo__IdEsta__5772F790">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdGrup__5B438874" Association="TECAModel.Store.FK__Articulo__IdGrup__5B438874">
+      <End Role="Grupo" EntitySet="Grupo" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdMarc__60083D91" Association="TECAModel.Store.FK__Articulo__IdMarc__60083D91">
+      <End Role="Marca" EntitySet="Marca" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdMode__60FC61CA" Association="TECAModel.Store.FK__Articulo__IdMode__60FC61CA">
+      <End Role="Modelo" EntitySet="Modelo" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdTipo__5A4F643B" Association="TECAModel.Store.FK__Articulo__IdTipo__5A4F643B">
+      <End Role="TipoArticulo" EntitySet="TipoArticulo" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdTipo__5D2BD0E6" Association="TECAModel.Store.FK__Articulo__IdTipo__5D2BD0E6">
+      <End Role="TipoMotor" EntitySet="TipoMotor" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdTipo__5E1FF51F" Association="TECAModel.Store.FK__Articulo__IdTipo__5E1FF51F">
+      <End Role="TipoCombustible" EntitySet="TipoCombustible" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdTipo__61F08603" Association="TECAModel.Store.FK__Articulo__IdTipo__61F08603">
+      <End Role="TipoMaterial" EntitySet="TipoMaterial" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chasis__IdEmpres__2E70E1FD" Association="TECAModel.Store.FK__Chasis__IdEmpres__2E70E1FD">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Chasis" EntitySet="Chasis" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chasis__IdEstado__2F650636" Association="TECAModel.Store.FK__Chasis__IdEstado__2F650636">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Chasis" EntitySet="Chasis" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ClienteDe__IdEmp__24B26D99" Association="TECAModel.Store.FK__ClienteDe__IdEmp__24B26D99">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="ClienteDefactura" EntitySet="ClienteDefactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ClienteDe__idEst__269AB60B" Association="TECAModel.Store.FK__ClienteDe__idEst__269AB60B">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="ClienteDefactura" EntitySet="ClienteDefactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ClienteDe__idUsu__25A691D2" Association="TECAModel.Store.FK__ClienteDe__idUsu__25A691D2">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="ClienteDefactura" EntitySet="ClienteDefactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Color__IdEmpresa__3F9B6DFF" Association="TECAModel.Store.FK__Color__IdEmpresa__3F9B6DFF">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Color" EntitySet="Color" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Color__IdEstado__408F9238" Association="TECAModel.Store.FK__Color__IdEstado__408F9238">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Color" EntitySet="Color" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comision__idEsta__573DED66" Association="TECAModel.Store.FK__Comision__idEsta__573DED66">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Comision" EntitySet="Comision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comision__IdNume__546180BB" Association="TECAModel.Store.FK__Comision__IdNume__546180BB">
+      <End Role="PorcentajeComision" EntitySet="PorcentajeComision" />
+      <End Role="Comision" EntitySet="Comision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comision__idUsua__5649C92D" Association="TECAModel.Store.FK__Comision__idUsua__5649C92D">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Comision" EntitySet="Comision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ComisionD__IdEmp__668030F6" Association="TECAModel.Store.FK__ComisionD__IdEmp__668030F6">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="ComisionDet" EntitySet="ComisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ComisionD__idEst__68687968" Association="TECAModel.Store.FK__ComisionD__idEst__68687968">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="ComisionDet" EntitySet="ComisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ComisionD__IdNum__63A3C44B" Association="TECAModel.Store.FK__ComisionD__IdNum__63A3C44B">
+      <End Role="Comision" EntitySet="Comision" />
+      <End Role="ComisionDet" EntitySet="ComisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ComisionD__IdNum__6497E884" Association="TECAModel.Store.FK__ComisionD__IdNum__6497E884">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="ComisionDet" EntitySet="ComisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ComisionD__idUsu__6774552F" Association="TECAModel.Store.FK__ComisionD__idUsu__6774552F">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="ComisionDet" EntitySet="ComisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ComisionDet__658C0CBD" Association="TECAModel.Store.FK__ComisionDet__658C0CBD">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="ComisionDet" EntitySet="ComisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cotizacio__IdEmp__2D47B39A" Association="TECAModel.Store.FK__Cotizacio__IdEmp__2D47B39A">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cotizacio__idEst__2F2FFC0C" Association="TECAModel.Store.FK__Cotizacio__idEst__2F2FFC0C">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cotizacio__idEst__5EDF0F2E" Association="TECAModel.Store.FK__Cotizacio__idEst__5EDF0F2E">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="CotizacionDet" EntitySet="CotizacionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cotizacio__IdFor__2C538F61" Association="TECAModel.Store.FK__Cotizacio__IdFor__2C538F61">
+      <End Role="FormaPago" EntitySet="FormaPago" />
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cotizacio__IdNum__2B5F6B28" Association="TECAModel.Store.FK__Cotizacio__IdNum__2B5F6B28">
+      <End Role="ClienteDefactura" EntitySet="ClienteDefactura" />
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cotizacio__IdNum__5C02A283" Association="TECAModel.Store.FK__Cotizacio__IdNum__5C02A283">
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+      <End Role="CotizacionDet" EntitySet="CotizacionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cotizacio__idUsu__2E3BD7D3" Association="TECAModel.Store.FK__Cotizacio__idUsu__2E3BD7D3">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cotizacio__idUsu__5DEAEAF5" Association="TECAModel.Store.FK__Cotizacio__idUsu__5DEAEAF5">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="CotizacionDet" EntitySet="CotizacionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CotizacionDet__5CF6C6BC" Association="TECAModel.Store.FK__CotizacionDet__5CF6C6BC">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="CotizacionDet" EntitySet="CotizacionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaxCo__idEmp__6B0FDBE9" Association="TECAModel.Store.FK__CuentaxCo__idEmp__6B0FDBE9">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaxCo__idEmp__74994623" Association="TECAModel.Store.FK__CuentaxCo__idEmp__74994623">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CuentaxCobrarDet" EntitySet="CuentaxCobrarDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaxCo__idEst__6FD49106" Association="TECAModel.Store.FK__CuentaxCo__idEst__6FD49106">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaxCo__idEst__76818E95" Association="TECAModel.Store.FK__CuentaxCo__idEst__76818E95">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="CuentaxCobrarDet" EntitySet="CuentaxCobrarDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaxCo__idFac__6DEC4894" Association="TECAModel.Store.FK__CuentaxCo__idFac__6DEC4894">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaxCo__idTra__6CF8245B" Association="TECAModel.Store.FK__CuentaxCo__idTra__6CF8245B">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaxCo__idUsu__6C040022" Association="TECAModel.Store.FK__CuentaxCo__idUsu__6C040022">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaxCo__idUsu__758D6A5C" Association="TECAModel.Store.FK__CuentaxCo__idUsu__758D6A5C">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="CuentaxCobrarDet" EntitySet="CuentaxCobrarDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Devolucio__idEst__06ED0088" Association="TECAModel.Store.FK__Devolucio__idEst__06ED0088">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="DevolucionDet" EntitySet="DevolucionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Devolucio__idEst__70099B30" Association="TECAModel.Store.FK__Devolucio__idEst__70099B30">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="DevolucionVenta" EntitySet="DevolucionVenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Devolucio__IdNum__041093DD" Association="TECAModel.Store.FK__Devolucio__IdNum__041093DD">
+      <End Role="DevolucionVenta" EntitySet="DevolucionVenta" />
+      <End Role="DevolucionDet" EntitySet="DevolucionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Devolucio__IdNum__6D2D2E85" Association="TECAModel.Store.FK__Devolucio__IdNum__6D2D2E85">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="DevolucionVenta" EntitySet="DevolucionVenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Devolucio__idUsu__05F8DC4F" Association="TECAModel.Store.FK__Devolucio__idUsu__05F8DC4F">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="DevolucionDet" EntitySet="DevolucionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Devolucio__idUsu__6F1576F7" Association="TECAModel.Store.FK__Devolucio__idUsu__6F1576F7">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="DevolucionVenta" EntitySet="DevolucionVenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DevolucionDet__0504B816" Association="TECAModel.Store.FK__DevolucionDet__0504B816">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="DevolucionDet" EntitySet="DevolucionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__IdEmpr__239E4DCF" Association="TECAModel.Store.FK__Empleado__IdEmpr__239E4DCF">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__IdEsta__22AA2996" Association="TECAModel.Store.FK__Empleado__IdEsta__22AA2996">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__IdPers__24927208" Association="TECAModel.Store.FK__Empleado__IdPers__24927208">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empresa__IdEstad__0CBAE877" Association="TECAModel.Store.FK__Empresa__IdEstad__0CBAE877">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__idEstad__4F9CCB9E" Association="TECAModel.Store.FK__Factura__idEstad__4F9CCB9E">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__IdForma__49E3F248" Association="TECAModel.Store.FK__Factura__IdForma__49E3F248">
+      <End Role="FormaPago" EntitySet="FormaPago" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__IdNumer__4BCC3ABA" Association="TECAModel.Store.FK__Factura__IdNumer__4BCC3ABA">
+      <End Role="ClienteDefactura" EntitySet="ClienteDefactura" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__IdNumer__4CC05EF3" Association="TECAModel.Store.FK__Factura__IdNumer__4CC05EF3">
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__IdPromo__4DB4832C" Association="TECAModel.Store.FK__Factura__IdPromo__4DB4832C">
+      <End Role="Promocion" EntitySet="Promocion" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__idUsuar__4EA8A765" Association="TECAModel.Store.FK__Factura__idUsuar__4EA8A765">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FacturaDe__idEst__7F4BDEC0" Association="TECAModel.Store.FK__FacturaDe__idEst__7F4BDEC0">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="FacturaDet" EntitySet="FacturaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FacturaDe__IdNum__7C6F7215" Association="TECAModel.Store.FK__FacturaDe__IdNum__7C6F7215">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="FacturaDet" EntitySet="FacturaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FacturaDe__idUsu__7E57BA87" Association="TECAModel.Store.FK__FacturaDe__idUsu__7E57BA87">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="FacturaDet" EntitySet="FacturaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FacturaDet__7D63964E" Association="TECAModel.Store.FK__FacturaDet__7D63964E">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="FacturaDet" EntitySet="FacturaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FormaPago__IdEmp__1E05700A" Association="TECAModel.Store.FK__FormaPago__IdEmp__1E05700A">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="FormaPago" EntitySet="FormaPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FormaPago__idEst__1FEDB87C" Association="TECAModel.Store.FK__FormaPago__idEst__1FEDB87C">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="FormaPago" EntitySet="FormaPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FormaPago__idUsu__1EF99443" Association="TECAModel.Store.FK__FormaPago__idUsu__1EF99443">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="FormaPago" EntitySet="FormaPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Grupo__IdEmpresa__6ABAD62E" Association="TECAModel.Store.FK__Grupo__IdEmpresa__6ABAD62E">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Grupo" EntitySet="Grupo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Grupo__IdEstado__6CA31EA0" Association="TECAModel.Store.FK__Grupo__IdEstado__6CA31EA0">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Grupo" EntitySet="Grupo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Grupo__IdTipoArt__6BAEFA67" Association="TECAModel.Store.FK__Grupo__IdTipoArt__6BAEFA67">
+      <End Role="TipoArticulo" EntitySet="TipoArticulo" />
+      <End Role="Grupo" EntitySet="Grupo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GuiaRemis__IdEmp__4336F4B9" Association="TECAModel.Store.FK__GuiaRemis__IdEmp__4336F4B9">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="GuiaRemision" EntitySet="GuiaRemision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GuiaRemis__IdEmp__75C27486" Association="TECAModel.Store.FK__GuiaRemis__IdEmp__75C27486">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="GuiaRemisionDet" EntitySet="GuiaRemisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GuiaRemis__idEst__451F3D2B" Association="TECAModel.Store.FK__GuiaRemis__idEst__451F3D2B">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="GuiaRemision" EntitySet="GuiaRemision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GuiaRemis__idEst__77AABCF8" Association="TECAModel.Store.FK__GuiaRemis__idEst__77AABCF8">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="GuiaRemisionDet" EntitySet="GuiaRemisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GuiaRemis__IdNum__74CE504D" Association="TECAModel.Store.FK__GuiaRemis__IdNum__74CE504D">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="GuiaRemisionDet" EntitySet="GuiaRemisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GuiaRemis__IdPes__4242D080" Association="TECAModel.Store.FK__GuiaRemis__IdPes__4242D080">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="GuiaRemision" EntitySet="GuiaRemision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GuiaRemis__idUsu__442B18F2" Association="TECAModel.Store.FK__GuiaRemis__idUsu__442B18F2">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="GuiaRemision" EntitySet="GuiaRemision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GuiaRemis__idUsu__76B698BF" Association="TECAModel.Store.FK__GuiaRemis__idUsu__76B698BF">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="GuiaRemisionDet" EntitySet="GuiaRemisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Marca__IdEmpresa__45544755" Association="TECAModel.Store.FK__Marca__IdEmpresa__45544755">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Marca" EntitySet="Marca" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Marca__IdEstado__46486B8E" Association="TECAModel.Store.FK__Marca__IdEstado__46486B8E">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Marca" EntitySet="Marca" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Modelo__IdEmpres__4B0D20AB" Association="TECAModel.Store.FK__Modelo__IdEmpres__4B0D20AB">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Modelo" EntitySet="Modelo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Modelo__IdEstado__4C0144E4" Association="TECAModel.Store.FK__Modelo__IdEstado__4C0144E4">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Modelo" EntitySet="Modelo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Modelo__IdMarca__4CF5691D" Association="TECAModel.Store.FK__Modelo__IdMarca__4CF5691D">
+      <End Role="Marca" EntitySet="Marca" />
+      <End Role="Modelo" EntitySet="Modelo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenComp__idEmp__0B27A5C0" Association="TECAModel.Store.FK__OrdenComp__idEmp__0B27A5C0">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenComp__IdUsu__0C1BC9F9" Association="TECAModel.Store.FK__OrdenComp__IdUsu__0C1BC9F9">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenCompraDet__63F8CA06" Association="TECAModel.Store.FK__OrdenCompraDet__63F8CA06">
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+      <End Role="OrdenCompraDet" EntitySet="OrdenCompraDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenCompraDet__64ECEE3F" Association="TECAModel.Store.FK__OrdenCompraDet__64ECEE3F">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="OrdenCompraDet" EntitySet="OrdenCompraDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Percha__IdEmpres__66B53B20" Association="TECAModel.Store.FK__Percha__IdEmpres__66B53B20">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Percha" EntitySet="Percha" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Percha__IdEstado__689D8392" Association="TECAModel.Store.FK__Percha__IdEstado__689D8392">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Percha" EntitySet="Percha" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__IdEmpre__1BFD2C07" Association="TECAModel.Store.FK__Persona__IdEmpre__1BFD2C07">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Porcentaj__IdEmp__3B95D2F1" Association="TECAModel.Store.FK__Porcentaj__IdEmp__3B95D2F1">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="PorcentajeComision" EntitySet="PorcentajeComision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Porcentaj__idEst__3D7E1B63" Association="TECAModel.Store.FK__Porcentaj__idEst__3D7E1B63">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="PorcentajeComision" EntitySet="PorcentajeComision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Porcentaj__IdFor__3AA1AEB8" Association="TECAModel.Store.FK__Porcentaj__IdFor__3AA1AEB8">
+      <End Role="FormaPago" EntitySet="FormaPago" />
+      <End Role="PorcentajeComision" EntitySet="PorcentajeComision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Porcentaj__idUsu__3C89F72A" Association="TECAModel.Store.FK__Porcentaj__idUsu__3C89F72A">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="PorcentajeComision" EntitySet="PorcentajeComision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Promocion__IdEmp__33F4B129" Association="TECAModel.Store.FK__Promocion__IdEmp__33F4B129">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Promocion" EntitySet="Promocion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Promocion__idEst__35DCF99B" Association="TECAModel.Store.FK__Promocion__idEst__35DCF99B">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Promocion" EntitySet="Promocion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Promocion__idUsu__34E8D562" Association="TECAModel.Store.FK__Promocion__idUsu__34E8D562">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Promocion" EntitySet="Promocion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoArtic__IdEmp__6501FCD8" Association="TECAModel.Store.FK__TipoArtic__IdEmp__6501FCD8">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoArticulo" EntitySet="TipoArticulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoArtic__IdEst__65F62111" Association="TECAModel.Store.FK__TipoArtic__IdEst__65F62111">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="TipoArticulo" EntitySet="TipoArticulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoCombu__IdEmp__39E294A9" Association="TECAModel.Store.FK__TipoCombu__IdEmp__39E294A9">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoCombustible" EntitySet="TipoCombustible" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoCombu__IdEst__3AD6B8E2" Association="TECAModel.Store.FK__TipoCombu__IdEst__3AD6B8E2">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="TipoCombustible" EntitySet="TipoCombustible" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoMater__IdEmp__51BA1E3A" Association="TECAModel.Store.FK__TipoMater__IdEmp__51BA1E3A">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoMaterial" EntitySet="TipoMaterial" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoMater__IdEst__52AE4273" Association="TECAModel.Store.FK__TipoMater__IdEst__52AE4273">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="TipoMaterial" EntitySet="TipoMaterial" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoMotor__IdEmp__3429BB53" Association="TECAModel.Store.FK__TipoMotor__IdEmp__3429BB53">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoMotor" EntitySet="TipoMotor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoMotor__IdEst__351DDF8C" Association="TECAModel.Store.FK__TipoMotor__IdEst__351DDF8C">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="TipoMotor" EntitySet="TipoMotor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdEstad__3A81B327" Association="TECAModel.Store.FK__Usuario__IdEstad__3A81B327">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdUsuar__3C69FB99" Association="TECAModel.Store.FK__Usuario__IdUsuar__3C69FB99">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="OrdenCompra">
+    <Key>
+      <PropertyRef Name="IdOrdenCompra" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Name="IdOrdenCompra" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="FechaModificacion" Type="date" Nullable="false" />
+    <Property Name="idProveedor" Type="int" Nullable="false" />
+    <Property Name="NumeroCotizacion" Type="int" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="Observaciones" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="OrdenCompraDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="IdArticulo" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Precio" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CuentaxCobrar">
+    <Key>
+      <PropertyRef Name="idCuentaxCobrar" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="idCuentaxCobrar" Type="int" Nullable="false" />
+    <Property Name="numero_comprobante" Type="numeric" Precision="4" />
+    <Property Name="idTransaccion" Type="int" Nullable="false" />
+    <Property Name="idFactura" Type="int" Nullable="false" />
+    <Property Name="Modulo" Type="int" Nullable="false" />
+    <Property Name="idCabeceraComprobante" Type="int" Nullable="false" />
+    <Property Name="TotalCuotas" Type="int" Nullable="false" />
+    <Property Name="porcentaje_interes" Type="numeric" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CuentaxCobrarDet">
+    <Key>
+      <PropertyRef Name="idCuentaxCobrar" />
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="idCuentaxCobrar" Type="int" Nullable="false" />
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="numero_cuota" Type="int" Nullable="false" />
+    <Property Name="valor_cuota" Type="money" Nullable="false" />
+    <Property Name="valor_interes" Type="money" Nullable="false" />
+    <Property Name="valor_mora" Type="money" Nullable="false" />
+    <Property Name="fecha_cobro" Type="date" Nullable="false" />
+    <Property Name="fecha_vencimiento" Type="date" Nullable="false" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClienteDefactura">
+    <Key>
+      <PropertyRef Name="IdNumeroCliente" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="IdNumeroCliente" Type="int" Nullable="false" />
+    <Property Name="Identificacion" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="NombreRazonSocial" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Apellido" Type="varchar" MaxLength="50" />
+    <Property Name="FechaNacimiento" Type="date" />
+    <Property Name="Genero" Type="varchar" MaxLength="10" />
+    <Property Name="Direccion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Telefono" Type="int" Nullable="false" />
+    <Property Name="Celular" Type="int" Nullable="false" />
+    <Property Name="CorreoElectronico" Type="varchar" MaxLength="50" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Comision">
+    <Key>
+      <PropertyRef Name="IdNumeroComision" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="cabecera_comprobante" Type="numeric" Precision="4" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="IdNumeroComision" Type="int" Nullable="false" />
+    <Property Name="FechaInicial" Type="date" />
+    <Property Name="FechaFinal" Type="date" />
+    <Property Name="IdNumeroPorcComision" Type="int" Nullable="false" />
+    <Property Name="MontoVenta" Type="money" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ComisionDet">
+    <Key>
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="IdNumeroComision" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="IdNumeroComision" Type="int" Nullable="false" />
+    <Property Name="idEmpleado" Type="int" />
+    <Property Name="IdNumeroFactura" Type="int" />
+    <Property Name="MontoComision" Type="money" />
+    <Property Name="FechaPago" Type="date" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cotizacion">
+    <Key>
+      <PropertyRef Name="IdNumeroCotizacion" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="IdNumeroCotizacion" Type="int" Nullable="false" />
+    <Property Name="IdFormaPago" Type="int" Nullable="false" />
+    <Property Name="IdNumeroCliente" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" />
+    <Property Name="PorcentajeEntrada" Type="money" />
+    <Property Name="ValorEntrada" Type="money" />
+    <Property Name="EntradaMinimaRequerida" Type="money" />
+    <Property Name="ValorCancelar" Type="money" />
+    <Property Name="FechaInicialPago" Type="date" />
+    <Property Name="FechaFinalPago" Type="date" />
+    <Property Name="Seguro" Type="bit" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CotizacionDet">
+    <Key>
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="IdNumeroCotizacion" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="IdNumeroCotizacion" Type="int" Nullable="false" />
+    <Property Name="IdArticulo" Type="int" />
+    <Property Name="CuotaMensual" Type="int" />
+    <Property Name="Interes" Type="money" />
+    <Property Name="FechaPago" Type="date" />
+    <Property Name="FechaMaximaPago" Type="date" />
+    <Property Name="precio" Type="money" />
+    <Property Name="cantidad" Type="int" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DevolucionDet">
+    <Key>
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="IdNumeroDevolucion" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="IdNumeroDevolucion" Type="int" Nullable="false" />
+    <Property Name="IdArticulo" Type="int" />
+    <Property Name="Observacion" Type="varchar" MaxLength="300" />
+    <Property Name="cantidad" Type="int" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DevolucionVenta">
+    <Key>
+      <PropertyRef Name="IdNumeroDevolucion" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="cabecera_comprobante" Type="numeric" Precision="4" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="IdNumeroDevolucion" Type="int" Nullable="false" />
+    <Property Name="IdNumeroFactura" Type="int" />
+    <Property Name="Fecha" Type="date" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="IdNumeroFactura" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="cabecera_comprobante" Type="numeric" Precision="4" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="IdNumeroFactura" Type="int" Nullable="false" />
+    <Property Name="IdNumeroCotizacion" Type="int" />
+    <Property Name="IdPromocion" Type="int" />
+    <Property Name="IdFormaPago" Type="int" Nullable="false" />
+    <Property Name="IdNumeroCliente" Type="int" />
+    <Property Name="Fecha" Type="date" />
+    <Property Name="ValorEntrada" Type="money" />
+    <Property Name="NumeroCuotaMensual" Type="int" />
+    <Property Name="Subtotal" Type="money" />
+    <Property Name="Iva" Type="money" />
+    <Property Name="Ice" Type="money" />
+    <Property Name="Descuento" Type="money" />
+    <Property Name="TotalPagar" Type="money" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FacturaDet">
+    <Key>
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="IdNumeroFactura" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="IdNumeroFactura" Type="int" Nullable="false" />
+    <Property Name="IdArticulo" Type="int" />
+    <Property Name="CuotaMensual" Type="money" />
+    <Property Name="Interes" Type="money" />
+    <Property Name="FechaPago" Type="date" />
+    <Property Name="FechaMaximaPago" Type="date" />
+    <Property Name="precio" Type="money" />
+    <Property Name="cantidad" Type="int" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FormaPago">
+    <Key>
+      <PropertyRef Name="IdFormaPago" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="IdFormaPago" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="250" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GuiaRemision">
+    <Key>
+      <PropertyRef Name="IdNumeroGuiaRemision" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="IdNumeroGuiaRemision" Type="int" Nullable="false" />
+    <Property Name="FechaEmision" Type="date" />
+    <Property Name="SitioSalida" Type="varchar" MaxLength="50" />
+    <Property Name="Sitiollegada" Type="varchar" MaxLength="50" />
+    <Property Name="FechaTraslado" Type="date" />
+    <Property Name="IdPesonaNatural" Type="int" Nullable="false" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GuiaRemisionDet">
+    <Key>
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="IdNumeroGuiaRemision" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="IdNumeroGuiaRemision" Type="int" Nullable="false" />
+    <Property Name="IdNumeroFactura" Type="int" />
+    <Property Name="FechaEntrega" Type="date" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PorcentajeComision">
+    <Key>
+      <PropertyRef Name="IdNumeroPorcComision" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="IdNumeroPorcComision" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" />
+    <Property Name="descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="IdFormaPago" Type="int" Nullable="false" />
+    <Property Name="Porcentaje" Type="money" />
+    <Property Name="MontoVenta" Type="money" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Promocion">
+    <Key>
+      <PropertyRef Name="IdPromocion" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="IdPromocion" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="50" />
+    <Property Name="FechaInicio" Type="date" />
+    <Property Name="FechaFin" Type="date" />
+    <Property Name="tipoPromocion" Type="varchar" MaxLength="50" />
+    <Property Name="pordescuento" Type="decimal" Scale="2" />
+    <Property Name="idEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Articulo">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdArticulo" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdArticulo" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FechaProduccion" Type="date" />
+    <Property Name="CantidadMinima" Type="numeric" Precision="5" />
+    <Property Name="CantidadMaxima" Type="numeric" Precision="5" />
+    <Property Name="CantidadActual" Type="numeric" Precision="5" />
+    <Property Name="IdUnidadMedida" Type="int" />
+    <Property Name="FechaCaducidad" Type="date" />
+    <Property Name="IdTipoArticulo" Type="int" Nullable="false" />
+    <Property Name="IdGrupo" Type="int" Nullable="false" />
+    <Property Name="IdChasis" Type="int" />
+    <Property Name="SerieChasis" Type="varchar" MaxLength="17" />
+    <Property Name="IdTipoMotor" Type="int" />
+    <Property Name="SerieMotor" Type="varchar" MaxLength="11" />
+    <Property Name="NroPlaca" Type="varchar" MaxLength="8" />
+    <Property Name="IdTipoCombustible" Type="int" />
+    <Property Name="IdColor" Type="int" />
+    <Property Name="IdMarca" Type="int" />
+    <Property Name="IdModelo" Type="int" />
+    <Property Name="IdTipoMaterial" Type="int" />
+    <Property Name="Observacion" Type="varchar" MaxLength="100" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Chasis">
+    <Key>
+      <PropertyRef Name="IdChasis" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdChasis" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="IdColor" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdColor" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Grupo">
+    <Key>
+      <PropertyRef Name="IdGrupo" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdGrupo" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IdTipoArticulo" Type="int" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Marca">
+    <Key>
+      <PropertyRef Name="IdMarca" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdMarca" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Modelo">
+    <Key>
+      <PropertyRef Name="IdModelo" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdModelo" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="IdMarca" Type="int" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Percha">
+    <Key>
+      <PropertyRef Name="IdPercha" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdPercha" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="10" />
+    <Property Name="Nro_Divisiones" Type="numeric" Nullable="false" Precision="10" />
+    <Property Name="IdBodega" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="TipoArticulo">
+    <Key>
+      <PropertyRef Name="IdTipoArticulo" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdTipoArticulo" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="TipoCombustible">
+    <Key>
+      <PropertyRef Name="IdTipoCombustible" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdTipoCombustible" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="TipoMaterial">
+    <Key>
+      <PropertyRef Name="IdTipoMaterial" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdTipoMaterial" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="TipoMotor">
+    <Key>
+      <PropertyRef Name="IdTipoMotor" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdTipoMotor" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdEmpleado" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="Sueldo" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="Identificacion" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="IdTipoPersona" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="NombreRazonSocial" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Apellido" Type="varchar" MaxLength="50" />
+    <Property Name="FechaNacimiento" Type="datetime" />
+    <Property Name="genero" Type="char" MaxLength="1" />
+    <Property Name="TipoIdentificacion" Type="int" Nullable="false" />
+    <Property Name="direccion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TelefonoGneral" Type="numeric" Precision="14" />
+    <Property Name="TelefonoMovil" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="TelefonoCasa" Type="numeric" Nullable="false" Precision="14" />
+    <Property Name="TelefonoOtros" Type="numeric" Precision="14" />
+    <Property Name="mail" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="50" />
+    <Property Name="NombreComercial" Type="varchar" MaxLength="50" />
+    <Property Name="Ruc" Type="varchar" MaxLength="20" />
+    <Property Name="Direccion" Type="varchar" MaxLength="200" />
+    <Property Name="Logotipo" Type="image" />
+    <Property Name="FechaInicioSistema" Type="datetime" />
+    <Property Name="Correo" Type="varchar" MaxLength="70" />
+    <Property Name="SitioWeb" Type="varchar" MaxLength="70" />
+    <Property Name="Sector" Type="varchar" MaxLength="15" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="250" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="220" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="NombreUsuario" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Contrasena" Type="varchar" Nullable="false" MaxLength="220" />
+    <Property Name="IdEstado" Type="int" />
+    <Property Name="IdImagen" Type="int" />
+    <Property Name="IdPerfil" Type="int" />
+  </EntityType>
+  <Association Name="FK__Articulo__IdChas__5C37ACAD">
+    <End Role="Chasis" Type="TECAModel.Store.Chasis" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chasis">
+        <PropertyRef Name="IdChasis" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdChasis" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdColo__5F141958">
+    <End Role="Color" Type="TECAModel.Store.Color" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="IdColor" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdColor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdEmpr__58671BC9">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdEsta__5772F790">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdGrup__5B438874">
+    <End Role="Grupo" Type="TECAModel.Store.Grupo" Multiplicity="1" />
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="IdGrupo" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdMarc__60083D91">
+    <End Role="Marca" Type="TECAModel.Store.Marca" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marca">
+        <PropertyRef Name="IdMarca" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdMarca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdMode__60FC61CA">
+    <End Role="Modelo" Type="TECAModel.Store.Modelo" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modelo">
+        <PropertyRef Name="IdModelo" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdModelo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdTipo__5A4F643B">
+    <End Role="TipoArticulo" Type="TECAModel.Store.TipoArticulo" Multiplicity="1" />
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoArticulo">
+        <PropertyRef Name="IdTipoArticulo" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdTipoArticulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdTipo__5D2BD0E6">
+    <End Role="TipoMotor" Type="TECAModel.Store.TipoMotor" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoMotor">
+        <PropertyRef Name="IdTipoMotor" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdTipoMotor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdTipo__5E1FF51F">
+    <End Role="TipoCombustible" Type="TECAModel.Store.TipoCombustible" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoCombustible">
+        <PropertyRef Name="IdTipoCombustible" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdTipoCombustible" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdTipo__61F08603">
+    <End Role="TipoMaterial" Type="TECAModel.Store.TipoMaterial" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoMaterial">
+        <PropertyRef Name="IdTipoMaterial" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdTipoMaterial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chasis__IdEmpres__2E70E1FD">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="0..1" />
+    <End Role="Chasis" Type="TECAModel.Store.Chasis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Chasis">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chasis__IdEstado__2F650636">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="0..1" />
+    <End Role="Chasis" Type="TECAModel.Store.Chasis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Chasis">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ClienteDe__IdEmp__24B26D99">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="ClienteDefactura" Type="TECAModel.Store.ClienteDefactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="ClienteDefactura">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ClienteDe__idEst__269AB60B">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="ClienteDefactura" Type="TECAModel.Store.ClienteDefactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="ClienteDefactura">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ClienteDe__idUsu__25A691D2">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="ClienteDefactura" Type="TECAModel.Store.ClienteDefactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="ClienteDefactura">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Color__IdEmpresa__3F9B6DFF">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="0..1" />
+    <End Role="Color" Type="TECAModel.Store.Color" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Color">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Color__IdEstado__408F9238">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="0..1" />
+    <End Role="Color" Type="TECAModel.Store.Color" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Color">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comision__idEsta__573DED66">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="Comision" Type="TECAModel.Store.Comision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Comision">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comision__IdNume__546180BB">
+    <End Role="PorcentajeComision" Type="TECAModel.Store.PorcentajeComision" Multiplicity="1" />
+    <End Role="Comision" Type="TECAModel.Store.Comision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PorcentajeComision">
+        <PropertyRef Name="IdNumeroPorcComision" />
+      </Principal>
+      <Dependent Role="Comision">
+        <PropertyRef Name="IdNumeroPorcComision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comision__idUsua__5649C92D">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="Comision" Type="TECAModel.Store.Comision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Comision">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ComisionD__IdEmp__668030F6">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="ComisionDet" Type="TECAModel.Store.ComisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="ComisionDet">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ComisionD__idEst__68687968">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="ComisionDet" Type="TECAModel.Store.ComisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="ComisionDet">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ComisionD__IdNum__63A3C44B">
+    <End Role="Comision" Type="TECAModel.Store.Comision" Multiplicity="1" />
+    <End Role="ComisionDet" Type="TECAModel.Store.ComisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comision">
+        <PropertyRef Name="IdNumeroComision" />
+      </Principal>
+      <Dependent Role="ComisionDet">
+        <PropertyRef Name="IdNumeroComision" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ComisionD__IdNum__6497E884">
+    <End Role="Factura" Type="TECAModel.Store.Factura" Multiplicity="0..1" />
+    <End Role="ComisionDet" Type="TECAModel.Store.ComisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Principal>
+      <Dependent Role="ComisionDet">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ComisionD__idUsu__6774552F">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="ComisionDet" Type="TECAModel.Store.ComisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="ComisionDet">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ComisionDet__658C0CBD">
+    <End Role="Empleado" Type="TECAModel.Store.Empleado" Multiplicity="0..1" />
+    <End Role="ComisionDet" Type="TECAModel.Store.ComisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="ComisionDet">
+        <PropertyRef Name="idEmpleado" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cotizacio__IdEmp__2D47B39A">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Cotizacion" Type="TECAModel.Store.Cotizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Cotizacion">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cotizacio__idEst__2F2FFC0C">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="Cotizacion" Type="TECAModel.Store.Cotizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Cotizacion">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cotizacio__idEst__5EDF0F2E">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="CotizacionDet" Type="TECAModel.Store.CotizacionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="CotizacionDet">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cotizacio__IdFor__2C538F61">
+    <End Role="FormaPago" Type="TECAModel.Store.FormaPago" Multiplicity="1" />
+    <End Role="Cotizacion" Type="TECAModel.Store.Cotizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormaPago">
+        <PropertyRef Name="IdFormaPago" />
+      </Principal>
+      <Dependent Role="Cotizacion">
+        <PropertyRef Name="IdFormaPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cotizacio__IdNum__2B5F6B28">
+    <End Role="ClienteDefactura" Type="TECAModel.Store.ClienteDefactura" Multiplicity="1" />
+    <End Role="Cotizacion" Type="TECAModel.Store.Cotizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteDefactura">
+        <PropertyRef Name="IdNumeroCliente" />
+      </Principal>
+      <Dependent Role="Cotizacion">
+        <PropertyRef Name="IdNumeroCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cotizacio__IdNum__5C02A283">
+    <End Role="Cotizacion" Type="TECAModel.Store.Cotizacion" Multiplicity="1" />
+    <End Role="CotizacionDet" Type="TECAModel.Store.CotizacionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cotizacion">
+        <PropertyRef Name="IdNumeroCotizacion" />
+      </Principal>
+      <Dependent Role="CotizacionDet">
+        <PropertyRef Name="IdNumeroCotizacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cotizacio__idUsu__2E3BD7D3">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="Cotizacion" Type="TECAModel.Store.Cotizacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Cotizacion">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cotizacio__idUsu__5DEAEAF5">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="CotizacionDet" Type="TECAModel.Store.CotizacionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="CotizacionDet">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CotizacionDet__5CF6C6BC">
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="0..1" />
+    <End Role="CotizacionDet" Type="TECAModel.Store.CotizacionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CotizacionDet">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaxCo__idEmp__6B0FDBE9">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="CuentaxCobrar" Type="TECAModel.Store.CuentaxCobrar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaxCobrar">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaxCo__idEmp__74994623">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="CuentaxCobrarDet" Type="TECAModel.Store.CuentaxCobrarDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaxCobrarDet">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaxCo__idEst__6FD49106">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="CuentaxCobrar" Type="TECAModel.Store.CuentaxCobrar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="CuentaxCobrar">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaxCo__idEst__76818E95">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="CuentaxCobrarDet" Type="TECAModel.Store.CuentaxCobrarDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="CuentaxCobrarDet">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaxCo__idFac__6DEC4894">
+    <End Role="Factura" Type="TECAModel.Store.Factura" Multiplicity="1" />
+    <End Role="CuentaxCobrar" Type="TECAModel.Store.CuentaxCobrar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Principal>
+      <Dependent Role="CuentaxCobrar">
+        <PropertyRef Name="idFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaxCo__idTra__6CF8245B">
+    <End Role="Factura" Type="TECAModel.Store.Factura" Multiplicity="1" />
+    <End Role="CuentaxCobrar" Type="TECAModel.Store.CuentaxCobrar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Principal>
+      <Dependent Role="CuentaxCobrar">
+        <PropertyRef Name="idTransaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaxCo__idUsu__6C040022">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="CuentaxCobrar" Type="TECAModel.Store.CuentaxCobrar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="CuentaxCobrar">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaxCo__idUsu__758D6A5C">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="CuentaxCobrarDet" Type="TECAModel.Store.CuentaxCobrarDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="CuentaxCobrarDet">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Devolucio__idEst__06ED0088">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="DevolucionDet" Type="TECAModel.Store.DevolucionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="DevolucionDet">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Devolucio__idEst__70099B30">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="DevolucionVenta" Type="TECAModel.Store.DevolucionVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="DevolucionVenta">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Devolucio__IdNum__041093DD">
+    <End Role="DevolucionVenta" Type="TECAModel.Store.DevolucionVenta" Multiplicity="1" />
+    <End Role="DevolucionDet" Type="TECAModel.Store.DevolucionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DevolucionVenta">
+        <PropertyRef Name="IdNumeroDevolucion" />
+      </Principal>
+      <Dependent Role="DevolucionDet">
+        <PropertyRef Name="IdNumeroDevolucion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Devolucio__IdNum__6D2D2E85">
+    <End Role="Factura" Type="TECAModel.Store.Factura" Multiplicity="0..1" />
+    <End Role="DevolucionVenta" Type="TECAModel.Store.DevolucionVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Principal>
+      <Dependent Role="DevolucionVenta">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Devolucio__idUsu__05F8DC4F">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="DevolucionDet" Type="TECAModel.Store.DevolucionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="DevolucionDet">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Devolucio__idUsu__6F1576F7">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="DevolucionVenta" Type="TECAModel.Store.DevolucionVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="DevolucionVenta">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DevolucionDet__0504B816">
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="0..1" />
+    <End Role="DevolucionDet" Type="TECAModel.Store.DevolucionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="DevolucionDet">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__IdEmpr__239E4DCF">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Empleado" Type="TECAModel.Store.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__IdEsta__22AA2996">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="Empleado" Type="TECAModel.Store.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__IdPers__24927208">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="Empleado" Type="TECAModel.Store.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empresa__IdEstad__0CBAE877">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__idEstad__4F9CCB9E">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="Factura" Type="TECAModel.Store.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__IdForma__49E3F248">
+    <End Role="FormaPago" Type="TECAModel.Store.FormaPago" Multiplicity="1" />
+    <End Role="Factura" Type="TECAModel.Store.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormaPago">
+        <PropertyRef Name="IdFormaPago" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="IdFormaPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__IdNumer__4BCC3ABA">
+    <End Role="ClienteDefactura" Type="TECAModel.Store.ClienteDefactura" Multiplicity="0..1" />
+    <End Role="Factura" Type="TECAModel.Store.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteDefactura">
+        <PropertyRef Name="IdNumeroCliente" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="IdNumeroCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__IdNumer__4CC05EF3">
+    <End Role="Cotizacion" Type="TECAModel.Store.Cotizacion" Multiplicity="0..1" />
+    <End Role="Factura" Type="TECAModel.Store.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cotizacion">
+        <PropertyRef Name="IdNumeroCotizacion" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="IdNumeroCotizacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__IdPromo__4DB4832C">
+    <End Role="Promocion" Type="TECAModel.Store.Promocion" Multiplicity="0..1" />
+    <End Role="Factura" Type="TECAModel.Store.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Promocion">
+        <PropertyRef Name="IdPromocion" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="IdPromocion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__idUsuar__4EA8A765">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="Factura" Type="TECAModel.Store.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FacturaDe__idEst__7F4BDEC0">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="FacturaDet" Type="TECAModel.Store.FacturaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="FacturaDet">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FacturaDe__IdNum__7C6F7215">
+    <End Role="Factura" Type="TECAModel.Store.Factura" Multiplicity="1" />
+    <End Role="FacturaDet" Type="TECAModel.Store.FacturaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Principal>
+      <Dependent Role="FacturaDet">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FacturaDe__idUsu__7E57BA87">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="FacturaDet" Type="TECAModel.Store.FacturaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="FacturaDet">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FacturaDet__7D63964E">
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="0..1" />
+    <End Role="FacturaDet" Type="TECAModel.Store.FacturaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="FacturaDet">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FormaPago__IdEmp__1E05700A">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="FormaPago" Type="TECAModel.Store.FormaPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="FormaPago">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FormaPago__idEst__1FEDB87C">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="FormaPago" Type="TECAModel.Store.FormaPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="FormaPago">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FormaPago__idUsu__1EF99443">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="FormaPago" Type="TECAModel.Store.FormaPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="FormaPago">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Grupo__IdEmpresa__6ABAD62E">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="0..1" />
+    <End Role="Grupo" Type="TECAModel.Store.Grupo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Grupo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Grupo__IdEstado__6CA31EA0">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="0..1" />
+    <End Role="Grupo" Type="TECAModel.Store.Grupo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Grupo">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Grupo__IdTipoArt__6BAEFA67">
+    <End Role="TipoArticulo" Type="TECAModel.Store.TipoArticulo" Multiplicity="0..1" />
+    <End Role="Grupo" Type="TECAModel.Store.Grupo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoArticulo">
+        <PropertyRef Name="IdTipoArticulo" />
+      </Principal>
+      <Dependent Role="Grupo">
+        <PropertyRef Name="IdTipoArticulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GuiaRemis__IdEmp__4336F4B9">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="GuiaRemision" Type="TECAModel.Store.GuiaRemision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="GuiaRemision">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GuiaRemis__IdEmp__75C27486">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="GuiaRemisionDet" Type="TECAModel.Store.GuiaRemisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="GuiaRemisionDet">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GuiaRemis__idEst__451F3D2B">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="GuiaRemision" Type="TECAModel.Store.GuiaRemision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="GuiaRemision">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GuiaRemis__idEst__77AABCF8">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="GuiaRemisionDet" Type="TECAModel.Store.GuiaRemisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="GuiaRemisionDet">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GuiaRemis__IdNum__74CE504D">
+    <End Role="Factura" Type="TECAModel.Store.Factura" Multiplicity="0..1" />
+    <End Role="GuiaRemisionDet" Type="TECAModel.Store.GuiaRemisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Principal>
+      <Dependent Role="GuiaRemisionDet">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GuiaRemis__IdPes__4242D080">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="GuiaRemision" Type="TECAModel.Store.GuiaRemision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="GuiaRemision">
+        <PropertyRef Name="IdPesonaNatural" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GuiaRemis__idUsu__442B18F2">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="GuiaRemision" Type="TECAModel.Store.GuiaRemision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="GuiaRemision">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GuiaRemis__idUsu__76B698BF">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="GuiaRemisionDet" Type="TECAModel.Store.GuiaRemisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="GuiaRemisionDet">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Marca__IdEmpresa__45544755">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="0..1" />
+    <End Role="Marca" Type="TECAModel.Store.Marca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Marca">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Marca__IdEstado__46486B8E">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="0..1" />
+    <End Role="Marca" Type="TECAModel.Store.Marca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Marca">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Modelo__IdEmpres__4B0D20AB">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="0..1" />
+    <End Role="Modelo" Type="TECAModel.Store.Modelo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Modelo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Modelo__IdEstado__4C0144E4">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="0..1" />
+    <End Role="Modelo" Type="TECAModel.Store.Modelo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Modelo">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Modelo__IdMarca__4CF5691D">
+    <End Role="Marca" Type="TECAModel.Store.Marca" Multiplicity="0..1" />
+    <End Role="Modelo" Type="TECAModel.Store.Modelo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marca">
+        <PropertyRef Name="IdMarca" />
+      </Principal>
+      <Dependent Role="Modelo">
+        <PropertyRef Name="IdMarca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenComp__idEmp__0B27A5C0">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="OrdenCompra" Type="TECAModel.Store.OrdenCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenCompra">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenComp__IdUsu__0C1BC9F9">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="OrdenCompra" Type="TECAModel.Store.OrdenCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="OrdenCompra">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenCompraDet__63F8CA06">
+    <End Role="OrdenCompra" Type="TECAModel.Store.OrdenCompra" Multiplicity="1" />
+    <End Role="OrdenCompraDet" Type="TECAModel.Store.OrdenCompraDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenCompra">
+        <PropertyRef Name="IdOrdenCompra" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenCompraDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenCompraDet__64ECEE3F">
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="1" />
+    <End Role="OrdenCompraDet" Type="TECAModel.Store.OrdenCompraDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenCompraDet">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Percha__IdEmpres__66B53B20">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Percha" Type="TECAModel.Store.Percha" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Percha">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Percha__IdEstado__689D8392">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="0..1" />
+    <End Role="Percha" Type="TECAModel.Store.Percha" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Percha">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__IdEmpre__1BFD2C07">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Porcentaj__IdEmp__3B95D2F1">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="PorcentajeComision" Type="TECAModel.Store.PorcentajeComision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="PorcentajeComision">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Porcentaj__idEst__3D7E1B63">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="PorcentajeComision" Type="TECAModel.Store.PorcentajeComision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="PorcentajeComision">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Porcentaj__IdFor__3AA1AEB8">
+    <End Role="FormaPago" Type="TECAModel.Store.FormaPago" Multiplicity="1" />
+    <End Role="PorcentajeComision" Type="TECAModel.Store.PorcentajeComision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormaPago">
+        <PropertyRef Name="IdFormaPago" />
+      </Principal>
+      <Dependent Role="PorcentajeComision">
+        <PropertyRef Name="IdFormaPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Porcentaj__idUsu__3C89F72A">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="PorcentajeComision" Type="TECAModel.Store.PorcentajeComision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="PorcentajeComision">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Promocion__IdEmp__33F4B129">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Promocion" Type="TECAModel.Store.Promocion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Promocion">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Promocion__idEst__35DCF99B">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
+    <End Role="Promocion" Type="TECAModel.Store.Promocion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Promocion">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Promocion__idUsu__34E8D562">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="Promocion" Type="TECAModel.Store.Promocion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Promocion">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoArtic__IdEmp__6501FCD8">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="0..1" />
+    <End Role="TipoArticulo" Type="TECAModel.Store.TipoArticulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoArticulo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoArtic__IdEst__65F62111">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="0..1" />
+    <End Role="TipoArticulo" Type="TECAModel.Store.TipoArticulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="TipoArticulo">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoCombu__IdEmp__39E294A9">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="0..1" />
+    <End Role="TipoCombustible" Type="TECAModel.Store.TipoCombustible" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoCombustible">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoCombu__IdEst__3AD6B8E2">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="0..1" />
+    <End Role="TipoCombustible" Type="TECAModel.Store.TipoCombustible" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="TipoCombustible">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoMater__IdEmp__51BA1E3A">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="0..1" />
+    <End Role="TipoMaterial" Type="TECAModel.Store.TipoMaterial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoMaterial">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoMater__IdEst__52AE4273">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="0..1" />
+    <End Role="TipoMaterial" Type="TECAModel.Store.TipoMaterial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="TipoMaterial">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoMotor__IdEmp__3429BB53">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="0..1" />
+    <End Role="TipoMotor" Type="TECAModel.Store.TipoMotor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoMotor">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoMotor__IdEst__351DDF8C">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="0..1" />
+    <End Role="TipoMotor" Type="TECAModel.Store.TipoMotor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="TipoMotor">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdEstad__3A81B327">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdUsuar__3C69FB99">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

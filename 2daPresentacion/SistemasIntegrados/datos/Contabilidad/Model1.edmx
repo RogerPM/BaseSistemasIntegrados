@@ -1,0 +1,994 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TECAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TECAModelStoreContainer">
+          <EntitySet Name="AnoFiscal" EntityType="TECAModel.Store.AnoFiscal" store:Type="Tables" Schema="Contabilidad" />
+          <EntitySet Name="CabeceraComprobante" EntityType="TECAModel.Store.CabeceraComprobante" store:Type="Tables" Schema="Contabilidad" />
+          <EntitySet Name="Cuenta" EntityType="TECAModel.Store.Cuenta" store:Type="Tables" Schema="Contabilidad" />
+          <EntitySet Name="DetalleComprobante" EntityType="TECAModel.Store.DetalleComprobante" store:Type="Tables" Schema="Contabilidad" />
+          <EntitySet Name="ModeloAsiento" EntityType="TECAModel.Store.ModeloAsiento" store:Type="Tables" Schema="Contabilidad" />
+          <EntitySet Name="NivelCuenta" EntityType="TECAModel.Store.NivelCuenta" store:Type="Tables" Schema="Contabilidad" />
+          <EntitySet Name="PeriodoContable" EntityType="TECAModel.Store.PeriodoContable" store:Type="Tables" Schema="Contabilidad" />
+          <EntitySet Name="Saldo" EntityType="TECAModel.Store.Saldo" store:Type="Tables" Schema="Contabilidad" />
+          <EntitySet Name="SaldoxComprobante" EntityType="TECAModel.Store.SaldoxComprobante" store:Type="Tables" Schema="Contabilidad" />
+          <EntitySet Name="TipoCuenta" EntityType="TECAModel.Store.TipoCuenta" store:Type="Tables" Schema="Contabilidad" />
+          <EntitySet Name="TipoTransaccion" EntityType="TECAModel.Store.TipoTransaccion" store:Type="Tables" Schema="Contabilidad" />
+          <EntitySet Name="vwComprobanteMayorizar" EntityType="TECAModel.Store.vwComprobanteMayorizar" store:Type="Views" store:Schema="dbo" store:Name="vwComprobanteMayorizar">
+            <DefiningQuery>SELECT 
+      [vwComprobanteMayorizar].[IdEmpresa] AS [IdEmpresa], 
+      [vwComprobanteMayorizar].[fecha] AS [fecha], 
+      [vwComprobanteMayorizar].[numero_comprobante] AS [numero_comprobante], 
+      [vwComprobanteMayorizar].[glosa] AS [glosa], 
+      [vwComprobanteMayorizar].[haber] AS [haber], 
+      [vwComprobanteMayorizar].[debe] AS [debe], 
+      [vwComprobanteMayorizar].[Expr1] AS [Expr1]
+      FROM [dbo].[vwComprobanteMayorizar] AS [vwComprobanteMayorizar]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vwCuenta" EntityType="TECAModel.Store.vwCuenta" store:Type="Views" store:Schema="dbo" store:Name="vwCuenta">
+            <DefiningQuery>SELECT 
+      [vwCuenta].[IdEmpresa] AS [IdEmpresa], 
+      [vwCuenta].[IdCuenta] AS [IdCuenta], 
+      [vwCuenta].[codigo_padre] AS [codigo_padre], 
+      [vwCuenta].[nombre] AS [nombre], 
+      [vwCuenta].[descripcion] AS [descripcion], 
+      [vwCuenta].[IdNivelCuenta] AS [IdNivelCuenta], 
+      [vwCuenta].[IdTipoCuenta] AS [IdTipoCuenta], 
+      [vwCuenta].[naturaleza_cuenta] AS [naturaleza_cuenta], 
+      [vwCuenta].[IdUsuario] AS [IdUsuario], 
+      [vwCuenta].[FechaModificacion] AS [FechaModificacion], 
+      [vwCuenta].[digitos] AS [digitos]
+      FROM [dbo].[vwCuenta] AS [vwCuenta]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vwTipoTransaccion" EntityType="TECAModel.Store.vwTipoTransaccion" store:Type="Views" store:Schema="dbo" store:Name="vwTipoTransaccion">
+            <DefiningQuery>SELECT 
+      [vwTipoTransaccion].[IdTransaccion] AS [IdTransaccion], 
+      [vwTipoTransaccion].[modulo] AS [modulo], 
+      [vwTipoTransaccion].[TipoDocumento] AS [TipoDocumento], 
+      [vwTipoTransaccion].[descripcion] AS [descripcion], 
+      [vwTipoTransaccion].[NombreModulo] AS [NombreModulo]
+      FROM [dbo].[vwTipoTransaccion] AS [vwTipoTransaccion]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__CabeceraComproba__477199F1" Association="TECAModel.Store.FK__CabeceraComproba__477199F1">
+            <End Role="PeriodoContable" EntitySet="PeriodoContable" />
+            <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cuenta__IdNivelC__40C49C62" Association="TECAModel.Store.FK__Cuenta__IdNivelC__40C49C62">
+            <End Role="NivelCuenta" EntitySet="NivelCuenta" />
+            <End Role="Cuenta" EntitySet="Cuenta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cuenta__IdTipoCu__41B8C09B" Association="TECAModel.Store.FK__Cuenta__IdTipoCu__41B8C09B">
+            <End Role="TipoCuenta" EntitySet="TipoCuenta" />
+            <End Role="Cuenta" EntitySet="Cuenta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DetalleComproban__4E1E9780" Association="TECAModel.Store.FK__DetalleComproban__4E1E9780">
+            <End Role="Cuenta" EntitySet="Cuenta" />
+            <End Role="DetalleComprobante" EntitySet="DetalleComprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DetalleComproban__4F12BBB9" Association="TECAModel.Store.FK__DetalleComproban__4F12BBB9">
+            <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+            <End Role="DetalleComprobante" EntitySet="DetalleComprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ModeloAsi__IdTra__603D47BB" Association="TECAModel.Store.FK__ModeloAsi__IdTra__603D47BB">
+            <End Role="TipoTransaccion" EntitySet="TipoTransaccion" />
+            <End Role="ModeloAsiento" EntitySet="ModeloAsiento" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PeriodoCo__IdAFi__39237A9A" Association="TECAModel.Store.FK__PeriodoCo__IdAFi__39237A9A">
+            <End Role="AnoFiscal" EntitySet="AnoFiscal" />
+            <End Role="PeriodoContable" EntitySet="PeriodoContable" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Saldo__54CB950F" Association="TECAModel.Store.FK__Saldo__54CB950F">
+            <End Role="Cuenta" EntitySet="Cuenta" />
+            <End Role="Saldo" EntitySet="Saldo" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AnoFiscal">
+          <Key>
+            <PropertyRef Name="IdAnoFiscal" />
+          </Key>
+          <Property Name="IdAnoFiscal" Type="numeric" Nullable="false" Precision="4" />
+          <Property Name="inicio_periodo" Type="date" Nullable="false" />
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="CabeceraComprobante">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="numero_comprobante" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="numero_comprobante" Type="numeric" Nullable="false" Precision="4" />
+          <Property Name="fecha" Type="date" Nullable="false" />
+          <Property Name="glosa" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="periodo_contable" Type="numeric" Precision="6" />
+          <Property Name="periodo_contable_IdAFiscal" Type="numeric" Precision="4" />
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Cuenta">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdCuenta" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="IdCuenta" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="codigo_padre" Type="varchar" MaxLength="50" />
+          <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="IdNivelCuenta" Type="numeric" Nullable="false" Precision="2" />
+          <Property Name="IdTipoCuenta" Type="numeric" Nullable="false" Precision="2" />
+          <Property Name="naturaleza_cuenta" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdUsuario" Type="int" Nullable="false" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DetalleComprobante">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="cabecera_comprobante" />
+            <PropertyRef Name="linea_comprobante" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="cabecera_comprobante" Type="numeric" Nullable="false" Precision="4" />
+          <Property Name="linea_comprobante" Type="numeric" Nullable="false" Precision="2" />
+          <Property Name="cuenta" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="debe" Type="decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="haber" Type="decimal" Nullable="false" Precision="14" Scale="2" />
+        </EntityType>
+        <EntityType Name="ModeloAsiento">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdTransaccion" />
+            <PropertyRef Name="secuencia" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="modulo" Type="int" />
+          <Property Name="IdTransaccion" Type="int" Nullable="false" />
+          <Property Name="secuencia" Type="int" Nullable="false" />
+          <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="debe" Type="varchar" MaxLength="50" />
+          <Property Name="haber" Type="varchar" MaxLength="50" />
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="NivelCuenta">
+          <Key>
+            <PropertyRef Name="IdNivelCuenta" />
+          </Key>
+          <Property Name="IdNivelCuenta" Type="numeric" Nullable="false" Precision="2" />
+          <Property Name="descripcion" Type="varchar" MaxLength="20" />
+          <Property Name="digitos" Type="numeric" Nullable="false" Precision="1" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PeriodoContable">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdPeriodoContable" />
+            <PropertyRef Name="IdAFiscal" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="IdPeriodoContable" Type="numeric" Nullable="false" Precision="6" />
+          <Property Name="IdAFiscal" Type="numeric" Nullable="false" Precision="4" />
+          <Property Name="FechaInicio" Type="date" Nullable="false" />
+          <Property Name="FechaFin" Type="date" Nullable="false" />
+          <Property Name="IdEstado" Type="int" Nullable="false" />
+          <Property Name="IdUsuario" Type="int" Nullable="false" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Saldo">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="cuenta" />
+            <PropertyRef Name="fecha" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="cuenta" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="fecha" Type="date" Nullable="false" />
+          <Property Name="saldo_deudor" Type="decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="saldo_acreedor" Type="decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="FechaModificacion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SaldoxComprobante">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="numero_comprobante" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="numero_comprobante" Type="numeric" Nullable="false" Precision="4" />
+        </EntityType>
+        <EntityType Name="TipoCuenta">
+          <Key>
+            <PropertyRef Name="IdTipoCuenta" />
+          </Key>
+          <Property Name="IdTipoCuenta" Type="numeric" Nullable="false" Precision="2" />
+          <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="TipoTransaccion">
+          <Key>
+            <PropertyRef Name="IdTransaccion" />
+          </Key>
+          <Property Name="IdTransaccion" Type="int" Nullable="false" />
+          <Property Name="modulo" Type="int" Nullable="false" />
+          <Property Name="TipoDocumento" Type="varchar" MaxLength="50" />
+          <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.dbo.vwComprobanteMayorizar' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="vwComprobanteMayorizar">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="fecha" />
+            <PropertyRef Name="numero_comprobante" />
+            <PropertyRef Name="glosa" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="fecha" Type="date" Nullable="false" />
+          <Property Name="numero_comprobante" Type="numeric" Nullable="false" Precision="4" />
+          <Property Name="glosa" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="haber" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="debe" Type="decimal" Precision="38" Scale="2" />
+          <Property Name="Expr1" Type="numeric" Precision="4" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.dbo.vwCuenta' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="vwCuenta">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdCuenta" />
+            <PropertyRef Name="nombre" />
+            <PropertyRef Name="descripcion" />
+            <PropertyRef Name="IdNivelCuenta" />
+            <PropertyRef Name="IdTipoCuenta" />
+            <PropertyRef Name="naturaleza_cuenta" />
+            <PropertyRef Name="IdUsuario" />
+            <PropertyRef Name="digitos" />
+          </Key>
+          <Property Name="IdEmpresa" Type="int" Nullable="false" />
+          <Property Name="IdCuenta" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="codigo_padre" Type="varchar" MaxLength="50" />
+          <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="IdNivelCuenta" Type="numeric" Nullable="false" Precision="2" />
+          <Property Name="IdTipoCuenta" Type="numeric" Nullable="false" Precision="2" />
+          <Property Name="naturaleza_cuenta" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IdUsuario" Type="int" Nullable="false" />
+          <Property Name="FechaModificacion" Type="datetime" />
+          <Property Name="digitos" Type="numeric" Nullable="false" Precision="1" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.dbo.vwTipoTransaccion' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="vwTipoTransaccion">
+          <Key>
+            <PropertyRef Name="IdTransaccion" />
+            <PropertyRef Name="modulo" />
+            <PropertyRef Name="descripcion" />
+          </Key>
+          <Property Name="IdTransaccion" Type="int" Nullable="false" />
+          <Property Name="modulo" Type="int" Nullable="false" />
+          <Property Name="TipoDocumento" Type="varchar" MaxLength="50" />
+          <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="NombreModulo" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__CabeceraComproba__477199F1">
+          <End Role="PeriodoContable" Type="TECAModel.Store.PeriodoContable" Multiplicity="0..1" />
+          <End Role="CabeceraComprobante" Type="TECAModel.Store.CabeceraComprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PeriodoContable">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="IdPeriodoContable" />
+              <PropertyRef Name="IdAFiscal" />
+            </Principal>
+            <Dependent Role="CabeceraComprobante">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="periodo_contable" />
+              <PropertyRef Name="periodo_contable_IdAFiscal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cuenta__IdNivelC__40C49C62">
+          <End Role="NivelCuenta" Type="TECAModel.Store.NivelCuenta" Multiplicity="1" />
+          <End Role="Cuenta" Type="TECAModel.Store.Cuenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NivelCuenta">
+              <PropertyRef Name="IdNivelCuenta" />
+            </Principal>
+            <Dependent Role="Cuenta">
+              <PropertyRef Name="IdNivelCuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cuenta__IdTipoCu__41B8C09B">
+          <End Role="TipoCuenta" Type="TECAModel.Store.TipoCuenta" Multiplicity="1" />
+          <End Role="Cuenta" Type="TECAModel.Store.Cuenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoCuenta">
+              <PropertyRef Name="IdTipoCuenta" />
+            </Principal>
+            <Dependent Role="Cuenta">
+              <PropertyRef Name="IdTipoCuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DetalleComproban__4E1E9780">
+          <End Role="Cuenta" Type="TECAModel.Store.Cuenta" Multiplicity="1" />
+          <End Role="DetalleComprobante" Type="TECAModel.Store.DetalleComprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuenta">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="IdCuenta" />
+            </Principal>
+            <Dependent Role="DetalleComprobante">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="cuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DetalleComproban__4F12BBB9">
+          <End Role="CabeceraComprobante" Type="TECAModel.Store.CabeceraComprobante" Multiplicity="1" />
+          <End Role="DetalleComprobante" Type="TECAModel.Store.DetalleComprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CabeceraComprobante">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="numero_comprobante" />
+            </Principal>
+            <Dependent Role="DetalleComprobante">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="cabecera_comprobante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ModeloAsi__IdTra__603D47BB">
+          <End Role="TipoTransaccion" Type="TECAModel.Store.TipoTransaccion" Multiplicity="1" />
+          <End Role="ModeloAsiento" Type="TECAModel.Store.ModeloAsiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoTransaccion">
+              <PropertyRef Name="IdTransaccion" />
+            </Principal>
+            <Dependent Role="ModeloAsiento">
+              <PropertyRef Name="IdTransaccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PeriodoCo__IdAFi__39237A9A">
+          <End Role="AnoFiscal" Type="TECAModel.Store.AnoFiscal" Multiplicity="1" />
+          <End Role="PeriodoContable" Type="TECAModel.Store.PeriodoContable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AnoFiscal">
+              <PropertyRef Name="IdAnoFiscal" />
+            </Principal>
+            <Dependent Role="PeriodoContable">
+              <PropertyRef Name="IdAFiscal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Saldo__54CB950F">
+          <End Role="Cuenta" Type="TECAModel.Store.Cuenta" Multiplicity="1" />
+          <End Role="Saldo" Type="TECAModel.Store.Saldo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuenta">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="IdCuenta" />
+            </Principal>
+            <Dependent Role="Saldo">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="cuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TECAModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="EntitiesContabilidad2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AnoFiscal" EntityType="TECAModel.AnoFiscal" />
+          <EntitySet Name="CabeceraComprobante" EntityType="TECAModel.CabeceraComprobante" />
+          <EntitySet Name="Cuenta" EntityType="TECAModel.Cuenta" />
+          <EntitySet Name="DetalleComprobante" EntityType="TECAModel.DetalleComprobante" />
+          <EntitySet Name="ModeloAsiento" EntityType="TECAModel.ModeloAsiento" />
+          <EntitySet Name="NivelCuenta" EntityType="TECAModel.NivelCuenta" />
+          <EntitySet Name="PeriodoContable" EntityType="TECAModel.PeriodoContable" />
+          <EntitySet Name="Saldo" EntityType="TECAModel.Saldo" />
+          <EntitySet Name="SaldoxComprobante" EntityType="TECAModel.SaldoxComprobante" />
+          <EntitySet Name="TipoCuenta" EntityType="TECAModel.TipoCuenta" />
+          <EntitySet Name="TipoTransaccion" EntityType="TECAModel.TipoTransaccion" />
+          <EntitySet Name="vwComprobanteMayorizar" EntityType="TECAModel.vwComprobanteMayorizar" />
+          <EntitySet Name="vwCuenta" EntityType="TECAModel.vwCuenta" />
+          <EntitySet Name="vwTipoTransaccion" EntityType="TECAModel.vwTipoTransaccion" />
+          <AssociationSet Name="FK__PeriodoCo__IdAFi__39237A9A" Association="TECAModel.FK__PeriodoCo__IdAFi__39237A9A">
+            <End Role="AnoFiscal" EntitySet="AnoFiscal" />
+            <End Role="PeriodoContable" EntitySet="PeriodoContable" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CabeceraComproba__477199F1" Association="TECAModel.FK__CabeceraComproba__477199F1">
+            <End Role="PeriodoContable" EntitySet="PeriodoContable" />
+            <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DetalleComproban__4F12BBB9" Association="TECAModel.FK__DetalleComproban__4F12BBB9">
+            <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+            <End Role="DetalleComprobante" EntitySet="DetalleComprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cuenta__IdNivelC__40C49C62" Association="TECAModel.FK__Cuenta__IdNivelC__40C49C62">
+            <End Role="NivelCuenta" EntitySet="NivelCuenta" />
+            <End Role="Cuenta" EntitySet="Cuenta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cuenta__IdTipoCu__41B8C09B" Association="TECAModel.FK__Cuenta__IdTipoCu__41B8C09B">
+            <End Role="TipoCuenta" EntitySet="TipoCuenta" />
+            <End Role="Cuenta" EntitySet="Cuenta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DetalleComproban__4E1E9780" Association="TECAModel.FK__DetalleComproban__4E1E9780">
+            <End Role="Cuenta" EntitySet="Cuenta" />
+            <End Role="DetalleComprobante" EntitySet="DetalleComprobante" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Saldo__54CB950F" Association="TECAModel.FK__Saldo__54CB950F">
+            <End Role="Cuenta" EntitySet="Cuenta" />
+            <End Role="Saldo" EntitySet="Saldo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ModeloAsi__IdTra__603D47BB" Association="TECAModel.FK__ModeloAsi__IdTra__603D47BB">
+            <End Role="TipoTransaccion" EntitySet="TipoTransaccion" />
+            <End Role="ModeloAsiento" EntitySet="ModeloAsiento" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AnoFiscal">
+          <Key>
+            <PropertyRef Name="IdAnoFiscal" />
+          </Key>
+          <Property Name="IdAnoFiscal" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="inicio_periodo" Type="DateTime" Nullable="false" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" />
+          <NavigationProperty Name="PeriodoContable" Relationship="TECAModel.FK__PeriodoCo__IdAFi__39237A9A" FromRole="AnoFiscal" ToRole="PeriodoContable" />
+        </EntityType>
+        <EntityType Name="CabeceraComprobante">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="numero_comprobante" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="numero_comprobante" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="fecha" Type="DateTime" Nullable="false" />
+          <Property Name="glosa" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="periodo_contable" Type="Decimal" Precision="6" Scale="0" />
+          <Property Name="periodo_contable_IdAFiscal" Type="Decimal" Precision="4" Scale="0" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" />
+          <NavigationProperty Name="PeriodoContable" Relationship="TECAModel.FK__CabeceraComproba__477199F1" FromRole="CabeceraComprobante" ToRole="PeriodoContable" />
+          <NavigationProperty Name="DetalleComprobante" Relationship="TECAModel.FK__DetalleComproban__4F12BBB9" FromRole="CabeceraComprobante" ToRole="DetalleComprobante" />
+        </EntityType>
+        <EntityType Name="Cuenta">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdCuenta" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="IdCuenta" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="codigo_padre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="IdNivelCuenta" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+          <Property Name="IdTipoCuenta" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+          <Property Name="naturaleza_cuenta" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+          <Property Name="FechaModificacion" Type="DateTime" />
+          <NavigationProperty Name="NivelCuenta" Relationship="TECAModel.FK__Cuenta__IdNivelC__40C49C62" FromRole="Cuenta" ToRole="NivelCuenta" />
+          <NavigationProperty Name="TipoCuenta" Relationship="TECAModel.FK__Cuenta__IdTipoCu__41B8C09B" FromRole="Cuenta" ToRole="TipoCuenta" />
+          <NavigationProperty Name="DetalleComprobante" Relationship="TECAModel.FK__DetalleComproban__4E1E9780" FromRole="Cuenta" ToRole="DetalleComprobante" />
+          <NavigationProperty Name="Saldo" Relationship="TECAModel.FK__Saldo__54CB950F" FromRole="Cuenta" ToRole="Saldo" />
+        </EntityType>
+        <EntityType Name="DetalleComprobante">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="cabecera_comprobante" />
+            <PropertyRef Name="linea_comprobante" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="cabecera_comprobante" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="linea_comprobante" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+          <Property Name="cuenta" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="debe" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="haber" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <NavigationProperty Name="CabeceraComprobante" Relationship="TECAModel.FK__DetalleComproban__4F12BBB9" FromRole="DetalleComprobante" ToRole="CabeceraComprobante" />
+          <NavigationProperty Name="Cuenta1" Relationship="TECAModel.FK__DetalleComproban__4E1E9780" FromRole="DetalleComprobante" ToRole="Cuenta" />
+        </EntityType>
+        <EntityType Name="ModeloAsiento">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdTransaccion" />
+            <PropertyRef Name="secuencia" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="modulo" Type="Int32" />
+          <Property Name="IdTransaccion" Type="Int32" Nullable="false" />
+          <Property Name="secuencia" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="debe" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="haber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" />
+          <NavigationProperty Name="TipoTransaccion" Relationship="TECAModel.FK__ModeloAsi__IdTra__603D47BB" FromRole="ModeloAsiento" ToRole="TipoTransaccion" />
+        </EntityType>
+        <EntityType Name="NivelCuenta">
+          <Key>
+            <PropertyRef Name="IdNivelCuenta" />
+          </Key>
+          <Property Name="IdNivelCuenta" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+          <Property Name="descripcion" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="digitos" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cuenta" Relationship="TECAModel.FK__Cuenta__IdNivelC__40C49C62" FromRole="NivelCuenta" ToRole="Cuenta" />
+        </EntityType>
+        <EntityType Name="PeriodoContable">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdPeriodoContable" />
+            <PropertyRef Name="IdAFiscal" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="IdPeriodoContable" Type="Decimal" Nullable="false" Precision="6" Scale="0" />
+          <Property Name="IdAFiscal" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="FechaInicio" Type="DateTime" Nullable="false" />
+          <Property Name="FechaFin" Type="DateTime" Nullable="false" />
+          <Property Name="IdEstado" Type="Int32" Nullable="false" />
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+          <Property Name="FechaModificacion" Type="DateTime" />
+          <NavigationProperty Name="AnoFiscal" Relationship="TECAModel.FK__PeriodoCo__IdAFi__39237A9A" FromRole="PeriodoContable" ToRole="AnoFiscal" />
+          <NavigationProperty Name="CabeceraComprobante" Relationship="TECAModel.FK__CabeceraComproba__477199F1" FromRole="PeriodoContable" ToRole="CabeceraComprobante" />
+        </EntityType>
+        <EntityType Name="Saldo">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="cuenta" />
+            <PropertyRef Name="fecha" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="cuenta" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="fecha" Type="DateTime" Nullable="false" />
+          <Property Name="saldo_deudor" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="saldo_acreedor" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="FechaModificacion" Type="DateTime" />
+          <NavigationProperty Name="Cuenta1" Relationship="TECAModel.FK__Saldo__54CB950F" FromRole="Saldo" ToRole="Cuenta" />
+        </EntityType>
+        <EntityType Name="SaldoxComprobante">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="numero_comprobante" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="numero_comprobante" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+        </EntityType>
+        <EntityType Name="TipoCuenta">
+          <Key>
+            <PropertyRef Name="IdTipoCuenta" />
+          </Key>
+          <Property Name="IdTipoCuenta" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Cuenta" Relationship="TECAModel.FK__Cuenta__IdTipoCu__41B8C09B" FromRole="TipoCuenta" ToRole="Cuenta" />
+        </EntityType>
+        <EntityType Name="TipoTransaccion">
+          <Key>
+            <PropertyRef Name="IdTransaccion" />
+          </Key>
+          <Property Name="IdTransaccion" Type="Int32" Nullable="false" />
+          <Property Name="modulo" Type="Int32" Nullable="false" />
+          <Property Name="TipoDocumento" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="ModeloAsiento" Relationship="TECAModel.FK__ModeloAsi__IdTra__603D47BB" FromRole="TipoTransaccion" ToRole="ModeloAsiento" />
+        </EntityType>
+        <EntityType Name="vwComprobanteMayorizar">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="fecha" />
+            <PropertyRef Name="numero_comprobante" />
+            <PropertyRef Name="glosa" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="fecha" Type="DateTime" Nullable="false" />
+          <Property Name="numero_comprobante" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="glosa" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="haber" Type="Decimal" Precision="38" Scale="2" />
+          <Property Name="debe" Type="Decimal" Precision="38" Scale="2" />
+          <Property Name="Expr1" Type="Decimal" Precision="4" Scale="0" />
+        </EntityType>
+        <EntityType Name="vwCuenta">
+          <Key>
+            <PropertyRef Name="IdEmpresa" />
+            <PropertyRef Name="IdCuenta" />
+            <PropertyRef Name="nombre" />
+            <PropertyRef Name="descripcion" />
+            <PropertyRef Name="IdNivelCuenta" />
+            <PropertyRef Name="IdTipoCuenta" />
+            <PropertyRef Name="naturaleza_cuenta" />
+            <PropertyRef Name="IdUsuario" />
+            <PropertyRef Name="digitos" />
+          </Key>
+          <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+          <Property Name="IdCuenta" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="codigo_padre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="IdNivelCuenta" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+          <Property Name="IdTipoCuenta" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+          <Property Name="naturaleza_cuenta" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+          <Property Name="FechaModificacion" Type="DateTime" />
+          <Property Name="digitos" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
+        </EntityType>
+        <EntityType Name="vwTipoTransaccion">
+          <Key>
+            <PropertyRef Name="IdTransaccion" />
+            <PropertyRef Name="modulo" />
+            <PropertyRef Name="descripcion" />
+          </Key>
+          <Property Name="IdTransaccion" Type="Int32" Nullable="false" />
+          <Property Name="modulo" Type="Int32" Nullable="false" />
+          <Property Name="TipoDocumento" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="NombreModulo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK__PeriodoCo__IdAFi__39237A9A">
+          <End Role="AnoFiscal" Type="TECAModel.AnoFiscal" Multiplicity="1" />
+          <End Role="PeriodoContable" Type="TECAModel.PeriodoContable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AnoFiscal">
+              <PropertyRef Name="IdAnoFiscal" />
+            </Principal>
+            <Dependent Role="PeriodoContable">
+              <PropertyRef Name="IdAFiscal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CabeceraComproba__477199F1">
+          <End Role="PeriodoContable" Type="TECAModel.PeriodoContable" Multiplicity="0..1" />
+          <End Role="CabeceraComprobante" Type="TECAModel.CabeceraComprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PeriodoContable">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="IdPeriodoContable" />
+              <PropertyRef Name="IdAFiscal" />
+            </Principal>
+            <Dependent Role="CabeceraComprobante">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="periodo_contable" />
+              <PropertyRef Name="periodo_contable_IdAFiscal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DetalleComproban__4F12BBB9">
+          <End Role="CabeceraComprobante" Type="TECAModel.CabeceraComprobante" Multiplicity="1" />
+          <End Role="DetalleComprobante" Type="TECAModel.DetalleComprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CabeceraComprobante">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="numero_comprobante" />
+            </Principal>
+            <Dependent Role="DetalleComprobante">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="cabecera_comprobante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cuenta__IdNivelC__40C49C62">
+          <End Role="NivelCuenta" Type="TECAModel.NivelCuenta" Multiplicity="1" />
+          <End Role="Cuenta" Type="TECAModel.Cuenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NivelCuenta">
+              <PropertyRef Name="IdNivelCuenta" />
+            </Principal>
+            <Dependent Role="Cuenta">
+              <PropertyRef Name="IdNivelCuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cuenta__IdTipoCu__41B8C09B">
+          <End Role="TipoCuenta" Type="TECAModel.TipoCuenta" Multiplicity="1" />
+          <End Role="Cuenta" Type="TECAModel.Cuenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoCuenta">
+              <PropertyRef Name="IdTipoCuenta" />
+            </Principal>
+            <Dependent Role="Cuenta">
+              <PropertyRef Name="IdTipoCuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DetalleComproban__4E1E9780">
+          <End Role="Cuenta" Type="TECAModel.Cuenta" Multiplicity="1" />
+          <End Role="DetalleComprobante" Type="TECAModel.DetalleComprobante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuenta">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="IdCuenta" />
+            </Principal>
+            <Dependent Role="DetalleComprobante">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="cuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Saldo__54CB950F">
+          <End Role="Cuenta" Type="TECAModel.Cuenta" Multiplicity="1" />
+          <End Role="Saldo" Type="TECAModel.Saldo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cuenta">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="IdCuenta" />
+            </Principal>
+            <Dependent Role="Saldo">
+              <PropertyRef Name="IdEmpresa" />
+              <PropertyRef Name="cuenta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ModeloAsi__IdTra__603D47BB">
+          <End Role="TipoTransaccion" Type="TECAModel.TipoTransaccion" Multiplicity="1" />
+          <End Role="ModeloAsiento" Type="TECAModel.ModeloAsiento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoTransaccion">
+              <PropertyRef Name="IdTransaccion" />
+            </Principal>
+            <Dependent Role="ModeloAsiento">
+              <PropertyRef Name="IdTransaccion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TECAModelStoreContainer" CdmEntityContainer="EntitiesContabilidad2">
+          <EntitySetMapping Name="AnoFiscal">
+            <EntityTypeMapping TypeName="TECAModel.AnoFiscal">
+              <MappingFragment StoreEntitySet="AnoFiscal">
+                <ScalarProperty Name="IdAnoFiscal" ColumnName="IdAnoFiscal" />
+                <ScalarProperty Name="inicio_periodo" ColumnName="inicio_periodo" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CabeceraComprobante">
+            <EntityTypeMapping TypeName="TECAModel.CabeceraComprobante">
+              <MappingFragment StoreEntitySet="CabeceraComprobante">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="glosa" ColumnName="glosa" />
+                <ScalarProperty Name="periodo_contable" ColumnName="periodo_contable" />
+                <ScalarProperty Name="periodo_contable_IdAFiscal" ColumnName="periodo_contable_IdAFiscal" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cuenta">
+            <EntityTypeMapping TypeName="TECAModel.Cuenta">
+              <MappingFragment StoreEntitySet="Cuenta">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdCuenta" ColumnName="IdCuenta" />
+                <ScalarProperty Name="codigo_padre" ColumnName="codigo_padre" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="IdNivelCuenta" ColumnName="IdNivelCuenta" />
+                <ScalarProperty Name="IdTipoCuenta" ColumnName="IdTipoCuenta" />
+                <ScalarProperty Name="naturaleza_cuenta" ColumnName="naturaleza_cuenta" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetalleComprobante">
+            <EntityTypeMapping TypeName="TECAModel.DetalleComprobante">
+              <MappingFragment StoreEntitySet="DetalleComprobante">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="cabecera_comprobante" ColumnName="cabecera_comprobante" />
+                <ScalarProperty Name="linea_comprobante" ColumnName="linea_comprobante" />
+                <ScalarProperty Name="cuenta" ColumnName="cuenta" />
+                <ScalarProperty Name="debe" ColumnName="debe" />
+                <ScalarProperty Name="haber" ColumnName="haber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ModeloAsiento">
+            <EntityTypeMapping TypeName="TECAModel.ModeloAsiento">
+              <MappingFragment StoreEntitySet="ModeloAsiento">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="modulo" ColumnName="modulo" />
+                <ScalarProperty Name="IdTransaccion" ColumnName="IdTransaccion" />
+                <ScalarProperty Name="secuencia" ColumnName="secuencia" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="debe" ColumnName="debe" />
+                <ScalarProperty Name="haber" ColumnName="haber" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NivelCuenta">
+            <EntityTypeMapping TypeName="TECAModel.NivelCuenta">
+              <MappingFragment StoreEntitySet="NivelCuenta">
+                <ScalarProperty Name="IdNivelCuenta" ColumnName="IdNivelCuenta" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="digitos" ColumnName="digitos" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PeriodoContable">
+            <EntityTypeMapping TypeName="TECAModel.PeriodoContable">
+              <MappingFragment StoreEntitySet="PeriodoContable">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdPeriodoContable" ColumnName="IdPeriodoContable" />
+                <ScalarProperty Name="IdAFiscal" ColumnName="IdAFiscal" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Saldo">
+            <EntityTypeMapping TypeName="TECAModel.Saldo">
+              <MappingFragment StoreEntitySet="Saldo">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="cuenta" ColumnName="cuenta" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="saldo_deudor" ColumnName="saldo_deudor" />
+                <ScalarProperty Name="saldo_acreedor" ColumnName="saldo_acreedor" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SaldoxComprobante">
+            <EntityTypeMapping TypeName="TECAModel.SaldoxComprobante">
+              <MappingFragment StoreEntitySet="SaldoxComprobante">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoCuenta">
+            <EntityTypeMapping TypeName="TECAModel.TipoCuenta">
+              <MappingFragment StoreEntitySet="TipoCuenta">
+                <ScalarProperty Name="IdTipoCuenta" ColumnName="IdTipoCuenta" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoTransaccion">
+            <EntityTypeMapping TypeName="TECAModel.TipoTransaccion">
+              <MappingFragment StoreEntitySet="TipoTransaccion">
+                <ScalarProperty Name="IdTransaccion" ColumnName="IdTransaccion" />
+                <ScalarProperty Name="modulo" ColumnName="modulo" />
+                <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwComprobanteMayorizar">
+            <EntityTypeMapping TypeName="TECAModel.vwComprobanteMayorizar">
+              <MappingFragment StoreEntitySet="vwComprobanteMayorizar">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
+                <ScalarProperty Name="glosa" ColumnName="glosa" />
+                <ScalarProperty Name="haber" ColumnName="haber" />
+                <ScalarProperty Name="debe" ColumnName="debe" />
+                <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwCuenta">
+            <EntityTypeMapping TypeName="TECAModel.vwCuenta">
+              <MappingFragment StoreEntitySet="vwCuenta">
+                <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+                <ScalarProperty Name="IdCuenta" ColumnName="IdCuenta" />
+                <ScalarProperty Name="codigo_padre" ColumnName="codigo_padre" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="IdNivelCuenta" ColumnName="IdNivelCuenta" />
+                <ScalarProperty Name="IdTipoCuenta" ColumnName="IdTipoCuenta" />
+                <ScalarProperty Name="naturaleza_cuenta" ColumnName="naturaleza_cuenta" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+                <ScalarProperty Name="digitos" ColumnName="digitos" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwTipoTransaccion">
+            <EntityTypeMapping TypeName="TECAModel.vwTipoTransaccion">
+              <MappingFragment StoreEntitySet="vwTipoTransaccion">
+                <ScalarProperty Name="IdTransaccion" ColumnName="IdTransaccion" />
+                <ScalarProperty Name="modulo" ColumnName="modulo" />
+                <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="NombreModulo" ColumnName="NombreModulo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="TECAModel.AnoFiscal" Width="1.5" PointX="1.5" PointY="12.625" Height="1.8694466145833353" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECAModel.CabeceraComprobante" Width="1.5" PointX="3" PointY="8.125" Height="2.7616788736979139" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECAModel.Cuenta" Width="1.5" PointX="3" PointY="2.75" Height="3.4754646809895817" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECAModel.DetalleComprobante" Width="1.5" PointX="5.25" PointY="3.25" Height="2.4047859700520835" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECAModel.ModeloAsiento" Width="1.5" PointX="10" PointY="1.625" Height="2.7616788736979156" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECAModel.NivelCuenta" Width="1.5" PointX="0.75" PointY="3.625" Height="1.8694466145833322" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECAModel.PeriodoContable" Width="1.5" PointX="0.75" PointY="8.125" Height="2.7616788736979174" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECAModel.Saldo" Width="1.5" PointX="5.25" PointY="6.5" Height="2.4047859700520817" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECAModel.SaldoxComprobante" Width="1.5" PointX="7.75" PointY="5.375" Height="1.3341072591145817" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECAModel.TipoCuenta" Width="1.5" PointX="0.75" PointY="0.75" Height="1.5125537109374996" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECAModel.TipoTransaccion" Width="1.5" PointX="7.75" PointY="2" Height="1.8694466145833353" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECAModel.vwComprobanteMayorizar" Width="1.5" PointX="7.75" PointY="8.375" Height="2.2263395182291674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECAModel.vwCuenta" Width="1.5" PointX="9.75" PointY="5.375" Height="2.9401253255208388" IsExpanded="true" />
+        <EntityTypeShape EntityType="TECAModel.vwTipoTransaccion" Width="1.5" PointX="9.75" PointY="9.375" Height="1.8694466145833388" IsExpanded="true" />
+        <AssociationConnector Association="TECAModel.FK__PeriodoCo__IdAFi__39237A9A" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.875" PointY="12.625" />
+          <ConnectorPoint PointX="1.875" PointY="10.886678873697917" />
+        </AssociationConnector>
+        <AssociationConnector Association="TECAModel.FK__CabeceraComproba__477199F1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="9.5058394368489569" />
+          <ConnectorPoint PointX="3" PointY="9.5058394368489569" />
+        </AssociationConnector>
+        <AssociationConnector Association="TECAModel.FK__DetalleComproban__4F12BBB9" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="8.1261528461538468" />
+          <ConnectorPoint PointX="4.875" PointY="7.7511528461538468" />
+          <ConnectorPoint PointX="4.875" PointY="4.4523929850260417" />
+          <ConnectorPoint PointX="5.25" PointY="4.4523929850260417" />
+        </AssociationConnector>
+        <AssociationConnector Association="TECAModel.FK__Cuenta__IdNivelC__40C49C62" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="4.5597233072916659" />
+          <ConnectorPoint PointX="3" PointY="4.5597233072916659" />
+        </AssociationConnector>
+        <AssociationConnector Association="TECAModel.FK__Cuenta__IdTipoCu__41B8C09B" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="1.5062768554687498" />
+          <ConnectorPoint PointX="3.75" PointY="1.5062768554687498" />
+          <ConnectorPoint PointX="3.75" PointY="2.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="TECAModel.FK__DetalleComproban__4E1E9780" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="3.7886964925130209" />
+          <ConnectorPoint PointX="5.25" PointY="3.7886964925130209" />
+        </AssociationConnector>
+        <AssociationConnector Association="TECAModel.FK__Saldo__54CB950F" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="6.163155988681889" />
+          <ConnectorPoint PointX="4.8160744349011217" PointY="6.47923042358301" />
+          <ConnectorPoint PointX="4.9339255650988791" PointY="6.5970815537807681" />
+          <ConnectorPoint PointX="5.0625" PointY="6.725655988681889" />
+          <ConnectorPoint PointX="5.0625" PointY="6.3125" />
+          <ConnectorPoint PointX="5.25" PointY="6.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="TECAModel.FK__ModeloAsi__IdTra__603D47BB" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.25" PointY="2.9347233072916676" />
+          <ConnectorPoint PointX="10" PointY="2.9347233072916676" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

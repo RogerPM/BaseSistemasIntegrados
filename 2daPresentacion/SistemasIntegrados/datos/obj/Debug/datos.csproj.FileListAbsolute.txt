@@ -1,0 +1,259 @@
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\datos\bin\Debug\datos.dll
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\datos\bin\Debug\datos.pdb
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\datos\bin\Debug\clases.dll
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\datos\bin\Debug\clases.pdb
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\datos\obj\Debug\datos.dll
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\datos\obj\Debug\datos.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\datos\bin\Debug\datos.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\datos\bin\Debug\datos.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\datos\bin\Debug\clases.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\datos\bin\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\datos\obj\Debug\datos.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\datos\obj\Debug\datos.pdb
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\datos\bin\Debug\datos.dll
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\datos\bin\Debug\datos.pdb
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\datos\bin\Debug\clases.dll
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\datos\bin\Debug\clases.pdb
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\datos\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\datos\obj\Debug\datos.dll
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\datos\obj\Debug\datos.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\datos\bin\Debug\datos.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\datos\bin\Debug\datos.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\datos\bin\Debug\clases.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\datos\bin\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\datos\obj\Debug\datos.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v2\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v2\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v2\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v2\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v2\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v2\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v2\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v2\SistemasIntegrados\datos\obj\Debug\datos.pdb
+C:\Users\Propietario\Downloads\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+C:\Users\Propietario\Downloads\SistemasIntegrados\datos\bin\Debug\datos.dll
+C:\Users\Propietario\Downloads\SistemasIntegrados\datos\bin\Debug\datos.pdb
+C:\Users\Propietario\Downloads\SistemasIntegrados\datos\bin\Debug\clases.dll
+C:\Users\Propietario\Downloads\SistemasIntegrados\datos\bin\Debug\clases.pdb
+C:\Users\Propietario\Downloads\SistemasIntegrados\datos\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Propietario\Downloads\SistemasIntegrados\datos\obj\Debug\datos.dll
+C:\Users\Propietario\Downloads\SistemasIntegrados\datos\obj\Debug\datos.pdb
+C:\Users\Propietario\Downloads\SistemasIntegradosUsuario\datos\bin\Debug\datos.dll.config
+C:\Users\Propietario\Downloads\SistemasIntegradosUsuario\datos\bin\Debug\datos.dll
+C:\Users\Propietario\Downloads\SistemasIntegradosUsuario\datos\bin\Debug\datos.pdb
+C:\Users\Propietario\Downloads\SistemasIntegradosUsuario\datos\bin\Debug\clases.dll
+C:\Users\Propietario\Downloads\SistemasIntegradosUsuario\datos\bin\Debug\clases.pdb
+C:\Users\Propietario\Downloads\SistemasIntegradosUsuario\datos\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Propietario\Downloads\SistemasIntegradosUsuario\datos\obj\Debug\datos.dll
+C:\Users\Propietario\Downloads\SistemasIntegradosUsuario\datos\obj\Debug\datos.pdb
+C:\Users\luismi\Downloads\SistemasIntegradosUsuario\datos\bin\Debug\datos.dll.config
+C:\Users\luismi\Downloads\SistemasIntegradosUsuario\datos\bin\Debug\datos.dll
+C:\Users\luismi\Downloads\SistemasIntegradosUsuario\datos\bin\Debug\datos.pdb
+C:\Users\luismi\Downloads\SistemasIntegradosUsuario\datos\bin\Debug\clases.dll
+C:\Users\luismi\Downloads\SistemasIntegradosUsuario\datos\bin\Debug\clases.pdb
+C:\Users\luismi\Downloads\SistemasIntegradosUsuario\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+C:\Users\luismi\Downloads\SistemasIntegradosUsuario\datos\obj\Debug\datos.dll
+C:\Users\luismi\Downloads\SistemasIntegradosUsuario\datos\obj\Debug\datos.pdb
+E:\SI\Development\v3\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v3\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v3\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v3\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v3\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v3\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v3\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v3\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v4\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v4\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v4\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v4\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v4\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v4\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v4\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v4\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v5\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v5\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v5\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v5\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v5\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v5\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v5\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v5\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v6\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v6\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v6\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v6\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v6\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v6\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v6\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v6\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v8\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v8\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v8\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v8\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v8\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v8\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v8\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v8\SistemasIntegrados\datos\obj\Debug\datos.pdb
+C:\Users\Administrador\Desktop\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\SistemasIntegrados\datos\obj\Debug\datos.dll
+C:\Users\Administrador\Desktop\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+C:\Users\Administrador\Desktop\SistemasIntegrados\datos\bin\Debug\datos.dll
+C:\Users\Administrador\Desktop\SistemasIntegrados\datos\bin\Debug\datos.pdb
+C:\Users\Administrador\Desktop\SistemasIntegrados\datos\bin\Debug\clases.dll
+C:\Users\Administrador\Desktop\SistemasIntegrados\datos\bin\Debug\clases.pdb
+C:\Users\Administrador\Desktop\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v9\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v9\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v9\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v9\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v9\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v9\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v9\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v9\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v10_noFuncio\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v10_noFuncio\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v10_noFuncio\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v10_noFuncio\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v10_noFuncio\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v10_noFuncio\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v10_noFuncio\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v10_noFuncio\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v10\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v10\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v10\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v10\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v10\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v10\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v10\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v10\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v11\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v11\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v11\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v11\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v11\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v11\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v11\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v11\SistemasIntegrados\datos\obj\Debug\datos.pdb
+D:\SistemasIntegrados\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+D:\SistemasIntegrados\SistemasIntegrados\datos\bin\Debug\datos.dll
+D:\SistemasIntegrados\SistemasIntegrados\datos\bin\Debug\datos.pdb
+D:\SistemasIntegrados\SistemasIntegrados\datos\bin\Debug\clases.dll
+D:\SistemasIntegrados\SistemasIntegrados\datos\bin\Debug\clases.pdb
+D:\SistemasIntegrados\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+D:\SistemasIntegrados\SistemasIntegrados\datos\obj\Debug\datos.dll
+D:\SistemasIntegrados\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\roberto arias_Revisar\funciona\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\roberto arias_Revisar\funciona\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\roberto arias_Revisar\funciona\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\roberto arias_Revisar\funciona\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\roberto arias_Revisar\funciona\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\roberto arias_Revisar\funciona\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\roberto arias_Revisar\funciona\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\roberto arias_Revisar\funciona\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\roberto arias_Revisar\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\roberto arias_Revisar\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\roberto arias_Revisar\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\roberto arias_Revisar\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\roberto arias_Revisar\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\roberto arias_Revisar\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\roberto arias_Revisar\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\roberto arias_Revisar\SistemasIntegrados\datos\obj\Debug\datos.pdb
+C:\Users\Propietario\Desktop\T\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+C:\Users\Propietario\Desktop\T\SistemasIntegrados\datos\bin\Debug\datos.dll
+C:\Users\Propietario\Desktop\T\SistemasIntegrados\datos\bin\Debug\datos.pdb
+C:\Users\Propietario\Desktop\T\SistemasIntegrados\datos\bin\Debug\clases.dll
+C:\Users\Propietario\Desktop\T\SistemasIntegrados\datos\bin\Debug\clases.pdb
+C:\Users\Propietario\Desktop\T\SistemasIntegrados\datos\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Propietario\Desktop\T\SistemasIntegrados\datos\obj\Debug\datos.dll
+C:\Users\Propietario\Desktop\T\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\roberto arias_Revisar\SistemasIntegradosControlBotones2.0\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\roberto arias_Revisar\SistemasIntegradosControlBotones2.0\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\roberto arias_Revisar\SistemasIntegradosControlBotones2.0\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\roberto arias_Revisar\SistemasIntegradosControlBotones2.0\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\roberto arias_Revisar\SistemasIntegradosControlBotones2.0\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\roberto arias_Revisar\SistemasIntegradosControlBotones2.0\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\roberto arias_Revisar\SistemasIntegradosControlBotones2.0\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\roberto arias_Revisar\SistemasIntegradosControlBotones2.0\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v12\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v12\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v12\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v12\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v12\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v12\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v12\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v12\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v13\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v13\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v13\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v13\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v13\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v13\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v13\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v13\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v14\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v14\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v14\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v14\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v14\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v14\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v14\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v14\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v15\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v15\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v15\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v15\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v15\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v15\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v15\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v15\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v16\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v16\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v16\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v16\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v16\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v16\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v16\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v16\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v17\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v17\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v17\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v17\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v17\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v17\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v17\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v17\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v18\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v18\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v18\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v18\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v18\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v18\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v18\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v18\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v19\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v19\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v19\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v19\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v19\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v19\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v19\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v19\SistemasIntegrados\datos\obj\Debug\datos.pdb
+E:\SI\Development\v20\SistemasIntegrados\datos\bin\Debug\datos.dll.config
+E:\SI\Development\v20\SistemasIntegrados\datos\bin\Debug\datos.dll
+E:\SI\Development\v20\SistemasIntegrados\datos\bin\Debug\datos.pdb
+E:\SI\Development\v20\SistemasIntegrados\datos\bin\Debug\clases.dll
+E:\SI\Development\v20\SistemasIntegrados\datos\bin\Debug\clases.pdb
+E:\SI\Development\v20\SistemasIntegrados\datos\obj\Debug\datos.csprojResolveAssemblyReference.cache
+E:\SI\Development\v20\SistemasIntegrados\datos\obj\Debug\datos.dll
+E:\SI\Development\v20\SistemasIntegrados\datos\obj\Debug\datos.pdb

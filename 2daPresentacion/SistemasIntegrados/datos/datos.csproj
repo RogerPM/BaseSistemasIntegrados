@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B3AED2E-41C8-4FEA-9EE5-2C2533C8F3FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>datos</RootNamespace>
+    <AssemblyName>datos</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivoFijo\clsClaseDatosActivoFijo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ActivoFijo\clsClaseDatosBajaActivo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ActivoFijo\clsClaseDatosCodigoBarra.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ActivoFijo\clsClaseDatosDepreciacion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ActivoFijo\clsClaseDatosRevalorizacion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ActivoFijo\clsClaseDatosSubgrupoActivoFijo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ActivoFijo\ModelActivoFijo.Designer.cs">
+      <DependentUpon>ModelActivoFijo.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Compras\datComprasPersona.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\datcompras_articulo.cs" />
+    <Compile Include="Compras\datcompras_grupo.cs" />
+    <Compile Include="Compras\datConsolidacionPedido.cs" />
+    <Compile Include="Compras\datCotizaciones.cs" />
+    <Compile Include="Compras\datOrdenCompra.cs" />
+    <Compile Include="Compras\datProveedor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\datSolicitud.cs" />
+    <Compile Include="Compras\ModelCompras.Designer.cs">
+      <DependentUpon>ModelCompras.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Contabilidad\clsDatoComprobante.cs" />
+    <Compile Include="Contabilidad\clsDatoCuenta.cs" />
+    <Compile Include="Contabilidad\clsDatoSaldo.cs" />
+    <Compile Include="Contabilidad\clsDatoTipoCuenta.cs" />
+    <Compile Include="Contabilidad\clsDatoTipoTransaccion.cs" />
+    <Compile Include="Contabilidad\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsDatosAperturaCaja.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosAperturaDet.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosBanco.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosCierreCaja.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosCuentaBancaria.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosInversion.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosMonetarioDetalle.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosMovimientoBancario.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosPersonaCXC.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosTarjetaCredito.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosTipoInversion.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosUnidadTiempo.cs" />
+    <Compile Include="CuentasxCobrar\CuentasPorCobrarModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CuentasPorCobrarModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Cuentasxpagar\datosCuentaBancaria.cs" />
+    <Compile Include="Cuentasxpagar\datosEmpresaServicio.cs" />
+    <Compile Include="Cuentasxpagar\datosFrecuenciaPago.cs" />
+    <Compile Include="Cuentasxpagar\datosImpuesto.cs" />
+    <Compile Include="Cuentasxpagar\datosMedioPago.cs" />
+    <Compile Include="Cuentasxpagar\datosMensaje.cs" />
+    <Compile Include="Cuentasxpagar\datosPago.cs" />
+    <Compile Include="Cuentasxpagar\datosPagoDetalle.cs" />
+    <Compile Include="Cuentasxpagar\ModelCuentasPorPagar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCuentasPorPagar.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FacturacionModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacturacionModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\clsClaseDatosBodega.cs" />
+    <Compile Include="Inventario\clsClaseDatosGrupo.cs" />
+    <Compile Include="Inventario\datArticulo.cs" />
+    <Compile Include="Inventario\datBodega.cs" />
+    <Compile Include="Inventario\datColor.cs" />
+    <Compile Include="Inventario\datGrupo.cs" />
+    <Compile Include="Inventario\datIngresoEgresoBodegaCAB.cs" />
+    <Compile Include="Inventario\datIngresoEgresoBodegaDET.cs" />
+    <Compile Include="Inventario\datMarca.cs" />
+    <Compile Include="Inventario\datModelo.cs" />
+    <Compile Include="Inventario\datMotivo.cs" />
+    <Compile Include="Inventario\datPercha.cs" />
+    <Compile Include="Inventario\datTipoArticulo.cs" />
+    <Compile Include="Inventario\datTipoChasis.cs" />
+    <Compile Include="Inventario\datTipoCombustible.cs" />
+    <Compile Include="Inventario\datTipoMaterial.cs" />
+    <Compile Include="Inventario\datTipoMotor.cs" />
+    <Compile Include="Inventario\datTipoMovimiento.cs" />
+    <Compile Include="Inventario\datTomaFisicaCAB.cs" />
+    <Compile Include="Inventario\datTomaFisicaDET.cs" />
+    <Compile Include="Inventario\datTransferenciaBodegaCAB.cs" />
+    <Compile Include="Inventario\datTransferenciaBodegaDET.cs" />
+    <Compile Include="Inventario\datUnidadMedida.cs" />
+    <Compile Include="Inventario\ModelInventario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelInventario.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecursosHumanos\clsDatosAcademico.cs" />
+    <Compile Include="RecursosHumanos\clsDatosCargo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosCargoxDepartamento.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosContrato.cs" />
+    <Compile Include="RecursosHumanos\clsDatosDepartamento.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosMaternidad.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosMensaje.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosNominaCab.cs" />
+    <Compile Include="RecursosHumanos\clsDatosNominaDet.cs" />
+    <Compile Include="RecursosHumanos\clsDatosPersona.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosPersonaxCargo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosPersonaxTitulo.cs" />
+    <Compile Include="RecursosHumanos\clsDatosTipoContrato.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosTipoPermiso.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosTipoPrestamo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosTitulo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosTrabajoDiarioCab.cs" />
+    <Compile Include="RecursosHumanos\clsDatosTrabajoDioarioDet.cs" />
+    <Compile Include="RecursosHumanos\clsDatosUniversidad.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\ModelRecursosHumanos.Designer.cs">
+      <DependentUpon>ModelRecursosHumanos.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Seguridad\datEmpresa.cs" />
+    <Compile Include="Seguridad\datEstado.cs" />
+    <Compile Include="Seguridad\datHorario.cs" />
+    <Compile Include="Seguridad\datImagen.cs" />
+    <Compile Include="Seguridad\datMenuXUsuario.cs" />
+    <Compile Include="Seguridad\datModulo.cs" />
+    <Compile Include="Seguridad\datPerfil.cs" />
+    <Compile Include="Seguridad\datPermiso.cs" />
+    <Compile Include="Seguridad\datUsuario.cs" />
+    <Compile Include="Seguridad\datUsuarioPorEmpresa.cs" />
+    <Compile Include="Seguridad\datVwUsuarioInformacion.cs" />
+    <Compile Include="Seguridad\datModulosPorUsuario.cs" />
+    <Compile Include="Seguridad\datVwUsuarioPermisos.cs" />
+    <Compile Include="Seguridad\SeguridadModelo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SeguridadModelo.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\datMenuPadre.cs" />
+    <Compile Include="Taller\datArticulo.cs" />
+    <Compile Include="Taller\datCliente.cs" />
+    <Compile Include="Taller\datTiposTrabajos.cs" />
+    <Compile Include="Taller\ModelTaller1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTaller.edmx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="_Otro\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\clases\clases.csproj">
+      <Project>{6F21733E-0C7C-425E-8690-455EE38E7369}</Project>
+      <Name>clases</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="ActivoFijo\ModelActivoFijo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelActivoFijo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Compras\ModelCompras.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelCompras.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Contabilidad\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Inventario\ModelInventario.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelInventario.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="CuentasxCobrar\CuentasPorCobrarModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CuentasPorCobrarModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Cuentasxpagar\ModelCuentasPorPagar.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelCuentasPorPagar.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Facturacion\FacturacionModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FacturacionModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\DataSources\datos.Seguridad.TECAv8Entities.datasource" />
+    <EntityDeploy Include="RecursosHumanos\ModelRecursosHumanos.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelRecursosHumanos.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Seguridad\SeguridadModelo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SeguridadModelo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Taller\ModelTaller.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelTaller1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
