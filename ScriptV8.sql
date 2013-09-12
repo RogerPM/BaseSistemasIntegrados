@@ -2161,7 +2161,7 @@ create table CuentaxPagar.CuentaPorPagar
 	FechaIngreso			date not null,
 	NumeroFactura 			varchar(16) not null,
 	FechaTransaccion		date not null,
-	IdPersona 				int null,
+	IdProveedor 			int null,
 	IdEmpresaServicio		varchar(13) null,
 	Motivo					varchar(30) not null,
 	Detalle					varchar(150) not null,
@@ -2179,7 +2179,7 @@ create table CuentaxPagar.CuentaPorPagar
     foreign key (IdUsuario)references Seguridad.Usuario,
     foreign key (IdFrecuencia, IdEmpresa)references CuentaxPagar.FrecuenciaPago,
     foreign key (IdEmpresaServicio, IdEmpresa)references CuentaxPagar.EmpresaServicio,
-	foreign key (IdPersona)references RecursosHumanos.Persona,		
+	foreign key (IdProveedor)references Compras.Proveedor,		
     foreign key (NumIngresoEgreso, IdEmpresa)references Inventario.IngresoEgresoCab,
     foreign key (IdEmpresa) references Seguridad.Empresa,
 	primary key(NumCuentaPorPagar, IdEmpresa)
