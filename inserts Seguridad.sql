@@ -52,6 +52,10 @@ go
 
 
 /*****************PERSONA******************/
+insert into RecursosHumanos.Persona   values(1,0985874687,1,1,'Karen','Aguirre','25-04-1989','F',1,'17 y San Martin',042855867,0993648660,042784945,0979898050,'n@hotmail.com',1)
+go
+insert into RecursosHumanos.Persona   values(2,0985874687,1,1,'Estefania Paola','Orozco Perez','25-04-1989','F',1,'17 y San Martin',042855867,0993648660,042784945,0979898050,'n@hotmail.com',1)
+go
 insert into RecursosHumanos.Persona values (71,09222222,1,1,'Master','SA',null,'m',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
 go
 insert into RecursosHumanos.Persona values (72,09333333,1,1,'Compras','SA',null,'f',1,'Clda Sauces 7 manzana 16 villa 5b, edificio de tres plantas', 0994996660, 0994996660, 0994996660, 0994996660,'info@telcom.com.ec',1)
@@ -127,6 +131,10 @@ insert Seguridad.Imagen values (2, 'TECA y ...', 0xFFD8FFE000104A464946000101010
 go
 --truncate table Seguridad.Usuario
 /********************USUARIO*******************/
+insert into Seguridad.Usuario values(1,'Karen','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,1,1)
+go
+insert into Seguridad.Usuario values(2,'Orozco','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,1,1)
+go
 insert into Seguridad.Usuario values(71,'Admin','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,1,1)
 go
 insert into Seguridad.Usuario values(11,'lquinter','MkiUR45qvk9IJL1Wm0iHnv8383Q=',1,1,2)
