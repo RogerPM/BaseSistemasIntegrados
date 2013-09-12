@@ -917,7 +917,7 @@ create table Contabilidad.CabeceraComprobante
 	IdEmpresa 				int ,
 	numero_comprobante		numeric(4) ,
 	fecha					date not null,
-	glosa					varchar(50) not null,
+	glosa					varchar(500) not null,
 	periodo_contable		numeric(6,0) ,
 	periodo_contable_IdAFiscal numeric(4,0),
 	IdUsuario 				int,
