@@ -29,16 +29,16 @@ namespace forms.Cuentasxpagar
         }
         public void getSeleccion()
         {
-            Es.IdEmpresaServicio = Convert.ToString (gridView1.GetFocusedRowCellValue(colIdEmpresaServicio));
-            Es.fechaRegistro= Convert.ToDateTime(gridView1.GetFocusedRowCellValue(colfechaRegistro));
-            Es.RazonSocial= Convert.ToString(gridView1.GetFocusedRowCellValue(colRazonSocial));
-            Es.Direccion=Convert.ToString(gridView1.GetFocusedRowCellValue(colDireccion));
-            Es.email=Convert.ToString(gridView1.GetFocusedRowCellValue(colemail));
-            Es.webpage=Convert.ToString(gridView1.GetFocusedRowCellValue(colwebpage));
-            Es.Estado=Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdEstado));
-            Es.IdTipoPersona=Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdTipoPersona));
-            Es.IdEmpresa=Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdEmpresa));
-            Es.IdUsuario=Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdUsuario));
+            Es._IdEmpresaServicio = Convert.ToString(gridView1.GetFocusedRowCellValue(colIdEmpresaServicio));
+            Es._FechaRegistro = Convert.ToDateTime(gridView1.GetFocusedRowCellValue(colfechaRegistro));
+            Es._RazonSocial = Convert.ToString(gridView1.GetFocusedRowCellValue(colRazonSocial));
+            Es._Direccion = Convert.ToString(gridView1.GetFocusedRowCellValue(colDireccion));
+            Es._Email = Convert.ToString(gridView1.GetFocusedRowCellValue(colemail));
+            Es._Website = Convert.ToString(gridView1.GetFocusedRowCellValue(colwebpage));
+            Es._Estado = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdEstado));
+            Es._TipoPersona = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdTipoPersona));
+            Es._IdEmpresa = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdEmpresa));
+            Es._IdUsuario = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdUsuario));
                     
         }
 

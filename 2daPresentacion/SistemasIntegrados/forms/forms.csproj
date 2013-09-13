@@ -394,6 +394,12 @@
     <Compile Include="Contabilidad\frmayudacta.Designer.cs">
       <DependentUpon>frmayudacta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contabilidad\frmBusquedaComprobante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\frmBusquedaComprobante.designer.cs">
+      <DependentUpon>frmBusquedaComprobante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contabilidad\frmComprobante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -622,11 +628,23 @@
     <Compile Include="Cuentasxpagar\frmConsultaPrueba.Designer.cs">
       <DependentUpon>frmConsultaPrueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cuentasxpagar\frmConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\frmConsultas.Designer.cs">
+      <DependentUpon>frmConsultas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cuentasxpagar\frmCuentasPorPagar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cuentasxpagar\frmCuentasPorPagar.Designer.cs">
       <DependentUpon>frmCuentasPorPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cuentasxpagar\frmDetalleCuentasPorPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\frmDetalleCuentasPorPagar.designer.cs">
+      <DependentUpon>frmDetalleCuentasPorPagar.cs</DependentUpon>
     </Compile>
     <Compile Include="Cuentasxpagar\frmEmpresaServicio.cs">
       <SubType>Form</SubType>
@@ -1620,6 +1638,9 @@
     <EmbeddedResource Include="Contabilidad\frmayudacta.resx">
       <DependentUpon>frmayudacta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\frmBusquedaComprobante.resx">
+      <DependentUpon>frmBusquedaComprobante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contabilidad\frmComprobante.resx">
       <DependentUpon>frmComprobante.cs</DependentUpon>
     </EmbeddedResource>
@@ -1734,8 +1755,14 @@
     <EmbeddedResource Include="Cuentasxpagar\frmConsultaPrueba.resx">
       <DependentUpon>frmConsultaPrueba.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cuentasxpagar\frmConsultas.resx">
+      <DependentUpon>frmConsultas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cuentasxpagar\frmCuentasPorPagar.resx">
       <DependentUpon>frmCuentasPorPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuentasxpagar\frmDetalleCuentasPorPagar.resx">
+      <DependentUpon>frmDetalleCuentasPorPagar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cuentasxpagar\frmEmpresaServicio.resx">
       <DependentUpon>frmEmpresaServicio.cs</DependentUpon>

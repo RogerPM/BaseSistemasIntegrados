@@ -12,18 +12,17 @@
     <EntitySet Name="SaldoxComprobante" EntityType="TECAModel.Store.SaldoxComprobante" store:Type="Tables" Schema="Contabilidad" />
     <EntitySet Name="TipoCuenta" EntityType="TECAModel.Store.TipoCuenta" store:Type="Tables" Schema="Contabilidad" />
     <EntitySet Name="TipoTransaccion" EntityType="TECAModel.Store.TipoTransaccion" store:Type="Tables" Schema="Contabilidad" />
-    <EntitySet Name="vwComprobanteMayorizar" EntityType="TECAModel.Store.vwComprobanteMayorizar" store:Type="Views" store:Schema="dbo" store:Name="vwComprobanteMayorizar">
+    <EntitySet Name="vwComprobanteMayorizar" EntityType="TECAModel.Store.vwComprobanteMayorizar" store:Type="Views" store:Schema="Contabilidad" store:Name="vwComprobanteMayorizar">
       <DefiningQuery>SELECT 
       [vwComprobanteMayorizar].[IdEmpresa] AS [IdEmpresa], 
       [vwComprobanteMayorizar].[fecha] AS [fecha], 
       [vwComprobanteMayorizar].[numero_comprobante] AS [numero_comprobante], 
       [vwComprobanteMayorizar].[glosa] AS [glosa], 
       [vwComprobanteMayorizar].[haber] AS [haber], 
-      [vwComprobanteMayorizar].[debe] AS [debe], 
-      [vwComprobanteMayorizar].[Expr1] AS [Expr1]
-      FROM [dbo].[vwComprobanteMayorizar] AS [vwComprobanteMayorizar]</DefiningQuery>
+      [vwComprobanteMayorizar].[debe] AS [debe]
+      FROM [Contabilidad].[vwComprobanteMayorizar] AS [vwComprobanteMayorizar]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="vwCuenta" EntityType="TECAModel.Store.vwCuenta" store:Type="Views" store:Schema="dbo" store:Name="vwCuenta">
+    <EntitySet Name="vwCuenta" EntityType="TECAModel.Store.vwCuenta" store:Type="Views" store:Schema="Contabilidad" store:Name="vwCuenta">
       <DefiningQuery>SELECT 
       [vwCuenta].[IdEmpresa] AS [IdEmpresa], 
       [vwCuenta].[IdCuenta] AS [IdCuenta], 
@@ -36,16 +35,16 @@
       [vwCuenta].[IdUsuario] AS [IdUsuario], 
       [vwCuenta].[FechaModificacion] AS [FechaModificacion], 
       [vwCuenta].[digitos] AS [digitos]
-      FROM [dbo].[vwCuenta] AS [vwCuenta]</DefiningQuery>
+      FROM [Contabilidad].[vwCuenta] AS [vwCuenta]</DefiningQuery>
     </EntitySet>
-    <EntitySet Name="vwTipoTransaccion" EntityType="TECAModel.Store.vwTipoTransaccion" store:Type="Views" store:Schema="dbo" store:Name="vwTipoTransaccion">
+    <EntitySet Name="vwTipoTransaccion" EntityType="TECAModel.Store.vwTipoTransaccion" store:Type="Views" store:Schema="Contabilidad" store:Name="vwTipoTransaccion">
       <DefiningQuery>SELECT 
       [vwTipoTransaccion].[IdTransaccion] AS [IdTransaccion], 
       [vwTipoTransaccion].[modulo] AS [modulo], 
       [vwTipoTransaccion].[TipoDocumento] AS [TipoDocumento], 
       [vwTipoTransaccion].[descripcion] AS [descripcion], 
       [vwTipoTransaccion].[NombreModulo] AS [NombreModulo]
-      FROM [dbo].[vwTipoTransaccion] AS [vwTipoTransaccion]</DefiningQuery>
+      FROM [Contabilidad].[vwTipoTransaccion] AS [vwTipoTransaccion]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK__CabeceraComproba__477199F1" Association="TECAModel.Store.FK__CabeceraComproba__477199F1">
       <End Role="PeriodoContable" EntitySet="PeriodoContable" />
@@ -97,7 +96,7 @@
     <Property Name="IdEmpresa" Type="int" Nullable="false" />
     <Property Name="numero_comprobante" Type="numeric" Nullable="false" Precision="4" />
     <Property Name="fecha" Type="date" Nullable="false" />
-    <Property Name="glosa" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="glosa" Type="varchar" Nullable="false" MaxLength="500" />
     <Property Name="periodo_contable" Type="numeric" Precision="6" />
     <Property Name="periodo_contable_IdAFiscal" Type="numeric" Precision="4" />
     <Property Name="IdUsuario" Type="int" />
@@ -211,7 +210,7 @@
     <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="50" />
   </EntityType>
   <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'TECA.dbo.vwComprobanteMayorizar' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      advertencia 6002: La tabla o vista 'TECA.Contabilidad.vwComprobanteMayorizar' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="vwComprobanteMayorizar">
     <Key>
@@ -223,13 +222,12 @@
     <Property Name="IdEmpresa" Type="int" Nullable="false" />
     <Property Name="fecha" Type="date" Nullable="false" />
     <Property Name="numero_comprobante" Type="numeric" Nullable="false" Precision="4" />
-    <Property Name="glosa" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="glosa" Type="varchar" Nullable="false" MaxLength="500" />
     <Property Name="haber" Type="decimal" Precision="38" Scale="2" />
     <Property Name="debe" Type="decimal" Precision="38" Scale="2" />
-    <Property Name="Expr1" Type="numeric" Precision="4" />
   </EntityType>
   <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'TECA.dbo.vwCuenta' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      advertencia 6002: La tabla o vista 'TECA.Contabilidad.vwCuenta' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="vwCuenta">
     <Key>
@@ -256,7 +254,7 @@
     <Property Name="digitos" Type="numeric" Nullable="false" Precision="1" />
   </EntityType>
   <!--Se encontraron errores durante la generación:
-      advertencia 6002: La tabla o vista 'TECA.dbo.vwTipoTransaccion' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      advertencia 6002: La tabla o vista 'TECA.Contabilidad.vwTipoTransaccion' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="vwTipoTransaccion">
     <Key>

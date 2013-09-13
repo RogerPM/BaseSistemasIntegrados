@@ -134,41 +134,40 @@
     <EntitySetMapping Name="vwComprobanteMayorizar">
       <EntityTypeMapping TypeName="TECAModel.vwComprobanteMayorizar">
         <MappingFragment StoreEntitySet="vwComprobanteMayorizar">
-          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
-          <ScalarProperty Name="fecha" ColumnName="fecha" />
-          <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
-          <ScalarProperty Name="glosa" ColumnName="glosa" />
-          <ScalarProperty Name="haber" ColumnName="haber" />
           <ScalarProperty Name="debe" ColumnName="debe" />
-          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="vwCuenta">
-      <EntityTypeMapping TypeName="TECAModel.vwCuenta">
-        <MappingFragment StoreEntitySet="vwCuenta">
+          <ScalarProperty Name="haber" ColumnName="haber" />
+          <ScalarProperty Name="glosa" ColumnName="glosa" />
+          <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
-          <ScalarProperty Name="IdCuenta" ColumnName="IdCuenta" />
-          <ScalarProperty Name="codigo_padre" ColumnName="codigo_padre" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-          <ScalarProperty Name="IdNivelCuenta" ColumnName="IdNivelCuenta" />
-          <ScalarProperty Name="IdTipoCuenta" ColumnName="IdTipoCuenta" />
-          <ScalarProperty Name="naturaleza_cuenta" ColumnName="naturaleza_cuenta" />
-          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
-          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
-          <ScalarProperty Name="digitos" ColumnName="digitos" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="vwTipoTransaccion">
       <EntityTypeMapping TypeName="TECAModel.vwTipoTransaccion">
         <MappingFragment StoreEntitySet="vwTipoTransaccion">
-          <ScalarProperty Name="IdTransaccion" ColumnName="IdTransaccion" />
-          <ScalarProperty Name="modulo" ColumnName="modulo" />
-          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
-          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
           <ScalarProperty Name="NombreModulo" ColumnName="NombreModulo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="modulo" ColumnName="modulo" />
+          <ScalarProperty Name="IdTransaccion" ColumnName="IdTransaccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwCuenta">
+      <EntityTypeMapping TypeName="TECAModel.vwCuenta">
+        <MappingFragment StoreEntitySet="vwCuenta">
+          <ScalarProperty Name="digitos" ColumnName="digitos" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="naturaleza_cuenta" ColumnName="naturaleza_cuenta" />
+          <ScalarProperty Name="IdTipoCuenta" ColumnName="IdTipoCuenta" />
+          <ScalarProperty Name="IdNivelCuenta" ColumnName="IdNivelCuenta" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="codigo_padre" ColumnName="codigo_padre" />
+          <ScalarProperty Name="IdCuenta" ColumnName="IdCuenta" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

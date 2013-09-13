@@ -8,28 +8,11 @@ using System.Text;
 using System.Windows.Forms;
 using datos.Contabilidad;
 using clases.Contabilidad;
-using clases.Seguridad;
 
 namespace forms.Contabilidad
 {
     public partial class frmComprobante : Form
     {
-        #region "Distributed by security team 3/3"
-        //si este bloque ha sido parcial o totalmente editado, los miembros del equipo de seguridad no 
-        //se responzabilizan en el caso de que exista un mal funcionamiento de este form.        
-        private void Seguridad()
-        {
-            //lecturas
-            btnBuscar.Visible = frmPrincipal.Lectura;
-            //escrituras
-            btnNuevo.Visible = frmPrincipal.Escritura;
-            btnGuardar.Visible = frmPrincipal.Escritura;
-            //btnModificar.Visible = frmPrincipal.Escritura;
-            //eliminacion
-            btnEliminar.Visible = frmPrincipal.Eliminacion;
-        }
-        #endregion
-
         public frmComprobante()
         {
             InitializeComponent();
@@ -37,10 +20,8 @@ namespace forms.Contabilidad
 
         private void frmComprobante_Load(object sender, EventArgs e)
         {
-            lblUsuario.Text = clsVwUsuarioInformacion.nombreUsuario;
             cargar();
             List<clsDetalleComprobante> det = new List<clsDetalleComprobante>();
-            Seguridad();
         }
         private void cargar() {
             try
@@ -149,7 +130,7 @@ namespace forms.Contabilidad
                 cabecera.Detalle = get();
                 clsDatoComprobante dato = new clsDatoComprobante();
                 if (dato.GuardarCabecera(ref cabecera)) {
-                    MessageBox.Show("Comprobante Ingresado con Exito","TECA System",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Comprobante # "+cabecera.numero_comprobante.ToString()+" Guardado con exito", "TECA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     btnGuardar.Enabled = false;
                 txtNumCom.Enabled = btnBuscar.Enabled = true;
                 }
@@ -159,25 +140,32 @@ namespace forms.Contabilidad
             {
             }
         }
-
+        private bool flag = true;
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             try
             {
+                if (flag)
+                {
+                    frmBusquedaComprobante frm = new frmBusquedaComprobante();
+                    frm.ShowDialog();
+                    txtNumCom.Text = frm.NumCom;
+                }
                 clsDatoComprobante dato = new clsDatoComprobante();
                 set(dato.consultaComprobante(Convert.ToDecimal(txtNumCom.Text), 1));
                 gridViewComprobante_RowUpdated(new object(), new DevExpress.XtraGrid.Views.Base.RowObjectEventArgs(1, new object()));
-        
+                flag = true;
             }
             catch (Exception)
             {
             }
-            }
+        }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             try
             {
+                txtGlosa.Text = "";
                 btnGuardar.Enabled = true;
                 txtNumCom.Enabled = btnBuscar.Enabled = false;
                 clsDetalleComprobanteBindingSource.Clear();
@@ -211,14 +199,19 @@ namespace forms.Contabilidad
             }
         }
 
-        private void txtGlosa_TextChanged(object sender, EventArgs e)
+        private void txtNumCom_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            try
+            {
+                if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                {
+                    flag = false;
+                    btnBuscar_Click(new object(), new EventArgs());
+                }
+            }
+            catch (Exception)
+            {
+            }
         }
     }
 }

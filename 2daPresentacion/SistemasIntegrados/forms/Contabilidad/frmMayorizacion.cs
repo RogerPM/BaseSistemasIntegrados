@@ -81,8 +81,9 @@ namespace forms.Contabilidad
 
         private void frmMayorizacion_Load(object sender, EventArgs e)
         {
-            dateInicio.EditValue = DateTime.Now;
+            //dateInicio.EditValue = DateTime.Now;
             dateFin.EditValue = DateTime.Now.AddDays(30);
+            dateInicio.EditValue = DateTime.Now.AddDays(-1);
             cargar();
             labelControl6.Text = clsVwUsuarioInformacion.nombreUsuario;
             Seguridad();

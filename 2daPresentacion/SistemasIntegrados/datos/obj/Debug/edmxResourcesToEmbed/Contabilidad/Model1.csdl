@@ -12,9 +12,6 @@
     <EntitySet Name="SaldoxComprobante" EntityType="TECAModel.SaldoxComprobante" />
     <EntitySet Name="TipoCuenta" EntityType="TECAModel.TipoCuenta" />
     <EntitySet Name="TipoTransaccion" EntityType="TECAModel.TipoTransaccion" />
-    <EntitySet Name="vwComprobanteMayorizar" EntityType="TECAModel.vwComprobanteMayorizar" />
-    <EntitySet Name="vwCuenta" EntityType="TECAModel.vwCuenta" />
-    <EntitySet Name="vwTipoTransaccion" EntityType="TECAModel.vwTipoTransaccion" />
     <AssociationSet Name="FK__PeriodoCo__IdAFi__39237A9A" Association="TECAModel.FK__PeriodoCo__IdAFi__39237A9A">
       <End Role="AnoFiscal" EntitySet="AnoFiscal" />
       <End Role="PeriodoContable" EntitySet="PeriodoContable" />
@@ -47,6 +44,9 @@
       <End Role="TipoTransaccion" EntitySet="TipoTransaccion" />
       <End Role="ModeloAsiento" EntitySet="ModeloAsiento" />
     </AssociationSet>
+    <EntitySet Name="vwComprobanteMayorizar" EntityType="TECAModel.vwComprobanteMayorizar" />
+    <EntitySet Name="vwTipoTransaccion" EntityType="TECAModel.vwTipoTransaccion" />
+    <EntitySet Name="vwCuenta" EntityType="TECAModel.vwCuenta" />
   </EntityContainer>
   <EntityType Name="AnoFiscal">
     <Key>
@@ -194,57 +194,6 @@
     <Property Name="descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="ModeloAsiento" Relationship="TECAModel.FK__ModeloAsi__IdTra__603D47BB" FromRole="TipoTransaccion" ToRole="ModeloAsiento" />
   </EntityType>
-  <EntityType Name="vwComprobanteMayorizar">
-    <Key>
-      <PropertyRef Name="IdEmpresa" />
-      <PropertyRef Name="fecha" />
-      <PropertyRef Name="numero_comprobante" />
-      <PropertyRef Name="glosa" />
-    </Key>
-    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <Property Name="fecha" Type="DateTime" Nullable="false" />
-    <Property Name="numero_comprobante" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
-    <Property Name="glosa" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="haber" Type="Decimal" Precision="38" Scale="2" />
-    <Property Name="debe" Type="Decimal" Precision="38" Scale="2" />
-    <Property Name="Expr1" Type="Decimal" Precision="4" Scale="0" />
-  </EntityType>
-  <EntityType Name="vwCuenta">
-    <Key>
-      <PropertyRef Name="IdEmpresa" />
-      <PropertyRef Name="IdCuenta" />
-      <PropertyRef Name="nombre" />
-      <PropertyRef Name="descripcion" />
-      <PropertyRef Name="IdNivelCuenta" />
-      <PropertyRef Name="IdTipoCuenta" />
-      <PropertyRef Name="naturaleza_cuenta" />
-      <PropertyRef Name="IdUsuario" />
-      <PropertyRef Name="digitos" />
-    </Key>
-    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <Property Name="IdCuenta" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="codigo_padre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
-    <Property Name="IdNivelCuenta" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
-    <Property Name="IdTipoCuenta" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
-    <Property Name="naturaleza_cuenta" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
-    <Property Name="FechaModificacion" Type="DateTime" />
-    <Property Name="digitos" Type="Decimal" Nullable="false" Precision="1" Scale="0" />
-  </EntityType>
-  <EntityType Name="vwTipoTransaccion">
-    <Key>
-      <PropertyRef Name="IdTransaccion" />
-      <PropertyRef Name="modulo" />
-      <PropertyRef Name="descripcion" />
-    </Key>
-    <Property Name="IdTransaccion" Type="Int32" Nullable="false" />
-    <Property Name="modulo" Type="Int32" Nullable="false" />
-    <Property Name="TipoDocumento" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="NombreModulo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-  </EntityType>
   <Association Name="FK__PeriodoCo__IdAFi__39237A9A">
     <End Role="AnoFiscal" Type="TECAModel.AnoFiscal" Multiplicity="1" />
     <End Role="PeriodoContable" Type="TECAModel.PeriodoContable" Multiplicity="*" />
@@ -351,4 +300,54 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="vwComprobanteMayorizar">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="fecha" />
+      <PropertyRef Name="numero_comprobante" />
+      <PropertyRef Name="glosa" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" />
+    <Property Type="Decimal" Name="numero_comprobante" Nullable="false" Precision="4" Scale="0" />
+    <Property Type="String" Name="glosa" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="haber" Precision="38" Scale="2" />
+    <Property Type="Decimal" Name="debe" Precision="38" Scale="2" />
+  </EntityType>
+  <EntityType Name="vwTipoTransaccion">
+    <Key>
+      <PropertyRef Name="IdTransaccion" />
+      <PropertyRef Name="modulo" />
+      <PropertyRef Name="descripcion" />
+    </Key>
+    <Property Type="Int32" Name="IdTransaccion" Nullable="false" />
+    <Property Type="Int32" Name="modulo" Nullable="false" />
+    <Property Type="String" Name="TipoDocumento" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreModulo" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vwCuenta">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdCuenta" />
+      <PropertyRef Name="nombre" />
+      <PropertyRef Name="descripcion" />
+      <PropertyRef Name="IdNivelCuenta" />
+      <PropertyRef Name="IdTipoCuenta" />
+      <PropertyRef Name="naturaleza_cuenta" />
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="digitos" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="String" Name="IdCuenta" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="codigo_padre" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="IdNivelCuenta" Nullable="false" Precision="2" Scale="0" />
+    <Property Type="Decimal" Name="IdTipoCuenta" Nullable="false" Precision="2" Scale="0" />
+    <Property Type="String" Name="naturaleza_cuenta" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="DateTime" Name="FechaModificacion" />
+    <Property Type="Decimal" Name="digitos" Nullable="false" Precision="1" Scale="0" />
+  </EntityType>
 </Schema>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ModelCuentasPorPagarStoreContainer" CdmEntityContainer="CuentasPorPagarEntities">
+  <EntityContainerMapping StorageEntityContainer="CuentasPorPagarModelStoreContainer" CdmEntityContainer="CuentasPorPagarEntities">
     <EntitySetMapping Name="CabeceraComprobante">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.CabeceraComprobante">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.CabeceraComprobante">
         <MappingFragment StoreEntitySet="CabeceraComprobante">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
@@ -16,7 +16,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DetalleComprobante">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.DetalleComprobante">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.DetalleComprobante">
         <MappingFragment StoreEntitySet="DetalleComprobante">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="cabecera_comprobante" ColumnName="cabecera_comprobante" />
@@ -28,7 +28,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Banco">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.Banco">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.Banco">
         <MappingFragment StoreEntitySet="Banco">
           <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
           <ScalarProperty Name="idBanco" ColumnName="idBanco" />
@@ -38,7 +38,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CuentaBancaria">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.CuentaBancaria">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.CuentaBancaria">
         <MappingFragment StoreEntitySet="CuentaBancaria">
           <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
           <ScalarProperty Name="idCuentaBancaria" ColumnName="idCuentaBancaria" />
@@ -52,7 +52,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CuentaBancaria2">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.CuentaBancaria2">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.CuentaBancaria2">
         <MappingFragment StoreEntitySet="CuentaBancaria2">
           <ScalarProperty Name="Serie" ColumnName="Serie" />
           <ScalarProperty Name="TipoCuenta" ColumnName="TipoCuenta" />
@@ -64,14 +64,14 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CuentaPorPagar">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.CuentaPorPagar">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.CuentaPorPagar">
         <MappingFragment StoreEntitySet="CuentaPorPagar">
           <ScalarProperty Name="NumCuentaPorPagar" ColumnName="NumCuentaPorPagar" />
           <ScalarProperty Name="NumIngresoEgreso" ColumnName="NumIngresoEgreso" />
           <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
-          <ScalarProperty Name="Factura" ColumnName="Factura" />
+          <ScalarProperty Name="NumeroFactura" ColumnName="NumeroFactura" />
           <ScalarProperty Name="FechaTransaccion" ColumnName="FechaTransaccion" />
-          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
           <ScalarProperty Name="IdEmpresaServicio" ColumnName="IdEmpresaServicio" />
           <ScalarProperty Name="Motivo" ColumnName="Motivo" />
           <ScalarProperty Name="Detalle" ColumnName="Detalle" />
@@ -90,7 +90,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DeudaDet">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.DeudaDet">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.DeudaDet">
         <MappingFragment StoreEntitySet="DeudaDet">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="NumCuentaPorPagar" ColumnName="NumCuentaPorPagar" />
@@ -102,7 +102,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="EmpresaServicio">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.EmpresaServicio">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.EmpresaServicio">
         <MappingFragment StoreEntitySet="EmpresaServicio">
           <ScalarProperty Name="IdEmpresaServicio" ColumnName="IdEmpresaServicio" />
           <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
@@ -118,7 +118,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FrecuenciaPago">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.FrecuenciaPago">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.FrecuenciaPago">
         <MappingFragment StoreEntitySet="FrecuenciaPago">
           <ScalarProperty Name="IdFrecuenciaPago" ColumnName="IdFrecuenciaPago" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -130,7 +130,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Impuesto">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.Impuesto">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.Impuesto">
         <MappingFragment StoreEntitySet="Impuesto">
           <ScalarProperty Name="IdImpuesto" ColumnName="IdImpuesto" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -143,7 +143,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ImpuestoCuenta">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.ImpuestoCuenta">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.ImpuestoCuenta">
         <MappingFragment StoreEntitySet="ImpuestoCuenta">
           <ScalarProperty Name="IdImpuesto" ColumnName="IdImpuesto" />
           <ScalarProperty Name="NumCuentaPorPagar" ColumnName="NumCuentaPorPagar" />
@@ -153,7 +153,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MedioPago">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.MedioPago">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.MedioPago">
         <MappingFragment StoreEntitySet="MedioPago">
           <ScalarProperty Name="IdMedioPago" ColumnName="IdMedioPago" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -165,7 +165,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="OrdenPagoCab">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.OrdenPagoCab">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.OrdenPagoCab">
         <MappingFragment StoreEntitySet="OrdenPagoCab">
           <ScalarProperty Name="NumOrdenPago" ColumnName="NumOrdenPago" />
           <ScalarProperty Name="fechadeEmision" ColumnName="fechadeEmision" />
@@ -179,7 +179,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="OrdenPagoDet">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.OrdenPagoDet">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.OrdenPagoDet">
         <MappingFragment StoreEntitySet="OrdenPagoDet">
           <ScalarProperty Name="NumLinea" ColumnName="NumLinea" />
           <ScalarProperty Name="NumCuentaPorPagar" ColumnName="NumCuentaPorPagar" />
@@ -193,7 +193,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="OrdenPagoEmpleadoDet">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.OrdenPagoEmpleadoDet">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.OrdenPagoEmpleadoDet">
         <MappingFragment StoreEntitySet="OrdenPagoEmpleadoDet">
           <ScalarProperty Name="NumOrdenPago" ColumnName="NumOrdenPago" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
@@ -207,7 +207,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PagoCab">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.PagoCab">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.PagoCab">
         <MappingFragment StoreEntitySet="PagoCab">
           <ScalarProperty Name="NumPago" ColumnName="NumPago" />
           <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
@@ -221,7 +221,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PagoDet">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.PagoDet">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.PagoDet">
         <MappingFragment StoreEntitySet="PagoDet">
           <ScalarProperty Name="NumLinea" ColumnName="NumLinea" />
           <ScalarProperty Name="IdMedioPago" ColumnName="IdMedioPago" />
@@ -237,7 +237,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TelefonoEmpresaServicio">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.TelefonoEmpresaServicio">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.TelefonoEmpresaServicio">
         <MappingFragment StoreEntitySet="TelefonoEmpresaServicio">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdEmpresaServicio" ColumnName="IdEmpresaServicio" />
@@ -247,7 +247,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Comision">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.Comision">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.Comision">
         <MappingFragment StoreEntitySet="Comision">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="cabecera_comprobante" ColumnName="cabecera_comprobante" />
@@ -262,7 +262,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ComisionDet">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.ComisionDet">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.ComisionDet">
         <MappingFragment StoreEntitySet="ComisionDet">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
@@ -277,7 +277,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="IngresoEgresoCab">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.IngresoEgresoCab">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.IngresoEgresoCab">
         <MappingFragment StoreEntitySet="IngresoEgresoCab">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="NroMovimiento" ColumnName="NroMovimiento" />
@@ -295,14 +295,12 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="IngresoEgresoDet">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.IngresoEgresoDet">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.IngresoEgresoDet">
         <MappingFragment StoreEntitySet="IngresoEgresoDet">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="NroMovimiento" ColumnName="NroMovimiento" />
           <ScalarProperty Name="numero" ColumnName="numero" />
-          <ScalarProperty Name="IdTipoArticulo" ColumnName="IdTipoArticulo" />
           <ScalarProperty Name="IdArticulo" ColumnName="IdArticulo" />
-          <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
           <ScalarProperty Name="IdPercha" ColumnName="IdPercha" />
           <ScalarProperty Name="CantidadPedida" ColumnName="CantidadPedida" />
           <ScalarProperty Name="CantidadLlegada" ColumnName="CantidadLlegada" />
@@ -314,7 +312,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Empleado">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.Empleado">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.Empleado">
         <MappingFragment StoreEntitySet="Empleado">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
@@ -325,7 +323,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Liquidacion">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.Liquidacion">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.Liquidacion">
         <MappingFragment StoreEntitySet="Liquidacion">
           <ScalarProperty Name="NumLiquidacion" ColumnName="NumLiquidacion" />
           <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
@@ -343,7 +341,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NominaCab">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.NominaCab">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.NominaCab">
         <MappingFragment StoreEntitySet="NominaCab">
           <ScalarProperty Name="NumNomina" ColumnName="NumNomina" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
@@ -357,7 +355,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NominaDet">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.NominaDet">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.NominaDet">
         <MappingFragment StoreEntitySet="NominaDet">
           <ScalarProperty Name="NumLinea" ColumnName="NumLinea" />
           <ScalarProperty Name="NumNomina" ColumnName="NumNomina" />
@@ -373,7 +371,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Persona">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.Persona">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.Persona">
         <MappingFragment StoreEntitySet="Persona">
           <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
           <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
@@ -394,8 +392,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Telefono">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.Telefono">
+        <MappingFragment StoreEntitySet="Telefono">
+          <ScalarProperty Name="IdTelefono" ColumnName="IdTelefono" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="IdTipoTelefono" ColumnName="IdTipoTelefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="TipoIdentificacion">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.TipoIdentificacion">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.TipoIdentificacion">
         <MappingFragment StoreEntitySet="TipoIdentificacion">
           <ScalarProperty Name="IdTipoIdentificacion" ColumnName="IdTipoIdentificacion" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
@@ -405,7 +412,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoPersona">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.TipoPersona">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.TipoPersona">
         <MappingFragment StoreEntitySet="TipoPersona">
           <ScalarProperty Name="IdTipoPersona" ColumnName="IdTipoPersona" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -415,7 +422,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoTelefono">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.TipoTelefono">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.TipoTelefono">
         <MappingFragment StoreEntitySet="TipoTelefono">
           <ScalarProperty Name="IdTipoTelefono" ColumnName="IdTipoTelefono" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -425,7 +432,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Empresa">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.Empresa">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.Empresa">
         <MappingFragment StoreEntitySet="Empresa">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
@@ -443,7 +450,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Usuario">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.Usuario">
+      <EntityTypeMapping TypeName="CuentasPorPagarModel.Usuario">
         <MappingFragment StoreEntitySet="Usuario">
           <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
           <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
@@ -451,19 +458,6 @@
           <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
           <ScalarProperty Name="IdImagen" ColumnName="IdImagen" />
           <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Liquidacion1">
-      <EntityTypeMapping TypeName="ModelCuentasPorPagar.Liquidacion1">
-        <MappingFragment StoreEntitySet="Liquidacion1">
-          <ScalarProperty Name="IdLiquidacion" ColumnName="IdLiquidacion" />
-          <ScalarProperty Name="IdOrdenTrabajo" ColumnName="IdOrdenTrabajo" />
-          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-          <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
-          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
-          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
-          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -124,14 +124,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CuentasPorCobrarModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Cuentasxpagar\datosCuentaBancaria.cs" />
-    <Compile Include="Cuentasxpagar\datosEmpresaServicio.cs" />
-    <Compile Include="Cuentasxpagar\datosFrecuenciaPago.cs" />
-    <Compile Include="Cuentasxpagar\datosImpuesto.cs" />
-    <Compile Include="Cuentasxpagar\datosMedioPago.cs" />
-    <Compile Include="Cuentasxpagar\datosMensaje.cs" />
-    <Compile Include="Cuentasxpagar\datosPago.cs" />
-    <Compile Include="Cuentasxpagar\datosPagoDetalle.cs" />
+    <Compile Include="Cuentasxpagar\clsCuentaPorPagarDAT.cs" />
+    <Compile Include="Cuentasxpagar\clsEmpresaServicioDAT1.cs" />
+    <Compile Include="Cuentasxpagar\datosCuentaBancaria.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\datosEmpresaServicio.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\datosFrecuenciaPago.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\datosImpuesto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\datosImpuestos.cs" />
+    <Compile Include="Cuentasxpagar\datosMedioPago.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\datosMensaje.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\datosOrdenPagoCab.cs" />
+    <Compile Include="Cuentasxpagar\datosOrdenPagoDet.cs" />
+    <Compile Include="Cuentasxpagar\datosPago.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\datosPagoDetalle.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Cuentasxpagar\ModelCuentasPorPagar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -278,13 +299,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CuentasPorCobrarModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <EntityDeploy Include="Cuentasxpagar\ModelCuentasPorPagar.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelCuentasPorPagar.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <EntityDeploy Include="Facturacion\FacturacionModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FacturacionModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Cuentasxpagar\ModelCuentasPorPagar.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelCuentasPorPagar.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="Properties\DataSources\datos.Seguridad.TECAv8Entities.datasource" />
     <EntityDeploy Include="RecursosHumanos\ModelRecursosHumanos.edmx">

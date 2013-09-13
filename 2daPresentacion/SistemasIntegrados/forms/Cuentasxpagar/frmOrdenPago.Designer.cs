@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrdenPago));
             this.gdcOrdenPago = new DevExpress.XtraGrid.GridControl();
+            this.clsCuentaPorPagarDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colNúmeroRegistroCXP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSaldoDeuda = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -43,7 +45,18 @@
             this.txtEfectivoDisponible = new DevExpress.XtraEditors.TextEdit();
             this.txtTotalPagar = new DevExpress.XtraEditors.TextEdit();
             this.cbxProveedor = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.clsEmpresaServicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.col_Direccion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_Email = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_Estado = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_FechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_IdEmpresa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_IdEmpresaServicio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_IdUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_RazonSocial = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_TipoPersona = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_Website = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -58,25 +71,27 @@
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
             this.tsbSalir = new System.Windows.Forms.ToolStripButton();
-            this.btnGenerarComprobante = new DevExpress.XtraEditors.SimpleButton();
             this.label3 = new System.Windows.Forms.Label();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtEstado = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gdcOrdenPago)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsCuentaPorPagarDetalleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEfectivoDisponible.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalPagar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxProveedor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsEmpresaServicioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEstado.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gdcOrdenPago
             // 
+            this.gdcOrdenPago.DataSource = this.clsCuentaPorPagarDetalleBindingSource;
             this.gdcOrdenPago.Location = new System.Drawing.Point(18, 72);
             this.gdcOrdenPago.MainView = this.gridView1;
             this.gdcOrdenPago.Name = "gdcOrdenPago";
@@ -86,6 +101,10 @@
             this.gdcOrdenPago.TabIndex = 36;
             this.gdcOrdenPago.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // clsCuentaPorPagarDetalleBindingSource
+            // 
+            this.clsCuentaPorPagarDetalleBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsCuentaPorPagarDetalle);
             // 
             // gridView1
             // 
@@ -108,7 +127,9 @@
             this.colNúmeroRegistroCXP.AppearanceHeader.Options.UseTextOptions = true;
             this.colNúmeroRegistroCXP.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNúmeroRegistroCXP.Caption = "Nro. Cta. Por Pagar";
+            this.colNúmeroRegistroCXP.FieldName = "_NumCuentaPorPagarDetalle";
             this.colNúmeroRegistroCXP.Name = "colNúmeroRegistroCXP";
+            this.colNúmeroRegistroCXP.OptionsColumn.AllowEdit = false;
             this.colNúmeroRegistroCXP.Visible = true;
             this.colNúmeroRegistroCXP.VisibleIndex = 0;
             this.colNúmeroRegistroCXP.Width = 118;
@@ -119,6 +140,7 @@
             this.colSaldoDeuda.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colSaldoDeuda.Caption = "Saldo Deuda";
             this.colSaldoDeuda.Name = "colSaldoDeuda";
+            this.colSaldoDeuda.OptionsColumn.AllowEdit = false;
             this.colSaldoDeuda.Visible = true;
             this.colSaldoDeuda.VisibleIndex = 1;
             this.colSaldoDeuda.Width = 118;
@@ -128,7 +150,9 @@
             this.gdcFechaVencimiento.AppearanceHeader.Options.UseTextOptions = true;
             this.gdcFechaVencimiento.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gdcFechaVencimiento.Caption = "Fecha de Vencimiento";
+            this.gdcFechaVencimiento.FieldName = "_FechaVencimiento";
             this.gdcFechaVencimiento.Name = "gdcFechaVencimiento";
+            this.gdcFechaVencimiento.OptionsColumn.AllowEdit = false;
             this.gdcFechaVencimiento.Visible = true;
             this.gdcFechaVencimiento.VisibleIndex = 2;
             this.gdcFechaVencimiento.Width = 118;
@@ -138,7 +162,9 @@
             this.colValorLetra.AppearanceHeader.Options.UseTextOptions = true;
             this.colValorLetra.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colValorLetra.Caption = "Valor de Letra";
+            this.colValorLetra.FieldName = "_ValorLetra";
             this.colValorLetra.Name = "colValorLetra";
+            this.colValorLetra.OptionsColumn.AllowEdit = false;
             this.colValorLetra.Visible = true;
             this.colValorLetra.VisibleIndex = 3;
             this.colValorLetra.Width = 118;
@@ -149,6 +175,7 @@
             this.gdcNumLetrasAPagar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gdcNumLetrasAPagar.Caption = "Letras Pendientes de Pago";
             this.gdcNumLetrasAPagar.Name = "gdcNumLetrasAPagar";
+            this.gdcNumLetrasAPagar.OptionsColumn.AllowEdit = false;
             this.gdcNumLetrasAPagar.Visible = true;
             this.gdcNumLetrasAPagar.VisibleIndex = 4;
             this.gdcNumLetrasAPagar.Width = 138;
@@ -158,6 +185,7 @@
             this.colNroPagosRealizar.AppearanceHeader.Options.UseTextOptions = true;
             this.colNroPagosRealizar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNroPagosRealizar.Caption = "Nro. Pagos a Realizar";
+            this.colNroPagosRealizar.FieldName = "colNroPagosRealizar";
             this.colNroPagosRealizar.Name = "colNroPagosRealizar";
             this.colNroPagosRealizar.Visible = true;
             this.colNroPagosRealizar.VisibleIndex = 5;
@@ -168,7 +196,9 @@
             this.colTotalPagar.AppearanceHeader.Options.UseTextOptions = true;
             this.colTotalPagar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTotalPagar.Caption = "Total a Pagar";
+            this.colTotalPagar.FieldName = "colTotalPagar";
             this.colTotalPagar.Name = "colTotalPagar";
+            this.colTotalPagar.OptionsColumn.AllowEdit = false;
             this.colTotalPagar.Visible = true;
             this.colTotalPagar.VisibleIndex = 6;
             this.colTotalPagar.Width = 110;
@@ -199,6 +229,7 @@
             // 
             // txtTotalPagar
             // 
+            this.txtTotalPagar.Enabled = false;
             this.txtTotalPagar.Location = new System.Drawing.Point(771, 413);
             this.txtTotalPagar.Name = "txtTotalPagar";
             this.txtTotalPagar.Size = new System.Drawing.Size(216, 20);
@@ -206,20 +237,94 @@
             // 
             // cbxProveedor
             // 
+            this.cbxProveedor.EditValue = "";
             this.cbxProveedor.Location = new System.Drawing.Point(332, 34);
             this.cbxProveedor.Name = "cbxProveedor";
             this.cbxProveedor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxProveedor.Properties.DataSource = this.clsEmpresaServicioBindingSource;
+            this.cbxProveedor.Properties.DisplayMember = "_RazonSocial";
+            this.cbxProveedor.Properties.ValueMember = "_IdEmpresaServicio";
             this.cbxProveedor.Properties.View = this.gridView2;
             this.cbxProveedor.Size = new System.Drawing.Size(131, 20);
             this.cbxProveedor.TabIndex = 0;
+            this.cbxProveedor.EditValueChanged += new System.EventHandler(this.cbxProveedor_EditValueChanged);
+            // 
+            // clsEmpresaServicioBindingSource
+            // 
+            this.clsEmpresaServicioBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsEmpresaServicio);
             // 
             // gridView2
             // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.col_Direccion,
+            this.col_Email,
+            this.col_Estado,
+            this.col_FechaRegistro,
+            this.col_IdEmpresa,
+            this.col_IdEmpresaServicio,
+            this.col_IdUsuario,
+            this.col_RazonSocial,
+            this.col_TipoPersona,
+            this.col_Website});
             this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // col_Direccion
+            // 
+            this.col_Direccion.FieldName = "_Direccion";
+            this.col_Direccion.Name = "col_Direccion";
+            // 
+            // col_Email
+            // 
+            this.col_Email.FieldName = "_Email";
+            this.col_Email.Name = "col_Email";
+            // 
+            // col_Estado
+            // 
+            this.col_Estado.FieldName = "_Estado";
+            this.col_Estado.Name = "col_Estado";
+            // 
+            // col_FechaRegistro
+            // 
+            this.col_FechaRegistro.FieldName = "_FechaRegistro";
+            this.col_FechaRegistro.Name = "col_FechaRegistro";
+            // 
+            // col_IdEmpresa
+            // 
+            this.col_IdEmpresa.FieldName = "_IdEmpresa";
+            this.col_IdEmpresa.Name = "col_IdEmpresa";
+            // 
+            // col_IdEmpresaServicio
+            // 
+            this.col_IdEmpresaServicio.FieldName = "_IdEmpresaServicio";
+            this.col_IdEmpresaServicio.Name = "col_IdEmpresaServicio";
+            this.col_IdEmpresaServicio.Visible = true;
+            this.col_IdEmpresaServicio.VisibleIndex = 0;
+            // 
+            // col_IdUsuario
+            // 
+            this.col_IdUsuario.FieldName = "_IdUsuario";
+            this.col_IdUsuario.Name = "col_IdUsuario";
+            // 
+            // col_RazonSocial
+            // 
+            this.col_RazonSocial.FieldName = "_RazonSocial";
+            this.col_RazonSocial.Name = "col_RazonSocial";
+            this.col_RazonSocial.Visible = true;
+            this.col_RazonSocial.VisibleIndex = 1;
+            // 
+            // col_TipoPersona
+            // 
+            this.col_TipoPersona.FieldName = "_TipoPersona";
+            this.col_TipoPersona.Name = "col_TipoPersona";
+            // 
+            // col_Website
+            // 
+            this.col_Website.FieldName = "_Website";
+            this.col_Website.Name = "col_Website";
             // 
             // label2
             // 
@@ -335,7 +440,7 @@
             this.tsbModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificar.Image")));
             this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModificar.Name = "tsbModificar";
-            this.tsbModificar.Size = new System.Drawing.Size(78, 22);
+            this.tsbModificar.Size = new System.Drawing.Size(76, 22);
             this.tsbModificar.Text = "Modificar";
             // 
             // tsbAnular
@@ -355,14 +460,6 @@
             this.tsbSalir.Name = "tsbSalir";
             this.tsbSalir.Size = new System.Drawing.Size(49, 22);
             this.tsbSalir.Text = "Salir";
-            // 
-            // btnGenerarComprobante
-            // 
-            this.btnGenerarComprobante.Location = new System.Drawing.Point(423, 445);
-            this.btnGenerarComprobante.Name = "btnGenerarComprobante";
-            this.btnGenerarComprobante.Size = new System.Drawing.Size(160, 30);
-            this.btnGenerarComprobante.TabIndex = 1;
-            this.btnGenerarComprobante.Text = "Generar Comprobante";
             // 
             // label3
             // 
@@ -390,23 +487,22 @@
             this.label6.TabIndex = 28;
             this.label6.Text = "Estado:";
             // 
-            // textEdit2
+            // txtEstado
             // 
-            this.textEdit2.Enabled = false;
-            this.textEdit2.Location = new System.Drawing.Point(64, 413);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(109, 20);
-            this.textEdit2.TabIndex = 30;
+            this.txtEstado.Enabled = false;
+            this.txtEstado.Location = new System.Drawing.Point(64, 413);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(109, 20);
+            this.txtEstado.TabIndex = 30;
             // 
             // frmOrdenPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 482);
-            this.Controls.Add(this.btnGenerarComprobante);
             this.Controls.Add(this.gdcOrdenPago);
             this.Controls.Add(this.textEdit1);
-            this.Controls.Add(this.textEdit2);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtEfectivoDisponible);
             this.Controls.Add(this.txtTotalPagar);
             this.Controls.Add(this.cbxProveedor);
@@ -425,17 +521,20 @@
             this.Name = "frmOrdenPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Orden de Pago";
+            this.Load += new System.EventHandler(this.frmOrdenPago_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gdcOrdenPago)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsCuentaPorPagarDetalleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEfectivoDisponible.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalPagar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxProveedor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsEmpresaServicioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEstado.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,14 +567,25 @@
         private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbConsultar;
         private System.Windows.Forms.ToolStripButton tsbAnular;
-        private DevExpress.XtraEditors.SimpleButton btnGenerarComprobante;
         private System.Windows.Forms.ToolStripButton tsbModificar;
         private System.Windows.Forms.ToolStripButton tsbSalir;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn gdcNumLetrasAPagar;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtEstado;
         private DevExpress.XtraGrid.Columns.GridColumn gdcFechaVencimiento;
+        private System.Windows.Forms.BindingSource clsCuentaPorPagarDetalleBindingSource;
+        private System.Windows.Forms.BindingSource clsEmpresaServicioBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Direccion;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Email;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Estado;
+        private DevExpress.XtraGrid.Columns.GridColumn col_FechaRegistro;
+        private DevExpress.XtraGrid.Columns.GridColumn col_IdEmpresa;
+        private DevExpress.XtraGrid.Columns.GridColumn col_IdEmpresaServicio;
+        private DevExpress.XtraGrid.Columns.GridColumn col_IdUsuario;
+        private DevExpress.XtraGrid.Columns.GridColumn col_RazonSocial;
+        private DevExpress.XtraGrid.Columns.GridColumn col_TipoPersona;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Website;
     }
 }

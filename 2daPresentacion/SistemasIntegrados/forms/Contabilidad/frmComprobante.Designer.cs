@@ -72,7 +72,6 @@
             this.txtD = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtH = new System.Windows.Forms.TextBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -107,7 +106,7 @@
             this.btnNuevo.Image = global::forms.Properties.Resources.nuevo;
             this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(51, 22);
+            this.btnNuevo.Size = new System.Drawing.Size(62, 22);
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -122,14 +121,14 @@
             this.btnGuardar.Image = global::forms.Properties.Resources.guardar;
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(57, 22);
+            this.btnGuardar.Size = new System.Drawing.Size(69, 22);
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(249, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(373, 22);
             this.toolStripLabel1.Text = "                                                                                 " +
     "                                         ";
             this.toolStripLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,7 +138,7 @@
             this.btnEliminar.Image = global::forms.Properties.Resources.eliminar;
             this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(55, 22);
+            this.btnEliminar.Size = new System.Drawing.Size(67, 22);
             this.btnEliminar.Text = "Revertir";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -153,7 +152,7 @@
             this.btnSalir.Image = global::forms.Properties.Resources._24_cancelar;
             this.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(42, 22);
+            this.btnSalir.Size = new System.Drawing.Size(49, 22);
             this.btnSalir.Text = "Salir";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -164,16 +163,16 @@
             this.panelControl1.Controls.Add(this.dtFecha);
             this.panelControl1.Controls.Add(this.label3);
             this.panelControl1.Controls.Add(this.label4);
+            this.panelControl1.Controls.Add(this.label1);
+            this.panelControl1.Controls.Add(this.txtGlosa);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 25);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(797, 56);
+            this.panelControl1.Size = new System.Drawing.Size(797, 125);
             this.panelControl1.TabIndex = 23;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.BackgroundImage = global::forms.Properties.Resources.buscar;
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscar.Location = new System.Drawing.Point(217, 14);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(23, 23);
@@ -190,6 +189,7 @@
             this.txtNumCom.Properties.Mask.ShowPlaceHolders = false;
             this.txtNumCom.Size = new System.Drawing.Size(74, 20);
             this.txtNumCom.TabIndex = 3;
+            this.txtNumCom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumCom_KeyPress);
             // 
             // dtFecha
             // 
@@ -220,28 +220,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 342);
+            this.label1.Location = new System.Drawing.Point(315, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Glosa";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtGlosa
             // 
-            this.txtGlosa.Location = new System.Drawing.Point(61, 339);
+            this.txtGlosa.Location = new System.Drawing.Point(355, 77);
             this.txtGlosa.MaxLength = 200;
             this.txtGlosa.Multiline = true;
             this.txtGlosa.Name = "txtGlosa";
-            this.txtGlosa.Size = new System.Drawing.Size(231, 43);
+            this.txtGlosa.Size = new System.Drawing.Size(437, 43);
             this.txtGlosa.TabIndex = 0;
-            this.txtGlosa.TextChanged += new System.EventHandler(this.txtGlosa_TextChanged);
             // 
             // gridControlComprobante
             // 
             this.gridControlComprobante.DataSource = this.clsDetalleComprobanteBindingSource;
             this.gridControlComprobante.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControlComprobante.Location = new System.Drawing.Point(0, 81);
+            this.gridControlComprobante.Location = new System.Drawing.Point(0, 150);
             this.gridControlComprobante.MainView = this.gridViewComprobante;
             this.gridControlComprobante.Name = "gridControlComprobante";
             this.gridControlComprobante.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
@@ -410,7 +408,7 @@
             // lblDebe
             // 
             this.lblDebe.AutoSize = true;
-            this.lblDebe.Location = new System.Drawing.Point(322, 368);
+            this.lblDebe.Location = new System.Drawing.Point(322, 392);
             this.lblDebe.Name = "lblDebe";
             this.lblDebe.Size = new System.Drawing.Size(60, 13);
             this.lblDebe.TabIndex = 25;
@@ -419,7 +417,7 @@
             // txtD
             // 
             this.txtD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtD.Location = new System.Drawing.Point(388, 365);
+            this.txtD.Location = new System.Drawing.Point(388, 389);
             this.txtD.Name = "txtD";
             this.txtD.ReadOnly = true;
             this.txtD.Size = new System.Drawing.Size(100, 20);
@@ -428,7 +426,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(606, 368);
+            this.label2.Location = new System.Drawing.Point(606, 392);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 25;
@@ -437,20 +435,11 @@
             // txtH
             // 
             this.txtH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.txtH.Location = new System.Drawing.Point(675, 365);
+            this.txtH.Location = new System.Drawing.Point(675, 389);
             this.txtH.Name = "txtH";
             this.txtH.ReadOnly = true;
             this.txtH.Size = new System.Drawing.Size(100, 20);
             this.txtH.TabIndex = 26;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(712, 402);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
-            this.lblUsuario.TabIndex = 25;
-            this.lblUsuario.Text = "Usuario";
             // 
             // frmComprobante
             // 
@@ -458,14 +447,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 437);
             this.Controls.Add(this.txtH);
-            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtD);
             this.Controls.Add(this.lblDebe);
             this.Controls.Add(this.gridControlComprobante);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelControl1);
-            this.Controls.Add(this.txtGlosa);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmComprobante";
             this.Text = "Comprobantes Contables";
@@ -533,7 +519,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private DevExpress.XtraEditors.TextEdit txtNumCom;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblUsuario;
 
     }
 }

@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using clases.Contabilidad;
-
 namespace datos.Contabilidad
 {
-    public class clsDatoComprobante
+    public class clsDatoComprobante 
     {
-
         public Boolean GuardarCabecera(ref clsCabeceraComprobante dato) {
             try
             {
@@ -33,9 +31,9 @@ namespace datos.Contabilidad
                     IdEmpresa=dato.IdEmpresa,
                     numero_comprobante=numero,
                     fecha=dato.fecha,
-                    glosa=dato.glosa,
-                    periodo_contable=Convert.ToDecimal((from q in ent.PeriodoContable where q.FechaInicio<DateTime.Now && q.FechaFin>DateTime.Now select q.IdPeriodoContable).First()),
-                    periodo_contable_IdAFiscal = DateTime.Now.Year,
+                    glosa=dato.glosa
+                    //periodo_contable
+                    //periodo_contable_IdAFiscal
                     //IdUsuario
                     //FechaModificacion
 
@@ -200,5 +198,40 @@ namespace datos.Contabilidad
                 return false;
             }
         }
+
+        public List<clsConsultaComprobante> ListaCom()
+        {
+            try
+            {
+                EntitiesContabilidad2 ent = new EntitiesContabilidad2();
+                var sel = from q in ent.CabeceraComprobante
+                          join w in ent.DetalleComprobante on q.numero_comprobante equals w.cabecera_comprobante 
+                          where q.IdEmpresa == w.IdEmpresa
+                          select new { q.IdEmpresa,q.numero_comprobante,q.glosa,q.fecha ,w.debe,w.haber};
+                var sel2 = from q in sel
+                           group q by new { q.numero_comprobante, q.glosa,q.fecha,q.IdEmpresa } into g
+                           select new { g.Key.numero_comprobante, g.Key.IdEmpresa, g.Key.glosa, g.Key.fecha, debe = g.Sum(r => r.debe), haber = g.Sum(r => r.debe) };
+                List<clsConsultaComprobante> lista = new List<clsConsultaComprobante>();
+
+                foreach (var item in sel2)
+                {
+                    clsConsultaComprobante clase = new clsConsultaComprobante();
+                    clase.IdEmpresa = item.IdEmpresa;
+                    clase.glosa = item.glosa;
+                    clase.numero_comprobante = item.numero_comprobante;
+                    clase.fecha = item.fecha;
+                    clase.haber = item.haber;
+                    clase.debe = item.debe;
+                    lista.Add(clase);
+                }
+                return lista;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        
     }
 }

@@ -21,16 +21,16 @@ namespace datos.Cuentasxpagar
                 foreach (var item in con)
                 {
                     clsEmpresaServicio clas = new clsEmpresaServicio();
-                    clas.IdEmpresaServicio = Convert.ToString(item.IdEmpresaServicio);
-                    clas.fechaRegistro = item.FechaRegistro;
-                    clas.RazonSocial = item.RazonSocial;
-                    clas.Direccion = item.Direccion;
-                    clas.email = item.Email;
-                    clas.webpage = item.Webpage;
-                    clas.Estado = item.Estado;
-                    clas.IdTipoPersona = item.IdTipoPersona;
-                    clas.IdEmpresa = item.IdEmpresa;
-                    clas.IdUsuario = item.IdUsuario;
+                    clas._IdEmpresaServicio = Convert.ToString(item.IdEmpresaServicio);
+                    clas._FechaRegistro = item.FechaRegistro;
+                    clas._RazonSocial = item.RazonSocial;
+                    clas._Direccion = item.Direccion;
+                    clas._Email = item.Email;
+                    clas._Website = item.Webpage;
+                    clas._Estado = item.Estado;
+                    clas._TipoPersona = item.IdTipoPersona;
+                    clas._IdEmpresa = item.IdEmpresa;
+                    clas._IdUsuario = item.IdUsuario;
                     lista.Add(clas);
                 }
 
@@ -77,17 +77,17 @@ namespace datos.Cuentasxpagar
                  {
                using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
                   {
-                var x = (from q in ent.EmpresaServicio where q.IdEmpresaServicio ==(Empresa.IdEmpresaServicio) select q).First();
-                x.IdEmpresaServicio = Empresa.IdEmpresaServicio;
+                var x = (from q in ent.EmpresaServicio where q.IdEmpresaServicio ==(Empresa._IdEmpresaServicio) select q).First();
+                x.IdEmpresaServicio = Empresa._IdEmpresaServicio;
                
-                x.RazonSocial = Empresa.RazonSocial;
-                x.Direccion = Empresa.Direccion;
-                x.Email = Empresa.email;
-                x.Webpage = Empresa.webpage;
-                x.Estado = Empresa.Estado;
-                x.IdTipoPersona = Empresa.IdTipoPersona;
-                x.IdEmpresa= Empresa.IdEmpresa;
-                x.IdUsuario = Empresa.IdUsuario;
+                x.RazonSocial = Empresa._RazonSocial;
+                x.Direccion = Empresa._Direccion;
+                x.Email = Empresa._Email;
+                x.Webpage = Empresa._Website;
+                x.Estado = Empresa._Estado;
+                x.IdTipoPersona = Empresa._TipoPersona;
+                x.IdEmpresa= Empresa._IdEmpresa;
+                x.IdUsuario = Empresa._IdUsuario;
                 ent.SaveChanges();
 
 
@@ -105,16 +105,16 @@ namespace datos.Cuentasxpagar
                 {
                     EmpresaServicio servicio = new EmpresaServicio()
                     {
-                        IdEmpresaServicio = Empresa.IdEmpresaServicio,
-                        FechaRegistro = Empresa.fechaRegistro,
-                        RazonSocial = Empresa.RazonSocial,
-                        Direccion = Empresa.Direccion,
-                        Email = Empresa.email,
-                        Webpage = Empresa.webpage,
-                        Estado = Empresa.Estado,
-                        IdTipoPersona = Empresa.IdTipoPersona,
-                        IdEmpresa = Empresa.IdEmpresa,
-                        IdUsuario = Empresa.IdUsuario,
+                        IdEmpresaServicio = Empresa._IdEmpresaServicio,
+                        FechaRegistro = Empresa._FechaRegistro,
+                        RazonSocial = Empresa._RazonSocial,
+                        Direccion = Empresa._Direccion,
+                        Email = Empresa._Email,
+                        Webpage = Empresa._Website,
+                        Estado = Empresa._Estado,
+                        IdTipoPersona = Empresa._TipoPersona,
+                        IdEmpresa = Empresa._IdEmpresa,
+                        IdUsuario = Empresa._IdUsuario,
 
 
                     };
@@ -138,7 +138,7 @@ namespace datos.Cuentasxpagar
                 using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
                 {
 
-                    var x = (from q in ent.EmpresaServicio  where q.IdEmpresaServicio ==( Empresa .IdEmpresaServicio)  select q).First();
+                    var x = (from q in ent.EmpresaServicio  where q.IdEmpresaServicio ==( Empresa ._IdEmpresaServicio)  select q).First();
 
                     ent.DeleteObject(x);
 

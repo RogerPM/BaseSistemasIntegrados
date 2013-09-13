@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using forms.Contabilidad;
 
 namespace forms
 {
@@ -15,7 +16,7 @@ namespace forms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSesion());           
+            Application.Run(new frmSesion());
         }
     }
 }

@@ -120,13 +120,13 @@ namespace forms.Cuentasxpagar
         datosCuentaBancaria datosbancaria = new datosCuentaBancaria();
         public void Set()
         {
-            txtNroIdentificacion.Text =Convert.ToString (clas.IdEmpresaServicio);
-            deFechaActual.EditValue = clas.fechaRegistro;
-            txtRazonSocial.Text = clas.RazonSocial;
-            txtDirección.Text = clas.Direccion;
-            txtMail.Text = clas.email;
-            txtWebSite.Text = clas.webpage;
-            if (clas.Estado == 1)
+            txtNroIdentificacion.Text =Convert.ToString (clas._IdEmpresaServicio);
+            deFechaActual.EditValue = clas._FechaRegistro;
+            txtRazonSocial.Text = clas._RazonSocial;
+            txtDirección.Text = clas._Direccion;
+            txtMail.Text = clas._Email;
+            txtWebSite.Text = clas._Website;
+            if (clas._Estado == 1)
             {
                 cbxEstado.Text = "Activo";
             }
@@ -135,9 +135,9 @@ namespace forms.Cuentasxpagar
                 cbxEstado.Text = "Inactivo";
             }
 
-            gleTipoPersona.EditValue = clas.IdTipoPersona;
-            solo2 = clas.IdEmpresa;
-            solo = clas.IdUsuario;
+            gleTipoPersona.EditValue = clas._TipoPersona;
+            solo2 = clas._IdEmpresa;
+            solo = clas._IdUsuario;
             
             gdcDetalleBancario.DataSource = datosbancaria.consultaPorEmpresa(txtNroIdentificacion.Text);
             
@@ -175,22 +175,22 @@ namespace forms.Cuentasxpagar
 
         public void get()
         {
-            clas.IdEmpresaServicio = Convert.ToString(txtNroIdentificacion.Text);
-            clas.fechaRegistro=Convert.ToDateTime(deFechaActual.EditValue);
-            clas.RazonSocial=txtRazonSocial.Text ;
-             clas.Direccion=txtDirección.Text;
-             clas.email=txtMail.Text;
-            clas.webpage=txtWebSite.Text;
+            clas._IdEmpresaServicio = Convert.ToString(txtNroIdentificacion.Text);
+            clas._FechaRegistro=Convert.ToDateTime(deFechaActual.EditValue);
+            clas._RazonSocial=txtRazonSocial.Text ;
+             clas._Direccion=txtDirección.Text;
+             clas._Email=txtMail.Text;
+            clas._Website=txtWebSite.Text;
 
             if (cbxEstado.Text == "Activo")
-                clas.Estado = 1;
+                clas._Estado = 1;
             else
             {
-                clas.Estado = 0;
+                clas._Estado = 0;
             }
-            clas.IdTipoPersona = solo;// Convert.ToInt32(cbxTipoPersona.EditValue);
-            clas.IdEmpresa = solo2;//solo;
-            clas.IdUsuario=solo;
+            clas._TipoPersona = solo;// Convert.ToInt32(cbxTipoPersona.EditValue);
+            clas._IdEmpresa = solo2;//solo;
+            clas._IdUsuario=solo;
 
            
         }

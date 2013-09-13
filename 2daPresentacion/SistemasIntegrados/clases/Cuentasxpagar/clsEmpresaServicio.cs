@@ -7,22 +7,25 @@ namespace clases.Cuentasxpagar
 {
     public class clsEmpresaServicio
     {
-        public string  IdEmpresaServicio{get;set;}
-        public DateTime fechaRegistro {get;set;}
-        public string RazonSocial{get;set;}
-        public string Direccion {get;set;}
-        public string email {get;set;}
-        public string webpage{get;set;}
-        public int Estado {get;set;}
-        public int IdTipoPersona {get;set;}
-        public int IdEmpresa {get;set;}
-        public int IdUsuario {get;set;}
+        public string _IdEmpresaServicio { get; set; }
+        public DateTime _FechaRegistro { get; set; }
+        public string _RazonSocial { get; set; }
+        public string _Direccion { get; set; }
+        public string _Email { get; set; }
+        public string _Website { get; set; }
+        public int _Estado { get; set; }
+        public int _TipoPersona { get; set; }
+        public int _IdEmpresa { get; set; }
+        public int _IdUsuario { get; set; }
+        
+        public List<clsDetalleTelefono> _DetalleTelefono { get; set; }
+        public List<clsCtaBancaria2> _CuentaBancaria { get; set; }
 
         public clsEmpresaServicio()
         {
+
         }
 
-
+       
     }
 }
-	

@@ -169,3 +169,13 @@ E:\SI\Development\v20\SistemasIntegrados\clases\bin\Debug\clases.dll
 E:\SI\Development\v20\SistemasIntegrados\clases\bin\Debug\clases.pdb
 E:\SI\Development\v20\SistemasIntegrados\clases\obj\Debug\clases.dll
 E:\SI\Development\v20\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v20\ok59_2daPresentacion\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v20\ok59_2daPresentacion\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v20\ok59_2daPresentacion\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v20\ok59_2daPresentacion\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v20\ok59_2daPresentacion\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v21\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v21\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v21\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v21\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v21\SistemasIntegrados\clases\obj\Debug\clases.pdb

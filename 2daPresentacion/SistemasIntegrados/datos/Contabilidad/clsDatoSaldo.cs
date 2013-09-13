@@ -101,7 +101,7 @@ namespace datos.Contabilidad
 
                 return lista;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 return null;
             }

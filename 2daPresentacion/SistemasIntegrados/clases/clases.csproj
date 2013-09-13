@@ -113,6 +113,7 @@
     </Compile>
     <Compile Include="Contabilidad\ClaseTP.cs" />
     <Compile Include="Contabilidad\clsCabeceraComprobante.cs" />
+    <Compile Include="Contabilidad\clsConsultaComprobante.cs" />
     <Compile Include="Contabilidad\clsCuenta.cs" />
     <Compile Include="Contabilidad\clsDetalleComprobante.cs" />
     <Compile Include="Contabilidad\clslistaTT.cs" />
@@ -147,18 +148,57 @@
     <Compile Include="CuentasxCobrar\clsTipoInversion.cs" />
     <Compile Include="CuentasxCobrar\clsUnidadTiempo.cs" />
     <Compile Include="CuentasxCobrar\ObjetoGenerico.cs" />
-    <Compile Include="Cuentasxpagar\clsCuentaBancaria2.cs" />
-    <Compile Include="Cuentasxpagar\clsEmpresaServicio.cs" />
-    <Compile Include="Cuentasxpagar\clsFrecuenciaPago.cs" />
-    <Compile Include="Cuentasxpagar\clsImpuesto.cs" />
-    <Compile Include="Cuentasxpagar\clsMedioPago.cs" />
-    <Compile Include="Cuentasxpagar\clsMensajeCxP.cs" />
-    <Compile Include="Cuentasxpagar\clsOrdenPago.cs" />
-    <Compile Include="Cuentasxpagar\clsOrdenPagoDetalle.cs" />
-    <Compile Include="Cuentasxpagar\clsPago.cs" />
-    <Compile Include="Cuentasxpagar\clsPagoDetalle.cs" />
-    <Compile Include="Cuentasxpagar\clsPagoDetalleDos.cs" />
-    <Compile Include="Cuentasxpagar\clsPagoDos.cs" />
+    <Compile Include="Cuentasxpagar\clsBancosCXP.cs" />
+    <Compile Include="Cuentasxpagar\clsCtaBancaria2.cs" />
+    <Compile Include="Cuentasxpagar\clsCuentaBancaria2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsCuentaPorPagar.cs" />
+    <Compile Include="Cuentasxpagar\clsCuentaPorPagarDetalle.cs" />
+    <Compile Include="Cuentasxpagar\clsDetalleTelefono.cs" />
+    <Compile Include="Cuentasxpagar\clsDetalleTelefonoCXP.cs" />
+    <Compile Include="Cuentasxpagar\clsDetCredito.cs" />
+    <Compile Include="Cuentasxpagar\clsEmpresaServicio.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsFrecuencia.cs" />
+    <Compile Include="Cuentasxpagar\clsFrecuenciaPago.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsImpuesto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsImpuestoCuenta.cs" />
+    <Compile Include="Cuentasxpagar\clsImpuestos.cs" />
+    <Compile Include="Cuentasxpagar\clsMedioPago.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsMensajeCxP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsMsgCuentasPorPagar.cs" />
+    <Compile Include="Cuentasxpagar\clsOrdenPago.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsOrdenPagoCab.cs" />
+    <Compile Include="Cuentasxpagar\clsOrdenPagoDet.cs" />
+    <Compile Include="Cuentasxpagar\clsOrdenPagoDetalle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsPago.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsPagoDetalle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsPagoDetalleDos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsPagoDos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsTipoPersonaCXP.cs" />
+    <Compile Include="Cuentasxpagar\clsTipoTelefonoCXP.cs" />
     <Compile Include="Inventario\clsArticulo.cs">
       <SubType>Code</SubType>
     </Compile>

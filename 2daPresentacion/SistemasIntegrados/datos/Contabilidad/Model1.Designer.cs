@@ -273,22 +273,6 @@ namespace datos.Contabilidad
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        public ObjectSet<vwCuenta> vwCuenta
-        {
-            get
-            {
-                if ((_vwCuenta == null))
-                {
-                    _vwCuenta = base.CreateObjectSet<vwCuenta>("vwCuenta");
-                }
-                return _vwCuenta;
-            }
-        }
-        private ObjectSet<vwCuenta> _vwCuenta;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
         public ObjectSet<vwTipoTransaccion> vwTipoTransaccion
         {
             get
@@ -301,6 +285,22 @@ namespace datos.Contabilidad
             }
         }
         private ObjectSet<vwTipoTransaccion> _vwTipoTransaccion;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<vwCuenta> vwCuenta
+        {
+            get
+            {
+                if ((_vwCuenta == null))
+                {
+                    _vwCuenta = base.CreateObjectSet<vwCuenta>("vwCuenta");
+                }
+                return _vwCuenta;
+            }
+        }
+        private ObjectSet<vwCuenta> _vwCuenta;
 
         #endregion
 
@@ -403,19 +403,19 @@ namespace datos.Contabilidad
         }
     
         /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet vwCuenta. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddTovwCuenta(vwCuenta vwCuenta)
-        {
-            base.AddObject("vwCuenta", vwCuenta);
-        }
-    
-        /// <summary>
         /// Método desusado para agregar un nuevo objeto al EntitySet vwTipoTransaccion. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
         /// </summary>
         public void AddTovwTipoTransaccion(vwTipoTransaccion vwTipoTransaccion)
         {
             base.AddObject("vwTipoTransaccion", vwTipoTransaccion);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet vwCuenta. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddTovwCuenta(vwCuenta vwCuenta)
+        {
+            base.AddObject("vwCuenta", vwCuenta);
         }
 
         #endregion
@@ -3134,30 +3134,6 @@ namespace datos.Contabilidad
         private Nullable<global::System.Decimal> _debe;
         partial void OndebeChanging(Nullable<global::System.Decimal> value);
         partial void OndebeChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> Expr1
-        {
-            get
-            {
-                return _Expr1;
-            }
-            set
-            {
-                OnExpr1Changing(value);
-                ReportPropertyChanging("Expr1");
-                _Expr1 = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Expr1");
-                OnExpr1Changed();
-            }
-        }
-        private Nullable<global::System.Decimal> _Expr1;
-        partial void OnExpr1Changing(Nullable<global::System.Decimal> value);
-        partial void OnExpr1Changed();
 
         #endregion
 
