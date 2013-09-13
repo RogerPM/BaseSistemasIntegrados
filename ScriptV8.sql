@@ -2415,7 +2415,7 @@ create table ActivoFijo.EquipoMaquinariaMuebles
 	IdMarca 				int   null,--relacion tablas de inventario,
 	IdModelo 				int   null,--relacion tablas de inventario
 	IdColor 				int   null,--relacion tablas de inventario,
-	Carga					int   null,
+	Carga					numeric(10,2)   null,
 	AniosDepreciados		int   null,
 	DimensionAncho			numeric(10,2)   null,
 	DimensionLargo			numeric(10,2)   null,
@@ -2550,7 +2550,7 @@ create table ActivoFijo.Edifico
 (
 	IdActivoFijo 				int primary key,
 	FechaConstruccion			date  null,
-	CodigoCatastral 			int   null,
+	CodigoCatastral 			varchar(12)   null,
 	NumeroPisos 				int   null,
 	AniosDepreciados 			int   null,
 	Ubicacion 					varchar(100)  null, 
