@@ -2006,10 +2006,8 @@ CREATE TABLE CuentasPorCobrar.CuentaxCobrarDet
 	fecha_cobro				date NOT NULL,
 	fecha_vencimiento		date NOT NULL,
 	FechaModificacion		datetime, 
-	estado 				varchar NULL,
-	idCobro int not null
+	estado 				varchar NULL
 	primary key (idCuentaxCobrar, numero),
-	foreign key (idCobro) references CuentasPorCobrar.Cobro
 )
 Go
  
