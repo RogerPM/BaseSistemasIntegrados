@@ -1958,59 +1958,27 @@ create table CuentasPorCobrar.CuentaxCobrar
 (
 	idEmpresa 				int NOT NULL,
 	idUsuario 				int NOT NULL,
-	idCuentaxCobrar 		int NOT NULL,	
+	idCuentaxCobrar 			int NOT NULL,	
 	numero_comprobante		numeric(4,0),
-	idTransaccion 			int NOT NULL,
-	idFactura 				int NOT NULL,
 	Modulo				int NOT NULL,
-	idCabeceraComprobante 	int NOT NULL,
+	idNumeroFactura 			int NOT NULL,
 	TotalCuotas 			int NOT NULL,
 	porcentaje_interes		numeric NOT NULL,
-	idEstado 				int NOT NULL,
+	estado 				varchar(10) NULL,
 	primary key (idCuentaxCobrar),
 	foreign key (idEmpresa) references Seguridad.Empresa,
 	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idTransaccion) references Facturacion.Factura,
-	foreign key (idFactura) references Facturacion.Factura,
-	foreign key (IdEmpresa, numero_comprobante) references Contabilidad.CabeceraComprobante,
-	foreign key (idEstado) references Seguridad.Estado
+	foreign key (IdEmpresa,numero_comprobante) references Contabilidad.CabeceraComprobante
 )
-go
 
-CREATE TABLE CuentasPorCobrar.CuentaxCobrarDet
-(
-	idEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	idCuentaxCobrar 		int NOT NULL,
-	/*idCobro 				int NOT NULL,*//*se cambio logica de referencia a cobro*/
-	Numero 					int NOT NULL,
-	numero_cuota 			int NOT NULL,
-	valor_cuota				money NOT NULL,
-	valor_interes			money NOT NULL,
-	valor_mora				money NOT NULL,
-	fecha_cobro				date NOT NULL,
-	fecha_vencimiento		date NOT NULL,
-	FechaModificacion		datetime, 
-	idEstado int NOT NULL,
-	primary key (idCuentaxCobrar, numero),
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	/*foreign key (idCobro) references CuentasPorCobrar.Cobro,*/
-	foreign key (idEstado) references Seguridad.Estado
-)
-go
- 
+
  CREATE TABLE CuentasPorCobrar.Cobro
 (
 	idEmpresa 				int NOT NULL,
 	idUsuario 				int NOT NULL,
 	idCobro 				int NOT NULL,
-	idTransaccion 			int NOT NULL,
-	idFactura 				int NOT NULL,
-	idCliente 				int NOT NULL,
+	idNumeroFactura 				int NOT NULL,
 	idCabeceraComprobante	numeric(4,0) NOT NULL,
-	idCuentaxCobrar			int NOT NULL,/*AGREGADO CAMBIO LOGICA*/
-	numeroCuentaxCobrar		int NOT NULL,/*AGREGADO CAMBIO LOGICA*/
 	Fecha					date NOT NULL,
 	FechaModificacion		datetime, 
 	NumeroCuota 			int NOT NULL,
@@ -2019,23 +1987,36 @@ go
 	Mora					money NOT NULL,
 	ValorPagado				money NOT NULL,
 	Saldo					money NOT NULL,
-	idEstado 				int NOT NULL,
+	idEstado 				varchar(10) NOT NULL,
 	primary key (idCobro),
 	foreign key (idEmpresa) references Seguridad.Empresa,
 	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idTransaccion) references Facturacion.Factura,
-	foreign key (idFactura) references Facturacion.Factura,
-	foreign key (idCliente) references RecursosHumanos.Persona,
-	foreign key (IdEmpresa,idCabeceraComprobante) references Contabilidad.CabeceraComprobante,
-	foreign key (idCuentaxCobrar, numeroCuentaxCobrar) references CuentasPorCobrar.CuentaxCobrarDet,/*agregada ref de cambio de log*/
-	foreign key (idEstado) references Seguridad.Estado
+	foreign key (IdEmpresa,idCabeceraComprobante) references Contabilidad.CabeceraComprobante --asiento contable
 )
 go
+
+CREATE TABLE CuentasPorCobrar.CuentaxCobrarDet
+(
+	idCuentaxCobrar 		int NOT NULL,
+	Numero 				int NOT NULL,
+	numero_cuota 			int NOT NULL,
+	valor_cuota				money NOT NULL,
+	valor_interes			money NOT NULL,
+	valor_mora				money NOT NULL,
+	fecha_cobro				date NOT NULL,
+	fecha_vencimiento		date NOT NULL,
+	FechaModificacion		datetime, 
+	estado 				varchar NULL,
+	idCobro int not null
+	primary key (idCuentaxCobrar, numero),
+	foreign key (idCobro) references CuentasPorCobrar.Cobro
+)
+Go
+ 
+
  
 CREATE TABLE CuentasPorCobrar.CobroDet
 (
-	idEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
 	idCobro 				int NOT NULL,
 	numero 					int NOT NULL,
 	idBanco 				int NOT NULL,
@@ -2043,17 +2024,15 @@ CREATE TABLE CuentasPorCobrar.CobroDet
 	Valor					money NOT NULL,
 	NumeroDocumento 		int NOT NULL,
 	Observacion				varchar(150) NOT NULL,
-	idEstado 				int NOT NULL,
+	idEstado 				varchar(10) NOT NULL,
+	idEmpresa	int not null
 	primary key(idCobro,numero),
-	foreign key(idEmpresa)references Seguridad.Empresa,
-	foreign key(idUsuario)references Seguridad.Usuario,
 	foreign key(idCobro)references CuentasPorCobrar.Cobro,/*Se agrego la referencia a cobro que le quitaron*/
 	foreign key(idBanco)references CuentasPorCobrar.Banco,
-	foreign key (idMedioPago, idEmpresa)references CuentaxPagar.MedioPago,/*se corrige la referencia*/
-	foreign key (idEstado) references Seguridad.Estado 
+	foreign key (idMedioPago,idEmpresa)references CuentaxPagar.MedioPago,/*se corrige la referencia*/
  )
  go
- 
+
 CREATE TABLE CuentasPorCobrar.AperturaDet
 (
 	idEmpresa 				int NOT NULL,
