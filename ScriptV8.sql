@@ -2102,7 +2102,7 @@ create table CuentaxPagar.TelefonoEmpresaServicio
 		foreign key (IdEmpresa)references Seguridad.Empresa, 
 		foreign key (IdEmpresaServicio, IdEmpresa)references CuentaxPagar.EmpresaServicio,
 		foreign key (IdTelefono)references RecursosHumanos.Telefono, 
-		primary key(IdEmpresaServicio,IdEmpresa, Serie, IdTelefono)	
+		primary key(IdEmpresaServicio, IdEmpresa, IdTelefono)	
 )
 go	
 
