@@ -2893,9 +2893,6 @@ foreign key (TipoIdentificacion)references RecursosHumanos.TipoIdentificacion
 go
 
 
-
-
-
 --ARTICULO
 create table Taller.Articulo(
 IdEmpresa		int not null,
@@ -2935,7 +2932,6 @@ foreign key (IdModelo)references Inventario.Modelo,
 foreign key (IdTipoMaterial)references Inventario.TipoMaterial
 )
 go
-
 
 
 
@@ -2986,8 +2982,11 @@ CREATE TABLE Taller.OrdenTrabajo
 	InicioReparacion     date  not null,
 	FechaIngreso	     datetime  not null,
 	FechaEntrega		 date  not null,
+	IvaTrabajos		     decimal(18,2) not null,
 	TotalTrabajos 	     decimal(18,2) not null,
+	IvaRepuestos		 decimal(18,2) not null,
 	TotalRepuestos 	     decimal(18,2) not null,
+	IvaOtros		     decimal(18,2) not null,
 	TotalOtros 	         decimal(18,2) not null,
 	Observacion			 varchar(100), 
 	IdEstado 	         int not null,
@@ -3070,14 +3069,23 @@ CREATE TABLE Taller.Liquidacion
 	IdOrdenTrabajo    int  not null,
 	Fecha             date not null,	
 	TotalPagar		  decimal(18,2) not null,
+	IdFormaPago		  int not null,
+	NumeroCuotaMensual int null,
+	CuotaMensual	  decimal(18,2) null,
+	FechaInicialPago  date not null,
+	FechaFinalPago	  date not null,
 	Observacion       varchar(100),
 	IdEstado 	      int not null, 
 	IdEmpresa		  int  not null,
 	foreign key(IdEstado)references Seguridad.Estado,
 	foreign key (IdEmpresa)references Seguridad.Empresa,
+	foreign key (IdFormaPago) references Facturacion.FormaPago,
 	foreign key(IdOrdenTrabajo)references Taller.OrdenTrabajo
 )
 go
+
+
+
 
 /*************contabilidad***************/
 create table Contabilidad.SaldoxComprobante(
