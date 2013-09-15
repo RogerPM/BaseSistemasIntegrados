@@ -912,6 +912,14 @@ create table Contabilidad.Cuenta
 )
 go
 
+create table Contabilidad.TipoTransaccion
+(
+	IdTransaccion 			int primary key,
+	modulo 					int references Seguridad.Modulo not null,
+	TipoDocumento			varchar(50),
+	descripcion				varchar(50) not null
+)
+go
 create table Contabilidad.CabeceraComprobante
 (
 	IdEmpresa 				int ,
@@ -922,11 +930,12 @@ create table Contabilidad.CabeceraComprobante
 	periodo_contable_IdAFiscal numeric(4,0),
 	IdUsuario 				int,
 	FechaModificacion		datetime, 
+	TipoTransaccion			int,
 	primary key(IdEmpresa, numero_comprobante),
 	foreign key(IdEmpresa,periodo_contable,periodo_contable_IdAFiscal) references Contabilidad.PeriodoContable,
+	foreign key(TipoTransaccion) references Contabilidad.TipoTransaccion,
 	foreign key(IdEmpresa) references Seguridad.Empresa
 )
-go
 
 create table Contabilidad.DetalleComprobante
 (
@@ -958,16 +967,6 @@ create table Contabilidad.Saldo
 )
 go
 
---modulo no es tabla de contabilidad segun la ruth
-
-create table Contabilidad.TipoTransaccion
-(
-	IdTransaccion 			int primary key,
-	modulo 					int references Seguridad.Modulo not null,
-	TipoDocumento			varchar(50),
-	descripcion				varchar(50) not null
-)
-go
 
 create table Contabilidad.ModeloAsiento
 (
