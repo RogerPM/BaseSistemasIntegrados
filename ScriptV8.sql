@@ -505,6 +505,7 @@ create table RecursosHumanos.AnticipoCab
 	IdEstado				int not null,
 	Porcentaje				int not null,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
+
 	primary key (NumAnticipo, IdEmpresa)
 )
 go
@@ -522,7 +523,6 @@ create table RecursosHumanos.AnticipoDet
 	primary key (NumLinea,IdEmpresa)
 )
 go
-
 /*BENEFICIOS*/
 create table RecursosHumanos.Beneficios
 (
@@ -533,6 +533,7 @@ create table RecursosHumanos.Beneficios
 	foreign key (IdEmpresa)references Seguridad.Empresa
 )
 go
+
 
 /*NOMINA CABECERA*/
 create table RecursosHumanos.NominaCab
@@ -545,6 +546,7 @@ create table RecursosHumanos.NominaCab
 	IdEstado				int not null,
 	IdEmpresa				int not null,
 	Observacion				varchar(50) null,
+	
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	primary key (NumNomina,IdEmpresa)
 )
@@ -576,10 +578,11 @@ create table RecursosHumanos.TipoContrato
 	Periodo					varchar(50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
+
+
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
-
 /*CONTRATO*/
 create table RecursosHumanos.Contrato
 (
@@ -598,7 +601,9 @@ create table RecursosHumanos.Contrato
 	TipoDiscapacidad		int,
 	Carnet					numeric(29,0),
 	IdEstado				int not null,
+
 	primary key (IdPersona,NumContrato,idEmpresa),
+
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdTipoContrato) references RecursosHumanos.TipoContrato,
@@ -606,6 +611,8 @@ create table RecursosHumanos.Contrato
 	foreign key (IdJornada) references RecursosHumanos.Jornada
 )
 go
+
+
 
 /*TIPO PERMISO*/
 create table RecursosHumanos.TipoPermiso
@@ -681,6 +688,7 @@ create table RecursosHumanos.TipoPrestamo
 	Nombre					varchar(50) not null,
 	IdEmpresa 				int not null,
 	IdEstado 				int not null,
+
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -701,40 +709,35 @@ create table RecursosHumanos.Prestamo
 	IdEmpresa 				int not null,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdTipoPrestamo) references RecursosHumanos.TipoPrestamo,
+
+	
 )
 go
 
 /*TRABAJO DIARIO CABECERA*/
-create table RecursosHumanos.TrabajoDiarioCab
+create table RecursosHumanos.TrabajoDiario
 (
 	NumTrabajo				int not null,
-	Fecha					datetime not null,
-	IdEstado				int not null,
-	IdEmpresa				int not null,
-	Observacion				varchar(50) null,
-	foreign key (IdEmpresa) references Seguridad.Empresa,
-	primary key (NumTrabajo, IdEmpresa)
-)
-go
-
-/*TRABAJO DIARIO DETALLE*/
-create table RecursosHumanos.TrabajoDiarioDet
-(
-	NumLinea				int not null,
-	NumTrabajo				int not null,
-	IdPersona				int not null,
+	IdPersna				int not null,
+	FechaDesde				datetime not null,
+	FechaHasta				datetime not null,
+	NDias					int not null,
 	HoraEntrada				varchar(50) not null,
 	HoraSalida				varchar(50) not null,
 	HoraTrabajada			int not null,
 	HoraExtraM				int null,
 	HoraExtraT				int null,
 	HoraRango				int not null,
-	IdEmpresa				int not null
-	foreign key (IdPersona) references RecursosHumanos.Persona,
-	foreign key (NumTrabajo,IdEmpresa)references RecursosHumanos.TrabajoDiarioCab,
+	IdEstado				int not null,
+	IdEmpresa				int not null,
+	Observacion				varchar(50) null,
+	
+	foreign key (IdEmpresa) references Seguridad.Empresa,
+	primary key (NumTrabajo,IdEmpresa)
 )
 go
+
+
 
 /****************************SEGURIDAD****************************/
 /*USUARIO POR EMPRESA*/
