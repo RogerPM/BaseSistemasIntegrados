@@ -3318,13 +3318,11 @@ go
 
 create view Contabilidad.vwComprobanteMayorizar as                       
 SELECT     Contabilidad.CabeceraComprobante.IdEmpresa, Contabilidad.CabeceraComprobante.fecha, Contabilidad.CabeceraComprobante.numero_comprobante, Contabilidad.CabeceraComprobante.glosa, 
-                      SUM(Contabilidad.DetalleComprobante.haber) AS haber, SUM(Contabilidad.DetalleComprobante.debe) AS debe, Contabilidad.SaldoxComprobante.numero_comprobante AS Expr1
+                      SUM(Contabilidad.DetalleComprobante.haber) AS haber, SUM(Contabilidad.DetalleComprobante.debe) AS debe
 FROM         Contabilidad.CabeceraComprobante INNER JOIN
                       Contabilidad.DetalleComprobante ON Contabilidad.CabeceraComprobante.IdEmpresa = Contabilidad.DetalleComprobante.IdEmpresa AND 
                       Contabilidad.CabeceraComprobante.numero_comprobante = Contabilidad.DetalleComprobante.cabecera_comprobante LEFT OUTER JOIN
                       Contabilidad.SaldoxComprobante ON Contabilidad.CabeceraComprobante.IdEmpresa = Contabilidad.SaldoxComprobante.IdEmpresa AND 
                       Contabilidad.CabeceraComprobante.numero_comprobante = Contabilidad.SaldoxComprobante.numero_comprobante
-GROUP BY Contabilidad.CabeceraComprobante.numero_comprobante, Contabilidad.CabeceraComprobante.fecha, Contabilidad.CabeceraComprobante.IdEmpresa, Contabilidad.CabeceraComprobante.glosa, 
-                      Contabilidad.SaldoxComprobante.numero_comprobante
-HAVING      (Contabilidad.SaldoxComprobante.numero_comprobante IS NULL)
+GROUP BY Contabilidad.CabeceraComprobante.numero_comprobante, Contabilidad.CabeceraComprobante.fecha, Contabilidad.CabeceraComprobante.IdEmpresa, Contabilidad.CabeceraComprobante.glosa
 go
