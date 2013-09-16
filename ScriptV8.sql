@@ -76,7 +76,6 @@ create table Seguridad.Empresa
 )
 go
 
-
 /**************************Recursos humanos******************************
 ************************************************************************/
 /*TIPO PERSONA*/
@@ -217,6 +216,13 @@ create table Seguridad.Usuario
 )
 go
 
+create table Seguridad.Historial(
+	IdHistorial int primary key,
+	IdUsuario int not null,
+	FechaInicioSesion datetime not null
+	foreign key(IdUsuario) references Seguridad.Usuario
+)
+go
 
 /*PROVEEDOR REasignado a Compras.Proveedor hasta que RRHH tome la batuta*/
 create table RecursosHumanos.Proveedor
@@ -3074,7 +3080,7 @@ primary key (IdEmpresa,numero_comprobante)
 -- de aqui en adelante sera para creacion de vistas, stored procedures, etc
 -- siempre y cuando no afecten la integridad funcional de este script
 PRINT N'3.creando vistas'
---SEGURIDAD
+-------------------------------------SEGURIDAD
 go
 create view Seguridad.UsuariodPermisos as
 SELECT distinct ROW_NUMBER() OVER(ORDER BY Seguridad.Usuario.IdUsuario) AS id,Seguridad.Usuario.IdUsuario, Seguridad.Usuario.NombreUsuario, Seguridad.Perfil.Descripcion, Seguridad.Modulo.IdModulo, Seguridad.Modulo.Nombre, Seguridad.Menu.NombreFormulario, 
@@ -3093,6 +3099,13 @@ FROM Seguridad.Usuario usu, Seguridad.Empresa emp, Seguridad.UsuarioPorEmpresa u
 WHERE uxe.IdEmpresa = emp.IdEmpresa
 AND uxe.IdUsuario = usu.IdUsuario
 AND usu.IdEstado = est.IdEstado
+go
+        
+create view Seguridad.IniciosDeSesion as
+select distinct ROW_NUMBER() OVER(ORDER BY h.IdHistorial) AS id, h.IdHistorial, h.IdUsuario, u.NombreUsuario, p.Descripcion, h.FechaInicioSesion
+from Seguridad.Historial h, Seguridad.Usuario u, Seguridad.Perfil p
+where h.IdUsuario=u.IdUsuario
+and u.IdPerfil=p.IdPerfil
 go
                  
 -- view in disuse
