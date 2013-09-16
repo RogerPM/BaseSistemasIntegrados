@@ -3326,3 +3326,14 @@ FROM         Contabilidad.CabeceraComprobante INNER JOIN
                       Contabilidad.CabeceraComprobante.numero_comprobante = Contabilidad.SaldoxComprobante.numero_comprobante
 GROUP BY Contabilidad.CabeceraComprobante.numero_comprobante, Contabilidad.CabeceraComprobante.fecha, Contabilidad.CabeceraComprobante.IdEmpresa, Contabilidad.CabeceraComprobante.glosa
 go
+create view Contabilidad.vwlibrodiario as 
+SELECT     Contabilidad.CabeceraComprobante.IdEmpresa, Contabilidad.CabeceraComprobante.numero_comprobante, Contabilidad.CabeceraComprobante.fecha, Contabilidad.CabeceraComprobante.glosa, 
+                      Contabilidad.DetalleComprobante.cuenta, Contabilidad.Cuenta.nombre, Contabilidad.DetalleComprobante.debe, Contabilidad.DetalleComprobante.haber, 
+                      Contabilidad.CabeceraComprobante.TipoTransaccion
+FROM         Contabilidad.DetalleComprobante INNER JOIN
+                      Contabilidad.CabeceraComprobante ON Contabilidad.DetalleComprobante.IdEmpresa = Contabilidad.CabeceraComprobante.IdEmpresa AND 
+                      Contabilidad.DetalleComprobante.cabecera_comprobante = Contabilidad.CabeceraComprobante.numero_comprobante INNER JOIN
+                      Contabilidad.Cuenta ON Contabilidad.DetalleComprobante.IdEmpresa = Contabilidad.Cuenta.IdEmpresa AND Contabilidad.DetalleComprobante.cuenta = Contabilidad.Cuenta.IdCuenta
+                      
+go                      
+
