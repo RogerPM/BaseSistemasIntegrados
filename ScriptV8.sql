@@ -2121,6 +2121,7 @@ create table CuentaxPagar.Impuesto
 	Porcentaje				decimal(4,2)not null,
 	FechaRegistro			date not null,
 	Estado 					int not null,
+	NatureAcree				int not null,
 	IdEmpresa 				int not null,
 	IdUsuario 				int not null,
 	foreign key (IdUsuario)references Seguridad.Usuario,

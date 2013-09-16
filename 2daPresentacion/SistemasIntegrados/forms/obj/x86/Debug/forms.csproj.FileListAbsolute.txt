@@ -4534,3 +4534,6 @@ E:\SI\Development\v21\SistemasIntegrados\forms\obj\x86\Debug\RdlCompile.cache
 E:\SI\Development\v21\SistemasIntegrados\forms\obj\x86\Debug\RdlCompile.compiled
 E:\SI\Development\v21\SistemasIntegrados\forms\obj\x86\Debug\forms.Cuentasxpagar.frmConsultas.resources
 E:\SI\Development\v21\SistemasIntegrados\forms\obj\x86\Debug\forms.Cuentasxpagar.frmDetalleCuentasPorPagar.resources
+C:\Users\Daviks Mks\Documents\GitHub\BaseSistemasIntegrados\2daPresentacion\SistemasIntegrados\forms\bin\Debug\forms.exe.config
+C:\Users\Daviks Mks\Documents\GitHub\BaseSistemasIntegrados\2daPresentacion\SistemasIntegrados\forms\obj\x86\Debug\forms.exe
+C:\Users\Daviks Mks\Documents\GitHub\BaseSistemasIntegrados\2daPresentacion\SistemasIntegrados\forms\obj\x86\Debug\forms.pdb
