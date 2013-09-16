@@ -504,14 +504,13 @@ go
 create table RecursosHumanos.AnticipoCab
 (
 	NumAnticipo				int not null,
-	IdEmpleado				int not null,
 	Fecha					date not null,
 	FechaModificacion		datetime,
 	Total					numeric(10,2) not null,
 	Observacion				varchar(50) null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	foreign key (IdEmpleado) references RecursosHumanos.Persona,
+	Porcentaje				int not null,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 
 	primary key (NumAnticipo, IdEmpresa)
@@ -523,10 +522,11 @@ create table RecursosHumanos.AnticipoDet
 (
 	NumLinea				int not null,
 	NumAnticipo				int not null,
-	FechaCobro				date not null,
-	FechaModificacion		datetime,
+	IdPersona				int not null,
+	ValorLiquido			money not null,
 	IdEmpresa int not null references Seguridad.Empresa,
 	foreign key (NumAnticipo, IdEmpresa) references RecursosHumanos.AnticipoCab,
+	foreign key (IdPersona) references RecursosHumanos.Persona,
 	primary key (NumLinea,IdEmpresa)
 )
 go
@@ -707,50 +707,43 @@ go
 create table RecursosHumanos.Prestamo
 (
 	IdPrestamo 				int not null primary key,
-	IdTipoPrestamo 			int not null,
 	IdPersona 				int not null,
 	FechaModificacion		datetime,
 	Monto					money not null,
 	Pago					money not null,
+	Interes					decimal not null,
+	Total					money not null,
+	TotalPagado				money not null,
+	Periodos				int not null,
 	IdEstado 				int not null,
 	IdEmpresa 				int not null,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 
-	foreign key (IdTipoPrestamo) references RecursosHumanos.TipoPrestamo,
+	
 )
 go
 
 /*TRABAJO DIARIO CABECERA*/
-create table RecursosHumanos.TrabajoDiarioCab
+create table RecursosHumanos.TrabajoDiario
 (
 	NumTrabajo				int not null,
-	Fecha					datetime not null,
-	IdEstado				int not null,
-	IdEmpresa				int not null,
-	Observacion				varchar(50) null,
-	
-	foreign key (IdEmpresa) references Seguridad.Empresa,
-	primary key (NumTrabajo, IdEmpresa)
-)
-go
-
-/*TRABAJO DIARIO DETALLE*/
-create table RecursosHumanos.TrabajoDiarioDet
-(
-	NumLinea				int not null,
-	NumTrabajo				int not null,
-	IdPersona				int not null,
+	IdPersna				int not null,
+	FechaDesde				datetime not null,
+	FechaHasta				datetime not null,
+	NDias					int not null,
 	HoraEntrada				varchar(50) not null,
 	HoraSalida				varchar(50) not null,
 	HoraTrabajada			int not null,
 	HoraExtraM				int null,
 	HoraExtraT				int null,
 	HoraRango				int not null,
-	IdEmpresa				int not null
-	foreign key (IdPersona) references RecursosHumanos.Persona,
-	foreign key (NumTrabajo,IdEmpresa)references RecursosHumanos.TrabajoDiarioCab,
-	primary key (NumLinea, IdEmpresa)
+	IdEstado				int not null,
+	IdEmpresa				int not null,
+	Observacion				varchar(50) null,
+	
+	foreign key (IdEmpresa) references Seguridad.Empresa,
+	primary key (NumTrabajo,IdEmpresa)
 )
 go
 
