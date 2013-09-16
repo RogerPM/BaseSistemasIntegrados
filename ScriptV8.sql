@@ -3329,11 +3329,12 @@ go
 create view Contabilidad.vwlibrodiario as 
 SELECT     Contabilidad.CabeceraComprobante.IdEmpresa, Contabilidad.CabeceraComprobante.numero_comprobante, Contabilidad.CabeceraComprobante.fecha, Contabilidad.CabeceraComprobante.glosa, 
                       Contabilidad.DetalleComprobante.cuenta, Contabilidad.Cuenta.nombre, Contabilidad.DetalleComprobante.debe, Contabilidad.DetalleComprobante.haber, 
-                      Contabilidad.CabeceraComprobante.TipoTransaccion
+                      Contabilidad.CabeceraComprobante.TipoTransaccion, Contabilidad.vwTipoTransaccion.NombreModulo
 FROM         Contabilidad.DetalleComprobante INNER JOIN
                       Contabilidad.CabeceraComprobante ON Contabilidad.DetalleComprobante.IdEmpresa = Contabilidad.CabeceraComprobante.IdEmpresa AND 
                       Contabilidad.DetalleComprobante.cabecera_comprobante = Contabilidad.CabeceraComprobante.numero_comprobante INNER JOIN
-                      Contabilidad.Cuenta ON Contabilidad.DetalleComprobante.IdEmpresa = Contabilidad.Cuenta.IdEmpresa AND Contabilidad.DetalleComprobante.cuenta = Contabilidad.Cuenta.IdCuenta
-                      
+                      Contabilidad.Cuenta ON Contabilidad.DetalleComprobante.IdEmpresa = Contabilidad.Cuenta.IdEmpresa AND 
+                      Contabilidad.DetalleComprobante.cuenta = Contabilidad.Cuenta.IdCuenta LEFT OUTER JOIN
+                      Contabilidad.vwTipoTransaccion ON Contabilidad.CabeceraComprobante.TipoTransaccion = Contabilidad.vwTipoTransaccion.IdTransaccion                    
 go                      
 
