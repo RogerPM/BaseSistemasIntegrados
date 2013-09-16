@@ -2384,7 +2384,7 @@ create table ActivoFijo.ActivoFijo
 	foreign key (IdEmpresa) references Seguridad.Empresa,--relacion tablas de Seguridad
 	foreign key (IdDepartamento)references RecursosHumanos.Departamento,--relacaion tablas de RRHH
 	foreign key (IdArticuloBodega)references Inventario.ArticuloBodega,--relacion tablas de inventario,
-	foreign key (IdResponsable,IdEmpresa)references RecursosHumanos.Empleado,--relacaion tablas de RRHH
+	foreign key (IdResponsable)references RecursosHumanos.Persona,--relacaion tablas de RRHH
 	foreign key (IdUsuario)references Seguridad.Usuario,
 	foreign key (IdTipo)references Inventario.TipoArticulo,--relacion tablas de inventario,
 	foreign key (IdGrupo)references Inventario.Grupo,
@@ -2584,6 +2584,16 @@ create table ActivoFijo.revalorizacion
 	foreign key (IdActivoFijo) references ActivoFijo.ActivoFijo--relacion tabla general de Estado
 )
 go
+--******************* MOTIVO BAJA*****************
+create table ActivoFijo.MotivoBaja
+(
+	IdMotivoBaja	int primary key,
+	descripcion		varchar (50) null,
+	Idestado		int NULL,
+--referencia al constraint
+	foreign key (IdEstado) references Seguridad.Estado,
+)
+go
 
 create table ActivoFijo.BajaActivo
 (
@@ -2596,7 +2606,7 @@ create table ActivoFijo.BajaActivo
 	--IdEstado 					int  null,
 	IdEmpresa 					int  null,
 	Descripcion 				varchar(50)   null,
-	Motivo 						varchar(25)   null,
+	IdMotivoBaja 				int   null,
 	--IdProveedor					int  null,
 	IdCabeceraComprobante		numeric(4,0)  null,
 	Observacion 				varchar(300)  null,
@@ -2609,7 +2619,8 @@ create table ActivoFijo.BajaActivo
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	--foreign key (IdProveedor) references Compras.Proveedor,
 	FOREIGN KEY (IdImagen)REFERENCES ActivoFijo.Imagen,
-	foreign key (IdEmpresa, IdCabeceraComprobante) references Contabilidad.CabeceraComprobante
+	foreign key (IdEmpresa, IdCabeceraComprobante) references Contabilidad.CabeceraComprobante,
+	foreign key (IdMotivoBaja) references ActivoFijo.MotivoBaja
 )
 go
 
