@@ -52,9 +52,9 @@ go
 
 create table  Seguridad.Imagen
 (
-	 IdImagen				int				primary key,
-	 Descripcion			varchar(50),
-	 Imagen					image
+	 IdImagen			int				primary key,
+	 Descripcion		varchar(50),
+	 Imagen				image
 )
 go
 
@@ -209,7 +209,7 @@ create table Seguridad.Usuario
 	 Contrasena			varchar(220)		not null,
 	 IdEstado			int					references Seguridad.Estado on delete cascade,
 	 IdImagen			int					references Seguridad.Imagen on delete cascade,
-	 IdPerfil int ,
+	 IdPerfil			int ,
 	 primary key(IdUsuario),
 	 -- foreign key(IdPerfil) references Seguridad.Perfil,
 	 foreign key (IdUsuario) references RecursosHumanos.Persona on delete cascade --el id usuario es el mismo q id persona
@@ -385,7 +385,6 @@ create table RecursosHumanos.Cargo
 	Descripcion				varchar(45) not null,
 	Sueldo					numeric(10,2) not null,
 	IdEstado				int not null,
-
 )
 go
 
@@ -399,7 +398,6 @@ create table RecursosHumanos.CargoxDepartamento
 	IdEstado				int not null,
 	primary key (idCargo,idDepartamento),
 	foreign key (IdCargo) references RecursosHumanos.Cargo,
-
 	foreign key (IdDepartamento) references RecursosHumanos.Departamento
 )
 go
@@ -415,7 +413,6 @@ create table RecursosHumanos.Rubro
 	IdCargo					int not null,
 	IdDepartamento			int not null,
 	foreign key (IdCargo,IdDepartamento) references RecursosHumanos.CargoxDepartamento,
-
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -427,9 +424,7 @@ create table RecursosHumanos.PersonaxTitulo
 	IdEmpresa				int not null,
 	IdPersona				int not null,
 	IdEstado				int not null,
-
 	primary key (idpersona,idtitulo),
-
 	foreign key (IdTitulo) references RecursosHumanos.Titulo,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdPersona) references RecursosHumanos.Persona
@@ -477,7 +472,6 @@ create  table RecursosHumanos.Parentesco
 	Descripcion				varchar(50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -493,7 +487,6 @@ create table RecursosHumanos.CargaFamiliar
 	FechaModificacion		datetime,
 	IdEstado				int not null,
 	primary key (idpersona,idparentesco),
-
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdParentesco) references RecursosHumanos.Parentesco
@@ -512,7 +505,6 @@ create table RecursosHumanos.AnticipoCab
 	IdEstado				int not null,
 	Porcentaje				int not null,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-
 	primary key (NumAnticipo, IdEmpresa)
 )
 go
@@ -553,7 +545,6 @@ create table RecursosHumanos.NominaCab
 	IdEstado				int not null,
 	IdEmpresa				int not null,
 	Observacion				varchar(50) null,
-	
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	primary key (NumNomina,IdEmpresa)
 )
@@ -585,8 +576,6 @@ create table RecursosHumanos.TipoContrato
 	Periodo					varchar(50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-
-
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -609,9 +598,7 @@ create table RecursosHumanos.Contrato
 	TipoDiscapacidad		int,
 	Carnet					numeric(29,0),
 	IdEstado				int not null,
-
 	primary key (IdPersona,NumContrato,idEmpresa),
-
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdTipoContrato) references RecursosHumanos.TipoContrato,
@@ -627,7 +614,6 @@ create table RecursosHumanos.TipoPermiso
 	Descripcion				varchar(50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -647,7 +633,6 @@ create table RecursosHumanos.Permiso
 	foreign key (IdUsuario) references Seguridad.Usuario,
 	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (IdTipoPermiso) references RecursosHumanos.TipoPermiso,
-
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -669,7 +654,6 @@ create table RecursosHumanos.Liquidacion
 	IdEstado				int not null,
 	primary key (NumLiquidacion,IdEmpresa,Idpersona),
 	foreign key (IdPersona,NumContrato,IdEmpresa) references RecursosHumanos.Contrato,
-
 	foreign key (IdPersona) references RecursosHumanos.persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 )
@@ -687,7 +671,6 @@ create table RecursosHumanos.Vacacion
 	IdEstado				int not null,
 	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-
 )
 go
 
@@ -698,7 +681,6 @@ create table RecursosHumanos.TipoPrestamo
 	Nombre					varchar(50) not null,
 	IdEmpresa 				int not null,
 	IdEstado 				int not null,
-
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -719,31 +701,38 @@ create table RecursosHumanos.Prestamo
 	IdEmpresa 				int not null,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-
-	
+	foreign key (IdTipoPrestamo) references RecursosHumanos.TipoPrestamo,
 )
 go
 
 /*TRABAJO DIARIO CABECERA*/
-create table RecursosHumanos.TrabajoDiario
+create table RecursosHumanos.TrabajoDiarioCab
 (
 	NumTrabajo				int not null,
-	IdPersna				int not null,
-	FechaDesde				datetime not null,
-	FechaHasta				datetime not null,
-	NDias					int not null,
+	Fecha					datetime not null,
+	IdEstado				int not null,
+	IdEmpresa				int not null,
+	Observacion				varchar(50) null,
+	foreign key (IdEmpresa) references Seguridad.Empresa,
+	primary key (NumTrabajo, IdEmpresa)
+)
+go
+
+/*TRABAJO DIARIO DETALLE*/
+create table RecursosHumanos.TrabajoDiarioDet
+(
+	NumLinea				int not null,
+	NumTrabajo				int not null,
+	IdPersona				int not null,
 	HoraEntrada				varchar(50) not null,
 	HoraSalida				varchar(50) not null,
 	HoraTrabajada			int not null,
 	HoraExtraM				int null,
 	HoraExtraT				int null,
 	HoraRango				int not null,
-	IdEstado				int not null,
-	IdEmpresa				int not null,
-	Observacion				varchar(50) null,
-	
-	foreign key (IdEmpresa) references Seguridad.Empresa,
-	primary key (NumTrabajo,IdEmpresa)
+	IdEmpresa				int not null
+	foreign key (IdPersona) references RecursosHumanos.Persona,
+	foreign key (NumTrabajo,IdEmpresa)references RecursosHumanos.TrabajoDiarioCab,
 )
 go
 
@@ -988,10 +977,10 @@ go
 
 create table Inventario.TipoArticulo
 (
-IdEmpresa	int,
+IdEmpresa		int,
 IdTipoArticulo	int not null,
-Descripcion	varchar(500)not null,
-IdEstado	int,
+Descripcion		varchar(500)not null,
+IdEstado		int,
 primary key (IdTipoArticulo),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1000,11 +989,11 @@ go
 
 create table Inventario.Grupo
 (
-IdEmpresa	int,
-IdGrupo	int not null,
-Descripcion	varchar(100) not null,
-IdTipoArticulo int,
-IdEstado	int,
+IdEmpresa		int,
+IdGrupo			int not null,
+Descripcion		varchar(100) not null,
+IdTipoArticulo  int,
+IdEstado		int,
 primary key (IdGrupo),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdTipoArticulo) references Inventario.TipoArticulo,
@@ -1118,15 +1107,15 @@ go
 
 create table Inventario.Bodega
 (
-IdEmpresa	int not null,
-IdBodega	int not null,
-Decripcion	varchar(100),
-Capacidadm2	int,
+IdEmpresa		int not null,
+IdBodega		int not null,
+Decripcion		varchar(100),
+Capacidadm2		int,
 IdResponsable	int,
-IdPercha	int,
-Direccion	varchar(100),
-Telefono varchar(15),
-IdEstado	int,
+IdPercha		int,
+Direccion		varchar(100),
+Telefono		varchar(15),
+IdEstado		int,
 primary key (IdBodega, IdEmpresa),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdResponsable) references RecursosHumanos.Persona,
@@ -1139,10 +1128,10 @@ go
  
 create table Inventario.UnidadMedida
 (
-IdEmpresa	int,
+IdEmpresa		int,
 IdUnidadMedida	int not null,
-Descripcion	varchar(100) not null,
-IdEstado	int,
+Descripcion		varchar(100) not null,
+IdEstado		int,
 primary key (IdUnidadMedida),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1177,10 +1166,10 @@ go
 
 create table Inventario.TipoCombustible
 (
-IdEmpresa	int,
+IdEmpresa			int,
 IdTipoCombustible	int not null,
-Descripcion	varchar(100),
-IdEstado	int,
+Descripcion			varchar(100),
+IdEstado			int,
 primary key (IdTipoCombustible),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1189,10 +1178,10 @@ go
 
 create table Inventario.Color
 (
-IdEmpresa	int,
-IdColor	int not null,
-Descripcion	varchar(100) not null,
-IdEstado	int,
+IdEmpresa		int,
+IdColor			int not null,
+Descripcion		varchar(100) not null,
+IdEstado		int,
 primary key (IdColor),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1202,10 +1191,10 @@ go
 
 create table Inventario.Marca
 (
-IdEmpresa	int,
-IdMarca	int not null,
-Descripcion	varchar(100) not null,
-IdEstado	int,
+IdEmpresa		int,
+IdMarca			int not null,
+Descripcion		varchar(100) not null,
+IdEstado		int,
 primary key (IdMarca),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1214,11 +1203,11 @@ go
 
 create table Inventario.Modelo
 (
-IdEmpresa	int,
-IdModelo	int not null,
-Descripcion	varchar(100) not null,
-IdMarca int,
-IdEstado	int,
+IdEmpresa		int,
+IdModelo		int not null,
+Descripcion		varchar(100) not null,
+IdMarca			int,
+IdEstado		int,
 primary key (IdModelo),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1228,10 +1217,10 @@ go
 
 create table Inventario.TipoMaterial
 (
-IdEmpresa	int,
+IdEmpresa		int,
 IdTipoMaterial	int not null,
-Descripcion	varchar(100),
-IdEstado	int,
+Descripcion		varchar(100),
+IdEstado		int,
 primary key (IdTipoMaterial),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1240,9 +1229,9 @@ go
 
 create table Inventario.Articulo
 (
-IdEmpresa	int,
-IdArticulo	int not null,
-Descripcion	varchar(100) not null,
+IdEmpresa		int,
+IdArticulo		int not null,
+Descripcion		varchar(100) not null,
 FechaProduccion date,
 CantidadMinima	numeric(5,0),
 CantidadMaxima	numeric(5,0),
@@ -1250,33 +1239,33 @@ CantidadActual	numeric(5,0),
 IdUnidadMedida	int,
 FechaCaducidad	date,
 IdTipoArticulo	int not null,
-IdGrupo	int not null,
+IdGrupo			int not null,
 --IdSubgrupo int,
-IdChasis	int,
-SerieChasis varchar(17),
-IdTipoMotor	int,
-SerieMotor varchar(11),
-NroPlaca	varchar(8),
+IdChasis		int,
+SerieChasis		varchar(17),
+IdTipoMotor		int,
+SerieMotor		varchar(11),
+NroPlaca		varchar(8),
 IdTipoCombustible int,
-IdColor	int,
-IdMarca	int,
-IdModelo	int,
+IdColor			int,
+IdMarca			int,
+IdModelo		int,
 IdTipoMaterial	int,
-Observacion	varchar(100),
-IdEstado	int,
+Observacion		varchar(100),
+IdEstado		int,
 primary key (IdArticulo, IdEmpresa),
 foreign key(IdEstado)references Seguridad.Estado,
 foreign key(IdEmpresa)references Seguridad.Empresa,
 foreign key(IdUnidadMedida)references Inventario.UnidadMedida,
-foreign key (IdTipoArticulo)references Inventario.TipoArticulo,
-foreign key (IdGrupo)references Inventario.Grupo,
-foreign key (IdChasis)references Inventario.Chasis,
-foreign key (IdTipoMotor)references Inventario.TipoMotor,
-foreign key (IdTipoCombustible)references Inventario.TipoCombustible,
-foreign key (IdColor)references Inventario.Color,
-foreign key (IdMarca)references Inventario.Marca,
-foreign key (IdModelo)references Inventario.Modelo,
-foreign key (IdTipoMaterial)references Inventario.TipoMaterial,
+foreign key(IdTipoArticulo)references Inventario.TipoArticulo,
+foreign key(IdGrupo)references Inventario.Grupo,
+foreign key(IdChasis)references Inventario.Chasis,
+foreign key(IdTipoMotor)references Inventario.TipoMotor,
+foreign key(IdTipoCombustible)references Inventario.TipoCombustible,
+foreign key(IdColor)references Inventario.Color,
+foreign key(IdMarca)references Inventario.Marca,
+foreign key(IdModelo)references Inventario.Modelo,
+foreign key(IdTipoMaterial)references Inventario.TipoMaterial,
 )
 go
 
@@ -1284,16 +1273,16 @@ go
 
 create table Inventario.Percha
 (
-IdEmpresa	int not null,
-IdPercha	int not null,
-Descripcion varchar(10),
+IdEmpresa		int not null,
+IdPercha		int not null,
+Descripcion		varchar(10),
 Nro_Divisiones	numeric(10,0) not null,
-IdBodega	int not null,
-IdEstado	int,
-primary key (IdPercha),
-foreign key (IdEmpresa) references Seguridad.Empresa,
-foreign key (IdBodega, IdEmpresa) references Inventario.Bodega,
-foreign key (IdEstado) references Seguridad.Estado,
+IdBodega		int not null,
+IdEstado		int,
+primary key(IdPercha),
+foreign key(IdEmpresa) references Seguridad.Empresa,
+foreign key(IdBodega, IdEmpresa) references Inventario.Bodega,
+foreign key(IdEstado) references Seguridad.Estado,
 )
 go
 
@@ -1311,16 +1300,16 @@ go
 
 create table Inventario.TransferenciaBodegaCab
 (
-IdEmpresa	int,
+IdEmpresa			int,
 NroTransferencia	int not null,
 FechaTransferencia	date,
-FechaModificacion datetime,
-IdBodegaOrigen	int,
-IdBodegaDestino	int,
-IdMotivo	int,
-Observacion	varchar(150),
-IdUsuario	int,
-IdEstado	int,
+FechaModificacion	datetime,
+IdBodegaOrigen		int,
+IdBodegaDestino		int,
+IdMotivo			int,
+Observacion			varchar(150),
+IdUsuario			int,
+IdEstado			int,
 Fecha datetime,
 primary key (NroTransferencia),
 foreign key (IdEmpresa) references Seguridad.Empresa,
@@ -1334,11 +1323,11 @@ go
 
 create table Inventario.TransferenciaBodegaDet
 (
-IdEmpresa	int,
+IdEmpresa			int,
 NroTransferencia	int not null,
 CantidadTrasladada	int,
-Articulo	numeric(10,0),
-IdEstado	int,
+Articulo			numeric(10,0),
+IdEstado			int,
 primary key(NroTransferencia),
 foreign key(NroTransferencia) references Inventario.TransferenciaBodegaCab,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1347,18 +1336,18 @@ go
 
 create table Inventario.TomaFisicaCab
 (
-IdEmpresa	int,
-NroTomaFisica	int not null,
-IdMotivo	int,
-FechaTomaFisica	date,
-FechaModificacion datetime,
-Usuario	numeric(10,0),
-IdTipoArticulo	int,
-IdBodega	int,
-IdUsuario	int,
-Auditor	varchar(50),
-Observacion	varchar(150),
-IdEstado	int,
+IdEmpresa			int,
+NroTomaFisica		int not null,
+IdMotivo			int,
+FechaTomaFisica		date,
+FechaModificacion	datetime,
+Usuario				numeric(10,0),
+IdTipoArticulo		int,
+IdBodega			int,
+IdUsuario			int,
+Auditor				varchar(50),
+Observacion			varchar(150),
+IdEstado			int,
 primary key (NroTomaFisica),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key(IdMotivo) references Inventario.Motivo,
@@ -1372,9 +1361,9 @@ go
 
 create table Inventario.TomaFisicaDet
 (
-IdEmpresa	int,
-NroTomaFisica	int not null,
-IdArticulo	int,
+IdEmpresa			int,
+NroTomaFisica		int not null,
+IdArticulo			int,
 ExistenciaSistema	int,
 ExistenciaFisica	int,
 CantidadAjustada	int,
@@ -1387,10 +1376,10 @@ go
 
 create table Inventario.TipoMovimiento
 (
-IdEmpresa	int,
+IdEmpresa			int,
 IdTipoMovimiento	int,
-Descripcion	varchar(25),
-IdEstado	int,
+Descripcion			varchar(25),
+IdEstado			int,
 primary key (IdTipoMovimiento),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1400,11 +1389,11 @@ go
 
 create table Inventario.ArticuloBodega
 (
-IdEmpresa	int,
+IdEmpresa			int,
 IdArticuloBodega	int,
-IdArticulo	int,
-IdPercha	int,
-Cantidad	int,
+IdArticulo			int,
+IdPercha			int,
+Cantidad			int,
 --Fecha datetime,
 primary key	(IdArticuloBodega),
 foreign key(IdEmpresa) references Seguridad.Empresa,
@@ -1416,11 +1405,11 @@ go
 /************************MODULO DE FACTURACION INTEGRACION********************/
 CREATE TABLE Facturacion.FormaPago
 (
-IdEmpresa int NOT NULL,
-idUsuario int NOT NULL,
-IdFormaPago int NOT NULL,
-Descripcion varchar (250) NULL,
-idEstado int NOT NULL,
+IdEmpresa			int NOT NULL,
+idUsuario			int NOT NULL,
+IdFormaPago			int NOT NULL,
+Descripcion			varchar (250) NULL,
+idEstado			int NOT NULL,
 primary key(IdFormaPago),	
 foreign key (idEmpresa) references Seguridad.Empresa,
 foreign key (idUsuario) references Seguridad.Usuario,
@@ -1430,20 +1419,20 @@ GO
 
 CREATE TABLE Facturacion.ClienteDefactura
 (
-IdEmpresa int NOT NULL,
-idUsuario int NOT NULL,
-IdNumeroCliente int NOT NULL,
-Identificacion int NOT NULL,
-Fecha	date NOT NULL,
-NombreRazonSocial varchar(50) NOT NULL,
-Apellido varchar(50) NULL,
-FechaNacimiento date NULL,
-Genero varchar(10) NULL,
-Direccion varchar(100) NOT NULL,
-Telefono int NOT NULL,
-Celular int NOT NULL,
-CorreoElectronico varchar(50) NULL,
-idEstado int NOT NULL,
+IdEmpresa			int NOT NULL,
+idUsuario			int NOT NULL,
+IdNumeroCliente		int NOT NULL,
+Identificacion		int NOT NULL,
+Fecha				date NOT NULL,
+NombreRazonSocial	varchar(50) NOT NULL,
+Apellido			varchar(50) NULL,
+FechaNacimiento		date NULL,
+Genero				varchar(10) NULL,
+Direccion			varchar(100) NOT NULL,
+Telefono			int NOT NULL,
+Celular				int NOT NULL,
+CorreoElectronico	varchar(50) NULL,
+idEstado			int NOT NULL,
 primary key(IdNumeroCliente),	
 foreign key (idEmpresa) references Seguridad.Empresa,
 foreign key (idUsuario) references Seguridad.Usuario,
@@ -1453,20 +1442,20 @@ GO
 
 CREATE TABLE Facturacion.Cotizacion
 (
-IdEmpresa int NOT NULL,
-idUsuario int NOT NULL,
-IdNumeroCotizacion int NOT NULL,
-IdFormaPago int NOT NULL,/*Desvinculada de CXP.FormaPago*/
-IdNumeroCliente int NOT NULL,
-Fecha	date NULL,
-PorcentajeEntrada	money NULL,
-ValorEntrada	money NULL,
-EntradaMinimaRequerida	money NULL,
-ValorCancelar	money NULL,
-FechaInicialPago	date NULL,
-FechaFinalPago	date NULL,
-Seguro	bit NULL,
-idEstado int NOT NULL,
+IdEmpresa			int NOT NULL,
+idUsuario			int NOT NULL,
+IdNumeroCotizacion  int NOT NULL,
+IdFormaPago			int NOT NULL,/*Desvinculada de CXP.FormaPago*/
+IdNumeroCliente		int NOT NULL,
+Fecha				date ,
+PorcentajeEntrada	money ,
+ValorEntrada		money,
+EntradaMinimaRequerida	money ,
+ValorCancelar		money ,
+FechaInicialPago	date ,
+FechaFinalPago		date ,
+Seguro				bit ,
+idEstado			int NOT NULL,
 primary key(IdNumeroCotizacion),	
 foreign key (IdNumeroCliente) references Facturacion.ClienteDeFactura,
 foreign key (IdFormaPago) references Facturacion.FormaPago,
@@ -1706,19 +1695,16 @@ IdEmpresa	int not null,
 NroMovimiento	int,
 IdTipoMovimiento	int,
 FechaMovimiento	date,
-IdOrdenCompra	int,
 IdMotivo		int,
 IdBodega	int,
 IdResponsable	int,
-TotalPagar	numeric(7,2),
 Observacion	varchar(150),
 IdUsuario	int,
 IdEstado	int,
 primary key(IdEmpresa,NroMovimiento),
-foreign key(IdOrdenCompra,IdEmpresa)references Compras.OrdenCompra,
-foreign key (IdTipoMovimiento) references Inventario.TipoMovimiento,
+foreign key(IdTipoMovimiento) references Inventario.TipoMovimiento,
 foreign key(IdEstado)references Seguridad.Estado,
-foreign key (IdMotivo) references Inventario.Motivo,
+foreign key(IdMotivo) references Inventario.Motivo,
 foreign key(IdBodega,IdEmpresa)references Inventario.Bodega,
 foreign key(IdResponsable)references RecursosHumanos.Persona,
 foreign key(IdUsuario)references Seguridad.Usuario
@@ -1727,23 +1713,66 @@ foreign key(IdUsuario)references Seguridad.Usuario
  
  create table Inventario.IngresoEgresoDet
 (
-IdEmpresa	int,
+IdEmpresa		int,
 NroMovimiento	int not null,
-numero int not null,
-IdArticulo	int,
-IdPercha int,
-CantidadPedida	int,
-CantidadLlegada int,
-Costo	numeric(5,2),
-Subtotal	numeric(5,2),
-ValorIVA	numeric(5,2),
-ValorTotal	numeric(5,2),
-primary key (NroMovimiento, numero),
-foreign key (IdEmpresa, NroMovimiento) references Inventario.IngresoEgresoCab,
+numero			int not null,
+IdArticulo		int,
+IdPercha		int,
+Cantidad		int,
+primary key(NroMovimiento, numero),
+foreign key(IdEmpresa, NroMovimiento) references Inventario.IngresoEgresoCab,
 foreign key(IdArticulo,IdEmpresa)references Inventario.Articulo,
 foreign key(IdPercha)references Inventario.Percha,
 )
 go
+
+create table Inventario.LlegadaMercaderiaCab
+(
+IdEmpresa			int not null,
+NroMovimiento		int,
+IdTipoMovimiento	int,
+IdOrdenCompra		int,
+IdProveedor			int,
+Factura				numeric(15,0),
+FechaMovimiento		date,
+IdMotivo			int,
+IdBodega			int,
+IdResponsable		int,
+Observacion			varchar(150),
+IdUsuario			int,
+IdEstado			int,
+primary key(IdEmpresa,NroMovimiento),
+foreign key(IdOrdenCompra,IdEmpresa)references Compras.OrdenCompra,
+foreign key(IdProveedor)references Compras.Proveedor,
+foreign key(IdTipoMovimiento) references Inventario.TipoMovimiento,
+foreign key(IdEstado)references Seguridad.Estado,
+foreign key(IdMotivo) references Inventario.Motivo,
+foreign key(IdBodega,IdEmpresa)references Inventario.Bodega,
+foreign key(IdResponsable)references RecursosHumanos.Persona,
+foreign key(IdUsuario)references Seguridad.Usuario
+)
+go
+
+create table Inventario.LlegadaMercaderiaDet
+(
+IdEmpresa			int,
+NroMovimiento		int not null,
+numero				int not null,
+IdArticulo			int,
+IdPercha			int,
+CantidadPedida		int,
+CantidadLlegada		int,
+Precio				numeric(5,2),
+Subtotal			numeric(5,2),
+ValorIVA			numeric(5,2),
+ValorTotal			numeric(5,2),
+primary key(NroMovimiento, numero),
+foreign key(IdEmpresa, NroMovimiento) references Inventario.IngresoEgresoCab,
+foreign key(IdArticulo,IdEmpresa)references Inventario.Articulo,
+foreign key(IdPercha)references Inventario.Percha,
+)
+go
+
 
 /****************** Cuentas por cobrar **********************/
 /************************************************************/
@@ -1754,7 +1783,7 @@ create table CuentaxPagar.MedioPago/*TABLA SUBIDA PORQUE LA USA CXP.COBRO*/
 	IdMedioPago 			int not null ,
 	Descripcion				varchar(30) not null,
 	fechaRegistro			date not null,
-	Estado 				int not null,
+	Estado 					int not null,
 	IdEmpresa 				int not null references Seguridad.Empresa,
 	IdUsuario 				int not null,
 	foreign key (IdUsuario) references Seguridad.Usuario,
@@ -1956,13 +1985,13 @@ create table CuentasPorCobrar.CuentaxCobrar
 (
 	idEmpresa 				int NOT NULL,
 	idUsuario 				int NOT NULL,
-	idCuentaxCobrar 			int NOT NULL,	
+	idCuentaxCobrar 		int NOT NULL,	
 	numero_comprobante		numeric(4,0),
-	Modulo				int NOT NULL,
-	idNumeroFactura 			int NOT NULL,
+	Modulo					int NOT NULL,
+	idNumeroFactura 		int NOT NULL,
 	TotalCuotas 			int NOT NULL,
 	porcentaje_interes		numeric NOT NULL,
-	estado 				varchar(10) NULL,
+	estado 					varchar(10) NULL,
 	primary key (idCuentaxCobrar),
 	foreign key (idEmpresa) references Seguridad.Empresa,
 	foreign key (idUsuario) references Seguridad.Usuario,
@@ -1975,7 +2004,7 @@ create table CuentasPorCobrar.CuentaxCobrar
 	idEmpresa 				int NOT NULL,
 	idUsuario 				int NOT NULL,
 	idCobro 				int NOT NULL,
-	idNumeroFactura 				int NOT NULL,
+	idNumeroFactura 		int NOT NULL,
 	idCabeceraComprobante	numeric(4,0) NOT NULL,
 	Fecha					date NOT NULL,
 	FechaModificacion		datetime, 
@@ -1996,7 +2025,7 @@ go
 CREATE TABLE CuentasPorCobrar.CuentaxCobrarDet
 (
 	idCuentaxCobrar 		int NOT NULL,
-	Numero 				int NOT NULL,
+	Numero 					int NOT NULL,
 	numero_cuota 			int NOT NULL,
 	valor_cuota				money NOT NULL,
 	valor_interes			money NOT NULL,
@@ -2004,7 +2033,7 @@ CREATE TABLE CuentasPorCobrar.CuentaxCobrarDet
 	fecha_cobro				date NOT NULL,
 	fecha_vencimiento		date NOT NULL,
 	FechaModificacion		datetime, 
-	estado 				varchar NULL
+	estado 					varchar NULL
 	primary key (idCuentaxCobrar, numero),
 )
 Go
@@ -2167,7 +2196,7 @@ create table CuentaxPagar.DeudaDet--esta tabla debe llamarse CuentaPorPagarDetal
 	NumDetalleDeuda 		int not null,
 	ValorLetra				numeric(10,2) not null,
 	FechaVencimiento		date not null,
-	Estado 				int not null,
+	Estado 					int not null,
     foreign key (NumCuentaPorPagar, IdEmpresa) references CuentaxPagar.CuentaPorPagar,
 	primary key(IdEmpresa, NumCuentaPorPagar, NumDetalleDeuda)
 )
@@ -2192,7 +2221,7 @@ create table CuentaxPagar.OrdenPagoCab
 	NumOrdenPago 			int not null,
 	fechadeEmision			date not null,
 	IdPersona 				int null,
-	Estado 				int not null,
+	Estado 					int not null,
 	TotalPagar				numeric(10,2) not null,
 	TipoOrdenPago			char not null,
 	IdUsuario 				int not null,
@@ -2500,7 +2529,7 @@ go
 create table ActivoFijo.Transferencia
 (
 	Idtransferencia 			int primary key,
-	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
+	EstadoProceso				varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	IdActivoFijo 				int   null,
 	fecha						date  null,
 	--IdTipoTransferencia 		int   null,
@@ -2542,7 +2571,7 @@ create table ActivoFijo.revalorizacion
 (
 	IdRevalorizacion 			int primary key,
 	IdUsuario 				    int  null,
-	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
+	EstadoProceso				varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	Fecha						date null,
 	IdActivoFijo 				int   null,
 	ValorAtual					numeric(10,2)   null,
@@ -2556,7 +2585,7 @@ go
 create table ActivoFijo.BajaActivo
 (
 	idBajaActivo 				int primary key,
-	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
+	EstadoProceso				varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	IdActivoFIjo 				int   null,
 	--IdGrupo						int  null,
 	--IdSubgrupo					int  null,
@@ -2568,7 +2597,7 @@ create table ActivoFijo.BajaActivo
 	--IdProveedor					int  null,
 	IdCabeceraComprobante		numeric(4,0)  null,
 	Observacion 				varchar(300)  null,
-	IdImagen				int  null,
+	IdImagen					int  null,
 	--haciendo las referencias constraint
 	foreign key (IdActivoFIjo) references ActivoFijo.ActivoFijo,
 	--foreign key (IdGrupo)references Inventario.Grupo,
@@ -2599,7 +2628,7 @@ create table ActivoFijo.VentaGarageCab
 	CantidadTransferencia 		int   null,
 	CantidadDeposito 			int   null,
 	CantidadCheque 				int   null,
-	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
+	EstadoProceso				varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	--haciendo las referencias constraint
 	primary key (idVentaGarage,IdEmpresa),
 	foreign key (IdUsuario)references Seguridad.Usuario,
@@ -2655,7 +2684,7 @@ CREATE TABLE Compras.OrdenCompraDet  --ok
 	 Numero    				int   NOT NULL,
 	 IdEmpresa    			int   NOT NULL,
 	 Linea    				int   NOT NULL,
-	 IdArticulo				int  NOT NULL,
+	 IdArticulo				int	  NOT NULL,
 	 Cantidad				int   NOT NULL,
 	 Precio					int   NOT NULL,
 	foreign key (Numero, IdEmpresa) references Compras.OrdenCompra,
@@ -2814,8 +2843,8 @@ Create table Compras.NotaDebito
 	Numero					int		not null,
 	idEmpresa				int		not null,
 	NumeroDevolucionCompra	int		not null,
-	Fecha			date	NOT NULL Default Getdate(),
-    FechaModificacion date  NOT NULL Default Getdate(),
+	Fecha					date	NOT NULL Default Getdate(),
+    FechaModificacion		date    NOT NULL Default Getdate(),
 	SubTotal				int		not null,
 	Descuento				int		not null,
 	idEstado				int		not null
@@ -2922,8 +2951,8 @@ CREATE TABLE Taller.Presupuesto
 	Subtotal             decimal(18,2) not null,
 	TotalPresupuesto     decimal(18,2) not null,
 	Observacion          varchar(100) not null,
-	IdEstado 	     int not null,
-	IdEmpresa		 int  not null,
+	IdEstado 			int not null,
+	IdEmpresa			int  not null,
 	foreign key (IdEmpresa)references Seguridad.Empresa,
 	foreign key (IdEstado)references Seguridad.Estado,
 	foreign key(IdPersona)references Taller.Persona, 
@@ -3028,7 +3057,7 @@ go
 --Otros
 CREATE TABLE Taller.Otros
 ( 
-	IdOtros      int  not null primary key,
+	IdOtros			 int  not null primary key,
 	IdOrdenTrabajo   int  not null,
 	Descripcion      varchar(100)  not null,
 	Precio			 decimal(18,2) not null,
