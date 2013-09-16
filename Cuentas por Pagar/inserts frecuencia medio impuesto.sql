@@ -29,15 +29,15 @@ go
 
 --               .-+=*°"|:|:|[INSERTS A TABLA IMPUESTO]|:|:|°*=+-.
 
-insert into CuentaxPagar.Impuesto  values(1,'IVA 0%', 0.00,'2013-07-27',1,1,11)
+insert into CuentaxPagar.Impuesto  values(1,'IVA 0%', 0.00,'2013-07-27',1,2,1,11)
 go
-insert into CuentaxPagar.Impuesto  values(2,'IVA 12%', 12.00,'2013-07-27',1,1,11)
+insert into CuentaxPagar.Impuesto  values(2,'IVA 12%', 12.00,'2013-07-27',1,2,1,11)
 go
-insert into CuentaxPagar.Impuesto  values(3,'RETENCION 1%', 1.00, '2013-07-27',1,1,11)
+insert into CuentaxPagar.Impuesto  values(3,'RETENCION 1%', 1.00, '2013-07-27',1,1,1,11)
 go
-insert into CuentaxPagar.Impuesto  values(4,'RETENCION 2%', 2.00, '2013-07-27',1,1,11)
+insert into CuentaxPagar.Impuesto  values(4,'RETENCION 2%', 2.00, '2013-07-27',1,1,1,11)
 go
-insert into CuentaxPagar.Impuesto  values(5,'RETENCION 8%', 8.00, '2013-07-27',1,1,11)
+insert into CuentaxPagar.Impuesto  values(5,'RETENCION 8%', 8.00, '2013-07-27',1,1,1,11)
 go
 
 --           .-+=*°"|:|:|[INSERTS A TABLA EMPRESA DE SERVICIO]|:|:|°*=+-.
