@@ -3351,4 +3351,27 @@ FROM         Contabilidad.DetalleComprobante INNER JOIN
                       Contabilidad.DetalleComprobante.cuenta = Contabilidad.Cuenta.IdCuenta LEFT OUTER JOIN
                       Contabilidad.vwTipoTransaccion ON Contabilidad.CabeceraComprobante.TipoTransaccion = Contabilidad.vwTipoTransaccion.IdTransaccion                    
 go                      
+create procedure reporteResultado
+@fecha date
+as 
+begin
+select IdCuenta as Codigo,nombre as Cuenta, null as Saldo from Contabilidad.Cuenta where SUBSTRING(IdCuenta,1,1)=4 and IdNivelCuenta=1
+union
+select c.IdCuenta as Codigo,c.nombre as Cuenta, (SUM(s.saldo_deudor) - SUM(s.saldo_acreedor))*-1 as Saldo  from Contabilidad.Cuenta as c,Contabilidad.Saldo as s where c.IdCuenta=s.cuenta and SUBSTRING(s.cuenta,1,1)=4 and c.IdNivelCuenta=5 and s.fecha<=@fecha GROUP BY c.nombre,c.IdCuenta
+union
+select '----------------------------------------4999' as Codigo, 'TOTAL  INGRESOS' as Cuenta, isnull((SUM(s.saldo_acreedor) - SUM(s.saldo_deudor)),0) as Saldo from Contabilidad.Saldo as s where SUBSTRING(s.cuenta,1,1)=4 and s.fecha<=@fecha
+union
+select '----------------------------------------49999' as Codigo, '-----------------------------------------------------' as Cuenta, null as Saldo from Contabilidad.Cuenta where SUBSTRING(IdCuenta,1,1)=5 and IdNivelCuenta=1
+union
+select IdCuenta as Codigo, nombre as Cuenta, null as Saldo from Contabilidad.Cuenta where SUBSTRING(IdCuenta,1,1)=5 and IdNivelCuenta=1
+union
+select c.IdCuenta as Codigo,c.nombre as Cuenta, (SUM(s.saldo_acreedor) - SUM(s.saldo_deudor))*-1 as Saldo  from Contabilidad.Cuenta as c,Contabilidad.Saldo as s where c.IdCuenta=s.cuenta and SUBSTRING(c.codigo_padre,1,1)=5 and c.IdNivelCuenta=5 and s.fecha<=@fecha and c.IdCuenta!='51205001' and c.IdCuenta!='51205002' GROUP BY c.nombre,c.IdCuenta
+union
+select '----------------------------------------58' as Codigo, 'TOTAL  EGRESOS' as Cuenta, isnull((SUM(s.saldo_deudor) - SUM(s.saldo_acreedor)),0) as Saldo from Contabilidad.Saldo as s where SUBSTRING(s.cuenta,1,1)=5 and s.fecha<=@fecha
+union
 
+select '----------------------------------------589' as Codigo, '-----------------------------------------------------' as Cuenta, null as Saldo from Contabilidad.Cuenta where SUBSTRING(IdCuenta,1,1)=2 and IdNivelCuenta=1
+union
+select '----------------------------------------59' as Codigo, 'UTILIDAD  ANTES  DE  IMPUESTOS' as Cuenta, isnull((SUM(s.saldo_acreedor) - SUM(s.saldo_deudor)),0)-isnull((select SUM(saldo_deudor) - SUM(saldo_acreedor) as Saldo from Contabilidad.Saldo where SUBSTRING(cuenta,1,1)=5 and fecha<=@fecha),0) as Saldo from Contabilidad.Saldo as s where SUBSTRING(s.cuenta,1,1)=4 and s.fecha<=@fecha
+end
+go
