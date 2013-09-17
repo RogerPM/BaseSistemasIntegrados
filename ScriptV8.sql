@@ -3313,6 +3313,16 @@ where		det.IdEmpresa= emp.IdEmpresa
 and			det.IdArticulo= art.IdArticulo
 go
 
+Create view OrdenCompraDetalleArticulo_Vista
+as
+SELECT     cotcab.Numero, peddet.Linea, cotcab.idEmpresa, emp.NombreComercial, cotdet.NumeroPedido, peddet.idArticulo, art.Descripcion, peddet.Cantidad
+FROM         Compras.Cotizacion AS cotcab INNER JOIN
+                      Compras.CotizacionDet AS cotdet ON cotcab.Numero = cotdet.Numero INNER JOIN
+                      Compras.PedidoDet AS peddet ON cotdet.NumeroPedido = peddet.Numero INNER JOIN
+                      Seguridad.Empresa AS emp ON cotcab.idEmpresa = emp.IdEmpresa INNER JOIN
+                      Inventario.Articulo AS art ON peddet.idArticulo = art.IdArticulo
+                   
+go
 /********************CONTABILIDAD*****************************/
 create view Contabilidad.vwCuenta as
 SELECT        Contabilidad.Cuenta.IdEmpresa, Contabilidad.Cuenta.IdCuenta, Contabilidad.Cuenta.codigo_padre, Contabilidad.Cuenta.nombre, 
