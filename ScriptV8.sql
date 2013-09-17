@@ -2247,7 +2247,6 @@ create table CuentaxPagar.OrdenPagoEmpleadoDet
 	IngresoAdicional		numeric(10,2) null,
 	DescuentoTotal			numeric(10,2) null,
 	PagoNeto				numeric(10,2) not null,
-	Autorizar				bit not null,
     foreign key (NumOrdenPago, IdEmpresa) references CuentaxPagar.OrdenPagoCab,
     foreign key (IdEmpresa)references Seguridad.Empresa, 
 	primary key (NumOrdenPago, IdEmpresa, Linea) 
@@ -2264,6 +2263,7 @@ create table CuentaxPagar.OrdenPagoDet
 	NumOrdenCab 			int not null,
 	TotalPagar				numeric(10,0) not null,
     IdEmpresa 				int not null,
+    AutorizarPago			bit not null,
     foreign key(NumOrdenCab, IdEmpresa) references CuentaxPagar.OrdenPagoCab,
     foreign key (NumDetalleDeuda, NumCuentaPorPagar, IdEmpresa)references CuentaxPagar.DeudaDet, 
     primary key(NumLinea, NumOrdenCab, IdEmpresa)
