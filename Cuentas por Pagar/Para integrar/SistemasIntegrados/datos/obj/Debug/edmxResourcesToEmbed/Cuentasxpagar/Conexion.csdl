@@ -1,0 +1,1497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TECAModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="CuentasPorPagarEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Banco" EntityType="TECAModel.Banco" />
+    <EntitySet Name="CuentaBancaria2" EntityType="TECAModel.CuentaBancaria2" />
+    <EntitySet Name="CuentaPorPagar" EntityType="TECAModel.CuentaPorPagar" />
+    <EntitySet Name="DeudaDet" EntityType="TECAModel.DeudaDet" />
+    <EntitySet Name="EmpresaServicio" EntityType="TECAModel.EmpresaServicio" />
+    <EntitySet Name="FrecuenciaPago" EntityType="TECAModel.FrecuenciaPago" />
+    <EntitySet Name="ImpuestoCuenta" EntityType="TECAModel.ImpuestoCuenta" />
+    <EntitySet Name="MedioPago" EntityType="TECAModel.MedioPago" />
+    <EntitySet Name="OrdenPagoCab" EntityType="TECAModel.OrdenPagoCab" />
+    <EntitySet Name="PagoCab" EntityType="TECAModel.PagoCab" />
+    <EntitySet Name="PagoDet" EntityType="TECAModel.PagoDet" />
+    <EntitySet Name="TelefonoEmpresaServicio" EntityType="TECAModel.TelefonoEmpresaServicio" />
+    <EntitySet Name="Telefono" EntityType="TECAModel.Telefono" />
+    <EntitySet Name="TipoPersona" EntityType="TECAModel.TipoPersona" />
+    <EntitySet Name="TipoTelefono" EntityType="TECAModel.TipoTelefono" />
+    <AssociationSet Name="FK__CuentaBan__IdBan__2FBA0BF1" Association="TECAModel.FK__CuentaBan__IdBan__2FBA0BF1">
+      <End Role="Banco" EntitySet="Banco" />
+      <End Role="CuentaBancaria2" EntitySet="CuentaBancaria2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoDet__IdBanco__67FE6514" Association="TECAModel.FK__PagoDet__IdBanco__67FE6514">
+      <End Role="Banco" EntitySet="Banco" />
+      <End Role="PagoDet" EntitySet="PagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaBancaria2__2EC5E7B8" Association="TECAModel.FK__CuentaBancaria2__2EC5E7B8">
+      <End Role="EmpresaServicio" EntitySet="EmpresaServicio" />
+      <End Role="CuentaBancaria2" EntitySet="CuentaBancaria2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaPorPagar__375B2DB9" Association="TECAModel.FK__CuentaPorPagar__375B2DB9">
+      <End Role="FrecuenciaPago" EntitySet="FrecuenciaPago" />
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaPorPagar__384F51F2" Association="TECAModel.FK__CuentaPorPagar__384F51F2">
+      <End Role="EmpresaServicio" EntitySet="EmpresaServicio" />
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DeudaDet__3FF073BA" Association="TECAModel.FK__DeudaDet__3FF073BA">
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+      <End Role="DeudaDet" EntitySet="DeudaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ImpuestoCuenta__469D7149" Association="TECAModel.FK__ImpuestoCuenta__469D7149">
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+      <End Role="ImpuestoCuenta" EntitySet="ImpuestoCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EmpresaSe__IdTip__15FA39EE" Association="TECAModel.FK__EmpresaSe__IdTip__15FA39EE">
+      <End Role="TipoPersona" EntitySet="TipoPersona" />
+      <End Role="EmpresaServicio" EntitySet="EmpresaServicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TelefonoEmpresaS__1D9B5BB6" Association="TECAModel.FK__TelefonoEmpresaS__1D9B5BB6">
+      <End Role="EmpresaServicio" EntitySet="EmpresaServicio" />
+      <End Role="TelefonoEmpresaServicio" EntitySet="TelefonoEmpresaServicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoDet__66161CA2" Association="TECAModel.FK__PagoDet__66161CA2">
+      <End Role="MedioPago" EntitySet="MedioPago" />
+      <End Role="PagoDet" EntitySet="PagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoCab__5E74FADA" Association="TECAModel.FK__PagoCab__5E74FADA">
+      <End Role="OrdenPagoCab" EntitySet="OrdenPagoCab" />
+      <End Role="PagoCab" EntitySet="PagoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoDet__6339AFF7" Association="TECAModel.FK__PagoDet__6339AFF7">
+      <End Role="PagoCab" EntitySet="PagoCab" />
+      <End Role="PagoDet" EntitySet="PagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TelefonoE__IdTel__1E8F7FEF" Association="TECAModel.FK__TelefonoE__IdTel__1E8F7FEF">
+      <End Role="Telefono" EntitySet="Telefono" />
+      <End Role="TelefonoEmpresaServicio" EntitySet="TelefonoEmpresaServicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Telefono__IdTipo__5BE2A6F2" Association="TECAModel.FK__Telefono__IdTipo__5BE2A6F2">
+      <End Role="TipoTelefono" EntitySet="TipoTelefono" />
+      <End Role="Telefono" EntitySet="Telefono" />
+    </AssociationSet>
+    <EntitySet Name="CuentaBancaria" EntityType="TECAModel.CuentaBancaria" />
+    <AssociationSet Name="FK__CuentaBan__idBan__5BCD9859" Association="TECAModel.FK__CuentaBan__idBan__5BCD9859">
+      <End Role="Banco" EntitySet="Banco" />
+      <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+    </AssociationSet>
+    <EntitySet Name="Impuesto" EntityType="TECAModel.Impuesto" />
+    <AssociationSet Name="FK__ImpuestoCuenta__4885B9BB" Association="TECAModel.FK__ImpuestoCuenta__4885B9BB">
+      <End Role="Impuesto" EntitySet="Impuesto" />
+      <End Role="ImpuestoCuenta" EntitySet="ImpuestoCuenta" />
+    </AssociationSet>
+    <EntitySet Name="Persona" EntityType="TECAModel.Persona" />
+    <EntitySet Name="Usuario" EntityType="TECAModel.Usuario" />
+    <AssociationSet Name="FK__CuentaBan__idTit__6CF8245B" Association="TECAModel.FK__CuentaBan__idTit__6CF8245B">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaPor__IdUsu__3943762B" Association="TECAModel.FK__CuentaPor__IdUsu__3943762B">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EmpresaSe__IdUsu__1ABEEF0B" Association="TECAModel.FK__EmpresaSe__IdUsu__1ABEEF0B">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="EmpresaServicio" EntitySet="EmpresaServicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Frecuenci__IdUsu__2BE97B0D" Association="TECAModel.FK__Frecuenci__IdUsu__2BE97B0D">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="FrecuenciaPago" EntitySet="FrecuenciaPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Impuesto__IdUsua__2630A1B7" Association="TECAModel.FK__Impuesto__IdUsua__2630A1B7">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Impuesto" EntitySet="Impuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MedioPago__IdUsu__2E06CDA9" Association="TECAModel.FK__MedioPago__IdUsu__2E06CDA9">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="MedioPago" EntitySet="MedioPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenPago__IdUsu__4E3E9311" Association="TECAModel.FK__OrdenPago__IdUsu__4E3E9311">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="OrdenPagoCab" EntitySet="OrdenPagoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoCab__IdUsuar__5F691F13" Association="TECAModel.FK__PagoCab__IdUsuar__5F691F13">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="PagoCab" EntitySet="PagoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__IdTipoP__1CF15040" Association="TECAModel.FK__Persona__IdTipoP__1CF15040">
+      <End Role="TipoPersona" EntitySet="TipoPersona" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdUsuar__3C69FB99" Association="TECAModel.FK__Usuario__IdUsuar__3C69FB99">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <EntitySet Name="CabeceraComprobante" EntityType="TECAModel.CabeceraComprobante" />
+    <EntitySet Name="DetalleComprobante" EntityType="TECAModel.DetalleComprobante" />
+    <EntitySet Name="Empleado" EntityType="TECAModel.Empleado" />
+    <EntitySet Name="TipoIdentificacion" EntityType="TECAModel.TipoIdentificacion" />
+    <EntitySet Name="Empresa" EntityType="TECAModel.Empresa" />
+    <AssociationSet Name="FK__CabeceraC__IdEmp__4C364F0E" Association="TECAModel.FK__CabeceraC__IdEmp__4C364F0E">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleComproban__52E34C9D" Association="TECAModel.FK__DetalleComproban__52E34C9D">
+      <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+      <End Role="DetalleComprobante" EntitySet="DetalleComprobante" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoDet__69E6AD86" Association="TECAModel.FK__PagoDet__69E6AD86">
+      <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+      <End Role="PagoDet" EntitySet="PagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleCo__IdEmp__50FB042B" Association="TECAModel.FK__DetalleCo__IdEmp__50FB042B">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="DetalleComprobante" EntitySet="DetalleComprobante" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Banco__idEmpresa__47C69FAC" Association="TECAModel.FK__Banco__idEmpresa__47C69FAC">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Banco" EntitySet="Banco" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaBan__idEmp__6B0FDBE9" Association="TECAModel.FK__CuentaBan__idEmp__6B0FDBE9">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaBan__IdEmp__338A9CD5" Association="TECAModel.FK__CuentaBan__IdEmp__338A9CD5">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CuentaBancaria2" EntitySet="CuentaBancaria2" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaPor__IdEmp__384F51F2" Association="TECAModel.FK__CuentaPor__IdEmp__384F51F2">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaPor__IdEmp__3E082B48" Association="TECAModel.FK__CuentaPor__IdEmp__3E082B48">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EmpresaSe__IdEmp__19CACAD2" Association="TECAModel.FK__EmpresaSe__IdEmp__19CACAD2">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="EmpresaServicio" EntitySet="EmpresaServicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Frecuenci__IdEmp__2CDD9F46" Association="TECAModel.FK__Frecuenci__IdEmp__2CDD9F46">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="FrecuenciaPago" EntitySet="FrecuenciaPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Impuesto__IdEmpr__2724C5F0" Association="TECAModel.FK__Impuesto__IdEmpr__2724C5F0">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Impuesto" EntitySet="Impuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ImpuestoC__IdEmp__47919582" Association="TECAModel.FK__ImpuestoC__IdEmp__47919582">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="ImpuestoCuenta" EntitySet="ImpuestoCuenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MedioPago__IdEmp__2D12A970" Association="TECAModel.FK__MedioPago__IdEmp__2D12A970">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="MedioPago" EntitySet="MedioPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenPago__IdEmp__4F32B74A" Association="TECAModel.FK__OrdenPago__IdEmp__4F32B74A">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="OrdenPagoCab" EntitySet="OrdenPagoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoCab__IdEmpre__605D434C" Association="TECAModel.FK__PagoCab__IdEmpre__605D434C">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="PagoCab" EntitySet="PagoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TelefonoE__IdEmp__1F83A428" Association="TECAModel.FK__TelefonoE__IdEmp__1F83A428">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TelefonoEmpresaServicio" EntitySet="TelefonoEmpresaServicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__IdEmpr__239E4DCF" Association="TECAModel.FK__Empleado__IdEmpr__239E4DCF">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__IdPers__24927208" Association="TECAModel.FK__Empleado__IdPers__24927208">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__IdEmpre__1BFD2C07" Association="TECAModel.FK__Persona__IdEmpre__1BFD2C07">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__TipoIde__1DE57479" Association="TECAModel.FK__Persona__TipoIde__1DE57479">
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoIdent__IdEmp__173876EA" Association="TECAModel.FK__TipoIdent__IdEmp__173876EA">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoPerso__IdEmp__117F9D94" Association="TECAModel.FK__TipoPerso__IdEmp__117F9D94">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoPersona" EntitySet="TipoPersona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoTelef__IdEmp__5BE2A6F2" Association="TECAModel.FK__TipoTelef__IdEmp__5BE2A6F2">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoTelefono" EntitySet="TipoTelefono" />
+    </AssociationSet>
+    <EntitySet Name="Compra" EntityType="TECAModel.Compra" />
+    <AssociationSet Name="FK__Compra__idEmpres__14B10FFA" Association="TECAModel.FK__Compra__idEmpres__14B10FFA">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Compra__IdUsuari__15A53433" Association="TECAModel.FK__Compra__IdUsuari__15A53433">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <EntitySet Name="Proveedor" EntityType="TECAModel.Proveedor" />
+    <AssociationSet Name="FK__CuentaPor__IdPro__3C1FE2D6" Association="TECAModel.FK__CuentaPor__IdPro__3C1FE2D6">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="CuentaPorPagar" EntitySet="CuentaPorPagar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Proveedor__IdEmp__7814D14C" Association="TECAModel.FK__Proveedor__IdEmp__7814D14C">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Proveedor__IdPer__7720AD13" Association="TECAModel.FK__Proveedor__IdPer__7720AD13">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <EntitySet Name="OrdenPagoDet" EntityType="TECAModel.OrdenPagoDet" />
+    <AssociationSet Name="FK__OrdenPagoDet__5AA469F6" Association="TECAModel.FK__OrdenPagoDet__5AA469F6">
+      <End Role="DeudaDet" EntitySet="DeudaDet" />
+      <End Role="OrdenPagoDet" EntitySet="OrdenPagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenPagoDet__59B045BD" Association="TECAModel.FK__OrdenPagoDet__59B045BD">
+      <End Role="OrdenPagoCab" EntitySet="OrdenPagoCab" />
+      <End Role="OrdenPagoDet" EntitySet="OrdenPagoDet" />
+    </AssociationSet>
+    <EntitySet Name="OrdenPagoEmpleadoDet" EntityType="TECAModel.OrdenPagoEmpleadoDet" />
+    <AssociationSet Name="FK__OrdenPagoEmplead__53F76C67" Association="TECAModel.FK__OrdenPagoEmplead__53F76C67">
+      <End Role="OrdenPagoCab" EntitySet="OrdenPagoCab" />
+      <End Role="OrdenPagoEmpleadoDet" EntitySet="OrdenPagoEmpleadoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenPago__IdEmp__54EB90A0" Association="TECAModel.FK__OrdenPago__IdEmp__54EB90A0">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="OrdenPagoEmpleadoDet" EntitySet="OrdenPagoEmpleadoDet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Banco">
+    <Key>
+      <PropertyRef Name="idBanco" />
+    </Key>
+    <Property Type="Int32" Name="idEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="idBanco" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Estado" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="CuentaBancaria2" Relationship="TECAModel.FK__CuentaBan__IdBan__2FBA0BF1" FromRole="Banco" ToRole="CuentaBancaria2" />
+    <NavigationProperty Name="PagoDet" Relationship="TECAModel.FK__PagoDet__IdBanco__67FE6514" FromRole="Banco" ToRole="PagoDet" />
+    <NavigationProperty Name="CuentaBancaria" Relationship="TECAModel.FK__CuentaBan__idBan__5BCD9859" FromRole="Banco" ToRole="CuentaBancaria" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__Banco__idEmpresa__47C69FAC" FromRole="Banco" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="CuentaBancaria2">
+    <Key>
+      <PropertyRef Name="Serie" />
+      <PropertyRef Name="IdEmpresaServicio" />
+    </Key>
+    <Property Type="Int32" Name="Serie" Nullable="false" />
+    <Property Type="String" Name="TipoCuenta" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NroCta" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdBanco" Nullable="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="String" Name="IdEmpresaServicio" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Banco" Relationship="TECAModel.FK__CuentaBan__IdBan__2FBA0BF1" FromRole="CuentaBancaria2" ToRole="Banco" />
+    <NavigationProperty Name="EmpresaServicio" Relationship="TECAModel.FK__CuentaBancaria2__2EC5E7B8" FromRole="CuentaBancaria2" ToRole="EmpresaServicio" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__CuentaBan__IdEmp__338A9CD5" FromRole="CuentaBancaria2" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="CuentaPorPagar">
+    <Key>
+      <PropertyRef Name="NumCuentaPorPagar" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Type="Int32" Name="NumCuentaPorPagar" Nullable="false" />
+    <Property Type="Int32" Name="NumIngresoEgreso" />
+    <Property Type="DateTime" Name="FechaIngreso" Nullable="false" />
+    <Property Type="String" Name="NumeroFactura" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaTransaccion" Nullable="false" />
+    <Property Type="Int32" Name="IdProveedor" />
+    <Property Type="String" Name="IdEmpresaServicio" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Motivo" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Detalle" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Subtotal" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="Descuento" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="Total" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="String" Name="FormaPago" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="ValorEntrada" Precision="10" Scale="2" />
+    <Property Type="Int32" Name="NumeroLetra" />
+    <Property Type="Int32" Name="IdFrecuencia" />
+    <Property Type="Decimal" Name="ValorLetra" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="SaldoDeuda" Precision="10" Scale="2" />
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <NavigationProperty Name="FrecuenciaPago" Relationship="TECAModel.FK__CuentaPorPagar__375B2DB9" FromRole="CuentaPorPagar" ToRole="FrecuenciaPago" />
+    <NavigationProperty Name="EmpresaServicio" Relationship="TECAModel.FK__CuentaPorPagar__384F51F2" FromRole="CuentaPorPagar" ToRole="EmpresaServicio" />
+    <NavigationProperty Name="DeudaDet" Relationship="TECAModel.FK__DeudaDet__3FF073BA" FromRole="CuentaPorPagar" ToRole="DeudaDet" />
+    <NavigationProperty Name="ImpuestoCuenta" Relationship="TECAModel.FK__ImpuestoCuenta__469D7149" FromRole="CuentaPorPagar" ToRole="ImpuestoCuenta" />
+    <NavigationProperty Name="Usuario" Relationship="TECAModel.FK__CuentaPor__IdUsu__3943762B" FromRole="CuentaPorPagar" ToRole="Usuario" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__CuentaPor__IdEmp__384F51F2" FromRole="CuentaPorPagar" ToRole="Empresa" />
+    <NavigationProperty Name="Empresa1" Relationship="TECAModel.FK__CuentaPor__IdEmp__3E082B48" FromRole="CuentaPorPagar" ToRole="Empresa" />
+    <NavigationProperty Name="Proveedor" Relationship="TECAModel.FK__CuentaPor__IdPro__3C1FE2D6" FromRole="CuentaPorPagar" ToRole="Proveedor" />
+  </EntityType>
+  <EntityType Name="DeudaDet">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="NumCuentaPorPagar" />
+      <PropertyRef Name="NumDetalleDeuda" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="NumCuentaPorPagar" Nullable="false" />
+    <Property Type="Int32" Name="NumDetalleDeuda" Nullable="false" />
+    <Property Type="Decimal" Name="ValorLetra" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="DateTime" Name="FechaVencimiento" Nullable="false" />
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <NavigationProperty Name="CuentaPorPagar" Relationship="TECAModel.FK__DeudaDet__3FF073BA" FromRole="DeudaDet" ToRole="CuentaPorPagar" />
+    <NavigationProperty Name="OrdenPagoDet" Relationship="TECAModel.FK__OrdenPagoDet__5AA469F6" FromRole="DeudaDet" ToRole="OrdenPagoDet" />
+  </EntityType>
+  <EntityType Name="EmpresaServicio">
+    <Key>
+      <PropertyRef Name="IdEmpresaServicio" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Type="String" Name="IdEmpresaServicio" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaRegistro" Nullable="false" />
+    <Property Type="String" Name="RazonSocial" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Direccion" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Webpage" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <Property Type="Int32" Name="IdTipoPersona" Nullable="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <NavigationProperty Name="CuentaBancaria2" Relationship="TECAModel.FK__CuentaBancaria2__2EC5E7B8" FromRole="EmpresaServicio" ToRole="CuentaBancaria2" />
+    <NavigationProperty Name="CuentaPorPagar" Relationship="TECAModel.FK__CuentaPorPagar__384F51F2" FromRole="EmpresaServicio" ToRole="CuentaPorPagar" />
+    <NavigationProperty Name="TipoPersona" Relationship="TECAModel.FK__EmpresaSe__IdTip__15FA39EE" FromRole="EmpresaServicio" ToRole="TipoPersona" />
+    <NavigationProperty Name="TelefonoEmpresaServicio" Relationship="TECAModel.FK__TelefonoEmpresaS__1D9B5BB6" FromRole="EmpresaServicio" ToRole="TelefonoEmpresaServicio" />
+    <NavigationProperty Name="Usuario" Relationship="TECAModel.FK__EmpresaSe__IdUsu__1ABEEF0B" FromRole="EmpresaServicio" ToRole="Usuario" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__EmpresaSe__IdEmp__19CACAD2" FromRole="EmpresaServicio" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="FrecuenciaPago">
+    <Key>
+      <PropertyRef Name="IdFrecuenciaPago" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Type="Int32" Name="IdFrecuenciaPago" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaActual" Nullable="false" />
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <NavigationProperty Name="CuentaPorPagar" Relationship="TECAModel.FK__CuentaPorPagar__375B2DB9" FromRole="FrecuenciaPago" ToRole="CuentaPorPagar" />
+    <NavigationProperty Name="Usuario" Relationship="TECAModel.FK__Frecuenci__IdUsu__2BE97B0D" FromRole="FrecuenciaPago" ToRole="Usuario" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__Frecuenci__IdEmp__2CDD9F46" FromRole="FrecuenciaPago" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="ImpuestoCuenta">
+    <Key>
+      <PropertyRef Name="IdImpuesto" />
+      <PropertyRef Name="NumCuentaPorPagar" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Type="Int32" Name="IdImpuesto" Nullable="false" />
+    <Property Type="Int32" Name="NumCuentaPorPagar" Nullable="false" />
+    <Property Type="Decimal" Name="Valor" Nullable="false" Precision="10" Scale="0" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <NavigationProperty Name="CuentaPorPagar" Relationship="TECAModel.FK__ImpuestoCuenta__469D7149" FromRole="ImpuestoCuenta" ToRole="CuentaPorPagar" />
+    <NavigationProperty Name="Impuesto" Relationship="TECAModel.FK__ImpuestoCuenta__4885B9BB" FromRole="ImpuestoCuenta" ToRole="Impuesto" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__ImpuestoC__IdEmp__47919582" FromRole="ImpuestoCuenta" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="MedioPago">
+    <Key>
+      <PropertyRef Name="IdMedioPago" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Type="Int32" Name="IdMedioPago" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="fechaRegistro" Nullable="false" />
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <NavigationProperty Name="PagoDet" Relationship="TECAModel.FK__PagoDet__66161CA2" FromRole="MedioPago" ToRole="PagoDet" />
+    <NavigationProperty Name="Usuario" Relationship="TECAModel.FK__MedioPago__IdUsu__2E06CDA9" FromRole="MedioPago" ToRole="Usuario" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__MedioPago__IdEmp__2D12A970" FromRole="MedioPago" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="OrdenPagoCab">
+    <Key>
+      <PropertyRef Name="NumOrdenPago" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Type="Int32" Name="NumOrdenPago" Nullable="false" />
+    <Property Type="DateTime" Name="fechadeEmision" Nullable="false" />
+    <Property Type="Int32" Name="IdPersona" />
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <Property Type="Decimal" Name="TotalPagar" Nullable="false" Precision="10" Scale="2" />
+    <Property Type="String" Name="TipoOrdenPago" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <NavigationProperty Name="PagoCab" Relationship="TECAModel.FK__PagoCab__5E74FADA" FromRole="OrdenPagoCab" ToRole="PagoCab" />
+    <NavigationProperty Name="Usuario" Relationship="TECAModel.FK__OrdenPago__IdUsu__4E3E9311" FromRole="OrdenPagoCab" ToRole="Usuario" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__OrdenPago__IdEmp__4F32B74A" FromRole="OrdenPagoCab" ToRole="Empresa" />
+    <NavigationProperty Name="OrdenPagoDet" Relationship="TECAModel.FK__OrdenPagoDet__59B045BD" FromRole="OrdenPagoCab" ToRole="OrdenPagoDet" />
+    <NavigationProperty Name="OrdenPagoEmpleadoDet" Relationship="TECAModel.FK__OrdenPagoEmplead__53F76C67" FromRole="OrdenPagoCab" ToRole="OrdenPagoEmpleadoDet" />
+  </EntityType>
+  <EntityType Name="PagoCab">
+    <Key>
+      <PropertyRef Name="NumPago" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Type="Int32" Name="NumPago" Nullable="false" />
+    <Property Type="DateTime" Name="FechaIngreso" Nullable="false" />
+    <Property Type="Int32" Name="NumOrdenPago" />
+    <Property Type="Decimal" Name="TotalPagar" Nullable="false" Precision="10" Scale="0" />
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <Property Type="Decimal" Name="NumComprobante" Nullable="false" Precision="4" Scale="0" />
+    <NavigationProperty Name="OrdenPagoCab" Relationship="TECAModel.FK__PagoCab__5E74FADA" FromRole="PagoCab" ToRole="OrdenPagoCab" />
+    <NavigationProperty Name="PagoDet" Relationship="TECAModel.FK__PagoDet__6339AFF7" FromRole="PagoCab" ToRole="PagoDet" />
+    <NavigationProperty Name="Usuario" Relationship="TECAModel.FK__PagoCab__IdUsuar__5F691F13" FromRole="PagoCab" ToRole="Usuario" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__PagoCab__IdEmpre__605D434C" FromRole="PagoCab" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="PagoDet">
+    <Key>
+      <PropertyRef Name="NumLinea" />
+      <PropertyRef Name="NumPago" />
+    </Key>
+    <Property Type="Int32" Name="NumLinea" Nullable="false" />
+    <Property Type="Int32" Name="IdMedioPago" Nullable="false" />
+    <Property Type="Decimal" Name="Monto" Nullable="false" Precision="10" Scale="0" />
+    <Property Type="Int32" Name="NumeroCuenta" Nullable="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="IdBanco" Nullable="false" />
+    <Property Type="Decimal" Name="NumComprobante" Nullable="false" Precision="4" Scale="0" />
+    <Property Type="Int32" Name="NumComision" />
+    <Property Type="Int32" Name="NumNominaCab" />
+    <Property Type="Int32" Name="NumPago" Nullable="false" />
+    <NavigationProperty Name="Banco" Relationship="TECAModel.FK__PagoDet__IdBanco__67FE6514" FromRole="PagoDet" ToRole="Banco" />
+    <NavigationProperty Name="MedioPago" Relationship="TECAModel.FK__PagoDet__66161CA2" FromRole="PagoDet" ToRole="MedioPago" />
+    <NavigationProperty Name="PagoCab" Relationship="TECAModel.FK__PagoDet__6339AFF7" FromRole="PagoDet" ToRole="PagoCab" />
+    <NavigationProperty Name="CabeceraComprobante" Relationship="TECAModel.FK__PagoDet__69E6AD86" FromRole="PagoDet" ToRole="CabeceraComprobante" />
+  </EntityType>
+  <EntityType Name="TelefonoEmpresaServicio">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdEmpresaServicio" />
+      <PropertyRef Name="IdTelefono" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="String" Name="IdEmpresaServicio" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdTelefono" Nullable="false" />
+    <NavigationProperty Name="EmpresaServicio" Relationship="TECAModel.FK__TelefonoEmpresaS__1D9B5BB6" FromRole="TelefonoEmpresaServicio" ToRole="EmpresaServicio" />
+    <NavigationProperty Name="Telefono" Relationship="TECAModel.FK__TelefonoE__IdTel__1E8F7FEF" FromRole="TelefonoEmpresaServicio" ToRole="Telefono" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__TelefonoE__IdEmp__1F83A428" FromRole="TelefonoEmpresaServicio" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="Telefono">
+    <Key>
+      <PropertyRef Name="IdTelefono" />
+    </Key>
+    <Property Type="Int32" Name="IdTelefono" Nullable="false" />
+    <Property Type="Int32" Name="Numero" Nullable="false" />
+    <Property Type="Int32" Name="IdTipoTelefono" Nullable="false" />
+    <NavigationProperty Name="TelefonoEmpresaServicio" Relationship="TECAModel.FK__TelefonoE__IdTel__1E8F7FEF" FromRole="Telefono" ToRole="TelefonoEmpresaServicio" />
+    <NavigationProperty Name="TipoTelefono" Relationship="TECAModel.FK__Telefono__IdTipo__5BE2A6F2" FromRole="Telefono" ToRole="TipoTelefono" />
+  </EntityType>
+  <EntityType Name="TipoPersona">
+    <Key>
+      <PropertyRef Name="IdTipoPersona" />
+    </Key>
+    <Property Type="Int32" Name="IdTipoPersona" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="IdEstado" Nullable="false" />
+    <NavigationProperty Name="EmpresaServicio" Relationship="TECAModel.FK__EmpresaSe__IdTip__15FA39EE" FromRole="TipoPersona" ToRole="EmpresaServicio" />
+    <NavigationProperty Name="Persona" Relationship="TECAModel.FK__Persona__IdTipoP__1CF15040" FromRole="TipoPersona" ToRole="Persona" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__TipoPerso__IdEmp__117F9D94" FromRole="TipoPersona" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="TipoTelefono">
+    <Key>
+      <PropertyRef Name="IdTipoTelefono" />
+    </Key>
+    <Property Type="Int32" Name="IdTipoTelefono" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="IdEstado" Nullable="false" />
+    <NavigationProperty Name="Telefono" Relationship="TECAModel.FK__Telefono__IdTipo__5BE2A6F2" FromRole="TipoTelefono" ToRole="Telefono" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__TipoTelef__IdEmp__5BE2A6F2" FromRole="TipoTelefono" ToRole="Empresa" />
+  </EntityType>
+  <Association Name="FK__CuentaBan__IdBan__2FBA0BF1">
+    <End Type="TECAModel.Banco" Role="Banco" Multiplicity="1" />
+    <End Type="TECAModel.CuentaBancaria2" Role="CuentaBancaria2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco">
+        <PropertyRef Name="idBanco" />
+      </Principal>
+      <Dependent Role="CuentaBancaria2">
+        <PropertyRef Name="IdBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoDet__IdBanco__67FE6514">
+    <End Type="TECAModel.Banco" Role="Banco" Multiplicity="1" />
+    <End Type="TECAModel.PagoDet" Role="PagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco">
+        <PropertyRef Name="idBanco" />
+      </Principal>
+      <Dependent Role="PagoDet">
+        <PropertyRef Name="IdBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaBancaria2__2EC5E7B8">
+    <End Type="TECAModel.EmpresaServicio" Role="EmpresaServicio" Multiplicity="1" />
+    <End Type="TECAModel.CuentaBancaria2" Role="CuentaBancaria2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaServicio">
+        <PropertyRef Name="IdEmpresaServicio" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaBancaria2">
+        <PropertyRef Name="IdEmpresaServicio" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaPorPagar__375B2DB9">
+    <End Type="TECAModel.FrecuenciaPago" Role="FrecuenciaPago" Multiplicity="0..1" />
+    <End Type="TECAModel.CuentaPorPagar" Role="CuentaPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FrecuenciaPago">
+        <PropertyRef Name="IdFrecuenciaPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaPorPagar">
+        <PropertyRef Name="IdFrecuencia" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaPorPagar__384F51F2">
+    <End Type="TECAModel.EmpresaServicio" Role="EmpresaServicio" Multiplicity="0..1" />
+    <End Type="TECAModel.CuentaPorPagar" Role="CuentaPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaServicio">
+        <PropertyRef Name="IdEmpresaServicio" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaPorPagar">
+        <PropertyRef Name="IdEmpresaServicio" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DeudaDet__3FF073BA">
+    <End Type="TECAModel.CuentaPorPagar" Role="CuentaPorPagar" Multiplicity="1" />
+    <End Type="TECAModel.DeudaDet" Role="DeudaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentaPorPagar">
+        <PropertyRef Name="NumCuentaPorPagar" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="DeudaDet">
+        <PropertyRef Name="NumCuentaPorPagar" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ImpuestoCuenta__469D7149">
+    <End Type="TECAModel.CuentaPorPagar" Role="CuentaPorPagar" Multiplicity="1" />
+    <End Type="TECAModel.ImpuestoCuenta" Role="ImpuestoCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CuentaPorPagar">
+        <PropertyRef Name="NumCuentaPorPagar" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="ImpuestoCuenta">
+        <PropertyRef Name="NumCuentaPorPagar" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EmpresaSe__IdTip__15FA39EE">
+    <End Type="TECAModel.TipoPersona" Role="TipoPersona" Multiplicity="1" />
+    <End Type="TECAModel.EmpresaServicio" Role="EmpresaServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPersona">
+        <PropertyRef Name="IdTipoPersona" />
+      </Principal>
+      <Dependent Role="EmpresaServicio">
+        <PropertyRef Name="IdTipoPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TelefonoEmpresaS__1D9B5BB6">
+    <End Type="TECAModel.EmpresaServicio" Role="EmpresaServicio" Multiplicity="1" />
+    <End Type="TECAModel.TelefonoEmpresaServicio" Role="TelefonoEmpresaServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmpresaServicio">
+        <PropertyRef Name="IdEmpresaServicio" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TelefonoEmpresaServicio">
+        <PropertyRef Name="IdEmpresaServicio" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoDet__66161CA2">
+    <End Type="TECAModel.MedioPago" Role="MedioPago" Multiplicity="1" />
+    <End Type="TECAModel.PagoDet" Role="PagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedioPago">
+        <PropertyRef Name="IdMedioPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="PagoDet">
+        <PropertyRef Name="IdMedioPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoCab__5E74FADA">
+    <End Type="TECAModel.OrdenPagoCab" Role="OrdenPagoCab" Multiplicity="0..1" />
+    <End Type="TECAModel.PagoCab" Role="PagoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenPagoCab">
+        <PropertyRef Name="NumOrdenPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="PagoCab">
+        <PropertyRef Name="NumOrdenPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoDet__6339AFF7">
+    <End Type="TECAModel.PagoCab" Role="PagoCab" Multiplicity="1" />
+    <End Type="TECAModel.PagoDet" Role="PagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PagoCab">
+        <PropertyRef Name="NumPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="PagoDet">
+        <PropertyRef Name="NumPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TelefonoE__IdTel__1E8F7FEF">
+    <End Type="TECAModel.Telefono" Role="Telefono" Multiplicity="1" />
+    <End Type="TECAModel.TelefonoEmpresaServicio" Role="TelefonoEmpresaServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Telefono">
+        <PropertyRef Name="IdTelefono" />
+      </Principal>
+      <Dependent Role="TelefonoEmpresaServicio">
+        <PropertyRef Name="IdTelefono" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Telefono__IdTipo__5BE2A6F2">
+    <End Type="TECAModel.TipoTelefono" Role="TipoTelefono" Multiplicity="1" />
+    <End Type="TECAModel.Telefono" Role="Telefono" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoTelefono">
+        <PropertyRef Name="IdTipoTelefono" />
+      </Principal>
+      <Dependent Role="Telefono">
+        <PropertyRef Name="IdTipoTelefono" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CuentaBancaria">
+    <Key>
+      <PropertyRef Name="idCuentaBancaria" />
+    </Key>
+    <Property Type="Int32" Name="idEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="idCuentaBancaria" Nullable="false" />
+    <Property Type="Int32" Name="idBanco" Nullable="false" />
+    <Property Type="Int32" Name="idTitular" />
+    <Property Type="Int32" Name="NumeroCuenta" Nullable="false" />
+    <Property Type="String" Name="TipoCuenta" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Saldo" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="String" Name="Estado" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Banco" Relationship="TECAModel.FK__CuentaBan__idBan__5BCD9859" FromRole="CuentaBancaria" ToRole="Banco" />
+    <NavigationProperty Name="Persona" Relationship="TECAModel.FK__CuentaBan__idTit__6CF8245B" FromRole="CuentaBancaria" ToRole="Persona" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__CuentaBan__idEmp__6B0FDBE9" FromRole="CuentaBancaria" ToRole="Empresa" />
+  </EntityType>
+  <Association Name="FK__CuentaBan__idBan__5BCD9859">
+    <End Type="TECAModel.Banco" Role="Banco" Multiplicity="1" />
+    <End Type="TECAModel.CuentaBancaria" Role="CuentaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco">
+        <PropertyRef Name="idBanco" />
+      </Principal>
+      <Dependent Role="CuentaBancaria">
+        <PropertyRef Name="idBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Impuesto">
+    <Key>
+      <PropertyRef Name="IdImpuesto" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Type="Int32" Name="IdImpuesto" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Porcentaje" Nullable="false" Precision="4" Scale="2" />
+    <Property Type="DateTime" Name="FechaRegistro" Nullable="false" />
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <Property Type="Int32" Name="NatureAcree" Nullable="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <NavigationProperty Name="ImpuestoCuenta" Relationship="TECAModel.FK__ImpuestoCuenta__4885B9BB" FromRole="Impuesto" ToRole="ImpuestoCuenta" />
+    <NavigationProperty Name="Usuario" Relationship="TECAModel.FK__Impuesto__IdUsua__2630A1B7" FromRole="Impuesto" ToRole="Usuario" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__Impuesto__IdEmpr__2724C5F0" FromRole="Impuesto" ToRole="Empresa" />
+  </EntityType>
+  <Association Name="FK__ImpuestoCuenta__4885B9BB">
+    <End Type="TECAModel.Impuesto" Role="Impuesto" Multiplicity="1" />
+    <End Type="TECAModel.ImpuestoCuenta" Role="ImpuestoCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Impuesto">
+        <PropertyRef Name="IdImpuesto" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="ImpuestoCuenta">
+        <PropertyRef Name="IdImpuesto" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Type="Int32" Name="IdPersona" Nullable="false" />
+    <Property Type="Decimal" Name="Identificacion" Nullable="false" Precision="14" Scale="0" />
+    <Property Type="Int32" Name="IdTipoPersona" Nullable="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="String" Name="NombreRazonSocial" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Apellido" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaNacimiento" />
+    <Property Type="String" Name="genero" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="TipoIdentificacion" Nullable="false" />
+    <Property Type="String" Name="direccion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="TelefonoGneral" Precision="14" Scale="0" />
+    <Property Type="Decimal" Name="TelefonoMovil" Nullable="false" Precision="14" Scale="0" />
+    <Property Type="Decimal" Name="TelefonoCasa" Nullable="false" Precision="14" Scale="0" />
+    <Property Type="Decimal" Name="TelefonoOtros" Precision="14" Scale="0" />
+    <Property Type="String" Name="mail" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" Nullable="false" />
+    <NavigationProperty Name="CuentaBancaria" Relationship="TECAModel.FK__CuentaBan__idTit__6CF8245B" FromRole="Persona" ToRole="CuentaBancaria" />
+    <NavigationProperty Name="TipoPersona" Relationship="TECAModel.FK__Persona__IdTipoP__1CF15040" FromRole="Persona" ToRole="TipoPersona" />
+    <NavigationProperty Name="Usuario" Relationship="TECAModel.FK__Usuario__IdUsuar__3C69FB99" FromRole="Persona" ToRole="Usuario" />
+    <NavigationProperty Name="Empleado" Relationship="TECAModel.FK__Empleado__IdPers__24927208" FromRole="Persona" ToRole="Empleado" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__Persona__IdEmpre__1BFD2C07" FromRole="Persona" ToRole="Empresa" />
+    <NavigationProperty Name="TipoIdentificacion1" Relationship="TECAModel.FK__Persona__TipoIde__1DE57479" FromRole="Persona" ToRole="TipoIdentificacion" />
+    <NavigationProperty Name="Proveedor" Relationship="TECAModel.FK__Proveedor__IdPer__7720AD13" FromRole="Persona" ToRole="Proveedor" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="String" Name="NombreUsuario" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Contrasena" Nullable="false" MaxLength="220" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <Property Type="Int32" Name="IdImagen" />
+    <Property Type="Int32" Name="IdPerfil" />
+    <NavigationProperty Name="CuentaPorPagar" Relationship="TECAModel.FK__CuentaPor__IdUsu__3943762B" FromRole="Usuario" ToRole="CuentaPorPagar" />
+    <NavigationProperty Name="EmpresaServicio" Relationship="TECAModel.FK__EmpresaSe__IdUsu__1ABEEF0B" FromRole="Usuario" ToRole="EmpresaServicio" />
+    <NavigationProperty Name="FrecuenciaPago" Relationship="TECAModel.FK__Frecuenci__IdUsu__2BE97B0D" FromRole="Usuario" ToRole="FrecuenciaPago" />
+    <NavigationProperty Name="Impuesto" Relationship="TECAModel.FK__Impuesto__IdUsua__2630A1B7" FromRole="Usuario" ToRole="Impuesto" />
+    <NavigationProperty Name="MedioPago" Relationship="TECAModel.FK__MedioPago__IdUsu__2E06CDA9" FromRole="Usuario" ToRole="MedioPago" />
+    <NavigationProperty Name="OrdenPagoCab" Relationship="TECAModel.FK__OrdenPago__IdUsu__4E3E9311" FromRole="Usuario" ToRole="OrdenPagoCab" />
+    <NavigationProperty Name="PagoCab" Relationship="TECAModel.FK__PagoCab__IdUsuar__5F691F13" FromRole="Usuario" ToRole="PagoCab" />
+    <NavigationProperty Name="Persona" Relationship="TECAModel.FK__Usuario__IdUsuar__3C69FB99" FromRole="Usuario" ToRole="Persona" />
+    <NavigationProperty Name="Compra" Relationship="TECAModel.FK__Compra__IdUsuari__15A53433" FromRole="Usuario" ToRole="Compra" />
+  </EntityType>
+  <Association Name="FK__CuentaBan__idTit__6CF8245B">
+    <End Type="TECAModel.Persona" Role="Persona" Multiplicity="0..1" />
+    <End Type="TECAModel.CuentaBancaria" Role="CuentaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="CuentaBancaria">
+        <PropertyRef Name="idTitular" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaPor__IdUsu__3943762B">
+    <End Type="TECAModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="TECAModel.CuentaPorPagar" Role="CuentaPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="CuentaPorPagar">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EmpresaSe__IdUsu__1ABEEF0B">
+    <End Type="TECAModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="TECAModel.EmpresaServicio" Role="EmpresaServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="EmpresaServicio">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Frecuenci__IdUsu__2BE97B0D">
+    <End Type="TECAModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="TECAModel.FrecuenciaPago" Role="FrecuenciaPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="FrecuenciaPago">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Impuesto__IdUsua__2630A1B7">
+    <End Type="TECAModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="TECAModel.Impuesto" Role="Impuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Impuesto">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MedioPago__IdUsu__2E06CDA9">
+    <End Type="TECAModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="TECAModel.MedioPago" Role="MedioPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="MedioPago">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenPago__IdUsu__4E3E9311">
+    <End Type="TECAModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="TECAModel.OrdenPagoCab" Role="OrdenPagoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="OrdenPagoCab">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoCab__IdUsuar__5F691F13">
+    <End Type="TECAModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="TECAModel.PagoCab" Role="PagoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="PagoCab">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__IdTipoP__1CF15040">
+    <End Type="TECAModel.TipoPersona" Role="TipoPersona" Multiplicity="1" />
+    <End Type="TECAModel.Persona" Role="Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPersona">
+        <PropertyRef Name="IdTipoPersona" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="IdTipoPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdUsuar__3C69FB99">
+    <End Type="TECAModel.Persona" Role="Persona" Multiplicity="1" />
+    <End Type="TECAModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CabeceraComprobante">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="numero_comprobante" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Decimal" Name="numero_comprobante" Nullable="false" Precision="4" Scale="0" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" />
+    <Property Type="String" Name="glosa" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="periodo_contable" Precision="6" Scale="0" />
+    <Property Type="Decimal" Name="periodo_contable_IdAFiscal" Precision="4" Scale="0" />
+    <Property Type="Int32" Name="IdUsuario" />
+    <Property Type="DateTime" Name="FechaModificacion" />
+    <Property Type="Int32" Name="TipoTransaccion" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__CabeceraC__IdEmp__4C364F0E" FromRole="CabeceraComprobante" ToRole="Empresa" />
+    <NavigationProperty Name="DetalleComprobante" Relationship="TECAModel.FK__DetalleComproban__52E34C9D" FromRole="CabeceraComprobante" ToRole="DetalleComprobante" />
+    <NavigationProperty Name="PagoDet" Relationship="TECAModel.FK__PagoDet__69E6AD86" FromRole="CabeceraComprobante" ToRole="PagoDet" />
+  </EntityType>
+  <EntityType Name="DetalleComprobante">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="cabecera_comprobante" />
+      <PropertyRef Name="linea_comprobante" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Decimal" Name="cabecera_comprobante" Nullable="false" Precision="4" Scale="0" />
+    <Property Type="Decimal" Name="linea_comprobante" Nullable="false" Precision="2" Scale="0" />
+    <Property Type="String" Name="cuenta" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="debe" Nullable="false" Precision="14" Scale="2" />
+    <Property Type="Decimal" Name="haber" Nullable="false" Precision="14" Scale="2" />
+    <NavigationProperty Name="CabeceraComprobante" Relationship="TECAModel.FK__DetalleComproban__52E34C9D" FromRole="DetalleComprobante" ToRole="CabeceraComprobante" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__DetalleCo__IdEmp__50FB042B" FromRole="DetalleComprobante" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdPersona" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="IdEmpleado" Nullable="false" />
+    <Property Type="Int32" Name="IdPersona" Nullable="false" />
+    <Property Type="Int32" Name="IdEstado" Nullable="false" />
+    <Property Type="Decimal" Name="Sueldo" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__Empleado__IdEmpr__239E4DCF" FromRole="Empleado" ToRole="Empresa" />
+    <NavigationProperty Name="Persona" Relationship="TECAModel.FK__Empleado__IdPers__24927208" FromRole="Empleado" ToRole="Persona" />
+  </EntityType>
+  <EntityType Name="TipoIdentificacion">
+    <Key>
+      <PropertyRef Name="IdTipoIdentificacion" />
+    </Key>
+    <Property Type="Int32" Name="IdTipoIdentificacion" Nullable="false" />
+    <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="IdEstado" Nullable="false" />
+    <NavigationProperty Name="Persona" Relationship="TECAModel.FK__Persona__TipoIde__1DE57479" FromRole="TipoIdentificacion" ToRole="Persona" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__TipoIdent__IdEmp__173876EA" FromRole="TipoIdentificacion" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="String" Name="RazonSocial" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreComercial" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Ruc" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Direccion" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Binary" Name="Logotipo" MaxLength="Max" FixedLength="false" />
+    <Property Type="DateTime" Name="FechaInicioSistema" />
+    <Property Type="String" Name="Correo" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SitioWeb" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Sector" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="CabeceraComprobante" Relationship="TECAModel.FK__CabeceraC__IdEmp__4C364F0E" FromRole="Empresa" ToRole="CabeceraComprobante" />
+    <NavigationProperty Name="DetalleComprobante" Relationship="TECAModel.FK__DetalleCo__IdEmp__50FB042B" FromRole="Empresa" ToRole="DetalleComprobante" />
+    <NavigationProperty Name="Banco" Relationship="TECAModel.FK__Banco__idEmpresa__47C69FAC" FromRole="Empresa" ToRole="Banco" />
+    <NavigationProperty Name="CuentaBancaria" Relationship="TECAModel.FK__CuentaBan__idEmp__6B0FDBE9" FromRole="Empresa" ToRole="CuentaBancaria" />
+    <NavigationProperty Name="CuentaBancaria2" Relationship="TECAModel.FK__CuentaBan__IdEmp__338A9CD5" FromRole="Empresa" ToRole="CuentaBancaria2" />
+    <NavigationProperty Name="CuentaPorPagar" Relationship="TECAModel.FK__CuentaPor__IdEmp__384F51F2" FromRole="Empresa" ToRole="CuentaPorPagar" />
+    <NavigationProperty Name="CuentaPorPagar1" Relationship="TECAModel.FK__CuentaPor__IdEmp__3E082B48" FromRole="Empresa" ToRole="CuentaPorPagar" />
+    <NavigationProperty Name="EmpresaServicio" Relationship="TECAModel.FK__EmpresaSe__IdEmp__19CACAD2" FromRole="Empresa" ToRole="EmpresaServicio" />
+    <NavigationProperty Name="FrecuenciaPago" Relationship="TECAModel.FK__Frecuenci__IdEmp__2CDD9F46" FromRole="Empresa" ToRole="FrecuenciaPago" />
+    <NavigationProperty Name="Impuesto" Relationship="TECAModel.FK__Impuesto__IdEmpr__2724C5F0" FromRole="Empresa" ToRole="Impuesto" />
+    <NavigationProperty Name="ImpuestoCuenta" Relationship="TECAModel.FK__ImpuestoC__IdEmp__47919582" FromRole="Empresa" ToRole="ImpuestoCuenta" />
+    <NavigationProperty Name="MedioPago" Relationship="TECAModel.FK__MedioPago__IdEmp__2D12A970" FromRole="Empresa" ToRole="MedioPago" />
+    <NavigationProperty Name="OrdenPagoCab" Relationship="TECAModel.FK__OrdenPago__IdEmp__4F32B74A" FromRole="Empresa" ToRole="OrdenPagoCab" />
+    <NavigationProperty Name="PagoCab" Relationship="TECAModel.FK__PagoCab__IdEmpre__605D434C" FromRole="Empresa" ToRole="PagoCab" />
+    <NavigationProperty Name="TelefonoEmpresaServicio" Relationship="TECAModel.FK__TelefonoE__IdEmp__1F83A428" FromRole="Empresa" ToRole="TelefonoEmpresaServicio" />
+    <NavigationProperty Name="Empleado" Relationship="TECAModel.FK__Empleado__IdEmpr__239E4DCF" FromRole="Empresa" ToRole="Empleado" />
+    <NavigationProperty Name="Persona" Relationship="TECAModel.FK__Persona__IdEmpre__1BFD2C07" FromRole="Empresa" ToRole="Persona" />
+    <NavigationProperty Name="TipoIdentificacion" Relationship="TECAModel.FK__TipoIdent__IdEmp__173876EA" FromRole="Empresa" ToRole="TipoIdentificacion" />
+    <NavigationProperty Name="TipoPersona" Relationship="TECAModel.FK__TipoPerso__IdEmp__117F9D94" FromRole="Empresa" ToRole="TipoPersona" />
+    <NavigationProperty Name="TipoTelefono" Relationship="TECAModel.FK__TipoTelef__IdEmp__5BE2A6F2" FromRole="Empresa" ToRole="TipoTelefono" />
+    <NavigationProperty Name="Compra" Relationship="TECAModel.FK__Compra__idEmpres__14B10FFA" FromRole="Empresa" ToRole="Compra" />
+    <NavigationProperty Name="Proveedor" Relationship="TECAModel.FK__Proveedor__IdEmp__7814D14C" FromRole="Empresa" ToRole="Proveedor" />
+    <NavigationProperty Name="OrdenPagoEmpleadoDet" Relationship="TECAModel.FK__OrdenPago__IdEmp__54EB90A0" FromRole="Empresa" ToRole="OrdenPagoEmpleadoDet" />
+  </EntityType>
+  <Association Name="FK__CabeceraC__IdEmp__4C364F0E">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.CabeceraComprobante" Role="CabeceraComprobante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CabeceraComprobante">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleComproban__52E34C9D">
+    <End Type="TECAModel.CabeceraComprobante" Role="CabeceraComprobante" Multiplicity="1" />
+    <End Type="TECAModel.DetalleComprobante" Role="DetalleComprobante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CabeceraComprobante">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="numero_comprobante" />
+      </Principal>
+      <Dependent Role="DetalleComprobante">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="cabecera_comprobante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoDet__69E6AD86">
+    <End Type="TECAModel.CabeceraComprobante" Role="CabeceraComprobante" Multiplicity="1" />
+    <End Type="TECAModel.PagoDet" Role="PagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CabeceraComprobante">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="numero_comprobante" />
+      </Principal>
+      <Dependent Role="PagoDet">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NumComprobante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleCo__IdEmp__50FB042B">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.DetalleComprobante" Role="DetalleComprobante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="DetalleComprobante">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Banco__idEmpresa__47C69FAC">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.Banco" Role="Banco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Banco">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaBan__idEmp__6B0FDBE9">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.CuentaBancaria" Role="CuentaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaBancaria">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaBan__IdEmp__338A9CD5">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.CuentaBancaria2" Role="CuentaBancaria2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaBancaria2">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaPor__IdEmp__384F51F2">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.CuentaPorPagar" Role="CuentaPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaPorPagar">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaPor__IdEmp__3E082B48">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.CuentaPorPagar" Role="CuentaPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaPorPagar">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EmpresaSe__IdEmp__19CACAD2">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.EmpresaServicio" Role="EmpresaServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="EmpresaServicio">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Frecuenci__IdEmp__2CDD9F46">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.FrecuenciaPago" Role="FrecuenciaPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="FrecuenciaPago">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Impuesto__IdEmpr__2724C5F0">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.Impuesto" Role="Impuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Impuesto">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ImpuestoC__IdEmp__47919582">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.ImpuestoCuenta" Role="ImpuestoCuenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="ImpuestoCuenta">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MedioPago__IdEmp__2D12A970">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.MedioPago" Role="MedioPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="MedioPago">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenPago__IdEmp__4F32B74A">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.OrdenPagoCab" Role="OrdenPagoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenPagoCab">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoCab__IdEmpre__605D434C">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.PagoCab" Role="PagoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="PagoCab">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TelefonoE__IdEmp__1F83A428">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.TelefonoEmpresaServicio" Role="TelefonoEmpresaServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TelefonoEmpresaServicio">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__IdEmpr__239E4DCF">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.Empleado" Role="Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__IdPers__24927208">
+    <End Type="TECAModel.Persona" Role="Persona" Multiplicity="1" />
+    <End Type="TECAModel.Empleado" Role="Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__IdEmpre__1BFD2C07">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.Persona" Role="Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__TipoIde__1DE57479">
+    <End Type="TECAModel.TipoIdentificacion" Role="TipoIdentificacion" Multiplicity="1" />
+    <End Type="TECAModel.Persona" Role="Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIdentificacion">
+        <PropertyRef Name="IdTipoIdentificacion" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="TipoIdentificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoIdent__IdEmp__173876EA">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.TipoIdentificacion" Role="TipoIdentificacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoIdentificacion">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoPerso__IdEmp__117F9D94">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.TipoPersona" Role="TipoPersona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoPersona">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoTelef__IdEmp__5BE2A6F2">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.TipoTelefono" Role="TipoTelefono" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoTelefono">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Compra">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Type="Int32" Name="Numero" Nullable="false" />
+    <Property Type="Int32" Name="idEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="Int32" Name="idOrdenCompra" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" />
+    <Property Type="Int32" Name="idEstado" Nullable="false" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__Compra__idEmpres__14B10FFA" FromRole="Compra" ToRole="Empresa" />
+    <NavigationProperty Name="Usuario" Relationship="TECAModel.FK__Compra__IdUsuari__15A53433" FromRole="Compra" ToRole="Usuario" />
+  </EntityType>
+  <Association Name="FK__Compra__idEmpres__14B10FFA">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.Compra" Role="Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Compra__IdUsuari__15A53433">
+    <End Type="TECAModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="TECAModel.Compra" Role="Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="IdProveedor" />
+    </Key>
+    <Property Type="Int32" Name="IdProveedor" Nullable="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="IdPersona" Nullable="false" />
+    <Property Type="Int32" Name="IdTipoArticulo" Nullable="false" />
+    <Property Type="Int32" Name="Estado" Nullable="false" />
+    <NavigationProperty Name="CuentaPorPagar" Relationship="TECAModel.FK__CuentaPor__IdPro__3C1FE2D6" FromRole="Proveedor" ToRole="CuentaPorPagar" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__Proveedor__IdEmp__7814D14C" FromRole="Proveedor" ToRole="Empresa" />
+    <NavigationProperty Name="Persona" Relationship="TECAModel.FK__Proveedor__IdPer__7720AD13" FromRole="Proveedor" ToRole="Persona" />
+  </EntityType>
+  <Association Name="FK__CuentaPor__IdPro__3C1FE2D6">
+    <End Type="TECAModel.Proveedor" Role="Proveedor" Multiplicity="0..1" />
+    <End Type="TECAModel.CuentaPorPagar" Role="CuentaPorPagar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="CuentaPorPagar">
+        <PropertyRef Name="IdProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Proveedor__IdEmp__7814D14C">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.Proveedor" Role="Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Proveedor__IdPer__7720AD13">
+    <End Type="TECAModel.Persona" Role="Persona" Multiplicity="1" />
+    <End Type="TECAModel.Proveedor" Role="Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OrdenPagoDet">
+    <Key>
+      <PropertyRef Name="NumLinea" />
+      <PropertyRef Name="NumOrdenCab" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Type="Int32" Name="NumLinea" Nullable="false" />
+    <Property Type="Int32" Name="NumCuentaPorPagar" Nullable="false" />
+    <Property Type="Int32" Name="NumDetalleDeuda" Nullable="false" />
+    <Property Type="Decimal" Name="SaldoDeuda" Nullable="false" Precision="10" Scale="0" />
+    <Property Type="Int32" Name="NumeroPagosRealizar" Nullable="false" />
+    <Property Type="Int32" Name="NumOrdenCab" Nullable="false" />
+    <Property Type="Decimal" Name="TotalPagar" Nullable="false" Precision="10" Scale="0" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Boolean" Name="AutorizarPago" Nullable="false" />
+    <NavigationProperty Name="DeudaDet" Relationship="TECAModel.FK__OrdenPagoDet__5AA469F6" FromRole="OrdenPagoDet" ToRole="DeudaDet" />
+    <NavigationProperty Name="OrdenPagoCab" Relationship="TECAModel.FK__OrdenPagoDet__59B045BD" FromRole="OrdenPagoDet" ToRole="OrdenPagoCab" />
+  </EntityType>
+  <Association Name="FK__OrdenPagoDet__5AA469F6">
+    <End Type="TECAModel.DeudaDet" Role="DeudaDet" Multiplicity="1" />
+    <End Type="TECAModel.OrdenPagoDet" Role="OrdenPagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeudaDet">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NumCuentaPorPagar" />
+        <PropertyRef Name="NumDetalleDeuda" />
+      </Principal>
+      <Dependent Role="OrdenPagoDet">
+        <PropertyRef Name="NumDetalleDeuda" />
+        <PropertyRef Name="NumCuentaPorPagar" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenPagoDet__59B045BD">
+    <End Type="TECAModel.OrdenPagoCab" Role="OrdenPagoCab" Multiplicity="1" />
+    <End Type="TECAModel.OrdenPagoDet" Role="OrdenPagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenPagoCab">
+        <PropertyRef Name="NumOrdenPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenPagoDet">
+        <PropertyRef Name="NumOrdenCab" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OrdenPagoEmpleadoDet">
+    <Key>
+      <PropertyRef Name="NumOrdenPago" />
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Type="Int32" Name="NumOrdenPago" Nullable="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Boolean" Name="AutorizarPago" Nullable="false" />
+    <Property Type="Int32" Name="Linea" Nullable="false" />
+    <Property Type="Int32" Name="IdPersona" Nullable="false" />
+    <Property Type="Decimal" Name="SueldoTotal" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="IngresoAdicional" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="DescuentoTotal" Precision="10" Scale="2" />
+    <Property Type="Decimal" Name="PagoNeto" Nullable="false" Precision="10" Scale="2" />
+    <NavigationProperty Name="OrdenPagoCab" Relationship="TECAModel.FK__OrdenPagoEmplead__53F76C67" FromRole="OrdenPagoEmpleadoDet" ToRole="OrdenPagoCab" />
+    <NavigationProperty Name="Empresa" Relationship="TECAModel.FK__OrdenPago__IdEmp__54EB90A0" FromRole="OrdenPagoEmpleadoDet" ToRole="Empresa" />
+  </EntityType>
+  <Association Name="FK__OrdenPagoEmplead__53F76C67">
+    <End Type="TECAModel.OrdenPagoCab" Role="OrdenPagoCab" Multiplicity="1" />
+    <End Type="TECAModel.OrdenPagoEmpleadoDet" Role="OrdenPagoEmpleadoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenPagoCab">
+        <PropertyRef Name="NumOrdenPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenPagoEmpleadoDet">
+        <PropertyRef Name="NumOrdenPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenPago__IdEmp__54EB90A0">
+    <End Type="TECAModel.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="TECAModel.OrdenPagoEmpleadoDet" Role="OrdenPagoEmpleadoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenPagoEmpleadoDet">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

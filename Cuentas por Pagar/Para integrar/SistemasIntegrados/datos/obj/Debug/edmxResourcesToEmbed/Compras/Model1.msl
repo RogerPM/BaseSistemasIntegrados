@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TECAModel1StoreContainer" CdmEntityContainer="CompraEntities">
+    <EntitySetMapping Name="Proveedor">
+      <EntityTypeMapping TypeName="TECAModel1.Proveedor">
+        <MappingFragment StoreEntitySet="Proveedor">
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="IdTipoArticulo" ColumnName="IdTipoArticulo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

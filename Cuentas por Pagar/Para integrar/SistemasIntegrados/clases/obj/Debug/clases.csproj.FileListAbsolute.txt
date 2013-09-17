@@ -1,0 +1,54 @@
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\obj\Debug\clases.csprojResolveAssemblyReference.cache
+C:\Users\David Loor\Desktop\TECAv4_SI\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\David Loor\Desktop\TECAv4_SI\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\David Loor\Desktop\TECAv4_SI\SistemasIntegrados\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David Loor\Desktop\TECAv4_SI\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\David Loor\Desktop\TECAv4_SI\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\Users\David Loor\Desktop\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\David Loor\Desktop\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\David Loor\Desktop\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David Loor\Desktop\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\David Loor\Desktop\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\obj\Debug\clases.pdb
+F:\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\bin\Debug\clases.dll
+F:\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\bin\Debug\clases.pdb
+F:\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\obj\Debug\ResolveAssemblyReference.cache
+F:\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\obj\Debug\clases.dll
+F:\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\Users\Daviks\Desktop\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\Daviks\Desktop\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\Daviks\Desktop\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daviks\Desktop\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\Daviks\Desktop\1° Término 2013\TECAv4_SI\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\Users\Daviks\Desktop\1° Término 2013\TECAv4_SI - copia\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\Daviks\Desktop\1° Término 2013\TECAv4_SI - copia\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\Daviks\Desktop\1° Término 2013\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daviks\Desktop\1° Término 2013\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\Daviks\Desktop\1° Término 2013\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\Users\Daviks Mks\Desktop\1° Término 2013\TECAv4_SI - copia\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\Daviks Mks\Desktop\1° Término 2013\TECAv4_SI - copia\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\Daviks Mks\Desktop\1° Término 2013\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daviks Mks\Desktop\1° Término 2013\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\Daviks Mks\Desktop\1° Término 2013\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\Users\Daviks Mks\Dropbox\TECAv4_SI - copia\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\Daviks Mks\Dropbox\TECAv4_SI - copia\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\Daviks Mks\Dropbox\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daviks Mks\Dropbox\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\Daviks Mks\Dropbox\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\Users\Daviks Mks\Desktop\TECAv4_SI - copia\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\Daviks Mks\Desktop\TECAv4_SI - copia\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\Daviks Mks\Desktop\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daviks Mks\Desktop\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\Daviks Mks\Desktop\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\Users\Daviks Mks\Documents\TECAv4_SI - copia\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\Daviks Mks\Documents\TECAv4_SI - copia\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\Daviks Mks\Documents\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daviks Mks\Documents\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\Daviks Mks\Documents\TECAv4_SI - copia\SistemasIntegrados\clases\obj\Debug\clases.pdb

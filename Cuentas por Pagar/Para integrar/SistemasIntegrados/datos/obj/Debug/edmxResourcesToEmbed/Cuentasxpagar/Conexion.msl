@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TECAModelStoreContainer" CdmEntityContainer="CuentasPorPagarEntities">
+    <EntitySetMapping Name="Banco">
+      <EntityTypeMapping TypeName="TECAModel.Banco">
+        <MappingFragment StoreEntitySet="Banco">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="idBanco" ColumnName="idBanco" />
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuentaBancaria2">
+      <EntityTypeMapping TypeName="TECAModel.CuentaBancaria2">
+        <MappingFragment StoreEntitySet="CuentaBancaria2">
+          <ScalarProperty Name="IdEmpresaServicio" ColumnName="IdEmpresaServicio" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdBanco" ColumnName="IdBanco" />
+          <ScalarProperty Name="NroCta" ColumnName="NroCta" />
+          <ScalarProperty Name="TipoCuenta" ColumnName="TipoCuenta" />
+          <ScalarProperty Name="Serie" ColumnName="Serie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuentaPorPagar">
+      <EntityTypeMapping TypeName="TECAModel.CuentaPorPagar">
+        <MappingFragment StoreEntitySet="CuentaPorPagar">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="SaldoDeuda" ColumnName="SaldoDeuda" />
+          <ScalarProperty Name="ValorLetra" ColumnName="ValorLetra" />
+          <ScalarProperty Name="IdFrecuencia" ColumnName="IdFrecuencia" />
+          <ScalarProperty Name="NumeroLetra" ColumnName="NumeroLetra" />
+          <ScalarProperty Name="ValorEntrada" ColumnName="ValorEntrada" />
+          <ScalarProperty Name="FormaPago" ColumnName="FormaPago" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+          <ScalarProperty Name="IdEmpresaServicio" ColumnName="IdEmpresaServicio" />
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="FechaTransaccion" ColumnName="FechaTransaccion" />
+          <ScalarProperty Name="NumeroFactura" ColumnName="NumeroFactura" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="NumIngresoEgreso" ColumnName="NumIngresoEgreso" />
+          <ScalarProperty Name="NumCuentaPorPagar" ColumnName="NumCuentaPorPagar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeudaDet">
+      <EntityTypeMapping TypeName="TECAModel.DeudaDet">
+        <MappingFragment StoreEntitySet="DeudaDet">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+          <ScalarProperty Name="ValorLetra" ColumnName="ValorLetra" />
+          <ScalarProperty Name="NumDetalleDeuda" ColumnName="NumDetalleDeuda" />
+          <ScalarProperty Name="NumCuentaPorPagar" ColumnName="NumCuentaPorPagar" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaServicio">
+      <EntityTypeMapping TypeName="TECAModel.EmpresaServicio">
+        <MappingFragment StoreEntitySet="EmpresaServicio">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdTipoPersona" ColumnName="IdTipoPersona" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Webpage" ColumnName="Webpage" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="IdEmpresaServicio" ColumnName="IdEmpresaServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FrecuenciaPago">
+      <EntityTypeMapping TypeName="TECAModel.FrecuenciaPago">
+        <MappingFragment StoreEntitySet="FrecuenciaPago">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaActual" ColumnName="FechaActual" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdFrecuenciaPago" ColumnName="IdFrecuenciaPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImpuestoCuenta">
+      <EntityTypeMapping TypeName="TECAModel.ImpuestoCuenta">
+        <MappingFragment StoreEntitySet="ImpuestoCuenta">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="NumCuentaPorPagar" ColumnName="NumCuentaPorPagar" />
+          <ScalarProperty Name="IdImpuesto" ColumnName="IdImpuesto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedioPago">
+      <EntityTypeMapping TypeName="TECAModel.MedioPago">
+        <MappingFragment StoreEntitySet="MedioPago">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdMedioPago" ColumnName="IdMedioPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrdenPagoCab">
+      <EntityTypeMapping TypeName="TECAModel.OrdenPagoCab">
+        <MappingFragment StoreEntitySet="OrdenPagoCab">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="TipoOrdenPago" ColumnName="TipoOrdenPago" />
+          <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="fechadeEmision" ColumnName="fechadeEmision" />
+          <ScalarProperty Name="NumOrdenPago" ColumnName="NumOrdenPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PagoCab">
+      <EntityTypeMapping TypeName="TECAModel.PagoCab">
+        <MappingFragment StoreEntitySet="PagoCab">
+          <ScalarProperty Name="NumComprobante" ColumnName="NumComprobante" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
+          <ScalarProperty Name="NumOrdenPago" ColumnName="NumOrdenPago" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="NumPago" ColumnName="NumPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PagoDet">
+      <EntityTypeMapping TypeName="TECAModel.PagoDet">
+        <MappingFragment StoreEntitySet="PagoDet">
+          <ScalarProperty Name="NumPago" ColumnName="NumPago" />
+          <ScalarProperty Name="NumNominaCab" ColumnName="NumNominaCab" />
+          <ScalarProperty Name="NumComision" ColumnName="NumComision" />
+          <ScalarProperty Name="NumComprobante" ColumnName="NumComprobante" />
+          <ScalarProperty Name="IdBanco" ColumnName="IdBanco" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="NumeroCuenta" ColumnName="NumeroCuenta" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="IdMedioPago" ColumnName="IdMedioPago" />
+          <ScalarProperty Name="NumLinea" ColumnName="NumLinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TelefonoEmpresaServicio">
+      <EntityTypeMapping TypeName="TECAModel.TelefonoEmpresaServicio">
+        <MappingFragment StoreEntitySet="TelefonoEmpresaServicio">
+          <ScalarProperty Name="IdTelefono" ColumnName="IdTelefono" />
+          <ScalarProperty Name="IdEmpresaServicio" ColumnName="IdEmpresaServicio" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Telefono">
+      <EntityTypeMapping TypeName="TECAModel.Telefono">
+        <MappingFragment StoreEntitySet="Telefono">
+          <ScalarProperty Name="IdTipoTelefono" ColumnName="IdTipoTelefono" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="IdTelefono" ColumnName="IdTelefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoPersona">
+      <EntityTypeMapping TypeName="TECAModel.TipoPersona">
+        <MappingFragment StoreEntitySet="TipoPersona">
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdTipoPersona" ColumnName="IdTipoPersona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoTelefono">
+      <EntityTypeMapping TypeName="TECAModel.TipoTelefono">
+        <MappingFragment StoreEntitySet="TipoTelefono">
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdTipoTelefono" ColumnName="IdTipoTelefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuentaBancaria">
+      <EntityTypeMapping TypeName="TECAModel.CuentaBancaria">
+        <MappingFragment StoreEntitySet="CuentaBancaria">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+          <ScalarProperty Name="TipoCuenta" ColumnName="TipoCuenta" />
+          <ScalarProperty Name="NumeroCuenta" ColumnName="NumeroCuenta" />
+          <ScalarProperty Name="idTitular" ColumnName="idTitular" />
+          <ScalarProperty Name="idBanco" ColumnName="idBanco" />
+          <ScalarProperty Name="idCuentaBancaria" ColumnName="idCuentaBancaria" />
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Impuesto">
+      <EntityTypeMapping TypeName="TECAModel.Impuesto">
+        <MappingFragment StoreEntitySet="Impuesto">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="NatureAcree" ColumnName="NatureAcree" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Porcentaje" ColumnName="Porcentaje" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdImpuesto" ColumnName="IdImpuesto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persona">
+      <EntityTypeMapping TypeName="TECAModel.Persona">
+        <MappingFragment StoreEntitySet="Persona">
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="TelefonoOtros" ColumnName="TelefonoOtros" />
+          <ScalarProperty Name="TelefonoCasa" ColumnName="TelefonoCasa" />
+          <ScalarProperty Name="TelefonoMovil" ColumnName="TelefonoMovil" />
+          <ScalarProperty Name="TelefonoGneral" ColumnName="TelefonoGneral" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="TipoIdentificacion" ColumnName="TipoIdentificacion" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="NombreRazonSocial" ColumnName="NombreRazonSocial" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdTipoPersona" ColumnName="IdTipoPersona" />
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="TECAModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
+          <ScalarProperty Name="IdImagen" ColumnName="IdImagen" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CabeceraComprobante">
+      <EntityTypeMapping TypeName="TECAModel.CabeceraComprobante">
+        <MappingFragment StoreEntitySet="CabeceraComprobante">
+          <ScalarProperty Name="TipoTransaccion" ColumnName="TipoTransaccion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="periodo_contable_IdAFiscal" ColumnName="periodo_contable_IdAFiscal" />
+          <ScalarProperty Name="periodo_contable" ColumnName="periodo_contable" />
+          <ScalarProperty Name="glosa" ColumnName="glosa" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleComprobante">
+      <EntityTypeMapping TypeName="TECAModel.DetalleComprobante">
+        <MappingFragment StoreEntitySet="DetalleComprobante">
+          <ScalarProperty Name="haber" ColumnName="haber" />
+          <ScalarProperty Name="debe" ColumnName="debe" />
+          <ScalarProperty Name="cuenta" ColumnName="cuenta" />
+          <ScalarProperty Name="linea_comprobante" ColumnName="linea_comprobante" />
+          <ScalarProperty Name="cabecera_comprobante" ColumnName="cabecera_comprobante" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleado">
+      <EntityTypeMapping TypeName="TECAModel.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="Sueldo" ColumnName="Sueldo" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoIdentificacion">
+      <EntityTypeMapping TypeName="TECAModel.TipoIdentificacion">
+        <MappingFragment StoreEntitySet="TipoIdentificacion">
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="IdTipoIdentificacion" ColumnName="IdTipoIdentificacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empresa">
+      <EntityTypeMapping TypeName="TECAModel.Empresa">
+        <MappingFragment StoreEntitySet="Empresa">
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="SitioWeb" ColumnName="SitioWeb" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="FechaInicioSistema" ColumnName="FechaInicioSistema" />
+          <ScalarProperty Name="Logotipo" ColumnName="Logotipo" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Ruc" ColumnName="Ruc" />
+          <ScalarProperty Name="NombreComercial" ColumnName="NombreComercial" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Compra">
+      <EntityTypeMapping TypeName="TECAModel.Compra">
+        <MappingFragment StoreEntitySet="Compra">
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="idOrdenCompra" ColumnName="idOrdenCompra" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedor">
+      <EntityTypeMapping TypeName="TECAModel.Proveedor">
+        <MappingFragment StoreEntitySet="Proveedor">
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IdTipoArticulo" ColumnName="IdTipoArticulo" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrdenPagoDet">
+      <EntityTypeMapping TypeName="TECAModel.OrdenPagoDet">
+        <MappingFragment StoreEntitySet="OrdenPagoDet">
+          <ScalarProperty Name="AutorizarPago" ColumnName="AutorizarPago" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
+          <ScalarProperty Name="NumOrdenCab" ColumnName="NumOrdenCab" />
+          <ScalarProperty Name="NumeroPagosRealizar" ColumnName="NumeroPagosRealizar" />
+          <ScalarProperty Name="SaldoDeuda" ColumnName="SaldoDeuda" />
+          <ScalarProperty Name="NumDetalleDeuda" ColumnName="NumDetalleDeuda" />
+          <ScalarProperty Name="NumCuentaPorPagar" ColumnName="NumCuentaPorPagar" />
+          <ScalarProperty Name="NumLinea" ColumnName="NumLinea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrdenPagoEmpleadoDet">
+      <EntityTypeMapping TypeName="TECAModel.OrdenPagoEmpleadoDet">
+        <MappingFragment StoreEntitySet="OrdenPagoEmpleadoDet">
+          <ScalarProperty Name="PagoNeto" ColumnName="PagoNeto" />
+          <ScalarProperty Name="DescuentoTotal" ColumnName="DescuentoTotal" />
+          <ScalarProperty Name="IngresoAdicional" ColumnName="IngresoAdicional" />
+          <ScalarProperty Name="SueldoTotal" ColumnName="SueldoTotal" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="Linea" ColumnName="Linea" />
+          <ScalarProperty Name="AutorizarPago" ColumnName="AutorizarPago" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="NumOrdenPago" ColumnName="NumOrdenPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

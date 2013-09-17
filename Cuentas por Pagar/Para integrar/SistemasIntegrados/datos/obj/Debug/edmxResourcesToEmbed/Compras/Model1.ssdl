@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TECAModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TECAModel1StoreContainer">
+    <EntitySet Name="Proveedor" EntityType="TECAModel1.Store.Proveedor" store:Type="Tables" Schema="Compras" />
+  </EntityContainer>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="IdProveedor" />
+    </Key>
+    <Property Name="IdProveedor" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="IdTipoArticulo" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>
