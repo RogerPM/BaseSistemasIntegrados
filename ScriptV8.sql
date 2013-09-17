@@ -3168,6 +3168,18 @@ from		Seguridad.Usuario a inner join
 			Seguridad.UsuarioPorEmpresa e on e.IdUsuario = a.IdUsuario
 go
 
+--fix by roger
+create view UsuarioEmpresa as
+SELECT distinct ROW_NUMBER() OVER(ORDER BY Seguridad.UsuarioPorEmpresa.IdEmpresa) AS id,     Seguridad.Empresa.RazonSocial, Seguridad.Empresa.Ruc, Seguridad.Empresa.Correo, Seguridad.Usuario.NombreUsuario, 
+                      RecursosHumanos.Persona.NombreRazonSocial, RecursosHumanos.Persona.Apellido, Seguridad.Usuario.IdPerfil
+FROM         Seguridad.UsuarioPorEmpresa inner join
+                      Seguridad.Usuario on Seguridad.UsuarioPorEmpresa.IdUsuario = Seguridad.Usuario.IdUsuario inner join
+                      Seguridad.Empresa on Seguridad.UsuarioPorEmpresa.IdEmpresa = Seguridad.Empresa.IdEmpresa inner join
+                      RecursosHumanos.Persona on Seguridad.Usuario.IdUsuario = RecursosHumanos.Persona.IdPersona
+go
+
+
+
 /***************************COMPRAS****************************/
 use TECA
 go
