@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TECAv8Model2StoreContainer" CdmEntityContainer="TECAv8Entities2">
+    <EntitySetMapping Name="UsuarioPorEmpresa">
+      <EntityTypeMapping TypeName="TECAv8Model2.UsuarioPorEmpresa">
+        <MappingFragment StoreEntitySet="UsuarioPorEmpresa">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

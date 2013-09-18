@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TECAv8Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TECAv8Model1StoreContainer">
+    <EntitySet Name="Persona" EntityType="TECAv8Model1.Store.Persona" store:Type="Tables" Schema="RecursosHumanos" />
+  </EntityContainer>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="Identificacion" />
+    </Key>
+    <Property Name="Identificacion" Type="int" Nullable="false" />
+    <Property Name="IdTipoPersona" Type="int" />
+    <Property Name="NombreRazonSocial" Type="varchar" MaxLength="100" />
+    <Property Name="Apellido" Type="varchar" MaxLength="50" />
+    <Property Name="FechaNacimiento" Type="datetime" />
+    <Property Name="genero" Type="varchar" MaxLength="10" />
+    <Property Name="TipoIdentificacion" Type="varchar" MaxLength="11" />
+    <Property Name="direccion" Type="varchar" MaxLength="100" />
+    <Property Name="telefono" Type="int" />
+    <Property Name="mail" Type="varchar" MaxLength="50" />
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdEstado" Type="int" />
+    <Property Name="Foto" Type="image" />
+  </EntityType>
+</Schema>

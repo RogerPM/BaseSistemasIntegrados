@@ -1,0 +1,179 @@
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\spart_000\Desktop\SistemasIntegrados\PROTOTIPO\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\v1\SistemasIntegrados\clases\obj\Debug\clases.csprojResolveAssemblyReference.cache
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\luxo\Documents\Visual Studio 2010\Projects\PROYECTOv4\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\clases\obj\Debug\clases.csprojResolveAssemblyReference.cache
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\tmp\ESPOL-materias\SistemasIntegrados\TESTING\PrototipoV1\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\clases\obj\Debug\clases.csprojResolveAssemblyReference.cache
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\TESTING\PrototipoV1\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v2\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v2\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v2\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v2\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v2\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\Users\Propietario\Downloads\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+C:\Users\Propietario\Downloads\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\Propietario\Downloads\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\Propietario\Downloads\SistemasIntegrados\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Propietario\Downloads\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\Propietario\Downloads\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\Users\Propietario\Downloads\SistemasIntegradosUsuario\clases\bin\Debug\clases.dll.config
+C:\Users\Propietario\Downloads\SistemasIntegradosUsuario\clases\bin\Debug\clases.dll
+C:\Users\Propietario\Downloads\SistemasIntegradosUsuario\clases\bin\Debug\clases.pdb
+C:\Users\Propietario\Downloads\SistemasIntegradosUsuario\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Propietario\Downloads\SistemasIntegradosUsuario\clases\obj\Debug\clases.dll
+C:\Users\Propietario\Downloads\SistemasIntegradosUsuario\clases\obj\Debug\clases.pdb
+C:\Users\luismi\Downloads\SistemasIntegradosUsuario\clases\bin\Debug\clases.dll.config
+C:\Users\luismi\Downloads\SistemasIntegradosUsuario\clases\bin\Debug\clases.dll
+C:\Users\luismi\Downloads\SistemasIntegradosUsuario\clases\bin\Debug\clases.pdb
+C:\Users\luismi\Downloads\SistemasIntegradosUsuario\clases\obj\Debug\clases.dll
+C:\Users\luismi\Downloads\SistemasIntegradosUsuario\clases\obj\Debug\clases.pdb
+E:\SI\Development\v3\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v3\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v3\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v3\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v3\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v4\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v4\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v4\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v4\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v4\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v5\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v5\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v5\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v5\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v5\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v6\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v6\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v6\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v6\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v6\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v8\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v8\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v8\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v8\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v8\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\Users\Administrador\Desktop\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+C:\Users\Administrador\Desktop\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\Administrador\Desktop\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\Administrador\Desktop\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\Administrador\Desktop\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v9\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v9\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v9\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v9\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v9\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v10_noFuncio\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v10_noFuncio\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v10_noFuncio\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v10_noFuncio\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v10_noFuncio\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v10\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v10\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v10\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v10\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v10\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v11\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v11\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v11\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v11\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v11\SistemasIntegrados\clases\obj\Debug\clases.pdb
+D:\SistemasIntegrados\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+D:\SistemasIntegrados\SistemasIntegrados\clases\bin\Debug\clases.dll
+D:\SistemasIntegrados\SistemasIntegrados\clases\bin\Debug\clases.pdb
+D:\SistemasIntegrados\SistemasIntegrados\clases\obj\Debug\clases.dll
+D:\SistemasIntegrados\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\roberto arias_Revisar\funciona\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\roberto arias_Revisar\funciona\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\roberto arias_Revisar\funciona\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\roberto arias_Revisar\funciona\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\roberto arias_Revisar\funciona\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\roberto arias_Revisar\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\roberto arias_Revisar\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\roberto arias_Revisar\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\roberto arias_Revisar\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\roberto arias_Revisar\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\Users\Propietario\Desktop\T\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+C:\Users\Propietario\Desktop\T\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\Propietario\Desktop\T\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\Propietario\Desktop\T\SistemasIntegrados\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Propietario\Desktop\T\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\Propietario\Desktop\T\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\roberto arias_Revisar\SistemasIntegradosControlBotones2.0\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\roberto arias_Revisar\SistemasIntegradosControlBotones2.0\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\roberto arias_Revisar\SistemasIntegradosControlBotones2.0\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\roberto arias_Revisar\SistemasIntegradosControlBotones2.0\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\roberto arias_Revisar\SistemasIntegradosControlBotones2.0\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\roberto arias_Revisar\SistemasIntegradosControlBotones2.0\SistemasIntegrados\clases\obj\Debug\clases.csprojResolveAssemblyReference.cache
+E:\SI\Development\v12\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v12\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v12\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v12\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v12\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v13\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v13\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v13\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v13\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v13\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v13\SistemasIntegrados\clases\obj\Debug\clases.csprojResolveAssemblyReference.cache
+E:\SI\Development\v14\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v14\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v14\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v14\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v14\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v15\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v15\SistemasIntegrados\clases\obj\Debug\clases.pdb
+E:\SI\Development\v15\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v15\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v15\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v16\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+E:\SI\Development\v16\SistemasIntegrados\clases\bin\Debug\clases.dll
+E:\SI\Development\v16\SistemasIntegrados\clases\bin\Debug\clases.pdb
+E:\SI\Development\v16\SistemasIntegrados\clases\obj\Debug\clases.dll
+E:\SI\Development\v16\SistemasIntegrados\clases\obj\Debug\clases.pdb
+C:\Users\User\Desktop\SistemasIntegrados\SistemasIntegrados\clases\bin\Debug\clases.dll.config
+C:\Users\User\Desktop\SistemasIntegrados\SistemasIntegrados\clases\bin\Debug\clases.dll
+C:\Users\User\Desktop\SistemasIntegrados\SistemasIntegrados\clases\bin\Debug\clases.pdb
+C:\Users\User\Desktop\SistemasIntegrados\SistemasIntegrados\clases\obj\Debug\clases.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\SistemasIntegrados\SistemasIntegrados\clases\obj\Debug\clases.dll
+C:\Users\User\Desktop\SistemasIntegrados\SistemasIntegrados\clases\obj\Debug\clases.pdb
+G:\SistemasIntegradosConRRHH\clases\bin\Debug\clases.dll.config
+G:\SistemasIntegradosConRRHH\clases\bin\Debug\clases.dll
+G:\SistemasIntegradosConRRHH\clases\bin\Debug\clases.pdb
+G:\SistemasIntegradosConRRHH\clases\obj\Debug\ResolveAssemblyReference.cache
+G:\SistemasIntegradosConRRHH\clases\obj\Debug\clases.dll
+G:\SistemasIntegradosConRRHH\clases\obj\Debug\clases.pdb
+C:\Users\David\Desktop\I\SistemasIntegradosConRRHH\clases\bin\Debug\clases.dll.config
+C:\Users\David\Desktop\I\SistemasIntegradosConRRHH\clases\bin\Debug\clases.dll
+C:\Users\David\Desktop\I\SistemasIntegradosConRRHH\clases\bin\Debug\clases.pdb
+C:\Users\David\Desktop\I\SistemasIntegradosConRRHH\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\I\SistemasIntegradosConRRHH\clases\obj\Debug\clases.dll
+C:\Users\David\Desktop\I\SistemasIntegradosConRRHH\clases\obj\Debug\clases.pdb
+C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA Ejecución Integrado\SistemasIntegradosConRRHHeInventario\clases\bin\Debug\clases.dll.config
+C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA Ejecución Integrado\SistemasIntegradosConRRHHeInventario\clases\bin\Debug\clases.dll
+C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA Ejecución Integrado\SistemasIntegradosConRRHHeInventario\clases\bin\Debug\clases.pdb
+C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA Ejecución Integrado\SistemasIntegradosConRRHHeInventario\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA Ejecución Integrado\SistemasIntegradosConRRHHeInventario\clases\obj\Debug\clases.dll
+C:\Users\David\Desktop\CarpetaProyectoUnificado\TECA Ejecución Integrado\SistemasIntegradosConRRHHeInventario\clases\obj\Debug\clases.pdb
+C:\Users\David\Desktop\Integraciuon2\SistemasIntegradosConRRHHeInventario\clases\bin\Debug\clases.dll.config
+C:\Users\David\Desktop\Integraciuon2\SistemasIntegradosConRRHHeInventario\clases\bin\Debug\clases.dll
+C:\Users\David\Desktop\Integraciuon2\SistemasIntegradosConRRHHeInventario\clases\bin\Debug\clases.pdb
+C:\Users\David\Desktop\Integraciuon2\SistemasIntegradosConRRHHeInventario\clases\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Desktop\Integraciuon2\SistemasIntegradosConRRHHeInventario\clases\obj\Debug\clases.dll
+C:\Users\David\Desktop\Integraciuon2\SistemasIntegradosConRRHHeInventario\clases\obj\Debug\clases.pdb

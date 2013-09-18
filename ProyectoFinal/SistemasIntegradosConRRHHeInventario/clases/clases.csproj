@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F21733E-0C7C-425E-8690-455EE38E7369}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>clases</RootNamespace>
+    <AssemblyName>clases</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivoFijo\clsActivoFijo.cs" />
+    <Compile Include="ActivoFijo\clsArticulo_SuministroOfic.cs" />
+    <Compile Include="ActivoFijo\clsBajaActivo.cs" />
+    <Compile Include="ActivoFijo\clsBajaActivoProc.cs" />
+    <Compile Include="ActivoFijo\clsCodigoBarra.cs" />
+    <Compile Include="ActivoFijo\clsDepreciacion.cs" />
+    <Compile Include="ActivoFijo\clsDepreciacionCab.cs" />
+    <Compile Include="ActivoFijo\clsDepreciacionDet.cs" />
+    <Compile Include="ActivoFijo\clsEdificio.cs" />
+    <Compile Include="ActivoFijo\clsEquipoMaquinariaMebles.cs" />
+    <Compile Include="ActivoFijo\clsGridCodigoBarra.cs" />
+    <Compile Include="ActivoFijo\clsGridDepreciacion.cs" />
+    <Compile Include="ActivoFijo\clsGridResponsables.cs" />
+    <Compile Include="ActivoFijo\clsMensajesActivoFijos.cs" />
+    <Compile Include="ActivoFijo\clsMotivoBaja.cs" />
+    <Compile Include="ActivoFijo\clsPrueba.cs" />
+    <Compile Include="ActivoFijo\clsReporte.cs" />
+    <Compile Include="ActivoFijo\clsRevalorizacion.cs" />
+    <Compile Include="ActivoFijo\clsSubgrupoActivoFijo.cs" />
+    <Compile Include="ActivoFijo\clsTerreno.cs" />
+    <Compile Include="ActivoFijo\clsTransferencia.cs" />
+    <Compile Include="ActivoFijo\clsVehiculos.cs" />
+    <Compile Include="ActivoFijo\clsventaActivo.cs" />
+    <Compile Include="ActivoFijo\clsventaActivocab.cs" />
+    <Compile Include="ActivoFijo\clsventaActivodet.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Compras\clsComprasPersona.cs" />
+    <Compile Include="Compras\clsProveedor.cs" />
+    <Compile Include="Compras\clsProveedorDescripcion.cs" />
+    <Compile Include="Compras\MensajesCompras.cs" />
+    <Compile Include="Contabilidad\ClaseTP.cs" />
+    <Compile Include="Contabilidad\clsCabeceraComprobante.cs" />
+    <Compile Include="Contabilidad\clsCuenta.cs" />
+    <Compile Include="Contabilidad\clsDetalleComprobante.cs" />
+    <Compile Include="Contabilidad\clslistaTT.cs" />
+    <Compile Include="Contabilidad\clsModeloAsiento.cs" />
+    <Compile Include="Contabilidad\clsModulo.cs" />
+    <Compile Include="Contabilidad\clsPeriodoContable.cs" />
+    <Compile Include="Contabilidad\clsSaldo.cs" />
+    <Compile Include="Contabilidad\clsTipoCuenta.cs" />
+    <Compile Include="Contabilidad\clsTipoTransaccion.cs" />
+    <Compile Include="Contabilidad\clsvwComprobanteMayorizar.cs" />
+    <Compile Include="Contabilidad\DatEnt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatEnt.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\EModeloAsiento.cs" />
+    <Compile Include="Contabilidad\EPeriodoContable.cs" />
+    <Compile Include="Contabilidad\NModeloAsiento.cs" />
+    <Compile Include="Contabilidad\NPeriodo.cs" />
+    <Compile Include="CuentasxCobrar\clsBanco.cs" />
+    <Compile Include="CuentasxCobrar\clsCuentaBancaria.cs" />
+    <Compile Include="CuentasxCobrar\clsMensajeCCobrar.cs" />
+    <Compile Include="CuentasxCobrar\clsMonetarioDetalle.cs" />
+    <Compile Include="CuentasxCobrar\clsTarjetaCredito.cs" />
+    <Compile Include="CuentasxCobrar\clsTipoInversion.cs" />
+    <Compile Include="CuentasxCobrar\clsUnidadTiempo.cs" />
+    <Compile Include="CuentasxCobrar\ObjetoGenerico.cs" />
+    <Compile Include="Cuentasxpagar\clsCuentaBancaria.cs" />
+    <Compile Include="Cuentasxpagar\clsEmpresaServicio.cs" />
+    <Compile Include="Cuentasxpagar\clsFrecuenciaPago.cs" />
+    <Compile Include="Cuentasxpagar\clsImpuesto.cs" />
+    <Compile Include="Cuentasxpagar\clsMedioPago.cs" />
+    <Compile Include="Cuentasxpagar\clsMensaje.cs" />
+    <Compile Include="Inventario\clsArticulo.cs" />
+    <Compile Include="Inventario\clsBodega.cs" />
+    <Compile Include="Inventario\clsColor.cs" />
+    <Compile Include="Inventario\clsGridIngresoEgreso.cs" />
+    <Compile Include="Inventario\clsGrupo.cs" />
+    <Compile Include="Inventario\clsGrupoAF.cs" />
+    <Compile Include="Inventario\clsIngresoEgresoCAB.cs" />
+    <Compile Include="Inventario\clsIngresoEgresoDET.cs" />
+    <Compile Include="Inventario\clsMarca.cs" />
+    <Compile Include="Inventario\clsModelo.cs" />
+    <Compile Include="Inventario\clsMotivo.cs" />
+    <Compile Include="Inventario\clsPercha.cs" />
+    <Compile Include="Inventario\clsTipoArticulo.cs" />
+    <Compile Include="Inventario\clsTipoChasis.cs" />
+    <Compile Include="Inventario\clsTipoCombustible.cs" />
+    <Compile Include="Inventario\clsTipoMaterial.cs" />
+    <Compile Include="Inventario\clsTipoMotor.cs" />
+    <Compile Include="Inventario\clsTipoMovimiento.cs" />
+    <Compile Include="Inventario\clsTomaFisicaCAB.cs" />
+    <Compile Include="Inventario\clsTomaFisicaDET.cs" />
+    <Compile Include="Inventario\clsTransfereciaBodegaDET.cs" />
+    <Compile Include="Inventario\clsTransferenciaBodegaCAB.cs" />
+    <Compile Include="Inventario\clsUnidadMedida.cs" />
+    <Compile Include="Inventario\clsVistaIngresoEgresoDET.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsAcademico.cs" />
+    <Compile Include="RecursosHumanos\clsCargo.cs" />
+    <Compile Include="RecursosHumanos\clsCargoxDepartamento.cs" />
+    <Compile Include="RecursosHumanos\clsContrato.cs" />
+    <Compile Include="RecursosHumanos\clsDepartamento.cs" />
+    <Compile Include="RecursosHumanos\clsGenero.cs" />
+    <Compile Include="RecursosHumanos\clsMaternidad.cs" />
+    <Compile Include="RecursosHumanos\clsMensaje.cs" />
+    <Compile Include="RecursosHumanos\clsNominaCab.cs" />
+    <Compile Include="RecursosHumanos\clsNominaDet.cs" />
+    <Compile Include="RecursosHumanos\clsPersona.cs" />
+    <Compile Include="RecursosHumanos\clsPersonaxCargo.cs" />
+    <Compile Include="RecursosHumanos\clsPersonaxTitulo.cs" />
+    <Compile Include="RecursosHumanos\clsTipoContrato.cs" />
+    <Compile Include="RecursosHumanos\clsTipoPermiso.cs" />
+    <Compile Include="RecursosHumanos\clsTipoPrestamo.cs" />
+    <Compile Include="RecursosHumanos\clsTitulo.cs" />
+    <Compile Include="RecursosHumanos\clsTrabajoDiarioCab.cs" />
+    <Compile Include="RecursosHumanos\clsTrabajoDiarioDet.cs" />
+    <Compile Include="RecursosHumanos\clsUniversidad.cs" />
+    <Compile Include="Seguridad\clsEmpresa.cs" />
+    <Compile Include="Seguridad\clsEstado.cs" />
+    <Compile Include="Seguridad\clsHorario.cs" />
+    <Compile Include="Seguridad\clsImagen.cs" />
+    <Compile Include="Seguridad\clsMensajesSeguridad.cs" />
+    <Compile Include="Seguridad\clsModulo.cs" />
+    <Compile Include="Seguridad\clsPerfil.cs" />
+    <Compile Include="Seguridad\clsMenuXUsuario.cs" />
+    <Compile Include="Seguridad\clsModuloR.cs" />
+    <Compile Include="Seguridad\clsMenu.cs" />
+    <Compile Include="Seguridad\clsUsuario.cs" />
+    <Compile Include="Seguridad\clsUsuarioPorEmpresa.cs" />
+    <Compile Include="Seguridad\clsVwUsuarioInformacion.cs" />
+    <Compile Include="Seguridad\clsVwUsuarioPermisos.cs" />
+    <Compile Include="Taller\clsArticulo.cs" />
+    <Compile Include="Taller\clsCliente.cs" />
+    <Compile Include="Taller\clsMensajesTaller.cs" />
+    <Compile Include="Taller\clsTiposTrabajos.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Facturacion\" />
+    <Folder Include="_Otro\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Contabilidad\ClassDiagram1.cd" />
+    <EntityDeploy Include="Contabilidad\DatEnt.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DatEnt.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Contabilidad\nn.linq" />
+    <None Include="Properties\DataSources\clases.Seguridad.clsImagen.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
