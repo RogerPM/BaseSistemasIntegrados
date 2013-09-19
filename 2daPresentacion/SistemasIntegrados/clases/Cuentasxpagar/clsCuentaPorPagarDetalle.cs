@@ -13,6 +13,9 @@ namespace clases.Cuentasxpagar
         public decimal _ValorLetra { get; set; }
         public DateTime _FechaVencimiento { get; set; }
         public int _Estado { get; set; }
+        public int? _numeroPagos { get; set; }
+        public decimal? _totalPagar { get; set; }
+        public bool? _AutorizarPago { get; set; }
 
         public clsCuentaPorPagarDetalle()
         {

@@ -24,49 +24,83 @@ namespace datos.Inventario
                    clas.nroMovimiento = Convert.ToInt32(item.NroMovimiento);
                    clas.tipoMovimiento = Convert.ToInt32(item.IdTipoMovimiento);
                    clas.fechaMovimiento = Convert.ToDateTime(item.FechaMovimiento);
-                   clas.ordenCompra = Convert.ToInt32(item.IdOrdenCompra);
+                   //clas.ordenCompra = Convert.ToInt32(item.IdOrdenCompra);
                    clas.motivo = Convert.ToInt32(item.IdMotivo);
+                   try
+                   {
+                        clas.Nombrebodega = (from q in ent.Bodega where q.IdBodega == item.IdBodega select q.Decripcion).First();
+
+                   }
+                   catch (Exception)
+                   {
+                   }
                    clas.bodega = Convert.ToInt32(item.IdBodega);
                    clas.responsable = Convert.ToInt32(item.IdResponsable);
-                   clas.totalPagar = Convert.ToDecimal (item.TotalPagar);
+                   //clas.totalPagar = Convert.ToDecimal(item.TotalPagar);
                    clas.observacion = item.Observacion;
                    clas.estado = Convert.ToInt32(item.IdEstado);
                    lista.Add(clas);
                }
-                
-                return lista;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error : " + ex);
-                return null;
-            }
-           
+
+               return lista;
+           }
+           catch (Exception ex)
+           {
+               Console.WriteLine("Error : " + ex);
+               return null;
+           }
+
        }
 
 
-       public Boolean guardar(clsIngresoEgresoCAB ctm, ref string Mensaje)
+       public Boolean guardar(ref clsIngresoEgresoCAB ctm, ref string Mensaje)
        {
            try
            {
+               INVENTARIOEntities enti = new INVENTARIOEntities();
+               int numero = 0;
+               try
+               {
+                   numero = (from q in enti.IngresoEgresoCab where q.IdEmpresa == 1 select q.NroMovimiento).Max() + 1;
+               }
+               catch (Exception)
+               {
+                   numero = 1;
+               }
+               ctm.nroMovimiento = numero;
                using (INVENTARIOEntities te = new INVENTARIOEntities())
                {
-                   IngresoEgresoCab tm = new IngresoEgresoCab();
-                   tm.IdEmpresa = Convert.ToInt32(ctm.empresa);
-                   tm.NroMovimiento = ctm.nroMovimiento;
-                   tm.IdTipoMovimiento = ctm.tipoMovimiento;
-                   tm.FechaMovimiento = ctm.fechaMovimiento;
-                   tm.IdOrdenCompra = ctm.ordenCompra;
-                   tm.IdMotivo = ctm.motivo;
-                   tm.IdBodega = ctm.bodega;
-                   tm.IdResponsable = ctm.responsable;
-                   tm.TotalPagar = ctm.totalPagar;
-                   tm.Observacion = ctm.observacion;
-                   tm.IdEstado = ctm.estado;
-
+                   IngresoEgresoCab tm = new IngresoEgresoCab()
+                   {
+                       IdEmpresa = Convert.ToInt32(ctm.empresa),
+                       NroMovimiento = ctm.nroMovimiento,
+                       IdTipoMovimiento = ctm.tipoMovimiento,
+                       FechaMovimiento = ctm.fechaMovimiento,
+                       //tm.IdOrdenCompra = ctm.ordenCompra;
+                       IdMotivo = ctm.motivo,
+                       IdBodega = ctm.bodega,
+                       IdResponsable = ctm.responsable,
+                       //tm.TotalPagar = ctm.totalPagar;
+                       Observacion = ctm.observacion,
+                       IdEstado = ctm.estado
+                   };
                    te.AddToIngresoEgresoCab(tm);
                    te.SaveChanges();
-
+                   int linea=1;
+                   foreach (var item in ctm.detalle)
+                   {
+                       IngresoEgresoDet det = new IngresoEgresoDet() { 
+                           IdEmpresa=1,
+                            NroMovimiento=ctm.nroMovimiento,
+                            numero=linea,
+                            IdArticulo=item.articulo,
+                            IdPercha=item.percha,
+                            Cantidad=item.cantidadPedida
+                       };
+                       linea=linea+1;
+                       te.AddToIngresoEgresoDet(det);
+                   }
+                   te.SaveChanges();
                }
                return true;
            }
@@ -80,7 +114,7 @@ namespace datos.Inventario
        }
 
 
-       public Boolean modificar(clsIngresoEgresoCAB  ctm)
+       public Boolean modificar(clsIngresoEgresoCAB ctm)
        {
            using (INVENTARIOEntities te = new INVENTARIOEntities())
            {
@@ -88,30 +122,30 @@ namespace datos.Inventario
                object OBJ = null;
                if (te.TryGetObjectByKey(ekey, out OBJ))
                {
-                   IngresoEgresoCab  IngEgCAB = (IngresoEgresoCab )OBJ;
-                   IngEgCAB.IdTipoMovimiento  = ctm.tipoMovimiento ;
+                   IngresoEgresoCab IngEgCAB = (IngresoEgresoCab)OBJ;
+                   IngEgCAB.IdTipoMovimiento = ctm.tipoMovimiento;
                    IngEgCAB.FechaMovimiento = ctm.fechaMovimiento;
-                   IngEgCAB.IdOrdenCompra = ctm.ordenCompra;
+                   //IngEgCAB.IdOrdenCompra = ctm.ordenCompra;
                    IngEgCAB.IdMotivo = ctm.motivo;
                    IngEgCAB.IdBodega = ctm.bodega;
                    IngEgCAB.IdResponsable = ctm.responsable;
-                   IngEgCAB.TotalPagar = ctm.totalPagar;
+                   //IngEgCAB.TotalPagar = ctm.totalPagar;
                    IngEgCAB.Observacion = ctm.observacion;
                    IngEgCAB.IdEstado = Convert.ToInt32(ctm.estado);
-                 }
+               }
                te.SaveChanges(System.Data.Objects.SaveOptions.DetectChangesBeforeSave);
            }
            return true;
        }
 
-       //public string ConsultarPorId(int id)
-       //{
-       //    using (INVENTARIOEntities ent = new INVENTARIOEntities())
-       //    {
-       //        var x = (from a in ent.Empresa where a.IdEmpresa == id select a).First();
-       //        return x.NombreComercial;
-       //    }
-       //}
+       public string ConsultarPorId(int id)
+       {
+           using (INVENTARIOEntities ent = new INVENTARIOEntities())
+           {
+               var x = (from a in ent.Empresa where a.IdEmpresa == id select a).First();
+               return x.NombreComercial;
+           }
+       }
                
 
 

@@ -23,6 +23,8 @@
     <EntitySet Name="Chasis" EntityType="TECAModel.Store.Chasis" store:Type="Tables" Schema="Inventario" />
     <EntitySet Name="Color" EntityType="TECAModel.Store.Color" store:Type="Tables" Schema="Inventario" />
     <EntitySet Name="Grupo" EntityType="TECAModel.Store.Grupo" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="IngresoEgresoCab" EntityType="TECAModel.Store.IngresoEgresoCab" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="IngresoEgresoDet" EntityType="TECAModel.Store.IngresoEgresoDet" store:Type="Tables" Schema="Inventario" />
     <EntitySet Name="Marca" EntityType="TECAModel.Store.Marca" store:Type="Tables" Schema="Inventario" />
     <EntitySet Name="Modelo" EntityType="TECAModel.Store.Modelo" store:Type="Tables" Schema="Inventario" />
     <EntitySet Name="Percha" EntityType="TECAModel.Store.Percha" store:Type="Tables" Schema="Inventario" />
@@ -179,37 +181,13 @@
       <End Role="Articulo" EntitySet="Articulo" />
       <End Role="CotizacionDet" EntitySet="CotizacionDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idEmp__6B0FDBE9" Association="TECAModel.Store.FK__CuentaxCo__idEmp__6B0FDBE9">
+    <AssociationSet Name="FK__CuentaxCo__idEmp__2D32A501" Association="TECAModel.Store.FK__CuentaxCo__idEmp__2D32A501">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
     </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idEmp__74994623" Association="TECAModel.Store.FK__CuentaxCo__idEmp__74994623">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="CuentaxCobrarDet" EntitySet="CuentaxCobrarDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idEst__6FD49106" Association="TECAModel.Store.FK__CuentaxCo__idEst__6FD49106">
-      <End Role="Estado" EntitySet="Estado" />
-      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idEst__76818E95" Association="TECAModel.Store.FK__CuentaxCo__idEst__76818E95">
-      <End Role="Estado" EntitySet="Estado" />
-      <End Role="CuentaxCobrarDet" EntitySet="CuentaxCobrarDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idFac__6DEC4894" Association="TECAModel.Store.FK__CuentaxCo__idFac__6DEC4894">
-      <End Role="Factura" EntitySet="Factura" />
-      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idTra__6CF8245B" Association="TECAModel.Store.FK__CuentaxCo__idTra__6CF8245B">
-      <End Role="Factura" EntitySet="Factura" />
-      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idUsu__6C040022" Association="TECAModel.Store.FK__CuentaxCo__idUsu__6C040022">
+    <AssociationSet Name="FK__CuentaxCo__idUsu__2E26C93A" Association="TECAModel.Store.FK__CuentaxCo__idUsu__2E26C93A">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idUsu__758D6A5C" Association="TECAModel.Store.FK__CuentaxCo__idUsu__758D6A5C">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="CuentaxCobrarDet" EntitySet="CuentaxCobrarDet" />
     </AssociationSet>
     <AssociationSet Name="FK__Devolucio__idEst__06ED0088" Association="TECAModel.Store.FK__Devolucio__idEst__06ED0088">
       <End Role="Estado" EntitySet="Estado" />
@@ -350,6 +328,42 @@
     <AssociationSet Name="FK__GuiaRemis__idUsu__76B698BF" Association="TECAModel.Store.FK__GuiaRemis__idUsu__76B698BF">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="GuiaRemisionDet" EntitySet="GuiaRemisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdEst__0D99FE17" Association="TECAModel.Store.FK__IngresoEg__IdEst__0D99FE17">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdGru__190BB0C3" Association="TECAModel.Store.FK__IngresoEg__IdGru__190BB0C3">
+      <End Role="Grupo" EntitySet="Grupo" />
+      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdPer__19FFD4FC" Association="TECAModel.Store.FK__IngresoEg__IdPer__19FFD4FC">
+      <End Role="Percha" EntitySet="Percha" />
+      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdRes__10766AC2" Association="TECAModel.Store.FK__IngresoEg__IdRes__10766AC2">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdTip__162F4418" Association="TECAModel.Store.FK__IngresoEg__IdTip__162F4418">
+      <End Role="TipoArticulo" EntitySet="TipoArticulo" />
+      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdUsu__116A8EFB" Association="TECAModel.Store.FK__IngresoEg__IdUsu__116A8EFB">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEgresoCab__0BB1B5A5" Association="TECAModel.Store.FK__IngresoEgresoCab__0BB1B5A5">
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEgresoDet__17236851" Association="TECAModel.Store.FK__IngresoEgresoDet__17236851">
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEgresoDet__18178C8A" Association="TECAModel.Store.FK__IngresoEgresoDet__18178C8A">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
     </AssociationSet>
     <AssociationSet Name="FK__Marca__IdEmpresa__45544755" Association="TECAModel.Store.FK__Marca__IdEmpresa__45544755">
       <End Role="Empresa" EntitySet="Empresa" />
@@ -504,21 +518,17 @@
     <Property Name="idUsuario" Type="int" Nullable="false" />
     <Property Name="idCuentaxCobrar" Type="int" Nullable="false" />
     <Property Name="numero_comprobante" Type="numeric" Precision="4" />
-    <Property Name="idTransaccion" Type="int" Nullable="false" />
-    <Property Name="idFactura" Type="int" Nullable="false" />
     <Property Name="Modulo" Type="int" Nullable="false" />
-    <Property Name="idCabeceraComprobante" Type="int" Nullable="false" />
+    <Property Name="idNumeroFactura" Type="int" Nullable="false" />
     <Property Name="TotalCuotas" Type="int" Nullable="false" />
     <Property Name="porcentaje_interes" Type="numeric" Nullable="false" />
-    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="CuentaxCobrarDet">
     <Key>
       <PropertyRef Name="idCuentaxCobrar" />
       <PropertyRef Name="Numero" />
     </Key>
-    <Property Name="idEmpresa" Type="int" Nullable="false" />
-    <Property Name="idUsuario" Type="int" Nullable="false" />
     <Property Name="idCuentaxCobrar" Type="int" Nullable="false" />
     <Property Name="Numero" Type="int" Nullable="false" />
     <Property Name="numero_cuota" Type="int" Nullable="false" />
@@ -528,7 +538,7 @@
     <Property Name="fecha_cobro" Type="date" Nullable="false" />
     <Property Name="fecha_vencimiento" Type="date" Nullable="false" />
     <Property Name="FechaModificacion" Type="datetime" />
-    <Property Name="idEstado" Type="int" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="1" />
   </EntityType>
   <EntityType Name="ClienteDefactura">
     <Key>
@@ -612,6 +622,7 @@
     <Property Name="FechaPago" Type="date" />
     <Property Name="FechaMaximaPago" Type="date" />
     <Property Name="precio" Type="money" />
+    <Property Name="costo" Type="money" />
     <Property Name="cantidad" Type="int" />
     <Property Name="idEstado" Type="int" Nullable="false" />
   </EntityType>
@@ -678,6 +689,7 @@
     <Property Name="FechaPago" Type="date" />
     <Property Name="FechaMaximaPago" Type="date" />
     <Property Name="precio" Type="money" />
+    <Property Name="costo" Type="money" />
     <Property Name="cantidad" Type="int" />
     <Property Name="idEstado" Type="int" Nullable="false" />
   </EntityType>
@@ -802,6 +814,43 @@
     <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
     <Property Name="IdTipoArticulo" Type="int" />
     <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="IngresoEgresoCab">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="NroMovimiento" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="NroMovimiento" Type="int" Nullable="false" />
+    <Property Name="IdTipoMovimiento" Type="int" />
+    <Property Name="FechaMovimiento" Type="date" />
+    <Property Name="IdOrdenCompra" Type="int" />
+    <Property Name="IdMotivo" Type="int" />
+    <Property Name="IdBodega" Type="int" />
+    <Property Name="IdResponsable" Type="int" />
+    <Property Name="TotalPagar" Type="numeric" Precision="7" Scale="2" />
+    <Property Name="Observacion" Type="varchar" MaxLength="150" />
+    <Property Name="IdUsuario" Type="int" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="IngresoEgresoDet">
+    <Key>
+      <PropertyRef Name="NroMovimiento" />
+      <PropertyRef Name="numero" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="NroMovimiento" Type="int" Nullable="false" />
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="IdTipoArticulo" Type="int" />
+    <Property Name="IdArticulo" Type="int" />
+    <Property Name="IdGrupo" Type="int" />
+    <Property Name="IdPercha" Type="int" />
+    <Property Name="CantidadPedida" Type="int" />
+    <Property Name="CantidadLlegada" Type="int" />
+    <Property Name="Costo" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="Subtotal" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="ValorIVA" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="ValorTotal" Type="numeric" Precision="5" Scale="2" />
   </EntityType>
   <EntityType Name="Marca">
     <Key>
@@ -1372,7 +1421,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CuentaxCo__idEmp__6B0FDBE9">
+  <Association Name="FK__CuentaxCo__idEmp__2D32A501">
     <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
     <End Role="CuentaxCobrar" Type="TECAModel.Store.CuentaxCobrar" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1384,67 +1433,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CuentaxCo__idEmp__74994623">
-    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
-    <End Role="CuentaxCobrarDet" Type="TECAModel.Store.CuentaxCobrarDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="CuentaxCobrarDet">
-        <PropertyRef Name="idEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idEst__6FD49106">
-    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
-    <End Role="CuentaxCobrar" Type="TECAModel.Store.CuentaxCobrar" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Estado">
-        <PropertyRef Name="IdEstado" />
-      </Principal>
-      <Dependent Role="CuentaxCobrar">
-        <PropertyRef Name="idEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idEst__76818E95">
-    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="1" />
-    <End Role="CuentaxCobrarDet" Type="TECAModel.Store.CuentaxCobrarDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Estado">
-        <PropertyRef Name="IdEstado" />
-      </Principal>
-      <Dependent Role="CuentaxCobrarDet">
-        <PropertyRef Name="idEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idFac__6DEC4894">
-    <End Role="Factura" Type="TECAModel.Store.Factura" Multiplicity="1" />
-    <End Role="CuentaxCobrar" Type="TECAModel.Store.CuentaxCobrar" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Factura">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Principal>
-      <Dependent Role="CuentaxCobrar">
-        <PropertyRef Name="idFactura" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idTra__6CF8245B">
-    <End Role="Factura" Type="TECAModel.Store.Factura" Multiplicity="1" />
-    <End Role="CuentaxCobrar" Type="TECAModel.Store.CuentaxCobrar" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Factura">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Principal>
-      <Dependent Role="CuentaxCobrar">
-        <PropertyRef Name="idTransaccion" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idUsu__6C040022">
+  <Association Name="FK__CuentaxCo__idUsu__2E26C93A">
     <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
     <End Role="CuentaxCobrar" Type="TECAModel.Store.CuentaxCobrar" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1452,18 +1441,6 @@
         <PropertyRef Name="IdUsuario" />
       </Principal>
       <Dependent Role="CuentaxCobrar">
-        <PropertyRef Name="idUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idUsu__758D6A5C">
-    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="1" />
-    <End Role="CuentaxCobrarDet" Type="TECAModel.Store.CuentaxCobrarDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="CuentaxCobrarDet">
         <PropertyRef Name="idUsuario" />
       </Dependent>
     </ReferentialConstraint>
@@ -1891,6 +1868,120 @@
       </Principal>
       <Dependent Role="GuiaRemisionDet">
         <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdEst__0D99FE17">
+    <End Role="Estado" Type="TECAModel.Store.Estado" Multiplicity="0..1" />
+    <End Role="IngresoEgresoCab" Type="TECAModel.Store.IngresoEgresoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="IngresoEgresoCab">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdGru__190BB0C3">
+    <End Role="Grupo" Type="TECAModel.Store.Grupo" Multiplicity="0..1" />
+    <End Role="IngresoEgresoDet" Type="TECAModel.Store.IngresoEgresoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="IdGrupo" />
+      </Principal>
+      <Dependent Role="IngresoEgresoDet">
+        <PropertyRef Name="IdGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdPer__19FFD4FC">
+    <End Role="Percha" Type="TECAModel.Store.Percha" Multiplicity="0..1" />
+    <End Role="IngresoEgresoDet" Type="TECAModel.Store.IngresoEgresoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Percha">
+        <PropertyRef Name="IdPercha" />
+      </Principal>
+      <Dependent Role="IngresoEgresoDet">
+        <PropertyRef Name="IdPercha" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdRes__10766AC2">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="0..1" />
+    <End Role="IngresoEgresoCab" Type="TECAModel.Store.IngresoEgresoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="IngresoEgresoCab">
+        <PropertyRef Name="IdResponsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdTip__162F4418">
+    <End Role="TipoArticulo" Type="TECAModel.Store.TipoArticulo" Multiplicity="0..1" />
+    <End Role="IngresoEgresoDet" Type="TECAModel.Store.IngresoEgresoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoArticulo">
+        <PropertyRef Name="IdTipoArticulo" />
+      </Principal>
+      <Dependent Role="IngresoEgresoDet">
+        <PropertyRef Name="IdTipoArticulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdUsu__116A8EFB">
+    <End Role="Usuario" Type="TECAModel.Store.Usuario" Multiplicity="0..1" />
+    <End Role="IngresoEgresoCab" Type="TECAModel.Store.IngresoEgresoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="IngresoEgresoCab">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEgresoCab__0BB1B5A5">
+    <End Role="OrdenCompra" Type="TECAModel.Store.OrdenCompra" Multiplicity="0..1" />
+    <End Role="IngresoEgresoCab" Type="TECAModel.Store.IngresoEgresoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenCompra">
+        <PropertyRef Name="IdOrdenCompra" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="IngresoEgresoCab">
+        <PropertyRef Name="IdOrdenCompra" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEgresoDet__17236851">
+    <End Role="IngresoEgresoCab" Type="TECAModel.Store.IngresoEgresoCab" Multiplicity="0..1" />
+    <End Role="IngresoEgresoDet" Type="TECAModel.Store.IngresoEgresoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IngresoEgresoCab">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NroMovimiento" />
+      </Principal>
+      <Dependent Role="IngresoEgresoDet">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NroMovimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEgresoDet__18178C8A">
+    <End Role="Articulo" Type="TECAModel.Store.Articulo" Multiplicity="0..1" />
+    <End Role="IngresoEgresoDet" Type="TECAModel.Store.IngresoEgresoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="IngresoEgresoDet">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

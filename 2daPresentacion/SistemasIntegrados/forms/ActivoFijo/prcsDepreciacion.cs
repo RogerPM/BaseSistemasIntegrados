@@ -47,6 +47,7 @@ namespace forms.ActivoFijo
             BloquearControles();
             cbxEstado.Properties.DataSource = datoEsta.ConsultaTodos();
             cbxSubGrupo.Properties.DataSource = datoSubGrup.consulta();
+
             gridView1.OptionsBehavior.Editable = false;
             dtFecha.DateTime = DateTime.Now;
         }
@@ -82,7 +83,7 @@ namespace forms.ActivoFijo
 
             if (dtFecha.Text == "")//para que no se caiga la aplicacion en la fecha
             {
-                return false;// se retorna false para que cuando se haga la oregunta de que si hay espacios vacios 
+                return false;// se retorna false para que cuando se haga la pregunta de que si hay espacios vacios 
                 //bote un error 
             }
             else
@@ -332,10 +333,17 @@ namespace forms.ActivoFijo
         {
             VtnConsultaDepreciacion frm = new VtnConsultaDepreciacion();
             frm.ShowDialog();
-            oDepreGeneral = frm.cls;
-            set(oDepreGeneral);
-            btnGuardar.Enabled = false;
-
+            if (frm.Cancelar())
+            {
+                oDepreGeneral = frm.cls;
+                set(oDepreGeneral);
+                btnGuardar.Enabled = false;
+            }
+            else
+            {
+                limpiarControles();
+                MessageBox.Show(msj.Sin_Seleccion, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void btnAdicional_Click(object sender, EventArgs e)

@@ -11,7 +11,8 @@
     <RootNamespace>forms</RootNamespace>
     <AssemblyName>forms</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -53,14 +54,64 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
@@ -83,6 +134,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcercaDe.Designer.cs">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActivoFijo\ActivodeBaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +284,18 @@
     <Compile Include="ActivoFijo\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="ActivoFijo\rpActivoFijo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActivoFijo\rpActivoFijo.Designer.cs">
+      <DependentUpon>rpActivoFijo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActivoFijo\rpActivoFijoEspecifico.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ActivoFijo\rpActivoFijoEspecifico.Designer.cs">
+      <DependentUpon>rpActivoFijoEspecifico.cs</DependentUpon>
+    </Compile>
     <Compile Include="ActivoFijo\Secundario.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -274,6 +343,12 @@
     </Compile>
     <Compile Include="ActivoFijo\VtnConsultaTipoBaja.Designer.cs">
       <DependentUpon>VtnConsultaTipoBaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ActivoFijo\VtnConsultaTipoBajaActivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActivoFijo\VtnConsultaTipoBajaActivo.Designer.cs">
+      <DependentUpon>VtnConsultaTipoBajaActivo.cs</DependentUpon>
     </Compile>
     <Compile Include="Compras\frmComprasConsultaPersona.cs">
       <SubType>Form</SubType>
@@ -365,11 +440,23 @@
     <Compile Include="Compras\frmProveedor.Designer.cs">
       <DependentUpon>frmProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Compras\frmRptSolicitudes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras\frmRptSolicitudes.Designer.cs">
+      <DependentUpon>frmRptSolicitudes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Compras\frmSolicitud.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Compras\frmSolicitud.Designer.cs">
       <DependentUpon>frmSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Compras\rptSolicitud.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Compras\rptSolicitud.Designer.cs">
+      <DependentUpon>rptSolicitud.cs</DependentUpon>
     </Compile>
     <Compile Include="Contabilidad\DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -405,6 +492,18 @@
     </Compile>
     <Compile Include="Contabilidad\frmComprobante.Designer.cs">
       <DependentUpon>frmComprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\frmEstadoResultado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\frmEstadoResultado.designer.cs">
+      <DependentUpon>frmEstadoResultado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\frmlibrodiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\frmlibrodiario.designer.cs">
+      <DependentUpon>frmlibrodiario.cs</DependentUpon>
     </Compile>
     <Compile Include="Contabilidad\frmMantenimientoTipoTransaccion.cs">
       <SubType>Form</SubType>
@@ -454,6 +553,27 @@
     <Compile Include="Contabilidad\frmTipoTransaccion.Designer.cs">
       <DependentUpon>frmTipoTransaccion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contabilidad\rptEstadoResultado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\rptEstadoResultado.designer.cs">
+      <DependentUpon>rptEstadoResultado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contabilidad\rptLibroDiario.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Contabilidad\rptLibroDiario.designer.cs">
+      <DependentUpon>rptLibroDiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasxCobrar\DataSetCuentasPorCobrar.cs">
+      <DependentUpon>DataSetCuentasPorCobrar.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\DataSetCuentasPorCobrar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCuentasPorCobrar.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CuentasxCobrar\frmPrincipalCC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -501,6 +621,12 @@
     </Compile>
     <Compile Include="CuentasxCobrar\Frm_ConsultaBanco.designer.cs">
       <DependentUpon>Frm_ConsultaBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasxCobrar\frm_ConsultaMovimientoBancario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\frm_ConsultaMovimientoBancario.designer.cs">
+      <DependentUpon>frm_ConsultaMovimientoBancario.cs</DependentUpon>
     </Compile>
     <Compile Include="CuentasxCobrar\frm_ConsultaReporteCobro.cs">
       <SubType>Form</SubType>
@@ -574,17 +700,29 @@
     <Compile Include="CuentasxCobrar\frm_ReporteEstadoCuenta.Designer.cs">
       <DependentUpon>frm_ReporteEstadoCuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="CuentasxCobrar\frm_ReporteInversion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\frm_ReporteInversion.Designer.cs">
+      <DependentUpon>frm_ReporteInversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CuentasxCobrar\frm_ReporteMovimientoBancario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\frm_ReporteMovimientoBancario.Designer.cs">
+      <DependentUpon>frm_ReporteMovimientoBancario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cuentasxpagar\frmConsultaCuentaPorPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\frmConsultaCuentaPorPagar.Designer.cs">
+      <DependentUpon>frmConsultaCuentaPorPagar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cuentasxpagar\frmConsultaCuentasPagar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cuentasxpagar\frmConsultaCuentasPagar.Designer.cs">
       <DependentUpon>frmConsultaCuentasPagar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cuentasxpagar\frmConsultaEmpresaServicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cuentasxpagar\frmConsultaEmpresaServicio.Designer.cs">
-      <DependentUpon>frmConsultaEmpresaServicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Cuentasxpagar\frmConsultaFrecuenciaPago.cs">
       <SubType>Form</SubType>
@@ -621,12 +759,6 @@
     </Compile>
     <Compile Include="Cuentasxpagar\frmConsultaPagos.Designer.cs">
       <DependentUpon>frmConsultaPagos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cuentasxpagar\frmConsultaPrueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cuentasxpagar\frmConsultaPrueba.Designer.cs">
-      <DependentUpon>frmConsultaPrueba.cs</DependentUpon>
     </Compile>
     <Compile Include="Cuentasxpagar\frmConsultas.cs">
       <SubType>Form</SubType>
@@ -676,6 +808,12 @@
     <Compile Include="Cuentasxpagar\frmMenuCtasXPagar.Designer.cs">
       <DependentUpon>frmMenuCtasXPagar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cuentasxpagar\frmMenuCuentasPorPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\frmMenuCuentasPorPagar.Designer.cs">
+      <DependentUpon>frmMenuCuentasPorPagar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cuentasxpagar\frmNotaDebito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -694,11 +832,35 @@
     <Compile Include="Cuentasxpagar\frmPagos.Designer.cs">
       <DependentUpon>frmPagos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cuentasxpagar\Reporte.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\Reporte.Designer.cs">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion\Formview.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Facturacion\Formview.Designer.cs">
       <DependentUpon>Formview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FormviewDevolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FormviewDevolucion.Designer.cs">
+      <DependentUpon>FormviewDevolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FormviewGuiaRemision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FormviewGuiaRemision.Designer.cs">
+      <DependentUpon>FormviewGuiaRemision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FormViewVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FormViewVentas.Designer.cs">
+      <DependentUpon>FormViewVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\frmCliente.cs">
       <SubType>Form</SubType>
@@ -748,6 +910,12 @@
     <Compile Include="Facturacion\FrmConFormaPago.Designer.cs">
       <DependentUpon>FrmConFormaPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturacion\FrmConGuiaRemision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FrmConGuiaRemision.Designer.cs">
+      <DependentUpon>FrmConGuiaRemision.cs</DependentUpon>
+    </Compile>
     <Compile Include="Facturacion\FrmConProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -759,6 +927,12 @@
     </Compile>
     <Compile Include="Facturacion\FrmConPromociones.Designer.cs">
       <DependentUpon>FrmConPromociones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\FrmConsPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\FrmConsPersona.Designer.cs">
+      <DependentUpon>FrmConsPersona.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\frmCotizacion2.cs">
       <SubType>Form</SubType>
@@ -789,6 +963,12 @@
     </Compile>
     <Compile Include="Facturacion\frmGuiasRemision.Designer.cs">
       <DependentUpon>frmGuiasRemision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\frmMConsultaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\frmMConsultaEmpleado.Designer.cs">
+      <DependentUpon>frmMConsultaEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\frmPorcentajeComi.cs">
       <SubType>Form</SubType>
@@ -826,12 +1006,18 @@
     <Compile Include="Facturacion\PRINCIPAL.Designer.cs">
       <DependentUpon>PRINCIPAL.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturacion\ReportesFacturacion3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
+    <Compile Include="Facturacion\ReportesFacturacion.cs">
       <DependentUpon>ReportesFacturacion.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Facturacion\Seguridad.cs" />
+    <Compile Include="Facturacion\ReportesFacturacion3.Designer.cs">
+      <DependentUpon>ReportesFacturacion.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Facturacion\Seguridad.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="frmGUImetro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -910,6 +1096,12 @@
     <Compile Include="Inventario\frmConsultaIngresoEgresoCAB.Designer.cs">
       <DependentUpon>frmConsultaIngresoEgresoCAB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventario\frmConsultaLLegada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\frmConsultaLLegada.Designer.cs">
+      <DependentUpon>frmConsultaLLegada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario\frmConsultaMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -927,6 +1119,12 @@
     </Compile>
     <Compile Include="Inventario\frmConsultaMotivo.Designer.cs">
       <DependentUpon>frmConsultaMotivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\frmConsultaOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\frmConsultaOrdenCompra.Designer.cs">
+      <DependentUpon>frmConsultaOrdenCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventario\frmConsultaPercha.cs">
       <SubType>Form</SubType>
@@ -976,6 +1174,12 @@
     <Compile Include="Inventario\frmIngresoEgresoBodega.Designer.cs">
       <DependentUpon>frmIngresoEgresoBodega.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventario\frmLLegadaMercaderia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\frmLLegadaMercaderia.designer.cs">
+      <DependentUpon>frmLLegadaMercaderia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario\frmMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -994,17 +1198,17 @@
     <Compile Include="Inventario\frmMotivo.Designer.cs">
       <DependentUpon>frmMotivo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventario\frmMPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventario\frmMPrincipal.Designer.cs">
-      <DependentUpon>frmMPrincipal.cs</DependentUpon>
-    </Compile>
     <Compile Include="Inventario\frmPercha.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inventario\frmPercha.Designer.cs">
       <DependentUpon>frmPercha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\frmReporteIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\frmReporteIngreso.Designer.cs">
+      <DependentUpon>frmReporteIngreso.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventario\frmTipoArticulo.cs">
       <SubType>Form</SubType>
@@ -1047,6 +1251,12 @@
     </Compile>
     <Compile Include="Inventario\frmUnidadMedida.Designer.cs">
       <DependentUpon>frmUnidadMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\rptIngresoEgreso.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventario\rptIngresoEgreso.Designer.cs">
+      <DependentUpon>rptIngresoEgreso.cs</DependentUpon>
     </Compile>
     <Compile Include="RecursosHumanos\frmConsultaCargaFamiliar.cs">
       <SubType>Form</SubType>
@@ -1102,11 +1312,23 @@
     <Compile Include="RecursosHumanos\frmConsultaReporteAtrasosFaltas.designer.cs">
       <DependentUpon>frmConsultaReporteAtrasosFaltas.cs</DependentUpon>
     </Compile>
+    <Compile Include="RecursosHumanos\frmConsultaReporteEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\frmConsultaReporteEmpleado.designer.cs">
+      <DependentUpon>frmConsultaReporteEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="RecursosHumanos\frmConsultaReporteLiquidacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RecursosHumanos\frmConsultaReporteLiquidacion.designer.cs">
       <DependentUpon>frmConsultaReporteLiquidacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\frmConsultaReporteRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\frmConsultaReporteRol.designer.cs">
+      <DependentUpon>frmConsultaReporteRol.cs</DependentUpon>
     </Compile>
     <Compile Include="RecursosHumanos\frmConsultaTipoContrato.cs">
       <SubType>Form</SubType>
@@ -1228,6 +1450,12 @@
     <Compile Include="RecursosHumanos\frmPConsultaNomina.Designer.cs">
       <DependentUpon>frmPConsultaNomina.cs</DependentUpon>
     </Compile>
+    <Compile Include="RecursosHumanos\frmPConsultaPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\frmPConsultaPrestamo.Designer.cs">
+      <DependentUpon>frmPConsultaPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="RecursosHumanos\frmPConsultaTrabajo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1288,6 +1516,26 @@
     <Compile Include="RecursosHumanos\frmProcesoVacaciones.Designer.cs">
       <DependentUpon>frmProcesoVacaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="RecursosHumanos\rptEmpleado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\rptEmpleado.Designer.cs">
+      <DependentUpon>rptEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\rptNomina.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\rptNomina.Designer.cs">
+      <DependentUpon>rptNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\rptNominaEspecifico.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\rptNominaEspecifico.Designer.cs">
+      <DependentUpon>rptNominaEspecifico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguridad\frmAsignacionDeUsuariosAPerfiles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1300,43 +1548,17 @@
     <Compile Include="Seguridad\frmAsignarPantallaAPerfil.Designer.cs">
       <DependentUpon>frmAsignarPantallaAPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Seguridad\frmAsignarUsuariosAEmpresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Seguridad\frmAsignarUsuariosAEmpresa.designer.cs">
-      <DependentUpon>frmAsignarUsuariosAEmpresa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Seguridad\frmConsultarImagen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Seguridad\frmConsultarImagen.Designer.cs">
-      <DependentUpon>frmConsultarImagen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Seguridad\frmConsultarPerfiles.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Seguridad\frmConsultarPerfiles.designer.cs">
-      <DependentUpon>frmConsultarPerfiles.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Seguridad\frmCrearPerfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Seguridad\frmCrearPerfil.designer.cs">
-      <DependentUpon>frmCrearPerfil.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Seguridad\frmPrincipalSeguridad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Seguridad\frmPrincipalSeguridad.Designer.cs">
-      <DependentUpon>frmPrincipalSeguridad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Seguridad\frmAsignarPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Seguridad\frmAsignarPerfil.Designer.cs">
       <DependentUpon>frmAsignarPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\frmAsignarUsuariosAEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frmAsignarUsuariosAEmpresa.designer.cs">
+      <DependentUpon>frmAsignarUsuariosAEmpresa.cs</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\frmCambiarContrasena.cs">
       <SubType>Form</SubType>
@@ -1355,6 +1577,27 @@
     </Compile>
     <Compile Include="Seguridad\FrmConsultar.Designer.cs">
       <DependentUpon>FrmConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\frmConsultarImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frmConsultarImagen.Designer.cs">
+      <DependentUpon>frmConsultarImagen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\frmConsultarPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frmConsultarPerfiles.designer.cs">
+      <DependentUpon>frmConsultarPerfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\frmConsultarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frmCrearPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frmCrearPerfil.designer.cs">
+      <DependentUpon>frmCrearPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\frmCrearUsuario.cs">
       <SubType>Form</SubType>
@@ -1380,6 +1623,12 @@
     <Compile Include="Seguridad\frmMonitoreoUsuarios.Designer.cs">
       <DependentUpon>frmMonitoreoUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Seguridad\frmPrincipalSeguridad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frmPrincipalSeguridad.Designer.cs">
+      <DependentUpon>frmPrincipalSeguridad.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad\frmRptAccesoxUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1404,10 +1653,28 @@
     <Compile Include="Seguridad\frmRptPrivilegiosxUsuario.Designer.cs">
       <DependentUpon>frmRptPrivilegiosxUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Seguridad\ReporteHistorialUsuario.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Seguridad\ReporteHistorialUsuario.Designer.cs">
+      <DependentUpon>ReporteHistorialUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\ReporteHistorialUsuarioEspecif.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Seguridad\ReporteHistorialUsuarioEspecif.Designer.cs">
+      <DependentUpon>ReporteHistorialUsuarioEspecif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\rptPxU.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Seguridad\rptPxU.Designer.cs">
+      <DependentUpon>rptPxU.cs</DependentUpon>
+    </Compile>
     <Compile Include="Taller\frmArticulosTaller.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Taller\frmArticulosTaller.Designer.cs">
+    <Compile Include="Taller\frmArticulosTaller.designer.cs">
       <DependentUpon>frmArticulosTaller.cs</DependentUpon>
     </Compile>
     <Compile Include="Taller\frmClienteTaller.cs">
@@ -1428,17 +1695,47 @@
     <Compile Include="Taller\frmConsultarCliente.Designer.cs">
       <DependentUpon>frmConsultarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Taller\frmConsultarClienteVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taller\frmConsultarClienteVehiculo.Designer.cs">
+      <DependentUpon>frmConsultarClienteVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taller\frmConsultarLiquidacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taller\frmConsultarLiquidacion.Designer.cs">
+      <DependentUpon>frmConsultarLiquidacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taller\frmConsultarManoObra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taller\frmConsultarManoObra.Designer.cs">
+      <DependentUpon>frmConsultarManoObra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taller\frmConsultarOrdenTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taller\frmConsultarOrdenTrabajo.Designer.cs">
+      <DependentUpon>frmConsultarOrdenTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taller\frmConsultarPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taller\frmConsultarPresupuesto.Designer.cs">
+      <DependentUpon>frmConsultarPresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taller\frmConsultarRepuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taller\frmConsultarRepuesto.Designer.cs">
+      <DependentUpon>frmConsultarRepuesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Taller\frmConsultarTipoTrabajo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Taller\frmConsultarTipoTrabajo.Designer.cs">
       <DependentUpon>frmConsultarTipoTrabajo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Taller\frmEmpleadoTaller.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Taller\frmEmpleadoTaller.Designer.cs">
-      <DependentUpon>frmEmpleadoTaller.cs</DependentUpon>
     </Compile>
     <Compile Include="Taller\frmLiquidacion.cs">
       <SubType>Form</SubType>
@@ -1446,11 +1743,11 @@
     <Compile Include="Taller\frmLiquidacion.Designer.cs">
       <DependentUpon>frmLiquidacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Taller\frmManodeObra.cs">
+    <Compile Include="Taller\frmManoObra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Taller\frmManodeObra.Designer.cs">
-      <DependentUpon>frmManodeObra.cs</DependentUpon>
+    <Compile Include="Taller\frmManoObra.Designer.cs">
+      <DependentUpon>frmManoObra.cs</DependentUpon>
     </Compile>
     <Compile Include="Taller\frmOrdendeTrabajo.cs">
       <SubType>Form</SubType>
@@ -1488,11 +1785,17 @@
     <Compile Include="Taller\frmTiposTrabajos.Designer.cs">
       <DependentUpon>frmTiposTrabajos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Taller\frmVehiculoTaller.cs">
+    <Compile Include="Taller\rptHistorialReparaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Taller\frmVehiculoTaller.Designer.cs">
-      <DependentUpon>frmVehiculoTaller.cs</DependentUpon>
+    <Compile Include="Taller\rptHistorialReparaciones.Designer.cs">
+      <DependentUpon>rptHistorialReparaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Taller\rptOrdenesTrabajos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Taller\rptOrdenesTrabajos.Designer.cs">
+      <DependentUpon>rptOrdenesTrabajos.cs</DependentUpon>
     </Compile>
     <Compile Include="_Otro\ColeccionCombo.cs" />
     <Compile Include="_Otro\IGUMetroControl.cs">
@@ -1512,6 +1815,9 @@
       <DependentUpon>UCMenuTreeLsto.cs</DependentUpon>
     </Compile>
     <Compile Include="_Otro\Validador.cs" />
+    <EmbeddedResource Include="AcercaDe.resx">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActivoFijo\DepreciacionActual.resx">
       <DependentUpon>DepreciacionActual.cs</DependentUpon>
     </EmbeddedResource>
@@ -1533,8 +1839,17 @@
     <EmbeddedResource Include="ActivoFijo\DetVehiculo.resx">
       <DependentUpon>DetVehiculo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ActivoFijo\InventarioDisponible.resx">
+      <DependentUpon>InventarioDisponible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivoFijo\mntActivoFIjo.resx">
+      <DependentUpon>mntActivoFIjo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActivoFijo\mntCodigoBarra.resx">
       <DependentUpon>mntCodigoBarra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivoFijo\mntTipoBaja.resx">
+      <DependentUpon>mntTipoBaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ActivoFijo\PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
@@ -1566,8 +1881,17 @@
     <EmbeddedResource Include="ActivoFijo\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ActivoFijo\rpActivoFijo.resx">
+      <DependentUpon>rpActivoFijo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivoFijo\rpActivoFijoEspecifico.resx">
+      <DependentUpon>rpActivoFijoEspecifico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ActivoFijo\Secundario.resx">
       <DependentUpon>Secundario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivoFijo\VtnCodigoBarra.resx">
+      <DependentUpon>VtnCodigoBarra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ActivoFijo\VtnConsultaActivoFijo.resx">
       <DependentUpon>VtnConsultaActivoFijo.cs</DependentUpon>
@@ -1580,6 +1904,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ActivoFijo\VtnConsultaRevalor.resx">
       <DependentUpon>VtnConsultaRevalor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivoFijo\VtnConsultaSubgrupo.resx">
+      <DependentUpon>VtnConsultaSubgrupo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivoFijo\VtnConsultaTipoBaja.resx">
+      <DependentUpon>VtnConsultaTipoBaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ActivoFijo\VtnConsultaTipoBajaActivo.resx">
+      <DependentUpon>VtnConsultaTipoBajaActivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Compras\frmComprasConsultaPersona.resx">
       <DependentUpon>frmComprasConsultaPersona.cs</DependentUpon>
@@ -1626,8 +1959,14 @@
     <EmbeddedResource Include="Compras\frmProveedor.resx">
       <DependentUpon>frmProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Compras\frmRptSolicitudes.resx">
+      <DependentUpon>frmRptSolicitudes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Compras\frmSolicitud.resx">
       <DependentUpon>frmSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras\rptSolicitud.resx">
+      <DependentUpon>rptSolicitud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contabilidad\FormGridModeloAsientos.resx">
       <DependentUpon>FormGridModeloAsientos.cs</DependentUpon>
@@ -1643,6 +1982,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Contabilidad\frmComprobante.resx">
       <DependentUpon>frmComprobante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\frmEstadoResultado.resx">
+      <DependentUpon>frmEstadoResultado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\frmlibrodiario.resx">
+      <DependentUpon>frmlibrodiario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contabilidad\frmMantenimientoTipoTransaccion.resx">
       <DependentUpon>frmMantenimientoTipoTransaccion.cs</DependentUpon>
@@ -1668,6 +2013,12 @@
     <EmbeddedResource Include="Contabilidad\frmTipoTransaccion.resx">
       <DependentUpon>frmTipoTransaccion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\rptEstadoResultado.resx">
+      <DependentUpon>rptEstadoResultado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contabilidad\rptLibroDiario.resx">
+      <DependentUpon>rptLibroDiario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CuentasxCobrar\frmPrincipalCC.resx">
       <DependentUpon>frmPrincipalCC.cs</DependentUpon>
     </EmbeddedResource>
@@ -1691,6 +2042,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CuentasxCobrar\Frm_ConsultaBanco.resx">
       <DependentUpon>Frm_ConsultaBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CuentasxCobrar\frm_ConsultaMovimientoBancario.resx">
+      <DependentUpon>frm_ConsultaMovimientoBancario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CuentasxCobrar\frm_ConsultaReporteCobro.resx">
       <DependentUpon>frm_ConsultaReporteCobro.cs</DependentUpon>
@@ -1728,11 +2082,20 @@
     <EmbeddedResource Include="CuentasxCobrar\frm_ReporteEstadoCuenta.resx">
       <DependentUpon>frm_ReporteEstadoCuenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CuentasxCobrar\frm_ReporteInversion.resx">
+      <DependentUpon>frm_ReporteInversion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CuentasxCobrar\frm_ReporteMovimientoBancario.resx">
+      <DependentUpon>frm_ReporteMovimientoBancario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CuentasxCobrar\ReportBanco.rdlc" />
+    <EmbeddedResource Include="CuentasxCobrar\ReportInversion.rdlc" />
+    <EmbeddedResource Include="CuentasxCobrar\ReportMovimientoBancario.rdlc" />
+    <EmbeddedResource Include="Cuentasxpagar\frmConsultaCuentaPorPagar.resx">
+      <DependentUpon>frmConsultaCuentaPorPagar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cuentasxpagar\frmConsultaCuentasPagar.resx">
       <DependentUpon>frmConsultaCuentasPagar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cuentasxpagar\frmConsultaEmpresaServicio.resx">
-      <DependentUpon>frmConsultaEmpresaServicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cuentasxpagar\frmConsultaFrecuenciaPago.resx">
       <DependentUpon>frmConsultaFrecuenciaPago.cs</DependentUpon>
@@ -1751,9 +2114,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cuentasxpagar\frmConsultaPagos.resx">
       <DependentUpon>frmConsultaPagos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cuentasxpagar\frmConsultaPrueba.resx">
-      <DependentUpon>frmConsultaPrueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cuentasxpagar\frmConsultas.resx">
       <DependentUpon>frmConsultas.cs</DependentUpon>
@@ -1779,6 +2139,9 @@
     <EmbeddedResource Include="Cuentasxpagar\frmMenuCtasXPagar.resx">
       <DependentUpon>frmMenuCtasXPagar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cuentasxpagar\frmMenuCuentasPorPagar.resx">
+      <DependentUpon>frmMenuCuentasPorPagar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cuentasxpagar\frmNotaDebito.resx">
       <DependentUpon>frmNotaDebito.cs</DependentUpon>
     </EmbeddedResource>
@@ -1788,8 +2151,20 @@
     <EmbeddedResource Include="Cuentasxpagar\frmPagos.resx">
       <DependentUpon>frmPagos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cuentasxpagar\Reporte.resx">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\Formview.resx">
       <DependentUpon>Formview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FormviewDevolucion.resx">
+      <DependentUpon>FormviewDevolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FormviewGuiaRemision.resx">
+      <DependentUpon>FormviewGuiaRemision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FormViewVentas.resx">
+      <DependentUpon>FormViewVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
@@ -1815,11 +2190,17 @@
     <EmbeddedResource Include="Facturacion\FrmConFormaPago.resx">
       <DependentUpon>FrmConFormaPago.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FrmConGuiaRemision.resx">
+      <DependentUpon>FrmConGuiaRemision.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\FrmConProductos.resx">
       <DependentUpon>FrmConProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\FrmConPromociones.resx">
       <DependentUpon>FrmConPromociones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\FrmConsPersona.resx">
+      <DependentUpon>FrmConsPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\frmCotizacion2.resx">
       <DependentUpon>frmCotizacion2.cs</DependentUpon>
@@ -1835,6 +2216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\frmGuiasRemision.resx">
       <DependentUpon>frmGuiasRemision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\frmMConsultaEmpleado.resx">
+      <DependentUpon>frmMConsultaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\frmPorcentajeComi.resx">
       <DependentUpon>frmPorcentajeComi.cs</DependentUpon>
@@ -1856,6 +2240,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Facturacion\RptDevolucion.rdlc" />
     <EmbeddedResource Include="Facturacion\RptFactura.rdlc" />
+    <EmbeddedResource Include="Facturacion\RptGuiaRemision.rdlc" />
+    <EmbeddedResource Include="Facturacion\RptVentas.rdlc" />
     <EmbeddedResource Include="frmGUImetro.resx">
       <DependentUpon>frmGUImetro.cs</DependentUpon>
     </EmbeddedResource>
@@ -1895,6 +2281,9 @@
     <EmbeddedResource Include="Inventario\frmConsultaIngresoEgresoCAB.resx">
       <DependentUpon>frmConsultaIngresoEgresoCAB.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\frmConsultaLLegada.resx">
+      <DependentUpon>frmConsultaLLegada.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario\frmConsultaMarca.resx">
       <DependentUpon>frmConsultaMarca.cs</DependentUpon>
     </EmbeddedResource>
@@ -1903,6 +2292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\frmConsultaMotivo.resx">
       <DependentUpon>frmConsultaMotivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\frmConsultaOrdenCompra.resx">
+      <DependentUpon>frmConsultaOrdenCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\frmConsultaPercha.resx">
       <DependentUpon>frmConsultaPercha.cs</DependentUpon>
@@ -1928,6 +2320,9 @@
     <EmbeddedResource Include="Inventario\frmIngresoEgresoBodega.resx">
       <DependentUpon>frmIngresoEgresoBodega.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\frmLLegadaMercaderia.resx">
+      <DependentUpon>frmLLegadaMercaderia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario\frmMarca.resx">
       <DependentUpon>frmMarca.cs</DependentUpon>
     </EmbeddedResource>
@@ -1937,11 +2332,11 @@
     <EmbeddedResource Include="Inventario\frmMotivo.resx">
       <DependentUpon>frmMotivo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventario\frmMPrincipal.resx">
-      <DependentUpon>frmMPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Inventario\frmPercha.resx">
       <DependentUpon>frmPercha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\frmReporteIngreso.resx">
+      <DependentUpon>frmReporteIngreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\frmTipoArticulo.resx">
       <DependentUpon>frmTipoArticulo.cs</DependentUpon>
@@ -1963,6 +2358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\frmUnidadMedida.resx">
       <DependentUpon>frmUnidadMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\rptIngresoEgreso.resx">
+      <DependentUpon>rptIngresoEgreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursosHumanos\frmConsultaCargaFamiliar.resx">
       <DependentUpon>frmConsultaCargaFamiliar.cs</DependentUpon>
@@ -1991,8 +2389,14 @@
     <EmbeddedResource Include="RecursosHumanos\frmConsultaReporteAtrasosFaltas.resx">
       <DependentUpon>frmConsultaReporteAtrasosFaltas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RecursosHumanos\frmConsultaReporteEmpleado.resx">
+      <DependentUpon>frmConsultaReporteEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RecursosHumanos\frmConsultaReporteLiquidacion.resx">
       <DependentUpon>frmConsultaReporteLiquidacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursosHumanos\frmConsultaReporteRol.resx">
+      <DependentUpon>frmConsultaReporteRol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursosHumanos\frmConsultaTipoContrato.resx">
       <DependentUpon>frmConsultaTipoContrato.cs</DependentUpon>
@@ -2054,6 +2458,9 @@
     <EmbeddedResource Include="RecursosHumanos\frmPConsultaNomina.resx">
       <DependentUpon>frmPConsultaNomina.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RecursosHumanos\frmPConsultaPrestamo.resx">
+      <DependentUpon>frmPConsultaPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RecursosHumanos\frmPConsultaTrabajo.resx">
       <DependentUpon>frmPConsultaTrabajo.cs</DependentUpon>
     </EmbeddedResource>
@@ -2084,26 +2491,14 @@
     <EmbeddedResource Include="RecursosHumanos\frmProcesoVacaciones.resx">
       <DependentUpon>frmProcesoVacaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Seguridad\frmAsignacionDeUsuariosAPerfiles.resx">
-      <DependentUpon>frmAsignacionDeUsuariosAPerfiles.cs</DependentUpon>
+    <EmbeddedResource Include="RecursosHumanos\rptEmpleado.resx">
+      <DependentUpon>rptEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Seguridad\frmAsignarPantallaAPerfil.resx">
-      <DependentUpon>frmAsignarPantallaAPerfil.cs</DependentUpon>
+    <EmbeddedResource Include="RecursosHumanos\rptNomina.resx">
+      <DependentUpon>rptNomina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Seguridad\frmAsignarUsuariosAEmpresa.resx">
-      <DependentUpon>frmAsignarUsuariosAEmpresa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Seguridad\frmConsultarImagen.resx">
-      <DependentUpon>frmConsultarImagen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Seguridad\frmConsultarPerfiles.resx">
-      <DependentUpon>frmConsultarPerfiles.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Seguridad\frmCrearPerfil.resx">
-      <DependentUpon>frmCrearPerfil.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Seguridad\frmPrincipalSeguridad.resx">
-      <DependentUpon>frmPrincipalSeguridad.cs</DependentUpon>
+    <EmbeddedResource Include="RecursosHumanos\rptNominaEspecifico.resx">
+      <DependentUpon>rptNominaEspecifico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -2116,8 +2511,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Seguridad\frmAsignacionDeUsuariosAPerfiles.resx">
+      <DependentUpon>frmAsignacionDeUsuariosAPerfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frmAsignarPantallaAPerfil.resx">
+      <DependentUpon>frmAsignarPantallaAPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\frmAsignarPerfil.resx">
       <DependentUpon>frmAsignarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frmAsignarUsuariosAEmpresa.resx">
+      <DependentUpon>frmAsignarUsuariosAEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\frmCambiarContrasena.resx">
       <DependentUpon>frmCambiarContrasena.cs</DependentUpon>
@@ -2127,6 +2531,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\FrmConsultar.resx">
       <DependentUpon>FrmConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frmConsultarImagen.resx">
+      <DependentUpon>frmConsultarImagen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frmConsultarPerfiles.resx">
+      <DependentUpon>frmConsultarPerfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frmConsultarUsuario.resx">
+      <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frmCrearPerfil.resx">
+      <DependentUpon>frmCrearPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\frmCrearUsuario.resx">
       <DependentUpon>frmCrearUsuario.cs</DependentUpon>
@@ -2140,6 +2556,9 @@
     <EmbeddedResource Include="Seguridad\frmMonitoreoUsuarios.resx">
       <DependentUpon>frmMonitoreoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frmPrincipalSeguridad.resx">
+      <DependentUpon>frmPrincipalSeguridad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\frmRptAccesoxUsuario.resx">
       <DependentUpon>frmRptAccesoxUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -2151,6 +2570,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\frmRptPrivilegiosxUsuario.resx">
       <DependentUpon>frmRptPrivilegiosxUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\ReporteHistorialUsuario.resx">
+      <DependentUpon>ReporteHistorialUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\ReporteHistorialUsuarioEspecif.resx">
+      <DependentUpon>ReporteHistorialUsuarioEspecif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\rptPxU.resx">
+      <DependentUpon>rptPxU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Taller\frmArticulosTaller.resx">
       <DependentUpon>frmArticulosTaller.cs</DependentUpon>
@@ -2164,17 +2592,32 @@
     <EmbeddedResource Include="Taller\frmConsultarCliente.resx">
       <DependentUpon>frmConsultarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Taller\frmConsultarClienteVehiculo.resx">
+      <DependentUpon>frmConsultarClienteVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taller\frmConsultarLiquidacion.resx">
+      <DependentUpon>frmConsultarLiquidacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taller\frmConsultarManoObra.resx">
+      <DependentUpon>frmConsultarManoObra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taller\frmConsultarOrdenTrabajo.resx">
+      <DependentUpon>frmConsultarOrdenTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taller\frmConsultarPresupuesto.resx">
+      <DependentUpon>frmConsultarPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taller\frmConsultarRepuesto.resx">
+      <DependentUpon>frmConsultarRepuesto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Taller\frmConsultarTipoTrabajo.resx">
       <DependentUpon>frmConsultarTipoTrabajo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Taller\frmEmpleadoTaller.resx">
-      <DependentUpon>frmEmpleadoTaller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Taller\frmLiquidacion.resx">
       <DependentUpon>frmLiquidacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Taller\frmManodeObra.resx">
-      <DependentUpon>frmManodeObra.cs</DependentUpon>
+    <EmbeddedResource Include="Taller\frmManoObra.resx">
+      <DependentUpon>frmManoObra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Taller\frmOrdendeTrabajo.resx">
       <DependentUpon>frmOrdendeTrabajo.cs</DependentUpon>
@@ -2194,8 +2637,11 @@
     <EmbeddedResource Include="Taller\frmTiposTrabajos.resx">
       <DependentUpon>frmTiposTrabajos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Taller\frmVehiculoTaller.resx">
-      <DependentUpon>frmVehiculoTaller.cs</DependentUpon>
+    <EmbeddedResource Include="Taller\rptHistorialReparaciones.resx">
+      <DependentUpon>rptHistorialReparaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taller\rptOrdenesTrabajos.resx">
+      <DependentUpon>rptOrdenesTrabajos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="_Otro\IGUMetroControl.resx">
       <DependentUpon>IGUMetroControl.cs</DependentUpon>
@@ -2207,6 +2653,7 @@
       <SubType>
       </SubType>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Contabilidad\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -2218,13 +2665,24 @@
     <None Include="Contabilidad\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
+    <None Include="CuentasxCobrar\DataSetCuentasPorCobrar.xsc">
+      <DependentUpon>DataSetCuentasPorCobrar.xsd</DependentUpon>
+    </None>
+    <None Include="CuentasxCobrar\DataSetCuentasPorCobrar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCuentasPorCobrar.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CuentasxCobrar\DataSetCuentasPorCobrar.xss">
+      <DependentUpon>DataSetCuentasPorCobrar.xsd</DependentUpon>
+    </None>
     <None Include="Facturacion\ReportesFacturacion.xsc">
       <DependentUpon>ReportesFacturacion.xsd</DependentUpon>
     </None>
     <None Include="Facturacion\ReportesFacturacion.xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ReportesFacturacion3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </None>
     <None Include="Facturacion\ReportesFacturacion.xss">
       <DependentUpon>ReportesFacturacion.xsd</DependentUpon>
@@ -2234,7 +2692,10 @@
     <None Include="Properties\DataSources\clases.Seguridad.clsEstado.datasource" />
     <None Include="Properties\DataSources\clases.Seguridad.clsModulo.datasource" />
     <None Include="Properties\DataSources\clases.Seguridad.clsPerfil.datasource" />
+    <None Include="Properties\DataSources\clases.Seguridad.clsRptAccesoUsuarios.datasource" />
     <None Include="Properties\DataSources\clases.Seguridad.clsUsuario.datasource" />
+    <None Include="Properties\DataSources\clases.Seguridad.clsVwIniciosDeSesion.datasource" />
+    <None Include="Properties\DataSources\clases.Seguridad.clsVwUsuarioInformacion.datasource" />
     <None Include="Properties\DataSources\Core.Erp.Info.Seguridad.tb_Menu_Info.datasource" />
     <None Include="Properties\DataSources\datos.Seguridad.datUsuario.datasource" />
     <None Include="Properties\DataSources\datos.Seguridad.Perfil.datasource" />
@@ -2249,7 +2710,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\clases\clases.csproj">
       <Project>{6F21733E-0C7C-425E-8690-455EE38E7369}</Project>
@@ -2349,7 +2809,6 @@
     <None Include="Resources\_24-book-blue.png" />
     <None Include="Resources\salir.gif" />
     <None Include="Resources\llanta_qind_27_8_12.ico" />
-    <Content Include="ActivoFijo\Resources\Codigo-de-barras.jpg" />
     <None Include="Resources\16-horario.png" />
     <None Include="Resources\16-perfiles.png" />
     <None Include="Resources\16-permisos.png" />
@@ -2413,6 +2872,12 @@
     <None Include="Resources\facturacion.png" />
     <None Include="Resources\fondoLISTO.png" />
     <None Include="Resources\fondoListo1600x1200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ActivoFijo\Resources\Codigo-de-barras.jpg" />
+    <None Include="Resources\sonyps.jpg" />
+    <None Include="Resources\0029_start_help.ico" />
+    <None Include="Resources\Traffic Cone.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

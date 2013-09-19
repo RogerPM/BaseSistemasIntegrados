@@ -5,11 +5,13 @@ using System.Text;
 using datos.Cuentasxpagar;
 using clases.Seguridad;
 using clases.Cuentasxpagar;
+using clases.Compras;
 
 namespace datos.Cuentasxpagar
 {
     public class datosOrdenPagoCab
     {
+        datosOrdenPagoDet datOrPag = new datosOrdenPagoDet();
         int identificador;
 
         public List<clsOrdenPagoDet> ConsultaOrdenPagoDet()
@@ -57,7 +59,7 @@ namespace datos.Cuentasxpagar
                     clase.IdPersona = Convert.ToInt32(item.IdPersona);
                     clase.Estado = item.Estado;
                     clase.TotalPagar = item.TotalPagar;
-                    clase.TipoOrdenPago = item.TipoOrdenPago;
+                    clase.TipoOrdenPago = Convert.ToChar(item.TipoOrdenPago);
                     clase.IdUsuario = item.IdUsuario;
                     clase.IdEmpresa = item.IdEmpresa;
                     lista.Add(clase);
@@ -83,7 +85,7 @@ namespace datos.Cuentasxpagar
                 x.IdPersona = OrdPagoCab.IdPersona;
                 x.Estado = OrdPagoCab.Estado;
                 x.TotalPagar = OrdPagoCab.TotalPagar;
-                x.TipoOrdenPago = OrdPagoCab.TipoOrdenPago;
+                x.TipoOrdenPago = Convert.ToString(OrdPagoCab.TipoOrdenPago);
                 x.IdUsuario = OrdPagoCab.IdUsuario;
                 x.IdEmpresa = OrdPagoCab.IdEmpresa;
                 ent.SaveChanges();
@@ -104,12 +106,14 @@ namespace datos.Cuentasxpagar
                         IdPersona = OrdPagoCab.IdPersona,
                         Estado = OrdPagoCab.Estado,
                         TotalPagar = OrdPagoCab.TotalPagar,
-                        TipoOrdenPago = OrdPagoCab.TipoOrdenPago,
+                        TipoOrdenPago = Convert.ToString(OrdPagoCab.TipoOrdenPago),
                         IdUsuario = OrdPagoCab.IdUsuario,
                         IdEmpresa = OrdPagoCab.IdEmpresa,
                     };
                     ent.AddToOrdenPagoCab(otro);
                     ent.SaveChanges();
+
+                    datOrPag.GuardarDetOrdenPago(OrdPagoCab._CuentaPorPagarDetalle);
                 }
                 return true;
             }
@@ -177,6 +181,27 @@ namespace datos.Cuentasxpagar
             {
                 return 0;
 
+            }
+        }
+
+
+
+
+
+        public void ProveeComp(clsProveedor Provee)
+        {
+            using (CuentasPorPagarEntities enti = new CuentasPorPagarEntities())
+            {
+                var con = from t in enti.Proveedor select t;
+                foreach (var item in con)
+                {
+                    clsProveedor e = new clsProveedor();
+                    e.idProveedor = Convert.ToInt32(item.IdProveedor);
+                    e.idEmpresa = Convert.ToInt32(item.IdEmpresa);
+                    e.idPersona = Convert.ToInt32(item.IdPersona);
+                    e.idArticulo = Convert.ToInt32(item.IdTipoArticulo);
+                    e.idEstado = Convert.ToInt32(item.Estado);
+                }
             }
         }
     }

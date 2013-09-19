@@ -70,9 +70,11 @@ namespace datos.Cuentasxpagar
                         Direccion = EmpresaServiciocls._Direccion,
                         Email = EmpresaServiciocls._Email,
                         Webpage = EmpresaServiciocls._Website,
+                        IdEmpresa = 1,
+                        IdUsuario = 11,
                     };
                     ent.AddToEmpresaServicio(EmpSer);
-                    //ent.SaveChanges();
+                    ent.SaveChanges();
 
 
                     aux = EmpresaServiciocls._DetalleTelefono.Count();
@@ -86,7 +88,7 @@ namespace datos.Cuentasxpagar
                             Numero = EmpresaServiciocls._DetalleTelefono[i].getNumTelefono(),
                         };
                         ent.AddToTelefono(Tel);
-                        //ent.SaveChanges();
+                        ent.SaveChanges();
 
 
                         TelEmpServ = new TelefonoEmpresaServicio()
@@ -96,7 +98,7 @@ namespace datos.Cuentasxpagar
                             IdTelefono = valTel,
                         };
                         ent.AddToTelefonoEmpresaServicio(TelEmpServ);
-                        //ent.SaveChanges();
+                        ent.SaveChanges();
                     }
                     //=============================================================================
                     aux = EmpresaServiciocls._CuentaBancaria.Count();
@@ -112,9 +114,8 @@ namespace datos.Cuentasxpagar
                             NroCta = EmpresaServiciocls._CuentaBancaria[i].getNroCuenta(),
                         };
                         ent.AddToCuentaBancaria2(CtaBanc);
-                        //ent.SaveChanges();
+                        ent.SaveChanges();
                     }
-                    ent.SaveChanges();
                 }
 
                 return true;
@@ -167,7 +168,7 @@ namespace datos.Cuentasxpagar
             try
             {
                 List<clsEmpresaServicio> EmpresaServicio = new List<clsEmpresaServicio>();
-                List<clsDetalleTelefono> DetalleTelefono = new List<clsDetalleTelefono>();
+                List<clsDetalleTelefonoCXP> DetalleTelefono = new List<clsDetalleTelefonoCXP>();
                 List<clsCtaBancaria2> CuentaBancaria = new List<clsCtaBancaria2>();
                 CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
                 var lst = from q in ent.EmpresaServicio select q;
@@ -187,7 +188,7 @@ namespace datos.Cuentasxpagar
                     cls._Website = item.Webpage;
                     foreach (var item2 in lst2)
                     {
-                        clsDetalleTelefono det = new clsDetalleTelefono();
+                        clsDetalleTelefonoCXP det = new clsDetalleTelefonoCXP();
                         det._TipoTelefono = item2.IdTipoTelefono;
                         det._numTelefono = item2.Numero;
                         DetalleTelefono.Add(det);

@@ -10,10 +10,10 @@ namespace clases.RecursosHumanos
         public int NumLinea { get; set; }
         public int NumNomina { get; set; }
         public int IdPersona { get; set; }
-        public Int64 Identificacion { get; set; }
+        public Int64  Identificacion { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public int HorasTrabajadas { get; set; }
+        public int HorasTrabajadas{ get; set; }
         public int HorasExtrasM { get; set; }
         public int HorasExtrasT { get; set; }
         public int HorasRango { get; set; }
@@ -27,27 +27,27 @@ namespace clases.RecursosHumanos
         public Decimal ValorHorasExtras { get; set; }
         public Decimal SueldoNominal { get; set; }
         public Decimal TotalIngresos { get; set; }
-        public Decimal SueldGanado { get; set; }
+       public Decimal SueldGanado { get; set; }
         public int DiasTrabajados { get; set; }
-        public Decimal Iess { get; set; }
+        public Decimal  Iess { get; set; }
         public int IdRubro { get; set; }
         //public float PorcentajeIess { get; set; }
         public int IdPrestamo { get; set; }
         public Decimal PrestamoPago { get; set; }
         public int IdAnticipo { get; set; }
-        public Decimal Anticipo { get; set; }
+        public Decimal Anticipo  { get; set; }
         public Decimal TotalDescuento { get; set; }
-        public Decimal ValorLiquido { get; set; }
+        public Decimal ValorLiquido { get; set; }        
         public int IdEmpresa { get; set; }
 
 
-        int HorasLaborables = 240;
+        int HorasLaborables=240;
         Decimal suelxHora;
         Decimal valor;
-        Double PorcentajeIess = 9.35;
+        Double    PorcentajeIess = 9.35;
         Decimal Suelgan;
 
-
+       
         /*public void FechaNomina()
         {
 
@@ -58,61 +58,61 @@ namespace clases.RecursosHumanos
             }
             else
             {*/
-        /*FechaUltimaNomina = FechaContrato;
-       // }
+            /*FechaUltimaNomina = FechaContrato;
+           // }
 
-    }*/
+        }*/
 
 
 
-        public Decimal TotalHorasExtras(int sumT, int sumM)
+        public Decimal TotalHorasExtras(int sumT, int sumM )
         {
-            TotHorasExtras = Convert.ToDecimal((sumM * 1.5) + (sumT * 2));
+            TotHorasExtras =Convert .ToDecimal  ((sumM  * 1.5) + (sumT  * 2));
             return TotHorasExtras;
         }
 
-        public Decimal ValHorasExtras(Decimal sn, Decimal Tothe)
+        public Decimal  ValHorasExtras(Decimal sn, Decimal  Tothe)
         {
-            ValorHorasExtras = ((sn / HorasLaborables) * Tothe);
+            ValorHorasExtras = ((sn / HorasLaborables) * Tothe );
             return ValorHorasExtras;
         }
 
 
 
-        public Decimal SGanado(Decimal snom, Decimal Tothr)
+        public Decimal SGanado(Decimal snom,Decimal   Tothr)
         {
-            suelxHora = snom / HorasLaborables;
-            Suelgan = (suelxHora * Tothr);
-            return Suelgan;
-
+            suelxHora =snom / HorasLaborables ;
+            Suelgan =( suelxHora *   Tothr );
+            return Suelgan ;
+ 
         }
         public Decimal Ingresos(Decimal sg, Decimal vhe)
         {
-            TotalIngresos = sg + vhe;
-            return TotalIngresos;
+          TotalIngresos = sg + vhe;
+          return TotalIngresos;
 
         }
         public Decimal Seguro(Decimal ing)
         {
-            valor = Convert.ToDecimal(PorcentajeIess / 100);
-            Iess = ing * valor;
+            valor =Convert .ToDecimal  (PorcentajeIess / 100);
+            Iess =  ing *  valor;
             return Iess;
 
         }
-        public Decimal TotDescuento(Decimal iess, Decimal antic, Decimal prespag)
+        public Decimal  TotDescuento(Decimal iess,Decimal antic, Decimal prespag)
         {
-            TotalDescuento = iess + antic + prespag;
+            TotalDescuento = iess  + antic  + prespag ;
             return TotalDescuento;
 
         }
-        public Decimal Liquido(Decimal ing, Decimal des)
+        public Decimal  Liquido(Decimal ing, Decimal des)
         {
-            ValorLiquido = ing - des;
+            ValorLiquido = ing  - des ;
             return ValorLiquido;
 
         }
-
-
+        
+        
         public clsNominaDet()
         {
 

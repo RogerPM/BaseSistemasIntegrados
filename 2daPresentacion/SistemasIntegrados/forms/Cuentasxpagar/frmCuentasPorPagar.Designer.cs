@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCuentasPorPagar));
             this.label3 = new System.Windows.Forms.Label();
             this.grpDetallePagos = new System.Windows.Forms.GroupBox();
+            this.btnCalcularTotales = new DevExpress.XtraEditors.SimpleButton();
             this.btnGenerarPagos = new DevExpress.XtraEditors.SimpleButton();
             this.rdbFormaPago = new DevExpress.XtraEditors.RadioGroup();
             this.gpbDetCredito = new System.Windows.Forms.GroupBox();
@@ -74,8 +75,6 @@
             this.colIdEstado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPorcentaje = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtImpuesto2 = new DevExpress.XtraEditors.TextEdit();
-            this.txtImpuesto1 = new DevExpress.XtraEditors.TextEdit();
             this.txtTotal = new DevExpress.XtraEditors.TextEdit();
             this.txtSubTotal = new DevExpress.XtraEditors.TextEdit();
             this.txtDescuento = new DevExpress.XtraEditors.TextEdit();
@@ -103,7 +102,6 @@
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbConsultar = new System.Windows.Forms.ToolStripButton();
-            this.tsbModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
             this.tsbSalir = new System.Windows.Forms.ToolStripButton();
             this.dtpFechaIngreso = new DevExpress.XtraEditors.DateEdit();
@@ -125,8 +123,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.sluImpuesto2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxImpuesto1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sluImpuesto1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtImpuesto2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtImpuesto1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescuento.Properties)).BeginInit();
@@ -156,6 +152,7 @@
             // 
             // grpDetallePagos
             // 
+            this.grpDetallePagos.Controls.Add(this.btnCalcularTotales);
             this.grpDetallePagos.Controls.Add(this.btnGenerarPagos);
             this.grpDetallePagos.Controls.Add(this.rdbFormaPago);
             this.grpDetallePagos.Controls.Add(this.gpbDetCredito);
@@ -166,10 +163,20 @@
             this.grpDetallePagos.TabStop = false;
             this.grpDetallePagos.Text = "Detalle de Pagos";
             // 
+            // btnCalcularTotales
+            // 
+            this.btnCalcularTotales.Enabled = false;
+            this.btnCalcularTotales.Location = new System.Drawing.Point(789, 53);
+            this.btnCalcularTotales.Name = "btnCalcularTotales";
+            this.btnCalcularTotales.Size = new System.Drawing.Size(107, 23);
+            this.btnCalcularTotales.TabIndex = 6;
+            this.btnCalcularTotales.Text = "Calcular Totales";
+            this.btnCalcularTotales.Click += new System.EventHandler(this.btnCalcularTotales_Click);
+            // 
             // btnGenerarPagos
             // 
             this.btnGenerarPagos.Enabled = false;
-            this.btnGenerarPagos.Location = new System.Drawing.Point(789, 75);
+            this.btnGenerarPagos.Location = new System.Drawing.Point(789, 91);
             this.btnGenerarPagos.Name = "btnGenerarPagos";
             this.btnGenerarPagos.Size = new System.Drawing.Size(107, 23);
             this.btnGenerarPagos.TabIndex = 19;
@@ -223,7 +230,6 @@
             this.txtNroLetras.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtNroLetras.Size = new System.Drawing.Size(28, 20);
             this.txtNroLetras.TabIndex = 2;
-            this.txtNroLetras.EditValueChanged += new System.EventHandler(this.txtNroLetras_EditValueChanged);
             // 
             // label18
             // 
@@ -251,7 +257,6 @@
             this.txtValorEntrada.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtValorEntrada.Size = new System.Drawing.Size(124, 20);
             this.txtValorEntrada.TabIndex = 0;
-            this.txtValorEntrada.EditValueChanged += new System.EventHandler(this.txtValorEntrada_EditValueChanged);
             // 
             // txtDeuda
             // 
@@ -377,9 +382,9 @@
             this.gpbDetValores.Controls.Add(this.label10);
             this.gpbDetValores.Controls.Add(this.label11);
             this.gpbDetValores.Enabled = false;
-            this.gpbDetValores.Location = new System.Drawing.Point(10, 215);
+            this.gpbDetValores.Location = new System.Drawing.Point(9, 225);
             this.gpbDetValores.Name = "gpbDetValores";
-            this.gpbDetValores.Size = new System.Drawing.Size(1002, 140);
+            this.gpbDetValores.Size = new System.Drawing.Size(1002, 122);
             this.gpbDetValores.TabIndex = 29;
             this.gpbDetValores.TabStop = false;
             this.gpbDetValores.Text = "Detalle de Valores";
@@ -388,11 +393,9 @@
             // 
             this.gpbImpuestos.Controls.Add(this.cbxImpuesto2);
             this.gpbImpuestos.Controls.Add(this.cbxImpuesto1);
-            this.gpbImpuestos.Controls.Add(this.txtImpuesto2);
-            this.gpbImpuestos.Controls.Add(this.txtImpuesto1);
-            this.gpbImpuestos.Location = new System.Drawing.Point(347, 13);
+            this.gpbImpuestos.Location = new System.Drawing.Point(401, 19);
             this.gpbImpuestos.Name = "gpbImpuestos";
-            this.gpbImpuestos.Size = new System.Drawing.Size(369, 121);
+            this.gpbImpuestos.Size = new System.Drawing.Size(245, 97);
             this.gpbImpuestos.TabIndex = 5;
             this.gpbImpuestos.TabStop = false;
             this.gpbImpuestos.Text = "Impuestos";
@@ -401,7 +404,7 @@
             // 
             this.cbxImpuesto2.EditValue = "";
             this.cbxImpuesto2.Enabled = false;
-            this.cbxImpuesto2.Location = new System.Drawing.Point(16, 64);
+            this.cbxImpuesto2.Location = new System.Drawing.Point(46, 64);
             this.cbxImpuesto2.Name = "cbxImpuesto2";
             this.cbxImpuesto2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -411,7 +414,6 @@
             this.cbxImpuesto2.Properties.View = this.sluImpuesto2;
             this.cbxImpuesto2.Size = new System.Drawing.Size(145, 20);
             this.cbxImpuesto2.TabIndex = 0;
-            this.cbxImpuesto2.EditValueChanged += new System.EventHandler(this.cbxImpuesto2_EditValueChanged);
             // 
             // clsImpuestosBindingSource
             // 
@@ -486,7 +488,7 @@
             // 
             this.cbxImpuesto1.EditValue = "";
             this.cbxImpuesto1.Enabled = false;
-            this.cbxImpuesto1.Location = new System.Drawing.Point(16, 30);
+            this.cbxImpuesto1.Location = new System.Drawing.Point(46, 30);
             this.cbxImpuesto1.Name = "cbxImpuesto1";
             this.cbxImpuesto1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -496,7 +498,6 @@
             this.cbxImpuesto1.Properties.View = this.sluImpuesto1;
             this.cbxImpuesto1.Size = new System.Drawing.Size(145, 20);
             this.cbxImpuesto1.TabIndex = 0;
-            this.cbxImpuesto1.EditValueChanged += new System.EventHandler(this.cbxImpuesto1_EditValueChanged);
             // 
             // sluImpuesto1
             // 
@@ -563,33 +564,11 @@
             this.colPorcentaje.Visible = true;
             this.colPorcentaje.VisibleIndex = 2;
             // 
-            // txtImpuesto2
-            // 
-            this.txtImpuesto2.Enabled = false;
-            this.txtImpuesto2.Location = new System.Drawing.Point(255, 65);
-            this.txtImpuesto2.Name = "txtImpuesto2";
-            this.txtImpuesto2.Properties.Mask.EditMask = "#############.##";
-            this.txtImpuesto2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtImpuesto2.Size = new System.Drawing.Size(108, 20);
-            this.txtImpuesto2.TabIndex = 0;
-            this.txtImpuesto2.EditValueChanged += new System.EventHandler(this.txtImpuesto2_EditValueChanged);
-            // 
-            // txtImpuesto1
-            // 
-            this.txtImpuesto1.Enabled = false;
-            this.txtImpuesto1.Location = new System.Drawing.Point(255, 30);
-            this.txtImpuesto1.Name = "txtImpuesto1";
-            this.txtImpuesto1.Properties.Mask.EditMask = "#############.##";
-            this.txtImpuesto1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtImpuesto1.Size = new System.Drawing.Size(108, 20);
-            this.txtImpuesto1.TabIndex = 0;
-            this.txtImpuesto1.EditValueChanged += new System.EventHandler(this.txtImpuesto1_EditValueChanged);
-            // 
             // txtTotal
             // 
             this.txtTotal.EditValue = "";
             this.txtTotal.Enabled = false;
-            this.txtTotal.Location = new System.Drawing.Point(883, 77);
+            this.txtTotal.Location = new System.Drawing.Point(861, 55);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtTotal.Properties.Appearance.Options.UseFont = true;
@@ -621,7 +600,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(803, 81);
+            this.label12.Location = new System.Drawing.Point(781, 59);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(34, 13);
             this.label12.TabIndex = 0;
@@ -821,7 +800,6 @@
             this.tsbNuevo,
             this.tsbGuardar,
             this.tsbConsultar,
-            this.tsbModificar,
             this.tsbAnular,
             this.tsbSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -843,6 +821,7 @@
             // 
             // tsbGuardar
             // 
+            this.tsbGuardar.Enabled = false;
             this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tsbGuardar.ForeColor = System.Drawing.Color.Black;
             this.tsbGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsbGuardar.Image")));
@@ -863,15 +842,6 @@
             this.tsbConsultar.Text = "Consultar";
             this.tsbConsultar.Click += new System.EventHandler(this.tsbConsultar_Click);
             // 
-            // tsbModificar
-            // 
-            this.tsbModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificar.Image")));
-            this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbModificar.Name = "tsbModificar";
-            this.tsbModificar.Size = new System.Drawing.Size(62, 22);
-            this.tsbModificar.Text = "Modificar";
-            this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
-            // 
             // tsbAnular
             // 
             this.tsbAnular.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -881,14 +851,13 @@
             this.tsbAnular.Name = "tsbAnular";
             this.tsbAnular.Size = new System.Drawing.Size(62, 22);
             this.tsbAnular.Text = "Anular";
-            this.tsbAnular.Click += new System.EventHandler(this.tsbAnular_Click);
             // 
             // tsbSalir
             // 
             this.tsbSalir.Image = ((System.Drawing.Image)(resources.GetObject("tsbSalir.Image")));
             this.tsbSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbSalir.Name = "tsbSalir";
-            this.tsbSalir.Size = new System.Drawing.Size(42, 22);
+            this.tsbSalir.Size = new System.Drawing.Size(49, 22);
             this.tsbSalir.Text = "Salir";
             this.tsbSalir.Click += new System.EventHandler(this.tsbSalir_Click);
             // 
@@ -946,8 +915,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.sluImpuesto2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxImpuesto1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sluImpuesto1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtImpuesto2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtImpuesto1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescuento.Properties)).EndInit();
@@ -1015,7 +982,6 @@
         private System.Windows.Forms.ToolStripButton tsbAnular;
         private DevExpress.XtraEditors.MemoEdit txtDetalle;
         private DevExpress.XtraEditors.RadioGroup rdbFormaPago;
-        private System.Windows.Forms.ToolStripButton tsbModificar;
         private System.Windows.Forms.ToolStripButton tsbSalir;
         private System.Windows.Forms.GroupBox gpbImpuestos;
         private DevExpress.XtraEditors.DateEdit dtpFechaTransaccion;
@@ -1027,8 +993,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView sluImpuesto2;
         private DevExpress.XtraEditors.SearchLookUpEdit cbxImpuesto1;
         private DevExpress.XtraGrid.Views.Grid.GridView sluImpuesto1;
-        private DevExpress.XtraEditors.TextEdit txtImpuesto2;
-        private DevExpress.XtraEditors.TextEdit txtImpuesto1;
         private System.Windows.Forms.BindingSource clsFrecuenciaBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn col_IdFrecuenciaPago;
         private DevExpress.XtraGrid.Columns.GridColumn col_Descripcion;
@@ -1050,5 +1014,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colIdEstado;
         private DevExpress.XtraGrid.Columns.GridColumn colIdUsuario;
         private DevExpress.XtraGrid.Columns.GridColumn colPorcentaje;
+        private DevExpress.XtraEditors.SimpleButton btnCalcularTotales;
     }
 }

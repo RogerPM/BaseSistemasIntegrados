@@ -33,8 +33,8 @@
             this.btnCargar = new System.Windows.Forms.ToolStripButton();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
             this.dtgOrdenCab = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clsOrdenCompraCabeceraVistaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DatosOrdenCab = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colNumero = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colidProveedor = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colProveedor = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,10 +45,24 @@
             this.colUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colidEstado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEstado = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dtgOrdenDet = new DevExpress.XtraGrid.GridControl();
+            this.clsOrdenCompraDetalleVistaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DatosOrdenDet = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colNumero1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.collinea = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_articulo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colArticulo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCantidad = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPrecio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colId_empresa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmpresa1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgOrdenCab)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsOrdenCompraCabeceraVistaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosOrdenCab)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgOrdenDet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsOrdenCompraDetalleVistaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosOrdenDet)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -70,6 +84,7 @@
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(62, 22);
             this.btnCargar.Text = "Cargar";
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnSalir
             // 
@@ -78,21 +93,27 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(49, 22);
             this.btnSalir.Text = "Salir";
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // dtgOrdenCab
             // 
             this.dtgOrdenCab.DataSource = this.clsOrdenCompraCabeceraVistaBindingSource;
             this.dtgOrdenCab.Location = new System.Drawing.Point(0, 28);
-            this.dtgOrdenCab.MainView = this.gridView1;
+            this.dtgOrdenCab.MainView = this.DatosOrdenCab;
             this.dtgOrdenCab.Name = "dtgOrdenCab";
-            this.dtgOrdenCab.Size = new System.Drawing.Size(589, 215);
+            this.dtgOrdenCab.Size = new System.Drawing.Size(589, 134);
             this.dtgOrdenCab.TabIndex = 37;
             this.dtgOrdenCab.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.DatosOrdenCab});
+            this.dtgOrdenCab.Click += new System.EventHandler(this.dtgOrdenCab_Click);
             // 
-            // gridView1
+            // clsOrdenCompraCabeceraVistaBindingSource
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.clsOrdenCompraCabeceraVistaBindingSource.DataSource = typeof(clases.Compras.clsOrdenCompraCabecera_Vista);
+            // 
+            // DatosOrdenCab
+            // 
+            this.DatosOrdenCab.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colNumero,
             this.colidProveedor,
             this.colProveedor,
@@ -103,12 +124,8 @@
             this.colUsuario,
             this.colidEstado,
             this.colEstado});
-            this.gridView1.GridControl = this.dtgOrdenCab;
-            this.gridView1.Name = "gridView1";
-            // 
-            // clsOrdenCompraCabeceraVistaBindingSource
-            // 
-            this.clsOrdenCompraCabeceraVistaBindingSource.DataSource = typeof(clases.Compras.clsOrdenCompraCabecera_Vista);
+            this.DatosOrdenCab.GridControl = this.dtgOrdenCab;
+            this.DatosOrdenCab.Name = "DatosOrdenCab";
             // 
             // colNumero
             // 
@@ -121,70 +138,142 @@
             // 
             this.colidProveedor.FieldName = "idProveedor";
             this.colidProveedor.Name = "colidProveedor";
-            this.colidProveedor.Visible = true;
-            this.colidProveedor.VisibleIndex = 1;
             // 
             // colProveedor
             // 
             this.colProveedor.FieldName = "Proveedor";
             this.colProveedor.Name = "colProveedor";
             this.colProveedor.Visible = true;
-            this.colProveedor.VisibleIndex = 2;
+            this.colProveedor.VisibleIndex = 1;
             // 
             // colFecha
             // 
             this.colFecha.FieldName = "Fecha";
             this.colFecha.Name = "colFecha";
             this.colFecha.Visible = true;
-            this.colFecha.VisibleIndex = 3;
+            this.colFecha.VisibleIndex = 2;
             // 
             // colidEmpresa
             // 
             this.colidEmpresa.FieldName = "idEmpresa";
             this.colidEmpresa.Name = "colidEmpresa";
-            this.colidEmpresa.Visible = true;
-            this.colidEmpresa.VisibleIndex = 4;
             // 
             // colEmpresa
             // 
             this.colEmpresa.FieldName = "Empresa";
             this.colEmpresa.Name = "colEmpresa";
             this.colEmpresa.Visible = true;
-            this.colEmpresa.VisibleIndex = 5;
+            this.colEmpresa.VisibleIndex = 3;
             // 
             // colidUsuario
             // 
             this.colidUsuario.FieldName = "idUsuario";
             this.colidUsuario.Name = "colidUsuario";
-            this.colidUsuario.Visible = true;
-            this.colidUsuario.VisibleIndex = 6;
             // 
             // colUsuario
             // 
             this.colUsuario.FieldName = "Usuario";
             this.colUsuario.Name = "colUsuario";
             this.colUsuario.Visible = true;
-            this.colUsuario.VisibleIndex = 7;
+            this.colUsuario.VisibleIndex = 4;
             // 
             // colidEstado
             // 
             this.colidEstado.FieldName = "idEstado";
             this.colidEstado.Name = "colidEstado";
-            this.colidEstado.Visible = true;
-            this.colidEstado.VisibleIndex = 8;
             // 
             // colEstado
             // 
             this.colEstado.FieldName = "Estado";
             this.colEstado.Name = "colEstado";
             this.colEstado.Visible = true;
-            this.colEstado.VisibleIndex = 9;
+            this.colEstado.VisibleIndex = 5;
+            // 
+            // dtgOrdenDet
+            // 
+            this.dtgOrdenDet.DataSource = this.clsOrdenCompraDetalleVistaBindingSource;
+            this.dtgOrdenDet.Location = new System.Drawing.Point(0, 168);
+            this.dtgOrdenDet.MainView = this.DatosOrdenDet;
+            this.dtgOrdenDet.Name = "dtgOrdenDet";
+            this.dtgOrdenDet.Size = new System.Drawing.Size(589, 153);
+            this.dtgOrdenDet.TabIndex = 38;
+            this.dtgOrdenDet.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.DatosOrdenDet});
+            // 
+            // clsOrdenCompraDetalleVistaBindingSource
+            // 
+            this.clsOrdenCompraDetalleVistaBindingSource.DataSource = typeof(clases.Compras.clsOrdenCompraDetalle_Vista);
+            // 
+            // DatosOrdenDet
+            // 
+            this.DatosOrdenDet.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colNumero1,
+            this.collinea,
+            this.colid_articulo,
+            this.colArticulo,
+            this.colCantidad,
+            this.colPrecio,
+            this.colId_empresa,
+            this.colEmpresa1});
+            this.DatosOrdenDet.GridControl = this.dtgOrdenDet;
+            this.DatosOrdenDet.Name = "DatosOrdenDet";
+            // 
+            // colNumero1
+            // 
+            this.colNumero1.FieldName = "Numero";
+            this.colNumero1.Name = "colNumero1";
+            // 
+            // collinea
+            // 
+            this.collinea.FieldName = "linea";
+            this.collinea.Name = "collinea";
+            this.collinea.Visible = true;
+            this.collinea.VisibleIndex = 0;
+            // 
+            // colid_articulo
+            // 
+            this.colid_articulo.FieldName = "id_articulo";
+            this.colid_articulo.Name = "colid_articulo";
+            // 
+            // colArticulo
+            // 
+            this.colArticulo.FieldName = "Articulo";
+            this.colArticulo.Name = "colArticulo";
+            this.colArticulo.Visible = true;
+            this.colArticulo.VisibleIndex = 1;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.FieldName = "Cantidad";
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.Visible = true;
+            this.colCantidad.VisibleIndex = 2;
+            // 
+            // colPrecio
+            // 
+            this.colPrecio.FieldName = "Precio";
+            this.colPrecio.Name = "colPrecio";
+            this.colPrecio.Visible = true;
+            this.colPrecio.VisibleIndex = 3;
+            // 
+            // colId_empresa
+            // 
+            this.colId_empresa.FieldName = "Id_empresa";
+            this.colId_empresa.Name = "colId_empresa";
+            // 
+            // colEmpresa1
+            // 
+            this.colEmpresa1.FieldName = "Empresa";
+            this.colEmpresa1.Name = "colEmpresa1";
+            this.colEmpresa1.Visible = true;
+            this.colEmpresa1.VisibleIndex = 4;
             // 
             // frmConsultaOrden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(589, 323);
+            this.Controls.Add(this.dtgOrdenDet);
             this.Controls.Add(this.dtgOrdenCab);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmConsultaOrden";
@@ -193,8 +282,11 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgOrdenCab)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsOrdenCompraCabeceraVistaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosOrdenCab)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgOrdenDet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsOrdenCompraDetalleVistaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosOrdenDet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,7 +298,7 @@
         private System.Windows.Forms.ToolStripButton btnCargar;
         private System.Windows.Forms.ToolStripButton btnSalir;
         private DevExpress.XtraGrid.GridControl dtgOrdenCab;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView DatosOrdenCab;
         private System.Windows.Forms.BindingSource clsOrdenCompraCabeceraVistaBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colNumero;
         private DevExpress.XtraGrid.Columns.GridColumn colidProveedor;
@@ -218,5 +310,16 @@
         private DevExpress.XtraGrid.Columns.GridColumn colUsuario;
         private DevExpress.XtraGrid.Columns.GridColumn colidEstado;
         private DevExpress.XtraGrid.Columns.GridColumn colEstado;
+        private DevExpress.XtraGrid.GridControl dtgOrdenDet;
+        private System.Windows.Forms.BindingSource clsOrdenCompraDetalleVistaBindingSource;
+        private DevExpress.XtraGrid.Views.Grid.GridView DatosOrdenDet;
+        private DevExpress.XtraGrid.Columns.GridColumn colNumero1;
+        private DevExpress.XtraGrid.Columns.GridColumn collinea;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_articulo;
+        private DevExpress.XtraGrid.Columns.GridColumn colArticulo;
+        private DevExpress.XtraGrid.Columns.GridColumn colCantidad;
+        private DevExpress.XtraGrid.Columns.GridColumn colPrecio;
+        private DevExpress.XtraGrid.Columns.GridColumn colId_empresa;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmpresa1;
     }
 }

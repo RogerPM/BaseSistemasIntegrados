@@ -7,26 +7,23 @@ namespace forms.Cuentasxpagar
 {
     public partial class frmConsultaFrecuenciaPago : Form
     {
-        public clsFrecuenciaPago fp = new clsFrecuenciaPago();
+        public clsFrecuencia fp = new clsFrecuencia();
         public frmConsultaFrecuenciaPago()
         {
             InitializeComponent();
          
         }
-        //imprimir  Me.GridControl1.ShowPrintPreview()
 
         private void frmConsultaFrecuenciaPago_Load(object sender, EventArgs e)
         {
             cargar();
         }
+
         public void cargar()
         {
             datosFrecuenciaPago frepagos = new datosFrecuenciaPago();
 
             gcdFrecuenciaPago.DataSource = frepagos.consulta();
-
-
-
 
         }
 
@@ -36,24 +33,16 @@ namespace forms.Cuentasxpagar
             this.Close();
 
         }
+
         public void getSeleccion()
         {
-            fp.IdFrecuenciaPago = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdFrecuenciaPago));
-            fp.Descripcion = Convert.ToString(gridView1.GetFocusedRowCellValue(colDescripcion));
-            fp.Estado = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdEstado));
-            fp.IdEmpresa=Convert.ToInt32 (gridView1.GetFocusedRowCellValue(colIdEmpresa));
-            fp.IdUsuario=Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdUsuario));
-            fp.FechaActual=Convert.ToDateTime(gridView1.GetFocusedRowCellValue(colFechaActual));
+            fp._IdFrecuenciaPago = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdFrecuenciaPago));
+            fp._Descripcion = Convert.ToString(gridView1.GetFocusedRowCellValue(colDescripcion));
+            fp._Estado = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdEstado));
+            fp._IdEmpresa=Convert.ToInt32 (gridView1.GetFocusedRowCellValue(colIdEmpresa));
+            fp._IdUsuario=Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdUsuario));
+            fp._FechaActual=Convert.ToDateTime(gridView1.GetFocusedRowCellValue(colFechaActual));
            
         }
-
-        private void gcdFrecuenciaPago_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
-      
-       
     }
 }

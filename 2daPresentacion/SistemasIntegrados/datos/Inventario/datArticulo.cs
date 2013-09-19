@@ -317,7 +317,7 @@ namespace datos.Inventario
                     Articulo art = new Articulo();
                     
                         art.IdEmpresa = artic.EmpresaArt;
-                        art.IdArticulo = artic.IdArt;
+                        art.IdArticulo = Convert.ToInt32(artic.IdArt);
                         art.Descripcion = artic.DescArt;
                         art.FechaProduccion = artic.FProduccion;
                         art.CantidadMinima = artic.CantMinima;

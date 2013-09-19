@@ -29,20 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPConsultaTrabajo));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbConsultado = new System.Windows.Forms.ToolStripButton();
             this.gcTrabajoDiario = new DevExpress.XtraGrid.GridControl();
-            this.clsTrabajoDiarioCabBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvTrabajoDiario = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.clsTrabajoDiarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colNumTrabajo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFecha = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFechaDesde = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFechaHasta = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdEstado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdEmpresa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colObservacion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdPersona = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdentificacion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colApellido = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNombre = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHoraInicio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHoraSalida = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHoraEntrada1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHoraSalida2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHoraTrabajada = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHoraExtraM = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHoraExtraT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHoraRango = new DevExpress.XtraGrid.Columns.GridColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcTrabajoDiario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsTrabajoDiarioCabBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTrabajoDiario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTrabajoDiarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -60,7 +74,7 @@
             // 
             this.tsbConsultado.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tsbConsultado.ForeColor = System.Drawing.Color.Black;
-            this.tsbConsultado.Image = global::forms.Properties.Resources._24_aceptar;
+            this.tsbConsultado.Image = ((System.Drawing.Image)(resources.GetObject("tsbConsultado.Image")));
             this.tsbConsultado.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbConsultado.Name = "tsbConsultado";
             this.tsbConsultado.Size = new System.Drawing.Size(88, 22);
@@ -69,8 +83,8 @@
             // 
             // gcTrabajoDiario
             // 
-            this.gcTrabajoDiario.DataSource = this.clsTrabajoDiarioCabBindingSource;
-            this.gcTrabajoDiario.Location = new System.Drawing.Point(12, 48);
+            this.gcTrabajoDiario.DataSource = this.clsTrabajoDiarioBindingSource;
+            this.gcTrabajoDiario.Location = new System.Drawing.Point(0, 46);
             this.gcTrabajoDiario.MainView = this.gvTrabajoDiario;
             this.gcTrabajoDiario.Name = "gcTrabajoDiario";
             this.gcTrabajoDiario.Size = new System.Drawing.Size(617, 246);
@@ -82,26 +96,48 @@
             // 
             this.gvTrabajoDiario.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colNumTrabajo,
-            this.colFecha,
+            this.colFechaDesde,
+            this.colFechaHasta,
             this.colIdEstado,
             this.colIdEmpresa,
-            this.colObservacion});
+            this.colObservacion,
+            this.colIdPersona,
+            this.colIdentificacion,
+            this.colApellido,
+            this.colNombre,
+            this.colHoraInicio,
+            this.colHoraSalida,
+            this.colHoraEntrada1,
+            this.colHoraSalida2,
+            this.colHoraTrabajada,
+            this.colHoraExtraM,
+            this.colHoraExtraT,
+            this.colHoraRango});
             this.gvTrabajoDiario.GridControl = this.gcTrabajoDiario;
             this.gvTrabajoDiario.Name = "gvTrabajoDiario";
+            // 
+            // clsTrabajoDiarioBindingSource
+            // 
+            this.clsTrabajoDiarioBindingSource.DataSource = typeof(clases.RecursosHumanos.clsTrabajoDiario);
             // 
             // colNumTrabajo
             // 
             this.colNumTrabajo.FieldName = "NumTrabajo";
             this.colNumTrabajo.Name = "colNumTrabajo";
-            this.colNumTrabajo.Visible = true;
-            this.colNumTrabajo.VisibleIndex = 0;
             // 
-            // colFecha
+            // colFechaDesde
             // 
-            this.colFecha.FieldName = "Fecha";
-            this.colFecha.Name = "colFecha";
-            this.colFecha.Visible = true;
-            this.colFecha.VisibleIndex = 1;
+            this.colFechaDesde.FieldName = "FechaDesde";
+            this.colFechaDesde.Name = "colFechaDesde";
+            this.colFechaDesde.Visible = true;
+            this.colFechaDesde.VisibleIndex = 3;
+            // 
+            // colFechaHasta
+            // 
+            this.colFechaHasta.FieldName = "FechaHasta";
+            this.colFechaHasta.Name = "colFechaHasta";
+            this.colFechaHasta.Visible = true;
+            this.colFechaHasta.VisibleIndex = 4;
             // 
             // colIdEstado
             // 
@@ -118,7 +154,77 @@
             this.colObservacion.FieldName = "Observacion";
             this.colObservacion.Name = "colObservacion";
             this.colObservacion.Visible = true;
-            this.colObservacion.VisibleIndex = 2;
+            this.colObservacion.VisibleIndex = 7;
+            // 
+            // colIdPersona
+            // 
+            this.colIdPersona.FieldName = "IdPersona";
+            this.colIdPersona.Name = "colIdPersona";
+            // 
+            // colIdentificacion
+            // 
+            this.colIdentificacion.FieldName = "Identificacion";
+            this.colIdentificacion.Name = "colIdentificacion";
+            this.colIdentificacion.Visible = true;
+            this.colIdentificacion.VisibleIndex = 0;
+            // 
+            // colApellido
+            // 
+            this.colApellido.FieldName = "Apellido";
+            this.colApellido.Name = "colApellido";
+            this.colApellido.Visible = true;
+            this.colApellido.VisibleIndex = 2;
+            // 
+            // colNombre
+            // 
+            this.colNombre.FieldName = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.Visible = true;
+            this.colNombre.VisibleIndex = 1;
+            // 
+            // colHoraInicio
+            // 
+            this.colHoraInicio.FieldName = "HoraInicio";
+            this.colHoraInicio.Name = "colHoraInicio";
+            // 
+            // colHoraSalida
+            // 
+            this.colHoraSalida.FieldName = "HoraSalida";
+            this.colHoraSalida.Name = "colHoraSalida";
+            // 
+            // colHoraEntrada1
+            // 
+            this.colHoraEntrada1.FieldName = "HoraEntrada1";
+            this.colHoraEntrada1.Name = "colHoraEntrada1";
+            this.colHoraEntrada1.Visible = true;
+            this.colHoraEntrada1.VisibleIndex = 5;
+            // 
+            // colHoraSalida2
+            // 
+            this.colHoraSalida2.FieldName = "HoraSalida2";
+            this.colHoraSalida2.Name = "colHoraSalida2";
+            this.colHoraSalida2.Visible = true;
+            this.colHoraSalida2.VisibleIndex = 6;
+            // 
+            // colHoraTrabajada
+            // 
+            this.colHoraTrabajada.FieldName = "HoraTrabajada";
+            this.colHoraTrabajada.Name = "colHoraTrabajada";
+            // 
+            // colHoraExtraM
+            // 
+            this.colHoraExtraM.FieldName = "HoraExtraM";
+            this.colHoraExtraM.Name = "colHoraExtraM";
+            // 
+            // colHoraExtraT
+            // 
+            this.colHoraExtraT.FieldName = "HoraExtraT";
+            this.colHoraExtraT.Name = "colHoraExtraT";
+            // 
+            // colHoraRango
+            // 
+            this.colHoraRango.FieldName = "HoraRango";
+            this.colHoraRango.Name = "colHoraRango";
             // 
             // frmPConsultaTrabajo
             // 
@@ -133,8 +239,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcTrabajoDiario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsTrabajoDiarioCabBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTrabajoDiario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTrabajoDiarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,11 +252,24 @@
         private System.Windows.Forms.ToolStripButton tsbConsultado;
         private DevExpress.XtraGrid.GridControl gcTrabajoDiario;
         private DevExpress.XtraGrid.Views.Grid.GridView gvTrabajoDiario;
-        private System.Windows.Forms.BindingSource clsTrabajoDiarioCabBindingSource;
+        private System.Windows.Forms.BindingSource clsTrabajoDiarioBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colNumTrabajo;
-        private DevExpress.XtraGrid.Columns.GridColumn colFecha;
+        private DevExpress.XtraGrid.Columns.GridColumn colFechaDesde;
+        private DevExpress.XtraGrid.Columns.GridColumn colFechaHasta;
         private DevExpress.XtraGrid.Columns.GridColumn colIdEstado;
         private DevExpress.XtraGrid.Columns.GridColumn colIdEmpresa;
         private DevExpress.XtraGrid.Columns.GridColumn colObservacion;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdPersona;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdentificacion;
+        private DevExpress.XtraGrid.Columns.GridColumn colApellido;
+        private DevExpress.XtraGrid.Columns.GridColumn colNombre;
+        private DevExpress.XtraGrid.Columns.GridColumn colHoraInicio;
+        private DevExpress.XtraGrid.Columns.GridColumn colHoraSalida;
+        private DevExpress.XtraGrid.Columns.GridColumn colHoraEntrada1;
+        private DevExpress.XtraGrid.Columns.GridColumn colHoraSalida2;
+        private DevExpress.XtraGrid.Columns.GridColumn colHoraTrabajada;
+        private DevExpress.XtraGrid.Columns.GridColumn colHoraExtraM;
+        private DevExpress.XtraGrid.Columns.GridColumn colHoraExtraT;
+        private DevExpress.XtraGrid.Columns.GridColumn colHoraRango;
     }
 }

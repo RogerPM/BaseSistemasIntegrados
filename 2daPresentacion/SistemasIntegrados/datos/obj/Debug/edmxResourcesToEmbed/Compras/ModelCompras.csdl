@@ -129,6 +129,7 @@
       <End Role="SolicitudDet" EntitySet="SolicitudDet" />
     </AssociationSet>
     <EntitySet Name="CotizacionDetalle_Vista" EntityType="CompraModelo.CotizacionDetalle_Vista" />
+    <EntitySet Name="OrdenCompraDetalleArticulo_Vista" EntityType="CompraModelo.OrdenCompraDetalleArticulo_Vista" />
   </EntityContainer>
   <EntityType Name="SubGrupos">
     <Key>
@@ -997,5 +998,24 @@
     <Property Type="String" Name="TipoArticulo" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Type="Int32" Name="idEmpresa" Nullable="false" />
     <Property Type="String" Name="Empresa" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="OrdenCompraDetalleArticulo_Vista">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="NumeroPedido" />
+      <PropertyRef Name="idArticulo" />
+      <PropertyRef Name="Descripcion" />
+      <PropertyRef Name="Cantidad" />
+    </Key>
+    <Property Type="Int32" Name="Numero" Nullable="false" />
+    <Property Type="Int32" Name="Linea" Nullable="false" />
+    <Property Type="Int32" Name="idEmpresa" Nullable="false" />
+    <Property Type="String" Name="NombreComercial" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NumeroPedido" Nullable="false" />
+    <Property Type="Int32" Name="idArticulo" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Cantidad" Nullable="false" />
   </EntityType>
 </Schema>

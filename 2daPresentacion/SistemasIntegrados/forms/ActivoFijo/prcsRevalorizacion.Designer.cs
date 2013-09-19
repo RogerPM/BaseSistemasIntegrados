@@ -30,12 +30,9 @@ namespace forms.ActivoFijo
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnProcesar = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtValorResidual = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtValorRevalorizado = new DevExpress.XtraEditors.TextEdit();
-            this.lblValorRevalorizado = new DevExpress.XtraEditors.LabelControl();
             this.txtValorAdquisicion = new DevExpress.XtraEditors.TextEdit();
             this.lblEmpresa = new DevExpress.XtraEditors.LabelControl();
             this.dtFecha = new DevExpress.XtraEditors.DateEdit();
@@ -53,8 +50,15 @@ namespace forms.ActivoFijo
             this.txtCodigoActivo = new DevExpress.XtraEditors.TextEdit();
             this.lblCodigoActivo = new DevExpress.XtraEditors.LabelControl();
             this.TxtEmpresa = new DevExpress.XtraEditors.TextEdit();
+            this.txtValorRevalorizado = new DevExpress.XtraEditors.TextEdit();
+            this.lblValorRevalorizado = new DevExpress.XtraEditors.LabelControl();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtProcentaje = new DevExpress.XtraEditors.TextEdit();
+            this.lblPorcentajeRevalorizacion = new DevExpress.XtraEditors.LabelControl();
+            this.btnProcesar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtValorResidual.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValorRevalorizado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtValorAdquisicion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFecha.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFecha.Properties)).BeginInit();
@@ -62,66 +66,49 @@ namespace forms.ActivoFijo
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoActivo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtEmpresa.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValorRevalorizado.Properties)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProcentaje.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnProcesar
-            // 
-            this.btnProcesar.Enabled = false;
-            this.btnProcesar.Image = global::forms.Properties.Resources._24_aceptar;
-            this.btnProcesar.Location = new System.Drawing.Point(368, 123);
-            this.btnProcesar.Name = "btnProcesar";
-            this.btnProcesar.Size = new System.Drawing.Size(36, 23);
-            this.btnProcesar.TabIndex = 294;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(209, 129);
+            this.labelControl3.Location = new System.Drawing.Point(293, 170);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(54, 13);
+            this.labelControl3.Size = new System.Drawing.Size(100, 13);
             this.labelControl3.TabIndex = 293;
-            this.labelControl3.Text = "V.Residual:";
+            this.labelControl3.Text = "V.Residual Aumento:";
             // 
             // txtValorResidual
             // 
             this.txtValorResidual.EditValue = "0";
             this.txtValorResidual.Enabled = false;
-            this.txtValorResidual.Location = new System.Drawing.Point(276, 126);
+            this.txtValorResidual.Location = new System.Drawing.Point(397, 167);
             this.txtValorResidual.Name = "txtValorResidual";
             this.txtValorResidual.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtValorResidual.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtValorResidual.Properties.Appearance.Options.UseBackColor = true;
-            this.txtValorResidual.Size = new System.Drawing.Size(77, 20);
+            this.txtValorResidual.Properties.Appearance.Options.UseForeColor = true;
+            this.txtValorResidual.Size = new System.Drawing.Size(69, 20);
             this.txtValorResidual.TabIndex = 292;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(34, 117);
+            this.labelControl2.Location = new System.Drawing.Point(293, 118);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(67, 13);
             this.labelControl2.TabIndex = 291;
             this.labelControl2.Text = "V.Adquisición:";
             // 
-            // txtValorRevalorizado
-            // 
-            this.txtValorRevalorizado.EditValue = "0";
-            this.txtValorRevalorizado.Enabled = false;
-            this.txtValorRevalorizado.Location = new System.Drawing.Point(118, 140);
-            this.txtValorRevalorizado.Name = "txtValorRevalorizado";
-            this.txtValorRevalorizado.Size = new System.Drawing.Size(69, 20);
-            this.txtValorRevalorizado.TabIndex = 290;
-            // 
-            // lblValorRevalorizado
-            // 
-            this.lblValorRevalorizado.Location = new System.Drawing.Point(33, 143);
-            this.lblValorRevalorizado.Name = "lblValorRevalorizado";
-            this.lblValorRevalorizado.Size = new System.Drawing.Size(76, 13);
-            this.lblValorRevalorizado.TabIndex = 289;
-            this.lblValorRevalorizado.Text = "V.Revalorizado:";
-            // 
             // txtValorAdquisicion
             // 
             this.txtValorAdquisicion.Enabled = false;
-            this.txtValorAdquisicion.Location = new System.Drawing.Point(119, 114);
+            this.txtValorAdquisicion.Location = new System.Drawing.Point(398, 115);
             this.txtValorAdquisicion.Name = "txtValorAdquisicion";
+            this.txtValorAdquisicion.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtValorAdquisicion.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtValorAdquisicion.Properties.Appearance.Options.UseBackColor = true;
+            this.txtValorAdquisicion.Properties.Appearance.Options.UseForeColor = true;
             this.txtValorAdquisicion.Size = new System.Drawing.Size(68, 20);
             this.txtValorAdquisicion.TabIndex = 288;
             // 
@@ -139,6 +126,10 @@ namespace forms.ActivoFijo
             this.dtFecha.Enabled = false;
             this.dtFecha.Location = new System.Drawing.Point(383, 48);
             this.dtFecha.Name = "dtFecha";
+            this.dtFecha.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dtFecha.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.dtFecha.Properties.Appearance.Options.UseBackColor = true;
+            this.dtFecha.Properties.Appearance.Options.UseForeColor = true;
             this.dtFecha.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtFecha.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -162,7 +153,9 @@ namespace forms.ActivoFijo
             this.txtUsuario.Location = new System.Drawing.Point(118, 78);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtUsuario.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtUsuario.Properties.Appearance.Options.UseBackColor = true;
+            this.txtUsuario.Properties.Appearance.Options.UseForeColor = true;
             this.txtUsuario.Size = new System.Drawing.Size(124, 20);
             this.txtUsuario.TabIndex = 281;
             // 
@@ -276,25 +269,113 @@ namespace forms.ActivoFijo
             this.TxtEmpresa.Location = new System.Drawing.Point(383, 82);
             this.TxtEmpresa.Name = "TxtEmpresa";
             this.TxtEmpresa.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.TxtEmpresa.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.TxtEmpresa.Properties.Appearance.Options.UseBackColor = true;
+            this.TxtEmpresa.Properties.Appearance.Options.UseForeColor = true;
             this.TxtEmpresa.Size = new System.Drawing.Size(111, 20);
             this.TxtEmpresa.TabIndex = 314;
+            // 
+            // txtValorRevalorizado
+            // 
+            this.txtValorRevalorizado.EditValue = "0";
+            this.txtValorRevalorizado.Enabled = false;
+            this.txtValorRevalorizado.Location = new System.Drawing.Point(398, 141);
+            this.txtValorRevalorizado.Name = "txtValorRevalorizado";
+            this.txtValorRevalorizado.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtValorRevalorizado.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtValorRevalorizado.Properties.Appearance.Options.UseBackColor = true;
+            this.txtValorRevalorizado.Properties.Appearance.Options.UseForeColor = true;
+            this.txtValorRevalorizado.Size = new System.Drawing.Size(69, 20);
+            this.txtValorRevalorizado.TabIndex = 322;
+            // 
+            // lblValorRevalorizado
+            // 
+            this.lblValorRevalorizado.Location = new System.Drawing.Point(293, 144);
+            this.lblValorRevalorizado.Name = "lblValorRevalorizado";
+            this.lblValorRevalorizado.Size = new System.Drawing.Size(76, 13);
+            this.lblValorRevalorizado.TabIndex = 321;
+            this.lblValorRevalorizado.Text = "V.Revalorizado:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelControl4);
+            this.groupBox1.Controls.Add(this.labelControl1);
+            this.groupBox1.Controls.Add(this.txtProcentaje);
+            this.groupBox1.Controls.Add(this.lblPorcentajeRevalorizacion);
+            this.groupBox1.Controls.Add(this.btnProcesar);
+            this.groupBox1.Location = new System.Drawing.Point(34, 107);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(233, 80);
+            this.groupBox1.TabIndex = 324;
+            this.groupBox1.TabStop = false;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(66, 15);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(107, 13);
+            this.labelControl4.TabIndex = 328;
+            this.labelControl4.Text = "Ingreso de Porcentaje";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(152, 40);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(17, 18);
+            this.labelControl1.TabIndex = 327;
+            this.labelControl1.Text = "%";
+            // 
+            // txtProcentaje
+            // 
+            this.txtProcentaje.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtProcentaje.Enabled = false;
+            this.txtProcentaje.Location = new System.Drawing.Point(104, 40);
+            this.txtProcentaje.Name = "txtProcentaje";
+            this.txtProcentaje.Properties.Mask.EditMask = "n2";
+            this.txtProcentaje.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtProcentaje.Properties.MaxLength = 5;
+            this.txtProcentaje.Size = new System.Drawing.Size(47, 20);
+            this.txtProcentaje.TabIndex = 326;
+            this.txtProcentaje.EditValueChanged += new System.EventHandler(this.txtProcentaje_EditValueChanged);
+            // 
+            // lblPorcentajeRevalorizacion
+            // 
+            this.lblPorcentajeRevalorizacion.Location = new System.Drawing.Point(14, 43);
+            this.lblPorcentajeRevalorizacion.Name = "lblPorcentajeRevalorizacion";
+            this.lblPorcentajeRevalorizacion.Size = new System.Drawing.Size(84, 13);
+            this.lblPorcentajeRevalorizacion.TabIndex = 325;
+            this.lblPorcentajeRevalorizacion.Text = "%Revalorizacion:";
+            // 
+            // btnProcesar
+            // 
+            this.btnProcesar.Enabled = false;
+            this.btnProcesar.Image = global::forms.Properties.Resources._24_aceptar;
+            this.btnProcesar.Location = new System.Drawing.Point(183, 37);
+            this.btnProcesar.Name = "btnProcesar";
+            this.btnProcesar.Size = new System.Drawing.Size(36, 23);
+            this.btnProcesar.TabIndex = 324;
+            this.btnProcesar.Click += new System.EventHandler(this.btnProcesar_Click_1);
             // 
             // prcsRevalorizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 170);
+            this.ClientSize = new System.Drawing.Size(528, 198);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.txtValorRevalorizado);
+            this.Controls.Add(this.lblValorRevalorizado);
             this.Controls.Add(this.TxtEmpresa);
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.txtCodigoActivo);
             this.Controls.Add(this.lblCodigoActivo);
-            this.Controls.Add(this.btnProcesar);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.txtValorResidual);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.txtValorRevalorizado);
-            this.Controls.Add(this.lblValorRevalorizado);
             this.Controls.Add(this.txtValorAdquisicion);
             this.Controls.Add(this.lblEmpresa);
             this.Controls.Add(this.dtFecha);
@@ -306,7 +387,6 @@ namespace forms.ActivoFijo
             this.Text = "prcsRevalorizacion";
             this.Load += new System.EventHandler(this.prcsRevalorizacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtValorResidual.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtValorRevalorizado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtValorAdquisicion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFecha.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFecha.Properties)).EndInit();
@@ -315,6 +395,10 @@ namespace forms.ActivoFijo
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoActivo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtEmpresa.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtValorRevalorizado.Properties)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProcentaje.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,12 +406,9 @@ namespace forms.ActivoFijo
 
         #endregion
 
-        private DevExpress.XtraEditors.SimpleButton btnProcesar;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtValorResidual;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.TextEdit txtValorRevalorizado;
-        private DevExpress.XtraEditors.LabelControl lblValorRevalorizado;
         private DevExpress.XtraEditors.TextEdit txtValorAdquisicion;
         private DevExpress.XtraEditors.LabelControl lblEmpresa;
         private DevExpress.XtraEditors.DateEdit dtFecha;
@@ -345,5 +426,13 @@ namespace forms.ActivoFijo
         private DevExpress.XtraEditors.TextEdit txtCodigoActivo;
         private DevExpress.XtraEditors.LabelControl lblCodigoActivo;
         private DevExpress.XtraEditors.TextEdit TxtEmpresa;
+        private DevExpress.XtraEditors.TextEdit txtValorRevalorizado;
+        private DevExpress.XtraEditors.LabelControl lblValorRevalorizado;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit txtProcentaje;
+        private DevExpress.XtraEditors.LabelControl lblPorcentajeRevalorizacion;
+        private DevExpress.XtraEditors.SimpleButton btnProcesar;
     }
 }

@@ -18,244 +18,229 @@
     <EntitySet Name="TipoInversion" EntityType="CuentasPorCobrarModel.TipoInversion" />
     <EntitySet Name="UnidadTiempo" EntityType="CuentasPorCobrarModel.UnidadTiempo" />
     <EntitySet Name="MedioPago" EntityType="CuentasPorCobrarModel.MedioPago" />
+    <EntitySet Name="PagoCab" EntityType="CuentasPorCobrarModel.PagoCab" />
+    <EntitySet Name="PagoDet" EntityType="CuentasPorCobrarModel.PagoDet" />
+    <EntitySet Name="ClienteDefactura" EntityType="CuentasPorCobrarModel.ClienteDefactura" />
     <EntitySet Name="Factura" EntityType="CuentasPorCobrarModel.Factura" />
     <EntitySet Name="Persona" EntityType="CuentasPorCobrarModel.Persona" />
     <EntitySet Name="Empresa" EntityType="CuentasPorCobrarModel.Empresa" />
     <EntitySet Name="Estado" EntityType="CuentasPorCobrarModel.Estado" />
     <EntitySet Name="Usuario" EntityType="CuentasPorCobrarModel.Usuario" />
-    <AssociationSet Name="FK__AperturaC__idEmp__5614BF03" Association="CuentasPorCobrarModel.FK__AperturaC__idEmp__5614BF03">
+    <EntitySet Name="Liquidacion" EntityType="CuentasPorCobrarModel.Liquidacion" />
+    <EntitySet Name="OrdenTrabajo" EntityType="CuentasPorCobrarModel.OrdenTrabajo" />
+    <AssociationSet Name="FK__AperturaC__idEmp__6462DE5A" Association="CuentasPorCobrarModel.FK__AperturaC__idEmp__6462DE5A">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="AperturaCaja" EntitySet="AperturaCaja" />
     </AssociationSet>
-    <AssociationSet Name="FK__AperturaC__idEst__57FD0775" Association="CuentasPorCobrarModel.FK__AperturaC__idEst__57FD0775">
+    <AssociationSet Name="FK__AperturaC__idEst__664B26CC" Association="CuentasPorCobrarModel.FK__AperturaC__idEst__664B26CC">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="AperturaCaja" EntitySet="AperturaCaja" />
     </AssociationSet>
-    <AssociationSet Name="FK__AperturaC__idUsu__5708E33C" Association="CuentasPorCobrarModel.FK__AperturaC__idUsu__5708E33C">
+    <AssociationSet Name="FK__AperturaC__idUsu__65570293" Association="CuentasPorCobrarModel.FK__AperturaC__idUsu__65570293">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="AperturaCaja" EntitySet="AperturaCaja" />
     </AssociationSet>
-    <AssociationSet Name="FK__AperturaD__idApe__1229A90A" Association="CuentasPorCobrarModel.FK__AperturaD__idApe__1229A90A">
+    <AssociationSet Name="FK__AperturaD__idApe__131DCD43" Association="CuentasPorCobrarModel.FK__AperturaD__idApe__131DCD43">
       <End Role="AperturaCaja" EntitySet="AperturaCaja" />
       <End Role="AperturaDet" EntitySet="AperturaDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__AperturaD__idEmp__10416098" Association="CuentasPorCobrarModel.FK__AperturaD__idEmp__10416098">
+    <AssociationSet Name="FK__AperturaD__idEmp__113584D1" Association="CuentasPorCobrarModel.FK__AperturaD__idEmp__113584D1">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="AperturaDet" EntitySet="AperturaDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__AperturaD__idEst__131DCD43" Association="CuentasPorCobrarModel.FK__AperturaD__idEst__131DCD43">
+    <AssociationSet Name="FK__AperturaD__idEst__1411F17C" Association="CuentasPorCobrarModel.FK__AperturaD__idEst__1411F17C">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="AperturaDet" EntitySet="AperturaDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__AperturaD__IdUsu__113584D1" Association="CuentasPorCobrarModel.FK__AperturaD__IdUsu__113584D1">
+    <AssociationSet Name="FK__AperturaD__IdUsu__1229A90A" Association="CuentasPorCobrarModel.FK__AperturaD__IdUsu__1229A90A">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="AperturaDet" EntitySet="AperturaDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__Banco__idEmpresa__39788055" Association="CuentasPorCobrarModel.FK__Banco__idEmpresa__39788055">
+    <AssociationSet Name="FK__Banco__idEmpresa__47C69FAC" Association="CuentasPorCobrarModel.FK__Banco__idEmpresa__47C69FAC">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Banco" EntitySet="Banco" />
     </AssociationSet>
-    <AssociationSet Name="FK__CobroDet__idBanc__09946309" Association="CuentasPorCobrarModel.FK__CobroDet__idBanc__09946309">
+    <AssociationSet Name="FK__CobroDet__idBanc__0B7CAB7B" Association="CuentasPorCobrarModel.FK__CobroDet__idBanc__0B7CAB7B">
       <End Role="Banco" EntitySet="Banco" />
       <End Role="CobroDet" EntitySet="CobroDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__Conciliac__idBan__65570293" Association="CuentasPorCobrarModel.FK__Conciliac__idBan__65570293">
+    <AssociationSet Name="FK__Conciliac__idBan__73A521EA" Association="CuentasPorCobrarModel.FK__Conciliac__idBan__73A521EA">
       <End Role="Banco" EntitySet="Banco" />
       <End Role="ConciliacionBancaria" EntitySet="ConciliacionBancaria" />
     </AssociationSet>
-    <AssociationSet Name="FK__CuentaBan__idBan__5DB5E0CB" Association="CuentasPorCobrarModel.FK__CuentaBan__idBan__5DB5E0CB">
+    <AssociationSet Name="FK__CuentaBan__idBan__6C040022" Association="CuentasPorCobrarModel.FK__CuentaBan__idBan__6C040022">
       <End Role="Banco" EntitySet="Banco" />
       <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
     </AssociationSet>
-    <AssociationSet Name="FK__Inversion__idBan__070CFC19" Association="CuentasPorCobrarModel.FK__Inversion__idBan__070CFC19">
+    <AssociationSet Name="FK__Inversion__idBan__5F9E293D" Association="CuentasPorCobrarModel.FK__Inversion__idBan__5F9E293D">
       <End Role="Banco" EntitySet="Banco" />
       <End Role="Inversion" EntitySet="Inversion" />
     </AssociationSet>
-    <AssociationSet Name="FK__Movimient__idBan__46D27B73" Association="CuentasPorCobrarModel.FK__Movimient__idBan__46D27B73">
+    <AssociationSet Name="FK__Movimient__idBan__55209ACA" Association="CuentasPorCobrarModel.FK__Movimient__idBan__55209ACA">
       <End Role="Banco" EntitySet="Banco" />
       <End Role="MovimientoBancario" EntitySet="MovimientoBancario" />
     </AssociationSet>
-    <AssociationSet Name="FK__TarjetaCr__idBan__3F3159AB" Association="CuentasPorCobrarModel.FK__TarjetaCr__idBan__3F3159AB">
+    <AssociationSet Name="FK__PagoDet__IdBanco__6ADAD1BF" Association="CuentasPorCobrarModel.FK__PagoDet__IdBanco__6ADAD1BF">
+      <End Role="Banco" EntitySet="Banco" />
+      <End Role="PagoDet" EntitySet="PagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TarjetaCr__idBan__4D7F7902" Association="CuentasPorCobrarModel.FK__TarjetaCr__idBan__4D7F7902">
       <End Role="Banco" EntitySet="Banco" />
       <End Role="TarjetaCredito" EntitySet="TarjetaCredito" />
     </AssociationSet>
-    <AssociationSet Name="FK__CierreCaj__idEmp__2E06CDA9" Association="CuentasPorCobrarModel.FK__CierreCaj__idEmp__2E06CDA9">
+    <AssociationSet Name="FK__CierreCaj__idEmp__3C54ED00" Association="CuentasPorCobrarModel.FK__CierreCaj__idEmp__3C54ED00">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="CierreCaja" EntitySet="CierreCaja" />
     </AssociationSet>
-    <AssociationSet Name="FK__CierreCaj__idEst__2FEF161B" Association="CuentasPorCobrarModel.FK__CierreCaj__idEst__2FEF161B">
+    <AssociationSet Name="FK__CierreCaj__idEst__3E3D3572" Association="CuentasPorCobrarModel.FK__CierreCaj__idEst__3E3D3572">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="CierreCaja" EntitySet="CierreCaja" />
     </AssociationSet>
-    <AssociationSet Name="FK__CierreCaj__idUsu__2EFAF1E2" Association="CuentasPorCobrarModel.FK__CierreCaj__idUsu__2EFAF1E2">
+    <AssociationSet Name="FK__CierreCaj__idUsu__3D491139" Association="CuentasPorCobrarModel.FK__CierreCaj__idUsu__3D491139">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="CierreCaja" EntitySet="CierreCaja" />
     </AssociationSet>
-    <AssociationSet Name="FK__Cobro__00FF1D08" Association="CuentasPorCobrarModel.FK__Cobro__00FF1D08">
-      <End Role="CuentaxCobrarDet" EntitySet="CuentaxCobrarDet" />
-      <End Role="Cobro" EntitySet="Cobro" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Cobro__idCliente__7F16D496" Association="CuentasPorCobrarModel.FK__Cobro__idCliente__7F16D496">
-      <End Role="Persona" EntitySet="Persona" />
-      <End Role="Cobro" EntitySet="Cobro" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Cobro__idEmpresa__7B4643B2" Association="CuentasPorCobrarModel.FK__Cobro__idEmpresa__7B4643B2">
+    <AssociationSet Name="FK__Cobro__idEmpresa__000AF8CF" Association="CuentasPorCobrarModel.FK__Cobro__idEmpresa__000AF8CF">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Cobro" EntitySet="Cobro" />
     </AssociationSet>
-    <AssociationSet Name="FK__Cobro__idEstado__01F34141" Association="CuentasPorCobrarModel.FK__Cobro__idEstado__01F34141">
-      <End Role="Estado" EntitySet="Estado" />
-      <End Role="Cobro" EntitySet="Cobro" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Cobro__idFactura__7E22B05D" Association="CuentasPorCobrarModel.FK__Cobro__idFactura__7E22B05D">
-      <End Role="Factura" EntitySet="Factura" />
-      <End Role="Cobro" EntitySet="Cobro" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Cobro__idTransac__7D2E8C24" Association="CuentasPorCobrarModel.FK__Cobro__idTransac__7D2E8C24">
-      <End Role="Factura" EntitySet="Factura" />
-      <End Role="Cobro" EntitySet="Cobro" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Cobro__idUsuario__7C3A67EB" Association="CuentasPorCobrarModel.FK__Cobro__idUsuario__7C3A67EB">
+    <AssociationSet Name="FK__Cobro__idUsuario__00FF1D08" Association="CuentasPorCobrarModel.FK__Cobro__idUsuario__00FF1D08">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="Cobro" EntitySet="Cobro" />
     </AssociationSet>
-    <AssociationSet Name="FK__CobroDet__idCobr__08A03ED0" Association="CuentasPorCobrarModel.FK__CobroDet__idCobr__08A03ED0">
+    <AssociationSet Name="FK__CobroDet__idCobr__0A888742" Association="CuentasPorCobrarModel.FK__CobroDet__idCobr__0A888742">
       <End Role="Cobro" EntitySet="Cobro" />
       <End Role="CobroDet" EntitySet="CobroDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__CobroDet__0A888742" Association="CuentasPorCobrarModel.FK__CobroDet__0A888742">
+    <AssociationSet Name="FK__CobroDet__0C70CFB4" Association="CuentasPorCobrarModel.FK__CobroDet__0C70CFB4">
       <End Role="MedioPago" EntitySet="MedioPago" />
       <End Role="CobroDet" EntitySet="CobroDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__CobroDet__idEmpr__06B7F65E" Association="CuentasPorCobrarModel.FK__CobroDet__idEmpr__06B7F65E">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="CobroDet" EntitySet="CobroDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CobroDet__idEsta__0B7CAB7B" Association="CuentasPorCobrarModel.FK__CobroDet__idEsta__0B7CAB7B">
-      <End Role="Estado" EntitySet="Estado" />
-      <End Role="CobroDet" EntitySet="CobroDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CobroDet__idUsua__07AC1A97" Association="CuentasPorCobrarModel.FK__CobroDet__idUsua__07AC1A97">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="CobroDet" EntitySet="CobroDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Conciliac__idEmp__636EBA21" Association="CuentasPorCobrarModel.FK__Conciliac__idEmp__636EBA21">
+    <AssociationSet Name="FK__Conciliac__idEmp__71BCD978" Association="CuentasPorCobrarModel.FK__Conciliac__idEmp__71BCD978">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="ConciliacionBancaria" EntitySet="ConciliacionBancaria" />
     </AssociationSet>
-    <AssociationSet Name="FK__Conciliac__idEst__664B26CC" Association="CuentasPorCobrarModel.FK__Conciliac__idEst__664B26CC">
+    <AssociationSet Name="FK__Conciliac__idEst__74994623" Association="CuentasPorCobrarModel.FK__Conciliac__idEst__74994623">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="ConciliacionBancaria" EntitySet="ConciliacionBancaria" />
     </AssociationSet>
-    <AssociationSet Name="FK__Conciliac__idUsu__6462DE5A" Association="CuentasPorCobrarModel.FK__Conciliac__idUsu__6462DE5A">
+    <AssociationSet Name="FK__Conciliac__idUsu__72B0FDB1" Association="CuentasPorCobrarModel.FK__Conciliac__idUsu__72B0FDB1">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="ConciliacionBancaria" EntitySet="ConciliacionBancaria" />
     </AssociationSet>
-    <AssociationSet Name="FK__CuentaBan__idEmp__5CC1BC92" Association="CuentasPorCobrarModel.FK__CuentaBan__idEmp__5CC1BC92">
+    <AssociationSet Name="FK__CuentaBan__idEmp__6B0FDBE9" Association="CuentasPorCobrarModel.FK__CuentaBan__idEmp__6B0FDBE9">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
     </AssociationSet>
-    <AssociationSet Name="FK__CuentaBan__idTit__5EAA0504" Association="CuentasPorCobrarModel.FK__CuentaBan__idTit__5EAA0504">
+    <AssociationSet Name="FK__CuentaBan__idTit__6CF8245B" Association="CuentasPorCobrarModel.FK__CuentaBan__idTit__6CF8245B">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
     </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idEmp__6B0FDBE9" Association="CuentasPorCobrarModel.FK__CuentaxCo__idEmp__6B0FDBE9">
+    <AssociationSet Name="FK__CuentaxCo__idEmp__795DFB40" Association="CuentasPorCobrarModel.FK__CuentaxCo__idEmp__795DFB40">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
     </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idEst__6FD49106" Association="CuentasPorCobrarModel.FK__CuentaxCo__idEst__6FD49106">
-      <End Role="Estado" EntitySet="Estado" />
-      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idFac__6DEC4894" Association="CuentasPorCobrarModel.FK__CuentaxCo__idFac__6DEC4894">
-      <End Role="Factura" EntitySet="Factura" />
-      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idTra__6CF8245B" Association="CuentasPorCobrarModel.FK__CuentaxCo__idTra__6CF8245B">
-      <End Role="Factura" EntitySet="Factura" />
-      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idUsu__6C040022" Association="CuentasPorCobrarModel.FK__CuentaxCo__idUsu__6C040022">
+    <AssociationSet Name="FK__CuentaxCo__idUsu__7A521F79" Association="CuentasPorCobrarModel.FK__CuentaxCo__idUsu__7A521F79">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
     </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idEmp__74994623" Association="CuentasPorCobrarModel.FK__CuentaxCo__idEmp__74994623">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="CuentaxCobrarDet" EntitySet="CuentaxCobrarDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idEst__76818E95" Association="CuentasPorCobrarModel.FK__CuentaxCo__idEst__76818E95">
-      <End Role="Estado" EntitySet="Estado" />
-      <End Role="CuentaxCobrarDet" EntitySet="CuentaxCobrarDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idUsu__758D6A5C" Association="CuentasPorCobrarModel.FK__CuentaxCo__idUsu__758D6A5C">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="CuentaxCobrarDet" EntitySet="CuentaxCobrarDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Inversion__idEmp__4C8B54C9" Association="CuentasPorCobrarModel.FK__Inversion__idEmp__4C8B54C9">
+    <AssociationSet Name="FK__Inversion__idEmp__5AD97420" Association="CuentasPorCobrarModel.FK__Inversion__idEmp__5AD97420">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Inversion" EntitySet="Inversion" />
     </AssociationSet>
-    <AssociationSet Name="FK__Inversion__idEnt__4E739D3B" Association="CuentasPorCobrarModel.FK__Inversion__idEnt__4E739D3B">
+    <AssociationSet Name="FK__Inversion__idEnt__5CC1BC92" Association="CuentasPorCobrarModel.FK__Inversion__idEnt__5CC1BC92">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Inversion" EntitySet="Inversion" />
     </AssociationSet>
-    <AssociationSet Name="FK__Inversion__idTip__4F67C174" Association="CuentasPorCobrarModel.FK__Inversion__idTip__4F67C174">
+    <AssociationSet Name="FK__Inversion__idTip__5DB5E0CB" Association="CuentasPorCobrarModel.FK__Inversion__idTip__5DB5E0CB">
       <End Role="TipoInversion" EntitySet="TipoInversion" />
       <End Role="Inversion" EntitySet="Inversion" />
     </AssociationSet>
-    <AssociationSet Name="FK__Inversion__idUni__505BE5AD" Association="CuentasPorCobrarModel.FK__Inversion__idUni__505BE5AD">
+    <AssociationSet Name="FK__Inversion__idUni__5EAA0504" Association="CuentasPorCobrarModel.FK__Inversion__idUni__5EAA0504">
       <End Role="UnidadTiempo" EntitySet="UnidadTiempo" />
       <End Role="Inversion" EntitySet="Inversion" />
     </AssociationSet>
-    <AssociationSet Name="FK__Inversion__idUsu__4D7F7902" Association="CuentasPorCobrarModel.FK__Inversion__idUsu__4D7F7902">
+    <AssociationSet Name="FK__Inversion__idUsu__5BCD9859" Association="CuentasPorCobrarModel.FK__Inversion__idUsu__5BCD9859">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="Inversion" EntitySet="Inversion" />
     </AssociationSet>
-    <AssociationSet Name="FK__Monetario__idEmp__2942188C" Association="CuentasPorCobrarModel.FK__Monetario__idEmp__2942188C">
+    <AssociationSet Name="FK__Monetario__idEmp__379037E3" Association="CuentasPorCobrarModel.FK__Monetario__idEmp__379037E3">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="MonetarioDet" EntitySet="MonetarioDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__Movimient__idEmp__43F60EC8" Association="CuentasPorCobrarModel.FK__Movimient__idEmp__43F60EC8">
+    <AssociationSet Name="FK__Movimient__idEmp__52442E1F" Association="CuentasPorCobrarModel.FK__Movimient__idEmp__52442E1F">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="MovimientoBancario" EntitySet="MovimientoBancario" />
     </AssociationSet>
-    <AssociationSet Name="FK__Movimient__idEst__47C69FAC" Association="CuentasPorCobrarModel.FK__Movimient__idEst__47C69FAC">
+    <AssociationSet Name="FK__Movimient__idEst__5614BF03" Association="CuentasPorCobrarModel.FK__Movimient__idEst__5614BF03">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="MovimientoBancario" EntitySet="MovimientoBancario" />
     </AssociationSet>
-    <AssociationSet Name="FK__Movimient__idTra__45DE573A" Association="CuentasPorCobrarModel.FK__Movimient__idTra__45DE573A">
+    <AssociationSet Name="FK__Movimient__idTra__542C7691" Association="CuentasPorCobrarModel.FK__Movimient__idTra__542C7691">
       <End Role="Factura" EntitySet="Factura" />
       <End Role="MovimientoBancario" EntitySet="MovimientoBancario" />
     </AssociationSet>
-    <AssociationSet Name="FK__Movimient__idUsu__44EA3301" Association="CuentasPorCobrarModel.FK__Movimient__idUsu__44EA3301">
+    <AssociationSet Name="FK__Movimient__idUsu__53385258" Association="CuentasPorCobrarModel.FK__Movimient__idUsu__53385258">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="MovimientoBancario" EntitySet="MovimientoBancario" />
     </AssociationSet>
-    <AssociationSet Name="FK__TarjetaCr__idEmp__3E3D3572" Association="CuentasPorCobrarModel.FK__TarjetaCr__idEmp__3E3D3572">
+    <AssociationSet Name="FK__TarjetaCr__idEmp__4C8B54C9" Association="CuentasPorCobrarModel.FK__TarjetaCr__idEmp__4C8B54C9">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TarjetaCredito" EntitySet="TarjetaCredito" />
     </AssociationSet>
-    <AssociationSet Name="FK__TipoInver__idEmp__34B3CB38" Association="CuentasPorCobrarModel.FK__TipoInver__idEmp__34B3CB38">
+    <AssociationSet Name="FK__TipoInver__idEmp__4301EA8F" Association="CuentasPorCobrarModel.FK__TipoInver__idEmp__4301EA8F">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TipoInversion" EntitySet="TipoInversion" />
     </AssociationSet>
-    <AssociationSet Name="FK__UnidadTie__idEmp__247D636F" Association="CuentasPorCobrarModel.FK__UnidadTie__idEmp__247D636F">
+    <AssociationSet Name="FK__UnidadTie__idEmp__32CB82C6" Association="CuentasPorCobrarModel.FK__UnidadTie__idEmp__32CB82C6">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="UnidadTiempo" EntitySet="UnidadTiempo" />
     </AssociationSet>
-    <AssociationSet Name="FK__MedioPago__IdEmp__1EC48A19" Association="CuentasPorCobrarModel.FK__MedioPago__IdEmp__1EC48A19">
+    <AssociationSet Name="FK__MedioPago__IdEmp__2D12A970" Association="CuentasPorCobrarModel.FK__MedioPago__IdEmp__2D12A970">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="MedioPago" EntitySet="MedioPago" />
     </AssociationSet>
-    <AssociationSet Name="FK__MedioPago__IdUsu__1FB8AE52" Association="CuentasPorCobrarModel.FK__MedioPago__IdUsu__1FB8AE52">
+    <AssociationSet Name="FK__MedioPago__IdUsu__2E06CDA9" Association="CuentasPorCobrarModel.FK__MedioPago__IdUsu__2E06CDA9">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="MedioPago" EntitySet="MedioPago" />
     </AssociationSet>
-    <AssociationSet Name="FK__Factura__idEstad__4F9CCB9E" Association="CuentasPorCobrarModel.FK__Factura__idEstad__4F9CCB9E">
+    <AssociationSet Name="FK__PagoDet__68F2894D" Association="CuentasPorCobrarModel.FK__PagoDet__68F2894D">
+      <End Role="MedioPago" EntitySet="MedioPago" />
+      <End Role="PagoDet" EntitySet="PagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoCab__IdEmpre__605D434C" Association="CuentasPorCobrarModel.FK__PagoCab__IdEmpre__605D434C">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="PagoCab" EntitySet="PagoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoCab__IdUsuar__5F691F13" Association="CuentasPorCobrarModel.FK__PagoCab__IdUsuar__5F691F13">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="PagoCab" EntitySet="PagoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PagoDet__66161CA2" Association="CuentasPorCobrarModel.FK__PagoDet__66161CA2">
+      <End Role="PagoCab" EntitySet="PagoCab" />
+      <End Role="PagoDet" EntitySet="PagoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ClienteDe__IdEmp__23BE4960" Association="CuentasPorCobrarModel.FK__ClienteDe__IdEmp__23BE4960">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="ClienteDefactura" EntitySet="ClienteDefactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ClienteDe__idEst__25A691D2" Association="CuentasPorCobrarModel.FK__ClienteDe__idEst__25A691D2">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="ClienteDefactura" EntitySet="ClienteDefactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ClienteDe__idUsu__24B26D99" Association="CuentasPorCobrarModel.FK__ClienteDe__idUsu__24B26D99">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="ClienteDefactura" EntitySet="ClienteDefactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__IdNumer__4AD81681" Association="CuentasPorCobrarModel.FK__Factura__IdNumer__4AD81681">
+      <End Role="ClienteDefactura" EntitySet="ClienteDefactura" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__idEstad__4EA8A765" Association="CuentasPorCobrarModel.FK__Factura__idEstad__4EA8A765">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="Factura" EntitySet="Factura" />
     </AssociationSet>
-    <AssociationSet Name="FK__Factura__idUsuar__4EA8A765" Association="CuentasPorCobrarModel.FK__Factura__idUsuar__4EA8A765">
+    <AssociationSet Name="FK__Factura__idUsuar__4DB4832C" Association="CuentasPorCobrarModel.FK__Factura__idUsuar__4DB4832C">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="Factura" EntitySet="Factura" />
     </AssociationSet>
@@ -271,9 +256,29 @@
       <End Role="Estado" EntitySet="Estado" />
       <End Role="Empresa" EntitySet="Empresa" />
     </AssociationSet>
+    <AssociationSet Name="FK__Liquidaci__IdEmp__0524B3A7" Association="CuentasPorCobrarModel.FK__Liquidaci__IdEmp__0524B3A7">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Liquidacion" EntitySet="Liquidacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenTrab__IdEmp__65AC084E" Association="CuentasPorCobrarModel.FK__OrdenTrab__IdEmp__65AC084E">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Liquidaci__IdEst__04308F6E" Association="CuentasPorCobrarModel.FK__Liquidaci__IdEst__04308F6E">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Liquidacion" EntitySet="Liquidacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenTrab__IdEst__64B7E415" Association="CuentasPorCobrarModel.FK__OrdenTrab__IdEst__64B7E415">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+    </AssociationSet>
     <AssociationSet Name="FK__Usuario__IdEstad__3A81B327" Association="CuentasPorCobrarModel.FK__Usuario__IdEstad__3A81B327">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Liquidaci__IdOrd__070CFC19" Association="CuentasPorCobrarModel.FK__Liquidaci__IdOrd__070CFC19">
+      <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+      <End Role="Liquidacion" EntitySet="Liquidacion" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="AperturaCaja">
@@ -287,10 +292,10 @@
     <Property Name="FechaModificacion" Type="DateTime" />
     <Property Name="Monto" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="idEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__AperturaC__idEmp__5614BF03" FromRole="AperturaCaja" ToRole="Empresa" />
-    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__AperturaC__idEst__57FD0775" FromRole="AperturaCaja" ToRole="Estado" />
-    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__AperturaC__idUsu__5708E33C" FromRole="AperturaCaja" ToRole="Usuario" />
-    <NavigationProperty Name="AperturaDet" Relationship="CuentasPorCobrarModel.FK__AperturaD__idApe__1229A90A" FromRole="AperturaCaja" ToRole="AperturaDet" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__AperturaC__idEmp__6462DE5A" FromRole="AperturaCaja" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__AperturaC__idEst__664B26CC" FromRole="AperturaCaja" ToRole="Estado" />
+    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__AperturaC__idUsu__65570293" FromRole="AperturaCaja" ToRole="Usuario" />
+    <NavigationProperty Name="AperturaDet" Relationship="CuentasPorCobrarModel.FK__AperturaD__idApe__131DCD43" FromRole="AperturaCaja" ToRole="AperturaDet" />
   </EntityType>
   <EntityType Name="AperturaDet">
     <Key>
@@ -304,10 +309,10 @@
     <Property Name="Denominacion" Type="Int32" Nullable="false" />
     <Property Name="Cantidad" Type="Int32" Nullable="false" />
     <Property Name="idEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="AperturaCaja" Relationship="CuentasPorCobrarModel.FK__AperturaD__idApe__1229A90A" FromRole="AperturaDet" ToRole="AperturaCaja" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__AperturaD__idEmp__10416098" FromRole="AperturaDet" ToRole="Empresa" />
-    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__AperturaD__idEst__131DCD43" FromRole="AperturaDet" ToRole="Estado" />
-    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__AperturaD__IdUsu__113584D1" FromRole="AperturaDet" ToRole="Usuario" />
+    <NavigationProperty Name="AperturaCaja" Relationship="CuentasPorCobrarModel.FK__AperturaD__idApe__131DCD43" FromRole="AperturaDet" ToRole="AperturaCaja" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__AperturaD__idEmp__113584D1" FromRole="AperturaDet" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__AperturaD__idEst__1411F17C" FromRole="AperturaDet" ToRole="Estado" />
+    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__AperturaD__IdUsu__1229A90A" FromRole="AperturaDet" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="Banco">
     <Key>
@@ -317,13 +322,14 @@
     <Property Name="idBanco" Type="Int32" Nullable="false" />
     <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="Estado" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Banco__idEmpresa__39788055" FromRole="Banco" ToRole="Empresa" />
-    <NavigationProperty Name="CobroDet" Relationship="CuentasPorCobrarModel.FK__CobroDet__idBanc__09946309" FromRole="Banco" ToRole="CobroDet" />
-    <NavigationProperty Name="ConciliacionBancaria" Relationship="CuentasPorCobrarModel.FK__Conciliac__idBan__65570293" FromRole="Banco" ToRole="ConciliacionBancaria" />
-    <NavigationProperty Name="CuentaBancaria" Relationship="CuentasPorCobrarModel.FK__CuentaBan__idBan__5DB5E0CB" FromRole="Banco" ToRole="CuentaBancaria" />
-    <NavigationProperty Name="Inversion" Relationship="CuentasPorCobrarModel.FK__Inversion__idBan__070CFC19" FromRole="Banco" ToRole="Inversion" />
-    <NavigationProperty Name="MovimientoBancario" Relationship="CuentasPorCobrarModel.FK__Movimient__idBan__46D27B73" FromRole="Banco" ToRole="MovimientoBancario" />
-    <NavigationProperty Name="TarjetaCredito" Relationship="CuentasPorCobrarModel.FK__TarjetaCr__idBan__3F3159AB" FromRole="Banco" ToRole="TarjetaCredito" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Banco__idEmpresa__47C69FAC" FromRole="Banco" ToRole="Empresa" />
+    <NavigationProperty Name="CobroDet" Relationship="CuentasPorCobrarModel.FK__CobroDet__idBanc__0B7CAB7B" FromRole="Banco" ToRole="CobroDet" />
+    <NavigationProperty Name="ConciliacionBancaria" Relationship="CuentasPorCobrarModel.FK__Conciliac__idBan__73A521EA" FromRole="Banco" ToRole="ConciliacionBancaria" />
+    <NavigationProperty Name="CuentaBancaria" Relationship="CuentasPorCobrarModel.FK__CuentaBan__idBan__6C040022" FromRole="Banco" ToRole="CuentaBancaria" />
+    <NavigationProperty Name="Inversion" Relationship="CuentasPorCobrarModel.FK__Inversion__idBan__5F9E293D" FromRole="Banco" ToRole="Inversion" />
+    <NavigationProperty Name="MovimientoBancario" Relationship="CuentasPorCobrarModel.FK__Movimient__idBan__55209ACA" FromRole="Banco" ToRole="MovimientoBancario" />
+    <NavigationProperty Name="PagoDet" Relationship="CuentasPorCobrarModel.FK__PagoDet__IdBanco__6ADAD1BF" FromRole="Banco" ToRole="PagoDet" />
+    <NavigationProperty Name="TarjetaCredito" Relationship="CuentasPorCobrarModel.FK__TarjetaCr__idBan__4D7F7902" FromRole="Banco" ToRole="TarjetaCredito" />
   </EntityType>
   <EntityType Name="CierreCaja">
     <Key>
@@ -342,9 +348,9 @@
     <Property Name="TotalEfectivo" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="TotalRecaudado" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="idEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__CierreCaj__idEmp__2E06CDA9" FromRole="CierreCaja" ToRole="Empresa" />
-    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__CierreCaj__idEst__2FEF161B" FromRole="CierreCaja" ToRole="Estado" />
-    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__CierreCaj__idUsu__2EFAF1E2" FromRole="CierreCaja" ToRole="Usuario" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__CierreCaj__idEmp__3C54ED00" FromRole="CierreCaja" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__CierreCaj__idEst__3E3D3572" FromRole="CierreCaja" ToRole="Estado" />
+    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__CierreCaj__idUsu__3D491139" FromRole="CierreCaja" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="Cobro">
     <Key>
@@ -353,12 +359,8 @@
     <Property Name="idEmpresa" Type="Int32" Nullable="false" />
     <Property Name="idUsuario" Type="Int32" Nullable="false" />
     <Property Name="idCobro" Type="Int32" Nullable="false" />
-    <Property Name="idTransaccion" Type="Int32" Nullable="false" />
-    <Property Name="idFactura" Type="Int32" Nullable="false" />
-    <Property Name="idCliente" Type="Int32" Nullable="false" />
+    <Property Name="idNumeroFactura" Type="Int32" Nullable="false" />
     <Property Name="idCabeceraComprobante" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
-    <Property Name="idCuentaxCobrar" Type="Int32" Nullable="false" />
-    <Property Name="numeroCuentaxCobrar" Type="Int32" Nullable="false" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" />
     <Property Name="FechaModificacion" Type="DateTime" />
     <Property Name="NumeroCuota" Type="Int32" Nullable="false" />
@@ -367,23 +369,16 @@
     <Property Name="Mora" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="ValorPagado" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="Saldo" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-    <Property Name="idEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="CuentaxCobrarDet" Relationship="CuentasPorCobrarModel.FK__Cobro__00FF1D08" FromRole="Cobro" ToRole="CuentaxCobrarDet" />
-    <NavigationProperty Name="Persona" Relationship="CuentasPorCobrarModel.FK__Cobro__idCliente__7F16D496" FromRole="Cobro" ToRole="Persona" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Cobro__idEmpresa__7B4643B2" FromRole="Cobro" ToRole="Empresa" />
-    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__Cobro__idEstado__01F34141" FromRole="Cobro" ToRole="Estado" />
-    <NavigationProperty Name="Factura" Relationship="CuentasPorCobrarModel.FK__Cobro__idFactura__7E22B05D" FromRole="Cobro" ToRole="Factura" />
-    <NavigationProperty Name="Factura1" Relationship="CuentasPorCobrarModel.FK__Cobro__idTransac__7D2E8C24" FromRole="Cobro" ToRole="Factura" />
-    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__Cobro__idUsuario__7C3A67EB" FromRole="Cobro" ToRole="Usuario" />
-    <NavigationProperty Name="CobroDet" Relationship="CuentasPorCobrarModel.FK__CobroDet__idCobr__08A03ED0" FromRole="Cobro" ToRole="CobroDet" />
+    <Property Name="idEstado" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Cobro__idEmpresa__000AF8CF" FromRole="Cobro" ToRole="Empresa" />
+    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__Cobro__idUsuario__00FF1D08" FromRole="Cobro" ToRole="Usuario" />
+    <NavigationProperty Name="CobroDet" Relationship="CuentasPorCobrarModel.FK__CobroDet__idCobr__0A888742" FromRole="Cobro" ToRole="CobroDet" />
   </EntityType>
   <EntityType Name="CobroDet">
     <Key>
       <PropertyRef Name="idCobro" />
       <PropertyRef Name="numero" />
     </Key>
-    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
-    <Property Name="idUsuario" Type="Int32" Nullable="false" />
     <Property Name="idCobro" Type="Int32" Nullable="false" />
     <Property Name="numero" Type="Int32" Nullable="false" />
     <Property Name="idBanco" Type="Int32" Nullable="false" />
@@ -391,13 +386,11 @@
     <Property Name="Valor" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="NumeroDocumento" Type="Int32" Nullable="false" />
     <Property Name="Observacion" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
-    <Property Name="idEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__CobroDet__idBanc__09946309" FromRole="CobroDet" ToRole="Banco" />
-    <NavigationProperty Name="Cobro" Relationship="CuentasPorCobrarModel.FK__CobroDet__idCobr__08A03ED0" FromRole="CobroDet" ToRole="Cobro" />
-    <NavigationProperty Name="MedioPago" Relationship="CuentasPorCobrarModel.FK__CobroDet__0A888742" FromRole="CobroDet" ToRole="MedioPago" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__CobroDet__idEmpr__06B7F65E" FromRole="CobroDet" ToRole="Empresa" />
-    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__CobroDet__idEsta__0B7CAB7B" FromRole="CobroDet" ToRole="Estado" />
-    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__CobroDet__idUsua__07AC1A97" FromRole="CobroDet" ToRole="Usuario" />
+    <Property Name="idEstado" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__CobroDet__idBanc__0B7CAB7B" FromRole="CobroDet" ToRole="Banco" />
+    <NavigationProperty Name="Cobro" Relationship="CuentasPorCobrarModel.FK__CobroDet__idCobr__0A888742" FromRole="CobroDet" ToRole="Cobro" />
+    <NavigationProperty Name="MedioPago" Relationship="CuentasPorCobrarModel.FK__CobroDet__0C70CFB4" FromRole="CobroDet" ToRole="MedioPago" />
   </EntityType>
   <EntityType Name="ConciliacionBancaria">
     <Key>
@@ -417,10 +410,10 @@
     <Property Name="Saldo" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="TotalConciliacion" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="idEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__Conciliac__idBan__65570293" FromRole="ConciliacionBancaria" ToRole="Banco" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Conciliac__idEmp__636EBA21" FromRole="ConciliacionBancaria" ToRole="Empresa" />
-    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__Conciliac__idEst__664B26CC" FromRole="ConciliacionBancaria" ToRole="Estado" />
-    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__Conciliac__idUsu__6462DE5A" FromRole="ConciliacionBancaria" ToRole="Usuario" />
+    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__Conciliac__idBan__73A521EA" FromRole="ConciliacionBancaria" ToRole="Banco" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Conciliac__idEmp__71BCD978" FromRole="ConciliacionBancaria" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__Conciliac__idEst__74994623" FromRole="ConciliacionBancaria" ToRole="Estado" />
+    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__Conciliac__idUsu__72B0FDB1" FromRole="ConciliacionBancaria" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="CuentaBancaria">
     <Key>
@@ -434,9 +427,9 @@
     <Property Name="TipoCuenta" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="Saldo" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="Estado" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
-    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__CuentaBan__idBan__5DB5E0CB" FromRole="CuentaBancaria" ToRole="Banco" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__CuentaBan__idEmp__5CC1BC92" FromRole="CuentaBancaria" ToRole="Empresa" />
-    <NavigationProperty Name="Persona" Relationship="CuentasPorCobrarModel.FK__CuentaBan__idTit__5EAA0504" FromRole="CuentaBancaria" ToRole="Persona" />
+    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__CuentaBan__idBan__6C040022" FromRole="CuentaBancaria" ToRole="Banco" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__CuentaBan__idEmp__6B0FDBE9" FromRole="CuentaBancaria" ToRole="Empresa" />
+    <NavigationProperty Name="Persona" Relationship="CuentasPorCobrarModel.FK__CuentaBan__idTit__6CF8245B" FromRole="CuentaBancaria" ToRole="Persona" />
   </EntityType>
   <EntityType Name="CuentaxCobrar">
     <Key>
@@ -446,26 +439,19 @@
     <Property Name="idUsuario" Type="Int32" Nullable="false" />
     <Property Name="idCuentaxCobrar" Type="Int32" Nullable="false" />
     <Property Name="numero_comprobante" Type="Decimal" Precision="4" Scale="0" />
-    <Property Name="idTransaccion" Type="Int32" Nullable="false" />
-    <Property Name="idFactura" Type="Int32" Nullable="false" />
     <Property Name="Modulo" Type="Int32" Nullable="false" />
-    <Property Name="idCabeceraComprobante" Type="Int32" Nullable="false" />
+    <Property Name="idNumeroFactura" Type="Int32" Nullable="false" />
     <Property Name="TotalCuotas" Type="Int32" Nullable="false" />
     <Property Name="porcentaje_interes" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="idEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idEmp__6B0FDBE9" FromRole="CuentaxCobrar" ToRole="Empresa" />
-    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idEst__6FD49106" FromRole="CuentaxCobrar" ToRole="Estado" />
-    <NavigationProperty Name="Factura" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idFac__6DEC4894" FromRole="CuentaxCobrar" ToRole="Factura" />
-    <NavigationProperty Name="Factura1" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idTra__6CF8245B" FromRole="CuentaxCobrar" ToRole="Factura" />
-    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idUsu__6C040022" FromRole="CuentaxCobrar" ToRole="Usuario" />
+    <Property Name="estado" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idEmp__795DFB40" FromRole="CuentaxCobrar" ToRole="Empresa" />
+    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idUsu__7A521F79" FromRole="CuentaxCobrar" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="CuentaxCobrarDet">
     <Key>
       <PropertyRef Name="idCuentaxCobrar" />
       <PropertyRef Name="Numero" />
     </Key>
-    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
-    <Property Name="idUsuario" Type="Int32" Nullable="false" />
     <Property Name="idCuentaxCobrar" Type="Int32" Nullable="false" />
     <Property Name="Numero" Type="Int32" Nullable="false" />
     <Property Name="numero_cuota" Type="Int32" Nullable="false" />
@@ -475,11 +461,7 @@
     <Property Name="fecha_cobro" Type="DateTime" Nullable="false" />
     <Property Name="fecha_vencimiento" Type="DateTime" Nullable="false" />
     <Property Name="FechaModificacion" Type="DateTime" />
-    <Property Name="idEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Cobro" Relationship="CuentasPorCobrarModel.FK__Cobro__00FF1D08" FromRole="CuentaxCobrarDet" ToRole="Cobro" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idEmp__74994623" FromRole="CuentaxCobrarDet" ToRole="Empresa" />
-    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idEst__76818E95" FromRole="CuentaxCobrarDet" ToRole="Estado" />
-    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idUsu__758D6A5C" FromRole="CuentaxCobrarDet" ToRole="Usuario" />
+    <Property Name="estado" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
   </EntityType>
   <EntityType Name="Inversion">
     <Key>
@@ -492,21 +474,21 @@
     <Property Name="idTipoInversion" Type="Int32" Nullable="false" />
     <Property Name="Tiempo" Type="Int32" Nullable="false" />
     <Property Name="idUnidadTiempo" Type="Int32" Nullable="false" />
+    <Property Name="idBanco" Type="Int32" />
     <Property Name="Valor" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="Porcentaje" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Ganancia" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" />
     <Property Name="FechaModificacion" Type="DateTime" />
     <Property Name="FechaInicio" Type="DateTime" Nullable="false" />
     <Property Name="FechaFinal" Type="DateTime" Nullable="false" />
     <Property Name="idEstado" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
-    <Property Name="Ganancia" Type="Decimal" Precision="18" Scale="2" />
-    <Property Name="idBanco" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__Inversion__idBan__070CFC19" FromRole="Inversion" ToRole="Banco" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Inversion__idEmp__4C8B54C9" FromRole="Inversion" ToRole="Empresa" />
-    <NavigationProperty Name="Persona" Relationship="CuentasPorCobrarModel.FK__Inversion__idEnt__4E739D3B" FromRole="Inversion" ToRole="Persona" />
-    <NavigationProperty Name="TipoInversion" Relationship="CuentasPorCobrarModel.FK__Inversion__idTip__4F67C174" FromRole="Inversion" ToRole="TipoInversion" />
-    <NavigationProperty Name="UnidadTiempo" Relationship="CuentasPorCobrarModel.FK__Inversion__idUni__505BE5AD" FromRole="Inversion" ToRole="UnidadTiempo" />
-    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__Inversion__idUsu__4D7F7902" FromRole="Inversion" ToRole="Usuario" />
+    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__Inversion__idBan__5F9E293D" FromRole="Inversion" ToRole="Banco" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Inversion__idEmp__5AD97420" FromRole="Inversion" ToRole="Empresa" />
+    <NavigationProperty Name="Persona" Relationship="CuentasPorCobrarModel.FK__Inversion__idEnt__5CC1BC92" FromRole="Inversion" ToRole="Persona" />
+    <NavigationProperty Name="TipoInversion" Relationship="CuentasPorCobrarModel.FK__Inversion__idTip__5DB5E0CB" FromRole="Inversion" ToRole="TipoInversion" />
+    <NavigationProperty Name="UnidadTiempo" Relationship="CuentasPorCobrarModel.FK__Inversion__idUni__5EAA0504" FromRole="Inversion" ToRole="UnidadTiempo" />
+    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__Inversion__idUsu__5BCD9859" FromRole="Inversion" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="MonetarioDet">
     <Key>
@@ -517,7 +499,7 @@
     <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="Valor" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="Estado" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Monetario__idEmp__2942188C" FromRole="MonetarioDet" ToRole="Empresa" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Monetario__idEmp__379037E3" FromRole="MonetarioDet" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="MovimientoBancario">
     <Key>
@@ -534,11 +516,11 @@
     <Property Name="FechaModificacion" Type="DateTime" />
     <Property Name="Valor" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
     <Property Name="idEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__Movimient__idBan__46D27B73" FromRole="MovimientoBancario" ToRole="Banco" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Movimient__idEmp__43F60EC8" FromRole="MovimientoBancario" ToRole="Empresa" />
-    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__Movimient__idEst__47C69FAC" FromRole="MovimientoBancario" ToRole="Estado" />
-    <NavigationProperty Name="Factura" Relationship="CuentasPorCobrarModel.FK__Movimient__idTra__45DE573A" FromRole="MovimientoBancario" ToRole="Factura" />
-    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__Movimient__idUsu__44EA3301" FromRole="MovimientoBancario" ToRole="Usuario" />
+    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__Movimient__idBan__55209ACA" FromRole="MovimientoBancario" ToRole="Banco" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Movimient__idEmp__52442E1F" FromRole="MovimientoBancario" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__Movimient__idEst__5614BF03" FromRole="MovimientoBancario" ToRole="Estado" />
+    <NavigationProperty Name="Factura" Relationship="CuentasPorCobrarModel.FK__Movimient__idTra__542C7691" FromRole="MovimientoBancario" ToRole="Factura" />
+    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__Movimient__idUsu__53385258" FromRole="MovimientoBancario" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="TarjetaCredito">
     <Key>
@@ -549,8 +531,8 @@
     <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="idBanco" Type="Int32" Nullable="false" />
     <Property Name="Estado" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
-    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__TarjetaCr__idBan__3F3159AB" FromRole="TarjetaCredito" ToRole="Banco" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__TarjetaCr__idEmp__3E3D3572" FromRole="TarjetaCredito" ToRole="Empresa" />
+    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__TarjetaCr__idBan__4D7F7902" FromRole="TarjetaCredito" ToRole="Banco" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__TarjetaCr__idEmp__4C8B54C9" FromRole="TarjetaCredito" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="TipoInversion">
     <Key>
@@ -560,8 +542,8 @@
     <Property Name="idTipoInversion" Type="Int32" Nullable="false" />
     <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="Estado" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
-    <NavigationProperty Name="Inversion" Relationship="CuentasPorCobrarModel.FK__Inversion__idTip__4F67C174" FromRole="TipoInversion" ToRole="Inversion" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__TipoInver__idEmp__34B3CB38" FromRole="TipoInversion" ToRole="Empresa" />
+    <NavigationProperty Name="Inversion" Relationship="CuentasPorCobrarModel.FK__Inversion__idTip__5DB5E0CB" FromRole="TipoInversion" ToRole="Inversion" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__TipoInver__idEmp__4301EA8F" FromRole="TipoInversion" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="UnidadTiempo">
     <Key>
@@ -571,8 +553,8 @@
     <Property Name="idUnidadTiempo" Type="Int32" Nullable="false" />
     <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
     <Property Name="Estado" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
-    <NavigationProperty Name="Inversion" Relationship="CuentasPorCobrarModel.FK__Inversion__idUni__505BE5AD" FromRole="UnidadTiempo" ToRole="Inversion" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__UnidadTie__idEmp__247D636F" FromRole="UnidadTiempo" ToRole="Empresa" />
+    <NavigationProperty Name="Inversion" Relationship="CuentasPorCobrarModel.FK__Inversion__idUni__5EAA0504" FromRole="UnidadTiempo" ToRole="Inversion" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__UnidadTie__idEmp__32CB82C6" FromRole="UnidadTiempo" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="MedioPago">
     <Key>
@@ -585,9 +567,69 @@
     <Property Name="Estado" Type="Int32" Nullable="false" />
     <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
     <Property Name="IdUsuario" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="CobroDet" Relationship="CuentasPorCobrarModel.FK__CobroDet__0A888742" FromRole="MedioPago" ToRole="CobroDet" />
-    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__MedioPago__IdEmp__1EC48A19" FromRole="MedioPago" ToRole="Empresa" />
-    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__MedioPago__IdUsu__1FB8AE52" FromRole="MedioPago" ToRole="Usuario" />
+    <NavigationProperty Name="CobroDet" Relationship="CuentasPorCobrarModel.FK__CobroDet__0C70CFB4" FromRole="MedioPago" ToRole="CobroDet" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__MedioPago__IdEmp__2D12A970" FromRole="MedioPago" ToRole="Empresa" />
+    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__MedioPago__IdUsu__2E06CDA9" FromRole="MedioPago" ToRole="Usuario" />
+    <NavigationProperty Name="PagoDet" Relationship="CuentasPorCobrarModel.FK__PagoDet__68F2894D" FromRole="MedioPago" ToRole="PagoDet" />
+  </EntityType>
+  <EntityType Name="PagoCab">
+    <Key>
+      <PropertyRef Name="NumPago" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="NumPago" Type="Int32" Nullable="false" />
+    <Property Name="FechaIngreso" Type="DateTime" Nullable="false" />
+    <Property Name="NumOrdenPago" Type="Int32" />
+    <Property Name="TotalPagar" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="Estado" Type="Int32" Nullable="false" />
+    <Property Name="NumComprobante" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__PagoCab__IdEmpre__605D434C" FromRole="PagoCab" ToRole="Empresa" />
+    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__PagoCab__IdUsuar__5F691F13" FromRole="PagoCab" ToRole="Usuario" />
+    <NavigationProperty Name="PagoDet" Relationship="CuentasPorCobrarModel.FK__PagoDet__66161CA2" FromRole="PagoCab" ToRole="PagoDet" />
+  </EntityType>
+  <EntityType Name="PagoDet">
+    <Key>
+      <PropertyRef Name="NumLinea" />
+      <PropertyRef Name="NumPago" />
+    </Key>
+    <Property Name="NumLinea" Type="Int32" Nullable="false" />
+    <Property Name="IdMedioPago" Type="Int32" Nullable="false" />
+    <Property Name="Monto" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+    <Property Name="NumeroCuenta" Type="Int32" Nullable="false" />
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="IdBanco" Type="Int32" Nullable="false" />
+    <Property Name="NumComprobante" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+    <Property Name="NumComision" Type="Int32" />
+    <Property Name="NumNominaCab" Type="Int32" />
+    <Property Name="NumPago" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__PagoDet__IdBanco__6ADAD1BF" FromRole="PagoDet" ToRole="Banco" />
+    <NavigationProperty Name="MedioPago" Relationship="CuentasPorCobrarModel.FK__PagoDet__68F2894D" FromRole="PagoDet" ToRole="MedioPago" />
+    <NavigationProperty Name="PagoCab" Relationship="CuentasPorCobrarModel.FK__PagoDet__66161CA2" FromRole="PagoDet" ToRole="PagoCab" />
+  </EntityType>
+  <EntityType Name="ClienteDefactura">
+    <Key>
+      <PropertyRef Name="IdNumeroCliente" />
+    </Key>
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="IdNumeroCliente" Type="Int32" Nullable="false" />
+    <Property Name="Identificacion" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="NombreRazonSocial" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Apellido" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FechaNacimiento" Type="DateTime" />
+    <Property Name="Genero" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Direccion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Telefono" Type="Int32" Nullable="false" />
+    <Property Name="Celular" Type="Int32" Nullable="false" />
+    <Property Name="CorreoElectronico" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__ClienteDe__IdEmp__23BE4960" FromRole="ClienteDefactura" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__ClienteDe__idEst__25A691D2" FromRole="ClienteDefactura" ToRole="Estado" />
+    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__ClienteDe__idUsu__24B26D99" FromRole="ClienteDefactura" ToRole="Usuario" />
+    <NavigationProperty Name="Factura" Relationship="CuentasPorCobrarModel.FK__Factura__IdNumer__4AD81681" FromRole="ClienteDefactura" ToRole="Factura" />
   </EntityType>
   <EntityType Name="Factura">
     <Key>
@@ -610,13 +652,10 @@
     <Property Name="Descuento" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="TotalPagar" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="idEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Cobro" Relationship="CuentasPorCobrarModel.FK__Cobro__idFactura__7E22B05D" FromRole="Factura" ToRole="Cobro" />
-    <NavigationProperty Name="Cobro1" Relationship="CuentasPorCobrarModel.FK__Cobro__idTransac__7D2E8C24" FromRole="Factura" ToRole="Cobro" />
-    <NavigationProperty Name="CuentaxCobrar" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idFac__6DEC4894" FromRole="Factura" ToRole="CuentaxCobrar" />
-    <NavigationProperty Name="CuentaxCobrar1" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idTra__6CF8245B" FromRole="Factura" ToRole="CuentaxCobrar" />
-    <NavigationProperty Name="MovimientoBancario" Relationship="CuentasPorCobrarModel.FK__Movimient__idTra__45DE573A" FromRole="Factura" ToRole="MovimientoBancario" />
-    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__Factura__idEstad__4F9CCB9E" FromRole="Factura" ToRole="Estado" />
-    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__Factura__idUsuar__4EA8A765" FromRole="Factura" ToRole="Usuario" />
+    <NavigationProperty Name="MovimientoBancario" Relationship="CuentasPorCobrarModel.FK__Movimient__idTra__542C7691" FromRole="Factura" ToRole="MovimientoBancario" />
+    <NavigationProperty Name="ClienteDefactura" Relationship="CuentasPorCobrarModel.FK__Factura__IdNumer__4AD81681" FromRole="Factura" ToRole="ClienteDefactura" />
+    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__Factura__idEstad__4EA8A765" FromRole="Factura" ToRole="Estado" />
+    <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__Factura__idUsuar__4DB4832C" FromRole="Factura" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="Persona">
     <Key>
@@ -638,9 +677,8 @@
     <Property Name="TelefonoOtros" Type="Decimal" Precision="14" Scale="0" />
     <Property Name="mail" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Cobro" Relationship="CuentasPorCobrarModel.FK__Cobro__idCliente__7F16D496" FromRole="Persona" ToRole="Cobro" />
-    <NavigationProperty Name="CuentaBancaria" Relationship="CuentasPorCobrarModel.FK__CuentaBan__idTit__5EAA0504" FromRole="Persona" ToRole="CuentaBancaria" />
-    <NavigationProperty Name="Inversion" Relationship="CuentasPorCobrarModel.FK__Inversion__idEnt__4E739D3B" FromRole="Persona" ToRole="Inversion" />
+    <NavigationProperty Name="CuentaBancaria" Relationship="CuentasPorCobrarModel.FK__CuentaBan__idTit__6CF8245B" FromRole="Persona" ToRole="CuentaBancaria" />
+    <NavigationProperty Name="Inversion" Relationship="CuentasPorCobrarModel.FK__Inversion__idEnt__5CC1BC92" FromRole="Persona" ToRole="Inversion" />
     <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Persona__IdEmpre__1BFD2C07" FromRole="Persona" ToRole="Empresa" />
     <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__Usuario__IdUsuar__3C69FB99" FromRole="Persona" ToRole="Usuario" />
   </EntityType>
@@ -660,25 +698,27 @@
     <Property Name="Sector" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
     <Property Name="Descripcion" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="AperturaCaja" Relationship="CuentasPorCobrarModel.FK__AperturaC__idEmp__5614BF03" FromRole="Empresa" ToRole="AperturaCaja" />
-    <NavigationProperty Name="AperturaDet" Relationship="CuentasPorCobrarModel.FK__AperturaD__idEmp__10416098" FromRole="Empresa" ToRole="AperturaDet" />
-    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__Banco__idEmpresa__39788055" FromRole="Empresa" ToRole="Banco" />
-    <NavigationProperty Name="CierreCaja" Relationship="CuentasPorCobrarModel.FK__CierreCaj__idEmp__2E06CDA9" FromRole="Empresa" ToRole="CierreCaja" />
-    <NavigationProperty Name="Cobro" Relationship="CuentasPorCobrarModel.FK__Cobro__idEmpresa__7B4643B2" FromRole="Empresa" ToRole="Cobro" />
-    <NavigationProperty Name="CobroDet" Relationship="CuentasPorCobrarModel.FK__CobroDet__idEmpr__06B7F65E" FromRole="Empresa" ToRole="CobroDet" />
-    <NavigationProperty Name="ConciliacionBancaria" Relationship="CuentasPorCobrarModel.FK__Conciliac__idEmp__636EBA21" FromRole="Empresa" ToRole="ConciliacionBancaria" />
-    <NavigationProperty Name="CuentaBancaria" Relationship="CuentasPorCobrarModel.FK__CuentaBan__idEmp__5CC1BC92" FromRole="Empresa" ToRole="CuentaBancaria" />
-    <NavigationProperty Name="CuentaxCobrar" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idEmp__6B0FDBE9" FromRole="Empresa" ToRole="CuentaxCobrar" />
-    <NavigationProperty Name="CuentaxCobrarDet" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idEmp__74994623" FromRole="Empresa" ToRole="CuentaxCobrarDet" />
-    <NavigationProperty Name="Inversion" Relationship="CuentasPorCobrarModel.FK__Inversion__idEmp__4C8B54C9" FromRole="Empresa" ToRole="Inversion" />
-    <NavigationProperty Name="MonetarioDet" Relationship="CuentasPorCobrarModel.FK__Monetario__idEmp__2942188C" FromRole="Empresa" ToRole="MonetarioDet" />
-    <NavigationProperty Name="MovimientoBancario" Relationship="CuentasPorCobrarModel.FK__Movimient__idEmp__43F60EC8" FromRole="Empresa" ToRole="MovimientoBancario" />
-    <NavigationProperty Name="TarjetaCredito" Relationship="CuentasPorCobrarModel.FK__TarjetaCr__idEmp__3E3D3572" FromRole="Empresa" ToRole="TarjetaCredito" />
-    <NavigationProperty Name="TipoInversion" Relationship="CuentasPorCobrarModel.FK__TipoInver__idEmp__34B3CB38" FromRole="Empresa" ToRole="TipoInversion" />
-    <NavigationProperty Name="UnidadTiempo" Relationship="CuentasPorCobrarModel.FK__UnidadTie__idEmp__247D636F" FromRole="Empresa" ToRole="UnidadTiempo" />
-    <NavigationProperty Name="MedioPago" Relationship="CuentasPorCobrarModel.FK__MedioPago__IdEmp__1EC48A19" FromRole="Empresa" ToRole="MedioPago" />
+    <NavigationProperty Name="AperturaCaja" Relationship="CuentasPorCobrarModel.FK__AperturaC__idEmp__6462DE5A" FromRole="Empresa" ToRole="AperturaCaja" />
+    <NavigationProperty Name="AperturaDet" Relationship="CuentasPorCobrarModel.FK__AperturaD__idEmp__113584D1" FromRole="Empresa" ToRole="AperturaDet" />
+    <NavigationProperty Name="Banco" Relationship="CuentasPorCobrarModel.FK__Banco__idEmpresa__47C69FAC" FromRole="Empresa" ToRole="Banco" />
+    <NavigationProperty Name="CierreCaja" Relationship="CuentasPorCobrarModel.FK__CierreCaj__idEmp__3C54ED00" FromRole="Empresa" ToRole="CierreCaja" />
+    <NavigationProperty Name="Cobro" Relationship="CuentasPorCobrarModel.FK__Cobro__idEmpresa__000AF8CF" FromRole="Empresa" ToRole="Cobro" />
+    <NavigationProperty Name="ConciliacionBancaria" Relationship="CuentasPorCobrarModel.FK__Conciliac__idEmp__71BCD978" FromRole="Empresa" ToRole="ConciliacionBancaria" />
+    <NavigationProperty Name="CuentaBancaria" Relationship="CuentasPorCobrarModel.FK__CuentaBan__idEmp__6B0FDBE9" FromRole="Empresa" ToRole="CuentaBancaria" />
+    <NavigationProperty Name="CuentaxCobrar" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idEmp__795DFB40" FromRole="Empresa" ToRole="CuentaxCobrar" />
+    <NavigationProperty Name="Inversion" Relationship="CuentasPorCobrarModel.FK__Inversion__idEmp__5AD97420" FromRole="Empresa" ToRole="Inversion" />
+    <NavigationProperty Name="MonetarioDet" Relationship="CuentasPorCobrarModel.FK__Monetario__idEmp__379037E3" FromRole="Empresa" ToRole="MonetarioDet" />
+    <NavigationProperty Name="MovimientoBancario" Relationship="CuentasPorCobrarModel.FK__Movimient__idEmp__52442E1F" FromRole="Empresa" ToRole="MovimientoBancario" />
+    <NavigationProperty Name="TarjetaCredito" Relationship="CuentasPorCobrarModel.FK__TarjetaCr__idEmp__4C8B54C9" FromRole="Empresa" ToRole="TarjetaCredito" />
+    <NavigationProperty Name="TipoInversion" Relationship="CuentasPorCobrarModel.FK__TipoInver__idEmp__4301EA8F" FromRole="Empresa" ToRole="TipoInversion" />
+    <NavigationProperty Name="UnidadTiempo" Relationship="CuentasPorCobrarModel.FK__UnidadTie__idEmp__32CB82C6" FromRole="Empresa" ToRole="UnidadTiempo" />
+    <NavigationProperty Name="MedioPago" Relationship="CuentasPorCobrarModel.FK__MedioPago__IdEmp__2D12A970" FromRole="Empresa" ToRole="MedioPago" />
+    <NavigationProperty Name="PagoCab" Relationship="CuentasPorCobrarModel.FK__PagoCab__IdEmpre__605D434C" FromRole="Empresa" ToRole="PagoCab" />
+    <NavigationProperty Name="ClienteDefactura" Relationship="CuentasPorCobrarModel.FK__ClienteDe__IdEmp__23BE4960" FromRole="Empresa" ToRole="ClienteDefactura" />
     <NavigationProperty Name="Persona" Relationship="CuentasPorCobrarModel.FK__Persona__IdEmpre__1BFD2C07" FromRole="Empresa" ToRole="Persona" />
     <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__Empresa__IdEstad__0CBAE877" FromRole="Empresa" ToRole="Estado" />
+    <NavigationProperty Name="Liquidacion" Relationship="CuentasPorCobrarModel.FK__Liquidaci__IdEmp__0524B3A7" FromRole="Empresa" ToRole="Liquidacion" />
+    <NavigationProperty Name="OrdenTrabajo" Relationship="CuentasPorCobrarModel.FK__OrdenTrab__IdEmp__65AC084E" FromRole="Empresa" ToRole="OrdenTrabajo" />
   </EntityType>
   <EntityType Name="Estado">
     <Key>
@@ -686,17 +726,16 @@
     </Key>
     <Property Name="IdEstado" Type="Int32" Nullable="false" />
     <Property Name="Descripcion" Type="String" MaxLength="220" Unicode="false" FixedLength="false" />
-    <NavigationProperty Name="AperturaCaja" Relationship="CuentasPorCobrarModel.FK__AperturaC__idEst__57FD0775" FromRole="Estado" ToRole="AperturaCaja" />
-    <NavigationProperty Name="AperturaDet" Relationship="CuentasPorCobrarModel.FK__AperturaD__idEst__131DCD43" FromRole="Estado" ToRole="AperturaDet" />
-    <NavigationProperty Name="CierreCaja" Relationship="CuentasPorCobrarModel.FK__CierreCaj__idEst__2FEF161B" FromRole="Estado" ToRole="CierreCaja" />
-    <NavigationProperty Name="Cobro" Relationship="CuentasPorCobrarModel.FK__Cobro__idEstado__01F34141" FromRole="Estado" ToRole="Cobro" />
-    <NavigationProperty Name="CobroDet" Relationship="CuentasPorCobrarModel.FK__CobroDet__idEsta__0B7CAB7B" FromRole="Estado" ToRole="CobroDet" />
-    <NavigationProperty Name="ConciliacionBancaria" Relationship="CuentasPorCobrarModel.FK__Conciliac__idEst__664B26CC" FromRole="Estado" ToRole="ConciliacionBancaria" />
-    <NavigationProperty Name="CuentaxCobrar" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idEst__6FD49106" FromRole="Estado" ToRole="CuentaxCobrar" />
-    <NavigationProperty Name="CuentaxCobrarDet" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idEst__76818E95" FromRole="Estado" ToRole="CuentaxCobrarDet" />
-    <NavigationProperty Name="MovimientoBancario" Relationship="CuentasPorCobrarModel.FK__Movimient__idEst__47C69FAC" FromRole="Estado" ToRole="MovimientoBancario" />
-    <NavigationProperty Name="Factura" Relationship="CuentasPorCobrarModel.FK__Factura__idEstad__4F9CCB9E" FromRole="Estado" ToRole="Factura" />
+    <NavigationProperty Name="AperturaCaja" Relationship="CuentasPorCobrarModel.FK__AperturaC__idEst__664B26CC" FromRole="Estado" ToRole="AperturaCaja" />
+    <NavigationProperty Name="AperturaDet" Relationship="CuentasPorCobrarModel.FK__AperturaD__idEst__1411F17C" FromRole="Estado" ToRole="AperturaDet" />
+    <NavigationProperty Name="CierreCaja" Relationship="CuentasPorCobrarModel.FK__CierreCaj__idEst__3E3D3572" FromRole="Estado" ToRole="CierreCaja" />
+    <NavigationProperty Name="ConciliacionBancaria" Relationship="CuentasPorCobrarModel.FK__Conciliac__idEst__74994623" FromRole="Estado" ToRole="ConciliacionBancaria" />
+    <NavigationProperty Name="MovimientoBancario" Relationship="CuentasPorCobrarModel.FK__Movimient__idEst__5614BF03" FromRole="Estado" ToRole="MovimientoBancario" />
+    <NavigationProperty Name="ClienteDefactura" Relationship="CuentasPorCobrarModel.FK__ClienteDe__idEst__25A691D2" FromRole="Estado" ToRole="ClienteDefactura" />
+    <NavigationProperty Name="Factura" Relationship="CuentasPorCobrarModel.FK__Factura__idEstad__4EA8A765" FromRole="Estado" ToRole="Factura" />
     <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Empresa__IdEstad__0CBAE877" FromRole="Estado" ToRole="Empresa" />
+    <NavigationProperty Name="Liquidacion" Relationship="CuentasPorCobrarModel.FK__Liquidaci__IdEst__04308F6E" FromRole="Estado" ToRole="Liquidacion" />
+    <NavigationProperty Name="OrdenTrabajo" Relationship="CuentasPorCobrarModel.FK__OrdenTrab__IdEst__64B7E415" FromRole="Estado" ToRole="OrdenTrabajo" />
     <NavigationProperty Name="Usuario" Relationship="CuentasPorCobrarModel.FK__Usuario__IdEstad__3A81B327" FromRole="Estado" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="Usuario">
@@ -709,22 +748,69 @@
     <Property Name="IdEstado" Type="Int32" />
     <Property Name="IdImagen" Type="Int32" />
     <Property Name="IdPerfil" Type="Int32" />
-    <NavigationProperty Name="AperturaCaja" Relationship="CuentasPorCobrarModel.FK__AperturaC__idUsu__5708E33C" FromRole="Usuario" ToRole="AperturaCaja" />
-    <NavigationProperty Name="AperturaDet" Relationship="CuentasPorCobrarModel.FK__AperturaD__IdUsu__113584D1" FromRole="Usuario" ToRole="AperturaDet" />
-    <NavigationProperty Name="CierreCaja" Relationship="CuentasPorCobrarModel.FK__CierreCaj__idUsu__2EFAF1E2" FromRole="Usuario" ToRole="CierreCaja" />
-    <NavigationProperty Name="Cobro" Relationship="CuentasPorCobrarModel.FK__Cobro__idUsuario__7C3A67EB" FromRole="Usuario" ToRole="Cobro" />
-    <NavigationProperty Name="CobroDet" Relationship="CuentasPorCobrarModel.FK__CobroDet__idUsua__07AC1A97" FromRole="Usuario" ToRole="CobroDet" />
-    <NavigationProperty Name="ConciliacionBancaria" Relationship="CuentasPorCobrarModel.FK__Conciliac__idUsu__6462DE5A" FromRole="Usuario" ToRole="ConciliacionBancaria" />
-    <NavigationProperty Name="CuentaxCobrar" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idUsu__6C040022" FromRole="Usuario" ToRole="CuentaxCobrar" />
-    <NavigationProperty Name="CuentaxCobrarDet" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idUsu__758D6A5C" FromRole="Usuario" ToRole="CuentaxCobrarDet" />
-    <NavigationProperty Name="Inversion" Relationship="CuentasPorCobrarModel.FK__Inversion__idUsu__4D7F7902" FromRole="Usuario" ToRole="Inversion" />
-    <NavigationProperty Name="MovimientoBancario" Relationship="CuentasPorCobrarModel.FK__Movimient__idUsu__44EA3301" FromRole="Usuario" ToRole="MovimientoBancario" />
-    <NavigationProperty Name="MedioPago" Relationship="CuentasPorCobrarModel.FK__MedioPago__IdUsu__1FB8AE52" FromRole="Usuario" ToRole="MedioPago" />
-    <NavigationProperty Name="Factura" Relationship="CuentasPorCobrarModel.FK__Factura__idUsuar__4EA8A765" FromRole="Usuario" ToRole="Factura" />
+    <NavigationProperty Name="AperturaCaja" Relationship="CuentasPorCobrarModel.FK__AperturaC__idUsu__65570293" FromRole="Usuario" ToRole="AperturaCaja" />
+    <NavigationProperty Name="AperturaDet" Relationship="CuentasPorCobrarModel.FK__AperturaD__IdUsu__1229A90A" FromRole="Usuario" ToRole="AperturaDet" />
+    <NavigationProperty Name="CierreCaja" Relationship="CuentasPorCobrarModel.FK__CierreCaj__idUsu__3D491139" FromRole="Usuario" ToRole="CierreCaja" />
+    <NavigationProperty Name="Cobro" Relationship="CuentasPorCobrarModel.FK__Cobro__idUsuario__00FF1D08" FromRole="Usuario" ToRole="Cobro" />
+    <NavigationProperty Name="ConciliacionBancaria" Relationship="CuentasPorCobrarModel.FK__Conciliac__idUsu__72B0FDB1" FromRole="Usuario" ToRole="ConciliacionBancaria" />
+    <NavigationProperty Name="CuentaxCobrar" Relationship="CuentasPorCobrarModel.FK__CuentaxCo__idUsu__7A521F79" FromRole="Usuario" ToRole="CuentaxCobrar" />
+    <NavigationProperty Name="Inversion" Relationship="CuentasPorCobrarModel.FK__Inversion__idUsu__5BCD9859" FromRole="Usuario" ToRole="Inversion" />
+    <NavigationProperty Name="MovimientoBancario" Relationship="CuentasPorCobrarModel.FK__Movimient__idUsu__53385258" FromRole="Usuario" ToRole="MovimientoBancario" />
+    <NavigationProperty Name="MedioPago" Relationship="CuentasPorCobrarModel.FK__MedioPago__IdUsu__2E06CDA9" FromRole="Usuario" ToRole="MedioPago" />
+    <NavigationProperty Name="PagoCab" Relationship="CuentasPorCobrarModel.FK__PagoCab__IdUsuar__5F691F13" FromRole="Usuario" ToRole="PagoCab" />
+    <NavigationProperty Name="ClienteDefactura" Relationship="CuentasPorCobrarModel.FK__ClienteDe__idUsu__24B26D99" FromRole="Usuario" ToRole="ClienteDefactura" />
+    <NavigationProperty Name="Factura" Relationship="CuentasPorCobrarModel.FK__Factura__idUsuar__4DB4832C" FromRole="Usuario" ToRole="Factura" />
     <NavigationProperty Name="Persona" Relationship="CuentasPorCobrarModel.FK__Usuario__IdUsuar__3C69FB99" FromRole="Usuario" ToRole="Persona" />
     <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__Usuario__IdEstad__3A81B327" FromRole="Usuario" ToRole="Estado" />
   </EntityType>
-  <Association Name="FK__AperturaC__idEmp__5614BF03">
+  <EntityType Name="Liquidacion">
+    <Key>
+      <PropertyRef Name="IdLiquidacion" />
+    </Key>
+    <Property Name="IdLiquidacion" Type="Int32" Nullable="false" />
+    <Property Name="IdOrdenTrabajo" Type="Int32" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="TotalPagar" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IdFormaPago" Type="Int32" Nullable="false" />
+    <Property Name="NumeroCuotaMensual" Type="Int32" />
+    <Property Name="CuotaMensual" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FechaInicialPago" Type="DateTime" Nullable="false" />
+    <Property Name="FechaFinalPago" Type="DateTime" Nullable="false" />
+    <Property Name="Observacion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IdEstado" Type="Int32" Nullable="false" />
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__Liquidaci__IdEmp__0524B3A7" FromRole="Liquidacion" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__Liquidaci__IdEst__04308F6E" FromRole="Liquidacion" ToRole="Estado" />
+    <NavigationProperty Name="OrdenTrabajo" Relationship="CuentasPorCobrarModel.FK__Liquidaci__IdOrd__070CFC19" FromRole="Liquidacion" ToRole="OrdenTrabajo" />
+  </EntityType>
+  <EntityType Name="OrdenTrabajo">
+    <Key>
+      <PropertyRef Name="IdOrdenTrabajo" />
+    </Key>
+    <Property Name="IdOrdenTrabajo" Type="Int32" Nullable="false" />
+    <Property Name="IdPresupuesto" Type="Int32" Nullable="false" />
+    <Property Name="IdPersona" Type="Int32" Nullable="false" />
+    <Property Name="IdArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Kilometraje" Type="Int32" Nullable="false" />
+    <Property Name="Deposito" Type="Int32" Nullable="false" />
+    <Property Name="FechaRecepcion" Type="DateTime" Nullable="false" />
+    <Property Name="InicioReparacion" Type="DateTime" Nullable="false" />
+    <Property Name="FechaIngreso" Type="DateTime" Nullable="false" />
+    <Property Name="FechaEntrega" Type="DateTime" Nullable="false" />
+    <Property Name="IvaTrabajos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TotalTrabajos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IvaRepuestos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TotalRepuestos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IvaOtros" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TotalOtros" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Observacion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IdEstado" Type="Int32" Nullable="false" />
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Empresa" Relationship="CuentasPorCobrarModel.FK__OrdenTrab__IdEmp__65AC084E" FromRole="OrdenTrabajo" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="CuentasPorCobrarModel.FK__OrdenTrab__IdEst__64B7E415" FromRole="OrdenTrabajo" ToRole="Estado" />
+    <NavigationProperty Name="Liquidacion" Relationship="CuentasPorCobrarModel.FK__Liquidaci__IdOrd__070CFC19" FromRole="OrdenTrabajo" ToRole="Liquidacion" />
+  </EntityType>
+  <Association Name="FK__AperturaC__idEmp__6462DE5A">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="AperturaCaja" Type="CuentasPorCobrarModel.AperturaCaja" Multiplicity="*" />
     <ReferentialConstraint>
@@ -736,7 +822,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__AperturaC__idEst__57FD0775">
+  <Association Name="FK__AperturaC__idEst__664B26CC">
     <End Role="Estado" Type="CuentasPorCobrarModel.Estado" Multiplicity="1" />
     <End Role="AperturaCaja" Type="CuentasPorCobrarModel.AperturaCaja" Multiplicity="*" />
     <ReferentialConstraint>
@@ -748,7 +834,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__AperturaC__idUsu__5708E33C">
+  <Association Name="FK__AperturaC__idUsu__65570293">
     <End Role="Usuario" Type="CuentasPorCobrarModel.Usuario" Multiplicity="1" />
     <End Role="AperturaCaja" Type="CuentasPorCobrarModel.AperturaCaja" Multiplicity="*" />
     <ReferentialConstraint>
@@ -760,7 +846,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__AperturaD__idApe__1229A90A">
+  <Association Name="FK__AperturaD__idApe__131DCD43">
     <End Role="AperturaCaja" Type="CuentasPorCobrarModel.AperturaCaja" Multiplicity="1" />
     <End Role="AperturaDet" Type="CuentasPorCobrarModel.AperturaDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -772,7 +858,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__AperturaD__idEmp__10416098">
+  <Association Name="FK__AperturaD__idEmp__113584D1">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="AperturaDet" Type="CuentasPorCobrarModel.AperturaDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -784,7 +870,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__AperturaD__idEst__131DCD43">
+  <Association Name="FK__AperturaD__idEst__1411F17C">
     <End Role="Estado" Type="CuentasPorCobrarModel.Estado" Multiplicity="1" />
     <End Role="AperturaDet" Type="CuentasPorCobrarModel.AperturaDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -796,7 +882,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__AperturaD__IdUsu__113584D1">
+  <Association Name="FK__AperturaD__IdUsu__1229A90A">
     <End Role="Usuario" Type="CuentasPorCobrarModel.Usuario" Multiplicity="1" />
     <End Role="AperturaDet" Type="CuentasPorCobrarModel.AperturaDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -808,7 +894,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Banco__idEmpresa__39788055">
+  <Association Name="FK__Banco__idEmpresa__47C69FAC">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="Banco" Type="CuentasPorCobrarModel.Banco" Multiplicity="*" />
     <ReferentialConstraint>
@@ -820,7 +906,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CobroDet__idBanc__09946309">
+  <Association Name="FK__CobroDet__idBanc__0B7CAB7B">
     <End Role="Banco" Type="CuentasPorCobrarModel.Banco" Multiplicity="1" />
     <End Role="CobroDet" Type="CuentasPorCobrarModel.CobroDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -832,7 +918,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Conciliac__idBan__65570293">
+  <Association Name="FK__Conciliac__idBan__73A521EA">
     <End Role="Banco" Type="CuentasPorCobrarModel.Banco" Multiplicity="1" />
     <End Role="ConciliacionBancaria" Type="CuentasPorCobrarModel.ConciliacionBancaria" Multiplicity="*" />
     <ReferentialConstraint>
@@ -844,7 +930,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CuentaBan__idBan__5DB5E0CB">
+  <Association Name="FK__CuentaBan__idBan__6C040022">
     <End Role="Banco" Type="CuentasPorCobrarModel.Banco" Multiplicity="1" />
     <End Role="CuentaBancaria" Type="CuentasPorCobrarModel.CuentaBancaria" Multiplicity="*" />
     <ReferentialConstraint>
@@ -856,8 +942,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Inversion__idBan__070CFC19">
-    <End Role="Banco" Type="CuentasPorCobrarModel.Banco" Multiplicity="1" />
+  <Association Name="FK__Inversion__idBan__5F9E293D">
+    <End Role="Banco" Type="CuentasPorCobrarModel.Banco" Multiplicity="0..1" />
     <End Role="Inversion" Type="CuentasPorCobrarModel.Inversion" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Banco">
@@ -868,7 +954,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Movimient__idBan__46D27B73">
+  <Association Name="FK__Movimient__idBan__55209ACA">
     <End Role="Banco" Type="CuentasPorCobrarModel.Banco" Multiplicity="1" />
     <End Role="MovimientoBancario" Type="CuentasPorCobrarModel.MovimientoBancario" Multiplicity="*" />
     <ReferentialConstraint>
@@ -880,7 +966,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TarjetaCr__idBan__3F3159AB">
+  <Association Name="FK__PagoDet__IdBanco__6ADAD1BF">
+    <End Role="Banco" Type="CuentasPorCobrarModel.Banco" Multiplicity="1" />
+    <End Role="PagoDet" Type="CuentasPorCobrarModel.PagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banco">
+        <PropertyRef Name="idBanco" />
+      </Principal>
+      <Dependent Role="PagoDet">
+        <PropertyRef Name="IdBanco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TarjetaCr__idBan__4D7F7902">
     <End Role="Banco" Type="CuentasPorCobrarModel.Banco" Multiplicity="1" />
     <End Role="TarjetaCredito" Type="CuentasPorCobrarModel.TarjetaCredito" Multiplicity="*" />
     <ReferentialConstraint>
@@ -892,7 +990,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CierreCaj__idEmp__2E06CDA9">
+  <Association Name="FK__CierreCaj__idEmp__3C54ED00">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="CierreCaja" Type="CuentasPorCobrarModel.CierreCaja" Multiplicity="*" />
     <ReferentialConstraint>
@@ -904,7 +1002,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CierreCaj__idEst__2FEF161B">
+  <Association Name="FK__CierreCaj__idEst__3E3D3572">
     <End Role="Estado" Type="CuentasPorCobrarModel.Estado" Multiplicity="1" />
     <End Role="CierreCaja" Type="CuentasPorCobrarModel.CierreCaja" Multiplicity="*" />
     <ReferentialConstraint>
@@ -916,7 +1014,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CierreCaj__idUsu__2EFAF1E2">
+  <Association Name="FK__CierreCaj__idUsu__3D491139">
     <End Role="Usuario" Type="CuentasPorCobrarModel.Usuario" Multiplicity="1" />
     <End Role="CierreCaja" Type="CuentasPorCobrarModel.CierreCaja" Multiplicity="*" />
     <ReferentialConstraint>
@@ -928,33 +1026,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Cobro__00FF1D08">
-    <End Role="CuentaxCobrarDet" Type="CuentasPorCobrarModel.CuentaxCobrarDet" Multiplicity="1" />
-    <End Role="Cobro" Type="CuentasPorCobrarModel.Cobro" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CuentaxCobrarDet">
-        <PropertyRef Name="idCuentaxCobrar" />
-        <PropertyRef Name="Numero" />
-      </Principal>
-      <Dependent Role="Cobro">
-        <PropertyRef Name="idCuentaxCobrar" />
-        <PropertyRef Name="numeroCuentaxCobrar" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Cobro__idCliente__7F16D496">
-    <End Role="Persona" Type="CuentasPorCobrarModel.Persona" Multiplicity="1" />
-    <End Role="Cobro" Type="CuentasPorCobrarModel.Cobro" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Persona">
-        <PropertyRef Name="IdPersona" />
-      </Principal>
-      <Dependent Role="Cobro">
-        <PropertyRef Name="idCliente" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Cobro__idEmpresa__7B4643B2">
+  <Association Name="FK__Cobro__idEmpresa__000AF8CF">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="Cobro" Type="CuentasPorCobrarModel.Cobro" Multiplicity="*" />
     <ReferentialConstraint>
@@ -966,43 +1038,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Cobro__idEstado__01F34141">
-    <End Role="Estado" Type="CuentasPorCobrarModel.Estado" Multiplicity="1" />
-    <End Role="Cobro" Type="CuentasPorCobrarModel.Cobro" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Estado">
-        <PropertyRef Name="IdEstado" />
-      </Principal>
-      <Dependent Role="Cobro">
-        <PropertyRef Name="idEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Cobro__idFactura__7E22B05D">
-    <End Role="Factura" Type="CuentasPorCobrarModel.Factura" Multiplicity="1" />
-    <End Role="Cobro" Type="CuentasPorCobrarModel.Cobro" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Factura">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Principal>
-      <Dependent Role="Cobro">
-        <PropertyRef Name="idFactura" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Cobro__idTransac__7D2E8C24">
-    <End Role="Factura" Type="CuentasPorCobrarModel.Factura" Multiplicity="1" />
-    <End Role="Cobro" Type="CuentasPorCobrarModel.Cobro" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Factura">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Principal>
-      <Dependent Role="Cobro">
-        <PropertyRef Name="idTransaccion" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Cobro__idUsuario__7C3A67EB">
+  <Association Name="FK__Cobro__idUsuario__00FF1D08">
     <End Role="Usuario" Type="CuentasPorCobrarModel.Usuario" Multiplicity="1" />
     <End Role="Cobro" Type="CuentasPorCobrarModel.Cobro" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1014,7 +1050,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CobroDet__idCobr__08A03ED0">
+  <Association Name="FK__CobroDet__idCobr__0A888742">
     <End Role="Cobro" Type="CuentasPorCobrarModel.Cobro" Multiplicity="1" />
     <End Role="CobroDet" Type="CuentasPorCobrarModel.CobroDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1026,7 +1062,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CobroDet__0A888742">
+  <Association Name="FK__CobroDet__0C70CFB4">
     <End Role="MedioPago" Type="CuentasPorCobrarModel.MedioPago" Multiplicity="1" />
     <End Role="CobroDet" Type="CuentasPorCobrarModel.CobroDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1040,43 +1076,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CobroDet__idEmpr__06B7F65E">
-    <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
-    <End Role="CobroDet" Type="CuentasPorCobrarModel.CobroDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="CobroDet">
-        <PropertyRef Name="idEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CobroDet__idEsta__0B7CAB7B">
-    <End Role="Estado" Type="CuentasPorCobrarModel.Estado" Multiplicity="1" />
-    <End Role="CobroDet" Type="CuentasPorCobrarModel.CobroDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Estado">
-        <PropertyRef Name="IdEstado" />
-      </Principal>
-      <Dependent Role="CobroDet">
-        <PropertyRef Name="idEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CobroDet__idUsua__07AC1A97">
-    <End Role="Usuario" Type="CuentasPorCobrarModel.Usuario" Multiplicity="1" />
-    <End Role="CobroDet" Type="CuentasPorCobrarModel.CobroDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="CobroDet">
-        <PropertyRef Name="idUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Conciliac__idEmp__636EBA21">
+  <Association Name="FK__Conciliac__idEmp__71BCD978">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="ConciliacionBancaria" Type="CuentasPorCobrarModel.ConciliacionBancaria" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1088,7 +1088,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Conciliac__idEst__664B26CC">
+  <Association Name="FK__Conciliac__idEst__74994623">
     <End Role="Estado" Type="CuentasPorCobrarModel.Estado" Multiplicity="1" />
     <End Role="ConciliacionBancaria" Type="CuentasPorCobrarModel.ConciliacionBancaria" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1100,7 +1100,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Conciliac__idUsu__6462DE5A">
+  <Association Name="FK__Conciliac__idUsu__72B0FDB1">
     <End Role="Usuario" Type="CuentasPorCobrarModel.Usuario" Multiplicity="1" />
     <End Role="ConciliacionBancaria" Type="CuentasPorCobrarModel.ConciliacionBancaria" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1112,7 +1112,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CuentaBan__idEmp__5CC1BC92">
+  <Association Name="FK__CuentaBan__idEmp__6B0FDBE9">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="CuentaBancaria" Type="CuentasPorCobrarModel.CuentaBancaria" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1124,7 +1124,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CuentaBan__idTit__5EAA0504">
+  <Association Name="FK__CuentaBan__idTit__6CF8245B">
     <End Role="Persona" Type="CuentasPorCobrarModel.Persona" Multiplicity="0..1" />
     <End Role="CuentaBancaria" Type="CuentasPorCobrarModel.CuentaBancaria" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1136,7 +1136,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CuentaxCo__idEmp__6B0FDBE9">
+  <Association Name="FK__CuentaxCo__idEmp__795DFB40">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="CuentaxCobrar" Type="CuentasPorCobrarModel.CuentaxCobrar" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1148,43 +1148,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CuentaxCo__idEst__6FD49106">
-    <End Role="Estado" Type="CuentasPorCobrarModel.Estado" Multiplicity="1" />
-    <End Role="CuentaxCobrar" Type="CuentasPorCobrarModel.CuentaxCobrar" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Estado">
-        <PropertyRef Name="IdEstado" />
-      </Principal>
-      <Dependent Role="CuentaxCobrar">
-        <PropertyRef Name="idEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idFac__6DEC4894">
-    <End Role="Factura" Type="CuentasPorCobrarModel.Factura" Multiplicity="1" />
-    <End Role="CuentaxCobrar" Type="CuentasPorCobrarModel.CuentaxCobrar" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Factura">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Principal>
-      <Dependent Role="CuentaxCobrar">
-        <PropertyRef Name="idFactura" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idTra__6CF8245B">
-    <End Role="Factura" Type="CuentasPorCobrarModel.Factura" Multiplicity="1" />
-    <End Role="CuentaxCobrar" Type="CuentasPorCobrarModel.CuentaxCobrar" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Factura">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Principal>
-      <Dependent Role="CuentaxCobrar">
-        <PropertyRef Name="idTransaccion" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idUsu__6C040022">
+  <Association Name="FK__CuentaxCo__idUsu__7A521F79">
     <End Role="Usuario" Type="CuentasPorCobrarModel.Usuario" Multiplicity="1" />
     <End Role="CuentaxCobrar" Type="CuentasPorCobrarModel.CuentaxCobrar" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1196,43 +1160,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CuentaxCo__idEmp__74994623">
-    <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
-    <End Role="CuentaxCobrarDet" Type="CuentasPorCobrarModel.CuentaxCobrarDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="CuentaxCobrarDet">
-        <PropertyRef Name="idEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idEst__76818E95">
-    <End Role="Estado" Type="CuentasPorCobrarModel.Estado" Multiplicity="1" />
-    <End Role="CuentaxCobrarDet" Type="CuentasPorCobrarModel.CuentaxCobrarDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Estado">
-        <PropertyRef Name="IdEstado" />
-      </Principal>
-      <Dependent Role="CuentaxCobrarDet">
-        <PropertyRef Name="idEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idUsu__758D6A5C">
-    <End Role="Usuario" Type="CuentasPorCobrarModel.Usuario" Multiplicity="1" />
-    <End Role="CuentaxCobrarDet" Type="CuentasPorCobrarModel.CuentaxCobrarDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="CuentaxCobrarDet">
-        <PropertyRef Name="idUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Inversion__idEmp__4C8B54C9">
+  <Association Name="FK__Inversion__idEmp__5AD97420">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="Inversion" Type="CuentasPorCobrarModel.Inversion" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1244,7 +1172,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Inversion__idEnt__4E739D3B">
+  <Association Name="FK__Inversion__idEnt__5CC1BC92">
     <End Role="Persona" Type="CuentasPorCobrarModel.Persona" Multiplicity="1" />
     <End Role="Inversion" Type="CuentasPorCobrarModel.Inversion" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1256,7 +1184,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Inversion__idTip__4F67C174">
+  <Association Name="FK__Inversion__idTip__5DB5E0CB">
     <End Role="TipoInversion" Type="CuentasPorCobrarModel.TipoInversion" Multiplicity="1" />
     <End Role="Inversion" Type="CuentasPorCobrarModel.Inversion" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1268,7 +1196,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Inversion__idUni__505BE5AD">
+  <Association Name="FK__Inversion__idUni__5EAA0504">
     <End Role="UnidadTiempo" Type="CuentasPorCobrarModel.UnidadTiempo" Multiplicity="1" />
     <End Role="Inversion" Type="CuentasPorCobrarModel.Inversion" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1280,7 +1208,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Inversion__idUsu__4D7F7902">
+  <Association Name="FK__Inversion__idUsu__5BCD9859">
     <End Role="Usuario" Type="CuentasPorCobrarModel.Usuario" Multiplicity="1" />
     <End Role="Inversion" Type="CuentasPorCobrarModel.Inversion" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1292,7 +1220,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Monetario__idEmp__2942188C">
+  <Association Name="FK__Monetario__idEmp__379037E3">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="MonetarioDet" Type="CuentasPorCobrarModel.MonetarioDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1304,7 +1232,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Movimient__idEmp__43F60EC8">
+  <Association Name="FK__Movimient__idEmp__52442E1F">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="MovimientoBancario" Type="CuentasPorCobrarModel.MovimientoBancario" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1316,7 +1244,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Movimient__idEst__47C69FAC">
+  <Association Name="FK__Movimient__idEst__5614BF03">
     <End Role="Estado" Type="CuentasPorCobrarModel.Estado" Multiplicity="1" />
     <End Role="MovimientoBancario" Type="CuentasPorCobrarModel.MovimientoBancario" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1328,7 +1256,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Movimient__idTra__45DE573A">
+  <Association Name="FK__Movimient__idTra__542C7691">
     <End Role="Factura" Type="CuentasPorCobrarModel.Factura" Multiplicity="1" />
     <End Role="MovimientoBancario" Type="CuentasPorCobrarModel.MovimientoBancario" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1340,7 +1268,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Movimient__idUsu__44EA3301">
+  <Association Name="FK__Movimient__idUsu__53385258">
     <End Role="Usuario" Type="CuentasPorCobrarModel.Usuario" Multiplicity="1" />
     <End Role="MovimientoBancario" Type="CuentasPorCobrarModel.MovimientoBancario" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1352,7 +1280,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TarjetaCr__idEmp__3E3D3572">
+  <Association Name="FK__TarjetaCr__idEmp__4C8B54C9">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="TarjetaCredito" Type="CuentasPorCobrarModel.TarjetaCredito" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1364,7 +1292,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TipoInver__idEmp__34B3CB38">
+  <Association Name="FK__TipoInver__idEmp__4301EA8F">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="TipoInversion" Type="CuentasPorCobrarModel.TipoInversion" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1376,7 +1304,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__UnidadTie__idEmp__247D636F">
+  <Association Name="FK__UnidadTie__idEmp__32CB82C6">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="UnidadTiempo" Type="CuentasPorCobrarModel.UnidadTiempo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1388,7 +1316,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__MedioPago__IdEmp__1EC48A19">
+  <Association Name="FK__MedioPago__IdEmp__2D12A970">
     <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
     <End Role="MedioPago" Type="CuentasPorCobrarModel.MedioPago" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1400,7 +1328,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__MedioPago__IdUsu__1FB8AE52">
+  <Association Name="FK__MedioPago__IdUsu__2E06CDA9">
     <End Role="Usuario" Type="CuentasPorCobrarModel.Usuario" Multiplicity="1" />
     <End Role="MedioPago" Type="CuentasPorCobrarModel.MedioPago" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1412,7 +1340,107 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Factura__idEstad__4F9CCB9E">
+  <Association Name="FK__PagoDet__68F2894D">
+    <End Role="MedioPago" Type="CuentasPorCobrarModel.MedioPago" Multiplicity="1" />
+    <End Role="PagoDet" Type="CuentasPorCobrarModel.PagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedioPago">
+        <PropertyRef Name="IdMedioPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="PagoDet">
+        <PropertyRef Name="IdMedioPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoCab__IdEmpre__605D434C">
+    <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
+    <End Role="PagoCab" Type="CuentasPorCobrarModel.PagoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="PagoCab">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoCab__IdUsuar__5F691F13">
+    <End Role="Usuario" Type="CuentasPorCobrarModel.Usuario" Multiplicity="1" />
+    <End Role="PagoCab" Type="CuentasPorCobrarModel.PagoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="PagoCab">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PagoDet__66161CA2">
+    <End Role="PagoCab" Type="CuentasPorCobrarModel.PagoCab" Multiplicity="1" />
+    <End Role="PagoDet" Type="CuentasPorCobrarModel.PagoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PagoCab">
+        <PropertyRef Name="NumPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="PagoDet">
+        <PropertyRef Name="NumPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ClienteDe__IdEmp__23BE4960">
+    <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
+    <End Role="ClienteDefactura" Type="CuentasPorCobrarModel.ClienteDefactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="ClienteDefactura">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ClienteDe__idEst__25A691D2">
+    <End Role="Estado" Type="CuentasPorCobrarModel.Estado" Multiplicity="1" />
+    <End Role="ClienteDefactura" Type="CuentasPorCobrarModel.ClienteDefactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="ClienteDefactura">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ClienteDe__idUsu__24B26D99">
+    <End Role="Usuario" Type="CuentasPorCobrarModel.Usuario" Multiplicity="1" />
+    <End Role="ClienteDefactura" Type="CuentasPorCobrarModel.ClienteDefactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="ClienteDefactura">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__IdNumer__4AD81681">
+    <End Role="ClienteDefactura" Type="CuentasPorCobrarModel.ClienteDefactura" Multiplicity="0..1" />
+    <End Role="Factura" Type="CuentasPorCobrarModel.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteDefactura">
+        <PropertyRef Name="IdNumeroCliente" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="IdNumeroCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__idEstad__4EA8A765">
     <End Role="Estado" Type="CuentasPorCobrarModel.Estado" Multiplicity="1" />
     <End Role="Factura" Type="CuentasPorCobrarModel.Factura" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1424,7 +1452,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Factura__idUsuar__4EA8A765">
+  <Association Name="FK__Factura__idUsuar__4DB4832C">
     <End Role="Usuario" Type="CuentasPorCobrarModel.Usuario" Multiplicity="1" />
     <End Role="Factura" Type="CuentasPorCobrarModel.Factura" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1476,6 +1504,54 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__Liquidaci__IdEmp__0524B3A7">
+    <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
+    <End Role="Liquidacion" Type="CuentasPorCobrarModel.Liquidacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Liquidacion">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenTrab__IdEmp__65AC084E">
+    <End Role="Empresa" Type="CuentasPorCobrarModel.Empresa" Multiplicity="1" />
+    <End Role="OrdenTrabajo" Type="CuentasPorCobrarModel.OrdenTrabajo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenTrabajo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Liquidaci__IdEst__04308F6E">
+    <End Role="Estado" Type="CuentasPorCobrarModel.Estado" Multiplicity="1" />
+    <End Role="Liquidacion" Type="CuentasPorCobrarModel.Liquidacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Liquidacion">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenTrab__IdEst__64B7E415">
+    <End Role="Estado" Type="CuentasPorCobrarModel.Estado" Multiplicity="1" />
+    <End Role="OrdenTrabajo" Type="CuentasPorCobrarModel.OrdenTrabajo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="OrdenTrabajo">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__Usuario__IdEstad__3A81B327">
     <End Role="Estado" Type="CuentasPorCobrarModel.Estado" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
@@ -1487,6 +1563,18 @@
       </Principal>
       <Dependent Role="Usuario">
         <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Liquidaci__IdOrd__070CFC19">
+    <End Role="OrdenTrabajo" Type="CuentasPorCobrarModel.OrdenTrabajo" Multiplicity="1" />
+    <End Role="Liquidacion" Type="CuentasPorCobrarModel.Liquidacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenTrabajo">
+        <PropertyRef Name="IdOrdenTrabajo" />
+      </Principal>
+      <Dependent Role="Liquidacion">
+        <PropertyRef Name="IdOrdenTrabajo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

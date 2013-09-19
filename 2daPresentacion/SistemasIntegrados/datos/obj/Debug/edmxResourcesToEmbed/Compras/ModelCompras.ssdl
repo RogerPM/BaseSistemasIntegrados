@@ -178,99 +178,111 @@
       [Vehiculo_Vista].[Estado] AS [Estado]
       FROM [Compras].[Vehiculo_Vista] AS [Vehiculo_Vista]</DefiningQuery>
     </EntitySet>
-    <AssociationSet Name="FK__Compra__1881A0DE" Association="CompraModelo.Store.FK__Compra__1881A0DE">
+    <EntitySet Name="OrdenCompraDetalleArticulo_Vista" EntityType="CompraModelo.Store.OrdenCompraDetalleArticulo_Vista" store:Type="Views" store:Schema="dbo" store:Name="OrdenCompraDetalleArticulo_Vista">
+      <DefiningQuery>SELECT 
+      [OrdenCompraDetalleArticulo_Vista].[Numero] AS [Numero], 
+      [OrdenCompraDetalleArticulo_Vista].[Linea] AS [Linea], 
+      [OrdenCompraDetalleArticulo_Vista].[idEmpresa] AS [idEmpresa], 
+      [OrdenCompraDetalleArticulo_Vista].[NombreComercial] AS [NombreComercial], 
+      [OrdenCompraDetalleArticulo_Vista].[NumeroPedido] AS [NumeroPedido], 
+      [OrdenCompraDetalleArticulo_Vista].[idArticulo] AS [idArticulo], 
+      [OrdenCompraDetalleArticulo_Vista].[Descripcion] AS [Descripcion], 
+      [OrdenCompraDetalleArticulo_Vista].[Cantidad] AS [Cantidad]
+      FROM [dbo].[OrdenCompraDetalleArticulo_Vista] AS [OrdenCompraDetalleArticulo_Vista]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Compra__178D7CA5" Association="CompraModelo.Store.FK__Compra__178D7CA5">
       <End Role="OrdenCompra" EntitySet="OrdenCompra" />
       <End Role="Compra" EntitySet="Compra" />
     </AssociationSet>
-    <AssociationSet Name="FK__Compra__idEstado__178D7CA5" Association="CompraModelo.Store.FK__Compra__idEstado__178D7CA5">
+    <AssociationSet Name="FK__Compra__idEstado__1699586C" Association="CompraModelo.Store.FK__Compra__idEstado__1699586C">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="Compra" EntitySet="Compra" />
     </AssociationSet>
-    <AssociationSet Name="FK__CompraDet__1D4655FB" Association="CompraModelo.Store.FK__CompraDet__1D4655FB">
+    <AssociationSet Name="FK__CompraDet__1C5231C2" Association="CompraModelo.Store.FK__CompraDet__1C5231C2">
       <End Role="Compra" EntitySet="Compra" />
       <End Role="CompraDet" EntitySet="CompraDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__Cotizacio__idEst__047AA831" Association="CompraModelo.Store.FK__Cotizacio__idEst__047AA831">
+    <AssociationSet Name="FK__Cotizacio__idEst__038683F8" Association="CompraModelo.Store.FK__Cotizacio__idEst__038683F8">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="Cotizacion" EntitySet="Cotizacion" />
     </AssociationSet>
-    <AssociationSet Name="FK__Cotizacio__idPro__038683F8" Association="CompraModelo.Store.FK__Cotizacio__idPro__038683F8">
+    <AssociationSet Name="FK__Cotizacio__idPro__02925FBF" Association="CompraModelo.Store.FK__Cotizacio__idPro__02925FBF">
       <End Role="Proveedor" EntitySet="Proveedor" />
       <End Role="Cotizacion" EntitySet="Cotizacion" />
     </AssociationSet>
-    <AssociationSet Name="FK__CotizacionDet__28A2FA0E" Association="CompraModelo.Store.FK__CotizacionDet__28A2FA0E">
+    <AssociationSet Name="FK__CotizacionDet__2B7F66B9" Association="CompraModelo.Store.FK__CotizacionDet__2B7F66B9">
       <End Role="Pedido" EntitySet="Pedido" />
       <End Role="CotizacionDet" EntitySet="CotizacionDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__Devolucio__idEst__6D823440" Association="CompraModelo.Store.FK__Devolucio__idEst__6D823440">
+    <AssociationSet Name="FK__Devolucio__idEst__705EA0EB" Association="CompraModelo.Store.FK__Devolucio__idEst__705EA0EB">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="DevolucionCompra" EntitySet="DevolucionCompra" />
     </AssociationSet>
-    <AssociationSet Name="FK__Devolucio__idPro__6E765879" Association="CompraModelo.Store.FK__Devolucio__idPro__6E765879">
+    <AssociationSet Name="FK__Devolucio__idPro__7152C524" Association="CompraModelo.Store.FK__Devolucio__idPro__7152C524">
       <End Role="Proveedor" EntitySet="Proveedor" />
       <End Role="DevolucionCompra" EntitySet="DevolucionCompra" />
     </AssociationSet>
-    <AssociationSet Name="FK__DevolucionCompra__733B0D96" Association="CompraModelo.Store.FK__DevolucionCompra__733B0D96">
+    <AssociationSet Name="FK__DevolucionCompra__76177A41" Association="CompraModelo.Store.FK__DevolucionCompra__76177A41">
       <End Role="DevolucionCompra" EntitySet="DevolucionCompra" />
       <End Role="DevolucionCompraDet" EntitySet="DevolucionCompraDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__NotaDebit__Canti__35FCF52C" Association="CompraModelo.Store.FK__NotaDebit__Canti__35FCF52C">
+    <AssociationSet Name="FK__NotaDebit__Canti__38D961D7" Association="CompraModelo.Store.FK__NotaDebit__Canti__38D961D7">
       <End Role="NotaDebito" EntitySet="NotaDebito" />
       <End Role="NotaDebitoDet" EntitySet="NotaDebitoDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__NotaDebit__idEst__3138400F" Association="CompraModelo.Store.FK__NotaDebit__idEst__3138400F">
+    <AssociationSet Name="FK__NotaDebit__idEst__3414ACBA" Association="CompraModelo.Store.FK__NotaDebit__idEst__3414ACBA">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="NotaDebito" EntitySet="NotaDebito" />
     </AssociationSet>
-    <AssociationSet Name="FK__NotaDebito__30441BD6" Association="CompraModelo.Store.FK__NotaDebito__30441BD6">
+    <AssociationSet Name="FK__NotaDebito__33208881" Association="CompraModelo.Store.FK__NotaDebito__33208881">
       <End Role="DevolucionCompra" EntitySet="DevolucionCompra" />
       <End Role="NotaDebito" EntitySet="NotaDebito" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrdenComp__idEst__0D0FEE32" Association="CompraModelo.Store.FK__OrdenComp__idEst__0D0FEE32">
+    <AssociationSet Name="FK__OrdenComp__idEst__0C1BC9F9" Association="CompraModelo.Store.FK__OrdenComp__idEst__0C1BC9F9">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="OrdenCompra" EntitySet="OrdenCompra" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrdenComp__idPro__0E04126B" Association="CompraModelo.Store.FK__OrdenComp__idPro__0E04126B">
+    <AssociationSet Name="FK__OrdenComp__idPro__0D0FEE32" Association="CompraModelo.Store.FK__OrdenComp__idPro__0D0FEE32">
       <End Role="Proveedor" EntitySet="Proveedor" />
       <End Role="OrdenCompra" EntitySet="OrdenCompra" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrdenCompra__0EF836A4" Association="CompraModelo.Store.FK__OrdenCompra__0EF836A4">
+    <AssociationSet Name="FK__OrdenCompra__0E04126B" Association="CompraModelo.Store.FK__OrdenCompra__0E04126B">
       <End Role="Cotizacion" EntitySet="Cotizacion" />
       <End Role="OrdenCompra" EntitySet="OrdenCompra" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrdenCompraDet__63F8CA06" Association="CompraModelo.Store.FK__OrdenCompraDet__63F8CA06">
+    <AssociationSet Name="FK__OrdenCompraDet__66D536B1" Association="CompraModelo.Store.FK__OrdenCompraDet__66D536B1">
       <End Role="OrdenCompra" EntitySet="OrdenCompra" />
       <End Role="OrdenCompraDet" EntitySet="OrdenCompraDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrdenDesp__idEst__7DB89C09" Association="CompraModelo.Store.FK__OrdenDesp__idEst__7DB89C09">
+    <AssociationSet Name="FK__OrdenDesp__idEst__009508B4" Association="CompraModelo.Store.FK__OrdenDesp__idEst__009508B4">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="OrdenDespacho" EntitySet="OrdenDespacho" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrdenDespachoDet__0371755F" Association="CompraModelo.Store.FK__OrdenDespachoDet__0371755F">
+    <AssociationSet Name="FK__OrdenDespachoDet__064DE20A" Association="CompraModelo.Store.FK__OrdenDespachoDet__064DE20A">
       <End Role="OrdenDespacho" EntitySet="OrdenDespacho" />
       <End Role="OrdenDespachoDet" EntitySet="OrdenDespachoDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__Pedido__idEstado__1D314762" Association="CompraModelo.Store.FK__Pedido__idEstado__1D314762">
+    <AssociationSet Name="FK__Pedido__idEstado__200DB40D" Association="CompraModelo.Store.FK__Pedido__idEstado__200DB40D">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="Pedido" EntitySet="Pedido" />
     </AssociationSet>
-    <AssociationSet Name="FK__PedidoDet__21F5FC7F" Association="CompraModelo.Store.FK__PedidoDet__21F5FC7F">
+    <AssociationSet Name="FK__PedidoDet__24D2692A" Association="CompraModelo.Store.FK__PedidoDet__24D2692A">
       <End Role="Pedido" EntitySet="Pedido" />
       <End Role="PedidoDet" EntitySet="PedidoDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__Proveedor__IdPer__7814D14C" Association="CompraModelo.Store.FK__Proveedor__IdPer__7814D14C">
+    <AssociationSet Name="FK__Proveedor__IdPer__7720AD13" Association="CompraModelo.Store.FK__Proveedor__IdPer__7720AD13">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Proveedor" EntitySet="Proveedor" />
     </AssociationSet>
-    <AssociationSet Name="FK__Solicitud__idEst__0CFADF99" Association="CompraModelo.Store.FK__Solicitud__idEst__0CFADF99">
+    <AssociationSet Name="FK__Solicitud__idEst__0FD74C44" Association="CompraModelo.Store.FK__Solicitud__idEst__0FD74C44">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="Solicitud" EntitySet="Solicitud" />
     </AssociationSet>
-    <AssociationSet Name="FK__SolicitudDet__12B3B8EF" Association="CompraModelo.Store.FK__SolicitudDet__12B3B8EF">
+    <AssociationSet Name="FK__SolicitudDet__1590259A" Association="CompraModelo.Store.FK__SolicitudDet__1590259A">
       <End Role="Solicitud" EntitySet="Solicitud" />
       <End Role="SolicitudDet" EntitySet="SolicitudDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__SubGrupos__IdGru__7167D3BD" Association="CompraModelo.Store.FK__SubGrupos__IdGru__7167D3BD">
+    <AssociationSet Name="FK__SubGrupos__IdGru__7073AF84" Association="CompraModelo.Store.FK__SubGrupos__IdGru__7073AF84">
       <End Role="Grupo" EntitySet="Grupo" />
       <End Role="SubGrupos" EntitySet="SubGrupos" />
     </AssociationSet>
@@ -542,8 +554,8 @@
     <Property Name="mail" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="IdEstado" Type="int" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'TECA.Compras.Articulo_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.Compras.Articulo_Vista' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="Articulo_Vista">
     <Key>
@@ -567,8 +579,8 @@
     <Property Name="IdEstado" Type="int" />
     <Property Name="Estado" Type="varchar" MaxLength="220" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'TECA.Compras.CotizacionCab_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.Compras.CotizacionCab_Vista' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="CotizacionCab_Vista">
     <Key>
@@ -592,8 +604,8 @@
     <Property Name="IdUsuario" Type="int" Nullable="false" />
     <Property Name="Usuario" Type="varchar" Nullable="false" MaxLength="20" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'TECA.Compras.CotizacionDetalle_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.Compras.CotizacionDetalle_Vista' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="CotizacionDetalle_Vista">
     <Key>
@@ -618,8 +630,8 @@
     <Property Name="idEmpresa" Type="int" Nullable="false" />
     <Property Name="Empresa" Type="varchar" MaxLength="50" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'TECA.Compras.OrdenCompraCab_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.Compras.OrdenCompraCab_Vista' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="OrdenCompraCab_Vista">
     <Key>
@@ -646,8 +658,8 @@
     <Property Name="Estado" Type="varchar" MaxLength="100" />
     <Property Name="Observaciones" Type="varchar" MaxLength="300" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'TECA.Compras.OrdenCompraDetalle_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.Compras.OrdenCompraDetalle_Vista' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="OrdenCompraDetalle_Vista">
     <Key>
@@ -668,8 +680,8 @@
     <Property Name="IdEmpresa" Type="int" Nullable="false" />
     <Property Name="NombreComercial" Type="varchar" MaxLength="50" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'TECA.Compras.PedidoCabecera_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.Compras.PedidoCabecera_Vista' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="PedidoCabecera_Vista">
     <Key>
@@ -693,8 +705,8 @@
     <Property Name="idEstado" Type="int" Nullable="false" />
     <Property Name="Estado" Type="varchar" MaxLength="100" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'TECA.Compras.PedidoDetalle_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.Compras.PedidoDetalle_Vista' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="PedidoDetalle_Vista">
     <Key>
@@ -713,8 +725,8 @@
     <Property Name="idEmpresa" Type="int" Nullable="false" />
     <Property Name="Empresa" Type="varchar" MaxLength="50" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'TECA.Compras.ProveedorDescripcion' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.Compras.ProveedorDescripcion' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="ProveedorDescripcion">
     <Key>
@@ -735,8 +747,8 @@
     <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="500" />
     <Property Name="Estado" Type="int" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'TECA.Compras.SolicitudCab' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.Compras.SolicitudCab' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="SolicitudCab">
     <Key>
@@ -764,8 +776,8 @@
     <Property Name="idEstado" Type="int" Nullable="false" />
     <Property Name="Estado" Type="varchar" MaxLength="100" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'TECA.Compras.SolicitudDetalle' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.Compras.SolicitudDetalle' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="SolicitudDetalle">
     <Key>
@@ -784,8 +796,8 @@
     <Property Name="idEmpresa" Type="int" Nullable="false" />
     <Property Name="Empresa" Type="varchar" MaxLength="50" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'TECA.Compras.Vehiculo_Vista' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.Compras.Vehiculo_Vista' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="Vehiculo_Vista">
     <Key>
@@ -818,7 +830,29 @@
     <Property Name="idestado" Type="int" />
     <Property Name="Estado" Type="varchar" MaxLength="220" />
   </EntityType>
-  <Association Name="FK__Compra__1881A0DE">
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.dbo.OrdenCompraDetalleArticulo_Vista' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="OrdenCompraDetalleArticulo_Vista">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="idEmpresa" />
+      <PropertyRef Name="NumeroPedido" />
+      <PropertyRef Name="idArticulo" />
+      <PropertyRef Name="Descripcion" />
+      <PropertyRef Name="Cantidad" />
+    </Key>
+    <Property Name="Numero" Type="int" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="NombreComercial" Type="varchar" MaxLength="50" />
+    <Property Name="NumeroPedido" Type="int" Nullable="false" />
+    <Property Name="idArticulo" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Compra__178D7CA5">
     <End Role="OrdenCompra" Type="CompraModelo.Store.OrdenCompra" Multiplicity="1" />
     <End Role="Compra" Type="CompraModelo.Store.Compra" Multiplicity="*" />
     <ReferentialConstraint>
@@ -832,7 +866,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Compra__idEstado__178D7CA5">
+  <Association Name="FK__Compra__idEstado__1699586C">
     <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
     <End Role="Compra" Type="CompraModelo.Store.Compra" Multiplicity="*" />
     <ReferentialConstraint>
@@ -844,7 +878,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CompraDet__1D4655FB">
+  <Association Name="FK__CompraDet__1C5231C2">
     <End Role="Compra" Type="CompraModelo.Store.Compra" Multiplicity="1" />
     <End Role="CompraDet" Type="CompraModelo.Store.CompraDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -858,7 +892,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Cotizacio__idEst__047AA831">
+  <Association Name="FK__Cotizacio__idEst__038683F8">
     <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
     <End Role="Cotizacion" Type="CompraModelo.Store.Cotizacion" Multiplicity="*" />
     <ReferentialConstraint>
@@ -870,7 +904,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Cotizacio__idPro__038683F8">
+  <Association Name="FK__Cotizacio__idPro__02925FBF">
     <End Role="Proveedor" Type="CompraModelo.Store.Proveedor" Multiplicity="1" />
     <End Role="Cotizacion" Type="CompraModelo.Store.Cotizacion" Multiplicity="*" />
     <ReferentialConstraint>
@@ -882,7 +916,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CotizacionDet__28A2FA0E">
+  <Association Name="FK__CotizacionDet__2B7F66B9">
     <End Role="Pedido" Type="CompraModelo.Store.Pedido" Multiplicity="1" />
     <End Role="CotizacionDet" Type="CompraModelo.Store.CotizacionDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -896,7 +930,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Devolucio__idEst__6D823440">
+  <Association Name="FK__Devolucio__idEst__705EA0EB">
     <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
     <End Role="DevolucionCompra" Type="CompraModelo.Store.DevolucionCompra" Multiplicity="*" />
     <ReferentialConstraint>
@@ -908,7 +942,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Devolucio__idPro__6E765879">
+  <Association Name="FK__Devolucio__idPro__7152C524">
     <End Role="Proveedor" Type="CompraModelo.Store.Proveedor" Multiplicity="1" />
     <End Role="DevolucionCompra" Type="CompraModelo.Store.DevolucionCompra" Multiplicity="*" />
     <ReferentialConstraint>
@@ -920,7 +954,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DevolucionCompra__733B0D96">
+  <Association Name="FK__DevolucionCompra__76177A41">
     <End Role="DevolucionCompra" Type="CompraModelo.Store.DevolucionCompra" Multiplicity="1" />
     <End Role="DevolucionCompraDet" Type="CompraModelo.Store.DevolucionCompraDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -934,7 +968,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__NotaDebit__Canti__35FCF52C">
+  <Association Name="FK__NotaDebit__Canti__38D961D7">
     <End Role="NotaDebito" Type="CompraModelo.Store.NotaDebito" Multiplicity="1" />
     <End Role="NotaDebitoDet" Type="CompraModelo.Store.NotaDebitoDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -948,7 +982,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__NotaDebit__idEst__3138400F">
+  <Association Name="FK__NotaDebit__idEst__3414ACBA">
     <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
     <End Role="NotaDebito" Type="CompraModelo.Store.NotaDebito" Multiplicity="*" />
     <ReferentialConstraint>
@@ -960,7 +994,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__NotaDebito__30441BD6">
+  <Association Name="FK__NotaDebito__33208881">
     <End Role="DevolucionCompra" Type="CompraModelo.Store.DevolucionCompra" Multiplicity="1" />
     <End Role="NotaDebito" Type="CompraModelo.Store.NotaDebito" Multiplicity="*" />
     <ReferentialConstraint>
@@ -974,7 +1008,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrdenComp__idEst__0D0FEE32">
+  <Association Name="FK__OrdenComp__idEst__0C1BC9F9">
     <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
     <End Role="OrdenCompra" Type="CompraModelo.Store.OrdenCompra" Multiplicity="*" />
     <ReferentialConstraint>
@@ -986,7 +1020,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrdenComp__idPro__0E04126B">
+  <Association Name="FK__OrdenComp__idPro__0D0FEE32">
     <End Role="Proveedor" Type="CompraModelo.Store.Proveedor" Multiplicity="1" />
     <End Role="OrdenCompra" Type="CompraModelo.Store.OrdenCompra" Multiplicity="*" />
     <ReferentialConstraint>
@@ -998,7 +1032,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrdenCompra__0EF836A4">
+  <Association Name="FK__OrdenCompra__0E04126B">
     <End Role="Cotizacion" Type="CompraModelo.Store.Cotizacion" Multiplicity="1" />
     <End Role="OrdenCompra" Type="CompraModelo.Store.OrdenCompra" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1012,7 +1046,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrdenCompraDet__63F8CA06">
+  <Association Name="FK__OrdenCompraDet__66D536B1">
     <End Role="OrdenCompra" Type="CompraModelo.Store.OrdenCompra" Multiplicity="1" />
     <End Role="OrdenCompraDet" Type="CompraModelo.Store.OrdenCompraDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1026,7 +1060,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrdenDesp__idEst__7DB89C09">
+  <Association Name="FK__OrdenDesp__idEst__009508B4">
     <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
     <End Role="OrdenDespacho" Type="CompraModelo.Store.OrdenDespacho" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1038,7 +1072,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrdenDespachoDet__0371755F">
+  <Association Name="FK__OrdenDespachoDet__064DE20A">
     <End Role="OrdenDespacho" Type="CompraModelo.Store.OrdenDespacho" Multiplicity="1" />
     <End Role="OrdenDespachoDet" Type="CompraModelo.Store.OrdenDespachoDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1052,7 +1086,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Pedido__idEstado__1D314762">
+  <Association Name="FK__Pedido__idEstado__200DB40D">
     <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
     <End Role="Pedido" Type="CompraModelo.Store.Pedido" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1064,7 +1098,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PedidoDet__21F5FC7F">
+  <Association Name="FK__PedidoDet__24D2692A">
     <End Role="Pedido" Type="CompraModelo.Store.Pedido" Multiplicity="1" />
     <End Role="PedidoDet" Type="CompraModelo.Store.PedidoDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1078,7 +1112,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Proveedor__IdPer__7814D14C">
+  <Association Name="FK__Proveedor__IdPer__7720AD13">
     <End Role="Persona" Type="CompraModelo.Store.Persona" Multiplicity="1" />
     <End Role="Proveedor" Type="CompraModelo.Store.Proveedor" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1090,7 +1124,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Solicitud__idEst__0CFADF99">
+  <Association Name="FK__Solicitud__idEst__0FD74C44">
     <End Role="Estado" Type="CompraModelo.Store.Estado" Multiplicity="1" />
     <End Role="Solicitud" Type="CompraModelo.Store.Solicitud" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1102,7 +1136,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SolicitudDet__12B3B8EF">
+  <Association Name="FK__SolicitudDet__1590259A">
     <End Role="Solicitud" Type="CompraModelo.Store.Solicitud" Multiplicity="1" />
     <End Role="SolicitudDet" Type="CompraModelo.Store.SolicitudDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1116,7 +1150,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__SubGrupos__IdGru__7167D3BD">
+  <Association Name="FK__SubGrupos__IdGru__7073AF84">
     <End Role="Grupo" Type="CompraModelo.Store.Grupo" Multiplicity="0..1" />
     <End Role="SubGrupos" Type="CompraModelo.Store.SubGrupos" Multiplicity="*" />
     <ReferentialConstraint>

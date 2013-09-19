@@ -18,16 +18,16 @@ namespace forms.RecursosHumanos
             InitializeComponent();
         }
  #region Instancia
-        public clsTrabajoDiarioCab  claseTdc = new clsTrabajoDiarioCab ();
+        public clsTrabajoDiario  claseTdc = new clsTrabajoDiario ();
 
-        clsDatosTrabajoDiarioCab  DatoTdc = new clsDatosTrabajoDiarioCab ();
+        clsDatosTrabajoDiario DatoTdc = new clsDatosTrabajoDiario ();
 #endregion
 
 #region Metodos
 
         public void Cargar()
         {
-            gcTrabajoDiario.DataSource = DatoTdc.ConsultaTrabajoDiarioCab();
+            gcTrabajoDiario.DataSource = DatoTdc.ConsultaTrabajoDiario();
             
 
         }
@@ -35,7 +35,14 @@ namespace forms.RecursosHumanos
         public void getSeleccion()
         {
             claseTdc.NumTrabajo = Convert.ToInt32(gvTrabajoDiario.GetFocusedRowCellValue(colNumTrabajo ));
-            claseTdc .Fecha =Convert.ToDateTime (gvTrabajoDiario.GetFocusedRowCellValue(colFecha));
+            claseTdc .FechaDesde =Convert.ToDateTime (gvTrabajoDiario.GetFocusedRowCellValue(colFechaDesde));
+            claseTdc.FechaHasta = Convert.ToDateTime(gvTrabajoDiario.GetFocusedRowCellValue(colFechaHasta));
+            claseTdc.IdPersona = Convert.ToInt32(gvTrabajoDiario.GetFocusedRowCellValue(colIdPersona ));
+            claseTdc.Identificacion = Convert.ToInt64(gvTrabajoDiario.GetFocusedRowCellValue(colIdentificacion ));
+            claseTdc.Nombre = Convert.ToString (gvTrabajoDiario.GetFocusedRowCellValue(colNombre));
+           claseTdc .Apellido =  Convert.ToString (gvTrabajoDiario.GetFocusedRowCellValue(colApellido));
+           claseTdc.HoraEntrada1 = Convert.ToDateTime (gvTrabajoDiario.GetFocusedRowCellValue(colHoraEntrada1 ));
+           claseTdc.HoraSalida2 = Convert.ToDateTime (gvTrabajoDiario.GetFocusedRowCellValue(colHoraSalida2 ));
             claseTdc.Observacion =Convert.ToString (gvTrabajoDiario.GetFocusedRowCellValue(colObservacion ));
             
 

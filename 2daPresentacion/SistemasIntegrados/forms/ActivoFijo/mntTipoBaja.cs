@@ -13,14 +13,28 @@ using datos.ActivoFijo;
 using datos.Inventario;
 using datos.Seguridad;
 
+
 namespace forms.ActivoFijo
 {
     public partial class mntTipoBaja : Form
     {
+        public char accionk { get; set; }
+        public clsMotivoBaja clase = new clsMotivoBaja();
+        clsActivoFijo oActivoFijo = new clsActivoFijo();
+        clsMotivoBaja omotivobaja = new clsMotivoBaja();
+        datEmpresa datoEmpresa = new datEmpresa();
+
+        datosmotivobaja datosmotivo = new datosmotivobaja();
+        //datEstado datoEstado = new datEstado();
+        datEstado datoEstado = new datEstado();
+        clsMensajesActivoFijos msj = new clsMensajesActivoFijos();
+         
         public mntTipoBaja()
         {
             InitializeComponent();
         }
+
+
 
         //Declare una instancia de la clase de Subgrupos para poder llenar los datos
         public char accion { get; set; }
@@ -29,44 +43,40 @@ namespace forms.ActivoFijo
         //clsEmpresa oEmpresa = new clsEmpresa();
         //clsEstado  oEstado  = new clsEstado();
         //clsGrupo   oGrupo   = new clsGrupo();
-        clsMensajesActivoFijos msj = new clsMensajesActivoFijos();
-        clsBajaActivo oBajaActivo = new clsBajaActivo();
+        //clsMensajesActivoFijos msj = new clsMensajesActivoFijos();
+        //clsBajaActivo oBajaActivo = new clsBajaActivo();
 
-        clsClaseDatosSubgrupoActivoFijo datoSubgrupo = new clsClaseDatosSubgrupoActivoFijo();
-        clsClaseDatosGrupo datGrupo = new clsClaseDatosGrupo();
-        clsClaseDatosBajaActivo datoProvePersoBajaActivo = new clsClaseDatosBajaActivo();
-        datEstado datoEstado = new datEstado();
-        datEmpresa datoEmpresa = new datEmpresa();
+        //clsClaseDatosSubgrupoActivoFijo datoSubgrupo = new clsClaseDatosSubgrupoActivoFijo();
+        //datGrupo datGrupo = new datGrupo();
+        //clsClaseDatosBajaActivo datoProvePersoBajaActivo = new clsClaseDatosBajaActivo();
+        
+        //datEmpresa datoEmpresa = new datEmpresa();
 
-        clsClaseDatosActivoFijo datoActivo = new clsClaseDatosActivoFijo();
+        //clsClaseDatosActivoFijo datoActivo = new clsClaseDatosActivoFijo();
 
 
 
 
         //public clsClaseDatosBajaActivo clas = new clsClaseDatosBajaActivo();
+
+
+        #region"Evento Load"
         private void mntTipoBaja_Load(object sender, EventArgs e)
         {
             //Llenamos el combo grupo de inventario en la pantalla 
-
-            cbxGrupo.Properties.DataSource = datGrupo.consultaGrupo();
-
-            //Llenamos el combo de Estado de Seguridad en la pantalla
-            cbxEstado.Properties.DataSource = datoEstado.ConsultaTodos();
-
-            //Llenamos el combo de Empresa de Seguridad en la pantalla
-            cbxEmpresa.Properties.DataSource = datoEmpresa.Consultar();
-
-            //llenamos el combo de Subgrupo de ActivoFijo en la pantalla
-            cbxSubGrupo.Properties.DataSource = datoSubgrupo.consulta();
-
-            //llenamos el combo de la Persona que es Proveedor
-            cbxProveedor.Properties.DataSource = datoProvePersoBajaActivo.consultaEspecial();
+            cbxEstado.Properties.DataSource = datoEstado.consEstado();
+            BloquearControles();
+            ;
+            //cbxEstado.Properties.DataSource = new datoEstado.ConsultaTodos();
+            
+            
         }
 
+        #endregion
 
         #region"Operaciones de Controles"
-        //public void set(clsBajaActivo  oBajaActivo)
-        //{
+       public void set(clsMotivoBaja  oBajaActivo)
+        {
         //   // txtCodigoActivo.Text = Convert.ToString(oBajaActivo.Codigo);
         //    cbxGrupo.EditValue = datoActivo.getDescripcionSegunIdInventarioGrupo(oBajaActivo.Grupo);
         //    cbxSubGrupo.Text = datoSubgrupo.getDescripcionSegunIdActivoFIjoSubGrupo (oBajaActivo.Subgrupo);
@@ -74,61 +84,63 @@ namespace forms.ActivoFijo
         //    txtDescripcion.Text  = oBajaActivo.Descripcion;
         //    cbxEstado.EditValue = datoEstado.getDescripcionSegunId(oBajaActivo.IdEstado);
         //    cbxEmpresa.EditValue = datoEmpresa.ConsultarPorId(oBajaActivo.IdEmpresa);
-        //}
+            txtCodigoBajaActivo.Text = Convert.ToString(oBajaActivo.idMotivoBaja);
+            txtDescripcion.Text = oBajaActivo.descripcion;
+            cbxEstado.EditValue = datoEstado.getDescripcionSegunId(oActivoFijo.estado);
+       
 
-        public bool getValor()
+       }
+
+         public bool getValor()
         {
 
-            //if (txtCodigoActivo.Text == "" || txtCodigoActivo.Text == "0")
-            //{
-            //    clase.Codigo = 0;//PK
-            //}
-            //else
-            //{
-            //    clase.Codigo = Convert.ToInt32(txtCodigoActivo.Text);
-            //}
-            if (dtFecha.Text == "")//para que no se caiga la aplicacion en la fecha
+            if (txtCodigoBajaActivo.Text =="" || txtCodigoBajaActivo.Text == "0")
             {
-                return false;
+          
+            omotivobaja.idMotivoBaja = 0;//PK //lo que se hace aqui es colocar los pk en 0 para que se las pueda utilizar 
             }
             else
             {
-
-
-                //if ((txtSubgrupo.Text == null || txtSubgrupo.Text == "") || (dtFecha.EditValue == null) ||
-                //    (cbxGrupo.EditValue == null) || (cbxEmpresa.EditValue == null) || (cbxEstado.EditValue == null))
-                //{
-                //    return false;
-                //}
-
-                ////clase.Codigo  =Convert.ToInt32 (txtCodigoActivo.Text);
-                //clase.descripcion = txtSubgrupo.Text;
-                //clase.Fecha = Convert.ToDateTime(dtFecha.EditValue);
-                //oGrupo.Descripcion = Convert.ToString(cbxGrupo.EditValue);//Se llena el campo descripcion del estado
-                //clase.Grupo = Convert.ToInt32(datoActivoFijo.getIdSegunDescripcionInventarioGrupo(oGrupo.Descripcion));
-                //oEstado.descripcion = Convert.ToString(cbxEstado.EditValue);//Se llena el campo descripcion del estado
-                //clase.IdEstado = Convert.ToInt32(datoEstado.getIdSegunDescripcion(oEstado.descripcion));
-                //oEmpresa.descripcion = Convert.ToString(cbxEmpresa.EditValue);//se llena el campo descripcion de la empresa
-                //clase.Empresa = Convert.ToInt32(datoEmpresa.ConsultarPorNombreComercial(oEmpresa.descripcion));
-
-
-                return true;
+                omotivobaja.idMotivoBaja = Convert.ToInt32(txtCodigoBajaActivo.Text);
             }
+
+
+
+            if ((cbxEstado.EditValue == null || (txtDescripcion.Text == ""))) 
+                   
+                {
+                    return false; // se retorna false para que cuando se haga la oregunta de que si hay espacios vacios 
+                    //bote un error 
+                }
+
+                omotivobaja.descripcion = Convert.ToString(txtDescripcion.Text);
+                //omotivobaja.idMotivoBaja = Convert.ToInt32(txtCodigoBajaActivo.Text);//Se llena el campo del acivo fijo 
+                omotivobaja.idEstado = oActivoFijo.estado;
+                return true;// se retorna false para que cuando se haga la oregunta de que si hay espacios vacios 
+                //bote que todos los datos estan llenos 
+            
+
         }
 
-        private void HabilitarControles()
+         private void HabilitarControles()
         {
-            //btnGuardar.Enabled = true;
-            //btnModificar.Enabled = false;
-            //btnEliminar.Enabled = false;
-            //btnbuscar.Enabled = true;
+            btnGuardar.Enabled = true;
+            txtDescripcion.Enabled = true;
+            txtCodigoBajaActivo.Enabled = false;
+            btnBuscar.Enabled = true;
+            btnEliminar.Enabled = false;
+            
+            
+            
+
+            //btnProcesar.Enabled = true;
             //txtCodigoActivo.Enabled = false;
             //cbxGrupo.Enabled = true;
-            //txtSubgrupo.Enabled = true;
+            //cbxSubGrupo.Enabled = true;
             //cbxEstado.Enabled = true;
             //dtFecha.Enabled = true;
-            //cbxEmpresa.Enabled = true;
-
+            //txtDescripcion.Enabled = true;
+            //GridDepreciacion.Enabled = true;
         }
 
         private void BloquearControles()
@@ -137,73 +149,219 @@ namespace forms.ActivoFijo
             btnModificar.Enabled = false;
             btnEliminar.Enabled = false;
             btnBuscar.Enabled = false;
-            //txtCodigoActivo.Enabled = false;
-            cbxGrupo.Enabled = false;
-            //txtSubgrupo.Enabled = false;
-            cbxEstado.Enabled = false;
-            dtFecha.Enabled = false;
-            cbxEmpresa.Enabled = false;
+            txtDescripcion.Enabled = false;
+            btnBuscar.Enabled = true;
+            txtCodigoBajaActivo.Enabled = true;
 
         }
 
         private void limpiarControles()
         {
-            txtCodigoActivo.Text = "";
-            cbxGrupo.EditValue = "";
-            cbxSubGrupo.EditValue = "";
-            dtFecha.EditValue = "";
-            cbxEstado.Text = "";
-            cbxEmpresa.Text = "";
+            txtCodigoBajaActivo.Text = "";
+            txtDescripcion.Text = "";
+
 
         }
+
+
 
         #endregion
 
 
-
-
-        private void btneCodigoActivo_EditValueChanged(object sender, EventArgs e)
+    #region"Operaciones Basicas"
+         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            VtnConsultaTipoBaja frm = new VtnConsultaTipoBaja();
+            VtnConsultaTipoBajaActivo frm = new VtnConsultaTipoBajaActivo();
             frm.ShowDialog();
-
             if (frm.Cancelar())
             {
                 btnGuardar.Enabled = false;//Estas varibles que se le coloca true o false son para setar los botones para que no haiga caidas del sistemas 
-                btnModificar.Enabled = true;//
-                btnEliminar.Enabled = true;//
-                oBajaActivo = frm.cls;
-                //set(oBajaActivo);
+                btnModificar.Enabled = true;
+                btnEliminar.Enabled = true;
+                txtDescripcion.Enabled = true;
+                    //btnAnular.Enabled = true;//
+                
+                //btnConsultar.Enabled = true;//
+
+                omotivobaja = frm.cls;
+                set(omotivobaja);
             }
             else
             {
                 btnGuardar.Enabled = true;//Estas varibles que se le coloca true o false son para setar los botones para que no haiga caidas del sistemas 
-                btnModificar.Enabled = false;//
-                btnEliminar.Enabled = false;//
+                //btnAnular.Enabled = false;//
+                //btnConsultar.Enabled = false;//
+                //btnProcesar.Enabled = false;
                 limpiarControles();
                 MessageBox.Show(msj.Sin_Seleccion, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
         }
 
+
+
+
+#endregion
+
+         private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            limpiarControles();
+            HabilitarControles();
+            txtnum.Text = "1";
+
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       private void btnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                MessageBox.Show(msj.Eliminar_ok);
+                limpiarControles();
+                BloquearControles();
+                {
+                    MessageBox.Show(msj.Eliminar_error);
+                }
+
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show(msj.Eliminar_error);
+            }
+        }
+        
         private void cbxProveedor_EditValueChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            accionk = 'E';
+            try
+            {
+                if (accionk == 'E')
+                {
+                    if (datosmotivo.eliminar(omotivobaja))
+                    {
+                        MessageBox.Show(msj.Eliminar_ok);
+                        limpiarControles();
+                        BloquearControles();
+                    }
+                    else
+                    {
+                        MessageBox.Show(msj.Eliminar_error);
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show(msj.Eliminar_error);
+            }
+        }
+
+        private void btnCancelar_Click_2(object sender, EventArgs e)
+        {
+            DialogResult r;
+            r = MessageBox.Show(msj.Cancelar, msj.Titulo, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (r == DialogResult.Yes)
+            {
+                this.Close();
+            }
+
+        }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+            if (getValor())
+            {
+
+                if (omotivobaja.idMotivoBaja == 0)
+                {
+
+                    if (datosmotivo.guardar(omotivobaja))
+                    {
+                        MessageBox.Show(msj.Guardar_ok);
+                        limpiarControles();
+                    }
+                    else
+                    {
+                        MessageBox.Show(msj.Guardar_error, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                else 
+                {
+                    if (datosmotivo.modificar(clase))
+                    {
+                        MessageBox.Show(msj.Modificar_ok);
+                        limpiarControles();
+                    }
+                    else
+                    {
+                        MessageBox.Show(msj.Modificar_error);
+                    }
+
+                    }
+            }
+            else
+            {
+                MessageBox.Show(msj.Vacio, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+                //limpiarControles();
+                //btnGuardar.Enabled = false;
+                //btnNuevo.Enabled = true;
+            
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {
+
+            accion = 'M';
+            try
+            {
+                getValor();
+                if (accion == 'M')
+                {
+                    if (datosmotivo.modificar(omotivobaja))//Esto va hacer que compare si el resultado de esta opdracion es true o false tal como se declara la funsion en datos de tipo boolean
+                    {
+                        MessageBox.Show(msj.Modificar_ok);
+                        limpiarControles();
+                        BloquearControles();
+                    }
+                    else
+                    {
+                        MessageBox.Show(msj.Modificar_error);
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show(msj.Modificar_error); ;
+            }
+
+
+
+
 
         }
     }

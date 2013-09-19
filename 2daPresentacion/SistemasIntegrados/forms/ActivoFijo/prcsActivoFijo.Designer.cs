@@ -31,12 +31,12 @@ namespace forms.ActivoFijo
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.txteCodigo = new DevExpress.XtraEditors.TextEdit();
+            this.txtCodigo = new DevExpress.XtraEditors.TextEdit();
             this.lblCodigoActivo = new DevExpress.XtraEditors.LabelControl();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnNuevo = new System.Windows.Forms.ToolStripButton();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
-            this.btnModificar = new System.Windows.Forms.ToolStripButton();
+            this.btnAnular = new System.Windows.Forms.ToolStripButton();
             this.btnConsultar = new System.Windows.Forms.ToolStripButton();
             this.tslEnBlanco = new System.Windows.Forms.ToolStripLabel();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
@@ -46,7 +46,7 @@ namespace forms.ActivoFijo
             this.cbxGrupo = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblDescripcion = new DevExpress.XtraEditors.LabelControl();
             this.lblGrupo = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtUsuario = new DevExpress.XtraEditors.TextEdit();
             this.lblUsuario = new DevExpress.XtraEditors.LabelControl();
             this.btnGenerarCodBarra = new DevExpress.XtraEditors.SimpleButton();
             this.btnAsignar = new DevExpress.XtraEditors.SimpleButton();
@@ -54,6 +54,7 @@ namespace forms.ActivoFijo
             this.lblEmpresa = new DevExpress.XtraEditors.LabelControl();
             this.lblSubGrupo = new DevExpress.XtraEditors.LabelControl();
             this.cbxSubGrupo = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsSubgrupoActivoFijoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCodigo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGrupo = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -62,6 +63,7 @@ namespace forms.ActivoFijo
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbxEmpresa = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsEmpresaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colidEmpresa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colrazonSocial = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -76,44 +78,42 @@ namespace forms.ActivoFijo
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colidEstado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbxEstado = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.clsSubgrupoActivoFijoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clsGrupoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clsEmpresaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clsEstadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.pnlCargar = new DevExpress.XtraEditors.PanelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.txteCodigo.Properties)).BeginInit();
+            this.clsGrupoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFecha.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFecha.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxGrupo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxSubGrupo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsSubgrupoActivoFijoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxEmpresa.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsEmpresaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxEstado.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsSubgrupoActivoFijoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsGrupoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsEmpresaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsEstadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlCargar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsGrupoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // txteCodigo
+            // txtCodigo
             // 
-            this.txteCodigo.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txteCodigo.EditValue = "000-001";
-            this.txteCodigo.Enabled = false;
-            this.txteCodigo.Location = new System.Drawing.Point(115, 40);
-            this.txteCodigo.Name = "txteCodigo";
-            this.txteCodigo.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txteCodigo.Properties.Appearance.Options.UseBackColor = true;
-            this.txteCodigo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txteCodigo.Size = new System.Drawing.Size(65, 20);
-            this.txteCodigo.TabIndex = 99;
+            this.txtCodigo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtCodigo.EditValue = "000-001";
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Location = new System.Drawing.Point(115, 40);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtCodigo.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCodigo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtCodigo.Size = new System.Drawing.Size(65, 20);
+            this.txtCodigo.TabIndex = 99;
             // 
             // lblCodigoActivo
             // 
@@ -128,7 +128,7 @@ namespace forms.ActivoFijo
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnNuevo,
             this.btnGuardar,
-            this.btnModificar,
+            this.btnAnular,
             this.btnConsultar,
             this.tslEnBlanco,
             this.btnCancelar});
@@ -145,30 +145,36 @@ namespace forms.ActivoFijo
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(62, 22);
             this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Enabled = false;
             this.btnGuardar.Image = global::forms.Properties.Resources.guardar;
             this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(69, 22);
             this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnModificar
+            // btnAnular
             // 
-            this.btnModificar.Image = global::forms.Properties.Resources.modificar;
-            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(78, 22);
-            this.btnModificar.Text = "Modificar";
+            this.btnAnular.Enabled = false;
+            this.btnAnular.Image = global::forms.Properties.Resources.modificar;
+            this.btnAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAnular.Name = "btnAnular";
+            this.btnAnular.Size = new System.Drawing.Size(62, 22);
+            this.btnAnular.Text = "Anular";
             // 
             // btnConsultar
             // 
+            this.btnConsultar.Enabled = false;
             this.btnConsultar.Image = global::forms.Properties.Resources.consultar;
             this.btnConsultar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(78, 22);
             this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // tslEnBlanco
             // 
@@ -187,6 +193,8 @@ namespace forms.ActivoFijo
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Location = new System.Drawing.Point(115, 167);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(376, 20);
@@ -194,7 +202,9 @@ namespace forms.ActivoFijo
             // 
             // dtFecha
             // 
+            this.dtFecha.Cursor = System.Windows.Forms.Cursors.Default;
             this.dtFecha.EditValue = null;
+            this.dtFecha.Enabled = false;
             this.dtFecha.Location = new System.Drawing.Point(380, 40);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -214,6 +224,8 @@ namespace forms.ActivoFijo
             // 
             // cbxGrupo
             // 
+            this.cbxGrupo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cbxGrupo.Enabled = false;
             this.cbxGrupo.Location = new System.Drawing.Point(115, 107);
             this.cbxGrupo.Name = "cbxGrupo";
             this.cbxGrupo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -246,17 +258,17 @@ namespace forms.ActivoFijo
             this.lblGrupo.TabIndex = 84;
             this.lblGrupo.Text = "Grupo:";
             // 
-            // textEdit2
+            // txtUsuario
             // 
-            this.textEdit2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textEdit2.EditValue = "Edwin Estacio Bermeo";
-            this.textEdit2.Enabled = false;
-            this.textEdit2.Location = new System.Drawing.Point(115, 74);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textEdit2.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit2.Size = new System.Drawing.Size(124, 20);
-            this.textEdit2.TabIndex = 83;
+            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtUsuario.EditValue = "Edwin Estacio Bermeo";
+            this.txtUsuario.Enabled = false;
+            this.txtUsuario.Location = new System.Drawing.Point(115, 74);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtUsuario.Properties.Appearance.Options.UseBackColor = true;
+            this.txtUsuario.Size = new System.Drawing.Size(124, 20);
+            this.txtUsuario.TabIndex = 83;
             // 
             // lblUsuario
             // 
@@ -268,6 +280,7 @@ namespace forms.ActivoFijo
             // 
             // btnGenerarCodBarra
             // 
+            this.btnGenerarCodBarra.Enabled = false;
             this.btnGenerarCodBarra.Location = new System.Drawing.Point(162, 636);
             this.btnGenerarCodBarra.Name = "btnGenerarCodBarra";
             this.btnGenerarCodBarra.Size = new System.Drawing.Size(111, 22);
@@ -277,6 +290,7 @@ namespace forms.ActivoFijo
             // 
             // btnAsignar
             // 
+            this.btnAsignar.Enabled = false;
             this.btnAsignar.Location = new System.Drawing.Point(27, 636);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Size = new System.Drawing.Size(111, 22);
@@ -310,6 +324,8 @@ namespace forms.ActivoFijo
             // 
             // cbxSubGrupo
             // 
+            this.cbxSubGrupo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cbxSubGrupo.Enabled = false;
             this.cbxSubGrupo.Location = new System.Drawing.Point(115, 137);
             this.cbxSubGrupo.Name = "cbxSubGrupo";
             this.cbxSubGrupo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -318,8 +334,12 @@ namespace forms.ActivoFijo
             this.cbxSubGrupo.Properties.DisplayMember = "descripcion";
             this.cbxSubGrupo.Properties.ValueMember = "descripcion";
             this.cbxSubGrupo.Properties.View = this.gridView3;
-            this.cbxSubGrupo.Size = new System.Drawing.Size(111, 20);
+            this.cbxSubGrupo.Size = new System.Drawing.Size(158, 20);
             this.cbxSubGrupo.TabIndex = 319;
+            // 
+            // clsSubgrupoActivoFijoBindingSource
+            // 
+            this.clsSubgrupoActivoFijoBindingSource.DataSource = typeof(clases.ActivoFijo.clsSubgrupoActivoFijo);
             // 
             // gridView3
             // 
@@ -376,8 +396,11 @@ namespace forms.ActivoFijo
             // 
             // cbxEmpresa
             // 
+            this.cbxEmpresa.Enabled = false;
             this.cbxEmpresa.Location = new System.Drawing.Point(380, 112);
             this.cbxEmpresa.Name = "cbxEmpresa";
+            this.cbxEmpresa.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbxEmpresa.Properties.Appearance.Options.UseBackColor = true;
             this.cbxEmpresa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbxEmpresa.Properties.DataSource = this.clsEmpresaBindingSource;
@@ -386,6 +409,10 @@ namespace forms.ActivoFijo
             this.cbxEmpresa.Properties.View = this.gridView5;
             this.cbxEmpresa.Size = new System.Drawing.Size(111, 20);
             this.cbxEmpresa.TabIndex = 322;
+            // 
+            // clsEmpresaBindingSource
+            // 
+            this.clsEmpresaBindingSource.DataSource = typeof(clases.Seguridad.clsEmpresa);
             // 
             // gridView5
             // 
@@ -479,6 +506,7 @@ namespace forms.ActivoFijo
             // 
             // cbxEstado
             // 
+            this.cbxEstado.Enabled = false;
             this.cbxEstado.Location = new System.Drawing.Point(380, 74);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -490,6 +518,10 @@ namespace forms.ActivoFijo
             this.cbxEstado.Size = new System.Drawing.Size(111, 20);
             this.cbxEstado.TabIndex = 321;
             // 
+            // clsEstadoBindingSource
+            // 
+            this.clsEstadoBindingSource.DataSource = typeof(clases.Seguridad.clsEstado);
+            // 
             // gridView4
             // 
             this.gridView4.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
@@ -497,28 +529,16 @@ namespace forms.ActivoFijo
             this.gridView4.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView4.OptionsView.ShowGroupPanel = false;
             // 
-            // clsSubgrupoActivoFijoBindingSource
-            // 
-            this.clsSubgrupoActivoFijoBindingSource.DataSource = typeof(clases.ActivoFijo.clsSubgrupoActivoFijo);
-            // 
-            // clsGrupoBindingSource
-            // 
-            this.clsGrupoBindingSource.DataSource = typeof(clases.Inventario.clsGrupo);
-            // 
-            // clsEmpresaBindingSource
-            // 
-            this.clsEmpresaBindingSource.DataSource = typeof(clases.Seguridad.clsEmpresa);
-            // 
-            // clsEstadoBindingSource
-            // 
-            this.clsEstadoBindingSource.DataSource = typeof(clases.Seguridad.clsEstado);
-            // 
             // pnlCargar
             // 
             this.pnlCargar.Location = new System.Drawing.Point(16, 204);
             this.pnlCargar.Name = "pnlCargar";
             this.pnlCargar.Size = new System.Drawing.Size(494, 422);
             this.pnlCargar.TabIndex = 323;
+            // 
+            // clsGrupoBindingSource
+            // 
+            this.clsGrupoBindingSource.DataSource = typeof(clases.Inventario.clsGrupo);
             // 
             // prcsActivoFijo
             // 
@@ -531,7 +551,7 @@ namespace forms.ActivoFijo
             this.Controls.Add(this.cbxSubGrupo);
             this.Controls.Add(this.btnGenerarCodBarra);
             this.Controls.Add(this.btnAsignar);
-            this.Controls.Add(this.txteCodigo);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigoActivo);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lblEmpresa);
@@ -543,30 +563,30 @@ namespace forms.ActivoFijo
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblSubGrupo);
             this.Controls.Add(this.lblGrupo);
-            this.Controls.Add(this.textEdit2);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblUsuario);
             this.Name = "prcsActivoFijo";
             this.Text = "prcsActivoFijo";
             this.Load += new System.EventHandler(this.prcsActivoFijo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txteCodigo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFecha.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFecha.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxGrupo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxSubGrupo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsSubgrupoActivoFijoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxEmpresa.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsEmpresaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxEstado.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsSubgrupoActivoFijoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsGrupoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsEmpresaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsEstadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlCargar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsGrupoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -574,12 +594,12 @@ namespace forms.ActivoFijo
 
         #endregion
 
-        private DevExpress.XtraEditors.TextEdit txteCodigo;
+        private DevExpress.XtraEditors.TextEdit txtCodigo;
         private DevExpress.XtraEditors.LabelControl lblCodigoActivo;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnNuevo;
         private System.Windows.Forms.ToolStripButton btnGuardar;
-        private System.Windows.Forms.ToolStripButton btnModificar;
+        private System.Windows.Forms.ToolStripButton btnAnular;
         private System.Windows.Forms.ToolStripButton btnConsultar;
         private System.Windows.Forms.ToolStripLabel tslEnBlanco;
         private System.Windows.Forms.ToolStripButton btnCancelar;
@@ -589,7 +609,7 @@ namespace forms.ActivoFijo
         private DevExpress.XtraEditors.ComboBoxEdit cbxGrupo;
         private DevExpress.XtraEditors.LabelControl lblDescripcion;
         private DevExpress.XtraEditors.LabelControl lblGrupo;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtUsuario;
         private DevExpress.XtraEditors.LabelControl lblUsuario;
         private DevExpress.XtraEditors.SimpleButton btnGenerarCodBarra;
         private DevExpress.XtraEditors.SimpleButton btnAsignar;

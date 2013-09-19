@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using datos;
-using forms.Facturacion.Consultas;
 using datos.Facturacion;
 
 namespace forms.Facturacion
@@ -25,6 +24,8 @@ namespace forms.Facturacion
         {
             limpiar();
             this.idNumeroCotizacionSpinEdit.Value = Decimal.Parse(generarmaximo().ToString());
+            this.porcentajeEntradaSpinEdit.Value = 30;
+            this.txtcantidad.Value = 1;
         }
 
         private int generarmaximo()
@@ -223,6 +224,7 @@ namespace forms.Facturacion
                         objdet.FechaMaximaPago = DateTime.Parse(tbldetalle.Rows[i][4].ToString());
                         objdet.precio = Decimal.Parse(tbldetalle.Rows[i][5].ToString());
                         objdet.cantidad = Int32.Parse(tbldetalle.Rows[i][6].ToString());
+                        objdet.costo = Decimal.Parse(tbldetalle.Rows[i][7].ToString());
                         da.AddToCotizacionDet(objdet);
                         da.SaveChanges();
                         i++;
@@ -257,6 +259,7 @@ namespace forms.Facturacion
             tbldetalle.Columns.Add("Fecha Maximo de pago");
             tbldetalle.Columns.Add("Precio");
             tbldetalle.Columns.Add("Cantidad");
+            tbldetalle.Columns.Add("Costo");
             dataGridView1.DataSource = tbldetalle;
 
         }
@@ -288,6 +291,7 @@ namespace forms.Facturacion
                 fila[4] = fechaFinalPagoDateEdit.DateTime;
                 fila[5] = this.txtprecio.Text;
                 fila[6] = this.txtcantidad.Text;
+                fila[7] = this.txtcosto.Text;
                 tbldetalle.Rows.Add(fila);
                 dataGridView1.DataSource = tbldetalle;
 
@@ -322,6 +326,7 @@ namespace forms.Facturacion
             this.txtcodarticulo.Text = obj.codigo;
             this.txtdesarticulo.Text = obj.descripcion;
             this.txtprecio.Text = obj.precio.ToString();
+            this.txtcosto.Text = obj.costo.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -358,7 +363,8 @@ namespace forms.Facturacion
                             a.FechaPago,
                             a.FechaMaximaPago,
                             a.precio,
-                            a.cantidad
+                            a.cantidad,
+                            a.costo
                         };
 
                 this.dataGridView1.DataSource = produc.ToList();

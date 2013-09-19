@@ -74,6 +74,9 @@
     <Compile Include="ActivoFijo\clsClaseDatosSubgrupoActivoFijo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ActivoFijo\clsClaseDatosTransferenciaActivo.cs" />
+    <Compile Include="ActivoFijo\clsDatosBajaActivoProce.cs" />
+    <Compile Include="ActivoFijo\datosmotivobaja.cs" />
     <Compile Include="ActivoFijo\ModelActivoFijo.Designer.cs">
       <DependentUpon>ModelActivoFijo.edmx</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -99,6 +102,8 @@
     </Compile>
     <Compile Include="Contabilidad\clsDatoComprobante.cs" />
     <Compile Include="Contabilidad\clsDatoCuenta.cs" />
+    <Compile Include="Contabilidad\clsDatoER.cs" />
+    <Compile Include="Contabilidad\clsDatoLibroDiario.cs" />
     <Compile Include="Contabilidad\clsDatoSaldo.cs" />
     <Compile Include="Contabilidad\clsDatoTipoCuenta.cs" />
     <Compile Include="Contabilidad\clsDatoTipoTransaccion.cs" />
@@ -107,46 +112,75 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="CuentasxCobrar\clsDatosAperturaCaja.cs" />
-    <Compile Include="CuentasxCobrar\clsDatosAperturaDet.cs" />
-    <Compile Include="CuentasxCobrar\clsDatosBanco.cs" />
-    <Compile Include="CuentasxCobrar\clsDatosCierreCaja.cs" />
-    <Compile Include="CuentasxCobrar\clsDatosCuentaBancaria.cs" />
-    <Compile Include="CuentasxCobrar\clsDatosInversion.cs" />
-    <Compile Include="CuentasxCobrar\clsDatosMonetarioDetalle.cs" />
-    <Compile Include="CuentasxCobrar\clsDatosMovimientoBancario.cs" />
-    <Compile Include="CuentasxCobrar\clsDatosPersonaCXC.cs" />
-    <Compile Include="CuentasxCobrar\clsDatosTarjetaCredito.cs" />
-    <Compile Include="CuentasxCobrar\clsDatosTipoInversion.cs" />
-    <Compile Include="CuentasxCobrar\clsDatosUnidadTiempo.cs" />
-    <Compile Include="CuentasxCobrar\CuentasPorCobrarModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CuentasPorCobrarModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Cuentasxpagar\clsCuentaPorPagarDAT.cs" />
-    <Compile Include="Cuentasxpagar\clsEmpresaServicioDAT1.cs" />
-    <Compile Include="Cuentasxpagar\datosCuentaBancaria.cs">
+    <Compile Include="CuentasxCobrar\clsClienteDefactura.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosAperturaCaja.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Cuentasxpagar\datosEmpresaServicio.cs">
+    <Compile Include="CuentasxCobrar\clsDatosAperturaDet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsDatosBanco.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsDatosCierreCaja.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsDatosCobro.cs" />
+    <Compile Include="CuentasxCobrar\ClsDatosCobroLis.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosConciliacionBancaria.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosCuentaBancaria.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsDatosCuentaxCobrar.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosCuentaxCobrarDet.cs" />
+    <Compile Include="CuentasxCobrar\clsDatosInversion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsDatosMonetarioDetalle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsDatosMovimientoBancario.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsDatosPersonaCXC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsDatosTarjetaCredito.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsDatosTipoInversion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsDatosUnidadTiempo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsFactura.cs" />
+    <Compile Include="CuentasxCobrar\CuentasPorCobrarModel.Designer.cs">
+      <DependentUpon>CuentasPorCobrarModel.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsCuentaPorPagarDAT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsEmpresaServicioDAT1.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Cuentasxpagar\datosFrecuenciaPago.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Cuentasxpagar\datosImpuesto.cs">
+    <Compile Include="Cuentasxpagar\datosImpuestos.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Cuentasxpagar\datosImpuestos.cs" />
     <Compile Include="Cuentasxpagar\datosMedioPago.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Cuentasxpagar\datosMensaje.cs">
+    <Compile Include="Cuentasxpagar\datosOrdenPagoCab.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Cuentasxpagar\datosOrdenPagoCab.cs" />
-    <Compile Include="Cuentasxpagar\datosOrdenPagoDet.cs" />
+    <Compile Include="Cuentasxpagar\datosOrdenPagoDet.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Cuentasxpagar\datosPago.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -165,6 +199,7 @@
     </Compile>
     <Compile Include="Inventario\clsClaseDatosBodega.cs" />
     <Compile Include="Inventario\clsClaseDatosGrupo.cs" />
+    <Compile Include="Inventario\clsInventario.cs" />
     <Compile Include="Inventario\datArticulo.cs" />
     <Compile Include="Inventario\datBodega.cs" />
     <Compile Include="Inventario\datColor.cs" />
@@ -174,6 +209,7 @@
     <Compile Include="Inventario\datMarca.cs" />
     <Compile Include="Inventario\datModelo.cs" />
     <Compile Include="Inventario\datMotivo.cs" />
+    <Compile Include="Inventario\datOrdenCompraDET.cs" />
     <Compile Include="Inventario\datPercha.cs" />
     <Compile Include="Inventario\datTipoArticulo.cs" />
     <Compile Include="Inventario\datTipoChasis.cs" />
@@ -192,14 +228,20 @@
       <DependentUpon>ModelInventario.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RecursosHumanos\clsDatosAcademico.cs" />
+    <Compile Include="RecursosHumanos\clsDatosAcademico.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosAnticipoCabecera.cs" />
+    <Compile Include="RecursosHumanos\clsDatosAnticipoDetalle.cs" />
     <Compile Include="RecursosHumanos\clsDatosCargo.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="RecursosHumanos\clsDatosCargoxDepartamento.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="RecursosHumanos\clsDatosContrato.cs" />
+    <Compile Include="RecursosHumanos\clsDatosContrato.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="RecursosHumanos\clsDatosDepartamento.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -209,15 +251,24 @@
     <Compile Include="RecursosHumanos\clsDatosMensaje.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="RecursosHumanos\clsDatosNominaCab.cs" />
-    <Compile Include="RecursosHumanos\clsDatosNominaDet.cs" />
+    <Compile Include="RecursosHumanos\clsDatosNominaCab.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosNominaDet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosOrdenPagCabRH.cs" />
+    <Compile Include="RecursosHumanos\clsDatosOrdenPagoEmpleadoDetalle.cs" />
     <Compile Include="RecursosHumanos\clsDatosPersona.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="RecursosHumanos\clsDatosPersonaxCargo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="RecursosHumanos\clsDatosPersonaxTitulo.cs" />
+    <Compile Include="RecursosHumanos\clsDatosPersonaxTitulo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsDatosPrestamo.cs" />
     <Compile Include="RecursosHumanos\clsDatosTipoContrato.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -230,8 +281,7 @@
     <Compile Include="RecursosHumanos\clsDatosTitulo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="RecursosHumanos\clsDatosTrabajoDiarioCab.cs" />
-    <Compile Include="RecursosHumanos\clsDatosTrabajoDioarioDet.cs" />
+    <Compile Include="RecursosHumanos\clsDatosTrabajoDiario.cs" />
     <Compile Include="RecursosHumanos\clsDatosUniversidad.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -240,29 +290,115 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Include="Seguridad\datEmpresa.cs" />
-    <Compile Include="Seguridad\datEstado.cs" />
-    <Compile Include="Seguridad\datHorario.cs" />
-    <Compile Include="Seguridad\datImagen.cs" />
-    <Compile Include="Seguridad\datMenuXUsuario.cs" />
-    <Compile Include="Seguridad\datModulo.cs" />
-    <Compile Include="Seguridad\datPerfil.cs" />
-    <Compile Include="Seguridad\datPermiso.cs" />
-    <Compile Include="Seguridad\datUsuario.cs" />
-    <Compile Include="Seguridad\datUsuarioPorEmpresa.cs" />
-    <Compile Include="Seguridad\datVwUsuarioInformacion.cs" />
-    <Compile Include="Seguridad\datModulosPorUsuario.cs" />
-    <Compile Include="Seguridad\datVwUsuarioPermisos.cs" />
+    <Compile Include="Seguridad\datEmpresa.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datEstado.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datHistorial.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datHorario.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datImagen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datMenuPadre.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datMenuXUsuario.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datModulo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datModulosPorUsuario.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datPerfil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datPermiso.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datUsuario.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datUsuarioPorEmpresa.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datVwIniciosDeSesion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datVwUsuarioInformacion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\datVwUsuarioPermisos.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Seguridad\SeguridadModelo.Designer.cs">
+      <DependentUpon>SeguridadModelo.edmx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Taller\crptHistorialReparaciones1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SeguridadModelo.edmx</DependentUpon>
+      <DependentUpon>crptHistorialReparaciones.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Seguridad\datMenuPadre.cs" />
-    <Compile Include="Taller\datArticulo.cs" />
-    <Compile Include="Taller\datCliente.cs" />
-    <Compile Include="Taller\datTiposTrabajos.cs" />
-    <Compile Include="Taller\ModelTaller1.Designer.cs">
+    <Compile Include="Taller\crptHistorialReparacionesG1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptHistorialReparacionesG.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Taller\crptOrdenesTrabajosC1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptOrdenesTrabajosC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Taller\crptOrdenesTrabajosG1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptOrdenesTrabajosG.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Taller\crptOrdenesTrabajosV1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptOrdenesTrabajosV.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Taller\CrystalReport11.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Taller\CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Taller\datArticuloTaller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Taller\datCliente.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Taller\datLiquidacion.cs" />
+    <Compile Include="Taller\datManoObra.cs" />
+    <Compile Include="Taller\datOrdenTrabajo.cs" />
+    <Compile Include="Taller\datPresupuesto.cs" />
+    <Compile Include="Taller\datTiposTrabajos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Taller\ModelTaller.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelTaller.edmx</DependentUpon>
@@ -291,13 +427,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <EntityDeploy Include="Inventario\ModelInventario.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelInventario.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <EntityDeploy Include="CuentasxCobrar\CuentasPorCobrarModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CuentasPorCobrarModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Inventario\ModelInventario.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelInventario.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <EntityDeploy Include="Facturacion\FacturacionModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -318,11 +454,41 @@
     </EntityDeploy>
     <EntityDeploy Include="Taller\ModelTaller.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelTaller1.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelTaller.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Taller\crptHistorialReparaciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptHistorialReparaciones1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taller\crptHistorialReparacionesG.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptHistorialReparacionesG1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taller\crptOrdenesTrabajosC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptOrdenesTrabajosC1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taller\crptOrdenesTrabajosG.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptOrdenesTrabajosG1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taller\crptOrdenesTrabajosV.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptOrdenesTrabajosV1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taller\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport11.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Taller\CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

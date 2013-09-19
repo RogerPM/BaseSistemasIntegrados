@@ -324,6 +324,7 @@
             this.tsbImprimir.Name = "tsbImprimir";
             this.tsbImprimir.Size = new System.Drawing.Size(68, 22);
             this.tsbImprimir.Text = "Generar";
+            this.tsbImprimir.Click += new System.EventHandler(this.tsbImprimir_Click);
             // 
             // tsbSalir
             // 

@@ -15,7 +15,8 @@ namespace clases.Cuentasxpagar
         public int NumOrdenPagoCab { get; set; }
         public Decimal TotalPagar { get; set; }
         public int IdEmpresa { get; set; }
-
+        public bool AutorizarPago { get; set; }
+        
         public clsOrdenPagoDet()
         {
         }

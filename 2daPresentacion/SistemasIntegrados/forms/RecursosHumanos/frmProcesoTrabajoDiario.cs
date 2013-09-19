@@ -13,6 +13,21 @@ namespace forms.RecursosHumanos
 {
     public partial class frmProcesoTrabajoDiario : Form
     {
+        #region "Distributed by security team 3/3"
+        //si este bloque ha sido parcial o totalmente editado, los miembros del equipo de seguridad no 
+        //se responzabilizan en el caso de que exista un mal funcionamiento de este form.
+        private void Seguridad()
+        {
+            //lecturas
+            btnBuscar.Visible = frmPrincipal.Lectura;
+            btnBuscarCedula.Visible = frmPrincipal.Lectura;
+            //escrituras
+            tsbNuevo.Visible = frmPrincipal.Escritura;
+            tsbGuardar.Visible = frmPrincipal.Escritura;
+        }
+
+        #endregion
+
         public frmProcesoTrabajoDiario()
         {
             InitializeComponent();
@@ -20,7 +35,8 @@ namespace forms.RecursosHumanos
 
 #region variables
         int NumLinea;
-       
+        int cont;
+        int id;
         int ban;
         int ban1;
 #endregion
@@ -34,8 +50,7 @@ namespace forms.RecursosHumanos
 
         //*******************CLASES**************
         public clsMensaje men = new clsMensaje();
-        public clsTrabajoDiarioCab clasTdc = new clsTrabajoDiarioCab();
-        public clsTrabajoDiarioDet clasTdd = new clsTrabajoDiarioDet();
+        public clsTrabajoDiario clasTdc = new clsTrabajoDiario();
         public clsPersona clasEmpleado = new clsPersona();
         //public clsAsistencia clasAsistencia = new clsAsistencia ();
        
@@ -43,8 +58,8 @@ namespace forms.RecursosHumanos
         //***************DATOS******************
 
         clsDatosPersona Empleado = new clsDatosPersona();
-        clsDatosTrabajoDiarioCab DatosTdc = new clsDatosTrabajoDiarioCab();
-        clsDatosTrabajoDioarioDet DatosTdd = new clsDatosTrabajoDioarioDet();
+        clsDatosTrabajoDiario DatosTdc = new clsDatosTrabajoDiario();
+      
         
         
 #endregion
@@ -54,7 +69,7 @@ namespace forms.RecursosHumanos
         public void Cargar()
         {
 
-            gcAsis .DataSource= DatosTdd .ConsultaTrabajoDet ( );
+            //gcAsis .DataSource= DatosTdd .ConsultaTrabajoDet ( );
            
 
         }
@@ -64,16 +79,17 @@ namespace forms.RecursosHumanos
         //**************SET****************
         public void Set()
         {
-            //------------Datos de Trabajo Diario Cabecera
+            
             txtNumero.Text = Convert.ToString(clasTdc .NumTrabajo );
             txtObservacion.Text = clasTdc.Observacion;
-            deFecha.DateTime = clasTdc.Fecha;
-
-            //---------Datos de Trabajo Diario Detalle
-            NumLinea = clasTdd.NumLinea;
-            
-            
-            
+            deDesde.DateTime = clasTdc.FechaDesde;
+            deHasta.DateTime = clasTdc.FechaHasta;
+            teIngreso.Time = clasTdc.HoraEntrada1;
+            teSalida.Time = clasTdc.HoraSalida2;
+            txtCedula.Text = Convert.ToString(clasTdc.Identificacion);
+            txtNombres.Text = clasTdc.Nombre;
+            txtApellidos.Text = clasTdc.Apellido;
+            id = clasTdc.IdPersona;
 
         }
 
@@ -90,36 +106,16 @@ namespace forms.RecursosHumanos
             }
             else
             {
-                //------------Datos de  Trabajo Diario Cabecera
                 clasTdc.NumTrabajo = Convert.ToInt32(txtNumero.Text);
-                clasTdc.Fecha = Convert.ToDateTime(deFecha.DateTime);
+                clasTdc.FechaDesde  = Convert.ToDateTime(deDesde .DateTime);
+                clasTdc.FechaHasta = Convert.ToDateTime(deHasta.DateTime);
                 clasTdc.Observacion = txtObservacion.Text;
                 clasTdc .IdEmpresa =1;
                 clasTdc.IdEstado = 1;
-                if (DatosTdc .Guardar (clasTdc ))
-                {
-                    ban1 = 1;
-                }
-                
-                //-------------Datos de Trabajo Diario Detalle
-                for (int i = 0; i < gvAsistencia.RowCount ; i++)
-                {
-                    
-                    clasTdd.NumLinea = DatosTdd.getIdSiguiente();
-                    clasTdd.IdEmpresa = 1;
-                    clasTdd.NumTrabajo = Convert.ToInt32(txtNumero.Text);
-                    clasTdd.IdPersona = Convert.ToInt32(gvAsistencia.GetRowCellValue(i,colIdPersona ));
-                    clasTdd.HoraInicio = Convert.ToString  (gvAsistencia.GetRowCellValue(i, colHoraEntrada1  ));
-                    clasTdd.HoraSalida = Convert.ToString(gvAsistencia.GetRowCellValue(i, colHoraSalida2 ));
-
-                    if (DatosTdd .Guardar (clasTdd))
-                    {
-                        ban = 1;
-                    }
-                   
-                }
-
-                
+                clasTdc.IdPersona = id;
+                clasTdc.HoraInicio =Convert .ToString ( teIngreso.Time);
+                clasTdc.HoraSalida = Convert.ToString(teSalida.Time);
+         
             }
 
         }
@@ -127,14 +123,18 @@ namespace forms.RecursosHumanos
         //*************LIMPIAR*************
         public void Limpiar()
         {
-            //Datos de Trabajo Diario Cabecera
+           
             txtNumero.Text = "";
-            deFecha.DateTime = DateTime.Now;
             txtObservacion.Text = "";
-
-            //Datos de Trabajo Diario Detalle
-            gcAsis.DataSource = DatosTdd .ConsultaTrabajoDet() ;
-            gvAsistencia.OptionsBehavior.Editable =true ;
+            deDesde.DateTime = DateTime .Today;
+            deHasta.DateTime = DateTime .Today ;
+            teIngreso.Time = DateTime.Now;
+            teSalida.Time = DateTime .Now;
+            txtCedula.Text = "";
+            txtNombres.Text = "";
+            txtApellidos.Text = "";
+            id = 0;
+          
         }
 #endregion
 
@@ -167,19 +167,14 @@ namespace forms.RecursosHumanos
                 accion = "G";
                 if (accion == "G")
                 {
-                    if (ban1 ==1)
+                    if (DatosTdc.Guardar(clasTdc))
                     {
 
-                        if (ban == 1)
-                        {
+                        
                             MessageBox.Show(men.Guardar_ok, men.Titulo, MessageBoxButtons.OK);
                             tsbGuardar.Enabled = false;
                             Limpiar();
-                        }
-                        else {
-                            MessageBox.Show(men.Guardar_error, men.Titulo, MessageBoxButtons.OK);
-                        
-                        }
+                  
                     }
                     else
                     {
@@ -211,8 +206,8 @@ namespace forms.RecursosHumanos
 
              int a = DatosTdc.getIdSiguiente();
              txtNumero.Text = Convert.ToString(a);
-             deFecha.DateTime = DateTime.Now;
-             deFecha.Enabled = false;
+             deDesde.DateTime = DateTime.Today;
+             deHasta.DateTime = DateTime .Today;
 
 
              if (accion == "M")
@@ -223,29 +218,46 @@ namespace forms.RecursosHumanos
              {
                  Set();
              }
+             Seguridad();
          }
 
          //*****************************BUSCAR *********************************
          private void btnBuscar_Click(object sender, EventArgs e)
          {
-             int numTrabajo;
+            
              frmPConsultaTrabajo cTrab = new frmPConsultaTrabajo();
-             List<clsPersona> Lista = new List<clsPersona>();
-             List<clsTrabajoDiarioDet> Lista1 = new List<clsTrabajoDiarioDet>();
              cTrab.ShowDialog();
              clasTdc = cTrab.claseTdc;
              txtNumero.Text = Convert.ToString(clasTdc.NumTrabajo);
-             deFecha.DateTime = Convert.ToDateTime(clasTdc.Fecha);
+             deDesde.DateTime = Convert.ToDateTime(clasTdc.FechaDesde);
+             deHasta.DateTime = Convert.ToDateTime(clasTdc.FechaHasta);
              txtObservacion.Text = clasTdc.Observacion;
-             numTrabajo = Convert.ToInt32(txtNumero.Text);
-             gcAsis   .DataSource = DatosTdd .ConsultaTrabajoDiarioDet (numTrabajo );
-             gvAsistencia.OptionsBehavior.Editable = false;
+             txtCedula.Text =Convert .ToString ( clasTdc.Identificacion);
+             txtNombres.Text = clasTdc.Nombre;
+             txtApellidos.Text = clasTdc.Apellido;
+             deDesde.DateTime = clasTdc.FechaDesde;
+             deHasta.DateTime = clasTdc.FechaHasta;
+             teIngreso.Time = clasTdc.HoraEntrada1 ;
+             teSalida.Time = clasTdc.HoraSalida2 ;
+             
              tsbGuardar.Enabled = false;
 
     
          }
 
 #endregion
+
+         private void btnBuscarCedula_Click(object sender, EventArgs e)
+         {
+             frmMConsultaEmpleado cPer = new frmMConsultaEmpleado();
+             cPer.band = 2;
+             cPer.ShowDialog();
+             clasEmpleado  = cPer.p;
+             id = clasEmpleado .IdPersona;
+             txtCedula.Text = Convert.ToString(clasEmpleado .Identificacion);
+             txtNombres.Text = clasEmpleado .NombreRazonSocial;
+             txtApellidos.Text = clasEmpleado .Apellido;
+         }
        
     }      
 }

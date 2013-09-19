@@ -18,23 +18,23 @@ using System.Runtime.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__ActivoFij__IdCod__7FD5EEA5", "CodigoBarra", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.CodigoBarra), "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.ActivoFijo), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__ActivoFij__IdSub__7CF981FA", "SubGrupos", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.SubGrupos), "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.ActivoFijo), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__Articulos__IdAct__27E3DFFF", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.ActivoFijo.ActivoFijo), "Articulos_SuministrosOficina", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.Articulos_SuministrosOficina), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__BajaActiv__IdAct__4297D63B", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.ActivoFijo), "BajaActivo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.BajaActivo), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__Depreciac__IdAct__17AD7836", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.ActivoFijo), "DepreciacionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.DepreciacionDet), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__Edifico__IdActiv__381A47C8", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.ActivoFijo.ActivoFijo), "Edifico", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.Edifico), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__EquipoMaq__IdAct__0A537D18", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.ActivoFijo.ActivoFijo), "EquipoMaquinariaMuebles", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.EquipoMaquinariaMuebles), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__revaloriz__IdAct__3DD3211E", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.ActivoFijo), "revalorizacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.revalorizacion), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__Terreno__IdActiv__058EC7FB", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.ActivoFijo.ActivoFijo), "Terreno", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.Terreno), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__Transfere__IdAct__30792600", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.ActivoFijo), "Transferencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.Transferencia), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__Vehiculo__IdActi__1D66518C", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.ActivoFijo.ActivoFijo), "Vehiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.Vehiculo), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__BajaActiv__IdIma__4850AF91", "Imagen", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.Imagen), "BajaActivo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.BajaActivo), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__BajaActiv__IdSub__44801EAD", "SubGrupos", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.SubGrupos), "BajaActivo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.BajaActivo), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__CodigoBar__Idfor__7093AB15", "TipoFormato", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.TipoFormato), "CodigoBarra", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.CodigoBarra), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__CodigoBar__IdIma__7187CF4E", "Imagen", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.Imagen), "CodigoBarra", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.CodigoBarra), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__VentaGarageDet__54B68676", "VentaGarageCab", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.VentaGarageCab), "VentaGarageDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.VentaGarageDet), true)]
-[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__DepreciacionDet__18A19C6F", "DepreciacionCab", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.DepreciacionCab), "DepreciacionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.DepreciacionDet), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__ActivoFij__IdCod__0682EC34", "CodigoBarra", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.CodigoBarra), "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.ActivoFijo), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__ActivoFij__IdSub__03A67F89", "SubGrupos", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.SubGrupos), "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.ActivoFijo), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__Articulos__IdAct__2E90DD8E", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.ActivoFijo.ActivoFijo), "Articulos_SuministrosOficina", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.Articulos_SuministrosOficina), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__BajaActiv__IdAct__4E0988E7", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.ActivoFijo), "BajaActivo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.BajaActivo), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__Depreciac__IdAct__1E5A75C5", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.ActivoFijo), "DepreciacionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.DepreciacionDet), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__Edifico__IdActiv__3EC74557", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.ActivoFijo.ActivoFijo), "Edifico", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.Edifico), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__EquipoMaq__IdAct__11007AA7", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.ActivoFijo.ActivoFijo), "EquipoMaquinariaMuebles", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.EquipoMaquinariaMuebles), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__revaloriz__IdAct__44801EAD", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.ActivoFijo), "revalorizacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.revalorizacion), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__Terreno__IdActiv__0C3BC58A", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.ActivoFijo.ActivoFijo), "Terreno", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.Terreno), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__Transfere__IdAct__3726238F", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.ActivoFijo), "Transferencia", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.Transferencia), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__Vehiculo__IdActi__24134F1B", "ActivoFijo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.ActivoFijo.ActivoFijo), "Vehiculo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.Vehiculo), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__BajaActiv__IdIma__4FF1D159", "Imagen", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.Imagen), "BajaActivo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.BajaActivo), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__CodigoBar__Idfor__7740A8A4", "TipoFormato", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.TipoFormato), "CodigoBarra", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.CodigoBarra), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__CodigoBar__IdIma__7834CCDD", "Imagen", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.Imagen), "CodigoBarra", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.CodigoBarra), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__DepreciacionDet__1F4E99FE", "DepreciacionCab", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.DepreciacionCab), "DepreciacionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.DepreciacionDet), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__VentaGarageDet__5D4BCC77", "VentaGarageCab", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.VentaGarageCab), "VentaGarageDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.VentaGarageDet), true)]
+[assembly: EdmRelationshipAttribute("ActivoFijoModel", "FK__BajaActiv__IdMot__51DA19CB", "MotivoBaja", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.ActivoFijo.MotivoBaja), "BajaActivo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.ActivoFijo.BajaActivo), true)]
 
 #endregion
 
@@ -149,6 +149,22 @@ namespace datos.ActivoFijo
             }
         }
         private ObjectSet<CodigoBarra> _CodigoBarra;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<DepreciacionCab> DepreciacionCab
+        {
+            get
+            {
+                if ((_DepreciacionCab == null))
+                {
+                    _DepreciacionCab = base.CreateObjectSet<DepreciacionCab>("DepreciacionCab");
+                }
+                return _DepreciacionCab;
+            }
+        }
+        private ObjectSet<DepreciacionCab> _DepreciacionCab;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -345,18 +361,18 @@ namespace datos.ActivoFijo
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<DepreciacionCab> DepreciacionCab
+        public ObjectSet<MotivoBaja> MotivoBaja
         {
             get
             {
-                if ((_DepreciacionCab == null))
+                if ((_MotivoBaja == null))
                 {
-                    _DepreciacionCab = base.CreateObjectSet<DepreciacionCab>("DepreciacionCab");
+                    _MotivoBaja = base.CreateObjectSet<MotivoBaja>("MotivoBaja");
                 }
-                return _DepreciacionCab;
+                return _MotivoBaja;
             }
         }
-        private ObjectSet<DepreciacionCab> _DepreciacionCab;
+        private ObjectSet<MotivoBaja> _MotivoBaja;
 
         #endregion
         #region AddTo Methods
@@ -391,6 +407,14 @@ namespace datos.ActivoFijo
         public void AddToCodigoBarra(CodigoBarra codigoBarra)
         {
             base.AddObject("CodigoBarra", codigoBarra);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the DepreciacionCab EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToDepreciacionCab(DepreciacionCab depreciacionCab)
+        {
+            base.AddObject("DepreciacionCab", depreciacionCab);
         }
     
         /// <summary>
@@ -490,11 +514,11 @@ namespace datos.ActivoFijo
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the DepreciacionCab EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the MotivoBaja EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToDepreciacionCab(DepreciacionCab depreciacionCab)
+        public void AddToMotivoBaja(MotivoBaja motivoBaja)
         {
-            base.AddObject("DepreciacionCab", depreciacionCab);
+            base.AddObject("MotivoBaja", motivoBaja);
         }
 
         #endregion
@@ -1094,16 +1118,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__ActivoFij__IdCod__7FD5EEA5", "CodigoBarra")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__ActivoFij__IdCod__0682EC34", "CodigoBarra")]
         public CodigoBarra CodigoBarra
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CodigoBarra>("ActivoFijoModel.FK__ActivoFij__IdCod__7FD5EEA5", "CodigoBarra").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CodigoBarra>("ActivoFijoModel.FK__ActivoFij__IdCod__0682EC34", "CodigoBarra").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CodigoBarra>("ActivoFijoModel.FK__ActivoFij__IdCod__7FD5EEA5", "CodigoBarra").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CodigoBarra>("ActivoFijoModel.FK__ActivoFij__IdCod__0682EC34", "CodigoBarra").Value = value;
             }
         }
         /// <summary>
@@ -1115,13 +1139,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CodigoBarra>("ActivoFijoModel.FK__ActivoFij__IdCod__7FD5EEA5", "CodigoBarra");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CodigoBarra>("ActivoFijoModel.FK__ActivoFij__IdCod__0682EC34", "CodigoBarra");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CodigoBarra>("ActivoFijoModel.FK__ActivoFij__IdCod__7FD5EEA5", "CodigoBarra", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CodigoBarra>("ActivoFijoModel.FK__ActivoFij__IdCod__0682EC34", "CodigoBarra", value);
                 }
             }
         }
@@ -1132,16 +1156,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__ActivoFij__IdSub__7CF981FA", "SubGrupos")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__ActivoFij__IdSub__03A67F89", "SubGrupos")]
         public SubGrupos SubGrupos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SubGrupos>("ActivoFijoModel.FK__ActivoFij__IdSub__7CF981FA", "SubGrupos").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SubGrupos>("ActivoFijoModel.FK__ActivoFij__IdSub__03A67F89", "SubGrupos").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SubGrupos>("ActivoFijoModel.FK__ActivoFij__IdSub__7CF981FA", "SubGrupos").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SubGrupos>("ActivoFijoModel.FK__ActivoFij__IdSub__03A67F89", "SubGrupos").Value = value;
             }
         }
         /// <summary>
@@ -1153,13 +1177,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SubGrupos>("ActivoFijoModel.FK__ActivoFij__IdSub__7CF981FA", "SubGrupos");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SubGrupos>("ActivoFijoModel.FK__ActivoFij__IdSub__03A67F89", "SubGrupos");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SubGrupos>("ActivoFijoModel.FK__ActivoFij__IdSub__7CF981FA", "SubGrupos", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SubGrupos>("ActivoFijoModel.FK__ActivoFij__IdSub__03A67F89", "SubGrupos", value);
                 }
             }
         }
@@ -1170,16 +1194,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Articulos__IdAct__27E3DFFF", "Articulos_SuministrosOficina")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Articulos__IdAct__2E90DD8E", "Articulos_SuministrosOficina")]
         public Articulos_SuministrosOficina Articulos_SuministrosOficina
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulos_SuministrosOficina>("ActivoFijoModel.FK__Articulos__IdAct__27E3DFFF", "Articulos_SuministrosOficina").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulos_SuministrosOficina>("ActivoFijoModel.FK__Articulos__IdAct__2E90DD8E", "Articulos_SuministrosOficina").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulos_SuministrosOficina>("ActivoFijoModel.FK__Articulos__IdAct__27E3DFFF", "Articulos_SuministrosOficina").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulos_SuministrosOficina>("ActivoFijoModel.FK__Articulos__IdAct__2E90DD8E", "Articulos_SuministrosOficina").Value = value;
             }
         }
         /// <summary>
@@ -1191,13 +1215,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulos_SuministrosOficina>("ActivoFijoModel.FK__Articulos__IdAct__27E3DFFF", "Articulos_SuministrosOficina");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulos_SuministrosOficina>("ActivoFijoModel.FK__Articulos__IdAct__2E90DD8E", "Articulos_SuministrosOficina");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Articulos_SuministrosOficina>("ActivoFijoModel.FK__Articulos__IdAct__27E3DFFF", "Articulos_SuministrosOficina", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Articulos_SuministrosOficina>("ActivoFijoModel.FK__Articulos__IdAct__2E90DD8E", "Articulos_SuministrosOficina", value);
                 }
             }
         }
@@ -1208,18 +1232,18 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__BajaActiv__IdAct__4297D63B", "BajaActivo")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__BajaActiv__IdAct__4E0988E7", "BajaActivo")]
         public EntityCollection<BajaActivo> BajaActivo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BajaActivo>("ActivoFijoModel.FK__BajaActiv__IdAct__4297D63B", "BajaActivo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BajaActivo>("ActivoFijoModel.FK__BajaActiv__IdAct__4E0988E7", "BajaActivo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BajaActivo>("ActivoFijoModel.FK__BajaActiv__IdAct__4297D63B", "BajaActivo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BajaActivo>("ActivoFijoModel.FK__BajaActiv__IdAct__4E0988E7", "BajaActivo", value);
                 }
             }
         }
@@ -1230,18 +1254,18 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Depreciac__IdAct__17AD7836", "DepreciacionDet")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Depreciac__IdAct__1E5A75C5", "DepreciacionDet")]
         public EntityCollection<DepreciacionDet> DepreciacionDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DepreciacionDet>("ActivoFijoModel.FK__Depreciac__IdAct__17AD7836", "DepreciacionDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DepreciacionDet>("ActivoFijoModel.FK__Depreciac__IdAct__1E5A75C5", "DepreciacionDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DepreciacionDet>("ActivoFijoModel.FK__Depreciac__IdAct__17AD7836", "DepreciacionDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DepreciacionDet>("ActivoFijoModel.FK__Depreciac__IdAct__1E5A75C5", "DepreciacionDet", value);
                 }
             }
         }
@@ -1252,16 +1276,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Edifico__IdActiv__381A47C8", "Edifico")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Edifico__IdActiv__3EC74557", "Edifico")]
         public Edifico Edifico
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Edifico>("ActivoFijoModel.FK__Edifico__IdActiv__381A47C8", "Edifico").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Edifico>("ActivoFijoModel.FK__Edifico__IdActiv__3EC74557", "Edifico").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Edifico>("ActivoFijoModel.FK__Edifico__IdActiv__381A47C8", "Edifico").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Edifico>("ActivoFijoModel.FK__Edifico__IdActiv__3EC74557", "Edifico").Value = value;
             }
         }
         /// <summary>
@@ -1273,13 +1297,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Edifico>("ActivoFijoModel.FK__Edifico__IdActiv__381A47C8", "Edifico");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Edifico>("ActivoFijoModel.FK__Edifico__IdActiv__3EC74557", "Edifico");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Edifico>("ActivoFijoModel.FK__Edifico__IdActiv__381A47C8", "Edifico", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Edifico>("ActivoFijoModel.FK__Edifico__IdActiv__3EC74557", "Edifico", value);
                 }
             }
         }
@@ -1290,16 +1314,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__EquipoMaq__IdAct__0A537D18", "EquipoMaquinariaMuebles")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__EquipoMaq__IdAct__11007AA7", "EquipoMaquinariaMuebles")]
         public EquipoMaquinariaMuebles EquipoMaquinariaMuebles
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EquipoMaquinariaMuebles>("ActivoFijoModel.FK__EquipoMaq__IdAct__0A537D18", "EquipoMaquinariaMuebles").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EquipoMaquinariaMuebles>("ActivoFijoModel.FK__EquipoMaq__IdAct__11007AA7", "EquipoMaquinariaMuebles").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EquipoMaquinariaMuebles>("ActivoFijoModel.FK__EquipoMaq__IdAct__0A537D18", "EquipoMaquinariaMuebles").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EquipoMaquinariaMuebles>("ActivoFijoModel.FK__EquipoMaq__IdAct__11007AA7", "EquipoMaquinariaMuebles").Value = value;
             }
         }
         /// <summary>
@@ -1311,13 +1335,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EquipoMaquinariaMuebles>("ActivoFijoModel.FK__EquipoMaq__IdAct__0A537D18", "EquipoMaquinariaMuebles");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EquipoMaquinariaMuebles>("ActivoFijoModel.FK__EquipoMaq__IdAct__11007AA7", "EquipoMaquinariaMuebles");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EquipoMaquinariaMuebles>("ActivoFijoModel.FK__EquipoMaq__IdAct__0A537D18", "EquipoMaquinariaMuebles", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EquipoMaquinariaMuebles>("ActivoFijoModel.FK__EquipoMaq__IdAct__11007AA7", "EquipoMaquinariaMuebles", value);
                 }
             }
         }
@@ -1328,18 +1352,18 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__revaloriz__IdAct__3DD3211E", "revalorizacion")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__revaloriz__IdAct__44801EAD", "revalorizacion")]
         public EntityCollection<revalorizacion> revalorizacion
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<revalorizacion>("ActivoFijoModel.FK__revaloriz__IdAct__3DD3211E", "revalorizacion");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<revalorizacion>("ActivoFijoModel.FK__revaloriz__IdAct__44801EAD", "revalorizacion");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<revalorizacion>("ActivoFijoModel.FK__revaloriz__IdAct__3DD3211E", "revalorizacion", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<revalorizacion>("ActivoFijoModel.FK__revaloriz__IdAct__44801EAD", "revalorizacion", value);
                 }
             }
         }
@@ -1350,16 +1374,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Terreno__IdActiv__058EC7FB", "Terreno")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Terreno__IdActiv__0C3BC58A", "Terreno")]
         public Terreno Terreno
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Terreno>("ActivoFijoModel.FK__Terreno__IdActiv__058EC7FB", "Terreno").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Terreno>("ActivoFijoModel.FK__Terreno__IdActiv__0C3BC58A", "Terreno").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Terreno>("ActivoFijoModel.FK__Terreno__IdActiv__058EC7FB", "Terreno").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Terreno>("ActivoFijoModel.FK__Terreno__IdActiv__0C3BC58A", "Terreno").Value = value;
             }
         }
         /// <summary>
@@ -1371,13 +1395,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Terreno>("ActivoFijoModel.FK__Terreno__IdActiv__058EC7FB", "Terreno");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Terreno>("ActivoFijoModel.FK__Terreno__IdActiv__0C3BC58A", "Terreno");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Terreno>("ActivoFijoModel.FK__Terreno__IdActiv__058EC7FB", "Terreno", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Terreno>("ActivoFijoModel.FK__Terreno__IdActiv__0C3BC58A", "Terreno", value);
                 }
             }
         }
@@ -1388,18 +1412,18 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Transfere__IdAct__30792600", "Transferencia")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Transfere__IdAct__3726238F", "Transferencia")]
         public EntityCollection<Transferencia> Transferencia
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Transferencia>("ActivoFijoModel.FK__Transfere__IdAct__30792600", "Transferencia");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Transferencia>("ActivoFijoModel.FK__Transfere__IdAct__3726238F", "Transferencia");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Transferencia>("ActivoFijoModel.FK__Transfere__IdAct__30792600", "Transferencia", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Transferencia>("ActivoFijoModel.FK__Transfere__IdAct__3726238F", "Transferencia", value);
                 }
             }
         }
@@ -1410,16 +1434,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Vehiculo__IdActi__1D66518C", "Vehiculo")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Vehiculo__IdActi__24134F1B", "Vehiculo")]
         public Vehiculo Vehiculo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Vehiculo>("ActivoFijoModel.FK__Vehiculo__IdActi__1D66518C", "Vehiculo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Vehiculo>("ActivoFijoModel.FK__Vehiculo__IdActi__24134F1B", "Vehiculo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Vehiculo>("ActivoFijoModel.FK__Vehiculo__IdActi__1D66518C", "Vehiculo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Vehiculo>("ActivoFijoModel.FK__Vehiculo__IdActi__24134F1B", "Vehiculo").Value = value;
             }
         }
         /// <summary>
@@ -1431,13 +1455,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Vehiculo>("ActivoFijoModel.FK__Vehiculo__IdActi__1D66518C", "Vehiculo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Vehiculo>("ActivoFijoModel.FK__Vehiculo__IdActi__24134F1B", "Vehiculo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Vehiculo>("ActivoFijoModel.FK__Vehiculo__IdActi__1D66518C", "Vehiculo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Vehiculo>("ActivoFijoModel.FK__Vehiculo__IdActi__24134F1B", "Vehiculo", value);
                 }
             }
         }
@@ -1626,16 +1650,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Articulos__IdAct__27E3DFFF", "ActivoFijo")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Articulos__IdAct__2E90DD8E", "ActivoFijo")]
         public ActivoFijo ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Articulos__IdAct__27E3DFFF", "ActivoFijo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Articulos__IdAct__2E90DD8E", "ActivoFijo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Articulos__IdAct__27E3DFFF", "ActivoFijo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Articulos__IdAct__2E90DD8E", "ActivoFijo").Value = value;
             }
         }
         /// <summary>
@@ -1647,13 +1671,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Articulos__IdAct__27E3DFFF", "ActivoFijo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Articulos__IdAct__2E90DD8E", "ActivoFijo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Articulos__IdAct__27E3DFFF", "ActivoFijo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Articulos__IdAct__2E90DD8E", "ActivoFijo", value);
                 }
             }
         }
@@ -1765,54 +1789,6 @@ namespace datos.ActivoFijo
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdGrupo
-        {
-            get
-            {
-                return _IdGrupo;
-            }
-            set
-            {
-                OnIdGrupoChanging(value);
-                ReportPropertyChanging("IdGrupo");
-                _IdGrupo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdGrupo");
-                OnIdGrupoChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdGrupo;
-        partial void OnIdGrupoChanging(Nullable<global::System.Int32> value);
-        partial void OnIdGrupoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdSubgrupo
-        {
-            get
-            {
-                return _IdSubgrupo;
-            }
-            set
-            {
-                OnIdSubgrupoChanging(value);
-                ReportPropertyChanging("IdSubgrupo");
-                _IdSubgrupo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdSubgrupo");
-                OnIdSubgrupoChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdSubgrupo;
-        partial void OnIdSubgrupoChanging(Nullable<global::System.Int32> value);
-        partial void OnIdSubgrupoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
         public Nullable<global::System.DateTime> Fecha
         {
             get
@@ -1831,30 +1807,6 @@ namespace datos.ActivoFijo
         private Nullable<global::System.DateTime> _Fecha;
         partial void OnFechaChanging(Nullable<global::System.DateTime> value);
         partial void OnFechaChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdEstado
-        {
-            get
-            {
-                return _IdEstado;
-            }
-            set
-            {
-                OnIdEstadoChanging(value);
-                ReportPropertyChanging("IdEstado");
-                _IdEstado = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdEstado");
-                OnIdEstadoChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdEstado;
-        partial void OnIdEstadoChanging(Nullable<global::System.Int32> value);
-        partial void OnIdEstadoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1909,48 +1861,24 @@ namespace datos.ActivoFijo
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String Motivo
+        public Nullable<global::System.Int32> IdMotivoBaja
         {
             get
             {
-                return _Motivo;
+                return _IdMotivoBaja;
             }
             set
             {
-                OnMotivoChanging(value);
-                ReportPropertyChanging("Motivo");
-                _Motivo = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Motivo");
-                OnMotivoChanged();
+                OnIdMotivoBajaChanging(value);
+                ReportPropertyChanging("IdMotivoBaja");
+                _IdMotivoBaja = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdMotivoBaja");
+                OnIdMotivoBajaChanged();
             }
         }
-        private global::System.String _Motivo;
-        partial void OnMotivoChanging(global::System.String value);
-        partial void OnMotivoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdProveedor
-        {
-            get
-            {
-                return _IdProveedor;
-            }
-            set
-            {
-                OnIdProveedorChanging(value);
-                ReportPropertyChanging("IdProveedor");
-                _IdProveedor = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdProveedor");
-                OnIdProveedorChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdProveedor;
-        partial void OnIdProveedorChanging(Nullable<global::System.Int32> value);
-        partial void OnIdProveedorChanged();
+        private Nullable<global::System.Int32> _IdMotivoBaja;
+        partial void OnIdMotivoBajaChanging(Nullable<global::System.Int32> value);
+        partial void OnIdMotivoBajaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -2034,16 +1962,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__BajaActiv__IdAct__4297D63B", "ActivoFijo")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__BajaActiv__IdAct__4E0988E7", "ActivoFijo")]
         public ActivoFijo ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__BajaActiv__IdAct__4297D63B", "ActivoFijo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__BajaActiv__IdAct__4E0988E7", "ActivoFijo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__BajaActiv__IdAct__4297D63B", "ActivoFijo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__BajaActiv__IdAct__4E0988E7", "ActivoFijo").Value = value;
             }
         }
         /// <summary>
@@ -2055,13 +1983,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__BajaActiv__IdAct__4297D63B", "ActivoFijo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__BajaActiv__IdAct__4E0988E7", "ActivoFijo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__BajaActiv__IdAct__4297D63B", "ActivoFijo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__BajaActiv__IdAct__4E0988E7", "ActivoFijo", value);
                 }
             }
         }
@@ -2072,16 +2000,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__BajaActiv__IdIma__4850AF91", "Imagen")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__BajaActiv__IdIma__4FF1D159", "Imagen")]
         public Imagen Imagen
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Imagen>("ActivoFijoModel.FK__BajaActiv__IdIma__4850AF91", "Imagen").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Imagen>("ActivoFijoModel.FK__BajaActiv__IdIma__4FF1D159", "Imagen").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Imagen>("ActivoFijoModel.FK__BajaActiv__IdIma__4850AF91", "Imagen").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Imagen>("ActivoFijoModel.FK__BajaActiv__IdIma__4FF1D159", "Imagen").Value = value;
             }
         }
         /// <summary>
@@ -2093,13 +2021,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Imagen>("ActivoFijoModel.FK__BajaActiv__IdIma__4850AF91", "Imagen");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Imagen>("ActivoFijoModel.FK__BajaActiv__IdIma__4FF1D159", "Imagen");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Imagen>("ActivoFijoModel.FK__BajaActiv__IdIma__4850AF91", "Imagen", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Imagen>("ActivoFijoModel.FK__BajaActiv__IdIma__4FF1D159", "Imagen", value);
                 }
             }
         }
@@ -2110,16 +2038,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__BajaActiv__IdSub__44801EAD", "SubGrupos")]
-        public SubGrupos SubGrupos
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__BajaActiv__IdMot__51DA19CB", "MotivoBaja")]
+        public MotivoBaja MotivoBaja
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SubGrupos>("ActivoFijoModel.FK__BajaActiv__IdSub__44801EAD", "SubGrupos").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MotivoBaja>("ActivoFijoModel.FK__BajaActiv__IdMot__51DA19CB", "MotivoBaja").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SubGrupos>("ActivoFijoModel.FK__BajaActiv__IdSub__44801EAD", "SubGrupos").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MotivoBaja>("ActivoFijoModel.FK__BajaActiv__IdMot__51DA19CB", "MotivoBaja").Value = value;
             }
         }
         /// <summary>
@@ -2127,17 +2055,17 @@ namespace datos.ActivoFijo
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<SubGrupos> SubGruposReference
+        public EntityReference<MotivoBaja> MotivoBajaReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SubGrupos>("ActivoFijoModel.FK__BajaActiv__IdSub__44801EAD", "SubGrupos");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MotivoBaja>("ActivoFijoModel.FK__BajaActiv__IdMot__51DA19CB", "MotivoBaja");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SubGrupos>("ActivoFijoModel.FK__BajaActiv__IdSub__44801EAD", "SubGrupos", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MotivoBaja>("ActivoFijoModel.FK__BajaActiv__IdMot__51DA19CB", "MotivoBaja", value);
                 }
             }
         }
@@ -2470,18 +2398,18 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__ActivoFij__IdCod__7FD5EEA5", "ActivoFijo")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__ActivoFij__IdCod__0682EC34", "ActivoFijo")]
         public EntityCollection<ActivoFijo> ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ActivoFijo>("ActivoFijoModel.FK__ActivoFij__IdCod__7FD5EEA5", "ActivoFijo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ActivoFijo>("ActivoFijoModel.FK__ActivoFij__IdCod__0682EC34", "ActivoFijo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ActivoFijo>("ActivoFijoModel.FK__ActivoFij__IdCod__7FD5EEA5", "ActivoFijo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ActivoFijo>("ActivoFijoModel.FK__ActivoFij__IdCod__0682EC34", "ActivoFijo", value);
                 }
             }
         }
@@ -2492,16 +2420,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__CodigoBar__Idfor__7093AB15", "TipoFormato")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__CodigoBar__Idfor__7740A8A4", "TipoFormato")]
         public TipoFormato TipoFormato
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoFormato>("ActivoFijoModel.FK__CodigoBar__Idfor__7093AB15", "TipoFormato").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoFormato>("ActivoFijoModel.FK__CodigoBar__Idfor__7740A8A4", "TipoFormato").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoFormato>("ActivoFijoModel.FK__CodigoBar__Idfor__7093AB15", "TipoFormato").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoFormato>("ActivoFijoModel.FK__CodigoBar__Idfor__7740A8A4", "TipoFormato").Value = value;
             }
         }
         /// <summary>
@@ -2513,13 +2441,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoFormato>("ActivoFijoModel.FK__CodigoBar__Idfor__7093AB15", "TipoFormato");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoFormato>("ActivoFijoModel.FK__CodigoBar__Idfor__7740A8A4", "TipoFormato");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoFormato>("ActivoFijoModel.FK__CodigoBar__Idfor__7093AB15", "TipoFormato", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoFormato>("ActivoFijoModel.FK__CodigoBar__Idfor__7740A8A4", "TipoFormato", value);
                 }
             }
         }
@@ -2530,16 +2458,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__CodigoBar__IdIma__7187CF4E", "Imagen")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__CodigoBar__IdIma__7834CCDD", "Imagen")]
         public Imagen Imagen
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Imagen>("ActivoFijoModel.FK__CodigoBar__IdIma__7187CF4E", "Imagen").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Imagen>("ActivoFijoModel.FK__CodigoBar__IdIma__7834CCDD", "Imagen").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Imagen>("ActivoFijoModel.FK__CodigoBar__IdIma__7187CF4E", "Imagen").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Imagen>("ActivoFijoModel.FK__CodigoBar__IdIma__7834CCDD", "Imagen").Value = value;
             }
         }
         /// <summary>
@@ -2551,13 +2479,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Imagen>("ActivoFijoModel.FK__CodigoBar__IdIma__7187CF4E", "Imagen");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Imagen>("ActivoFijoModel.FK__CodigoBar__IdIma__7834CCDD", "Imagen");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Imagen>("ActivoFijoModel.FK__CodigoBar__IdIma__7187CF4E", "Imagen", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Imagen>("ActivoFijoModel.FK__CodigoBar__IdIma__7834CCDD", "Imagen", value);
                 }
             }
         }
@@ -2775,18 +2703,18 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__DepreciacionDet__18A19C6F", "DepreciacionDet")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__DepreciacionDet__1F4E99FE", "DepreciacionDet")]
         public EntityCollection<DepreciacionDet> DepreciacionDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DepreciacionDet>("ActivoFijoModel.FK__DepreciacionDet__18A19C6F", "DepreciacionDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DepreciacionDet>("ActivoFijoModel.FK__DepreciacionDet__1F4E99FE", "DepreciacionDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DepreciacionDet>("ActivoFijoModel.FK__DepreciacionDet__18A19C6F", "DepreciacionDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DepreciacionDet>("ActivoFijoModel.FK__DepreciacionDet__1F4E99FE", "DepreciacionDet", value);
                 }
             }
         }
@@ -3052,16 +2980,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Depreciac__IdAct__17AD7836", "ActivoFijo")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Depreciac__IdAct__1E5A75C5", "ActivoFijo")]
         public ActivoFijo ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Depreciac__IdAct__17AD7836", "ActivoFijo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Depreciac__IdAct__1E5A75C5", "ActivoFijo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Depreciac__IdAct__17AD7836", "ActivoFijo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Depreciac__IdAct__1E5A75C5", "ActivoFijo").Value = value;
             }
         }
         /// <summary>
@@ -3073,13 +3001,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Depreciac__IdAct__17AD7836", "ActivoFijo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Depreciac__IdAct__1E5A75C5", "ActivoFijo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Depreciac__IdAct__17AD7836", "ActivoFijo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Depreciac__IdAct__1E5A75C5", "ActivoFijo", value);
                 }
             }
         }
@@ -3090,16 +3018,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__DepreciacionDet__18A19C6F", "DepreciacionCab")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__DepreciacionDet__1F4E99FE", "DepreciacionCab")]
         public DepreciacionCab DepreciacionCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DepreciacionCab>("ActivoFijoModel.FK__DepreciacionDet__18A19C6F", "DepreciacionCab").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DepreciacionCab>("ActivoFijoModel.FK__DepreciacionDet__1F4E99FE", "DepreciacionCab").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DepreciacionCab>("ActivoFijoModel.FK__DepreciacionDet__18A19C6F", "DepreciacionCab").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DepreciacionCab>("ActivoFijoModel.FK__DepreciacionDet__1F4E99FE", "DepreciacionCab").Value = value;
             }
         }
         /// <summary>
@@ -3111,13 +3039,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DepreciacionCab>("ActivoFijoModel.FK__DepreciacionDet__18A19C6F", "DepreciacionCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DepreciacionCab>("ActivoFijoModel.FK__DepreciacionDet__1F4E99FE", "DepreciacionCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DepreciacionCab>("ActivoFijoModel.FK__DepreciacionDet__18A19C6F", "DepreciacionCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DepreciacionCab>("ActivoFijoModel.FK__DepreciacionDet__1F4E99FE", "DepreciacionCab", value);
                 }
             }
         }
@@ -3205,7 +3133,7 @@ namespace datos.ActivoFijo
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> CodigoCatastral
+        public global::System.String CodigoCatastral
         {
             get
             {
@@ -3215,13 +3143,13 @@ namespace datos.ActivoFijo
             {
                 OnCodigoCatastralChanging(value);
                 ReportPropertyChanging("CodigoCatastral");
-                _CodigoCatastral = StructuralObject.SetValidValue(value);
+                _CodigoCatastral = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("CodigoCatastral");
                 OnCodigoCatastralChanged();
             }
         }
-        private Nullable<global::System.Int32> _CodigoCatastral;
-        partial void OnCodigoCatastralChanging(Nullable<global::System.Int32> value);
+        private global::System.String _CodigoCatastral;
+        partial void OnCodigoCatastralChanging(global::System.String value);
         partial void OnCodigoCatastralChanged();
     
         /// <summary>
@@ -3378,16 +3306,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Edifico__IdActiv__381A47C8", "ActivoFijo")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Edifico__IdActiv__3EC74557", "ActivoFijo")]
         public ActivoFijo ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Edifico__IdActiv__381A47C8", "ActivoFijo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Edifico__IdActiv__3EC74557", "ActivoFijo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Edifico__IdActiv__381A47C8", "ActivoFijo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Edifico__IdActiv__3EC74557", "ActivoFijo").Value = value;
             }
         }
         /// <summary>
@@ -3399,13 +3327,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Edifico__IdActiv__381A47C8", "ActivoFijo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Edifico__IdActiv__3EC74557", "ActivoFijo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Edifico__IdActiv__381A47C8", "ActivoFijo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Edifico__IdActiv__3EC74557", "ActivoFijo", value);
                 }
             }
         }
@@ -3541,7 +3469,7 @@ namespace datos.ActivoFijo
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> Carga
+        public Nullable<global::System.Decimal> Carga
         {
             get
             {
@@ -3556,8 +3484,8 @@ namespace datos.ActivoFijo
                 OnCargaChanged();
             }
         }
-        private Nullable<global::System.Int32> _Carga;
-        partial void OnCargaChanging(Nullable<global::System.Int32> value);
+        private Nullable<global::System.Decimal> _Carga;
+        partial void OnCargaChanging(Nullable<global::System.Decimal> value);
         partial void OnCargaChanged();
     
         /// <summary>
@@ -3690,16 +3618,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__EquipoMaq__IdAct__0A537D18", "ActivoFijo")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__EquipoMaq__IdAct__11007AA7", "ActivoFijo")]
         public ActivoFijo ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__EquipoMaq__IdAct__0A537D18", "ActivoFijo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__EquipoMaq__IdAct__11007AA7", "ActivoFijo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__EquipoMaq__IdAct__0A537D18", "ActivoFijo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__EquipoMaq__IdAct__11007AA7", "ActivoFijo").Value = value;
             }
         }
         /// <summary>
@@ -3711,13 +3639,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__EquipoMaq__IdAct__0A537D18", "ActivoFijo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__EquipoMaq__IdAct__11007AA7", "ActivoFijo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__EquipoMaq__IdAct__0A537D18", "ActivoFijo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__EquipoMaq__IdAct__11007AA7", "ActivoFijo", value);
                 }
             }
         }
@@ -3834,18 +3762,18 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__BajaActiv__IdIma__4850AF91", "BajaActivo")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__BajaActiv__IdIma__4FF1D159", "BajaActivo")]
         public EntityCollection<BajaActivo> BajaActivo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BajaActivo>("ActivoFijoModel.FK__BajaActiv__IdIma__4850AF91", "BajaActivo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BajaActivo>("ActivoFijoModel.FK__BajaActiv__IdIma__4FF1D159", "BajaActivo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BajaActivo>("ActivoFijoModel.FK__BajaActiv__IdIma__4850AF91", "BajaActivo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BajaActivo>("ActivoFijoModel.FK__BajaActiv__IdIma__4FF1D159", "BajaActivo", value);
                 }
             }
         }
@@ -3856,18 +3784,146 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__CodigoBar__IdIma__7187CF4E", "CodigoBarra")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__CodigoBar__IdIma__7834CCDD", "CodigoBarra")]
         public EntityCollection<CodigoBarra> CodigoBarra
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CodigoBarra>("ActivoFijoModel.FK__CodigoBar__IdIma__7187CF4E", "CodigoBarra");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CodigoBarra>("ActivoFijoModel.FK__CodigoBar__IdIma__7834CCDD", "CodigoBarra");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CodigoBarra>("ActivoFijoModel.FK__CodigoBar__IdIma__7187CF4E", "CodigoBarra", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CodigoBarra>("ActivoFijoModel.FK__CodigoBar__IdIma__7834CCDD", "CodigoBarra", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="ActivoFijoModel", Name="MotivoBaja")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class MotivoBaja : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new MotivoBaja object.
+        /// </summary>
+        /// <param name="idMotivoBaja">Initial value of the IdMotivoBaja property.</param>
+        public static MotivoBaja CreateMotivoBaja(global::System.Int32 idMotivoBaja)
+        {
+            MotivoBaja motivoBaja = new MotivoBaja();
+            motivoBaja.IdMotivoBaja = idMotivoBaja;
+            return motivoBaja;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdMotivoBaja
+        {
+            get
+            {
+                return _IdMotivoBaja;
+            }
+            set
+            {
+                if (_IdMotivoBaja != value)
+                {
+                    OnIdMotivoBajaChanging(value);
+                    ReportPropertyChanging("IdMotivoBaja");
+                    _IdMotivoBaja = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdMotivoBaja");
+                    OnIdMotivoBajaChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdMotivoBaja;
+        partial void OnIdMotivoBajaChanging(global::System.Int32 value);
+        partial void OnIdMotivoBajaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String descripcion
+        {
+            get
+            {
+                return _descripcion;
+            }
+            set
+            {
+                OndescripcionChanging(value);
+                ReportPropertyChanging("descripcion");
+                _descripcion = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("descripcion");
+                OndescripcionChanged();
+            }
+        }
+        private global::System.String _descripcion;
+        partial void OndescripcionChanging(global::System.String value);
+        partial void OndescripcionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> Idestado
+        {
+            get
+            {
+                return _Idestado;
+            }
+            set
+            {
+                OnIdestadoChanging(value);
+                ReportPropertyChanging("Idestado");
+                _Idestado = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Idestado");
+                OnIdestadoChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _Idestado;
+        partial void OnIdestadoChanging(Nullable<global::System.Int32> value);
+        partial void OnIdestadoChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__BajaActiv__IdMot__51DA19CB", "BajaActivo")]
+        public EntityCollection<BajaActivo> BajaActivo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BajaActivo>("ActivoFijoModel.FK__BajaActiv__IdMot__51DA19CB", "BajaActivo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BajaActivo>("ActivoFijoModel.FK__BajaActiv__IdMot__51DA19CB", "BajaActivo", value);
                 }
             }
         }
@@ -4104,16 +4160,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__revaloriz__IdAct__3DD3211E", "ActivoFijo")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__revaloriz__IdAct__44801EAD", "ActivoFijo")]
         public ActivoFijo ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__revaloriz__IdAct__3DD3211E", "ActivoFijo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__revaloriz__IdAct__44801EAD", "ActivoFijo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__revaloriz__IdAct__3DD3211E", "ActivoFijo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__revaloriz__IdAct__44801EAD", "ActivoFijo").Value = value;
             }
         }
         /// <summary>
@@ -4125,13 +4181,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__revaloriz__IdAct__3DD3211E", "ActivoFijo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__revaloriz__IdAct__44801EAD", "ActivoFijo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__revaloriz__IdAct__3DD3211E", "ActivoFijo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__revaloriz__IdAct__44801EAD", "ActivoFijo", value);
                 }
             }
         }
@@ -4344,40 +4400,18 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__ActivoFij__IdSub__7CF981FA", "ActivoFijo")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__ActivoFij__IdSub__03A67F89", "ActivoFijo")]
         public EntityCollection<ActivoFijo> ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ActivoFijo>("ActivoFijoModel.FK__ActivoFij__IdSub__7CF981FA", "ActivoFijo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ActivoFijo>("ActivoFijoModel.FK__ActivoFij__IdSub__03A67F89", "ActivoFijo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ActivoFijo>("ActivoFijoModel.FK__ActivoFij__IdSub__7CF981FA", "ActivoFijo", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__BajaActiv__IdSub__44801EAD", "BajaActivo")]
-        public EntityCollection<BajaActivo> BajaActivo
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<BajaActivo>("ActivoFijoModel.FK__BajaActiv__IdSub__44801EAD", "BajaActivo");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<BajaActivo>("ActivoFijoModel.FK__BajaActiv__IdSub__44801EAD", "BajaActivo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ActivoFijo>("ActivoFijoModel.FK__ActivoFij__IdSub__03A67F89", "ActivoFijo", value);
                 }
             }
         }
@@ -4590,16 +4624,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Terreno__IdActiv__058EC7FB", "ActivoFijo")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Terreno__IdActiv__0C3BC58A", "ActivoFijo")]
         public ActivoFijo ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Terreno__IdActiv__058EC7FB", "ActivoFijo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Terreno__IdActiv__0C3BC58A", "ActivoFijo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Terreno__IdActiv__058EC7FB", "ActivoFijo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Terreno__IdActiv__0C3BC58A", "ActivoFijo").Value = value;
             }
         }
         /// <summary>
@@ -4611,13 +4645,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Terreno__IdActiv__058EC7FB", "ActivoFijo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Terreno__IdActiv__0C3BC58A", "ActivoFijo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Terreno__IdActiv__058EC7FB", "ActivoFijo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Terreno__IdActiv__0C3BC58A", "ActivoFijo", value);
                 }
             }
         }
@@ -4710,18 +4744,18 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__CodigoBar__Idfor__7093AB15", "CodigoBarra")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__CodigoBar__Idfor__7740A8A4", "CodigoBarra")]
         public EntityCollection<CodigoBarra> CodigoBarra
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CodigoBarra>("ActivoFijoModel.FK__CodigoBar__Idfor__7093AB15", "CodigoBarra");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CodigoBarra>("ActivoFijoModel.FK__CodigoBar__Idfor__7740A8A4", "CodigoBarra");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CodigoBarra>("ActivoFijoModel.FK__CodigoBar__Idfor__7093AB15", "CodigoBarra", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CodigoBarra>("ActivoFijoModel.FK__CodigoBar__Idfor__7740A8A4", "CodigoBarra", value);
                 }
             }
         }
@@ -4982,16 +5016,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Transfere__IdAct__30792600", "ActivoFijo")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Transfere__IdAct__3726238F", "ActivoFijo")]
         public ActivoFijo ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Transfere__IdAct__30792600", "ActivoFijo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Transfere__IdAct__3726238F", "ActivoFijo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Transfere__IdAct__30792600", "ActivoFijo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Transfere__IdAct__3726238F", "ActivoFijo").Value = value;
             }
         }
         /// <summary>
@@ -5003,13 +5037,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Transfere__IdAct__30792600", "ActivoFijo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Transfere__IdAct__3726238F", "ActivoFijo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Transfere__IdAct__30792600", "ActivoFijo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Transfere__IdAct__3726238F", "ActivoFijo", value);
                 }
             }
         }
@@ -5486,16 +5520,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Vehiculo__IdActi__1D66518C", "ActivoFijo")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__Vehiculo__IdActi__24134F1B", "ActivoFijo")]
         public ActivoFijo ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Vehiculo__IdActi__1D66518C", "ActivoFijo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Vehiculo__IdActi__24134F1B", "ActivoFijo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Vehiculo__IdActi__1D66518C", "ActivoFijo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Vehiculo__IdActi__24134F1B", "ActivoFijo").Value = value;
             }
         }
         /// <summary>
@@ -5507,13 +5541,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Vehiculo__IdActi__1D66518C", "ActivoFijo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Vehiculo__IdActi__24134F1B", "ActivoFijo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Vehiculo__IdActi__1D66518C", "ActivoFijo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ActivoFijo>("ActivoFijoModel.FK__Vehiculo__IdActi__24134F1B", "ActivoFijo", value);
                 }
             }
         }
@@ -5947,18 +5981,18 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__VentaGarageDet__54B68676", "VentaGarageDet")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__VentaGarageDet__5D4BCC77", "VentaGarageDet")]
         public EntityCollection<VentaGarageDet> VentaGarageDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<VentaGarageDet>("ActivoFijoModel.FK__VentaGarageDet__54B68676", "VentaGarageDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<VentaGarageDet>("ActivoFijoModel.FK__VentaGarageDet__5D4BCC77", "VentaGarageDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<VentaGarageDet>("ActivoFijoModel.FK__VentaGarageDet__54B68676", "VentaGarageDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<VentaGarageDet>("ActivoFijoModel.FK__VentaGarageDet__5D4BCC77", "VentaGarageDet", value);
                 }
             }
         }
@@ -6248,16 +6282,16 @@ namespace datos.ActivoFijo
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__VentaGarageDet__54B68676", "VentaGarageCab")]
+        [EdmRelationshipNavigationPropertyAttribute("ActivoFijoModel", "FK__VentaGarageDet__5D4BCC77", "VentaGarageCab")]
         public VentaGarageCab VentaGarageCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VentaGarageCab>("ActivoFijoModel.FK__VentaGarageDet__54B68676", "VentaGarageCab").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VentaGarageCab>("ActivoFijoModel.FK__VentaGarageDet__5D4BCC77", "VentaGarageCab").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VentaGarageCab>("ActivoFijoModel.FK__VentaGarageDet__54B68676", "VentaGarageCab").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VentaGarageCab>("ActivoFijoModel.FK__VentaGarageDet__5D4BCC77", "VentaGarageCab").Value = value;
             }
         }
         /// <summary>
@@ -6269,13 +6303,13 @@ namespace datos.ActivoFijo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VentaGarageCab>("ActivoFijoModel.FK__VentaGarageDet__54B68676", "VentaGarageCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<VentaGarageCab>("ActivoFijoModel.FK__VentaGarageDet__5D4BCC77", "VentaGarageCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VentaGarageCab>("ActivoFijoModel.FK__VentaGarageDet__54B68676", "VentaGarageCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<VentaGarageCab>("ActivoFijoModel.FK__VentaGarageDet__5D4BCC77", "VentaGarageCab", value);
                 }
             }
         }

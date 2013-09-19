@@ -21,7 +21,8 @@ namespace clases.Compras
         public DateTime Fecha { get; set; }
         public int Id_Estado { get; set; }
         public string Estado { get; set; }
-
+        public List<clsSolicitudDet> detalle { get; set; }
+        
 
         public clsSolicitud()
         {

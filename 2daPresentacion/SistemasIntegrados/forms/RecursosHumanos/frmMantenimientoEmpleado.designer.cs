@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition1 = new DevExpress.XtraGrid.StyleFormatCondition();
+            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition2 = new DevExpress.XtraGrid.StyleFormatCondition();
             this.txtNombre = new DevExpress.XtraEditors.TextEdit();
             this.lblCedula = new DevExpress.XtraEditors.LabelControl();
             this.tbcEmpleado = new System.Windows.Forms.TabControl();
@@ -62,8 +62,10 @@
             this.txtDireccion = new DevExpress.XtraEditors.MemoEdit();
             this.tpAcademico = new System.Windows.Forms.TabPage();
             this.dgvAcademico = new System.Windows.Forms.DataGridView();
-            this.clsTituloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.clsUniversidadBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbTitulo = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.clsTituloBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbInstitucion = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.clsUniversidadBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tpLaborales = new System.Windows.Forms.TabPage();
             this.cmbDepartamento = new DevExpress.XtraEditors.LookUpEdit();
             this.clsDepartamentoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
@@ -83,6 +85,8 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clsTituloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.clsUniversidadBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clsEmpleadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clsTituloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clsUniversidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -96,8 +100,6 @@
             this.titulo1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.teHora = new DevExpress.XtraEditors.TimeEdit();
             this.lblHora = new DevExpress.XtraEditors.LabelControl();
-            this.lblPUsuario = new DevExpress.XtraEditors.LabelControl();
-            this.lblUsuario = new DevExpress.XtraEditors.LabelControl();
             this.tsMenu = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
@@ -105,10 +107,6 @@
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.clsDepartamentoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.universidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clsTituloBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.clsUniversidadBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.cmbTitulo = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.cmbInstitucion = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
             this.tbcEmpleado.SuspendLayout();
             this.tpGenerales.SuspendLayout();
@@ -130,8 +128,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).BeginInit();
             this.tpAcademico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcademico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsTituloBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsUniversidadBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTituloBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsUniversidadBindingSource2)).BeginInit();
             this.tpLaborales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDepartamento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsDepartamentoBindingSource3)).BeginInit();
@@ -143,6 +141,8 @@
             this.tpFamiliar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcCargaFamiliar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCargaFamiliar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTituloBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsUniversidadBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsEmpleadoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsTituloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsUniversidadBindingSource)).BeginInit();
@@ -158,8 +158,6 @@
             this.tsMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clsDepartamentoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsTituloBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsUniversidadBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -216,10 +214,13 @@
             // 
             // txtid
             // 
+            this.txtid.Enabled = false;
             this.txtid.Location = new System.Drawing.Point(23, 17);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(29, 20);
             this.txtid.TabIndex = 78;
+            this.txtid.Visible = false;
+            this.txtid.EditValueChanged += new System.EventHandler(this.txtid_EditValueChanged);
             // 
             // rgGenero
             // 
@@ -459,13 +460,29 @@
             this.dgvAcademico.Size = new System.Drawing.Size(452, 235);
             this.dgvAcademico.TabIndex = 0;
             // 
-            // clsTituloBindingSource1
+            // cmbTitulo
             // 
-            this.clsTituloBindingSource1.DataSource = typeof(clases.RecursosHumanos.clsTitulo);
+            this.cmbTitulo.DataSource = this.clsTituloBindingSource2;
+            this.cmbTitulo.DisplayMember = "Nombre";
+            this.cmbTitulo.HeaderText = "Titulo";
+            this.cmbTitulo.Name = "cmbTitulo";
+            this.cmbTitulo.ValueMember = "IdTitulo";
             // 
-            // clsUniversidadBindingSource1
+            // clsTituloBindingSource2
             // 
-            this.clsUniversidadBindingSource1.DataSource = typeof(clases.RecursosHumanos.clsUniversidad);
+            this.clsTituloBindingSource2.DataSource = typeof(clases.RecursosHumanos.clsTitulo);
+            // 
+            // cmbInstitucion
+            // 
+            this.cmbInstitucion.DataSource = this.clsUniversidadBindingSource2;
+            this.cmbInstitucion.DisplayMember = "Nombre";
+            this.cmbInstitucion.HeaderText = "Institucion";
+            this.cmbInstitucion.Name = "cmbInstitucion";
+            this.cmbInstitucion.ValueMember = "IdUniversidad";
+            // 
+            // clsUniversidadBindingSource2
+            // 
+            this.clsUniversidadBindingSource2.DataSource = typeof(clases.RecursosHumanos.clsUniversidad);
             // 
             // tpLaborales
             // 
@@ -607,7 +624,7 @@
             this.gridColumn8,
             this.gridColumn9});
             this.gvCargaFamiliar.FormatConditions.AddRange(new DevExpress.XtraGrid.StyleFormatCondition[] {
-            styleFormatCondition1});
+            styleFormatCondition2});
             this.gvCargaFamiliar.GridControl = this.gcCargaFamiliar;
             this.gvCargaFamiliar.Name = "gvCargaFamiliar";
             this.gvCargaFamiliar.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
@@ -655,9 +672,13 @@
             this.gridColumn9.VisibleIndex = 4;
             this.gridColumn9.Width = 86;
             // 
-            // clsEmpleadoBindingSource
+            // clsTituloBindingSource1
             // 
-           // this.clsEmpleadoBindingSource.DataSource = typeof(clases.RecursosHumanos.clsEmpleado);
+            this.clsTituloBindingSource1.DataSource = typeof(clases.RecursosHumanos.clsTitulo);
+            // 
+            // clsUniversidadBindingSource1
+            // 
+            this.clsUniversidadBindingSource1.DataSource = typeof(clases.RecursosHumanos.clsUniversidad);
             // 
             // clsTituloBindingSource
             // 
@@ -698,24 +719,6 @@
             this.lblHora.TabIndex = 80;
             this.lblHora.Text = "Hora:";
             // 
-            // lblPUsuario
-            // 
-            this.lblPUsuario.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPUsuario.Location = new System.Drawing.Point(62, 350);
-            this.lblPUsuario.Name = "lblPUsuario";
-            this.lblPUsuario.Size = new System.Drawing.Size(56, 13);
-            this.lblPUsuario.TabIndex = 79;
-            this.lblPUsuario.Text = "María Perez";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(10, 350);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
-            this.lblUsuario.TabIndex = 78;
-            this.lblUsuario.Text = "Usuario:";
-            // 
             // tsMenu
             // 
             this.tsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -734,15 +737,16 @@
             this.tsbNuevo.Image = global::forms.Properties.Resources.nuevo;
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Size = new System.Drawing.Size(51, 22);
             this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click_1);
             // 
             // tsbGuardar
             // 
             this.tsbGuardar.Image = global::forms.Properties.Resources.guardar;
             this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbGuardar.Name = "tsbGuardar";
-            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Size = new System.Drawing.Size(57, 22);
             this.tsbGuardar.Text = "Guardar";
             this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
@@ -751,7 +755,7 @@
             this.tsbModificar.Image = global::forms.Properties.Resources.modificar;
             this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModificar.Name = "tsbModificar";
-            this.tsbModificar.Size = new System.Drawing.Size(78, 22);
+            this.tsbModificar.Size = new System.Drawing.Size(62, 22);
             this.tsbModificar.Text = "Modificar";
             this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click_1);
             // 
@@ -760,7 +764,7 @@
             this.tsbEliminar.Image = global::forms.Properties.Resources.eliminar1;
             this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEliminar.Name = "tsbEliminar";
-            this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
+            this.tsbEliminar.Size = new System.Drawing.Size(57, 22);
             this.tsbEliminar.Text = "Eliminar";
             this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
@@ -768,40 +772,14 @@
             // 
             this.clsDepartamentoBindingSource1.DataSource = typeof(clases.RecursosHumanos.clsDepartamento);
             // 
-            // clsTituloBindingSource2
-            // 
-            this.clsTituloBindingSource2.DataSource = typeof(clases.RecursosHumanos.clsTitulo);
-            // 
-            // clsUniversidadBindingSource2
-            // 
-            this.clsUniversidadBindingSource2.DataSource = typeof(clases.RecursosHumanos.clsUniversidad);
-            // 
-            // cmbTitulo
-            // 
-            this.cmbTitulo.DataSource = this.clsTituloBindingSource2;
-            this.cmbTitulo.DisplayMember = "Nombre";
-            this.cmbTitulo.HeaderText = "Titulo";
-            this.cmbTitulo.Name = "cmbTitulo";
-            this.cmbTitulo.ValueMember = "IdTitulo";
-            // 
-            // cmbInstitucion
-            // 
-            this.cmbInstitucion.DataSource = this.clsUniversidadBindingSource2;
-            this.cmbInstitucion.DisplayMember = "Nombre";
-            this.cmbInstitucion.HeaderText = "Institucion";
-            this.cmbInstitucion.Name = "cmbInstitucion";
-            this.cmbInstitucion.ValueMember = "IdUniversidad";
-            // 
             // frmMantenimientoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 375);
+            this.ClientSize = new System.Drawing.Size(524, 370);
             this.Controls.Add(this.tsMenu);
             this.Controls.Add(this.teHora);
             this.Controls.Add(this.lblHora);
-            this.Controls.Add(this.lblPUsuario);
-            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.tbcEmpleado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
@@ -835,8 +813,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).EndInit();
             this.tpAcademico.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAcademico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsTituloBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsUniversidadBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTituloBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsUniversidadBindingSource2)).EndInit();
             this.tpLaborales.ResumeLayout(false);
             this.tpLaborales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDepartamento.Properties)).EndInit();
@@ -849,6 +827,8 @@
             this.tpFamiliar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gcCargaFamiliar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvCargaFamiliar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTituloBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsUniversidadBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsEmpleadoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsTituloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsUniversidadBindingSource)).EndInit();
@@ -865,8 +845,6 @@
             this.tsMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clsDepartamentoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.universidadBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsTituloBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsUniversidadBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -911,8 +889,6 @@
         private DevExpress.XtraEditors.ComboBoxEdit cmbEstado;
         private DevExpress.XtraEditors.TimeEdit teHora;
         private DevExpress.XtraEditors.LabelControl lblHora;
-        private DevExpress.XtraEditors.LabelControl lblPUsuario;
-        private DevExpress.XtraEditors.LabelControl lblUsuario;
         private System.Windows.Forms.ToolStrip tsMenu;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbGuardar;

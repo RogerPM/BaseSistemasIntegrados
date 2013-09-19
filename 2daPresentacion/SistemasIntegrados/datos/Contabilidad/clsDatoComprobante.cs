@@ -31,7 +31,11 @@ namespace datos.Contabilidad
                     IdEmpresa=dato.IdEmpresa,
                     numero_comprobante=numero,
                     fecha=dato.fecha,
-                    glosa=dato.glosa
+                    glosa=dato.glosa,
+                    TipoTransaccion = (dato.TipoTransaccion==0)?null:dato.TipoTransaccion,
+
+                    periodo_contable = Convert.ToDecimal((from q in ent.PeriodoContable where q.FechaInicio < DateTime.Now && q.FechaFin > DateTime.Now select q.IdPeriodoContable).First()),
+                    periodo_contable_IdAFiscal = DateTime.Now.Year,
                     //periodo_contable
                     //periodo_contable_IdAFiscal
                     //IdUsuario
@@ -51,6 +55,9 @@ namespace datos.Contabilidad
                 return false;
             }
         }
+        
+        
+        
         private Boolean GuardarDetalle(clsCabeceraComprobante dato)
         {
             try
@@ -93,6 +100,7 @@ namespace datos.Contabilidad
                 cabecera.fecha = Convert.ToDateTime(cab.fecha);
                 cabecera.glosa = cab.glosa;
                 cabecera.IdEmpresa = cab.IdEmpresa;
+                cabecera.TipoTransaccion = (cab.TipoTransaccion==null) ? 0 : cab.TipoTransaccion;
                 cabecera.numero_comprobante = cab.numero_comprobante;
                 cabecera.periodo_contable = Convert.ToDecimal(cab.periodo_contable);
                 cabecera.periodo_contable_IdAFiscal = Convert.ToDecimal(cab.periodo_contable_IdAFiscal);

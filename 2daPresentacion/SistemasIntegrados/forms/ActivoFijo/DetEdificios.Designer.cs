@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.rtbObservacion = new System.Windows.Forms.RichTextBox();
             this.lblObservacion = new DevExpress.XtraEditors.LabelControl();
             this.gbxEdificios = new System.Windows.Forms.GroupBox();
@@ -35,7 +36,6 @@
             this.lblFechaAdquisicion = new DevExpress.XtraEditors.LabelControl();
             this.lblV_Adquisición = new DevExpress.XtraEditors.LabelControl();
             this.txtAñosDepreciados = new DevExpress.XtraEditors.TextEdit();
-            this.AñosVidaUtil = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtV_Residual = new DevExpress.XtraEditors.TextEdit();
             this.lblAñosDepreciados = new DevExpress.XtraEditors.LabelControl();
             this.lblV_Residual = new DevExpress.XtraEditors.LabelControl();
@@ -57,6 +57,7 @@
             this.lblNoPisos = new DevExpress.XtraEditors.LabelControl();
             this.lblProveedor = new DevExpress.XtraEditors.LabelControl();
             this.cbxProveedor = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdPersona = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdentificacion = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -77,11 +78,12 @@
             this.colFoto = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnAdicional = new DevExpress.XtraEditors.SimpleButton();
             this.lblComentario = new DevExpress.XtraEditors.LabelControl();
+            this.txtAñosVidaUtil = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.gbxEdificios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaAdquisicion.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaAdquisicion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAñosDepreciados.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AñosVidaUtil.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtV_Residual.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUbicacion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtV_Adquisicion.Properties)).BeginInit();
@@ -93,7 +95,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoCatastral.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoPisos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxProveedor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsPersonaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAñosVidaUtil.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // rtbObservacion
@@ -101,6 +105,7 @@
             this.rtbObservacion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.rtbObservacion.Enabled = false;
             this.rtbObservacion.Location = new System.Drawing.Point(121, 265);
+            this.rtbObservacion.MaxLength = 449;
             this.rtbObservacion.Name = "rtbObservacion";
             this.rtbObservacion.Size = new System.Drawing.Size(231, 61);
             this.rtbObservacion.TabIndex = 284;
@@ -116,11 +121,12 @@
             // 
             // gbxEdificios
             // 
+            this.gbxEdificios.Controls.Add(this.labelControl1);
+            this.gbxEdificios.Controls.Add(this.txtAñosVidaUtil);
             this.gbxEdificios.Controls.Add(this.dtFechaAdquisicion);
             this.gbxEdificios.Controls.Add(this.lblFechaAdquisicion);
             this.gbxEdificios.Controls.Add(this.lblV_Adquisición);
             this.gbxEdificios.Controls.Add(this.txtAñosDepreciados);
-            this.gbxEdificios.Controls.Add(this.AñosVidaUtil);
             this.gbxEdificios.Controls.Add(this.txtV_Residual);
             this.gbxEdificios.Controls.Add(this.lblAñosDepreciados);
             this.gbxEdificios.Controls.Add(this.lblV_Residual);
@@ -179,22 +185,17 @@
             // 
             this.txtAñosDepreciados.Location = new System.Drawing.Point(109, 94);
             this.txtAñosDepreciados.Name = "txtAñosDepreciados";
-            this.txtAñosDepreciados.Size = new System.Drawing.Size(61, 20);
+            this.txtAñosDepreciados.Properties.Mask.EditMask = "n0";
+            this.txtAñosDepreciados.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtAñosDepreciados.Size = new System.Drawing.Size(63, 20);
             this.txtAñosDepreciados.TabIndex = 143;
-            // 
-            // AñosVidaUtil
-            // 
-            this.AñosVidaUtil.Location = new System.Drawing.Point(109, 121);
-            this.AñosVidaUtil.Name = "AñosVidaUtil";
-            this.AñosVidaUtil.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.AñosVidaUtil.Size = new System.Drawing.Size(62, 20);
-            this.AñosVidaUtil.TabIndex = 142;
             // 
             // txtV_Residual
             // 
             this.txtV_Residual.Location = new System.Drawing.Point(345, 123);
             this.txtV_Residual.Name = "txtV_Residual";
+            this.txtV_Residual.Properties.Mask.EditMask = "n2";
+            this.txtV_Residual.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtV_Residual.Size = new System.Drawing.Size(73, 20);
             this.txtV_Residual.TabIndex = 328;
             // 
@@ -226,6 +227,9 @@
             // 
             this.txtUbicacion.Location = new System.Drawing.Point(109, 173);
             this.txtUbicacion.Name = "txtUbicacion";
+            this.txtUbicacion.Properties.Mask.EditMask = "[a-zA-Z0-9 .,;:@()#]+";
+            this.txtUbicacion.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtUbicacion.Properties.MaxLength = 100;
             this.txtUbicacion.Size = new System.Drawing.Size(333, 20);
             this.txtUbicacion.TabIndex = 139;
             // 
@@ -233,6 +237,8 @@
             // 
             this.txtV_Adquisicion.Location = new System.Drawing.Point(345, 98);
             this.txtV_Adquisicion.Name = "txtV_Adquisicion";
+            this.txtV_Adquisicion.Properties.Mask.EditMask = "n2";
+            this.txtV_Adquisicion.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtV_Adquisicion.Size = new System.Drawing.Size(73, 20);
             this.txtV_Adquisicion.TabIndex = 326;
             // 
@@ -256,6 +262,8 @@
             // 
             this.txtAvaluo.Location = new System.Drawing.Point(345, 72);
             this.txtAvaluo.Name = "txtAvaluo";
+            this.txtAvaluo.Properties.Mask.EditMask = "n2";
+            this.txtAvaluo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAvaluo.Size = new System.Drawing.Size(63, 20);
             this.txtAvaluo.TabIndex = 136;
             // 
@@ -263,6 +271,8 @@
             // 
             this.txtDimAncho.Location = new System.Drawing.Point(345, 45);
             this.txtDimAncho.Name = "txtDimAncho";
+            this.txtDimAncho.Properties.Mask.EditMask = "n2";
+            this.txtDimAncho.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtDimAncho.Size = new System.Drawing.Size(96, 20);
             this.txtDimAncho.TabIndex = 135;
             // 
@@ -278,6 +288,8 @@
             // 
             this.txtDimLargo.Location = new System.Drawing.Point(345, 19);
             this.txtDimLargo.Name = "txtDimLargo";
+            this.txtDimLargo.Properties.Mask.EditMask = "n2";
+            this.txtDimLargo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtDimLargo.Size = new System.Drawing.Size(96, 20);
             this.txtDimLargo.TabIndex = 133;
             // 
@@ -313,6 +325,8 @@
             // 
             this.txtCodigoCatastral.Location = new System.Drawing.Point(109, 147);
             this.txtCodigoCatastral.Name = "txtCodigoCatastral";
+            this.txtCodigoCatastral.Properties.Mask.EditMask = "E-A-00-0000-000";
+            this.txtCodigoCatastral.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtCodigoCatastral.Size = new System.Drawing.Size(98, 20);
             this.txtCodigoCatastral.TabIndex = 108;
             // 
@@ -328,6 +342,8 @@
             // 
             this.txtNoPisos.Location = new System.Drawing.Point(108, 68);
             this.txtNoPisos.Name = "txtNoPisos";
+            this.txtNoPisos.Properties.Mask.EditMask = "n0";
+            this.txtNoPisos.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtNoPisos.Size = new System.Drawing.Size(64, 20);
             this.txtNoPisos.TabIndex = 106;
             // 
@@ -353,11 +369,16 @@
             this.cbxProveedor.Name = "cbxProveedor";
             this.cbxProveedor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxProveedor.Properties.DataSource = this.clsPersonaBindingSource;
             this.cbxProveedor.Properties.DisplayMember = "NombreRazonSocial";
             this.cbxProveedor.Properties.ValueMember = "NombreRazonSocial";
             this.cbxProveedor.Properties.View = this.gridView1;
             this.cbxProveedor.Size = new System.Drawing.Size(141, 20);
             this.cbxProveedor.TabIndex = 309;
+            // 
+            // clsPersonaBindingSource
+            // 
+            this.clsPersonaBindingSource.DataSource = typeof(clases.RecursosHumanos.clsPersona);
             // 
             // gridView1
             // 
@@ -493,6 +514,7 @@
             this.btnAdicional.Size = new System.Drawing.Size(84, 23);
             this.btnAdicional.TabIndex = 310;
             this.btnAdicional.Text = "Adicional";
+            this.btnAdicional.Click += new System.EventHandler(this.btnAdicional_Click);
             // 
             // lblComentario
             // 
@@ -503,6 +525,29 @@
             this.lblComentario.Size = new System.Drawing.Size(153, 13);
             this.lblComentario.TabIndex = 316;
             this.lblComentario.Text = "*Las Dimensiones seran (Metro)";
+            // 
+            // txtAñosVidaUtil
+            // 
+            this.txtAñosVidaUtil.EditValue = "20";
+            this.txtAñosVidaUtil.Enabled = false;
+            this.txtAñosVidaUtil.Location = new System.Drawing.Point(111, 121);
+            this.txtAñosVidaUtil.Name = "txtAñosVidaUtil";
+            this.txtAñosVidaUtil.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtAñosVidaUtil.Properties.Appearance.Options.UseForeColor = true;
+            this.txtAñosVidaUtil.Properties.Mask.EditMask = "n0";
+            this.txtAñosVidaUtil.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtAñosVidaUtil.Properties.MaxLength = 3;
+            this.txtAñosVidaUtil.Size = new System.Drawing.Size(31, 20);
+            this.txtAñosVidaUtil.TabIndex = 332;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(144, 123);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(28, 16);
+            this.labelControl1.TabIndex = 334;
+            this.labelControl1.Text = "Años";
             // 
             // DetEdificios
             // 
@@ -523,7 +568,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaAdquisicion.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaAdquisicion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAñosDepreciados.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AñosVidaUtil.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtV_Residual.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUbicacion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtV_Adquisicion.Properties)).EndInit();
@@ -535,7 +579,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoCatastral.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNoPisos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxProveedor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsPersonaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAñosVidaUtil.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -567,7 +613,6 @@
         public DevExpress.XtraEditors.LabelControl lblObservacion;
         public System.Windows.Forms.GroupBox gbxEdificios;
         public DevExpress.XtraEditors.TextEdit txtAñosDepreciados;
-        public DevExpress.XtraEditors.ComboBoxEdit AñosVidaUtil;
         public DevExpress.XtraEditors.LabelControl lblAñosDepreciados;
         public DevExpress.XtraEditors.LabelControl lblAñosVidaUtil;
         public DevExpress.XtraEditors.TextEdit txtUbicacion;
@@ -592,5 +637,8 @@
         public DevExpress.XtraEditors.LabelControl lblComentario;
         public DevExpress.XtraEditors.DateEdit dtFechaAdquisicion;
         public DevExpress.XtraEditors.LabelControl lblFechaAdquisicion;
+        private System.Windows.Forms.BindingSource clsPersonaBindingSource;
+        public DevExpress.XtraEditors.TextEdit txtAñosVidaUtil;
+        public DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

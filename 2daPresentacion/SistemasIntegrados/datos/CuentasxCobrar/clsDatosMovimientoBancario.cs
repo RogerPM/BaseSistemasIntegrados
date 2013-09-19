@@ -9,6 +9,21 @@ namespace datos.CuentasxCobrar
 {
     public class clsDatosMovimientoBancario
     {
+        public int getIdSiguiente()
+        {
+            try
+            {
+                CuentasPorCobrarEntities ent = new CuentasPorCobrarEntities();
+                int x = ((from a in ent.MovimientoBancario select a.idMovimientoBancario).Max()) + 1;
+                return x;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: " + e);
+                return 1; //en caso de que no exista algun registro
+            }
+        }
+
         public List<clsMovimientobancario> consulta()
         {
             try
@@ -19,16 +34,22 @@ namespace datos.CuentasxCobrar
                 foreach (var item in con)
                 {
                     clsMovimientobancario mov = new clsMovimientobancario();
-                    mov.idMovimientoBancario = item.idMovimientoBancario;
-                    mov.NumeroDocumento = item.NumeroDocumento;
+                    
+                    
                     
                     mov.idEmpresa = item.idEmpresa;
+                    mov.idUsuario = item.idUsuario;
+                    mov.idMovimientoBancario = item.idMovimientoBancario;
+                    mov.idTransaccion = item.idTransaccion;
+                    mov.idBanco = item.idBanco;
+                    mov.NumeroDocumento = item.NumeroDocumento;
                     mov.Observacion = item.Observacion;
                     mov.Fecha = item.Fecha;
                     mov.FechaModificacion = Convert.ToDateTime(item.FechaModificacion);
                    //ojo cambiar xq usuario lo borrara seguridad
-                    mov.idUsuario = item.idUsuario;
+                    
                     mov.Valor = item.Valor;
+                    mov.idEstado = item.idEstado;
 
                     lista.Add(mov);
 

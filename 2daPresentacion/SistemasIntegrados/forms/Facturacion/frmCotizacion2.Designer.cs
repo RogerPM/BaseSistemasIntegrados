@@ -73,6 +73,7 @@
             this.txtcliente = new System.Windows.Forms.TextBox();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtcosto = new System.Windows.Forms.TextBox();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.cmbformapago = new System.Windows.Forms.ComboBox();
@@ -530,10 +531,10 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 417);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 431);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(643, 107);
+            this.dataGridView1.Size = new System.Drawing.Size(643, 148);
             this.dataGridView1.TabIndex = 38;
             // 
             // button2
@@ -582,6 +583,9 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.groupControl2.AppearanceCaption.Options.UseFont = true;
+            this.groupControl2.Controls.Add(this.txtcosto);
             this.groupControl2.Controls.Add(this.txtprecio);
             this.groupControl2.Controls.Add(this.txtdesarticulo);
             this.groupControl2.Controls.Add(this.label1);
@@ -593,8 +597,19 @@
             this.groupControl2.TabIndex = 42;
             this.groupControl2.Text = "Articulo";
             // 
+            // txtcosto
+            // 
+            this.txtcosto.Location = new System.Drawing.Point(297, 7);
+            this.txtcosto.Name = "txtcosto";
+            this.txtcosto.ReadOnly = true;
+            this.txtcosto.Size = new System.Drawing.Size(98, 20);
+            this.txtcosto.TabIndex = 41;
+            this.txtcosto.Visible = false;
+            // 
             // groupControl3
             // 
+            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.groupControl3.AppearanceCaption.Options.UseFont = true;
             this.groupControl3.Controls.Add(this.txtdescripcioncliente);
             this.groupControl3.Controls.Add(idClienteLabel);
             this.groupControl3.Controls.Add(this.btnConsultaCliente);
@@ -638,7 +653,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(665, 536);
+            this.ClientSize = new System.Drawing.Size(665, 588);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
@@ -718,6 +733,7 @@
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private System.Windows.Forms.ComboBox cmbformapago;
+        private System.Windows.Forms.TextBox txtcosto;
 
 
     }

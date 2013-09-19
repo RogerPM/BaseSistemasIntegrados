@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPConsultaContrato));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbConsultado = new System.Windows.Forms.ToolStripButton();
             this.gcContrato = new DevExpress.XtraGrid.GridControl();
@@ -70,7 +71,7 @@
             // 
             this.tsbConsultado.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tsbConsultado.ForeColor = System.Drawing.Color.Black;
-            this.tsbConsultado.Image = global::forms.Properties.Resources._24_aceptar;
+            this.tsbConsultado.Image = ((System.Drawing.Image)(resources.GetObject("tsbConsultado.Image")));
             this.tsbConsultado.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbConsultado.Name = "tsbConsultado";
             this.tsbConsultado.Size = new System.Drawing.Size(88, 22);
@@ -87,6 +88,10 @@
             this.gcContrato.TabIndex = 28;
             this.gcContrato.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvContrato});
+            // 
+            // clsContratoBindingSource
+            // 
+            this.clsContratoBindingSource.DataSource = typeof(clases.RecursosHumanos.clsContrato);
             // 
             // gvContrato
             // 
@@ -120,8 +125,6 @@
             // 
             this.colIdPersona.FieldName = "IdPersona";
             this.colIdPersona.Name = "colIdPersona";
-            this.colIdPersona.Visible = true;
-            this.colIdPersona.VisibleIndex = 1;
             // 
             // colIdTipoContrato
             // 
@@ -137,29 +140,27 @@
             // 
             this.colIdEmpresa.FieldName = "IdEmpresa";
             this.colIdEmpresa.Name = "colIdEmpresa";
-            this.colIdEmpresa.Visible = true;
-            this.colIdEmpresa.VisibleIndex = 2;
             // 
             // colFecha
             // 
             this.colFecha.FieldName = "Fecha";
             this.colFecha.Name = "colFecha";
             this.colFecha.Visible = true;
-            this.colFecha.VisibleIndex = 3;
+            this.colFecha.VisibleIndex = 1;
             // 
             // colFechaModificacion
             // 
             this.colFechaModificacion.FieldName = "FechaModificacion";
             this.colFechaModificacion.Name = "colFechaModificacion";
             this.colFechaModificacion.Visible = true;
-            this.colFechaModificacion.VisibleIndex = 4;
+            this.colFechaModificacion.VisibleIndex = 2;
             // 
             // colRemuneracion
             // 
             this.colRemuneracion.FieldName = "Remuneracion";
             this.colRemuneracion.Name = "colRemuneracion";
             this.colRemuneracion.Visible = true;
-            this.colRemuneracion.VisibleIndex = 5;
+            this.colRemuneracion.VisibleIndex = 3;
             // 
             // colIdJornada
             // 
@@ -171,35 +172,35 @@
             this.colPeriodoPrueba.FieldName = "PeriodoPrueba";
             this.colPeriodoPrueba.Name = "colPeriodoPrueba";
             this.colPeriodoPrueba.Visible = true;
-            this.colPeriodoPrueba.VisibleIndex = 6;
+            this.colPeriodoPrueba.VisibleIndex = 4;
             // 
             // colDiscapacidad
             // 
             this.colDiscapacidad.FieldName = "Discapacidad";
             this.colDiscapacidad.Name = "colDiscapacidad";
             this.colDiscapacidad.Visible = true;
-            this.colDiscapacidad.VisibleIndex = 7;
+            this.colDiscapacidad.VisibleIndex = 5;
             // 
             // colgrado
             // 
             this.colgrado.FieldName = "grado";
             this.colgrado.Name = "colgrado";
             this.colgrado.Visible = true;
-            this.colgrado.VisibleIndex = 8;
+            this.colgrado.VisibleIndex = 6;
             // 
             // colTipoDiscapacidad
             // 
             this.colTipoDiscapacidad.FieldName = "TipoDiscapacidad";
             this.colTipoDiscapacidad.Name = "colTipoDiscapacidad";
             this.colTipoDiscapacidad.Visible = true;
-            this.colTipoDiscapacidad.VisibleIndex = 9;
+            this.colTipoDiscapacidad.VisibleIndex = 7;
             // 
             // colCarnet
             // 
             this.colCarnet.FieldName = "Carnet";
             this.colCarnet.Name = "colCarnet";
             this.colCarnet.Visible = true;
-            this.colCarnet.VisibleIndex = 10;
+            this.colCarnet.VisibleIndex = 8;
             // 
             // colIdEstado
             // 

@@ -11,6 +11,7 @@ namespace clases.Cuentasxpagar
         public int IdImpuesto { get; set; }
         public string Descripcion { get; set; }
         public decimal Porcentaje { get; set; }
+        public int naturAcree { get; set; }
         public int IdEstado { get; set; }
         public int IdEmpresa { get; set; }
         public int IdUsuario { get; set; }

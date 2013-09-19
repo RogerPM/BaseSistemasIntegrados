@@ -22,7 +22,7 @@ namespace forms.Seguridad
         #region "Distributed by security team 3/3"
         //si este bloque ha sido parcial o totalmente editado, los miembros del equipo de seguridad no 
         //se responzabilizan en el caso de que exista un mal funcionamiento de este form.
-        private void Botones()
+        private void Seguridad()
         {
             //lecturas
             btnConsultar.Visible = frmPrincipal.Lectura; 
@@ -100,7 +100,7 @@ namespace forms.Seguridad
 
                 MessageBox.Show("Error en la carga del Formulario");
             }
-            Botones();
+            Seguridad();
         }
 
 

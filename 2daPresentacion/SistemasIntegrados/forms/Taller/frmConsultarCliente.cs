@@ -27,7 +27,8 @@ namespace forms.Taller
 
         public void getSeleccion()
         {
-            e.Identificacion = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdentificacion));
+            e.IdPersona = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdPersona));
+            e.Identificacion = Convert.ToString(gridView1.GetFocusedRowCellValue(colIdentificacion));
             e.IdTipoPersona = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdTipoPersona));
             e.Nombre = Convert.ToString(gridView1.GetFocusedRowCellValue(colNombre));
             e.Apellido = Convert.ToString(gridView1.GetFocusedRowCellValue(colApellido));
@@ -35,7 +36,7 @@ namespace forms.Taller
             e.Genero = Convert.ToString(gridView1.GetFocusedRowCellValue(colGenero));
             e.TipoIdentificacion = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colTipoIdentificacion));
             e.Direccion = Convert.ToString(gridView1.GetFocusedRowCellValue(colDireccion));
-            e.Telefono = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colTelefono));
+            e.Telefono = Convert.ToString(gridView1.GetFocusedRowCellValue(colTelefono));
             e.Mail = Convert.ToString(gridView1.GetFocusedRowCellValue(colMail));
             e.idEstado = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colidEstado));
             e.idEmpresa = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colidEmpresa));

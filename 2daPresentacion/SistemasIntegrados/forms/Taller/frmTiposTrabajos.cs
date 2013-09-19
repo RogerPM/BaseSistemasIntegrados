@@ -19,6 +19,22 @@ namespace forms.Taller
         clsTiposTrabajos oTipoTrabajo = new clsTiposTrabajos();
         datTiposTrabajos oDatTipoTrabajo = new datTiposTrabajos();
 
+        #region "Distributed by security team 3/3"
+        //si este bloque ha sido parcial o totalmente editado, los miembros del equipo de seguridad no 
+        //se responzabilizan en el caso de que exista un mal funcionamiento de este form.        
+        private void Seguridad()
+        {
+            //lecturas
+            btnBuscar.Visible = frmPrincipal.Lectura;
+            //escrituras
+            btnNuevo.Visible = frmPrincipal.Escritura;
+            btnGuardar.Visible = frmPrincipal.Escritura;
+            btnModificar.Visible = frmPrincipal.Escritura;
+            //eliminacion
+            btnEliminar.Visible = frmPrincipal.Eliminacion;
+        }
+        #endregion
+
         public frmTiposTrabajos()
         {
             InitializeComponent();
@@ -28,7 +44,7 @@ namespace forms.Taller
         {
             if (txtDescripcion.Text == "" || txtObservacion.Text == "" || cbxEstado.Text == "")
             {
-                MessageBox.Show(msjtaller.camposvacios_taller, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(msj.Vacio, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -36,6 +52,10 @@ namespace forms.Taller
                 if (oDatTipoTrabajo.Guardar(oTipoTrabajo))
                 {
                     MessageBox.Show(msj.Guardar_ok, msj.Titulo, MessageBoxButtons.OK);
+                    txtCodigo.Text = Convert.ToString(oTipoTrabajo.idTipoTrabajo);
+                    btnModificar.Enabled = true;
+                    btnEliminar.Enabled = true;
+                    btnGuardar.Enabled = false;
                 }
                 else
                 {
@@ -44,13 +64,7 @@ namespace forms.Taller
             }
         }
 
-        public void borrar()
-        {
-            txtCodigo.Text = "";
-            txtDescripcion.Text = "";
-            txtObservacion.Text = "";
-            cbxEstado.Text = "";
-        }
+        
         public void getValores()
         {  
             if (txtCodigo.Text == "")
@@ -86,14 +100,27 @@ namespace forms.Taller
 
         private void frmTiposTrabajos_Load(object sender, EventArgs e)
         {
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
+            Seguridad();
+        }
 
+        public void borrar()
+        {
+            txtCodigo.Text = "";
+            txtDescripcion.Text = "";
+            txtObservacion.Text = "";
+            cbxEstado.SelectedIndex = 0;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnGuardar.Enabled = true;
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             if (txtDescripcion.Text == "" || txtObservacion.Text == "" || cbxEstado.Text == "")
             {
-                MessageBox.Show(msjtaller.camposvacios_taller, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(msj.Vacio, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -114,16 +141,27 @@ namespace forms.Taller
             frmConsultarTipoTrabajo f = new frmConsultarTipoTrabajo();
             f.ShowDialog();
             oTipoTrabajo = f.e;
-            txtCodigo.Text = Convert.ToString(oTipoTrabajo.idTipoTrabajo);
-            txtDescripcion.Text = Convert.ToString(oTipoTrabajo.Descripcion);
-            txtObservacion.Text = Convert.ToString(oTipoTrabajo.Observacion);
-            if (oTipoTrabajo.idEstado == 1)
+
+            if (oTipoTrabajo.idTipoTrabajo == 0)
             {
-                cbxEstado.SelectedItem = "Activo";
+                borrar();
             }
             else
             {
-                cbxEstado.SelectedItem = "Inactivo";
+                txtCodigo.Text = Convert.ToString(oTipoTrabajo.idTipoTrabajo);
+                txtDescripcion.Text = Convert.ToString(oTipoTrabajo.Descripcion);
+                txtObservacion.Text = Convert.ToString(oTipoTrabajo.Observacion);
+                if (oTipoTrabajo.idEstado == 1)
+                {
+                    cbxEstado.SelectedItem = "Activo";
+                }
+                else if (oTipoTrabajo.idEstado == 2)
+                {
+                    cbxEstado.SelectedItem = "Inactivo";
+                }
+                btnGuardar.Enabled = false;
+                btnModificar.Enabled = true;
+                btnEliminar.Enabled = true;
             }
         }
 
@@ -144,6 +182,10 @@ namespace forms.Taller
                     MessageBox.Show(msj.Eliminar_error, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            btnGuardar.Enabled = true;
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
+            borrar();
         }
     }
 }

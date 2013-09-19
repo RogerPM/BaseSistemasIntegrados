@@ -1,0 +1,70 @@
+/// <XRTypeInfo>
+///   <AssemblyFullName>DevExpress.XtraReports.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</AssemblyFullName>
+///   <AssemblyLocation>C:\windows\assembly\GAC_MSIL\DevExpress.XtraReports.v12.1\12.1.6.0__b88d1754d700e49a\DevExpress.XtraReports.v12.1.dll</AssemblyLocation>
+///   <TypeName>DevExpress.XtraReports.UI.XtraReport</TypeName>
+///   <Localization>es-ES</Localization>
+/// </XRTypeInfo>
+namespace XtraReportSerialization {
+    
+    public class XtraReport : DevExpress.XtraReports.UI.XtraReport {
+        private DevExpress.XtraReports.UI.XRControlStyle xrTituloReporte;
+        private DevExpress.XtraReports.UI.XRControlStyle xrTituloPagina;
+        private DevExpress.XtraReports.UI.XRControlStyle xrPieReporte;
+        private System.Resources.ResourceManager _resources;
+        public XtraReport() {
+            this.InitializeComponent();
+        }
+        private System.Resources.ResourceManager resources {
+            get {
+                if (_resources == null) {
+                    string resourceString = "zsrvvgEAAACRAAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJza" +
+                        "W9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4O" +
+                        "SNTeXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAA";
+                    this._resources = new DevExpress.XtraReports.Serialization.XRResourceManager(resourceString);
+                }
+                return this._resources;
+            }
+        }
+        private void InitializeComponent() {
+            this.xrTituloReporte = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.xrTituloPagina = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.xrPieReporte = new DevExpress.XtraReports.UI.XRControlStyle();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // xrTituloReporte
+            // 
+            this.xrTituloReporte.BorderColor = System.Drawing.Color.Gainsboro;
+            this.xrTituloReporte.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTituloReporte.BorderWidth = 3;
+            this.xrTituloReporte.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrTituloReporte.ForeColor = System.Drawing.Color.SteelBlue;
+            this.xrTituloReporte.Name = "xrTituloReporte";
+            this.xrTituloReporte.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // xrTituloPagina
+            // 
+            this.xrTituloPagina.BackColor = System.Drawing.Color.Gainsboro;
+            this.xrTituloPagina.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrTituloPagina.ForeColor = System.Drawing.Color.SteelBlue;
+            this.xrTituloPagina.Name = "xrTituloPagina";
+            this.xrTituloPagina.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrTituloPagina.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrPieReporte
+            // 
+            this.xrPieReporte.BorderColor = System.Drawing.Color.DarkGray;
+            this.xrPieReporte.Borders = DevExpress.XtraPrinting.BorderSide.Top;
+            this.xrPieReporte.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrPieReporte.ForeColor = System.Drawing.Color.SteelBlue;
+            this.xrPieReporte.Name = "xrPieReporte";
+            // 
+            // XtraReport
+            // 
+            this.Name = "XtraReport";
+            this.PageHeight = 1100;
+            this.PageWidth = 850;
+            this.Version = "12.1";
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
+        }
+    }
+}

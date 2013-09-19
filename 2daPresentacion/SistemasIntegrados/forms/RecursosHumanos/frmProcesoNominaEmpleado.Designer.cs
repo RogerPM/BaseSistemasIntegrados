@@ -90,10 +90,10 @@
             this.txtNumero = new DevExpress.XtraEditors.TextEdit();
             this.txtObservacion = new DevExpress.XtraEditors.MemoEdit();
             this.txtTotalPagar = new DevExpress.XtraEditors.TextEdit();
-            this.teHora = new DevExpress.XtraEditors.TimeEdit();
-            this.lblHora = new DevExpress.XtraEditors.LabelControl();
             this.cmbPeriodo = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmbEstado = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbMes = new DevExpress.XtraEditors.ComboBoxEdit();
             this.tsMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvNomina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -114,9 +114,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNumero.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtObservacion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalPagar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teHora.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbPeriodo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEstado.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbMes.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTotalPagar
@@ -159,7 +159,7 @@
             // lblObservacion
             // 
             this.lblObservacion.AutoSize = true;
-            this.lblObservacion.Location = new System.Drawing.Point(26, 93);
+            this.lblObservacion.Location = new System.Drawing.Point(29, 124);
             this.lblObservacion.Name = "lblObservacion";
             this.lblObservacion.Size = new System.Drawing.Size(70, 13);
             this.lblObservacion.TabIndex = 51;
@@ -192,7 +192,7 @@
             this.tsbNuevo.Image = global::forms.Properties.Resources.nuevo;
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(58, 22);
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
@@ -202,7 +202,7 @@
             this.tsbGenerarNomina.Image = global::forms.Properties.Resources.guardar;
             this.tsbGenerarNomina.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbGenerarNomina.Name = "tsbGenerarNomina";
-            this.tsbGenerarNomina.Size = new System.Drawing.Size(104, 22);
+            this.tsbGenerarNomina.Size = new System.Drawing.Size(114, 22);
             this.tsbGenerarNomina.Text = "Generar Nomina";
             this.tsbGenerarNomina.Click += new System.EventHandler(this.tsbGenerarNomina_Click);
             // 
@@ -212,13 +212,14 @@
             this.tsbModificar.Image = global::forms.Properties.Resources.modificar;
             this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModificar.Name = "tsbModificar";
-            this.tsbModificar.Size = new System.Drawing.Size(70, 22);
+            this.tsbModificar.Size = new System.Drawing.Size(78, 22);
             this.tsbModificar.Text = "Modificar";
             this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
             // 
             // btnGenerarNomina
             // 
-            this.btnGenerarNomina.Location = new System.Drawing.Point(310, 152);
+            this.btnGenerarNomina.Enabled = false;
+            this.btnGenerarNomina.Location = new System.Drawing.Point(312, 163);
             this.btnGenerarNomina.Name = "btnGenerarNomina";
             this.btnGenerarNomina.Size = new System.Drawing.Size(122, 30);
             this.btnGenerarNomina.TabIndex = 70;
@@ -522,6 +523,10 @@
             this.gcNomina.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvNomina});
             // 
+            // clsNominaDetBindingSource
+            // 
+            this.clsNominaDetBindingSource.DataSource = typeof(clases.RecursosHumanos.clsNominaDet);
+            // 
             // repositoryItemComboBox1
             // 
             this.repositoryItemComboBox1.AutoHeight = false;
@@ -570,9 +575,9 @@
             // 
             // txtObservacion
             // 
-            this.txtObservacion.Location = new System.Drawing.Point(120, 92);
+            this.txtObservacion.Location = new System.Drawing.Point(120, 122);
             this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(585, 54);
+            this.txtObservacion.Size = new System.Drawing.Size(585, 35);
             this.txtObservacion.TabIndex = 77;
             // 
             // txtTotalPagar
@@ -582,25 +587,6 @@
             this.txtTotalPagar.Name = "txtTotalPagar";
             this.txtTotalPagar.Size = new System.Drawing.Size(103, 20);
             this.txtTotalPagar.TabIndex = 78;
-            // 
-            // teHora
-            // 
-            this.teHora.EditValue = new System.DateTime(2013, 6, 20, 0, 0, 0, 0);
-            this.teHora.Location = new System.Drawing.Point(609, 389);
-            this.teHora.Name = "teHora";
-            this.teHora.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.teHora.Size = new System.Drawing.Size(100, 20);
-            this.teHora.TabIndex = 84;
-            // 
-            // lblHora
-            // 
-            this.lblHora.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(573, 392);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(30, 13);
-            this.lblHora.TabIndex = 83;
-            this.lblHora.Text = "Hora:";
             // 
             // cmbPeriodo
             // 
@@ -633,14 +619,47 @@
             this.cmbEstado.Size = new System.Drawing.Size(100, 20);
             this.cmbEstado.TabIndex = 73;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(52, 99);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 104;
+            this.label1.Text = "Mes :";
+            // 
+            // cmbMes
+            // 
+            this.cmbMes.Location = new System.Drawing.Point(118, 96);
+            this.cmbMes.Name = "cmbMes";
+            this.cmbMes.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbMes.Properties.Items.AddRange(new object[] {
+            "---Seleccione Mes",
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cmbMes.Size = new System.Drawing.Size(127, 20);
+            this.cmbMes.TabIndex = 105;
+            this.cmbMes.SelectedIndexChanged += new System.EventHandler(this.cmbMes_SelectedIndexChanged);
+            // 
             // frmProcesoNominaEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 414);
+            this.Controls.Add(this.cmbMes);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbPeriodo);
-            this.Controls.Add(this.teHora);
-            this.Controls.Add(this.lblHora);
             this.Controls.Add(this.txtTotalPagar);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.btnBuscar);
@@ -682,9 +701,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtNumero.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtObservacion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalPagar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teHora.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbPeriodo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEstado.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbMes.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -710,8 +729,6 @@
         private DevExpress.XtraEditors.TextEdit txtNumero;
         private DevExpress.XtraEditors.MemoEdit txtObservacion;
         private DevExpress.XtraEditors.TextEdit txtTotalPagar;
-        private DevExpress.XtraEditors.TimeEdit teHora;
-        private DevExpress.XtraEditors.LabelControl lblHora;
         private DevExpress.XtraEditors.ComboBoxEdit cmbPeriodo;
         private DevExpress.XtraEditors.ComboBoxEdit cmbEstado;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit combo1;
@@ -747,7 +764,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTotalDescuento;
         private DevExpress.XtraGrid.Columns.GridColumn colValorLiquido;
         private DevExpress.XtraGrid.Columns.GridColumn colIdEmpresa;
-        private System.Windows.Forms.BindingSource clsNominaDetBindingSource;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit3;
@@ -757,5 +773,8 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit7;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit8;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit9;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbMes;
+        private System.Windows.Forms.BindingSource clsNominaDetBindingSource;
     }
 }

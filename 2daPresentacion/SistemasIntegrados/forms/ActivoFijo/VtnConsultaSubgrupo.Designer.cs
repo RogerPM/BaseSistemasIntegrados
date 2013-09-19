@@ -103,6 +103,7 @@ namespace forms.ActivoFijo
             this.colEmpresa});
             this.gridView1.GridControl = this.GridConsultaGrupo;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.PaintStyleName = "Skin";
             this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             // 

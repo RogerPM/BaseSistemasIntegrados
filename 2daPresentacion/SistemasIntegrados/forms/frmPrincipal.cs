@@ -46,6 +46,19 @@ namespace forms
         public string Usuario { get; set; }
         public string Contrasena { get; set; }
 
+        private bool noChild()
+        {
+            Form[] fcChild = MdiChildren;
+            if (fcChild.Count() == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public frmPrincipal(List<clsModuloR> _ListaModulos,int _IdEmpresa, String _Usuario, String _Contrasenia):this()
         {
             IdEmpresa = _IdEmpresa;
@@ -133,7 +146,7 @@ namespace forms
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error no existen permisos asignados: " +ex);                        
+                        MessageBox.Show("Error no existen permisos asignados:"+ ex , "TECA™");                        
                     }
 
                     if (Asemby.Remove(0, 6) == "CuentasxCobrar.frm_CajaApertura")
@@ -194,13 +207,18 @@ namespace forms
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-           //ultraSplitter1.Collapsed = false;
-          //  Thread Hilo = new Thread(new ThreadStart(ColapsarPanel));
-            //Hilo.Start();
-            ribbonControl1.Pages.Clear();
-            c = 0;
-            BanderaCrecer = true;
-            timer1.Start();           
+            if (noChild())
+            {
+                ribbonControl1.Pages.Clear();
+                c = 0;
+                BanderaCrecer = true;
+                timer1.Start();
+            }
+            else
+            {
+                MessageBox.Show("Debe cerrar todas las ventanas antes de cambiar de modulo", "TECA™", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+                       
         }
         void ColapsarPanel() 
         {

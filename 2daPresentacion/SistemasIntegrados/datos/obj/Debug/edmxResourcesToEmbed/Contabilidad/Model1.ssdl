@@ -37,6 +37,20 @@
       [vwCuenta].[digitos] AS [digitos]
       FROM [Contabilidad].[vwCuenta] AS [vwCuenta]</DefiningQuery>
     </EntitySet>
+    <EntitySet Name="vwlibrodiario" EntityType="TECAModel.Store.vwlibrodiario" store:Type="Views" store:Schema="Contabilidad" store:Name="vwlibrodiario">
+      <DefiningQuery>SELECT 
+      [vwlibrodiario].[IdEmpresa] AS [IdEmpresa], 
+      [vwlibrodiario].[numero_comprobante] AS [numero_comprobante], 
+      [vwlibrodiario].[fecha] AS [fecha], 
+      [vwlibrodiario].[glosa] AS [glosa], 
+      [vwlibrodiario].[cuenta] AS [cuenta], 
+      [vwlibrodiario].[nombre] AS [nombre], 
+      [vwlibrodiario].[debe] AS [debe], 
+      [vwlibrodiario].[haber] AS [haber], 
+      [vwlibrodiario].[TipoTransaccion] AS [TipoTransaccion], 
+      [vwlibrodiario].[NombreModulo] AS [NombreModulo]
+      FROM [Contabilidad].[vwlibrodiario] AS [vwlibrodiario]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="vwTipoTransaccion" EntityType="TECAModel.Store.vwTipoTransaccion" store:Type="Views" store:Schema="Contabilidad" store:Name="vwTipoTransaccion">
       <DefiningQuery>SELECT 
       [vwTipoTransaccion].[IdTransaccion] AS [IdTransaccion], 
@@ -46,35 +60,39 @@
       [vwTipoTransaccion].[NombreModulo] AS [NombreModulo]
       FROM [Contabilidad].[vwTipoTransaccion] AS [vwTipoTransaccion]</DefiningQuery>
     </EntitySet>
-    <AssociationSet Name="FK__CabeceraComproba__477199F1" Association="TECAModel.Store.FK__CabeceraComproba__477199F1">
+    <AssociationSet Name="FK__CabeceraC__TipoT__4B422AD5" Association="TECAModel.Store.FK__CabeceraC__TipoT__4B422AD5">
+      <End Role="TipoTransaccion" EntitySet="TipoTransaccion" />
+      <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CabeceraComproba__4A4E069C" Association="TECAModel.Store.FK__CabeceraComproba__4A4E069C">
       <End Role="PeriodoContable" EntitySet="PeriodoContable" />
       <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
     </AssociationSet>
-    <AssociationSet Name="FK__Cuenta__IdNivelC__40C49C62" Association="TECAModel.Store.FK__Cuenta__IdNivelC__40C49C62">
+    <AssociationSet Name="FK__Cuenta__IdNivelC__3EDC53F0" Association="TECAModel.Store.FK__Cuenta__IdNivelC__3EDC53F0">
       <End Role="NivelCuenta" EntitySet="NivelCuenta" />
       <End Role="Cuenta" EntitySet="Cuenta" />
     </AssociationSet>
-    <AssociationSet Name="FK__Cuenta__IdTipoCu__41B8C09B" Association="TECAModel.Store.FK__Cuenta__IdTipoCu__41B8C09B">
+    <AssociationSet Name="FK__Cuenta__IdTipoCu__3FD07829" Association="TECAModel.Store.FK__Cuenta__IdTipoCu__3FD07829">
       <End Role="TipoCuenta" EntitySet="TipoCuenta" />
       <End Role="Cuenta" EntitySet="Cuenta" />
     </AssociationSet>
-    <AssociationSet Name="FK__DetalleComproban__4E1E9780" Association="TECAModel.Store.FK__DetalleComproban__4E1E9780">
+    <AssociationSet Name="FK__DetalleComproban__51EF2864" Association="TECAModel.Store.FK__DetalleComproban__51EF2864">
       <End Role="Cuenta" EntitySet="Cuenta" />
       <End Role="DetalleComprobante" EntitySet="DetalleComprobante" />
     </AssociationSet>
-    <AssociationSet Name="FK__DetalleComproban__4F12BBB9" Association="TECAModel.Store.FK__DetalleComproban__4F12BBB9">
+    <AssociationSet Name="FK__DetalleComproban__52E34C9D" Association="TECAModel.Store.FK__DetalleComproban__52E34C9D">
       <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
       <End Role="DetalleComprobante" EntitySet="DetalleComprobante" />
     </AssociationSet>
-    <AssociationSet Name="FK__ModeloAsi__IdTra__603D47BB" Association="TECAModel.Store.FK__ModeloAsi__IdTra__603D47BB">
+    <AssociationSet Name="FK__ModeloAsi__IdTra__5F492382" Association="TECAModel.Store.FK__ModeloAsi__IdTra__5F492382">
       <End Role="TipoTransaccion" EntitySet="TipoTransaccion" />
       <End Role="ModeloAsiento" EntitySet="ModeloAsiento" />
     </AssociationSet>
-    <AssociationSet Name="FK__PeriodoCo__IdAFi__39237A9A" Association="TECAModel.Store.FK__PeriodoCo__IdAFi__39237A9A">
+    <AssociationSet Name="FK__PeriodoCo__IdAFi__373B3228" Association="TECAModel.Store.FK__PeriodoCo__IdAFi__373B3228">
       <End Role="AnoFiscal" EntitySet="AnoFiscal" />
       <End Role="PeriodoContable" EntitySet="PeriodoContable" />
     </AssociationSet>
-    <AssociationSet Name="FK__Saldo__54CB950F" Association="TECAModel.Store.FK__Saldo__54CB950F">
+    <AssociationSet Name="FK__Saldo__589C25F3" Association="TECAModel.Store.FK__Saldo__589C25F3">
       <End Role="Cuenta" EntitySet="Cuenta" />
       <End Role="Saldo" EntitySet="Saldo" />
     </AssociationSet>
@@ -101,6 +119,7 @@
     <Property Name="periodo_contable_IdAFiscal" Type="numeric" Precision="4" />
     <Property Name="IdUsuario" Type="int" />
     <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="TipoTransaccion" Type="int" />
   </EntityType>
   <EntityType Name="Cuenta">
     <Key>
@@ -254,6 +273,31 @@
     <Property Name="digitos" Type="numeric" Nullable="false" Precision="1" />
   </EntityType>
   <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'TECA.Contabilidad.vwlibrodiario' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vwlibrodiario">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="numero_comprobante" />
+      <PropertyRef Name="fecha" />
+      <PropertyRef Name="glosa" />
+      <PropertyRef Name="cuenta" />
+      <PropertyRef Name="nombre" />
+      <PropertyRef Name="debe" />
+      <PropertyRef Name="haber" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="numero_comprobante" Type="numeric" Nullable="false" Precision="4" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="glosa" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="cuenta" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="nombre" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="debe" Type="decimal" Nullable="false" Precision="14" Scale="2" />
+    <Property Name="haber" Type="decimal" Nullable="false" Precision="14" Scale="2" />
+    <Property Name="TipoTransaccion" Type="int" />
+    <Property Name="NombreModulo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
       advertencia 6002: La tabla o vista 'TECA.Contabilidad.vwTipoTransaccion' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
       -->
   <EntityType Name="vwTipoTransaccion">
@@ -268,7 +312,19 @@
     <Property Name="descripcion" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="NombreModulo" Type="varchar" MaxLength="50" />
   </EntityType>
-  <Association Name="FK__CabeceraComproba__477199F1">
+  <Association Name="FK__CabeceraC__TipoT__4B422AD5">
+    <End Role="TipoTransaccion" Type="TECAModel.Store.TipoTransaccion" Multiplicity="0..1" />
+    <End Role="CabeceraComprobante" Type="TECAModel.Store.CabeceraComprobante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoTransaccion">
+        <PropertyRef Name="IdTransaccion" />
+      </Principal>
+      <Dependent Role="CabeceraComprobante">
+        <PropertyRef Name="TipoTransaccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CabeceraComproba__4A4E069C">
     <End Role="PeriodoContable" Type="TECAModel.Store.PeriodoContable" Multiplicity="0..1" />
     <End Role="CabeceraComprobante" Type="TECAModel.Store.CabeceraComprobante" Multiplicity="*" />
     <ReferentialConstraint>
@@ -284,7 +340,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Cuenta__IdNivelC__40C49C62">
+  <Association Name="FK__Cuenta__IdNivelC__3EDC53F0">
     <End Role="NivelCuenta" Type="TECAModel.Store.NivelCuenta" Multiplicity="1" />
     <End Role="Cuenta" Type="TECAModel.Store.Cuenta" Multiplicity="*" />
     <ReferentialConstraint>
@@ -296,7 +352,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Cuenta__IdTipoCu__41B8C09B">
+  <Association Name="FK__Cuenta__IdTipoCu__3FD07829">
     <End Role="TipoCuenta" Type="TECAModel.Store.TipoCuenta" Multiplicity="1" />
     <End Role="Cuenta" Type="TECAModel.Store.Cuenta" Multiplicity="*" />
     <ReferentialConstraint>
@@ -308,7 +364,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DetalleComproban__4E1E9780">
+  <Association Name="FK__DetalleComproban__51EF2864">
     <End Role="Cuenta" Type="TECAModel.Store.Cuenta" Multiplicity="1" />
     <End Role="DetalleComprobante" Type="TECAModel.Store.DetalleComprobante" Multiplicity="*" />
     <ReferentialConstraint>
@@ -322,7 +378,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DetalleComproban__4F12BBB9">
+  <Association Name="FK__DetalleComproban__52E34C9D">
     <End Role="CabeceraComprobante" Type="TECAModel.Store.CabeceraComprobante" Multiplicity="1" />
     <End Role="DetalleComprobante" Type="TECAModel.Store.DetalleComprobante" Multiplicity="*" />
     <ReferentialConstraint>
@@ -336,7 +392,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ModeloAsi__IdTra__603D47BB">
+  <Association Name="FK__ModeloAsi__IdTra__5F492382">
     <End Role="TipoTransaccion" Type="TECAModel.Store.TipoTransaccion" Multiplicity="1" />
     <End Role="ModeloAsiento" Type="TECAModel.Store.ModeloAsiento" Multiplicity="*" />
     <ReferentialConstraint>
@@ -348,7 +404,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PeriodoCo__IdAFi__39237A9A">
+  <Association Name="FK__PeriodoCo__IdAFi__373B3228">
     <End Role="AnoFiscal" Type="TECAModel.Store.AnoFiscal" Multiplicity="1" />
     <End Role="PeriodoContable" Type="TECAModel.Store.PeriodoContable" Multiplicity="*" />
     <ReferentialConstraint>
@@ -360,7 +416,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Saldo__54CB950F">
+  <Association Name="FK__Saldo__589C25F3">
     <End Role="Cuenta" Type="TECAModel.Store.Cuenta" Multiplicity="1" />
     <End Role="Saldo" Type="TECAModel.Store.Saldo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -374,4 +430,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="reporteResultado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fecha" Type="date" Mode="In" />
+  </Function>
 </Schema>

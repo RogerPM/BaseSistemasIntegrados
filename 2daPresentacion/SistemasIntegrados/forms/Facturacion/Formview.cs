@@ -87,7 +87,7 @@ namespace forms.Facturacion
                    join d in da.Estado on a.idEstado equals d.IdEstado
                    join es in da.Usuario on a.idUsuario equals es.IdUsuario
                    join f in da.FormaPago on a.IdFormaPago equals f.IdFormaPago
-                   join g in da.CuentaxCobrar on a.IdNumeroFactura equals g.idFactura
+                   join g in da.CuentaxCobrar on a.IdNumeroFactura equals g.idNumeroFactura
                    where g.Modulo ==1 && a.IdNumeroFactura == codigofactura
                    select new
                    {
@@ -120,7 +120,7 @@ namespace forms.Facturacion
                    join d in da.Estado on a.idEstado equals d.IdEstado
                    join es in da.Usuario on a.idUsuario equals es.IdUsuario
                    join f in da.FormaPago on a.IdFormaPago equals f.IdFormaPago
-                   join g in da.CuentaxCobrar on a.IdNumeroFactura equals g.idFactura
+                   join g in da.CuentaxCobrar on a.IdNumeroFactura equals g.idNumeroFactura
                    join h in da.CuentaxCobrarDet on g.idCuentaxCobrar equals h.idCuentaxCobrar
                    where g.Modulo==1 &&  a.IdNumeroFactura == codigofactura
                    select new

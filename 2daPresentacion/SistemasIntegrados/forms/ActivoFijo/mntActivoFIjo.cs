@@ -30,7 +30,7 @@ namespace forms.ActivoFijo
         clsSubgrupoActivoFijo oActivoFijo = new clsSubgrupoActivoFijo();
         clsEmpresa oEmpresa = new clsEmpresa();
         clsEstado oEstado = new clsEstado();
-        clsGrupoAF oGrupo = new clsGrupoAF();
+        clsGrupo oGrupo = new clsGrupo();
         clsMensajesActivoFijos msj = new clsMensajesActivoFijos();
 
         clsClaseDatosSubgrupoActivoFijo datoActivoFijo = new clsClaseDatosSubgrupoActivoFijo();
@@ -54,6 +54,8 @@ namespace forms.ActivoFijo
 
             //Llenamos el combo de Empresa de Seguridad en la pantalla
             cbxEmpresa.Properties.DataSource = datoEmpresa.Consultar();
+
+            dtFecha.DateTime = DateTime.Now;
         }
         #endregion
 
@@ -97,8 +99,8 @@ namespace forms.ActivoFijo
                 //clase.Codigo  =Convert.ToInt32 (txtCodigoActivo.Text);
                 clase.descripcion = txtSubgrupo.Text;
                 clase.Fecha = Convert.ToDateTime(dtFecha.EditValue);
-                oGrupo.Descripcion = Convert.ToString(cbxGrupo.EditValue);//Se llena el campo descripcion del estado
-                clase.Grupo = Convert.ToInt32(datActFij.getIdSegunDescripcionInventarioGrupo(oGrupo.Descripcion));
+                oGrupo.descripcion = Convert.ToString(cbxGrupo.EditValue);//Se llena el campo descripcion del estado
+                clase.Grupo = Convert.ToInt32(datActFij.getIdSegunDescripcionInventarioGrupo(oGrupo.descripcion));
                 oEstado.descripcion = Convert.ToString(cbxEstado.EditValue);//Se llena el campo descripcion del estado
                 clase.IdEstado = Convert.ToInt32(datoEstado.getIdSegunDescripcion(oEstado.descripcion));
                 oEmpresa.descripcion = Convert.ToString(cbxEmpresa.EditValue);//se llena el campo descripcion de la empresa
@@ -144,7 +146,7 @@ namespace forms.ActivoFijo
             txtCodigoActivo.Text = "";
             cbxGrupo.EditValue = "";
             txtSubgrupo.Text = "";
-            dtFecha.EditValue = "";
+           // dtFecha.EditValue = "";
             cbxEstado.Text = "";
             cbxEmpresa.Text = "";
 
@@ -212,6 +214,7 @@ namespace forms.ActivoFijo
                     {
                         MessageBox.Show(msj.Guardar_ok);
                         limpiarControles();
+                        dtFecha.EditValue = "";
                     }
                     else
                     {
@@ -251,6 +254,7 @@ namespace forms.ActivoFijo
                         MessageBox.Show(msj.Eliminar_ok);
                         limpiarControles();
                         BloquearControles();
+                        dtFecha.EditValue = "";
                     }
                     else
                     {
@@ -280,9 +284,12 @@ namespace forms.ActivoFijo
                         MessageBox.Show(msj.Modificar_ok);
                         limpiarControles();
                         BloquearControles();
+                        dtFecha.EditValue = "";
+
                     }
                     else
                     {
+
                         MessageBox.Show(msj.Modificar_error);
                     }
 

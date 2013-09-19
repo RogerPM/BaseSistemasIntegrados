@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using clases.Cuentasxpagar;
 using datos.Cuentasxpagar;
+using System.Text.RegularExpressions;
 
 namespace forms.Cuentasxpagar
 {
@@ -20,11 +21,11 @@ namespace forms.Cuentasxpagar
         int error = 0, identificador = 0; // parametro para buscar mensaje; diferenciar entre empresa de servicio y proveedores de mercadería
         string msj = "", elemento = "Éxito"; //variables de datos a presentar en mensajes
         int tmp1 = 0, tmp2 = 0;
-        string var1, var2;
+        decimal Impuesto1, Impuesto2;
 
 
         clsCuentaPorPagar CuentaPorPagar = new clsCuentaPorPagar();
-        List<clsCuentaPorPagarDetalle> detalleDeuda = new List<clsCuentaPorPagarDetalle>();
+        
         List<clsImpuestos> impuestos = new List<clsImpuestos>();
 
 
@@ -59,34 +60,71 @@ namespace forms.Cuentasxpagar
         
         private void Limpiar()
         {
-            txtNroCtaPag.Text = null;
-            cbxNroOrdenCompra = null;
+            txtNroCtaPag.Text = Convert.ToString(CtaPorPag.getSiguienteCtaPorPagar());
+            //cbxNroOrdenCompra = null;
             dtpFechaIngreso.EditValue = DateTime.Today;
-            txtNroFactura.Text = null;
-            dtpFechaTransaccion.EditValue = null;
-            txtRucProveedor.Text = null;
-            txtNombreProveedor.Text = null;
-            txtMotivo.Text = null;
-            txtDetalle.Text = null;
-            txtSubTotal.Text = null;
-            txtDescuento.Text = null;
-            txtTotal.Text = null;
-            rdbFormaPago.SelectedIndex = 1;
-            txtValorEntrada.Text = null;
-            txtDeuda.Text = null;
-            txtNroLetras.Text = null;
-            txtValorCadaLetra.Text = null;
+            txtNroFactura.Text = "";
+            dtpFechaTransaccion.EditValue = DateTime.Today;
+            txtRucProveedor.Text = "";
+            txtNombreProveedor.Text = "";
+            txtMotivo.Text = "";
+            txtDetalle.Text = "";
+            txtSubTotal.Text = "";
+            txtDescuento.Text = "";
+            //cbxImpuesto1 = null;
+            //cbxImpuesto2 = null;
+            txtTotal.Text = "";
+            rdbFormaPago.SelectedIndex = 0;
+            txtValorEntrada.Text = "";
+            txtDeuda.Text = "";
+            txtNroLetras.Text = "";
+            //cbxFrecuencia = null;
+            txtValorCadaLetra.Text = "";
         }
 
 
 
-        int validaciones(int nroCtaPag, int nroOrdenCompra, DateTime fechaIngreso, int nroFactura, DateTime fechaTransaccion, string rucProveedor, string motivo,
-            string detalle, decimal subTotal, decimal descuento, int impuesto1, int impuesto2, decimal total, decimal valorEntrada, decimal deuda,
-            int nroLetras, double valorCadaLetra)
+        private void CalcularTotal()
         {
-            
+            decimal a, b, f, var1, var2;
+            int nat1 = 1, nat2 = 1;
 
-            return error;
+            tmp1 = Convert.ToInt32(cbxImpuesto1.EditValue);
+            tmp2 = Convert.ToInt32(cbxImpuesto2.EditValue);
+            var1 = impuestos[tmp1 - 1].Porcentaje;
+            var2 = impuestos[tmp2 - 1].Porcentaje;
+
+            if (impuestos[tmp1 - 1].naturAcree == 1)
+            {
+                nat1 = (-1);
+            }
+
+            if (impuestos[tmp2 - 1].naturAcree == 1)
+            {
+                nat2 = (-1);
+            }
+
+            a = Convert.ToDecimal(txtSubTotal.Text);
+            if (txtDescuento.Text != "")
+                b = Convert.ToDecimal(txtDescuento.Text);
+            else
+                b = 0;
+            Impuesto1 = ((a - b) * (var1 / 100)) * nat1;
+            Impuesto2 = ((a - b) * (var2 / 100)) * nat2;
+
+            f = (a - b) + Impuesto1 + Impuesto2;
+            txtTotal.Text = Convert.ToString(Math.Round(f, 2));
+        }
+
+
+
+        private void CalcularDetalle()
+        {
+            decimal x, y;
+            x = Convert.ToDecimal(txtTotal.Text) - Convert.ToDecimal(txtValorEntrada.Text);
+            y = x / Convert.ToInt32(txtNroLetras.Text);
+            txtDeuda.Text = Convert.ToString(x);
+            txtValorCadaLetra.Text = Convert.ToString(Math.Round(y, 2));
         }
 
 
@@ -95,6 +133,14 @@ namespace forms.Cuentasxpagar
         {
             if (error == 0)
             {
+                CalcularTotal();
+                if (rdbFormaPago.SelectedIndex == 1 && txtValorEntrada.Text != "" && txtNroLetras.Text != "")
+                {
+                    CalcularDetalle();
+                }
+
+                CuentaPorPagar._IdEmpresa = 1;
+                CuentaPorPagar._IdUsuario = 11;
                 CuentaPorPagar._NumCuentaPorPagar = Convert.ToInt32(txtNroCtaPag.Text);
                 CuentaPorPagar._FechaIngreso = dtpFechaIngreso.DateTime;
                 CuentaPorPagar._Factura = txtNroFactura.Text;
@@ -111,8 +157,78 @@ namespace forms.Cuentasxpagar
                 CuentaPorPagar._Motivo = txtMotivo.Text;
                 CuentaPorPagar._Detalle = txtDetalle.Text;
                 CuentaPorPagar._Subtotal = Convert.ToDecimal(txtSubTotal.Text);
-                CuentaPorPagar._Descuento = Convert.ToDecimal(txtDescuento.Text);
-                
+                if (!(string.IsNullOrEmpty(txtDescuento.Text)))
+                    CuentaPorPagar._Descuento = Convert.ToDecimal(txtDescuento.Text);
+                else
+                {
+                    Mensaje(3, msj, elemento);
+                }
+                List<clsImpuestoCuenta> impuList = new List<clsImpuestoCuenta>();
+                for (int i = 0; i < 2; i++)
+                {
+                    clsImpuestoCuenta objImp = new clsImpuestoCuenta();
+                    objImp._IdEmpresa = CuentaPorPagar._IdEmpresa;
+                    objImp._NumCuentaPorPagar = Convert.ToInt32(txtNroCtaPag.Text);
+                    if (i == 0 && !(String.IsNullOrEmpty(cbxImpuesto1.Text)))
+                    {
+                        objImp._IdImpuesto = Convert.ToInt32(cbxImpuesto1.EditValue);
+                        objImp._Valor = Impuesto1;
+                        impuList.Add(objImp);
+                    }
+                    else if (i == 1 && !(String.IsNullOrEmpty(cbxImpuesto2.Text)))
+                    {
+                        objImp._Valor = Impuesto2;
+                        objImp._IdImpuesto = Convert.ToInt32(cbxImpuesto2.EditValue);
+                        impuList.Add(objImp);
+                    }
+                }
+                CuentaPorPagar._ImpuestoCuenta = impuList;
+                CuentaPorPagar._Total = Convert.ToDecimal(txtTotal.Text);
+                CuentaPorPagar._FormaPago = Convert.ToString(rdbFormaPago.SelectedIndex);
+                if (CuentaPorPagar._FormaPago == Convert.ToString('1'))
+                {
+                    if (!(string.IsNullOrEmpty(txtValorEntrada.Text)))
+                        CuentaPorPagar._ValorEntrada = Convert.ToDecimal(txtValorEntrada.Text);
+                    else
+                    {
+                        error = 3;
+                        elemento = "Valor de entrada";
+                        Mensaje(error, msj, elemento);
+                    }
+
+                    if(!(string.IsNullOrEmpty(txtNroLetras.Text)))
+                        CuentaPorPagar._NumeroLetra = Convert.ToInt32(txtNroLetras.Text);
+                    else
+                    {
+                        error = 3;
+                        elemento = "Número de letras";
+                        Mensaje(error, msj, elemento);
+                    }
+
+                    int tmp;
+                    if (cbxFrecuencia.EditValue!=null)
+                    {
+                        tmp = Convert.ToInt32(cbxFrecuencia.EditValue);
+                        CuentaPorPagar._IdFrecuencia = tmp;
+                        CuentaPorPagar._DetCredito = GenerarDetallePagos(tmp);
+                    }
+                    else
+                    {
+                        tmp = -1;
+                        error = 3;
+                        elemento = "Frecuencia de pagos";
+                        Mensaje(error, msj, elemento);
+                    }
+
+                    if(!(string.IsNullOrEmpty(txtValorCadaLetra.Text)))
+                        CuentaPorPagar._ValorLetra = Convert.ToDecimal(txtValorCadaLetra.Text);
+                    else
+                    {
+                        error = 3;
+                        elemento = "Valor de cada letra";
+                        Mensaje(error, msj, elemento);
+                    }
+                }
             }
             else
             {
@@ -130,8 +246,9 @@ namespace forms.Cuentasxpagar
         }
 
 
-        private void GenerarDetallePagos()
+        private List<clsCuentaPorPagarDetalle> GenerarDetallePagos(int tmp)
         {
+            List<clsCuentaPorPagarDetalle> detalleDeuda = new List<clsCuentaPorPagarDetalle>();
             DateTime fechita = Convert.ToDateTime(dtpFechaTransaccion.EditValue);
             for (int i = 0; i < Convert.ToInt32(txtNroLetras.Text); i++)
             {
@@ -140,12 +257,29 @@ namespace forms.Cuentasxpagar
                 pago._NumCuentaPorPagar = Convert.ToInt32(txtNroCtaPag.Text);
                 pago._NumCuentaPorPagarDetalle = i+1;
                 pago._ValorLetra = Convert.ToDecimal(txtValorCadaLetra.Text);
-                fechita.AddMonths(1);
-                pago._FechaVencimiento = fechita.AddMonths(1);
+                switch (tmp)
+                {
+                    case 1:
+                        fechita = fechita.AddDays(1);
+                        break;
+                    case 2:
+                        fechita = fechita.AddDays(7);
+                        break;
+                    case 3:
+                        fechita = fechita.AddMonths(1);
+                        break;
+                    case 4:
+                        fechita = fechita.AddMonths(6);
+                        break;
+                    case 5:
+                        fechita = fechita.AddYears(1);
+                        break;
+                }
+                pago._FechaVencimiento = fechita;
                 pago._Estado = 1;
                 detalleDeuda.Add(pago);
             }
-            //return detalleDeuda;
+            return detalleDeuda;
         }
 
         //====================================================================================================================================================
@@ -155,7 +289,11 @@ namespace forms.Cuentasxpagar
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             identificador = 1;
-            cbxNroOrdenCompra.Enabled = false;
+            if (cbxNroOrdenCompra.Enabled == true)
+            {
+                cbxNroOrdenCompra.Enabled = false;
+            }
+            Limpiar();
             gpbDocumento.Enabled = true;
             gpbDetValores.Enabled = true;
         }
@@ -163,7 +301,7 @@ namespace forms.Cuentasxpagar
         private void tsbGuardar_Click(object sender, EventArgs e)
         {
             get();
-            if (CtaPorPag.Guardar(CuentaPorPagar))
+            if (CtaPorPag.Guardar0(CuentaPorPagar))
             {
                 Mensaje(error, msj, elemento);
                 Limpiar();
@@ -177,25 +315,58 @@ namespace forms.Cuentasxpagar
             if (identificador == 1)
             {
                 identificador = 0;
-                cbxNroOrdenCompra.Enabled = false;
+                Limpiar();
+               // cbxNroOrdenCompra.Enabled = true;
                 gpbDocumento.Enabled = false;
                 gpbDetValores.Enabled = false;
+                btnCalcularTotales.Enabled = false;
             }
         }
 
         private void tsbConsultar_Click(object sender, EventArgs e)
         {
+            frmConsultaCuentaPorPagar fr = new frmConsultaCuentaPorPagar();
+            fr.ShowDialog();
 
-        }
+            CuentaPorPagar = fr.ctaxpag;
 
-        private void tsbModificar_Click(object sender, EventArgs e)
-        {
+            txtNroCtaPag.Text = Convert.ToString(CuentaPorPagar._NumCuentaPorPagar);
+            dtpFechaIngreso.EditValue = CuentaPorPagar._FechaIngreso;
+            txtNroFactura.Text = Convert.ToString(CuentaPorPagar._Factura);
+            dtpFechaTransaccion.EditValue = CuentaPorPagar._FechaTransaccion;
+            txtRucProveedor.Text = Convert.ToString(CuentaPorPagar._IdEmpresaServicio);
+            txtMotivo.Text = CuentaPorPagar._Motivo;
+            txtDetalle.Text = CuentaPorPagar._Detalle;
 
-        }
+            //txtSubTotal.Text = Convert.ToString(CuentaPorPagar._Subtotal);
+            //txtDescuento.Text = Convert.ToString(CuentaPorPagar._Descuento);
+            //for (int i = 0; i < 2; i++)
+            //{
+            //    if (i == 0)
+            //    {
+            //        int a = CuentaPorPagar._ImpuestoCuenta[i]._IdImpuesto;
+            //        cbxImpuesto1.EditValue = a;
+            //    }
+            //    else
+            //    {
+            //        cbxImpuesto2.EditValue = CuentaPorPagar._ImpuestoCuenta[i]._IdImpuesto;
+            //    }
+            //}
 
-        private void tsbAnular_Click(object sender, EventArgs e)
-        {
+            txtTotal.Text = Convert.ToString(CuentaPorPagar._Total);
 
+            if (CuentaPorPagar._FormaPago == Convert.ToString(1))
+            {
+                rdbFormaPago.EditValue = 1;
+                txtValorEntrada.Text = Convert.ToString(CuentaPorPagar._ValorEntrada);
+                txtDeuda.Text = Convert.ToString(CuentaPorPagar._SaldoDeuda);
+                txtNroLetras.Text = Convert.ToString(CuentaPorPagar._NumeroLetra);
+                txtValorCadaLetra.Text = Convert.ToString(CuentaPorPagar._ValorLetra);
+            }
+            else
+            {
+                rdbFormaPago.EditValue = 0;
+            }
         }
 
         private void tsbSalir_Click(object sender, EventArgs e)
@@ -221,76 +392,11 @@ namespace forms.Cuentasxpagar
             txtTotal.Text = txtSubTotal.Text;
             txtDescuento.Enabled = true;
             cbxImpuesto1.Enabled = true;
-        }
-
-        decimal local;
-
-        private void cbxImpuesto1_EditValueChanged(object sender, EventArgs e)
-        {
-            tmp1 = Convert.ToInt32(cbxImpuesto1.EditValue);
-            var1 = Convert.ToString(sluImpuesto1.GetFocusedRowCellValue(colDescripcion));
-            decimal var, a, b, c;
-            var = impuestos[tmp1-1].Porcentaje;
-            a = Convert.ToDecimal(txtSubTotal.Text);
-            if(txtDescuento.Text != "")
-                b = Convert.ToDecimal(txtDescuento.Text);
-            else
-                b=0;
-            c = (a-b)*(var/100);
-            txtImpuesto1.Text = Convert.ToString(Math.Round(c));
             cbxImpuesto2.Enabled = true;
+            btnCalcularTotales.Enabled = true;
+            tsbGuardar.Enabled = true;
         }
 
-        private void cbxImpuesto2_EditValueChanged(object sender, EventArgs e)
-        {
-            tmp2 = Convert.ToInt32(cbxImpuesto2.EditValue);
-            var2 = Convert.ToString(sluImpuesto2.GetFocusedRowCellValue(colDescripcion1));
-            if (tmp1 == tmp2)
-            {
-                MessageBox.Show("Error, no se puede repetir impuesto", "Impuesto sobreasignado");
-            }
-            else
-            {
-                decimal var, a, b, c;
-                var = impuestos[tmp2 - 1].Porcentaje;
-                a = Convert.ToDecimal(txtSubTotal.Text);
-                if (txtDescuento.Text != "")
-                    b = Convert.ToDecimal(txtDescuento.Text);
-                else
-                    b = 0;
-                c = (a - b) * (var / 100);
-                txtImpuesto2.Text = Convert.ToString(Math.Round(c));
-            }
-        }
-
-
-        private void txtImpuesto1_EditValueChanged(object sender, EventArgs e)
-        {
-            decimal a, b, c, d, f;
-            a = Convert.ToDecimal(txtSubTotal.Text);
-            if (!(string.IsNullOrWhiteSpace(txtDescuento.Text)))
-                b = Convert.ToDecimal(txtDescuento.Text);
-            else
-                b = 0;
-            c = Convert.ToDecimal(txtImpuesto1.Text);
-            f = a - (b + c);
-            txtTotal.Text = Convert.ToString(Math.Round(f));
-        }
-        
-
-        private void txtImpuesto2_EditValueChanged(object sender, EventArgs e)
-        {
-            decimal a, b, c, d, f;
-            a = Convert.ToDecimal(txtSubTotal.Text);
-            if (!(string.IsNullOrWhiteSpace(txtDescuento.Text)))
-                b = Convert.ToDecimal(txtDescuento.Text);
-            else
-                b = 0;
-            c = Convert.ToDecimal(txtImpuesto1.Text);
-            d = Convert.ToDecimal(txtImpuesto2.Text);
-            f = a - (b + c + d);
-            txtTotal.Text = Convert.ToString(Math.Round(f));
-        }
 
 
 
@@ -314,39 +420,23 @@ namespace forms.Cuentasxpagar
         }
 
 
-
-        
-
-        private void txtValorEntrada_EditValueChanged(object sender, EventArgs e)
-        {
-            if(txtValorEntrada.Text != "" & txtTotal.Text != "")
-            {
-                decimal tmp = Convert.ToDecimal(txtTotal.Text) - Convert.ToDecimal(txtValorEntrada.Text);
-                txtDeuda.Text = Convert.ToString(Math.Round(tmp, 2));
-            }
-        }
-
-        
-
-        private void txtNroLetras_EditValueChanged(object sender, EventArgs e)
-        {
-            if (txtDeuda.Text != "" & txtNroLetras.Text != "")
-            {
-                decimal tmp = Convert.ToDecimal(txtDeuda.Text) / Convert.ToInt32(txtNroLetras.Text);
-                txtValorCadaLetra.Text = Convert.ToString(Math.Round(tmp, 2));
-            }
-        }
-
+            
         private void btnGenerarPagos_Click(object sender, EventArgs e)
         {
-            GenerarDetallePagos();
-            frmDetalleCuentasPorPagar detCtasxPag = new frmDetalleCuentasPorPagar(detalleDeuda);
+            tmp1 = Convert.ToInt32(cbxFrecuencia.EditValue);
+            frmDetalleCuentasPorPagar detCtasxPag = new frmDetalleCuentasPorPagar(GenerarDetallePagos(tmp1));
             detCtasxPag.ShowDialog();
         }
 
 
-        
 
-        
+        private void btnCalcularTotales_Click(object sender, EventArgs e)
+        {
+            CalcularTotal();
+            if (rdbFormaPago.SelectedIndex == 1 && txtValorEntrada.Text != "" && txtNroLetras.Text != "")
+            {
+                CalcularDetalle();
+            }
+        }
     }
 }

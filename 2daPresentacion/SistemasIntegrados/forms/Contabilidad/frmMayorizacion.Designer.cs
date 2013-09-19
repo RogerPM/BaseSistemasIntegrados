@@ -38,7 +38,6 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnAnular = new System.Windows.Forms.ToolStripButton();
-            this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.gcMayorizacion = new DevExpress.XtraGrid.GridControl();
             this.clsvwComprobanteMayorizarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gvMayorizacion = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -131,8 +130,7 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnGuardar,
-            this.btnAnular,
-            this.btnModificar});
+            this.btnAnular});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(592, 25);
@@ -156,14 +154,7 @@
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(42, 22);
             this.btnAnular.Text = "Salir";
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Image = global::forms.Properties.Resources.modificar;
-            this.btnModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(62, 22);
-            this.btnModificar.Text = "Modificar";
+            this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
             // 
             // gcMayorizacion
             // 
@@ -296,7 +287,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnGuardar;
         private System.Windows.Forms.ToolStripButton btnAnular;
-        private System.Windows.Forms.ToolStripButton btnModificar;
         private DevExpress.XtraGrid.GridControl gcMayorizacion;
         private DevExpress.XtraGrid.Views.Grid.GridView gvMayorizacion;
         private System.Windows.Forms.BindingSource clsvwComprobanteMayorizarBindingSource;

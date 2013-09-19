@@ -9,7 +9,7 @@ namespace clases.Cuentasxpagar
     {
         public int NumPago { get; set; }
         public DateTime FechaIngreso { get; set; }
-       // public int NumOrdenPago { get; set; }
+        // public int NumOrdenPago { get; set; }
         public decimal TotalPagar { get; set; }
         public int IdUsuario { get; set; }
         public int IdEmpresa { get; set; }

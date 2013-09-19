@@ -34,9 +34,9 @@
             this.checkEdit1 = new DevExpress.XtraEditors.CheckEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.button1 = new System.Windows.Forms.Button();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtNombre = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCodigo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -47,8 +47,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,20 +67,22 @@
             this.radioGroup2.Location = new System.Drawing.Point(2, 21);
             this.radioGroup2.Name = "radioGroup2";
             this.radioGroup2.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "General"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Por Usuario")});
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("g", "General"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem("u", "Por Usuario")});
             this.radioGroup2.Size = new System.Drawing.Size(128, 82);
             this.radioGroup2.TabIndex = 0;
+            this.radioGroup2.SelectedIndexChanged += new System.EventHandler(this.radioGroup2_SelectedIndexChanged);
             // 
             // groupControl3
             // 
             this.groupControl3.Controls.Add(this.checkEdit1);
             this.groupControl3.Controls.Add(this.labelControl5);
             this.groupControl3.Controls.Add(this.button1);
-            this.groupControl3.Controls.Add(this.textEdit2);
+            this.groupControl3.Controls.Add(this.txtNombre);
             this.groupControl3.Controls.Add(this.labelControl4);
-            this.groupControl3.Controls.Add(this.textEdit1);
+            this.groupControl3.Controls.Add(this.txtCodigo);
             this.groupControl3.Controls.Add(this.labelControl3);
+            this.groupControl3.Enabled = false;
             this.groupControl3.Location = new System.Drawing.Point(156, 33);
             this.groupControl3.Name = "groupControl3";
             this.groupControl3.Size = new System.Drawing.Size(244, 105);
@@ -111,13 +113,14 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "...";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textEdit2
+            // txtNombre
             // 
-            this.textEdit2.Location = new System.Drawing.Point(105, 53);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(113, 20);
-            this.textEdit2.TabIndex = 3;
+            this.txtNombre.Location = new System.Drawing.Point(105, 53);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(113, 20);
+            this.txtNombre.TabIndex = 3;
             // 
             // labelControl4
             // 
@@ -127,12 +130,12 @@
             this.labelControl4.TabIndex = 2;
             this.labelControl4.Text = "Nombre de usuario:";
             // 
-            // textEdit1
+            // txtCodigo
             // 
-            this.textEdit1.Location = new System.Drawing.Point(105, 25);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(75, 20);
-            this.textEdit1.TabIndex = 1;
+            this.txtCodigo.Location = new System.Drawing.Point(105, 25);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(75, 20);
+            this.txtCodigo.TabIndex = 1;
             // 
             // labelControl3
             // 
@@ -158,28 +161,30 @@
             this.toolStripButton1.Image = global::forms.Properties.Resources.imprimir;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(68, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(57, 22);
             this.toolStripButton1.Text = "Generar";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton6
             // 
             this.toolStripButton6.Image = global::forms.Properties.Resources._24_cancelar;
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(49, 22);
+            this.toolStripButton6.Size = new System.Drawing.Size(42, 22);
             this.toolStripButton6.Text = "Salir";
             // 
             // frmRptPrivilegiosxUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 179);
+            this.ClientSize = new System.Drawing.Size(412, 156);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmRptPrivilegiosxUsuario";
             this.Text = "Reporte usuarios según privilegios";
+            this.Load += new System.EventHandler(this.frmRptPrivilegiosxUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup2.Properties)).EndInit();
@@ -187,8 +192,8 @@
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -202,9 +207,9 @@
         private DevExpress.XtraEditors.RadioGroup radioGroup2;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private System.Windows.Forms.Button button1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtNombre;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtCodigo;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private System.Windows.Forms.ToolStrip toolStrip1;

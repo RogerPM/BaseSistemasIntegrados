@@ -98,14 +98,10 @@ namespace datos.ActivoFijo
                     clsBajaActivo clas = new clsBajaActivo();
                     clas.Codigo       = item.idBajaActivo;
                     clas.ActivoFIjo   = Convert.ToInt32(item.IdActivoFIjo);
-                    clas.Grupo        = Convert.ToInt32 (item.IdGrupo);
-                    clas.Subgrupo     = Convert.ToInt32(item.IdSubgrupo);
-                    clas.Fecha        = Convert.ToDateTime(item.Fecha);
-                    clas.IdEstado     = Convert.ToInt32(item.IdEstado) ;
+                    clas.Fecha        = Convert.ToDateTime(item.Fecha);                    
                     clas.IdEmpresa    = Convert.ToInt32(item.IdEmpresa);
                     clas.Descripcion  = item.Descripcion;
-                    clas.Motivo       = item.Motivo ;
-                    clas.Proveedor    = Convert.ToInt32(item.IdProveedor);
+                    clas.Motivo       = Convert.ToInt32( item.IdMotivoBaja);
                     clas.Observacion  = item.Observacion;
                     clas.IdCabeceraComprobante = Convert.ToInt32(item.IdCabeceraComprobante);
 
@@ -130,15 +126,11 @@ namespace datos.ActivoFijo
         {
             var x = (from q in ent.BajaActivo where q.idBajaActivo == baja.Codigo select q).First();
             x.idBajaActivo = baja.Codigo;
-            x.IdActivoFIjo = baja.ActivoFIjo;
-            x.IdGrupo      = baja.Grupo;
-            x.IdSubgrupo   = baja.Subgrupo;
+            x.IdActivoFIjo = baja.ActivoFIjo;        
             x.Fecha        = baja.Fecha;
-            x.IdEstado     = Convert.ToInt32(baja.IdEstado);
             x.IdEmpresa    = baja.IdEmpresa;
             x.Descripcion  = baja.Descripcion;
-            x.Motivo       = baja.Motivo;
-            x.IdProveedor = baja.Proveedor;
+            x.IdMotivoBaja       = baja.Motivo;
             x.Observacion  = baja.Observacion;
             ent.SaveChanges();
         }
@@ -152,14 +144,10 @@ namespace datos.ActivoFijo
             {
                 idBajaActivo = baja.Codigo,
                 IdActivoFIjo = baja.ActivoFIjo,
-                IdGrupo      = baja.Grupo,
-                IdSubgrupo   = baja.Subgrupo,
                 Fecha        = baja.Fecha,
-                IdEstado     = Convert.ToInt32(baja.IdEstado),
                 IdEmpresa    = baja.IdEmpresa,
                 Descripcion  = baja.Descripcion,
-                Motivo       = baja.Motivo,
-                IdProveedor  = baja.Proveedor,
+                IdMotivoBaja       = baja.Motivo,
              // IdCabeceraComprobante = baja.IdCabeceraComprobante,
                 Observacion  = baja.Observacion,
             };

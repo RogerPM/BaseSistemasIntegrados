@@ -22,6 +22,7 @@ namespace clases.Cuentasxpagar
         public string Error_Orden = "Orden ya esta Pagada;) ";
     }
 
-    
+
 
 }
+

@@ -26,11 +26,12 @@ namespace forms.ActivoFijo
 
         clsClaseDatosSubgrupoActivoFijo datoActivoFijo = new clsClaseDatosSubgrupoActivoFijo();
         clsClaseDatosRevalorizacion datoRevalor = new clsClaseDatosRevalorizacion();
+        clsClaseDatosActivoFijo datActiFij = new clsClaseDatosActivoFijo();
 
 
         private void prcsRevalorizacion_Load(object sender, EventArgs e)
         {
-
+            dtFecha.DateTime = DateTime.Now; 
         }
 
         #region"Operaciones de Controles"
@@ -39,7 +40,7 @@ namespace forms.ActivoFijo
             txtUsuario.Text = oActivoFijo._Usuario;
             dtFecha.EditValue = oRevalorizacion.Fecha;
             TxtEmpresa.Text = oActivoFijo._Empresa;
-            txtValorAdquisicion.Text = Convert.ToString(oRevalorizacion.valorActual);
+            txtValorAdquisicion.Text = Convert.ToString(oRevalorizacion.ValoAdquisicion);
             txtValorRevalorizado.Text = Convert.ToString(oRevalorizacion.valorRevalorizado);
             txtValorResidual.Text = Convert.ToString(oRevalorizacion.valorResidual);
 
@@ -73,8 +74,9 @@ namespace forms.ActivoFijo
                 revalo._idActivoFijo = Convert.ToInt32(txtCodigoActivo.Text);
                 revalo.Fecha = Convert.ToDateTime(dtFecha.EditValue);
                 revalo.valorRevalorizado = Convert.ToDouble(txtValorRevalorizado.Text);
-                oActivoFijo.valor_actualserie = Convert.ToDouble(txtValorAdquisicion.Text);//Se llena el campo del acivo fijo 
-                revalo.valorActual = oActivoFijo.valor_actualserie;
+                oActivoFijo.valor_actualserie = Convert.ToDouble(txtValorRevalorizado.Text);//Se llena el campo del valor actual  del acivo fijo  para luego modificarlo
+                oActivoFijo.ValorAdquisicion = Convert.ToDouble(txtValorAdquisicion.Text);//Se llena el campo del acivo fijo 
+                revalo.ValoAdquisicion = oActivoFijo.valor_actualserie;
                 oActivoFijo.valor_residual = Convert.ToDouble(txtValorResidual.Text);//Se llena el campo del activo fijo
                 revalo.valorResidual = oActivoFijo.valor_residual;
 
@@ -89,9 +91,9 @@ namespace forms.ActivoFijo
             btnAnular.Enabled = true;
             btnConsultar.Enabled = true;
             btnbuscar.Enabled = true;
-            btnProcesar.Enabled = true;
+            //btnProcesar.Enabled = true;
             txtCodigoActivo.Enabled = false;
-            dtFecha.Enabled = true;
+            //dtFecha.Enabled = true;
             //txtValorAdquisicion.Enabled= true;
             //txtValorRevalorizado.Enabled=true;
         }
@@ -111,10 +113,11 @@ namespace forms.ActivoFijo
         private void limpiarControles()
         {
             txtCodigoActivo.Text = "";
-            dtFecha.EditValue = "";
+            //dtFecha.EditValue = "";
             txtValorAdquisicion.Text = "";
-            //   txtValorResidual.Text  = "";
-            //   txtValorRevalorizado.Text  = " ";
+            txtValorResidual.Text  = "";
+            txtValorRevalorizado.Text  = " ";
+            txtProcentaje.Text = "";
         }
 
         #endregion
@@ -136,7 +139,7 @@ namespace forms.ActivoFijo
             {
                 if (revalo.Codigo == 0)
                 {
-                    if (datoRevalor.guardar(revalo))
+                    if (datoRevalor.guardar(revalo) & datActiFij.ModificarValorActual(oActivoFijo))
                     {
                         MessageBox.Show(msj.Guardar_ok);
                         limpiarControles();
@@ -208,12 +211,16 @@ namespace forms.ActivoFijo
                 btnbuscar.Enabled = true;
                 oActivoFijo = frm.cls;
                 setActivofijo(oActivoFijo);
+                txtProcentaje.Enabled = true;
+                btnProcesar.Enabled = true;
             }
             else
             {
                 btnGuardar.Enabled = true;//Estas varibles que se le coloca true o false son para setar los botones para que no haiga caidas del sistemas 
                 btnAnular.Enabled = false;//
                 btnConsultar.Enabled = false;//
+                txtProcentaje.Enabled = false;
+                btnProcesar.Enabled = true;
                 limpiarControles();
                 MessageBox.Show(msj.Sin_Seleccion, msj.Titulo, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
@@ -247,6 +254,26 @@ namespace forms.ActivoFijo
 
 
         #endregion
+
+        private void btnProcesar_Click_1(object sender, EventArgs e)
+        {
+            decimal NumPrcnt =Convert.ToDecimal ( txtProcentaje.Text);
+            decimal numValorAdqui=0,result=0, numReval;
+
+            numValorAdqui =Convert.ToDecimal ( txtValorAdquisicion.Text);
+            result = (numValorAdqui * NumPrcnt)/100;
+            txtValorResidual.Text = Convert.ToString(result);
+            numReval = numValorAdqui + result;
+            txtValorRevalorizado.Text = Convert.ToString(numReval);
+
+        }
+
+         
+
+        private void txtProcentaje_EditValueChanged(object sender, EventArgs e)
+        {
+            
+        }
 
 
 

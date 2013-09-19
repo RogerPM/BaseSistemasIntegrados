@@ -30,230 +30,355 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmpresaServicio));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbxEstado = new System.Windows.Forms.ComboBox();
-            this.txtDirección = new DevExpress.XtraEditors.MemoEdit();
+            this.dtpFechaRegistro = new DevExpress.XtraEditors.DateEdit();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cbxEstado = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.btnConsulta = new DevExpress.XtraEditors.SimpleButton();
+            this.txtDireccion = new DevExpress.XtraEditors.MemoEdit();
+            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.txtWebSite = new DevExpress.XtraEditors.TextEdit();
-            this.txtMail = new DevExpress.XtraEditors.TextEdit();
             this.txtRazonSocial = new DevExpress.XtraEditors.TextEdit();
-            this.txtNroIdentificacion = new DevExpress.XtraEditors.TextEdit();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.gdcDetalleTelefonico = new DevExpress.XtraGrid.GridControl();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtRuc = new DevExpress.XtraEditors.TextEdit();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.clsDetalleTelefonoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gdvDetalleTelefonico = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.col_tipoTelefono = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cbxTipoTelefono = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.clsTipoTelefonoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.repositoryItemGridLookUpEdit2View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colIdTipoTelefono = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldescripcion1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdEmpresa1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdEstado1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_numTelefono = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.txtNumTel = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.col_IdTelefono = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemSearchLookUpEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
-            this.repositoryItemSearchLookUpEdit3View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemSearchLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
-            this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.repositoryItemSearchLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
-            this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
-            this.repositoryItemComboBox2 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.gdcDetalleBancario = new DevExpress.XtraGrid.GridControl();
+            this.gridView9 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.repositoryItemSearchLookUpEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+            this.gridView10 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.repositoryItemGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.clsCuentaBancariaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gdvDetalleCtasBancarias = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.col_banco = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cbxBanco = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.clsBancoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colSerie = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTipoCuenta = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNroCta = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colIdBanco = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cbxBanco = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
-            this.repositoryItemSearchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.cbxTipoCuenta = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.gleTipoPersona = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.col_IdBanco = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_IdEmpresa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_IdEstado = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_IdUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_Nombre = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_tipoCuenta = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cbxTipoCuenta = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.col_numeroCuenta = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_Empresa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_IdCuentaBancaria = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_IdEmpresaServicio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemSearchLookUpEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+            this.gridView12 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.repositoryItemSearchLookUpEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit();
+            this.gridView13 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cbxTipoPersona = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.clsTipoPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.gdvTipoPersona = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colIdTipoPersona = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdEmpresa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdEstado = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsbSalir = new System.Windows.Forms.ToolStripButton();
-            this.deFechaActual = new DevExpress.XtraEditors.DateEdit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDirección.Properties)).BeginInit();
+            this.txtNroCuenta = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFechaRegistro.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFechaRegistro.Properties)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxEstado.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWebSite.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRazonSocial.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNroIdentificacion.Properties)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gdcDetalleTelefonico)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRuc.Properties)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsDetalleTelefonoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvDetalleTelefonico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxTipoTelefono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTipoTelefonoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit2View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumTel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit3View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gdcDetalleBancario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsCuentaBancariaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvDetalleCtasBancarias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBanco)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsBancoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxTipoCuenta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gleTipoPersona.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxTipoPersona.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsTipoPersonaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deFechaActual.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deFechaActual.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvTipoPersona)).BeginInit();
+            this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNroCuenta)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // dtpFechaRegistro
             // 
-            this.groupBox1.Controls.Add(this.cbxEstado);
-            this.groupBox1.Controls.Add(this.txtDirección);
-            this.groupBox1.Controls.Add(this.txtWebSite);
-            this.groupBox1.Controls.Add(this.txtMail);
-            this.groupBox1.Controls.Add(this.txtRazonSocial);
-            this.groupBox1.Controls.Add(this.txtNroIdentificacion);
-            this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.gleTipoPersona);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(12, 54);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(971, 419);
-            this.groupBox1.TabIndex = 25;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.dtpFechaRegistro.EditValue = null;
+            this.dtpFechaRegistro.Enabled = false;
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(825, 33);
+            this.dtpFechaRegistro.Name = "dtpFechaRegistro";
+            this.dtpFechaRegistro.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpFechaRegistro.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(100, 20);
+            this.dtpFechaRegistro.TabIndex = 30;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.cbxEstado);
+            this.groupBox4.Controls.Add(this.btnConsulta);
+            this.groupBox4.Controls.Add(this.txtDireccion);
+            this.groupBox4.Controls.Add(this.txtEmail);
+            this.groupBox4.Controls.Add(this.txtWebSite);
+            this.groupBox4.Controls.Add(this.txtRazonSocial);
+            this.groupBox4.Controls.Add(this.txtRuc);
+            this.groupBox4.Controls.Add(this.groupBox5);
+            this.groupBox4.Controls.Add(this.groupBox6);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.cbxTipoPersona);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Location = new System.Drawing.Point(11, 59);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(914, 419);
+            this.groupBox4.TabIndex = 29;
+            this.groupBox4.TabStop = false;
             // 
             // cbxEstado
             // 
-            this.cbxEstado.FormattingEnabled = true;
-            this.cbxEstado.Items.AddRange(new object[] {
+            this.cbxEstado.Location = new System.Drawing.Point(681, 93);
+            this.cbxEstado.Name = "cbxEstado";
+            this.cbxEstado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxEstado.Properties.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.cbxEstado.Location = new System.Drawing.Point(764, 93);
-            this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(196, 21);
-            this.cbxEstado.TabIndex = 24;
-            this.cbxEstado.SelectedIndexChanged += new System.EventHandler(this.cbxEstado_SelectedIndexChanged);
+            this.cbxEstado.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.cbxEstado.Size = new System.Drawing.Size(213, 20);
+            this.cbxEstado.TabIndex = 27;
             // 
-            // txtDirección
+            // btnConsulta
             // 
-            this.txtDirección.Location = new System.Drawing.Point(133, 128);
-            this.txtDirección.Name = "txtDirección";
-            this.txtDirección.Size = new System.Drawing.Size(827, 53);
-            this.txtDirección.TabIndex = 4;
+            this.btnConsulta.Location = new System.Drawing.Point(353, 55);
+            this.btnConsulta.Name = "btnConsulta";
+            this.btnConsulta.Size = new System.Drawing.Size(25, 23);
+            this.btnConsulta.TabIndex = 26;
+            this.btnConsulta.Text = "...";
+            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(133, 128);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(761, 53);
+            this.txtDireccion.TabIndex = 25;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(133, 197);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(479, 20);
+            this.txtEmail.TabIndex = 24;
             // 
             // txtWebSite
             // 
             this.txtWebSite.Location = new System.Drawing.Point(133, 231);
             this.txtWebSite.Name = "txtWebSite";
-            this.txtWebSite.Size = new System.Drawing.Size(563, 20);
-            this.txtWebSite.TabIndex = 6;
-            // 
-            // txtMail
-            // 
-            this.txtMail.Location = new System.Drawing.Point(133, 197);
-            this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(563, 20);
-            this.txtMail.TabIndex = 5;
+            this.txtWebSite.Size = new System.Drawing.Size(479, 20);
+            this.txtWebSite.TabIndex = 24;
             // 
             // txtRazonSocial
             // 
             this.txtRazonSocial.Location = new System.Drawing.Point(133, 93);
             this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(563, 20);
-            this.txtRazonSocial.TabIndex = 2;
+            this.txtRazonSocial.Size = new System.Drawing.Size(479, 20);
+            this.txtRazonSocial.TabIndex = 24;
             // 
-            // txtNroIdentificacion
+            // txtRuc
             // 
-            this.txtNroIdentificacion.Location = new System.Drawing.Point(133, 57);
-            this.txtNroIdentificacion.Name = "txtNroIdentificacion";
-            this.txtNroIdentificacion.Size = new System.Drawing.Size(213, 20);
-            this.txtNroIdentificacion.TabIndex = 1;
+            this.txtRuc.Location = new System.Drawing.Point(133, 57);
+            this.txtRuc.Name = "txtRuc";
+            this.txtRuc.Properties.Mask.EditMask = "\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?";
+            this.txtRuc.Properties.Mask.IgnoreMaskBlank = false;
+            this.txtRuc.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
+            this.txtRuc.Size = new System.Drawing.Size(213, 20);
+            this.txtRuc.TabIndex = 24;
             // 
-            // btnBuscar
+            // groupBox5
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(352, 55);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(27, 23);
-            this.btnBuscar.TabIndex = 23;
-            this.btnBuscar.Text = "...";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.groupBox5.Controls.Add(this.gridControl2);
+            this.groupBox5.Location = new System.Drawing.Point(9, 268);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(418, 145);
+            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Detalle de Números Telefónicos";
             // 
-            // groupBox3
+            // gridControl2
             // 
-            this.groupBox3.Controls.Add(this.gdcDetalleTelefonico);
-            this.groupBox3.Location = new System.Drawing.Point(9, 268);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(418, 145);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Detalle de Números Telefónicos";
+            this.gridControl2.DataSource = this.clsDetalleTelefonoBindingSource;
+            this.gridControl2.Location = new System.Drawing.Point(9, 20);
+            this.gridControl2.MainView = this.gdvDetalleTelefonico;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemSearchLookUpEdit3,
+            this.repositoryItemSearchLookUpEdit4,
+            this.repositoryItemGridLookUpEdit1,
+            this.cbxTipoTelefono,
+            this.txtNumTel});
+            this.gridControl2.Size = new System.Drawing.Size(400, 120);
+            this.gridControl2.TabIndex = 0;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gdvDetalleTelefonico});
             // 
-            // gdcDetalleTelefonico
+            // clsDetalleTelefonoBindingSource
             // 
-            this.gdcDetalleTelefonico.Location = new System.Drawing.Point(9, 19);
-            this.gdcDetalleTelefonico.MainView = this.gridView3;
-            this.gdcDetalleTelefonico.Name = "gdcDetalleTelefonico";
-            this.gdcDetalleTelefonico.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemSearchLookUpEdit1,
-            this.repositoryItemSearchLookUpEdit2,
-            this.repositoryItemTextEdit1,
-            this.repositoryItemTextEdit2,
-            this.repositoryItemComboBox1,
-            this.repositoryItemDateEdit1,
-            this.repositoryItemComboBox2,
-            this.repositoryItemSearchLookUpEdit3});
-            this.gdcDetalleTelefonico.Size = new System.Drawing.Size(400, 120);
-            this.gdcDetalleTelefonico.TabIndex = 0;
-            this.gdcDetalleTelefonico.UseEmbeddedNavigator = true;
-            this.gdcDetalleTelefonico.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3});
-            this.gdcDetalleTelefonico.Click += new System.EventHandler(this.gdcDetalleTelefonico_Click);
+            this.clsDetalleTelefonoBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsDetalleTelefonoCXP);
             // 
-            // gridView3
+            // gdvDetalleTelefonico
             // 
-            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2});
-            this.gridView3.GridControl = this.gdcDetalleTelefonico;
-            this.gridView3.Name = "gridView3";
-            this.gridView3.NewItemRowText = "click aqui nuevo registro";
-            this.gridView3.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView3.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
-            this.gridView3.OptionsView.ShowAutoFilterRow = true;
-            this.gridView3.OptionsView.ShowGroupPanel = false;
+            this.gdvDetalleTelefonico.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.col_tipoTelefono,
+            this.col_numTelefono,
+            this.col_IdTelefono});
+            this.gdvDetalleTelefonico.DefaultRelationIndex = 10;
+            this.gdvDetalleTelefonico.GridControl = this.gridControl2;
+            this.gdvDetalleTelefonico.Name = "gdvDetalleTelefonico";
+            this.gdvDetalleTelefonico.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
+            this.gdvDetalleTelefonico.OptionsNavigation.AutoFocusNewRow = true;
+            this.gdvDetalleTelefonico.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.gdvDetalleTelefonico.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn1
+            // col_tipoTelefono
             // 
-            this.gridColumn1.Caption = "gridColumn1";
-            this.gridColumn1.ColumnEdit = this.repositoryItemSearchLookUpEdit3;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.col_tipoTelefono.AppearanceHeader.Options.UseTextOptions = true;
+            this.col_tipoTelefono.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.col_tipoTelefono.Caption = "Tipo de Teléfono";
+            this.col_tipoTelefono.ColumnEdit = this.cbxTipoTelefono;
+            this.col_tipoTelefono.FieldName = "_TipoTelefono";
+            this.col_tipoTelefono.Name = "col_tipoTelefono";
+            this.col_tipoTelefono.Visible = true;
+            this.col_tipoTelefono.VisibleIndex = 0;
+            this.col_tipoTelefono.Width = 169;
+            // 
+            // cbxTipoTelefono
+            // 
+            this.cbxTipoTelefono.AutoHeight = false;
+            this.cbxTipoTelefono.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxTipoTelefono.DataSource = this.clsTipoTelefonoBindingSource;
+            this.cbxTipoTelefono.DisplayMember = "descripcion";
+            this.cbxTipoTelefono.Name = "cbxTipoTelefono";
+            this.cbxTipoTelefono.ValueMember = "IdTipoTelefono";
+            this.cbxTipoTelefono.View = this.repositoryItemGridLookUpEdit2View;
+            // 
+            // clsTipoTelefonoBindingSource
+            // 
+            this.clsTipoTelefonoBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsTipoTelefonoCXP);
+            // 
+            // repositoryItemGridLookUpEdit2View
+            // 
+            this.repositoryItemGridLookUpEdit2View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colIdTipoTelefono,
+            this.coldescripcion1,
+            this.colIdEmpresa1,
+            this.colIdEstado1});
+            this.repositoryItemGridLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemGridLookUpEdit2View.Name = "repositoryItemGridLookUpEdit2View";
+            this.repositoryItemGridLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemGridLookUpEdit2View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colIdTipoTelefono
+            // 
+            this.colIdTipoTelefono.Caption = "Código";
+            this.colIdTipoTelefono.FieldName = "IdTipoTelefono";
+            this.colIdTipoTelefono.Name = "colIdTipoTelefono";
+            this.colIdTipoTelefono.Visible = true;
+            this.colIdTipoTelefono.VisibleIndex = 0;
+            this.colIdTipoTelefono.Width = 93;
+            // 
+            // coldescripcion1
+            // 
+            this.coldescripcion1.Caption = "Descripción";
+            this.coldescripcion1.FieldName = "descripcion";
+            this.coldescripcion1.Name = "coldescripcion1";
+            this.coldescripcion1.Visible = true;
+            this.coldescripcion1.VisibleIndex = 1;
+            this.coldescripcion1.Width = 544;
+            // 
+            // colIdEmpresa1
+            // 
+            this.colIdEmpresa1.FieldName = "IdEmpresa";
+            this.colIdEmpresa1.Name = "colIdEmpresa1";
+            // 
+            // colIdEstado1
+            // 
+            this.colIdEstado1.FieldName = "IdEstado";
+            this.colIdEstado1.Name = "colIdEstado1";
+            // 
+            // col_numTelefono
+            // 
+            this.col_numTelefono.AppearanceHeader.Options.UseTextOptions = true;
+            this.col_numTelefono.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.col_numTelefono.Caption = "Nro. de Teléfono";
+            this.col_numTelefono.ColumnEdit = this.txtNumTel;
+            this.col_numTelefono.FieldName = "_numTelefono";
+            this.col_numTelefono.Name = "col_numTelefono";
+            this.col_numTelefono.Visible = true;
+            this.col_numTelefono.VisibleIndex = 1;
+            this.col_numTelefono.Width = 468;
+            // 
+            // txtNumTel
+            // 
+            this.txtNumTel.AutoHeight = false;
+            this.txtNumTel.Mask.EditMask = "\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?";
+            this.txtNumTel.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
+            this.txtNumTel.Name = "txtNumTel";
+            // 
+            // col_IdTelefono
+            // 
+            this.col_IdTelefono.FieldName = "_IdTelefono";
+            this.col_IdTelefono.Name = "col_IdTelefono";
             // 
             // repositoryItemSearchLookUpEdit3
             // 
@@ -261,289 +386,382 @@
             this.repositoryItemSearchLookUpEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemSearchLookUpEdit3.Name = "repositoryItemSearchLookUpEdit3";
-            this.repositoryItemSearchLookUpEdit3.View = this.repositoryItemSearchLookUpEdit3View;
+            this.repositoryItemSearchLookUpEdit3.View = this.gridView9;
             // 
-            // repositoryItemSearchLookUpEdit3View
+            // gridView9
             // 
-            this.repositoryItemSearchLookUpEdit3View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.repositoryItemSearchLookUpEdit3View.Name = "repositoryItemSearchLookUpEdit3View";
-            this.repositoryItemSearchLookUpEdit3View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.repositoryItemSearchLookUpEdit3View.OptionsView.ShowGroupPanel = false;
+            this.gridView9.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView9.Name = "gridView9";
+            this.gridView9.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView9.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn2
+            // repositoryItemSearchLookUpEdit4
             // 
-            this.gridColumn2.Caption = "gridColumn2";
-            this.gridColumn2.FieldName = "gridColumn2";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            // 
-            // repositoryItemSearchLookUpEdit1
-            // 
-            this.repositoryItemSearchLookUpEdit1.AutoHeight = false;
-            this.repositoryItemSearchLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.repositoryItemSearchLookUpEdit4.AutoHeight = false;
+            this.repositoryItemSearchLookUpEdit4.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemSearchLookUpEdit1.Name = "repositoryItemSearchLookUpEdit1";
-            this.repositoryItemSearchLookUpEdit1.View = this.gridView7;
+            this.repositoryItemSearchLookUpEdit4.Name = "repositoryItemSearchLookUpEdit4";
+            this.repositoryItemSearchLookUpEdit4.View = this.gridView10;
             // 
-            // gridView7
+            // gridView10
             // 
-            this.gridView7.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView7.Name = "gridView7";
-            this.gridView7.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView7.OptionsView.ShowGroupPanel = false;
+            this.gridView10.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView10.Name = "gridView10";
+            this.gridView10.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView10.OptionsView.ShowGroupPanel = false;
             // 
-            // repositoryItemSearchLookUpEdit2
+            // repositoryItemGridLookUpEdit1
             // 
-            this.repositoryItemSearchLookUpEdit2.AutoHeight = false;
-            this.repositoryItemSearchLookUpEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.repositoryItemGridLookUpEdit1.AutoHeight = false;
+            this.repositoryItemGridLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemSearchLookUpEdit2.Name = "repositoryItemSearchLookUpEdit2";
-            this.repositoryItemSearchLookUpEdit2.View = this.gridView6;
+            this.repositoryItemGridLookUpEdit1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.repositoryItemGridLookUpEdit1.DisplayMember = "Descripcion";
+            this.repositoryItemGridLookUpEdit1.Name = "repositoryItemGridLookUpEdit1";
+            this.repositoryItemGridLookUpEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.repositoryItemGridLookUpEdit1.View = this.repositoryItemGridLookUpEdit1View;
             // 
-            // gridView6
+            // repositoryItemGridLookUpEdit1View
             // 
-            this.gridView6.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView6.Name = "gridView6";
-            this.gridView6.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView6.OptionsView.ShowGroupPanel = false;
+            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
+            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
-            // repositoryItemTextEdit1
+            // groupBox6
             // 
-            this.repositoryItemTextEdit1.AutoHeight = false;
-            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            this.groupBox6.Controls.Add(this.gridControl1);
+            this.groupBox6.Location = new System.Drawing.Point(487, 268);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(418, 145);
+            this.groupBox6.TabIndex = 4;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Detalle de Cuentas Bancarias";
             // 
-            // repositoryItemTextEdit2
+            // gridControl1
             // 
-            this.repositoryItemTextEdit2.AutoHeight = false;
-            this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
-            // 
-            // repositoryItemComboBox1
-            // 
-            this.repositoryItemComboBox1.AutoHeight = false;
-            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
-            // 
-            // repositoryItemDateEdit1
-            // 
-            this.repositoryItemDateEdit1.AutoHeight = false;
-            this.repositoryItemDateEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemDateEdit1.Name = "repositoryItemDateEdit1";
-            this.repositoryItemDateEdit1.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            // 
-            // repositoryItemComboBox2
-            // 
-            this.repositoryItemComboBox2.AutoHeight = false;
-            this.repositoryItemComboBox2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBox2.Name = "repositoryItemComboBox2";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.gdcDetalleBancario);
-            this.groupBox2.Location = new System.Drawing.Point(542, 268);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(418, 145);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Detalle de Cuentas Bancarias";
-            // 
-            // gdcDetalleBancario
-            // 
-            this.gdcDetalleBancario.DataSource = this.clsCuentaBancariaBindingSource;
-            this.gdcDetalleBancario.Location = new System.Drawing.Point(12, 31);
-            this.gdcDetalleBancario.MainView = this.gridView1;
-            this.gdcDetalleBancario.Name = "gdcDetalleBancario";
-            this.gdcDetalleBancario.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gridControl1.DataSource = this.clsCuentaBancariaBindingSource;
+            this.gridControl1.Location = new System.Drawing.Point(9, 19);
+            this.gridControl1.MainView = this.gdvDetalleCtasBancarias;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemSearchLookUpEdit5,
+            this.repositoryItemSearchLookUpEdit6,
+            this.cbxTipoCuenta,
             this.cbxBanco,
-            this.cbxTipoCuenta});
-            this.gdcDetalleBancario.Size = new System.Drawing.Size(400, 120);
-            this.gdcDetalleBancario.TabIndex = 0;
-            this.gdcDetalleBancario.UseEmbeddedNavigator = true;
-            this.gdcDetalleBancario.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.txtNroCuenta});
+            this.gridControl1.Size = new System.Drawing.Size(400, 120);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gdvDetalleCtasBancarias});
             // 
             // clsCuentaBancariaBindingSource
             // 
-            this.clsCuentaBancariaBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsCuentaBancaria2);
+            this.clsCuentaBancariaBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsCtaBancaria2);
             // 
-            // gridView1
+            // gdvDetalleCtasBancarias
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colSerie,
-            this.colTipoCuenta,
-            this.colNroCta,
-            this.colIdBanco});
-            this.gridView1.GridControl = this.gdcDetalleBancario;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
-            this.gridView1.OptionsView.ShowAutoFilterRow = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gdvDetalleCtasBancarias.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.col_banco,
+            this.col_tipoCuenta,
+            this.col_numeroCuenta,
+            this.col_Empresa,
+            this.col_IdCuentaBancaria,
+            this.col_IdEmpresaServicio});
+            this.gdvDetalleCtasBancarias.GridControl = this.gridControl1;
+            this.gdvDetalleCtasBancarias.Name = "gdvDetalleCtasBancarias";
+            this.gdvDetalleCtasBancarias.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
+            this.gdvDetalleCtasBancarias.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.gdvDetalleCtasBancarias.OptionsView.ShowGroupPanel = false;
             // 
-            // colSerie
+            // col_banco
             // 
-            this.colSerie.FieldName = "Serie";
-            this.colSerie.Name = "colSerie";
-            this.colSerie.Visible = true;
-            this.colSerie.VisibleIndex = 0;
-            // 
-            // colTipoCuenta
-            // 
-            this.colTipoCuenta.FieldName = "TipoCuenta";
-            this.colTipoCuenta.Name = "colTipoCuenta";
-            this.colTipoCuenta.Visible = true;
-            this.colTipoCuenta.VisibleIndex = 1;
-            // 
-            // colNroCta
-            // 
-            this.colNroCta.FieldName = "NroCta";
-            this.colNroCta.Name = "colNroCta";
-            this.colNroCta.Visible = true;
-            this.colNroCta.VisibleIndex = 2;
-            // 
-            // colIdBanco
-            // 
-            this.colIdBanco.FieldName = "IdBanco";
-            this.colIdBanco.Name = "colIdBanco";
-            this.colIdBanco.Visible = true;
-            this.colIdBanco.VisibleIndex = 3;
+            this.col_banco.AppearanceHeader.Options.UseTextOptions = true;
+            this.col_banco.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.col_banco.Caption = "Banco";
+            this.col_banco.ColumnEdit = this.cbxBanco;
+            this.col_banco.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.col_banco.FieldName = "_IdBanco";
+            this.col_banco.Name = "col_banco";
+            this.col_banco.Visible = true;
+            this.col_banco.VisibleIndex = 0;
             // 
             // cbxBanco
             // 
             this.cbxBanco.AutoHeight = false;
             this.cbxBanco.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxBanco.DataSource = this.clsBancoBindingSource;
+            this.cbxBanco.DisplayMember = "_Nombre";
             this.cbxBanco.Name = "cbxBanco";
-            this.cbxBanco.View = this.repositoryItemSearchLookUpEdit1View;
+            this.cbxBanco.ValueMember = "_IdBanco";
+            this.cbxBanco.View = this.gridView1;
             // 
-            // repositoryItemSearchLookUpEdit1View
+            // clsBancoBindingSource
             // 
-            this.repositoryItemSearchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.repositoryItemSearchLookUpEdit1View.Name = "repositoryItemSearchLookUpEdit1View";
-            this.repositoryItemSearchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.repositoryItemSearchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            this.clsBancoBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsBancosCXP);
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.col_IdBanco,
+            this.col_IdEmpresa,
+            this.col_IdEstado,
+            this.col_IdUsuario,
+            this.col_Nombre});
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // col_IdBanco
+            // 
+            this.col_IdBanco.AppearanceHeader.Options.UseTextOptions = true;
+            this.col_IdBanco.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.col_IdBanco.Caption = "Código";
+            this.col_IdBanco.FieldName = "_IdBanco";
+            this.col_IdBanco.Name = "col_IdBanco";
+            this.col_IdBanco.Visible = true;
+            this.col_IdBanco.VisibleIndex = 0;
+            // 
+            // col_IdEmpresa
+            // 
+            this.col_IdEmpresa.FieldName = "_IdEmpresa";
+            this.col_IdEmpresa.Name = "col_IdEmpresa";
+            // 
+            // col_IdEstado
+            // 
+            this.col_IdEstado.FieldName = "_IdEstado";
+            this.col_IdEstado.Name = "col_IdEstado";
+            // 
+            // col_IdUsuario
+            // 
+            this.col_IdUsuario.FieldName = "_IdUsuario";
+            this.col_IdUsuario.Name = "col_IdUsuario";
+            // 
+            // col_Nombre
+            // 
+            this.col_Nombre.AppearanceHeader.Options.UseTextOptions = true;
+            this.col_Nombre.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.col_Nombre.Caption = "Nombre";
+            this.col_Nombre.FieldName = "_Nombre";
+            this.col_Nombre.Name = "col_Nombre";
+            this.col_Nombre.Visible = true;
+            this.col_Nombre.VisibleIndex = 1;
+            // 
+            // col_tipoCuenta
+            // 
+            this.col_tipoCuenta.AppearanceHeader.Options.UseTextOptions = true;
+            this.col_tipoCuenta.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.col_tipoCuenta.Caption = "Tipo de Cuenta";
+            this.col_tipoCuenta.ColumnEdit = this.cbxTipoCuenta;
+            this.col_tipoCuenta.FieldName = "_TipoCuenta";
+            this.col_tipoCuenta.Name = "col_tipoCuenta";
+            this.col_tipoCuenta.Visible = true;
+            this.col_tipoCuenta.VisibleIndex = 1;
             // 
             // cbxTipoCuenta
             // 
-            this.cbxTipoCuenta.AutoHeight = false;
             this.cbxTipoCuenta.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxTipoCuenta.Items.AddRange(new object[] {
+            "Ahorros",
+            "Corriente"});
             this.cbxTipoCuenta.Name = "cbxTipoCuenta";
-            this.cbxTipoCuenta.View = this.gridView2;
+            this.cbxTipoCuenta.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
-            // gridView2
+            // col_numeroCuenta
             // 
-            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.col_numeroCuenta.AppearanceHeader.Options.UseTextOptions = true;
+            this.col_numeroCuenta.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.col_numeroCuenta.Caption = "Nro. de Cuenta";
+            this.col_numeroCuenta.ColumnEdit = this.txtNroCuenta;
+            this.col_numeroCuenta.FieldName = "_NroCuenta";
+            this.col_numeroCuenta.Name = "col_numeroCuenta";
+            this.col_numeroCuenta.Visible = true;
+            this.col_numeroCuenta.VisibleIndex = 2;
             // 
-            // label9
+            // col_Empresa
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 131);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Dirección:";
+            this.col_Empresa.FieldName = "_Empresa";
+            this.col_Empresa.Name = "col_Empresa";
             // 
-            // label8
+            // col_IdCuentaBancaria
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 234);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Sitio web:";
+            this.col_IdCuentaBancaria.FieldName = "_IdCuentaBancaria";
+            this.col_IdCuentaBancaria.Name = "col_IdCuentaBancaria";
             // 
-            // label1
+            // col_IdEmpresaServicio
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 200);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Correo electrónico:";
+            this.col_IdEmpresaServicio.FieldName = "_IdEmpresaServicio";
+            this.col_IdEmpresaServicio.Name = "col_IdEmpresaServicio";
             // 
-            // label6
+            // repositoryItemSearchLookUpEdit5
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 96);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Razón Social:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "R.U.C. / C.I.:";
-            // 
-            // gleTipoPersona
-            // 
-            this.gleTipoPersona.Location = new System.Drawing.Point(133, 23);
-            this.gleTipoPersona.Name = "gleTipoPersona";
-            this.gleTipoPersona.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.repositoryItemSearchLookUpEdit5.AutoHeight = false;
+            this.repositoryItemSearchLookUpEdit5.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.gleTipoPersona.Properties.DataSource = this.clsTipoPersonaBindingSource;
-            this.gleTipoPersona.Properties.DisplayMember = "Descripcion";
-            this.gleTipoPersona.Properties.ValueMember = "IdTipoPersona";
-            this.gleTipoPersona.Properties.View = this.gridView4;
-            this.gleTipoPersona.Size = new System.Drawing.Size(213, 20);
-            this.gleTipoPersona.TabIndex = 0;
+            this.repositoryItemSearchLookUpEdit5.Name = "repositoryItemSearchLookUpEdit5";
+            this.repositoryItemSearchLookUpEdit5.View = this.gridView12;
+            // 
+            // gridView12
+            // 
+            this.gridView12.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView12.Name = "gridView12";
+            this.gridView12.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView12.OptionsView.ShowGroupPanel = false;
+            // 
+            // repositoryItemSearchLookUpEdit6
+            // 
+            this.repositoryItemSearchLookUpEdit6.AutoHeight = false;
+            this.repositoryItemSearchLookUpEdit6.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemSearchLookUpEdit6.Name = "repositoryItemSearchLookUpEdit6";
+            this.repositoryItemSearchLookUpEdit6.View = this.gridView13;
+            // 
+            // gridView13
+            // 
+            this.gridView13.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView13.Name = "gridView13";
+            this.gridView13.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView13.OptionsView.ShowGroupPanel = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 131);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Dirección:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 234);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 13);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Sitio web:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 200);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(96, 13);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Correo electrónico:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 96);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 13);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Razón Social:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 60);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(69, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "R.U.C. / C.I.:";
+            // 
+            // cbxTipoPersona
+            // 
+            this.cbxTipoPersona.EditValue = "";
+            this.cbxTipoPersona.Location = new System.Drawing.Point(133, 23);
+            this.cbxTipoPersona.Name = "cbxTipoPersona";
+            this.cbxTipoPersona.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxTipoPersona.Properties.DataSource = this.clsTipoPersonaBindingSource;
+            this.cbxTipoPersona.Properties.DisplayMember = "_Descripcion";
+            this.cbxTipoPersona.Properties.ValueMember = "_IdTipoPersona";
+            this.cbxTipoPersona.Properties.View = this.gdvTipoPersona;
+            this.cbxTipoPersona.Size = new System.Drawing.Size(213, 20);
+            this.cbxTipoPersona.TabIndex = 0;
             // 
             // clsTipoPersonaBindingSource
             // 
-            this.clsTipoPersonaBindingSource.DataSource = typeof(clases.RecursosHumanos.clsTipoPersona);
+            this.clsTipoPersonaBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsTipoPersonaCXP);
             // 
-            // gridView4
+            // gdvTipoPersona
             // 
-            this.gridView4.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView4.Name = "gridView4";
-            this.gridView4.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView4.OptionsView.ShowGroupPanel = false;
+            this.gdvTipoPersona.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colIdTipoPersona,
+            this.colDescripcion,
+            this.colIdEmpresa,
+            this.colIdEstado});
+            this.gdvTipoPersona.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gdvTipoPersona.Name = "gdvTipoPersona";
+            this.gdvTipoPersona.OptionsBehavior.Editable = false;
+            this.gdvTipoPersona.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gdvTipoPersona.OptionsView.ColumnAutoWidth = false;
+            this.gdvTipoPersona.OptionsView.ShowGroupPanel = false;
             // 
-            // label7
+            // colIdTipoPersona
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 26);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Tipo de Persona:";
+            this.colIdTipoPersona.Caption = "Código";
+            this.colIdTipoPersona.FieldName = "_IdTipoPersona";
+            this.colIdTipoPersona.Name = "colIdTipoPersona";
+            this.colIdTipoPersona.Visible = true;
+            this.colIdTipoPersona.VisibleIndex = 0;
             // 
-            // label3
+            // colDescripcion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(702, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Estado:";
+            this.colDescripcion.Caption = "Descripción";
+            this.colDescripcion.FieldName = "_Descripcion";
+            this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.Visible = true;
+            this.colDescripcion.VisibleIndex = 1;
+            this.colDescripcion.Width = 235;
             // 
-            // toolStrip1
+            // colIdEmpresa
             // 
-            this.toolStrip1.BackColor = System.Drawing.SystemColors.Control;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.colIdEmpresa.FieldName = "_IdEmpresa";
+            this.colIdEmpresa.Name = "colIdEmpresa";
+            // 
+            // colIdEstado
+            // 
+            this.colIdEstado.FieldName = "_IdEstado";
+            this.colIdEstado.Name = "colIdEstado";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 26);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(88, 13);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Tipo de Persona:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(636, 96);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(43, 13);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Estado:";
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.BackColor = System.Drawing.SystemColors.Control;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
             this.tsbGuardar,
             this.tsbModificar,
             this.tsbEliminar,
             this.tsbSalir});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(996, 25);
-            this.toolStrip1.TabIndex = 23;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(937, 25);
+            this.toolStrip2.TabIndex = 28;
+            this.toolStrip2.Text = "toolStrip2";
             // 
             // tsbNuevo
             // 
@@ -554,7 +772,7 @@
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsbNuevo.Text = "Nuevo";
-            //this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbGuardar
             // 
@@ -587,6 +805,7 @@
             this.tsbEliminar.Name = "tsbEliminar";
             this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
             this.tsbEliminar.Text = "Eliminar";
+            this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
             // tsbSalir
             // 
@@ -595,71 +814,70 @@
             this.tsbSalir.Name = "tsbSalir";
             this.tsbSalir.Size = new System.Drawing.Size(49, 22);
             this.tsbSalir.Text = "Salir";
+            this.tsbSalir.Click += new System.EventHandler(this.tsbSalir_Click);
             // 
-            // deFechaActual
+            // txtNroCuenta
             // 
-            this.deFechaActual.EditValue = null;
-            this.deFechaActual.Enabled = false;
-            this.deFechaActual.Location = new System.Drawing.Point(872, 28);
-            this.deFechaActual.Name = "deFechaActual";
-            this.deFechaActual.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deFechaActual.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.deFechaActual.Size = new System.Drawing.Size(100, 20);
-            this.deFechaActual.TabIndex = 27;
+            this.txtNroCuenta.AutoHeight = false;
+            this.txtNroCuenta.Mask.EditMask = "\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?\\d?";
+            this.txtNroCuenta.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
+            this.txtNroCuenta.Name = "txtNroCuenta";
             // 
             // frmEmpresaServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 482);
-            this.Controls.Add(this.deFechaActual);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.toolStrip1);
+            this.ClientSize = new System.Drawing.Size(937, 487);
+            this.Controls.Add(this.dtpFechaRegistro);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.toolStrip2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.MaximizeBox = false;
             this.Name = "frmEmpresaServicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empresa de Servicio";
             this.Load += new System.EventHandler(this.frmEmpresaServicio_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDirección.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFechaRegistro.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFechaRegistro.Properties)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxEstado.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWebSite.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRazonSocial.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNroIdentificacion.Properties)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gdcDetalleTelefonico)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRuc.Properties)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsDetalleTelefonoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvDetalleTelefonico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxTipoTelefono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTipoTelefonoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit2View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumTel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit3View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gdcDetalleBancario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsCuentaBancariaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvDetalleCtasBancarias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxBanco)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsBancoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxTipoCuenta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gleTipoPersona.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSearchLookUpEdit6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxTipoPersona.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsTipoPersonaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deFechaActual.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deFechaActual.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvTipoPersona)).EndInit();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNroCuenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -667,58 +885,79 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private DevExpress.XtraGrid.GridControl gdcDetalleTelefonico;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repositoryItemSearchLookUpEdit1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView7;
-        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repositoryItemSearchLookUpEdit2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.SearchLookUpEdit gleTipoPersona;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private DevExpress.XtraEditors.DateEdit dtpFechaRegistro;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private DevExpress.XtraEditors.MemoEdit txtDireccion;
+        private DevExpress.XtraEditors.TextEdit txtEmail;
+        private DevExpress.XtraEditors.TextEdit txtWebSite;
+        private DevExpress.XtraEditors.TextEdit txtRazonSocial;
+        private DevExpress.XtraEditors.TextEdit txtRuc;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repositoryItemSearchLookUpEdit3;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView9;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repositoryItemSearchLookUpEdit4;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView10;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gdvDetalleCtasBancarias;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repositoryItemSearchLookUpEdit5;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView12;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repositoryItemSearchLookUpEdit6;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView13;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private DevExpress.XtraEditors.SearchLookUpEdit cbxTipoPersona;
+        private DevExpress.XtraGrid.Views.Grid.GridView gdvTipoPersona;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbModificar;
         private System.Windows.Forms.ToolStripButton tsbEliminar;
-        private DevExpress.XtraEditors.MemoEdit txtDirección;
-        private DevExpress.XtraEditors.TextEdit txtWebSite;
-        private DevExpress.XtraEditors.TextEdit txtMail;
-        private DevExpress.XtraEditors.TextEdit txtRazonSocial;
-        private DevExpress.XtraEditors.TextEdit txtNroIdentificacion;
         private System.Windows.Forms.ToolStripButton tsbSalir;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
-        public DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private System.Windows.Forms.ComboBox cbxEstado;
-        private DevExpress.XtraEditors.DateEdit deFechaActual;
-        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit repositoryItemSearchLookUpEdit3;
-        private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemSearchLookUpEdit3View;
-        private DevExpress.XtraGrid.GridControl gdcDetalleBancario;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEdit1;
+        private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
+        private DevExpress.XtraEditors.SimpleButton btnConsulta;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdTipoPersona;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescripcion;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdEmpresa;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdEstado;
+        private DevExpress.XtraGrid.Views.Grid.GridView gdvDetalleTelefonico;
+        private DevExpress.XtraEditors.ComboBoxEdit cbxEstado;
+        private DevExpress.XtraGrid.Columns.GridColumn col_tipoTelefono;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit cbxTipoTelefono;
+        private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit2View;
+        private DevExpress.XtraGrid.Columns.GridColumn col_numTelefono;
+        private DevExpress.XtraGrid.Columns.GridColumn col_banco;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit cbxBanco;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit cbxBanco;
-        private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemSearchLookUpEdit1View;
-        private DevExpress.XtraEditors.Repository.RepositoryItemSearchLookUpEdit cbxTipoCuenta;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn col_tipoCuenta;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox cbxTipoCuenta;
+        private DevExpress.XtraGrid.Columns.GridColumn col_numeroCuenta;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdTipoTelefono;
+        private DevExpress.XtraGrid.Columns.GridColumn coldescripcion1;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdEmpresa1;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdEstado1;
+        private DevExpress.XtraGrid.Columns.GridColumn col_IdBanco;
+        private DevExpress.XtraGrid.Columns.GridColumn col_IdEmpresa;
+        private DevExpress.XtraGrid.Columns.GridColumn col_IdEstado;
+        private DevExpress.XtraGrid.Columns.GridColumn col_IdUsuario;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Nombre;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Empresa;
+        private DevExpress.XtraGrid.Columns.GridColumn col_IdCuentaBancaria;
+        private DevExpress.XtraGrid.Columns.GridColumn col_IdEmpresaServicio;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit txtNumTel;
+        private System.Windows.Forms.BindingSource clsDetalleTelefonoBindingSource;
+        private System.Windows.Forms.BindingSource clsTipoTelefonoBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn col_IdTelefono;
         private System.Windows.Forms.BindingSource clsCuentaBancariaBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colSerie;
-        private DevExpress.XtraGrid.Columns.GridColumn colTipoCuenta;
-        private DevExpress.XtraGrid.Columns.GridColumn colNroCta;
-        private DevExpress.XtraGrid.Columns.GridColumn colIdBanco;
+        private System.Windows.Forms.BindingSource clsBancoBindingSource;
         private System.Windows.Forms.BindingSource clsTipoPersonaBindingSource;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit txtNroCuenta;
     }
 }

@@ -116,6 +116,7 @@
             this.colvalorActuals});
             this.gridView1.GridControl = this.GridDepreciacion;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             // 
             // colCodsecuenciaCab
@@ -214,6 +215,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(607, 321);
+            this.ControlBox = false;
             this.Controls.Add(this.GridDepreciacion);
             this.Controls.Add(this.toolStrip1);
             this.Name = "VtnConsultaDepreciacion";

@@ -1,8 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="TECAModel1StoreContainer" CdmEntityContainer="RecursosHumanosEntities">
+  <EntityContainerMapping StorageEntityContainer="TECAModelStoreContainer" CdmEntityContainer="RecursosHumanosEntities">
+    <EntitySetMapping Name="OrdenPagoCab">
+      <EntityTypeMapping TypeName="TECAModel.OrdenPagoCab">
+        <MappingFragment StoreEntitySet="OrdenPagoCab">
+          <ScalarProperty Name="NumOrdenPago" ColumnName="NumOrdenPago" />
+          <ScalarProperty Name="fechadeEmision" ColumnName="fechadeEmision" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
+          <ScalarProperty Name="TipoOrdenPago" ColumnName="TipoOrdenPago" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrdenPagoEmpleadoDet">
+      <EntityTypeMapping TypeName="TECAModel.OrdenPagoEmpleadoDet">
+        <MappingFragment StoreEntitySet="OrdenPagoEmpleadoDet">
+          <ScalarProperty Name="NumOrdenPago" ColumnName="NumOrdenPago" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="AutorizarPago" ColumnName="AutorizarPago" />
+          <ScalarProperty Name="Linea" ColumnName="Linea" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="SueldoTotal" ColumnName="SueldoTotal" />
+          <ScalarProperty Name="IngresoAdicional" ColumnName="IngresoAdicional" />
+          <ScalarProperty Name="DescuentoTotal" ColumnName="DescuentoTotal" />
+          <ScalarProperty Name="PagoNeto" ColumnName="PagoNeto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Academico">
-      <EntityTypeMapping TypeName="TECAModel1.Academico">
+      <EntityTypeMapping TypeName="TECAModel.Academico">
         <MappingFragment StoreEntitySet="Academico">
           <ScalarProperty Name="IdAcademico" ColumnName="IdAcademico" />
           <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
@@ -14,32 +43,32 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AnticipoCab">
-      <EntityTypeMapping TypeName="TECAModel1.AnticipoCab">
+      <EntityTypeMapping TypeName="TECAModel.AnticipoCab">
         <MappingFragment StoreEntitySet="AnticipoCab">
           <ScalarProperty Name="NumAnticipo" ColumnName="NumAnticipo" />
-          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
           <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
           <ScalarProperty Name="Total" ColumnName="Total" />
           <ScalarProperty Name="Observacion" ColumnName="Observacion" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="Porcentaje" ColumnName="Porcentaje" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AnticipoDet">
-      <EntityTypeMapping TypeName="TECAModel1.AnticipoDet">
+      <EntityTypeMapping TypeName="TECAModel.AnticipoDet">
         <MappingFragment StoreEntitySet="AnticipoDet">
           <ScalarProperty Name="NumLinea" ColumnName="NumLinea" />
           <ScalarProperty Name="NumAnticipo" ColumnName="NumAnticipo" />
-          <ScalarProperty Name="FechaCobro" ColumnName="FechaCobro" />
-          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="ValorLiquido" ColumnName="ValorLiquido" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Beneficios">
-      <EntityTypeMapping TypeName="TECAModel1.Beneficios">
+      <EntityTypeMapping TypeName="TECAModel.Beneficios">
         <MappingFragment StoreEntitySet="Beneficios">
           <ScalarProperty Name="IdBeneficios" ColumnName="IdBeneficios" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -49,7 +78,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CargaFamiliar">
-      <EntityTypeMapping TypeName="TECAModel1.CargaFamiliar">
+      <EntityTypeMapping TypeName="TECAModel.CargaFamiliar">
         <MappingFragment StoreEntitySet="CargaFamiliar">
           <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
           <ScalarProperty Name="IdParentesco" ColumnName="IdParentesco" />
@@ -61,8 +90,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Cargo">
+      <EntityTypeMapping TypeName="TECAModel.Cargo">
+        <MappingFragment StoreEntitySet="Cargo">
+          <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Sueldo" ColumnName="Sueldo" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="CargoxDepartamento">
-      <EntityTypeMapping TypeName="TECAModel1.CargoxDepartamento">
+      <EntityTypeMapping TypeName="TECAModel.CargoxDepartamento">
         <MappingFragment StoreEntitySet="CargoxDepartamento">
           <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
           <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
@@ -73,7 +112,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Contrato">
-      <EntityTypeMapping TypeName="TECAModel1.Contrato">
+      <EntityTypeMapping TypeName="TECAModel.Contrato">
         <MappingFragment StoreEntitySet="Contrato">
           <ScalarProperty Name="NumContrato" ColumnName="NumContrato" />
           <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
@@ -94,7 +133,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Curso">
-      <EntityTypeMapping TypeName="TECAModel1.Curso">
+      <EntityTypeMapping TypeName="TECAModel.Curso">
         <MappingFragment StoreEntitySet="Curso">
           <ScalarProperty Name="IdCurso" ColumnName="IdCurso" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
@@ -104,7 +143,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Departamento">
-      <EntityTypeMapping TypeName="TECAModel1.Departamento">
+      <EntityTypeMapping TypeName="TECAModel.Departamento">
         <MappingFragment StoreEntitySet="Departamento">
           <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -113,7 +152,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Empleado">
-      <EntityTypeMapping TypeName="TECAModel1.Empleado">
+      <EntityTypeMapping TypeName="TECAModel.Empleado">
         <MappingFragment StoreEntitySet="Empleado">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
@@ -124,7 +163,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Jornada">
-      <EntityTypeMapping TypeName="TECAModel1.Jornada">
+      <EntityTypeMapping TypeName="TECAModel.Jornada">
         <MappingFragment StoreEntitySet="Jornada">
           <ScalarProperty Name="IdJornada" ColumnName="IdJornada" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
@@ -138,7 +177,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Liquidacion">
-      <EntityTypeMapping TypeName="TECAModel1.Liquidacion">
+      <EntityTypeMapping TypeName="TECAModel.Liquidacion">
         <MappingFragment StoreEntitySet="Liquidacion">
           <ScalarProperty Name="NumLiquidacion" ColumnName="NumLiquidacion" />
           <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
@@ -156,7 +195,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Maternidad">
-      <EntityTypeMapping TypeName="TECAModel1.Maternidad">
+      <EntityTypeMapping TypeName="TECAModel.Maternidad">
         <MappingFragment StoreEntitySet="Maternidad">
           <ScalarProperty Name="NumMaternidad" ColumnName="NumMaternidad" />
           <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
@@ -170,7 +209,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Multa">
-      <EntityTypeMapping TypeName="TECAModel1.Multa">
+      <EntityTypeMapping TypeName="TECAModel.Multa">
         <MappingFragment StoreEntitySet="Multa">
           <ScalarProperty Name="IdMulta" ColumnName="IdMulta" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -181,7 +220,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MultaxPersona">
-      <EntityTypeMapping TypeName="TECAModel1.MultaxPersona">
+      <EntityTypeMapping TypeName="TECAModel.MultaxPersona">
         <MappingFragment StoreEntitySet="MultaxPersona">
           <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
           <ScalarProperty Name="IdMulta" ColumnName="IdMulta" />
@@ -193,7 +232,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NominaCab">
-      <EntityTypeMapping TypeName="TECAModel1.NominaCab">
+      <EntityTypeMapping TypeName="TECAModel.NominaCab">
         <MappingFragment StoreEntitySet="NominaCab">
           <ScalarProperty Name="NumNomina" ColumnName="NumNomina" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
@@ -207,7 +246,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NominaDet">
-      <EntityTypeMapping TypeName="TECAModel1.NominaDet">
+      <EntityTypeMapping TypeName="TECAModel.NominaDet">
         <MappingFragment StoreEntitySet="NominaDet">
           <ScalarProperty Name="NumLinea" ColumnName="NumLinea" />
           <ScalarProperty Name="NumNomina" ColumnName="NumNomina" />
@@ -223,7 +262,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Parentesco">
-      <EntityTypeMapping TypeName="TECAModel1.Parentesco">
+      <EntityTypeMapping TypeName="TECAModel.Parentesco">
         <MappingFragment StoreEntitySet="Parentesco">
           <ScalarProperty Name="IdParentesco" ColumnName="IdParentesco" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -233,7 +272,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Permiso">
-      <EntityTypeMapping TypeName="TECAModel1.Permiso">
+      <EntityTypeMapping TypeName="TECAModel.Permiso">
         <MappingFragment StoreEntitySet="Permiso">
           <ScalarProperty Name="NumPermiso" ColumnName="NumPermiso" />
           <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
@@ -247,8 +286,30 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Persona">
+      <EntityTypeMapping TypeName="TECAModel.Persona">
+        <MappingFragment StoreEntitySet="Persona">
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
+          <ScalarProperty Name="IdTipoPersona" ColumnName="IdTipoPersona" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="NombreRazonSocial" ColumnName="NombreRazonSocial" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="TipoIdentificacion" ColumnName="TipoIdentificacion" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="TelefonoGneral" ColumnName="TelefonoGneral" />
+          <ScalarProperty Name="TelefonoMovil" ColumnName="TelefonoMovil" />
+          <ScalarProperty Name="TelefonoCasa" ColumnName="TelefonoCasa" />
+          <ScalarProperty Name="TelefonoOtros" ColumnName="TelefonoOtros" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="PersonaxCargo">
-      <EntityTypeMapping TypeName="TECAModel1.PersonaxCargo">
+      <EntityTypeMapping TypeName="TECAModel.PersonaxCargo">
         <MappingFragment StoreEntitySet="PersonaxCargo">
           <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
@@ -260,7 +321,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PersonaxCurso">
-      <EntityTypeMapping TypeName="TECAModel1.PersonaxCurso">
+      <EntityTypeMapping TypeName="TECAModel.PersonaxCurso">
         <MappingFragment StoreEntitySet="PersonaxCurso">
           <ScalarProperty Name="IdPersonaxCurso" ColumnName="IdPersonaxCurso" />
           <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
@@ -270,7 +331,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PersonaxDepartamento">
-      <EntityTypeMapping TypeName="TECAModel1.PersonaxDepartamento">
+      <EntityTypeMapping TypeName="TECAModel.PersonaxDepartamento">
         <MappingFragment StoreEntitySet="PersonaxDepartamento">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
@@ -280,7 +341,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PersonaxTitulo">
-      <EntityTypeMapping TypeName="TECAModel1.PersonaxTitulo">
+      <EntityTypeMapping TypeName="TECAModel.PersonaxTitulo">
         <MappingFragment StoreEntitySet="PersonaxTitulo">
           <ScalarProperty Name="IdTitulo" ColumnName="IdTitulo" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
@@ -290,29 +351,45 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Prestamo">
-      <EntityTypeMapping TypeName="TECAModel1.Prestamo">
+      <EntityTypeMapping TypeName="TECAModel.Prestamo">
         <MappingFragment StoreEntitySet="Prestamo">
           <ScalarProperty Name="IdPrestamo" ColumnName="IdPrestamo" />
-          <ScalarProperty Name="IdTipoPrestamo" ColumnName="IdTipoPrestamo" />
           <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
           <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
           <ScalarProperty Name="Monto" ColumnName="Monto" />
           <ScalarProperty Name="Pago" ColumnName="Pago" />
+          <ScalarProperty Name="Interes" ColumnName="Interes" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="TotalPagado" ColumnName="TotalPagado" />
+          <ScalarProperty Name="Periodos" ColumnName="Periodos" />
           <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Proveedor">
-      <EntityTypeMapping TypeName="TECAModel1.Proveedor">
+      <EntityTypeMapping TypeName="TECAModel.Proveedor">
         <MappingFragment StoreEntitySet="Proveedor">
           <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
           <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Rubro">
+      <EntityTypeMapping TypeName="TECAModel.Rubro">
+        <MappingFragment StoreEntitySet="Rubro">
+          <ScalarProperty Name="IdRubro" ColumnName="IdRubro" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Porcentaje" ColumnName="Porcentaje" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+          <ScalarProperty Name="IdDepartamento" ColumnName="IdDepartamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Telefono">
-      <EntityTypeMapping TypeName="TECAModel1.Telefono">
+      <EntityTypeMapping TypeName="TECAModel.Telefono">
         <MappingFragment StoreEntitySet="Telefono">
           <ScalarProperty Name="IdTelefono" ColumnName="IdTelefono" />
           <ScalarProperty Name="Numero" ColumnName="Numero" />
@@ -321,7 +398,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoContrato">
-      <EntityTypeMapping TypeName="TECAModel1.TipoContrato">
+      <EntityTypeMapping TypeName="TECAModel.TipoContrato">
         <MappingFragment StoreEntitySet="TipoContrato">
           <ScalarProperty Name="IdTipoContrato" ColumnName="IdTipoContrato" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -332,7 +409,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoIdentificacion">
-      <EntityTypeMapping TypeName="TECAModel1.TipoIdentificacion">
+      <EntityTypeMapping TypeName="TECAModel.TipoIdentificacion">
         <MappingFragment StoreEntitySet="TipoIdentificacion">
           <ScalarProperty Name="IdTipoIdentificacion" ColumnName="IdTipoIdentificacion" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
@@ -342,7 +419,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoJornada">
-      <EntityTypeMapping TypeName="TECAModel1.TipoJornada">
+      <EntityTypeMapping TypeName="TECAModel.TipoJornada">
         <MappingFragment StoreEntitySet="TipoJornada">
           <ScalarProperty Name="IdTipoJornada" ColumnName="IdTipoJornada" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -351,7 +428,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoPermiso">
-      <EntityTypeMapping TypeName="TECAModel1.TipoPermiso">
+      <EntityTypeMapping TypeName="TECAModel.TipoPermiso">
         <MappingFragment StoreEntitySet="TipoPermiso">
           <ScalarProperty Name="IdTipoPermiso" ColumnName="IdTipoPermiso" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -361,7 +438,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoPersona">
-      <EntityTypeMapping TypeName="TECAModel1.TipoPersona">
+      <EntityTypeMapping TypeName="TECAModel.TipoPersona">
         <MappingFragment StoreEntitySet="TipoPersona">
           <ScalarProperty Name="IdTipoPersona" ColumnName="IdTipoPersona" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -371,7 +448,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoPrestamo">
-      <EntityTypeMapping TypeName="TECAModel1.TipoPrestamo">
+      <EntityTypeMapping TypeName="TECAModel.TipoPrestamo">
         <MappingFragment StoreEntitySet="TipoPrestamo">
           <ScalarProperty Name="IdTipoPrestamo" ColumnName="IdTipoPrestamo" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -381,7 +458,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoTelefono">
-      <EntityTypeMapping TypeName="TECAModel1.TipoTelefono">
+      <EntityTypeMapping TypeName="TECAModel.TipoTelefono">
         <MappingFragment StoreEntitySet="TipoTelefono">
           <ScalarProperty Name="IdTipoTelefono" ColumnName="IdTipoTelefono" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -391,7 +468,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Titulo">
-      <EntityTypeMapping TypeName="TECAModel1.Titulo">
+      <EntityTypeMapping TypeName="TECAModel.Titulo">
         <MappingFragment StoreEntitySet="Titulo">
           <ScalarProperty Name="IdTitulo" ColumnName="IdTitulo" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -403,35 +480,28 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TrabajoDiarioCab">
-      <EntityTypeMapping TypeName="TECAModel1.TrabajoDiarioCab">
-        <MappingFragment StoreEntitySet="TrabajoDiarioCab">
+    <EntitySetMapping Name="TrabajoDiario">
+      <EntityTypeMapping TypeName="TECAModel.TrabajoDiario">
+        <MappingFragment StoreEntitySet="TrabajoDiario">
           <ScalarProperty Name="NumTrabajo" ColumnName="NumTrabajo" />
-          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
-          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
-          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TrabajoDiarioDet">
-      <EntityTypeMapping TypeName="TECAModel1.TrabajoDiarioDet">
-        <MappingFragment StoreEntitySet="TrabajoDiarioDet">
-          <ScalarProperty Name="NumLinea" ColumnName="NumLinea" />
-          <ScalarProperty Name="NumTrabajo" ColumnName="NumTrabajo" />
-          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="IdPersna" ColumnName="IdPersna" />
+          <ScalarProperty Name="FechaDesde" ColumnName="FechaDesde" />
+          <ScalarProperty Name="FechaHasta" ColumnName="FechaHasta" />
+          <ScalarProperty Name="NDias" ColumnName="NDias" />
           <ScalarProperty Name="HoraEntrada" ColumnName="HoraEntrada" />
           <ScalarProperty Name="HoraSalida" ColumnName="HoraSalida" />
           <ScalarProperty Name="HoraTrabajada" ColumnName="HoraTrabajada" />
           <ScalarProperty Name="HoraExtraM" ColumnName="HoraExtraM" />
           <ScalarProperty Name="HoraExtraT" ColumnName="HoraExtraT" />
           <ScalarProperty Name="HoraRango" ColumnName="HoraRango" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Universidad">
-      <EntityTypeMapping TypeName="TECAModel1.Universidad">
+      <EntityTypeMapping TypeName="TECAModel.Universidad">
         <MappingFragment StoreEntitySet="Universidad">
           <ScalarProperty Name="IdUniversidad" ColumnName="IdUniversidad" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
@@ -440,7 +510,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Vacacion">
-      <EntityTypeMapping TypeName="TECAModel1.Vacacion">
+      <EntityTypeMapping TypeName="TECAModel.Vacacion">
         <MappingFragment StoreEntitySet="Vacacion">
           <ScalarProperty Name="NumVacacion" ColumnName="NumVacacion" />
           <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
@@ -453,7 +523,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Empresa">
-      <EntityTypeMapping TypeName="TECAModel1.Empresa">
+      <EntityTypeMapping TypeName="TECAModel.Empresa">
         <MappingFragment StoreEntitySet="Empresa">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
@@ -467,38 +537,6 @@
           <ScalarProperty Name="Sector" ColumnName="Sector" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Persona">
-      <EntityTypeMapping TypeName="TECAModel1.Persona">
-        <MappingFragment StoreEntitySet="Persona">
-          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
-          <ScalarProperty Name="mail" ColumnName="mail" />
-          <ScalarProperty Name="TelefonoOtros" ColumnName="TelefonoOtros" />
-          <ScalarProperty Name="TelefonoCasa" ColumnName="TelefonoCasa" />
-          <ScalarProperty Name="TelefonoMovil" ColumnName="TelefonoMovil" />
-          <ScalarProperty Name="TelefonoGneral" ColumnName="TelefonoGneral" />
-          <ScalarProperty Name="direccion" ColumnName="direccion" />
-          <ScalarProperty Name="TipoIdentificacion" ColumnName="TipoIdentificacion" />
-          <ScalarProperty Name="genero" ColumnName="genero" />
-          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
-          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
-          <ScalarProperty Name="NombreRazonSocial" ColumnName="NombreRazonSocial" />
-          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
-          <ScalarProperty Name="IdTipoPersona" ColumnName="IdTipoPersona" />
-          <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
-          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Cargo">
-      <EntityTypeMapping TypeName="TECAModel1.Cargo">
-        <MappingFragment StoreEntitySet="Cargo">
-          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
-          <ScalarProperty Name="Sueldo" ColumnName="Sueldo" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-          <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

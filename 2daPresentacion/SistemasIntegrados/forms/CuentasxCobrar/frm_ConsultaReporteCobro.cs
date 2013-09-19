@@ -15,5 +15,10 @@ namespace forms.CuentasxCobrar
         {
             InitializeComponent();
         }
+
+        private void frm_ConsultaReporteCobro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

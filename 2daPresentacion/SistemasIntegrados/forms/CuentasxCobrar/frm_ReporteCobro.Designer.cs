@@ -326,6 +326,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frm_ReporteCobro";
             this.Text = "Reporte de Cobro";
+            this.Load += new System.EventHandler(this.frm_ReporteCobro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();

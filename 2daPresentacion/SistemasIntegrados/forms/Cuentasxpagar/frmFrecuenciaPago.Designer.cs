@@ -218,11 +218,11 @@
             // 
             // clsEstadoBindingSource1
             // 
-            this.clsEstadoBindingSource1.DataSource = typeof(clases.Seguridad.clsEstado);
+            //this.clsEstadoBindingSource1.DataSource = typeof(clases.Seguridad.clsEstado);
             // 
             // clsEstadoBindingSource
             // 
-            this.clsEstadoBindingSource.DataSource = typeof(clases.Seguridad.clsEstado);
+            //this.clsEstadoBindingSource.DataSource = typeof(clases.Seguridad.clsEstado);
             // 
             // frmFrecuenciaPago
             // 

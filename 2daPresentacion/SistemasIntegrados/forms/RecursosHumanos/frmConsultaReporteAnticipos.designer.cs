@@ -396,7 +396,7 @@
             this.toolStripButton4.Image = global::forms.Properties.Resources.imprimir;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(68, 22);
+            this.toolStripButton4.Size = new System.Drawing.Size(57, 22);
             this.toolStripButton4.Text = "Generar";
             // 
             // toolStripButton1
@@ -404,7 +404,7 @@
             this.toolStripButton1.Image = global::forms.Properties.Resources.guardar;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(69, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(57, 22);
             this.toolStripButton1.Text = "Guardar";
             // 
             // toolStripButton3
@@ -412,7 +412,7 @@
             this.toolStripButton3.Image = global::forms.Properties.Resources._24_cancelar;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(49, 22);
+            this.toolStripButton3.Size = new System.Drawing.Size(42, 22);
             this.toolStripButton3.Text = "Salir";
             // 
             // frmConsultaReporteAnticipos
@@ -424,6 +424,7 @@
             this.Controls.Add(this.xtraTabControl1);
             this.Name = "frmConsultaReporteAnticipos";
             this.Text = "Consulta/Reporte de Anticipos";
+            this.Load += new System.EventHandler(this.frmConsultaReporteAnticipos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);

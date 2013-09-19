@@ -73,6 +73,7 @@
             this.Estado});
             this.gridView1.GridControl = this.gdcConsultaIngresoEgreso;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.Click += new System.EventHandler(this.gridView1_Click);
             // 
             // Empresa
@@ -80,8 +81,6 @@
             this.Empresa.Caption = "Empresa";
             this.Empresa.FieldName = "empresa";
             this.Empresa.Name = "Empresa";
-            this.Empresa.Visible = true;
-            this.Empresa.VisibleIndex = 0;
             // 
             // NroMovimiento
             // 
@@ -89,7 +88,7 @@
             this.NroMovimiento.FieldName = "nroMovimiento";
             this.NroMovimiento.Name = "NroMovimiento";
             this.NroMovimiento.Visible = true;
-            this.NroMovimiento.VisibleIndex = 1;
+            this.NroMovimiento.VisibleIndex = 0;
             // 
             // TipoMovimiento
             // 
@@ -97,7 +96,7 @@
             this.TipoMovimiento.FieldName = "tipoMovimiento";
             this.TipoMovimiento.Name = "TipoMovimiento";
             this.TipoMovimiento.Visible = true;
-            this.TipoMovimiento.VisibleIndex = 2;
+            this.TipoMovimiento.VisibleIndex = 1;
             // 
             // FechaMovimiento
             // 
@@ -105,7 +104,7 @@
             this.FechaMovimiento.FieldName = "fechaMovimiento";
             this.FechaMovimiento.Name = "FechaMovimiento";
             this.FechaMovimiento.Visible = true;
-            this.FechaMovimiento.VisibleIndex = 3;
+            this.FechaMovimiento.VisibleIndex = 2;
             // 
             // OrdenCompra
             // 
@@ -113,7 +112,7 @@
             this.OrdenCompra.FieldName = "ordenCompra";
             this.OrdenCompra.Name = "OrdenCompra";
             this.OrdenCompra.Visible = true;
-            this.OrdenCompra.VisibleIndex = 4;
+            this.OrdenCompra.VisibleIndex = 3;
             // 
             // Factura
             // 
@@ -121,7 +120,7 @@
             this.Factura.FieldName = "factura";
             this.Factura.Name = "Factura";
             this.Factura.Visible = true;
-            this.Factura.VisibleIndex = 5;
+            this.Factura.VisibleIndex = 4;
             // 
             // Motivo
             // 
@@ -129,7 +128,7 @@
             this.Motivo.FieldName = "motivo";
             this.Motivo.Name = "Motivo";
             this.Motivo.Visible = true;
-            this.Motivo.VisibleIndex = 6;
+            this.Motivo.VisibleIndex = 5;
             // 
             // Bodega
             // 
@@ -137,7 +136,7 @@
             this.Bodega.FieldName = "bodega";
             this.Bodega.Name = "Bodega";
             this.Bodega.Visible = true;
-            this.Bodega.VisibleIndex = 7;
+            this.Bodega.VisibleIndex = 6;
             // 
             // Responsable
             // 
@@ -145,7 +144,7 @@
             this.Responsable.FieldName = "responsable";
             this.Responsable.Name = "Responsable";
             this.Responsable.Visible = true;
-            this.Responsable.VisibleIndex = 8;
+            this.Responsable.VisibleIndex = 7;
             // 
             // TotalPagar
             // 
@@ -153,7 +152,7 @@
             this.TotalPagar.FieldName = "totalPagar";
             this.TotalPagar.Name = "TotalPagar";
             this.TotalPagar.Visible = true;
-            this.TotalPagar.VisibleIndex = 9;
+            this.TotalPagar.VisibleIndex = 8;
             // 
             // Observacion
             // 
@@ -161,7 +160,7 @@
             this.Observacion.FieldName = "observacion";
             this.Observacion.Name = "Observacion";
             this.Observacion.Visible = true;
-            this.Observacion.VisibleIndex = 10;
+            this.Observacion.VisibleIndex = 9;
             // 
             // Estado
             // 
@@ -169,7 +168,7 @@
             this.Estado.FieldName = "estado";
             this.Estado.Name = "Estado";
             this.Estado.Visible = true;
-            this.Estado.VisibleIndex = 11;
+            this.Estado.VisibleIndex = 10;
             // 
             // frmConsultaIngresoEgresoCAB
             // 

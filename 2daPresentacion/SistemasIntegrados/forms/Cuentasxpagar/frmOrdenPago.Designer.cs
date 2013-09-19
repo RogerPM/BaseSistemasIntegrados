@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrdenPago));
             this.gdcOrdenPago = new DevExpress.XtraGrid.GridControl();
             this.clsCuentaPorPagarDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gvOrden = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colNúmeroRegistroCXP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSaldoDeuda = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gdcFechaVencimiento = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -42,28 +42,16 @@
             this.colTotalPagar = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAutorizarPago = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.colNumCuentaPorPagarDetalle = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clsOrdenPagoDetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtEfectivoDisponible = new DevExpress.XtraEditors.TextEdit();
             this.txtTotalPagar = new DevExpress.XtraEditors.TextEdit();
-            this.cbxProveedor = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.clsEmpresaServicioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.col_Direccion = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_Email = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_Estado = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_FechaRegistro = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_IdEmpresa = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_IdEmpresaServicio = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_IdUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_RazonSocial = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_TipoPersona = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.col_Website = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dtpFechaEmisión = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
@@ -75,40 +63,70 @@
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.txtEstado = new DevExpress.XtraEditors.TextEdit();
+            this.deFechaActual = new DevExpress.XtraEditors.DateEdit();
+            this.cbxProveed = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.clsCuentaPorPagarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.col_Descuento = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_Detalle = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_Factura = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_FechaIngreso = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_FechaTransaccion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_FormaPago = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_IdEmpresa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_IdEmpresaServicio = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_IdFrecuencia = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_IdProveedor = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_IdUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_Motivo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_NumCuentaPorPagar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_NumeroLetra = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_NumIngresoEgreso = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_SaldoDeuda = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_Subtotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_Total = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_ValorEntrada = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.col_ValorLetra = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnGenerarComprobante = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gdcOrdenPago)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsCuentaPorPagarDetalleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvOrden)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsOrdenPagoDetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEfectivoDisponible.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalPagar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxProveedor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsEmpresaServicioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEstado.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deFechaActual.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deFechaActual.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxProveed.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsCuentaPorPagarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // gdcOrdenPago
             // 
             this.gdcOrdenPago.DataSource = this.clsCuentaPorPagarDetalleBindingSource;
             this.gdcOrdenPago.Location = new System.Drawing.Point(18, 72);
-            this.gdcOrdenPago.MainView = this.gridView1;
+            this.gdcOrdenPago.MainView = this.gvOrden;
             this.gdcOrdenPago.Name = "gdcOrdenPago";
             this.gdcOrdenPago.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
             this.gdcOrdenPago.Size = new System.Drawing.Size(969, 323);
             this.gdcOrdenPago.TabIndex = 36;
             this.gdcOrdenPago.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gvOrden});
+            this.gdcOrdenPago.Click += new System.EventHandler(this.gdcOrdenPago_Click);
             // 
             // clsCuentaPorPagarDetalleBindingSource
             // 
             this.clsCuentaPorPagarDetalleBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsCuentaPorPagarDetalle);
             // 
-            // gridView1
+            // gvOrden
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvOrden.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colNúmeroRegistroCXP,
             this.colSaldoDeuda,
             this.gdcFechaVencimiento,
@@ -116,18 +134,21 @@
             this.gdcNumLetrasAPagar,
             this.colNroPagosRealizar,
             this.colTotalPagar,
-            this.colAutorizarPago});
-            this.gridView1.GridControl = this.gdcOrdenPago;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowAutoFilterRow = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.colAutorizarPago,
+            this.colNumCuentaPorPagarDetalle});
+            this.gvOrden.GridControl = this.gdcOrdenPago;
+            this.gvOrden.Name = "gvOrden";
+            this.gvOrden.OptionsView.ShowAutoFilterRow = true;
+            this.gvOrden.OptionsView.ShowGroupPanel = false;
+            this.gvOrden.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
+            this.gvOrden.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridView1_ValidatingEditor);
             // 
             // colNúmeroRegistroCXP
             // 
             this.colNúmeroRegistroCXP.AppearanceHeader.Options.UseTextOptions = true;
             this.colNúmeroRegistroCXP.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNúmeroRegistroCXP.Caption = "Nro. Cta. Por Pagar";
-            this.colNúmeroRegistroCXP.FieldName = "_NumCuentaPorPagarDetalle";
+            this.colNúmeroRegistroCXP.FieldName = "_NumCuentaPorPagar";
             this.colNúmeroRegistroCXP.Name = "colNúmeroRegistroCXP";
             this.colNúmeroRegistroCXP.OptionsColumn.AllowEdit = false;
             this.colNúmeroRegistroCXP.Visible = true;
@@ -139,6 +160,7 @@
             this.colSaldoDeuda.AppearanceHeader.Options.UseTextOptions = true;
             this.colSaldoDeuda.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colSaldoDeuda.Caption = "Saldo Deuda";
+            this.colSaldoDeuda.FieldName = "_SaldoDeuda";
             this.colSaldoDeuda.Name = "colSaldoDeuda";
             this.colSaldoDeuda.OptionsColumn.AllowEdit = false;
             this.colSaldoDeuda.Visible = true;
@@ -185,7 +207,7 @@
             this.colNroPagosRealizar.AppearanceHeader.Options.UseTextOptions = true;
             this.colNroPagosRealizar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colNroPagosRealizar.Caption = "Nro. Pagos a Realizar";
-            this.colNroPagosRealizar.FieldName = "colNroPagosRealizar";
+            this.colNroPagosRealizar.FieldName = "_numeroPagos";
             this.colNroPagosRealizar.Name = "colNroPagosRealizar";
             this.colNroPagosRealizar.Visible = true;
             this.colNroPagosRealizar.VisibleIndex = 5;
@@ -196,7 +218,7 @@
             this.colTotalPagar.AppearanceHeader.Options.UseTextOptions = true;
             this.colTotalPagar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colTotalPagar.Caption = "Total a Pagar";
-            this.colTotalPagar.FieldName = "colTotalPagar";
+            this.colTotalPagar.FieldName = "_totalPagar";
             this.colTotalPagar.Name = "colTotalPagar";
             this.colTotalPagar.OptionsColumn.AllowEdit = false;
             this.colTotalPagar.Visible = true;
@@ -209,7 +231,10 @@
             this.colAutorizarPago.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colAutorizarPago.Caption = "Autorizar Pago";
             this.colAutorizarPago.ColumnEdit = this.repositoryItemCheckEdit1;
+            this.colAutorizarPago.FieldName = "_AutorizarPago";
             this.colAutorizarPago.Name = "colAutorizarPago";
+            this.colAutorizarPago.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "_totalPagar", "")});
             this.colAutorizarPago.Visible = true;
             this.colAutorizarPago.VisibleIndex = 7;
             this.colAutorizarPago.Width = 121;
@@ -219,112 +244,39 @@
             this.repositoryItemCheckEdit1.AutoHeight = false;
             this.repositoryItemCheckEdit1.Name = "repositoryItemCheckEdit1";
             // 
+            // colNumCuentaPorPagarDetalle
+            // 
+            this.colNumCuentaPorPagarDetalle.Caption = "Num Cuenta po Pagar Detalle";
+            this.colNumCuentaPorPagarDetalle.FieldName = "_NumCuentaPorPagarDetalle";
+            this.colNumCuentaPorPagarDetalle.Name = "colNumCuentaPorPagarDetalle";
+            // 
+            // clsOrdenPagoDetBindingSource
+            // 
+            this.clsOrdenPagoDetBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsOrdenPagoDet);
+            // 
             // txtEfectivoDisponible
             // 
             this.txtEfectivoDisponible.Enabled = false;
             this.txtEfectivoDisponible.Location = new System.Drawing.Point(626, 34);
             this.txtEfectivoDisponible.Name = "txtEfectivoDisponible";
+            this.txtEfectivoDisponible.Properties.Mask.EditMask = "#############.##";
+            this.txtEfectivoDisponible.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtEfectivoDisponible.Size = new System.Drawing.Size(109, 20);
             this.txtEfectivoDisponible.TabIndex = 30;
+            this.txtEfectivoDisponible.EditValueChanged += new System.EventHandler(this.txtEfectivoDisponible_EditValueChanged);
             // 
             // txtTotalPagar
             // 
             this.txtTotalPagar.Enabled = false;
-            this.txtTotalPagar.Location = new System.Drawing.Point(771, 413);
+            this.txtTotalPagar.Location = new System.Drawing.Point(856, 413);
             this.txtTotalPagar.Name = "txtTotalPagar";
-            this.txtTotalPagar.Size = new System.Drawing.Size(216, 20);
+            this.txtTotalPagar.Size = new System.Drawing.Size(131, 20);
             this.txtTotalPagar.TabIndex = 31;
-            // 
-            // cbxProveedor
-            // 
-            this.cbxProveedor.EditValue = "";
-            this.cbxProveedor.Location = new System.Drawing.Point(332, 34);
-            this.cbxProveedor.Name = "cbxProveedor";
-            this.cbxProveedor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxProveedor.Properties.DataSource = this.clsEmpresaServicioBindingSource;
-            this.cbxProveedor.Properties.DisplayMember = "_RazonSocial";
-            this.cbxProveedor.Properties.ValueMember = "_IdEmpresaServicio";
-            this.cbxProveedor.Properties.View = this.gridView2;
-            this.cbxProveedor.Size = new System.Drawing.Size(131, 20);
-            this.cbxProveedor.TabIndex = 0;
-            this.cbxProveedor.EditValueChanged += new System.EventHandler(this.cbxProveedor_EditValueChanged);
+            this.txtTotalPagar.EditValueChanged += new System.EventHandler(this.txtTotalPagar_EditValueChanged);
             // 
             // clsEmpresaServicioBindingSource
             // 
             this.clsEmpresaServicioBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsEmpresaServicio);
-            // 
-            // gridView2
-            // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.col_Direccion,
-            this.col_Email,
-            this.col_Estado,
-            this.col_FechaRegistro,
-            this.col_IdEmpresa,
-            this.col_IdEmpresaServicio,
-            this.col_IdUsuario,
-            this.col_RazonSocial,
-            this.col_TipoPersona,
-            this.col_Website});
-            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView2.OptionsView.ShowGroupPanel = false;
-            // 
-            // col_Direccion
-            // 
-            this.col_Direccion.FieldName = "_Direccion";
-            this.col_Direccion.Name = "col_Direccion";
-            // 
-            // col_Email
-            // 
-            this.col_Email.FieldName = "_Email";
-            this.col_Email.Name = "col_Email";
-            // 
-            // col_Estado
-            // 
-            this.col_Estado.FieldName = "_Estado";
-            this.col_Estado.Name = "col_Estado";
-            // 
-            // col_FechaRegistro
-            // 
-            this.col_FechaRegistro.FieldName = "_FechaRegistro";
-            this.col_FechaRegistro.Name = "col_FechaRegistro";
-            // 
-            // col_IdEmpresa
-            // 
-            this.col_IdEmpresa.FieldName = "_IdEmpresa";
-            this.col_IdEmpresa.Name = "col_IdEmpresa";
-            // 
-            // col_IdEmpresaServicio
-            // 
-            this.col_IdEmpresaServicio.FieldName = "_IdEmpresaServicio";
-            this.col_IdEmpresaServicio.Name = "col_IdEmpresaServicio";
-            this.col_IdEmpresaServicio.Visible = true;
-            this.col_IdEmpresaServicio.VisibleIndex = 0;
-            // 
-            // col_IdUsuario
-            // 
-            this.col_IdUsuario.FieldName = "_IdUsuario";
-            this.col_IdUsuario.Name = "col_IdUsuario";
-            // 
-            // col_RazonSocial
-            // 
-            this.col_RazonSocial.FieldName = "_RazonSocial";
-            this.col_RazonSocial.Name = "col_RazonSocial";
-            this.col_RazonSocial.Visible = true;
-            this.col_RazonSocial.VisibleIndex = 1;
-            // 
-            // col_TipoPersona
-            // 
-            this.col_TipoPersona.FieldName = "_TipoPersona";
-            this.col_TipoPersona.Name = "col_TipoPersona";
-            // 
-            // col_Website
-            // 
-            this.col_Website.FieldName = "_Website";
-            this.col_Website.Name = "col_Website";
             // 
             // label2
             // 
@@ -347,7 +299,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(667, 416);
+            this.label15.Location = new System.Drawing.Point(781, 416);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(74, 13);
             this.label15.TabIndex = 24;
@@ -362,15 +314,6 @@
             this.label4.TabIndex = 25;
             this.label4.Text = "Fecha de Emisión:";
             // 
-            // dtpFechaEmisión
-            // 
-            this.dtpFechaEmisión.Enabled = false;
-            this.dtpFechaEmisión.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaEmisión.Location = new System.Drawing.Point(888, 31);
-            this.dtpFechaEmisión.Name = "dtpFechaEmisión";
-            this.dtpFechaEmisión.Size = new System.Drawing.Size(99, 20);
-            this.dtpFechaEmisión.TabIndex = 22;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -379,15 +322,6 @@
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 29;
             this.label1.Text = "Fecha de Emisión:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(888, 30);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(99, 20);
-            this.dateTimePicker1.TabIndex = 23;
             // 
             // toolStrip1
             // 
@@ -424,6 +358,7 @@
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
             this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
             // tsbConsultar
             // 
@@ -440,7 +375,7 @@
             this.tsbModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificar.Image")));
             this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModificar.Name = "tsbModificar";
-            this.tsbModificar.Size = new System.Drawing.Size(76, 22);
+            this.tsbModificar.Size = new System.Drawing.Size(78, 22);
             this.tsbModificar.Text = "Modificar";
             // 
             // tsbAnular
@@ -460,6 +395,7 @@
             this.tsbSalir.Name = "tsbSalir";
             this.tsbSalir.Size = new System.Drawing.Size(49, 22);
             this.tsbSalir.Text = "Salir";
+            this.tsbSalir.Click += new System.EventHandler(this.tsbSalir_Click_1);
             // 
             // label3
             // 
@@ -495,26 +431,198 @@
             this.txtEstado.Size = new System.Drawing.Size(109, 20);
             this.txtEstado.TabIndex = 30;
             // 
+            // deFechaActual
+            // 
+            this.deFechaActual.EditValue = null;
+            this.deFechaActual.Enabled = false;
+            this.deFechaActual.Location = new System.Drawing.Point(883, 34);
+            this.deFechaActual.Name = "deFechaActual";
+            this.deFechaActual.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deFechaActual.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.deFechaActual.Size = new System.Drawing.Size(104, 20);
+            this.deFechaActual.TabIndex = 37;
+            // 
+            // cbxProveed
+            // 
+            this.cbxProveed.Location = new System.Drawing.Point(333, 37);
+            this.cbxProveed.Name = "cbxProveed";
+            this.cbxProveed.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxProveed.Properties.DataSource = this.clsCuentaPorPagarBindingSource;
+            this.cbxProveed.Properties.DisplayMember = "_NumCuentaPorPagar";
+            this.cbxProveed.Properties.ValueMember = "_IdProveedor";
+            this.cbxProveed.Properties.View = this.searchLookUpEdit1View;
+            this.cbxProveed.Size = new System.Drawing.Size(100, 20);
+            this.cbxProveed.TabIndex = 38;
+            this.cbxProveed.EditValueChanged += new System.EventHandler(this.cbxProveed_EditValueChanged);
+            // 
+            // clsCuentaPorPagarBindingSource
+            // 
+            this.clsCuentaPorPagarBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsCuentaPorPagar);
+            // 
+            // searchLookUpEdit1View
+            // 
+            this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.col_Descuento,
+            this.col_Detalle,
+            this.col_Factura,
+            this.col_FechaIngreso,
+            this.col_FechaTransaccion,
+            this.col_FormaPago,
+            this.col_IdEmpresa,
+            this.col_IdEmpresaServicio,
+            this.col_IdFrecuencia,
+            this.col_IdProveedor,
+            this.col_IdUsuario,
+            this.col_Motivo,
+            this.col_NumCuentaPorPagar,
+            this.col_NumeroLetra,
+            this.col_NumIngresoEgreso,
+            this.col_SaldoDeuda,
+            this.col_Subtotal,
+            this.col_Total,
+            this.col_ValorEntrada,
+            this.col_ValorLetra});
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // col_Descuento
+            // 
+            this.col_Descuento.FieldName = "_Descuento";
+            this.col_Descuento.Name = "col_Descuento";
+            // 
+            // col_Detalle
+            // 
+            this.col_Detalle.FieldName = "_Detalle";
+            this.col_Detalle.Name = "col_Detalle";
+            // 
+            // col_Factura
+            // 
+            this.col_Factura.FieldName = "_Factura";
+            this.col_Factura.Name = "col_Factura";
+            // 
+            // col_FechaIngreso
+            // 
+            this.col_FechaIngreso.FieldName = "_FechaIngreso";
+            this.col_FechaIngreso.Name = "col_FechaIngreso";
+            // 
+            // col_FechaTransaccion
+            // 
+            this.col_FechaTransaccion.FieldName = "_FechaTransaccion";
+            this.col_FechaTransaccion.Name = "col_FechaTransaccion";
+            // 
+            // col_FormaPago
+            // 
+            this.col_FormaPago.FieldName = "_FormaPago";
+            this.col_FormaPago.Name = "col_FormaPago";
+            // 
+            // col_IdEmpresa
+            // 
+            this.col_IdEmpresa.FieldName = "_IdEmpresa";
+            this.col_IdEmpresa.Name = "col_IdEmpresa";
+            // 
+            // col_IdEmpresaServicio
+            // 
+            this.col_IdEmpresaServicio.FieldName = "_IdEmpresaServicio";
+            this.col_IdEmpresaServicio.Name = "col_IdEmpresaServicio";
+            // 
+            // col_IdFrecuencia
+            // 
+            this.col_IdFrecuencia.FieldName = "_IdFrecuencia";
+            this.col_IdFrecuencia.Name = "col_IdFrecuencia";
+            // 
+            // col_IdProveedor
+            // 
+            this.col_IdProveedor.Caption = "Proveedor";
+            this.col_IdProveedor.FieldName = "_NumCuentaPorPagar";
+            this.col_IdProveedor.Name = "col_IdProveedor";
+            this.col_IdProveedor.Visible = true;
+            this.col_IdProveedor.VisibleIndex = 0;
+            // 
+            // col_IdUsuario
+            // 
+            this.col_IdUsuario.FieldName = "_IdUsuario";
+            this.col_IdUsuario.Name = "col_IdUsuario";
+            // 
+            // col_Motivo
+            // 
+            this.col_Motivo.FieldName = "_Motivo";
+            this.col_Motivo.Name = "col_Motivo";
+            // 
+            // col_NumCuentaPorPagar
+            // 
+            this.col_NumCuentaPorPagar.Caption = "Numero Cuenta Por Pagar";
+            this.col_NumCuentaPorPagar.FieldName = "_NumCuentaPorPagar";
+            this.col_NumCuentaPorPagar.Name = "col_NumCuentaPorPagar";
+            // 
+            // col_NumeroLetra
+            // 
+            this.col_NumeroLetra.FieldName = "_NumeroLetra";
+            this.col_NumeroLetra.Name = "col_NumeroLetra";
+            // 
+            // col_NumIngresoEgreso
+            // 
+            this.col_NumIngresoEgreso.FieldName = "_NumIngresoEgreso";
+            this.col_NumIngresoEgreso.Name = "col_NumIngresoEgreso";
+            // 
+            // col_SaldoDeuda
+            // 
+            this.col_SaldoDeuda.FieldName = "_SaldoDeuda";
+            this.col_SaldoDeuda.Name = "col_SaldoDeuda";
+            // 
+            // col_Subtotal
+            // 
+            this.col_Subtotal.FieldName = "_Subtotal";
+            this.col_Subtotal.Name = "col_Subtotal";
+            // 
+            // col_Total
+            // 
+            this.col_Total.FieldName = "_Total";
+            this.col_Total.Name = "col_Total";
+            // 
+            // col_ValorEntrada
+            // 
+            this.col_ValorEntrada.FieldName = "_ValorEntrada";
+            this.col_ValorEntrada.Name = "col_ValorEntrada";
+            // 
+            // col_ValorLetra
+            // 
+            this.col_ValorLetra.FieldName = "_ValorLetra";
+            this.col_ValorLetra.Name = "col_ValorLetra";
+            // 
+            // btnGenerarComprobante
+            // 
+            this.btnGenerarComprobante.Location = new System.Drawing.Point(440, 416);
+            this.btnGenerarComprobante.Name = "btnGenerarComprobante";
+            this.btnGenerarComprobante.Size = new System.Drawing.Size(160, 30);
+            this.btnGenerarComprobante.TabIndex = 40;
+            this.btnGenerarComprobante.Text = "Generar Comprobante";
+            this.btnGenerarComprobante.Click += new System.EventHandler(this.btnGenerarComprobante_Click);
+            // 
             // frmOrdenPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 482);
+            this.Controls.Add(this.btnGenerarComprobante);
+            this.Controls.Add(this.cbxProveed);
+            this.Controls.Add(this.deFechaActual);
             this.Controls.Add(this.gdcOrdenPago);
             this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtEfectivoDisponible);
             this.Controls.Add(this.txtTotalPagar);
-            this.Controls.Add(this.cbxProveedor);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dtpFechaEmisión);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximizeBox = false;
@@ -524,17 +632,21 @@
             this.Load += new System.EventHandler(this.frmOrdenPago_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gdcOrdenPago)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsCuentaPorPagarDetalleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvOrden)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsOrdenPagoDetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEfectivoDisponible.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalPagar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxProveedor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsEmpresaServicioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEstado.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deFechaActual.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deFechaActual.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxProveed.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsCuentaPorPagarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -543,7 +655,7 @@
         #endregion
 
         private DevExpress.XtraGrid.GridControl gdcOrdenPago;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvOrden;
         private DevExpress.XtraGrid.Columns.GridColumn colNúmeroRegistroCXP;
         private DevExpress.XtraGrid.Columns.GridColumn colSaldoDeuda;
         private DevExpress.XtraGrid.Columns.GridColumn colValorLetra;
@@ -553,15 +665,11 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
         private DevExpress.XtraEditors.TextEdit txtEfectivoDisponible;
         private DevExpress.XtraEditors.TextEdit txtTotalPagar;
-        private DevExpress.XtraEditors.SearchLookUpEdit cbxProveedor;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dtpFechaEmisión;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbGuardar;
@@ -575,17 +683,34 @@
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraEditors.TextEdit txtEstado;
         private DevExpress.XtraGrid.Columns.GridColumn gdcFechaVencimiento;
-        private System.Windows.Forms.BindingSource clsCuentaPorPagarDetalleBindingSource;
         private System.Windows.Forms.BindingSource clsEmpresaServicioBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn col_Direccion;
-        private DevExpress.XtraGrid.Columns.GridColumn col_Email;
-        private DevExpress.XtraGrid.Columns.GridColumn col_Estado;
-        private DevExpress.XtraGrid.Columns.GridColumn col_FechaRegistro;
+        private System.Windows.Forms.BindingSource clsCuentaPorPagarDetalleBindingSource;
+        private System.Windows.Forms.BindingSource clsOrdenPagoDetBindingSource;
+        private DevExpress.XtraEditors.DateEdit deFechaActual;
+        private DevExpress.XtraEditors.SearchLookUpEdit cbxProveed;
+        private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
+        private System.Windows.Forms.BindingSource clsCuentaPorPagarBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colNumCuentaPorPagarDetalle;
+        private DevExpress.XtraEditors.SimpleButton btnGenerarComprobante;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Descuento;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Detalle;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Factura;
+        private DevExpress.XtraGrid.Columns.GridColumn col_FechaIngreso;
+        private DevExpress.XtraGrid.Columns.GridColumn col_FechaTransaccion;
+        private DevExpress.XtraGrid.Columns.GridColumn col_FormaPago;
         private DevExpress.XtraGrid.Columns.GridColumn col_IdEmpresa;
         private DevExpress.XtraGrid.Columns.GridColumn col_IdEmpresaServicio;
+        private DevExpress.XtraGrid.Columns.GridColumn col_IdFrecuencia;
+        private DevExpress.XtraGrid.Columns.GridColumn col_IdProveedor;
         private DevExpress.XtraGrid.Columns.GridColumn col_IdUsuario;
-        private DevExpress.XtraGrid.Columns.GridColumn col_RazonSocial;
-        private DevExpress.XtraGrid.Columns.GridColumn col_TipoPersona;
-        private DevExpress.XtraGrid.Columns.GridColumn col_Website;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Motivo;
+        private DevExpress.XtraGrid.Columns.GridColumn col_NumCuentaPorPagar;
+        private DevExpress.XtraGrid.Columns.GridColumn col_NumeroLetra;
+        private DevExpress.XtraGrid.Columns.GridColumn col_NumIngresoEgreso;
+        private DevExpress.XtraGrid.Columns.GridColumn col_SaldoDeuda;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Subtotal;
+        private DevExpress.XtraGrid.Columns.GridColumn col_Total;
+        private DevExpress.XtraGrid.Columns.GridColumn col_ValorEntrada;
+        private DevExpress.XtraGrid.Columns.GridColumn col_ValorLetra;
     }
 }

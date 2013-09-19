@@ -28,7 +28,6 @@ namespace forms.Contabilidad
             //escrituras
             //btnNuevo.Visible = frmPrincipal.Escritura;
             btnGuardar.Visible = frmPrincipal.Escritura;
-            btnModificar.Visible = frmPrincipal.Escritura;
             //eliminacion
             //btnEliminar.Visible = frmPrincipal.Eliminacion;
         }
@@ -127,6 +126,11 @@ namespace forms.Contabilidad
         private void labelControl6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAnular_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

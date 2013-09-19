@@ -14,7 +14,7 @@ namespace clases.RecursosHumanos
         public int IdUniversidad { get; set; }
         public int IdEstado { get; set; }
 
-        public clsAcademico()
+               public clsAcademico()
         {
 
         }

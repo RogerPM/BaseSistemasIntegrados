@@ -69,6 +69,40 @@ namespace datos.CuentasxCobrar
 
         }
 
+        public void consultaAperturaCajaEspecificaFecha(clsAperturaCaja AperturaCaja, DateTime FechaHoy)
+        {
+            using (CuentasPorCobrarEntities ent = new CuentasPorCobrarEntities())
+            {
+                var x = (from q in ent.AperturaCaja where q.Fecha == FechaHoy select q).First();
+
+                AperturaCaja.idEmpresa = x.idEmpresa;
+                AperturaCaja.idUsuario = x.idUsuario;
+                AperturaCaja.idAperturaCaja = x.idAperturaCaja;
+                AperturaCaja.Fecha = x.Fecha;
+                AperturaCaja.FechaModificacion = Convert.ToDateTime(x.FechaModificacion);
+                AperturaCaja.Monto = x.Monto;
+                AperturaCaja.idEstado = x.idEstado;
+            }
+
+        }
+
+        public Boolean consultaAperturada(DateTime FechaHoy, int idUsuario)
+        {
+            using (CuentasPorCobrarEntities ent = new CuentasPorCobrarEntities())
+            {
+
+                var x = (from q in ent.AperturaCaja where q.Fecha == FechaHoy.Date && q.idUsuario == idUsuario select q);
+                if (x.Count() > 0) 
+                { 
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
         public List<clsEstado> consultaEstado()
         {
 
@@ -146,9 +180,8 @@ namespace datos.CuentasxCobrar
                 }
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine("Error "+ ex);
 
                 return false;
             }

@@ -7,30 +7,30 @@ using clases.RecursosHumanos;
 
 namespace datos.Cuentasxpagar
 {
-   public  class datosPagoDetalle
+    public class datosPagoDetalle
     {
-        public List<clsPagoDetalle > consulta()
+        public List<clsPagoDetalle> consulta()
         {
 
             try
             {
                 List<clsPagoDetalle> lista = new List<clsPagoDetalle>();
                 CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
-                var con = from w in ent.PagoDet  select w;
+                var con = from w in ent.PagoDet select w;
                 foreach (var item in con)
                 {
-                    clsPagoDetalle  clas = new clsPagoDetalle ();
-                    clas.NumLinea = item.NumLinea ;
+                    clsPagoDetalle clas = new clsPagoDetalle();
+                    clas.NumLinea = item.NumLinea;
                     clas.IdMedioPago = item.IdMedioPago;
                     clas.Monto = (item.Monto);
-                    clas.NumeroCuenta  = item.NumeroCuenta;
+                    clas.NumeroCuenta = item.NumeroCuenta;
                     clas.IdEmpresa = item.IdEmpresa;
                     clas.IdBanco = item.IdBanco;
                     clas.NumComprobante = item.NumComprobante;
-                   // clas.NumComision =Convert.ToInt32 ( item.NumComision);
-                   // clas.NumNominaCab =Convert.ToInt32 ( item.NumNominaCab);
+                    // clas.NumComision =Convert.ToInt32 ( item.NumComision);
+                    // clas.NumNominaCab =Convert.ToInt32 ( item.NumNominaCab);
                     clas.NumPago = item.NumPago;
-                                       
+
                     lista.Add(clas);
 
                 }
@@ -41,39 +41,6 @@ namespace datos.Cuentasxpagar
             catch (Exception)
             {
                 return null;
-            }
-
-        }
-        public List<clsNominaCab > consultaNomina(int Empresa)
-        {
-            try
-            {
-                List<clsNominaCab > lista = new List<clsNominaCab >();
-                CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
-                var con = from w in ent.NominaCab where w.IdEmpresa == Empresa & w.IdEstado ==1 select w;
-                foreach (var item in con)
-                {
-                    clsNominaCab clas = new clsNominaCab ();
-                    clas.NumNomina = item.NumNomina;
-                    
-                    clas.FechaModificacion =Convert.ToDateTime  (item.FechaModificacion);
-                    clas.Total =Convert.ToDouble( item.Total);
-                    
-                    clas.IdEstado = item.IdEstado ;
-                    clas.IdEmpresa = item.IdEmpresa;
-                    clas.Observacion = item.Observacion;
-                    lista.Add(clas);
-
-                }
-                return lista;
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("error" + ex);
-                return null;
-                
-
             }
 
         }
@@ -117,7 +84,7 @@ namespace datos.Cuentasxpagar
 
             try
             {
-                List<clsPagoDetalleDos > lista = new List<clsPagoDetalleDos >();
+                List<clsPagoDetalleDos> lista = new List<clsPagoDetalleDos>();
                 CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
                 var con = from w in ent.PagoDet where w.NumPago == NumPago select w;
                 foreach (var item in con)
@@ -131,7 +98,7 @@ namespace datos.Cuentasxpagar
                     clas.IdBanco = item.IdBanco;
                     clas.NumComprobante = item.NumComprobante;
                     // clas.NumComision =Convert.ToInt32 ( item.NumComision);
-                    clas.NumNominaCab =Convert.ToInt32 ( item.NumNominaCab);
+                    clas.NumNominaCab = Convert.ToInt32(item.NumNominaCab);
                     clas.NumPago = item.NumPago;
 
                     lista.Add(clas);
@@ -147,7 +114,7 @@ namespace datos.Cuentasxpagar
             }
 
         }
-       
+
         public Boolean ConsultaNumeroDetalle(int numero)
         {
 
@@ -156,7 +123,7 @@ namespace datos.Cuentasxpagar
                 using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
                 {
 
-                    var x = (from q in ent.PagoDet  where q.NumPago  == (numero) select q).First();
+                    var x = (from q in ent.PagoDet where q.NumPago == (numero) select q).First();
                     if (x.IdEmpresa >= 1)
                     {
                         return true;
@@ -174,25 +141,25 @@ namespace datos.Cuentasxpagar
 
             }
 
-        } 
-        
-      
+        }
+
+
         public decimal consultaTotal(int NumPago)
         {
             decimal Total = 0;
             try
             {
-                
+
                 CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
-                var con = from w in ent.OrdenPagoDet  where w.NumOrdenCab == NumPago select w;
-              
+                var con = from w in ent.OrdenPagoDet where w.NumOrdenCab == NumPago select w;
+
                 foreach (var item in con)
                 {
-                   Total=Total +(item.TotalPagar);
-                    
+                    Total = Total + (item.TotalPagar);
+
                 }
 
-                return Total  ;
+                return Total;
             }
 
             catch (Exception)
@@ -201,18 +168,18 @@ namespace datos.Cuentasxpagar
             }
 
         }
-        public decimal consultaPagoNomina(int Empresa)
+        public decimal consultaTotalEmpleado(int NumPago)
         {
             decimal Total = 0;
             try
             {
 
                 CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
-                var con = from w in ent. NominaCab  where w.IdEstado  == 1 & w.IdEmpresa==Empresa select w;
+                var con = from w in ent.OrdenPagoEmpleadoDet where w.NumOrdenPago == NumPago select w;
 
                 foreach (var item in con)
                 {
-                    Total = Total + (item. Total);
+                    Total = Total + (item.PagoNeto);
 
                 }
 
@@ -225,11 +192,12 @@ namespace datos.Cuentasxpagar
             }
 
         }
-       
+        
+
         public decimal consultaPagoDETALLE(int NumPago)
         {
             decimal valor = 0;
-          try
+            try
             {
 
                 CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
@@ -241,153 +209,186 @@ namespace datos.Cuentasxpagar
 
                 }
 
-                return valor ;
+                return valor;
             }
 
             catch (Exception)
             {
-                return valor ;
+                return valor;
             }
 
         }
         public void Modificar(clsPagoDetalle Det)
-       {
-           using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
-           {
-               var x = (from q in ent.PagoDet  where q.NumPago == Det.NumPago select q).First();
+        {
+            using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
+            {
+                var x = (from q in ent.PagoDet where q.NumPago == Det.NumPago select q).First();
 
-               x.NumLinea = Det.NumLinea ;
-               x.IdMedioPago  = Det.IdMedioPago ;
-               x.Monto  = Det.Monto;
-               x.IdEmpresa = Det.IdEmpresa;
-               x.IdBanco = Det.IdBanco;
-               x.NumComprobante = Det.NumComprobante;
-              // x.NumComision = Det.NumComision;
-             // x.NumNominaCab = Det.NumNominaCab;
-               x.NumPago = Det.NumPago;
+                x.NumLinea = Det.NumLinea;
+                x.IdMedioPago = Det.IdMedioPago;
+                x.Monto = Det.Monto;
+                x.IdEmpresa = Det.IdEmpresa;
+                x.IdBanco = Det.IdBanco;
+                x.NumComprobante = Det.NumComprobante;
+                // x.NumComision = Det.NumComision;
+                // x.NumNominaCab = Det.NumNominaCab;
+                x.NumPago = Det.NumPago;
 
-               ent.SaveChanges();
+                ent.SaveChanges();
 
-           }
-       }
+            }
+        }
 
 
-       public Boolean Guardar(clsPagoDetalle  Det)
-       {
-           try
-           {
-               int id = getIdSiguiente();
-               using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
-               {
+        public Boolean Guardar(clsPagoDetalle Det)
+        {
+            try
+            {
+                int id = getIdSiguiente();
+                using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
+                {
 
-                   PagoDet  pago = new PagoDet()
-                   {
-                       NumLinea  = id,
-                       IdMedioPago  = Det.IdMedioPago,
-                       Monto  = Det.Monto,
-                       NumeroCuenta  = Det.NumeroCuenta,
-                       IdEmpresa = Det.IdEmpresa,
-                       IdBanco  = Det.IdBanco,
-                       NumComprobante =Det.NumComprobante , 
-                     //  NumComision =Det.NumComision,
-                    //   NumNominaCab=Det.NumNominaCab ,
-                       NumPago = Det.NumPago ,
+                    PagoDet pago = new PagoDet()
+                    {
+                        NumLinea = id,
+                        IdMedioPago = Det.IdMedioPago,
+                        Monto = Det.Monto,
+                        NumeroCuenta = Det.NumeroCuenta,
+                        IdEmpresa = Det.IdEmpresa,
+                        IdBanco = Det.IdBanco,
+                        NumComprobante = Det.NumComprobante,
+                        //  NumComision =Det.NumComision,
+                        //   NumNominaCab=Det.NumNominaCab ,
+                        NumPago = Det.NumPago,
 
-                   };
-                   ent.AddToPagoDet(pago);
-                   ent.SaveChanges();
-               }
+                    };
+                    ent.AddToPagoDet(pago);
+                    ent.SaveChanges();
+                }
 
-               return true;
+                return true;
 
-           }
-           catch (Exception ex)
-           {
-               return false;
-           }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
 
-       }
-       public Boolean GuardarDetalleNomina(clsPagoDetalleDos Det)
-       {
-           try
-           {
-               int id = getIdSiguiente();
-               using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
-               {
+        }
+        public Boolean GuardarDetalleNomina(clsPagoDetalleDos Det)
+        {
+            try
+            {
+                int id = getIdSiguiente();
+                using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
+                {
 
-                   PagoDet pago = new PagoDet()
-                   {
-                       NumLinea = id,
-                       IdMedioPago = Det.IdMedioPago,
-                       Monto = Det.Monto,
-                       NumeroCuenta = Det.NumeroCuenta,
-                       IdEmpresa = Det.IdEmpresa,
-                       IdBanco = Det.IdBanco,
-                       NumComprobante = Det.NumComprobante,
-                       //  NumComision =Det.NumComision,
-                       NumNominaCab=Det.NumNominaCab ,
-                       NumPago = Det.NumPago,
+                    PagoDet pago = new PagoDet()
+                    {
+                        NumLinea = id,
+                        IdMedioPago = Det.IdMedioPago,
+                        Monto = Det.Monto,
+                        NumeroCuenta = Det.NumeroCuenta,
+                        IdEmpresa = Det.IdEmpresa,
+                        IdBanco = Det.IdBanco,
+                        NumComprobante = Det.NumComprobante,
+                        //  NumComision =Det.NumComision,
+                        NumNominaCab = Det.NumNominaCab,
+                        NumPago = Det.NumPago,
 
-                   };
-                   ent.AddToPagoDet(pago);
-                   ent.SaveChanges();
-               }
+                    };
+                    ent.AddToPagoDet(pago);
+                    ent.SaveChanges();
+                }
 
-               return true;
+                return true;
 
-           }
-           catch (Exception ex)
-           {
-               return false;
-           }
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
 
-       }
-     
-       public Boolean Eliminar(clsPagoDetalle  Det)
-       {
-           try
-           {
-               using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
-               {
-                   
-                   var x = (from q in ent.PagoDet  where q.NumLinea  == Det.NumLinea select q).First();
-                   
-                //   var y = (from q in ent.PagoDet where q.NumPago  == Det.NumPago select q).First();
-                   ent.DeleteObject(x);
+        }
 
-                   ent.SaveChanges();
+        public Boolean Eliminar(clsPagoDetalle Det)
+        {
+            try
+            {
+                using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
+                {
 
-               }
-               return true;
-           }
-           catch (Exception ex)
-           {
-               return false;
-           }
+                    var x = (from q in ent.PagoDet where q.NumLinea == Det.NumLinea select q).First();
 
-       }
+                    //   var y = (from q in ent.PagoDet where q.NumPago  == Det.NumPago select q).First();
+                    ent.DeleteObject(x);
 
-       public int getIdSiguiente()
-       {
-           try
-           {
+                    ent.SaveChanges();
 
-               CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
-               int x = ((from a in ent.PagoDet  select a.NumLinea).Max()) + 1;
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
 
-               return x;
-           }
-           catch (Exception e)
-           {
-               Console.WriteLine("Error: datos " + e);
-               return 1; //en caso de que no exista algun registro
-           }
+        }
 
-       }
+        public int getIdSiguiente()
+        {
+            try
+            {
+
+                CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
+                int x = ((from a in ent.PagoDet select a.NumLinea).Max()) + 1;
+
+                return x;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: datos " + e);
+                return 1; //en caso de que no exista algun registro
+            }
+
+        }
+        public List<clsOrdenPagoEmpleadoDet> ConsultaOrdenDetalleEmpleado(int numero)
+        {
+            try
+            {
+                List<clsOrdenPagoEmpleadoDet> lista = new List<clsOrdenPagoEmpleadoDet>();
+                CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
+                var con = from w in ent.OrdenPagoEmpleadoDet where w.NumOrdenPago == numero select w;
+
+                foreach (var item in con)
+                {
+                    clsOrdenPagoEmpleadoDet ord = new clsOrdenPagoEmpleadoDet();
+                    ord.NumOrdenPago = item.NumOrdenPago;
+                    ord.IdEmpresa = item.IdEmpresa;
+                    ord.AutorizarPago = (item.AutorizarPago);
+                    ord.Linea = item.Linea;
+                    ord.IdPersona = item.IdPersona;
+                    ord.SueldoTotal = Convert.ToDecimal(item.SueldoTotal);
+                    ord.IngresoAdicional = Convert.ToDecimal(item.IngresoAdicional);
+                    ord.DescuentoTotal = Convert.ToDecimal(item.DescuentoTotal);
+                    ord.PagoNeto = item.PagoNeto;
+
+                    lista.Add(ord);
+
+
+                }
+
+                return lista;
+            }
+
+            catch (Exception)
+            {
+                return null;
+            }
+
+        }
 
     }
 
 
 }
-
-

@@ -14,6 +14,23 @@ namespace forms.RecursosHumanos
 {
     public partial class frmMantenimientoTipoPermiso : Form
     {
+        #region "Distributed by security team 3/3"
+        //si este bloque ha sido parcial o totalmente editado, los miembros del equipo de seguridad no 
+        //se responzabilizan en el caso de que exista un mal funcionamiento de este form.
+        private void Seguridad()
+        {
+            //lecturas
+            btnBuscar.Visible = frmPrincipal.Lectura;
+            //escrituras
+            tsbNuevo.Visible = frmPrincipal.Escritura;
+            tsbGuardar.Visible = frmPrincipal.Escritura;
+            tsbModificar.Visible = frmPrincipal.Escritura;
+            //eliminacion
+            tsbEliminar.Visible = frmPrincipal.Eliminacion;
+        }
+
+        #endregion
+
         public frmMantenimientoTipoPermiso()
         {
             InitializeComponent();
@@ -81,6 +98,7 @@ namespace forms.RecursosHumanos
             {
                 Set();
             }
+            Seguridad();
         }
 
         public void Limpiar()

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ModelInventario.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="ModelInventarioStoreContainer">
-    <EntitySet Name="Estado" EntityType="ModelInventario.Store.Estado" store:Type="Tables" Schema="Compras" />
     <EntitySet Name="OrdenCompra" EntityType="ModelInventario.Store.OrdenCompra" store:Type="Tables" Schema="Compras" />
     <EntitySet Name="OrdenCompraDet" EntityType="ModelInventario.Store.OrdenCompraDet" store:Type="Tables" Schema="Compras" />
     <EntitySet Name="Articulo" EntityType="ModelInventario.Store.Articulo" store:Type="Tables" Schema="Inventario" />
@@ -12,6 +11,8 @@
     <EntitySet Name="Grupo" EntityType="ModelInventario.Store.Grupo" store:Type="Tables" Schema="Inventario" />
     <EntitySet Name="IngresoEgresoCab" EntityType="ModelInventario.Store.IngresoEgresoCab" store:Type="Tables" Schema="Inventario" />
     <EntitySet Name="IngresoEgresoDet" EntityType="ModelInventario.Store.IngresoEgresoDet" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="LlegadaMercaderiaCab" EntityType="ModelInventario.Store.LlegadaMercaderiaCab" store:Type="Tables" Schema="Inventario" />
+    <EntitySet Name="LlegadaMercaderiaDet" EntityType="ModelInventario.Store.LlegadaMercaderiaDet" store:Type="Tables" Schema="Inventario" />
     <EntitySet Name="Marca" EntityType="ModelInventario.Store.Marca" store:Type="Tables" Schema="Inventario" />
     <EntitySet Name="Modelo" EntityType="ModelInventario.Store.Modelo" store:Type="Tables" Schema="Inventario" />
     <EntitySet Name="Motivo" EntityType="ModelInventario.Store.Motivo" store:Type="Tables" Schema="Inventario" />
@@ -26,269 +27,240 @@
     <EntitySet Name="TransferenciaBodegaCab" EntityType="ModelInventario.Store.TransferenciaBodegaCab" store:Type="Tables" Schema="Inventario" />
     <EntitySet Name="TransferenciaBodegaDet" EntityType="ModelInventario.Store.TransferenciaBodegaDet" store:Type="Tables" Schema="Inventario" />
     <EntitySet Name="UnidadMedida" EntityType="ModelInventario.Store.UnidadMedida" store:Type="Tables" Schema="Inventario" />
-    <EntitySet Name="Persona" EntityType="ModelInventario.Store.Persona" store:Type="Tables" Schema="RecursosHumanos" />
     <EntitySet Name="Empresa" EntityType="ModelInventario.Store.Empresa" store:Type="Tables" Schema="Seguridad" />
-    <EntitySet Name="Usuario" EntityType="ModelInventario.Store.Usuario" store:Type="Tables" Schema="Seguridad" />
-    <AssociationSet Name="FK__Articulo__IdChas__5C37ACAD" Association="ModelInventario.Store.FK__Articulo__IdChas__5C37ACAD">
+    <AssociationSet Name="FK__Articulo__IdChas__5B438874" Association="ModelInventario.Store.FK__Articulo__IdChas__5B438874">
       <End Role="Chasis" EntitySet="Chasis" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdColo__5F141958" Association="ModelInventario.Store.FK__Articulo__IdColo__5F141958">
+    <AssociationSet Name="FK__Articulo__IdColo__5E1FF51F" Association="ModelInventario.Store.FK__Articulo__IdColo__5E1FF51F">
       <End Role="Color" EntitySet="Color" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdEmpr__58671BC9" Association="ModelInventario.Store.FK__Articulo__IdEmpr__58671BC9">
+    <AssociationSet Name="FK__Articulo__IdEmpr__5772F790" Association="ModelInventario.Store.FK__Articulo__IdEmpr__5772F790">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdGrup__5B438874" Association="ModelInventario.Store.FK__Articulo__IdGrup__5B438874">
+    <AssociationSet Name="FK__Articulo__IdGrup__5A4F643B" Association="ModelInventario.Store.FK__Articulo__IdGrup__5A4F643B">
       <End Role="Grupo" EntitySet="Grupo" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdMarc__60083D91" Association="ModelInventario.Store.FK__Articulo__IdMarc__60083D91">
+    <AssociationSet Name="FK__Articulo__IdMarc__5F141958" Association="ModelInventario.Store.FK__Articulo__IdMarc__5F141958">
       <End Role="Marca" EntitySet="Marca" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdMode__60FC61CA" Association="ModelInventario.Store.FK__Articulo__IdMode__60FC61CA">
+    <AssociationSet Name="FK__Articulo__IdMode__60083D91" Association="ModelInventario.Store.FK__Articulo__IdMode__60083D91">
       <End Role="Modelo" EntitySet="Modelo" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdTipo__5A4F643B" Association="ModelInventario.Store.FK__Articulo__IdTipo__5A4F643B">
+    <AssociationSet Name="FK__Articulo__IdTipo__595B4002" Association="ModelInventario.Store.FK__Articulo__IdTipo__595B4002">
       <End Role="TipoArticulo" EntitySet="TipoArticulo" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdTipo__5C37ACAD" Association="ModelInventario.Store.FK__Articulo__IdTipo__5C37ACAD">
+      <End Role="TipoMotor" EntitySet="TipoMotor" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
     <AssociationSet Name="FK__Articulo__IdTipo__5D2BD0E6" Association="ModelInventario.Store.FK__Articulo__IdTipo__5D2BD0E6">
-      <End Role="TipoMotor" EntitySet="TipoMotor" />
-      <End Role="Articulo" EntitySet="Articulo" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdTipo__5E1FF51F" Association="ModelInventario.Store.FK__Articulo__IdTipo__5E1FF51F">
       <End Role="TipoCombustible" EntitySet="TipoCombustible" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdTipo__61F08603" Association="ModelInventario.Store.FK__Articulo__IdTipo__61F08603">
+    <AssociationSet Name="FK__Articulo__IdTipo__60FC61CA" Association="ModelInventario.Store.FK__Articulo__IdTipo__60FC61CA">
       <End Role="TipoMaterial" EntitySet="TipoMaterial" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdUnid__595B4002" Association="ModelInventario.Store.FK__Articulo__IdUnid__595B4002">
+    <AssociationSet Name="FK__Articulo__IdUnid__58671BC9" Association="ModelInventario.Store.FK__Articulo__IdUnid__58671BC9">
       <End Role="UnidadMedida" EntitySet="UnidadMedida" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__ArticuloB__IdEmp__1758727B" Association="ModelInventario.Store.FK__ArticuloB__IdEmp__1758727B">
+    <AssociationSet Name="FK__ArticuloB__IdEmp__16644E42" Association="ModelInventario.Store.FK__ArticuloB__IdEmp__16644E42">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="ArticuloBodega" EntitySet="ArticuloBodega" />
     </AssociationSet>
-    <AssociationSet Name="FK__ArticuloB__IdPer__1940BAED" Association="ModelInventario.Store.FK__ArticuloB__IdPer__1940BAED">
+    <AssociationSet Name="FK__ArticuloB__IdPer__184C96B4" Association="ModelInventario.Store.FK__ArticuloB__IdPer__184C96B4">
       <End Role="Percha" EntitySet="Percha" />
       <End Role="ArticuloBodega" EntitySet="ArticuloBodega" />
     </AssociationSet>
-    <AssociationSet Name="FK__ArticuloBodega__184C96B4" Association="ModelInventario.Store.FK__ArticuloBodega__184C96B4">
+    <AssociationSet Name="FK__ArticuloBodega__1758727B" Association="ModelInventario.Store.FK__ArticuloBodega__1758727B">
       <End Role="Articulo" EntitySet="Articulo" />
       <End Role="ArticuloBodega" EntitySet="ArticuloBodega" />
     </AssociationSet>
-    <AssociationSet Name="FK__Bodega__IdEmpres__220B0B18" Association="ModelInventario.Store.FK__Bodega__IdEmpres__220B0B18">
+    <AssociationSet Name="FK__Bodega__IdEmpres__2116E6DF" Association="ModelInventario.Store.FK__Bodega__IdEmpres__2116E6DF">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Bodega" EntitySet="Bodega" />
     </AssociationSet>
-    <AssociationSet Name="FK__Bodega__IdRespon__22FF2F51" Association="ModelInventario.Store.FK__Bodega__IdRespon__22FF2F51">
-      <End Role="Persona" EntitySet="Persona" />
-      <End Role="Bodega" EntitySet="Bodega" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Chasis__IdEmpres__2E70E1FD" Association="ModelInventario.Store.FK__Chasis__IdEmpres__2E70E1FD">
+    <AssociationSet Name="FK__Chasis__IdEmpres__2D7CBDC4" Association="ModelInventario.Store.FK__Chasis__IdEmpres__2D7CBDC4">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Chasis" EntitySet="Chasis" />
     </AssociationSet>
-    <AssociationSet Name="FK__Color__IdEmpresa__3F9B6DFF" Association="ModelInventario.Store.FK__Color__IdEmpresa__3F9B6DFF">
+    <AssociationSet Name="FK__Color__IdEmpresa__3EA749C6" Association="ModelInventario.Store.FK__Color__IdEmpresa__3EA749C6">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Color" EntitySet="Color" />
     </AssociationSet>
-    <AssociationSet Name="FK__Grupo__IdEmpresa__6ABAD62E" Association="ModelInventario.Store.FK__Grupo__IdEmpresa__6ABAD62E">
+    <AssociationSet Name="FK__Grupo__IdEmpresa__69C6B1F5" Association="ModelInventario.Store.FK__Grupo__IdEmpresa__69C6B1F5">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Grupo" EntitySet="Grupo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Grupo__IdTipoArt__6BAEFA67" Association="ModelInventario.Store.FK__Grupo__IdTipoArt__6BAEFA67">
+    <AssociationSet Name="FK__Grupo__IdTipoArt__6ABAD62E" Association="ModelInventario.Store.FK__Grupo__IdTipoArt__6ABAD62E">
       <End Role="TipoArticulo" EntitySet="TipoArticulo" />
       <End Role="Grupo" EntitySet="Grupo" />
     </AssociationSet>
-    <AssociationSet Name="FK__IngresoEg__IdGru__190BB0C3" Association="ModelInventario.Store.FK__IngresoEg__IdGru__190BB0C3">
-      <End Role="Grupo" EntitySet="Grupo" />
-      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__IngresoEg__IdMot__0E8E2250" Association="ModelInventario.Store.FK__IngresoEg__IdMot__0E8E2250">
+    <AssociationSet Name="FK__IngresoEg__IdMot__0CA5D9DE" Association="ModelInventario.Store.FK__IngresoEg__IdMot__0CA5D9DE">
       <End Role="Motivo" EntitySet="Motivo" />
       <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__IngresoEg__IdPer__19FFD4FC" Association="ModelInventario.Store.FK__IngresoEg__IdPer__19FFD4FC">
+    <AssociationSet Name="FK__IngresoEg__IdPer__162F4418" Association="ModelInventario.Store.FK__IngresoEg__IdPer__162F4418">
       <End Role="Percha" EntitySet="Percha" />
       <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__IngresoEg__IdRes__10766AC2" Association="ModelInventario.Store.FK__IngresoEg__IdRes__10766AC2">
-      <End Role="Persona" EntitySet="Persona" />
-      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__IngresoEg__IdTip__0CA5D9DE" Association="ModelInventario.Store.FK__IngresoEg__IdTip__0CA5D9DE">
+    <AssociationSet Name="FK__IngresoEg__IdTip__0ABD916C" Association="ModelInventario.Store.FK__IngresoEg__IdTip__0ABD916C">
       <End Role="TipoMovimiento" EntitySet="TipoMovimiento" />
       <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__IngresoEg__IdTip__162F4418" Association="ModelInventario.Store.FK__IngresoEg__IdTip__162F4418">
-      <End Role="TipoArticulo" EntitySet="TipoArticulo" />
-      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__IngresoEg__IdUsu__116A8EFB" Association="ModelInventario.Store.FK__IngresoEg__IdUsu__116A8EFB">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__IngresoEgresoCab__0BB1B5A5" Association="ModelInventario.Store.FK__IngresoEgresoCab__0BB1B5A5">
-      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
-      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__IngresoEgresoCab__0F824689" Association="ModelInventario.Store.FK__IngresoEgresoCab__0F824689">
+    <AssociationSet Name="FK__IngresoEgresoCab__0D99FE17" Association="ModelInventario.Store.FK__IngresoEgresoCab__0D99FE17">
       <End Role="Bodega" EntitySet="Bodega" />
       <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__IngresoEgresoDet__17236851" Association="ModelInventario.Store.FK__IngresoEgresoDet__17236851">
+    <AssociationSet Name="FK__IngresoEgresoDet__1446FBA6" Association="ModelInventario.Store.FK__IngresoEgresoDet__1446FBA6">
       <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
       <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__IngresoEgresoDet__18178C8A" Association="ModelInventario.Store.FK__IngresoEgresoDet__18178C8A">
+    <AssociationSet Name="FK__IngresoEgresoDet__153B1FDF" Association="ModelInventario.Store.FK__IngresoEgresoDet__153B1FDF">
       <End Role="Articulo" EntitySet="Articulo" />
       <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__Marca__IdEmpresa__45544755" Association="ModelInventario.Store.FK__Marca__IdEmpresa__45544755">
+    <AssociationSet Name="FK__LlegadaMe__IdMot__1EC48A19" Association="ModelInventario.Store.FK__LlegadaMe__IdMot__1EC48A19">
+      <End Role="Motivo" EntitySet="Motivo" />
+      <End Role="LlegadaMercaderiaCab" EntitySet="LlegadaMercaderiaCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LlegadaMe__IdPer__284DF453" Association="ModelInventario.Store.FK__LlegadaMe__IdPer__284DF453">
+      <End Role="Percha" EntitySet="Percha" />
+      <End Role="LlegadaMercaderiaDet" EntitySet="LlegadaMercaderiaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LlegadaMe__IdTip__1CDC41A7" Association="ModelInventario.Store.FK__LlegadaMe__IdTip__1CDC41A7">
+      <End Role="TipoMovimiento" EntitySet="TipoMovimiento" />
+      <End Role="LlegadaMercaderiaCab" EntitySet="LlegadaMercaderiaCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LlegadaMercaderi__1AF3F935" Association="ModelInventario.Store.FK__LlegadaMercaderi__1AF3F935">
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+      <End Role="LlegadaMercaderiaCab" EntitySet="LlegadaMercaderiaCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LlegadaMercaderi__1FB8AE52" Association="ModelInventario.Store.FK__LlegadaMercaderi__1FB8AE52">
+      <End Role="Bodega" EntitySet="Bodega" />
+      <End Role="LlegadaMercaderiaCab" EntitySet="LlegadaMercaderiaCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LlegadaMercaderi__2665ABE1" Association="ModelInventario.Store.FK__LlegadaMercaderi__2665ABE1">
+      <End Role="LlegadaMercaderiaCab" EntitySet="LlegadaMercaderiaCab" />
+      <End Role="LlegadaMercaderiaDet" EntitySet="LlegadaMercaderiaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LlegadaMercaderi__2759D01A" Association="ModelInventario.Store.FK__LlegadaMercaderi__2759D01A">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="LlegadaMercaderiaDet" EntitySet="LlegadaMercaderiaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Marca__IdEmpresa__4460231C" Association="ModelInventario.Store.FK__Marca__IdEmpresa__4460231C">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Marca" EntitySet="Marca" />
     </AssociationSet>
-    <AssociationSet Name="FK__Modelo__IdEmpres__4B0D20AB" Association="ModelInventario.Store.FK__Modelo__IdEmpres__4B0D20AB">
+    <AssociationSet Name="FK__Modelo__IdEmpres__4A18FC72" Association="ModelInventario.Store.FK__Modelo__IdEmpres__4A18FC72">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Modelo" EntitySet="Modelo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Modelo__IdMarca__4CF5691D" Association="ModelInventario.Store.FK__Modelo__IdMarca__4CF5691D">
+    <AssociationSet Name="FK__Modelo__IdMarca__4C0144E4" Association="ModelInventario.Store.FK__Modelo__IdMarca__4C0144E4">
       <End Role="Marca" EntitySet="Marca" />
       <End Role="Modelo" EntitySet="Modelo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Motivo__IdEmpres__6D6238AF" Association="ModelInventario.Store.FK__Motivo__IdEmpres__6D6238AF">
+    <AssociationSet Name="FK__Motivo__IdEmpres__6C6E1476" Association="ModelInventario.Store.FK__Motivo__IdEmpres__6C6E1476">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Motivo" EntitySet="Motivo" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrdenComp__idEmp__0B27A5C0" Association="ModelInventario.Store.FK__OrdenComp__idEmp__0B27A5C0">
+    <AssociationSet Name="FK__OrdenComp__idEmp__0A338187" Association="ModelInventario.Store.FK__OrdenComp__idEmp__0A338187">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="OrdenCompra" EntitySet="OrdenCompra" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrdenComp__idEst__0D0FEE32" Association="ModelInventario.Store.FK__OrdenComp__idEst__0D0FEE32">
-      <End Role="Estado" EntitySet="Estado" />
-      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
-    </AssociationSet>
-    <AssociationSet Name="FK__OrdenComp__IdUsu__0C1BC9F9" Association="ModelInventario.Store.FK__OrdenComp__IdUsu__0C1BC9F9">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
-    </AssociationSet>
-    <AssociationSet Name="FK__OrdenCompraDet__63F8CA06" Association="ModelInventario.Store.FK__OrdenCompraDet__63F8CA06">
+    <AssociationSet Name="FK__OrdenCompraDet__66D536B1" Association="ModelInventario.Store.FK__OrdenCompraDet__66D536B1">
       <End Role="OrdenCompra" EntitySet="OrdenCompra" />
       <End Role="OrdenCompraDet" EntitySet="OrdenCompraDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrdenCompraDet__64ECEE3F" Association="ModelInventario.Store.FK__OrdenCompraDet__64ECEE3F">
+    <AssociationSet Name="FK__OrdenCompraDet__67C95AEA" Association="ModelInventario.Store.FK__OrdenCompraDet__67C95AEA">
       <End Role="Articulo" EntitySet="Articulo" />
       <End Role="OrdenCompraDet" EntitySet="OrdenCompraDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__Percha__67A95F59" Association="ModelInventario.Store.FK__Percha__67A95F59">
+    <AssociationSet Name="FK__Percha__66B53B20" Association="ModelInventario.Store.FK__Percha__66B53B20">
       <End Role="Bodega" EntitySet="Bodega" />
       <End Role="Percha" EntitySet="Percha" />
     </AssociationSet>
-    <AssociationSet Name="FK__Percha__IdEmpres__66B53B20" Association="ModelInventario.Store.FK__Percha__IdEmpres__66B53B20">
+    <AssociationSet Name="FK__Percha__IdEmpres__65C116E7" Association="ModelInventario.Store.FK__Percha__IdEmpres__65C116E7">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Percha" EntitySet="Percha" />
     </AssociationSet>
-    <AssociationSet Name="FK__Persona__IdEmpre__1BFD2C07" Association="ModelInventario.Store.FK__Persona__IdEmpre__1BFD2C07">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="Persona" EntitySet="Persona" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TipoArtic__IdEmp__6501FCD8" Association="ModelInventario.Store.FK__TipoArtic__IdEmp__6501FCD8">
+    <AssociationSet Name="FK__TipoArtic__IdEmp__640DD89F" Association="ModelInventario.Store.FK__TipoArtic__IdEmp__640DD89F">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TipoArticulo" EntitySet="TipoArticulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__TipoCombu__IdEmp__39E294A9" Association="ModelInventario.Store.FK__TipoCombu__IdEmp__39E294A9">
+    <AssociationSet Name="FK__TipoCombu__IdEmp__38EE7070" Association="ModelInventario.Store.FK__TipoCombu__IdEmp__38EE7070">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TipoCombustible" EntitySet="TipoCombustible" />
     </AssociationSet>
-    <AssociationSet Name="FK__TipoMater__IdEmp__51BA1E3A" Association="ModelInventario.Store.FK__TipoMater__IdEmp__51BA1E3A">
+    <AssociationSet Name="FK__TipoMater__IdEmp__50C5FA01" Association="ModelInventario.Store.FK__TipoMater__IdEmp__50C5FA01">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TipoMaterial" EntitySet="TipoMaterial" />
     </AssociationSet>
-    <AssociationSet Name="FK__TipoMotor__IdEmp__3429BB53" Association="ModelInventario.Store.FK__TipoMotor__IdEmp__3429BB53">
+    <AssociationSet Name="FK__TipoMotor__IdEmp__3335971A" Association="ModelInventario.Store.FK__TipoMotor__IdEmp__3335971A">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TipoMotor" EntitySet="TipoMotor" />
     </AssociationSet>
-    <AssociationSet Name="FK__TipoMovim__IdEmp__119F9925" Association="ModelInventario.Store.FK__TipoMovim__IdEmp__119F9925">
+    <AssociationSet Name="FK__TipoMovim__IdEmp__10AB74EC" Association="ModelInventario.Store.FK__TipoMovim__IdEmp__10AB74EC">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TipoMovimiento" EntitySet="TipoMovimiento" />
     </AssociationSet>
-    <AssociationSet Name="FK__TomaFisic__IdEmp__025D5595" Association="ModelInventario.Store.FK__TomaFisic__IdEmp__025D5595">
+    <AssociationSet Name="FK__TomaFisic__IdEmp__0169315C" Association="ModelInventario.Store.FK__TomaFisic__IdEmp__0169315C">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TomaFisicaCab" EntitySet="TomaFisicaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__TomaFisic__IdEmp__0BE6BFCF" Association="ModelInventario.Store.FK__TomaFisic__IdEmp__0BE6BFCF">
+    <AssociationSet Name="FK__TomaFisic__IdEmp__0AF29B96" Association="ModelInventario.Store.FK__TomaFisic__IdEmp__0AF29B96">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TomaFisicaDet" EntitySet="TomaFisicaDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__TomaFisic__IdMot__035179CE" Association="ModelInventario.Store.FK__TomaFisic__IdMot__035179CE">
+    <AssociationSet Name="FK__TomaFisic__IdMot__025D5595" Association="ModelInventario.Store.FK__TomaFisic__IdMot__025D5595">
       <End Role="Motivo" EntitySet="Motivo" />
       <End Role="TomaFisicaCab" EntitySet="TomaFisicaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__TomaFisic__IdTip__04459E07" Association="ModelInventario.Store.FK__TomaFisic__IdTip__04459E07">
+    <AssociationSet Name="FK__TomaFisic__IdTip__035179CE" Association="ModelInventario.Store.FK__TomaFisic__IdTip__035179CE">
       <End Role="TipoArticulo" EntitySet="TipoArticulo" />
       <End Role="TomaFisicaCab" EntitySet="TomaFisicaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__TomaFisic__IdUsu__062DE679" Association="ModelInventario.Store.FK__TomaFisic__IdUsu__062DE679">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="TomaFisicaCab" EntitySet="TomaFisicaCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TomaFisicaCab__0539C240" Association="ModelInventario.Store.FK__TomaFisicaCab__0539C240">
+    <AssociationSet Name="FK__TomaFisicaCab__04459E07" Association="ModelInventario.Store.FK__TomaFisicaCab__04459E07">
       <End Role="Bodega" EntitySet="Bodega" />
       <End Role="TomaFisicaCab" EntitySet="TomaFisicaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__TomaFisicaDet__0CDAE408" Association="ModelInventario.Store.FK__TomaFisicaDet__0CDAE408">
+    <AssociationSet Name="FK__TomaFisicaDet__0BE6BFCF" Association="ModelInventario.Store.FK__TomaFisicaDet__0BE6BFCF">
       <End Role="Articulo" EntitySet="Articulo" />
       <End Role="TomaFisicaDet" EntitySet="TomaFisicaDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__Transfere__IdEmp__731B1205" Association="ModelInventario.Store.FK__Transfere__IdEmp__731B1205">
+    <AssociationSet Name="FK__Transfere__IdEmp__7226EDCC" Association="ModelInventario.Store.FK__Transfere__IdEmp__7226EDCC">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TransferenciaBodegaCab" EntitySet="TransferenciaBodegaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__Transfere__IdMot__75F77EB0" Association="ModelInventario.Store.FK__Transfere__IdMot__75F77EB0">
+    <AssociationSet Name="FK__Transfere__IdMot__75035A77" Association="ModelInventario.Store.FK__Transfere__IdMot__75035A77">
       <End Role="Motivo" EntitySet="Motivo" />
       <End Role="TransferenciaBodegaCab" EntitySet="TransferenciaBodegaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__Transfere__IdUsu__77DFC722" Association="ModelInventario.Store.FK__Transfere__IdUsu__77DFC722">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="TransferenciaBodegaCab" EntitySet="TransferenciaBodegaCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Transfere__NroTr__7CA47C3F" Association="ModelInventario.Store.FK__Transfere__NroTr__7CA47C3F">
+    <AssociationSet Name="FK__Transfere__NroTr__7BB05806" Association="ModelInventario.Store.FK__Transfere__NroTr__7BB05806">
       <End Role="TransferenciaBodegaCab" EntitySet="TransferenciaBodegaCab" />
       <End Role="TransferenciaBodegaDet" EntitySet="TransferenciaBodegaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TransferenciaBod__731B1205" Association="ModelInventario.Store.FK__TransferenciaBod__731B1205">
+      <End Role="Bodega" EntitySet="Bodega" />
+      <End Role="TransferenciaBodegaCab" EntitySet="TransferenciaBodegaCab" />
     </AssociationSet>
     <AssociationSet Name="FK__TransferenciaBod__740F363E" Association="ModelInventario.Store.FK__TransferenciaBod__740F363E">
       <End Role="Bodega" EntitySet="Bodega" />
       <End Role="TransferenciaBodegaCab" EntitySet="TransferenciaBodegaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__TransferenciaBod__75035A77" Association="ModelInventario.Store.FK__TransferenciaBod__75035A77">
-      <End Role="Bodega" EntitySet="Bodega" />
-      <End Role="TransferenciaBodegaCab" EntitySet="TransferenciaBodegaCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__UnidadMed__IdEmp__28B808A7" Association="ModelInventario.Store.FK__UnidadMed__IdEmp__28B808A7">
+    <AssociationSet Name="FK__UnidadMed__IdEmp__27C3E46E" Association="ModelInventario.Store.FK__UnidadMed__IdEmp__27C3E46E">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="UnidadMedida" EntitySet="UnidadMedida" />
     </AssociationSet>
-    <AssociationSet Name="FK__Usuario__IdUsuar__3C69FB99" Association="ModelInventario.Store.FK__Usuario__IdUsuar__3C69FB99">
-      <End Role="Persona" EntitySet="Persona" />
-      <End Role="Usuario" EntitySet="Usuario" />
-    </AssociationSet>
   </EntityContainer>
-  <EntityType Name="Estado">
-    <Key>
-      <PropertyRef Name="idEstado" />
-    </Key>
-    <Property Name="idEstado" Type="int" Nullable="false" />
-    <Property Name="Descripcion" Type="varchar" MaxLength="100" />
-  </EntityType>
   <EntityType Name="OrdenCompra">
     <Key>
       <PropertyRef Name="IdOrdenCompra" />
@@ -408,11 +380,9 @@
     <Property Name="NroMovimiento" Type="int" Nullable="false" />
     <Property Name="IdTipoMovimiento" Type="int" />
     <Property Name="FechaMovimiento" Type="date" />
-    <Property Name="IdOrdenCompra" Type="int" />
     <Property Name="IdMotivo" Type="int" />
     <Property Name="IdBodega" Type="int" />
     <Property Name="IdResponsable" Type="int" />
-    <Property Name="TotalPagar" Type="numeric" Precision="7" Scale="2" />
     <Property Name="Observacion" Type="varchar" MaxLength="150" />
     <Property Name="IdUsuario" Type="int" />
     <Property Name="IdEstado" Type="int" />
@@ -425,13 +395,43 @@
     <Property Name="IdEmpresa" Type="int" />
     <Property Name="NroMovimiento" Type="int" Nullable="false" />
     <Property Name="numero" Type="int" Nullable="false" />
-    <Property Name="IdTipoArticulo" Type="int" />
     <Property Name="IdArticulo" Type="int" />
-    <Property Name="IdGrupo" Type="int" />
+    <Property Name="IdPercha" Type="int" />
+    <Property Name="Cantidad" Type="int" />
+  </EntityType>
+  <EntityType Name="LlegadaMercaderiaCab">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="NroMovimiento" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="NroMovimiento" Type="int" Nullable="false" />
+    <Property Name="IdTipoMovimiento" Type="int" />
+    <Property Name="IdOrdenCompra" Type="int" />
+    <Property Name="IdProveedor" Type="int" />
+    <Property Name="Factura" Type="numeric" Precision="15" />
+    <Property Name="FechaMovimiento" Type="date" />
+    <Property Name="IdMotivo" Type="int" />
+    <Property Name="IdBodega" Type="int" />
+    <Property Name="IdResponsable" Type="int" />
+    <Property Name="Observacion" Type="varchar" MaxLength="150" />
+    <Property Name="IdUsuario" Type="int" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="LlegadaMercaderiaDet">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="NroMovimiento" />
+      <PropertyRef Name="numero" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="NroMovimiento" Type="int" Nullable="false" />
+    <Property Name="numero" Type="int" Nullable="false" />
+    <Property Name="IdArticulo" Type="int" />
     <Property Name="IdPercha" Type="int" />
     <Property Name="CantidadPedida" Type="int" />
     <Property Name="CantidadLlegada" Type="int" />
-    <Property Name="Costo" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="Precio" Type="numeric" Precision="5" Scale="2" />
     <Property Name="Subtotal" Type="numeric" Precision="5" Scale="2" />
     <Property Name="ValorIVA" Type="numeric" Precision="5" Scale="2" />
     <Property Name="ValorTotal" Type="numeric" Precision="5" Scale="2" />
@@ -540,9 +540,11 @@
   <EntityType Name="TomaFisicaDet">
     <Key>
       <PropertyRef Name="NroTomaFisica" />
+      <PropertyRef Name="linea" />
     </Key>
     <Property Name="IdEmpresa" Type="int" />
     <Property Name="NroTomaFisica" Type="int" Nullable="false" />
+    <Property Name="linea" Type="int" Nullable="false" />
     <Property Name="IdArticulo" Type="int" />
     <Property Name="ExistenciaSistema" Type="int" />
     <Property Name="ExistenciaFisica" Type="int" />
@@ -584,27 +586,6 @@
     <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
     <Property Name="IdEstado" Type="int" />
   </EntityType>
-  <EntityType Name="Persona">
-    <Key>
-      <PropertyRef Name="IdPersona" />
-    </Key>
-    <Property Name="IdPersona" Type="int" Nullable="false" />
-    <Property Name="Identificacion" Type="numeric" Nullable="false" Precision="14" />
-    <Property Name="IdTipoPersona" Type="int" Nullable="false" />
-    <Property Name="IdEmpresa" Type="int" Nullable="false" />
-    <Property Name="NombreRazonSocial" Type="varchar" Nullable="false" MaxLength="100" />
-    <Property Name="Apellido" Type="varchar" MaxLength="50" />
-    <Property Name="FechaNacimiento" Type="datetime" />
-    <Property Name="genero" Type="char" MaxLength="1" />
-    <Property Name="TipoIdentificacion" Type="int" Nullable="false" />
-    <Property Name="direccion" Type="varchar" Nullable="false" MaxLength="100" />
-    <Property Name="TelefonoGneral" Type="numeric" Precision="14" />
-    <Property Name="TelefonoMovil" Type="numeric" Nullable="false" Precision="14" />
-    <Property Name="TelefonoCasa" Type="numeric" Nullable="false" Precision="14" />
-    <Property Name="TelefonoOtros" Type="numeric" Precision="14" />
-    <Property Name="mail" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="IdEstado" Type="int" Nullable="false" />
-  </EntityType>
   <EntityType Name="Empresa">
     <Key>
       <PropertyRef Name="IdEmpresa" />
@@ -622,18 +603,7 @@
     <Property Name="Descripcion" Type="varchar" MaxLength="250" />
     <Property Name="IdEstado" Type="int" />
   </EntityType>
-  <EntityType Name="Usuario">
-    <Key>
-      <PropertyRef Name="IdUsuario" />
-    </Key>
-    <Property Name="IdUsuario" Type="int" Nullable="false" />
-    <Property Name="NombreUsuario" Type="varchar" Nullable="false" MaxLength="20" />
-    <Property Name="Contrasena" Type="varchar" Nullable="false" MaxLength="220" />
-    <Property Name="IdEstado" Type="int" />
-    <Property Name="IdImagen" Type="int" />
-    <Property Name="IdPerfil" Type="int" />
-  </EntityType>
-  <Association Name="FK__Articulo__IdChas__5C37ACAD">
+  <Association Name="FK__Articulo__IdChas__5B438874">
     <End Role="Chasis" Type="ModelInventario.Store.Chasis" Multiplicity="0..1" />
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -645,7 +615,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdColo__5F141958">
+  <Association Name="FK__Articulo__IdColo__5E1FF51F">
     <End Role="Color" Type="ModelInventario.Store.Color" Multiplicity="0..1" />
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -657,7 +627,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdEmpr__58671BC9">
+  <Association Name="FK__Articulo__IdEmpr__5772F790">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="1" />
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -669,7 +639,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdGrup__5B438874">
+  <Association Name="FK__Articulo__IdGrup__5A4F643B">
     <End Role="Grupo" Type="ModelInventario.Store.Grupo" Multiplicity="1" />
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -681,7 +651,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdMarc__60083D91">
+  <Association Name="FK__Articulo__IdMarc__5F141958">
     <End Role="Marca" Type="ModelInventario.Store.Marca" Multiplicity="0..1" />
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -693,7 +663,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdMode__60FC61CA">
+  <Association Name="FK__Articulo__IdMode__60083D91">
     <End Role="Modelo" Type="ModelInventario.Store.Modelo" Multiplicity="0..1" />
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -705,7 +675,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdTipo__5A4F643B">
+  <Association Name="FK__Articulo__IdTipo__595B4002">
     <End Role="TipoArticulo" Type="ModelInventario.Store.TipoArticulo" Multiplicity="1" />
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -717,7 +687,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdTipo__5D2BD0E6">
+  <Association Name="FK__Articulo__IdTipo__5C37ACAD">
     <End Role="TipoMotor" Type="ModelInventario.Store.TipoMotor" Multiplicity="0..1" />
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -729,7 +699,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdTipo__5E1FF51F">
+  <Association Name="FK__Articulo__IdTipo__5D2BD0E6">
     <End Role="TipoCombustible" Type="ModelInventario.Store.TipoCombustible" Multiplicity="0..1" />
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -741,7 +711,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdTipo__61F08603">
+  <Association Name="FK__Articulo__IdTipo__60FC61CA">
     <End Role="TipoMaterial" Type="ModelInventario.Store.TipoMaterial" Multiplicity="0..1" />
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -753,7 +723,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdUnid__595B4002">
+  <Association Name="FK__Articulo__IdUnid__58671BC9">
     <End Role="UnidadMedida" Type="ModelInventario.Store.UnidadMedida" Multiplicity="0..1" />
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -765,7 +735,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ArticuloB__IdEmp__1758727B">
+  <Association Name="FK__ArticuloB__IdEmp__16644E42">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="ArticuloBodega" Type="ModelInventario.Store.ArticuloBodega" Multiplicity="*" />
     <ReferentialConstraint>
@@ -777,7 +747,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ArticuloB__IdPer__1940BAED">
+  <Association Name="FK__ArticuloB__IdPer__184C96B4">
     <End Role="Percha" Type="ModelInventario.Store.Percha" Multiplicity="0..1" />
     <End Role="ArticuloBodega" Type="ModelInventario.Store.ArticuloBodega" Multiplicity="*" />
     <ReferentialConstraint>
@@ -789,7 +759,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ArticuloBodega__184C96B4">
+  <Association Name="FK__ArticuloBodega__1758727B">
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="0..1" />
     <End Role="ArticuloBodega" Type="ModelInventario.Store.ArticuloBodega" Multiplicity="*" />
     <ReferentialConstraint>
@@ -803,7 +773,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Bodega__IdEmpres__220B0B18">
+  <Association Name="FK__Bodega__IdEmpres__2116E6DF">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="1" />
     <End Role="Bodega" Type="ModelInventario.Store.Bodega" Multiplicity="*" />
     <ReferentialConstraint>
@@ -815,19 +785,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Bodega__IdRespon__22FF2F51">
-    <End Role="Persona" Type="ModelInventario.Store.Persona" Multiplicity="0..1" />
-    <End Role="Bodega" Type="ModelInventario.Store.Bodega" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Persona">
-        <PropertyRef Name="IdPersona" />
-      </Principal>
-      <Dependent Role="Bodega">
-        <PropertyRef Name="IdResponsable" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Chasis__IdEmpres__2E70E1FD">
+  <Association Name="FK__Chasis__IdEmpres__2D7CBDC4">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="Chasis" Type="ModelInventario.Store.Chasis" Multiplicity="*" />
     <ReferentialConstraint>
@@ -839,7 +797,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Color__IdEmpresa__3F9B6DFF">
+  <Association Name="FK__Color__IdEmpresa__3EA749C6">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="Color" Type="ModelInventario.Store.Color" Multiplicity="*" />
     <ReferentialConstraint>
@@ -851,7 +809,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Grupo__IdEmpresa__6ABAD62E">
+  <Association Name="FK__Grupo__IdEmpresa__69C6B1F5">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="Grupo" Type="ModelInventario.Store.Grupo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -863,7 +821,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Grupo__IdTipoArt__6BAEFA67">
+  <Association Name="FK__Grupo__IdTipoArt__6ABAD62E">
     <End Role="TipoArticulo" Type="ModelInventario.Store.TipoArticulo" Multiplicity="0..1" />
     <End Role="Grupo" Type="ModelInventario.Store.Grupo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -875,19 +833,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__IngresoEg__IdGru__190BB0C3">
-    <End Role="Grupo" Type="ModelInventario.Store.Grupo" Multiplicity="0..1" />
-    <End Role="IngresoEgresoDet" Type="ModelInventario.Store.IngresoEgresoDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Grupo">
-        <PropertyRef Name="IdGrupo" />
-      </Principal>
-      <Dependent Role="IngresoEgresoDet">
-        <PropertyRef Name="IdGrupo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__IngresoEg__IdMot__0E8E2250">
+  <Association Name="FK__IngresoEg__IdMot__0CA5D9DE">
     <End Role="Motivo" Type="ModelInventario.Store.Motivo" Multiplicity="0..1" />
     <End Role="IngresoEgresoCab" Type="ModelInventario.Store.IngresoEgresoCab" Multiplicity="*" />
     <ReferentialConstraint>
@@ -899,7 +845,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__IngresoEg__IdPer__19FFD4FC">
+  <Association Name="FK__IngresoEg__IdPer__162F4418">
     <End Role="Percha" Type="ModelInventario.Store.Percha" Multiplicity="0..1" />
     <End Role="IngresoEgresoDet" Type="ModelInventario.Store.IngresoEgresoDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -911,19 +857,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__IngresoEg__IdRes__10766AC2">
-    <End Role="Persona" Type="ModelInventario.Store.Persona" Multiplicity="0..1" />
-    <End Role="IngresoEgresoCab" Type="ModelInventario.Store.IngresoEgresoCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Persona">
-        <PropertyRef Name="IdPersona" />
-      </Principal>
-      <Dependent Role="IngresoEgresoCab">
-        <PropertyRef Name="IdResponsable" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__IngresoEg__IdTip__0CA5D9DE">
+  <Association Name="FK__IngresoEg__IdTip__0ABD916C">
     <End Role="TipoMovimiento" Type="ModelInventario.Store.TipoMovimiento" Multiplicity="0..1" />
     <End Role="IngresoEgresoCab" Type="ModelInventario.Store.IngresoEgresoCab" Multiplicity="*" />
     <ReferentialConstraint>
@@ -935,45 +869,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__IngresoEg__IdTip__162F4418">
-    <End Role="TipoArticulo" Type="ModelInventario.Store.TipoArticulo" Multiplicity="0..1" />
-    <End Role="IngresoEgresoDet" Type="ModelInventario.Store.IngresoEgresoDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TipoArticulo">
-        <PropertyRef Name="IdTipoArticulo" />
-      </Principal>
-      <Dependent Role="IngresoEgresoDet">
-        <PropertyRef Name="IdTipoArticulo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__IngresoEg__IdUsu__116A8EFB">
-    <End Role="Usuario" Type="ModelInventario.Store.Usuario" Multiplicity="0..1" />
-    <End Role="IngresoEgresoCab" Type="ModelInventario.Store.IngresoEgresoCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="IngresoEgresoCab">
-        <PropertyRef Name="IdUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__IngresoEgresoCab__0BB1B5A5">
-    <End Role="OrdenCompra" Type="ModelInventario.Store.OrdenCompra" Multiplicity="0..1" />
-    <End Role="IngresoEgresoCab" Type="ModelInventario.Store.IngresoEgresoCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="OrdenCompra">
-        <PropertyRef Name="IdOrdenCompra" />
-        <PropertyRef Name="idEmpresa" />
-      </Principal>
-      <Dependent Role="IngresoEgresoCab">
-        <PropertyRef Name="IdOrdenCompra" />
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__IngresoEgresoCab__0F824689">
+  <Association Name="FK__IngresoEgresoCab__0D99FE17">
     <End Role="Bodega" Type="ModelInventario.Store.Bodega" Multiplicity="0..1" />
     <End Role="IngresoEgresoCab" Type="ModelInventario.Store.IngresoEgresoCab" Multiplicity="*" />
     <ReferentialConstraint>
@@ -987,7 +883,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__IngresoEgresoDet__17236851">
+  <Association Name="FK__IngresoEgresoDet__1446FBA6">
     <End Role="IngresoEgresoCab" Type="ModelInventario.Store.IngresoEgresoCab" Multiplicity="0..1" />
     <End Role="IngresoEgresoDet" Type="ModelInventario.Store.IngresoEgresoDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1001,7 +897,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__IngresoEgresoDet__18178C8A">
+  <Association Name="FK__IngresoEgresoDet__153B1FDF">
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="0..1" />
     <End Role="IngresoEgresoDet" Type="ModelInventario.Store.IngresoEgresoDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1015,7 +911,99 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Marca__IdEmpresa__45544755">
+  <Association Name="FK__LlegadaMe__IdMot__1EC48A19">
+    <End Role="Motivo" Type="ModelInventario.Store.Motivo" Multiplicity="0..1" />
+    <End Role="LlegadaMercaderiaCab" Type="ModelInventario.Store.LlegadaMercaderiaCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Motivo">
+        <PropertyRef Name="IdMotivo" />
+      </Principal>
+      <Dependent Role="LlegadaMercaderiaCab">
+        <PropertyRef Name="IdMotivo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LlegadaMe__IdPer__284DF453">
+    <End Role="Percha" Type="ModelInventario.Store.Percha" Multiplicity="0..1" />
+    <End Role="LlegadaMercaderiaDet" Type="ModelInventario.Store.LlegadaMercaderiaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Percha">
+        <PropertyRef Name="IdPercha" />
+      </Principal>
+      <Dependent Role="LlegadaMercaderiaDet">
+        <PropertyRef Name="IdPercha" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LlegadaMe__IdTip__1CDC41A7">
+    <End Role="TipoMovimiento" Type="ModelInventario.Store.TipoMovimiento" Multiplicity="0..1" />
+    <End Role="LlegadaMercaderiaCab" Type="ModelInventario.Store.LlegadaMercaderiaCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoMovimiento">
+        <PropertyRef Name="IdTipoMovimiento" />
+      </Principal>
+      <Dependent Role="LlegadaMercaderiaCab">
+        <PropertyRef Name="IdTipoMovimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LlegadaMercaderi__1AF3F935">
+    <End Role="OrdenCompra" Type="ModelInventario.Store.OrdenCompra" Multiplicity="0..1" />
+    <End Role="LlegadaMercaderiaCab" Type="ModelInventario.Store.LlegadaMercaderiaCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenCompra">
+        <PropertyRef Name="IdOrdenCompra" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="LlegadaMercaderiaCab">
+        <PropertyRef Name="IdOrdenCompra" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LlegadaMercaderi__1FB8AE52">
+    <End Role="Bodega" Type="ModelInventario.Store.Bodega" Multiplicity="0..1" />
+    <End Role="LlegadaMercaderiaCab" Type="ModelInventario.Store.LlegadaMercaderiaCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bodega">
+        <PropertyRef Name="IdBodega" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="LlegadaMercaderiaCab">
+        <PropertyRef Name="IdBodega" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LlegadaMercaderi__2665ABE1">
+    <End Role="LlegadaMercaderiaCab" Type="ModelInventario.Store.LlegadaMercaderiaCab" Multiplicity="1" />
+    <End Role="LlegadaMercaderiaDet" Type="ModelInventario.Store.LlegadaMercaderiaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LlegadaMercaderiaCab">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NroMovimiento" />
+      </Principal>
+      <Dependent Role="LlegadaMercaderiaDet">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NroMovimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LlegadaMercaderi__2759D01A">
+    <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="0..1" />
+    <End Role="LlegadaMercaderiaDet" Type="ModelInventario.Store.LlegadaMercaderiaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="LlegadaMercaderiaDet">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Marca__IdEmpresa__4460231C">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="Marca" Type="ModelInventario.Store.Marca" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1027,7 +1015,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Modelo__IdEmpres__4B0D20AB">
+  <Association Name="FK__Modelo__IdEmpres__4A18FC72">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="Modelo" Type="ModelInventario.Store.Modelo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1039,7 +1027,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Modelo__IdMarca__4CF5691D">
+  <Association Name="FK__Modelo__IdMarca__4C0144E4">
     <End Role="Marca" Type="ModelInventario.Store.Marca" Multiplicity="0..1" />
     <End Role="Modelo" Type="ModelInventario.Store.Modelo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1051,7 +1039,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Motivo__IdEmpres__6D6238AF">
+  <Association Name="FK__Motivo__IdEmpres__6C6E1476">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="Motivo" Type="ModelInventario.Store.Motivo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1063,7 +1051,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrdenComp__idEmp__0B27A5C0">
+  <Association Name="FK__OrdenComp__idEmp__0A338187">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="1" />
     <End Role="OrdenCompra" Type="ModelInventario.Store.OrdenCompra" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1075,31 +1063,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrdenComp__idEst__0D0FEE32">
-    <End Role="Estado" Type="ModelInventario.Store.Estado" Multiplicity="1" />
-    <End Role="OrdenCompra" Type="ModelInventario.Store.OrdenCompra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Estado">
-        <PropertyRef Name="idEstado" />
-      </Principal>
-      <Dependent Role="OrdenCompra">
-        <PropertyRef Name="idEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__OrdenComp__IdUsu__0C1BC9F9">
-    <End Role="Usuario" Type="ModelInventario.Store.Usuario" Multiplicity="1" />
-    <End Role="OrdenCompra" Type="ModelInventario.Store.OrdenCompra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="OrdenCompra">
-        <PropertyRef Name="IdUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__OrdenCompraDet__63F8CA06">
+  <Association Name="FK__OrdenCompraDet__66D536B1">
     <End Role="OrdenCompra" Type="ModelInventario.Store.OrdenCompra" Multiplicity="1" />
     <End Role="OrdenCompraDet" Type="ModelInventario.Store.OrdenCompraDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1113,7 +1077,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrdenCompraDet__64ECEE3F">
+  <Association Name="FK__OrdenCompraDet__67C95AEA">
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="1" />
     <End Role="OrdenCompraDet" Type="ModelInventario.Store.OrdenCompraDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1127,7 +1091,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Percha__67A95F59">
+  <Association Name="FK__Percha__66B53B20">
     <End Role="Bodega" Type="ModelInventario.Store.Bodega" Multiplicity="1" />
     <End Role="Percha" Type="ModelInventario.Store.Percha" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1141,7 +1105,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Percha__IdEmpres__66B53B20">
+  <Association Name="FK__Percha__IdEmpres__65C116E7">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="1" />
     <End Role="Percha" Type="ModelInventario.Store.Percha" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1153,19 +1117,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Persona__IdEmpre__1BFD2C07">
-    <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="1" />
-    <End Role="Persona" Type="ModelInventario.Store.Persona" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="Persona">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TipoArtic__IdEmp__6501FCD8">
+  <Association Name="FK__TipoArtic__IdEmp__640DD89F">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="TipoArticulo" Type="ModelInventario.Store.TipoArticulo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1177,7 +1129,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TipoCombu__IdEmp__39E294A9">
+  <Association Name="FK__TipoCombu__IdEmp__38EE7070">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="TipoCombustible" Type="ModelInventario.Store.TipoCombustible" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1189,7 +1141,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TipoMater__IdEmp__51BA1E3A">
+  <Association Name="FK__TipoMater__IdEmp__50C5FA01">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="TipoMaterial" Type="ModelInventario.Store.TipoMaterial" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1201,7 +1153,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TipoMotor__IdEmp__3429BB53">
+  <Association Name="FK__TipoMotor__IdEmp__3335971A">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="TipoMotor" Type="ModelInventario.Store.TipoMotor" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1213,7 +1165,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TipoMovim__IdEmp__119F9925">
+  <Association Name="FK__TipoMovim__IdEmp__10AB74EC">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="TipoMovimiento" Type="ModelInventario.Store.TipoMovimiento" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1225,7 +1177,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TomaFisic__IdEmp__025D5595">
+  <Association Name="FK__TomaFisic__IdEmp__0169315C">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="TomaFisicaCab" Type="ModelInventario.Store.TomaFisicaCab" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1237,7 +1189,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TomaFisic__IdEmp__0BE6BFCF">
+  <Association Name="FK__TomaFisic__IdEmp__0AF29B96">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="TomaFisicaDet" Type="ModelInventario.Store.TomaFisicaDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1249,7 +1201,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TomaFisic__IdMot__035179CE">
+  <Association Name="FK__TomaFisic__IdMot__025D5595">
     <End Role="Motivo" Type="ModelInventario.Store.Motivo" Multiplicity="0..1" />
     <End Role="TomaFisicaCab" Type="ModelInventario.Store.TomaFisicaCab" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1261,7 +1213,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TomaFisic__IdTip__04459E07">
+  <Association Name="FK__TomaFisic__IdTip__035179CE">
     <End Role="TipoArticulo" Type="ModelInventario.Store.TipoArticulo" Multiplicity="0..1" />
     <End Role="TomaFisicaCab" Type="ModelInventario.Store.TomaFisicaCab" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1273,19 +1225,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TomaFisic__IdUsu__062DE679">
-    <End Role="Usuario" Type="ModelInventario.Store.Usuario" Multiplicity="0..1" />
-    <End Role="TomaFisicaCab" Type="ModelInventario.Store.TomaFisicaCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="TomaFisicaCab">
-        <PropertyRef Name="IdUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TomaFisicaCab__0539C240">
+  <Association Name="FK__TomaFisicaCab__04459E07">
     <End Role="Bodega" Type="ModelInventario.Store.Bodega" Multiplicity="0..1" />
     <End Role="TomaFisicaCab" Type="ModelInventario.Store.TomaFisicaCab" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1299,7 +1239,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TomaFisicaDet__0CDAE408">
+  <Association Name="FK__TomaFisicaDet__0BE6BFCF">
     <End Role="Articulo" Type="ModelInventario.Store.Articulo" Multiplicity="0..1" />
     <End Role="TomaFisicaDet" Type="ModelInventario.Store.TomaFisicaDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1313,7 +1253,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Transfere__IdEmp__731B1205">
+  <Association Name="FK__Transfere__IdEmp__7226EDCC">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="TransferenciaBodegaCab" Type="ModelInventario.Store.TransferenciaBodegaCab" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1325,7 +1265,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Transfere__IdMot__75F77EB0">
+  <Association Name="FK__Transfere__IdMot__75035A77">
     <End Role="Motivo" Type="ModelInventario.Store.Motivo" Multiplicity="0..1" />
     <End Role="TransferenciaBodegaCab" Type="ModelInventario.Store.TransferenciaBodegaCab" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1337,19 +1277,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Transfere__IdUsu__77DFC722">
-    <End Role="Usuario" Type="ModelInventario.Store.Usuario" Multiplicity="0..1" />
-    <End Role="TransferenciaBodegaCab" Type="ModelInventario.Store.TransferenciaBodegaCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="TransferenciaBodegaCab">
-        <PropertyRef Name="IdUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Transfere__NroTr__7CA47C3F">
+  <Association Name="FK__Transfere__NroTr__7BB05806">
     <End Role="TransferenciaBodegaCab" Type="ModelInventario.Store.TransferenciaBodegaCab" Multiplicity="1" />
     <End Role="TransferenciaBodegaDet" Type="ModelInventario.Store.TransferenciaBodegaDet" Multiplicity="0..1" />
     <ReferentialConstraint>
@@ -1361,7 +1289,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TransferenciaBod__740F363E">
+  <Association Name="FK__TransferenciaBod__731B1205">
     <End Role="Bodega" Type="ModelInventario.Store.Bodega" Multiplicity="0..1" />
     <End Role="TransferenciaBodegaCab" Type="ModelInventario.Store.TransferenciaBodegaCab" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1375,7 +1303,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TransferenciaBod__75035A77">
+  <Association Name="FK__TransferenciaBod__740F363E">
     <End Role="Bodega" Type="ModelInventario.Store.Bodega" Multiplicity="0..1" />
     <End Role="TransferenciaBodegaCab" Type="ModelInventario.Store.TransferenciaBodegaCab" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1389,7 +1317,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__UnidadMed__IdEmp__28B808A7">
+  <Association Name="FK__UnidadMed__IdEmp__27C3E46E">
     <End Role="Empresa" Type="ModelInventario.Store.Empresa" Multiplicity="0..1" />
     <End Role="UnidadMedida" Type="ModelInventario.Store.UnidadMedida" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1398,20 +1326,6 @@
       </Principal>
       <Dependent Role="UnidadMedida">
         <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Usuario__IdUsuar__3C69FB99">
-    <End Role="Persona" Type="ModelInventario.Store.Persona" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Usuario" Type="ModelInventario.Store.Usuario" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Persona">
-        <PropertyRef Name="IdPersona" />
-      </Principal>
-      <Dependent Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

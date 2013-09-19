@@ -61,7 +61,6 @@ namespace forms.ActivoFijo
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clsEmpresaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.cbxEmpresa = new DevExpress.XtraEditors.GridLookUpEdit();
             this.colidEmpresa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colrazonSocial = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnombreComercial = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -74,6 +73,7 @@ namespace forms.ActivoFijo
             this.colsector = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colidEstado = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cbxEmpresa = new DevExpress.XtraEditors.GridLookUpEdit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtFecha.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFecha.Properties)).BeginInit();
@@ -361,19 +361,6 @@ namespace forms.ActivoFijo
             this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
-            // cbxEmpresa
-            // 
-            this.cbxEmpresa.Location = new System.Drawing.Point(374, 126);
-            this.cbxEmpresa.Name = "cbxEmpresa";
-            this.cbxEmpresa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxEmpresa.Properties.DataSource = this.clsEmpresaBindingSource;
-            this.cbxEmpresa.Properties.DisplayMember = "nombreComercial";
-            this.cbxEmpresa.Properties.ValueMember = "nombreComercial";
-            this.cbxEmpresa.Properties.View = this.gridView2;
-            this.cbxEmpresa.Size = new System.Drawing.Size(111, 20);
-            this.cbxEmpresa.TabIndex = 318;
-            // 
             // colidEmpresa
             // 
             this.colidEmpresa.FieldName = "idEmpresa";
@@ -443,6 +430,20 @@ namespace forms.ActivoFijo
             // 
             this.colidEstado.FieldName = "idEstado";
             this.colidEstado.Name = "colidEstado";
+            // 
+            // cbxEmpresa
+            // 
+            this.cbxEmpresa.Enabled = false;
+            this.cbxEmpresa.Location = new System.Drawing.Point(374, 126);
+            this.cbxEmpresa.Name = "cbxEmpresa";
+            this.cbxEmpresa.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxEmpresa.Properties.DataSource = this.clsEmpresaBindingSource;
+            this.cbxEmpresa.Properties.DisplayMember = "nombreComercial";
+            this.cbxEmpresa.Properties.ValueMember = "nombreComercial";
+            this.cbxEmpresa.Properties.View = this.gridView2;
+            this.cbxEmpresa.Size = new System.Drawing.Size(111, 20);
+            this.cbxEmpresa.TabIndex = 318;
             // 
             // mntActivoFIjo
             // 

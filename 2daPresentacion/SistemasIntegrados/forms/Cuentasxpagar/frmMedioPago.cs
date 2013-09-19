@@ -17,14 +17,10 @@ namespace forms.Cuentasxpagar
         public frmMedioPago()
         {
             InitializeComponent();
-            event_click += new delegate_Click(frmMedioPago_event_click);
- 
-
         }
-        clsUsuario usar = new clsUsuario();
-        int solo = 1;
-        int solo2 = 2;
-       
+
+        int solo = 11;
+
         void frmMedioPago_event_click(object sender, EventArgs e)
         {
 
@@ -40,28 +36,28 @@ namespace forms.Cuentasxpagar
             frmConsultaMedioPago fre = new frmConsultaMedioPago();
             fre.ShowDialog();
             clas = fre.mp;
-           if( clas.IdMedioPago ==0)
-           {
-               limpiar ();
+            if (clas.IdMedioPago == 0)
+            {
+                limpiar();
 
-           }
-           else
-           {
-               Set();
+            }
+            else
+            {
+                Set();
 
-           }
+            }
 
 
 
         }
 
-       
+
         private void frmMedioPago_Load(object sender, EventArgs e)
         {
-            deFechaRegistro.EditValue = DateTime.Today;
+            dtpFechaRegistro.EditValue = DateTime.Today;
             txtCodigo.Text = Convert.ToString(dato.getIdSiguiente());
             datosMedioPago fre = new datosMedioPago();
-            
+
             if (accion == "M")
             {
                 Set();
@@ -74,10 +70,10 @@ namespace forms.Cuentasxpagar
         }
 
         public void Set()
-            {
+        {
             txtCodigo.Text = Convert.ToString(clas.IdMedioPago);
             txtDescripcion.Text = clas.Descripcion;
-            deFechaRegistro.EditValue = clas.FechaRegistro;
+            dtpFechaRegistro.EditValue = clas.FechaRegistro;
             if (clas.Estado == 1)
             {
                 cbxEstado.Text = "Activo";
@@ -88,69 +84,80 @@ namespace forms.Cuentasxpagar
             }
 
             solo = clas.IdEmpresa;
-            solo= clas.IdUsuario;
+            solo = clas.IdUsuario;
 
-          }
-            public void get()
+        }
+        public void get()
+        {
+            if (txtCodigo.Text == "")
             {
-                if (txtCodigo.Text == "")
-                {
-                    clas.IdMedioPago = 0;
-
-                }
-                else
-                {
-                    clas.IdMedioPago = Convert.ToInt32(txtCodigo.Text);
-                }
-                    clas.Descripcion = txtDescripcion.Text;
-                    clas.FechaRegistro = Convert.ToDateTime(deFechaRegistro.EditValue);
-                    if (cbxEstado.Text == "Activo")
-                        clas.Estado = 1;
-                    else
-                        clas.Estado = 0;
-          
-
-                    clas.IdEmpresa = solo2;
-                    clas.IdUsuario = solo;
-                
+                clas.IdMedioPago = 0;
 
             }
-            public delegate void delegate_Click(object sender, EventArgs e);
-            public event delegate_Click event_click;
-
-            private void tsbGuardar_Click(object sender, EventArgs e)
+            else
             {
-                if (txtDescripcion.Text == "")
-                {
-                    MessageBox.Show(men.Error_Des, men.Titulo, MessageBoxButtons.OK);
-                }
+                clas.IdMedioPago = Convert.ToInt32(txtCodigo.Text);
+            }
+            clas.Descripcion = txtDescripcion.Text;
+            clas.FechaRegistro = Convert.ToDateTime(dtpFechaRegistro.EditValue);
+            if (cbxEstado.Text == "Activo")
+                clas.Estado = 1;
+            else
+                clas.Estado = 0;
 
-                else
+
+            clas.IdEmpresa = 1;
+            clas.IdUsuario = 11;
+
+
+        }
+        
+        public void limpiar()
+        {
+            txtCodigo.Text = "";
+            txtDescripcion.Text = "";
+            //  deFechaRegistro.EditValue ="";
+            cbxEstado.SelectedIndex = 0;
+
+
+        }
+
+        private void tsbNuevo_Click_1(object sender, EventArgs e)
+        {
+            limpiar();
+            txtCodigo.Text = Convert.ToString(dato.getIdSiguiente());
+        }
+
+        private void tsbGuardar_Click_1(object sender, EventArgs e)
+        {
+            if (txtDescripcion.Text == "")
+            {
+                MessageBox.Show(men.Error_Des, men.Titulo, MessageBoxButtons.OK);
+            }
+
+            else
+            {
+                get();
+                accion = "G";
+                if (accion == "G")
                 {
-                    get();
-                    accion = "G";
-                    if (accion == "G")
+                    if (dato.Guardar(clas))
                     {
-                        if (dato.Guardar(clas))
-                        {
-                            MessageBox.Show(men.Guardar_ok, men.Titulo, MessageBoxButtons.OK);
-                            limpiar();
-                        }
-                        else
-                        {
-
-                            MessageBox.Show(men.Guardar_error, men.Titulo, MessageBoxButtons.OK);
-                        }
+                        MessageBox.Show(men.Guardar_ok, men.Titulo, MessageBoxButtons.OK);
+                        limpiar();
                     }
-                    event_click(sender, e);
-                    frmMedioPago_event_click(sender, e);
+                    else
+                    {
 
+                        MessageBox.Show(men.Guardar_error, men.Titulo, MessageBoxButtons.OK);
+                    }
                 }
             }
+        }
 
-            private void tsbModificar_Click(object sender, EventArgs e)
-            {
-                if (txtCodigo.Text == "" || txtCodigo.Text == Convert.ToString(dato.getIdSiguiente()))
+        private void tsbModificar_Click_1(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == "" || txtCodigo.Text == Convert.ToString(dato.getIdSiguiente()))
             {
                 MessageBox.Show(men.Error_cod, men.Titulo, MessageBoxButtons.OK);
             }
@@ -159,64 +166,39 @@ namespace forms.Cuentasxpagar
 
                 get();
                 dato.Modificar(clas);
-                event_click(sender, e);
-                frmMedioPago_event_click(sender, e);
                 MessageBox.Show(men.Exito_mod, men.Titulo, MessageBoxButtons.OK);
-                
-            }
-                }
-            private void tsbEliminar_Click(object sender, EventArgs e)
-            {
-                if (txtCodigo.Text == "" || txtCodigo.Text == Convert.ToString(dato.getIdSiguiente()))
-                {
-                    MessageBox.Show(men.Error_cod, men.Titulo, MessageBoxButtons.OK);
-                }
-                else
-                {
-                    get();
-                    accion = "E";
-                    if (accion == "E")
-                    {
-                        if (dato.Eliminar(clas))
-                        {
-                            MessageBox.Show(men.Exito_eli , men.Titulo, MessageBoxButtons.OK);
-                        }
-                        else
-                        {
-                            MessageBox.Show(men.Error_eli, men.Titulo, MessageBoxButtons.OK);
-                        }
-                    }
-
-                    event_click(sender, e);
-                    frmMedioPago_event_click(sender, e);
-                }
-            }
-            public void limpiar()
-            {
-                txtCodigo.Text ="";
-                txtDescripcion.Text = "";
-              //  deFechaRegistro.EditValue ="";
-            cbxEstado.SelectedIndex  = 0;
-              
 
             }
-
-            private void tsbNuevo_Click(object sender, EventArgs e)
-            {
-                limpiar();
-                txtCodigo.Text = Convert.ToString(dato.getIdSiguiente());
-            }
-
-            private void tsbSalir_Click(object sender, EventArgs e)
-            {
-                this.Close();
-            }
-
-            private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-            {
-
-            }
-
         }
-    }
 
+        private void tsbEliminar_Click_1(object sender, EventArgs e)
+        {
+            if (txtCodigo.Text == "" || txtCodigo.Text == Convert.ToString(dato.getIdSiguiente()))
+            {
+                MessageBox.Show(men.Error_cod, men.Titulo, MessageBoxButtons.OK);
+            }
+            else
+            {
+                get();
+                accion = "E";
+                if (accion == "E")
+                {
+                    if (dato.Eliminar(clas))
+                    {
+                        MessageBox.Show(men.Exito_eli, men.Titulo, MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        MessageBox.Show(men.Error_eli, men.Titulo, MessageBoxButtons.OK);
+                    }
+                }
+            }
+        }
+
+        private void tsbSalir_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+    }
+}

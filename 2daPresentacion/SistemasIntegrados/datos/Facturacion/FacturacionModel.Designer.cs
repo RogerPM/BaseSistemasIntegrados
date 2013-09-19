@@ -22,53 +22,30 @@ using System.Runtime.Serialization;
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__OrdenComp__IdUsu__0C1BC9F9", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "OrdenCompra", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.OrdenCompra), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__OrdenCompraDet__63F8CA06", "OrdenCompra", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.OrdenCompra), "OrdenCompraDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.OrdenCompraDet), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__OrdenCompraDet__64ECEE3F", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Articulo), "OrdenCompraDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.OrdenCompraDet), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__CuentaxCo__idEmp__6B0FDBE9", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Empresa), "CuentaxCobrar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CuentaxCobrar), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__CuentaxCo__idEst__6FD49106", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "CuentaxCobrar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CuentaxCobrar), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__CuentaxCo__idFac__6DEC4894", "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Factura), "CuentaxCobrar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CuentaxCobrar), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__CuentaxCo__idTra__6CF8245B", "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Factura), "CuentaxCobrar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CuentaxCobrar), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__CuentaxCo__idUsu__6C040022", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "CuentaxCobrar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CuentaxCobrar), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__CuentaxCo__idEmp__74994623", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Empresa), "CuentaxCobrarDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CuentaxCobrarDet), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__CuentaxCo__idEst__76818E95", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "CuentaxCobrarDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CuentaxCobrarDet), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__CuentaxCo__idUsu__758D6A5C", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "CuentaxCobrarDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CuentaxCobrarDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__CuentaxCo__idEmp__2D32A501", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Empresa), "CuentaxCobrar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CuentaxCobrar), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__CuentaxCo__idUsu__2E26C93A", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "CuentaxCobrar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CuentaxCobrar), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__ClienteDe__IdEmp__24B26D99", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Empresa), "ClienteDefactura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.ClienteDefactura), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__ClienteDe__idEst__269AB60B", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "ClienteDefactura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.ClienteDefactura), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__ClienteDe__idUsu__25A691D2", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "ClienteDefactura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.ClienteDefactura), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Cotizacio__IdNum__2B5F6B28", "ClienteDefactura", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.ClienteDefactura), "Cotizacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Cotizacion), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Factura__IdNumer__4BCC3ABA", "ClienteDefactura", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.ClienteDefactura), "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Factura), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Comision__idEsta__573DED66", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "Comision", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Comision), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Comision__IdNume__546180BB", "PorcentajeComision", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.PorcentajeComision), "Comision", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Comision), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Comision__idUsua__5649C92D", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "Comision", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Comision), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__ComisionD__IdNum__63A3C44B", "Comision", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Comision), "ComisionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.ComisionDet), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__ComisionD__IdEmp__668030F6", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Empresa), "ComisionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.ComisionDet), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__ComisionD__idEst__68687968", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "ComisionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.ComisionDet), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__ComisionD__IdNum__6497E884", "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Factura), "ComisionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.ComisionDet), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__ComisionD__idUsu__6774552F", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "ComisionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.ComisionDet), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__ComisionDet__658C0CBD", "Empleado", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Empleado), "ComisionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.ComisionDet), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Cotizacio__IdEmp__2D47B39A", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Empresa), "Cotizacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Cotizacion), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Cotizacio__idEst__2F2FFC0C", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "Cotizacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Cotizacion), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Cotizacio__IdFor__2C538F61", "FormaPago", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.FormaPago), "Cotizacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Cotizacion), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Cotizacio__IdNum__5C02A283", "Cotizacion", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Cotizacion), "CotizacionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CotizacionDet), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Cotizacio__idUsu__2E3BD7D3", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "Cotizacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Cotizacion), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Factura__IdNumer__4CC05EF3", "Cotizacion", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Cotizacion), "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Factura), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Cotizacio__idEst__5EDF0F2E", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "CotizacionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CotizacionDet), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Cotizacio__idUsu__5DEAEAF5", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "CotizacionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CotizacionDet), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__CotizacionDet__5CF6C6BC", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Articulo), "CotizacionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CotizacionDet), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Devolucio__idEst__06ED0088", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "DevolucionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.DevolucionDet), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Devolucio__IdNum__041093DD", "DevolucionVenta", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.DevolucionVenta), "DevolucionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.DevolucionDet), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Devolucio__idUsu__05F8DC4F", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "DevolucionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.DevolucionDet), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__DevolucionDet__0504B816", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Articulo), "DevolucionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.DevolucionDet), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Devolucio__idEst__70099B30", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "DevolucionVenta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.DevolucionVenta), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Devolucio__IdNum__6D2D2E85", "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Factura), "DevolucionVenta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.DevolucionVenta), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Devolucio__idUsu__6F1576F7", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "DevolucionVenta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.DevolucionVenta), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Factura__idEstad__4F9CCB9E", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Factura), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Factura__IdForma__49E3F248", "FormaPago", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.FormaPago), "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Factura), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Factura__IdPromo__4DB4832C", "Promocion", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Promocion), "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Factura), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Factura__idUsuar__4EA8A765", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Factura), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__FacturaDe__IdNum__7C6F7215", "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Factura), "FacturaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.FacturaDet), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__GuiaRemis__IdNum__74CE504D", "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Factura), "GuiaRemisionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.GuiaRemisionDet), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__FacturaDe__idEst__7F4BDEC0", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "FacturaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.FacturaDet), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__FacturaDe__idUsu__7E57BA87", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "FacturaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.FacturaDet), true)]
-[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__FacturaDet__7D63964E", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Articulo), "FacturaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.FacturaDet), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__FormaPago__IdEmp__1E05700A", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Empresa), "FormaPago", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.FormaPago), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__FormaPago__idEst__1FEDB87C", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "FormaPago", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.FormaPago), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__FormaPago__idUsu__1EF99443", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "FormaPago", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.FormaPago), true)]
@@ -126,6 +103,32 @@ using System.Runtime.Serialization;
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Usuario__IdUsuar__3C69FB99", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Persona), "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Usuario), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Empresa__IdEstad__0CBAE877", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Estado), "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Empresa), true)]
 [assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Usuario__IdEstad__3A81B327", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Estado), "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Usuario), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__IngresoEgresoCab__0BB1B5A5", "OrdenCompra", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.OrdenCompra), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.IngresoEgresoCab), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__IngresoEgresoDet__18178C8A", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Articulo), "IngresoEgresoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.IngresoEgresoDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__IngresoEg__IdGru__190BB0C3", "Grupo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Grupo), "IngresoEgresoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.IngresoEgresoDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__IngresoEg__IdEst__0D99FE17", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Estado), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.IngresoEgresoCab), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__IngresoEg__IdRes__10766AC2", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Persona), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.IngresoEgresoCab), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__IngresoEg__IdUsu__116A8EFB", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Usuario), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.IngresoEgresoCab), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__IngresoEgresoDet__17236851", "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.IngresoEgresoCab), "IngresoEgresoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.IngresoEgresoDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__IngresoEg__IdPer__19FFD4FC", "Percha", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Percha), "IngresoEgresoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.IngresoEgresoDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__IngresoEg__IdTip__162F4418", "TipoArticulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.TipoArticulo), "IngresoEgresoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.IngresoEgresoDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Factura__IdNumer__4BCC3ABA", "ClienteDefactura", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.ClienteDefactura), "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Factura), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__ComisionD__IdNum__6497E884", "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Factura), "ComisionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.ComisionDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Factura__IdNumer__4CC05EF3", "Cotizacion", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Cotizacion), "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Factura), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Devolucio__IdNum__6D2D2E85", "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Factura), "DevolucionVenta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.DevolucionVenta), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Factura__idEstad__4F9CCB9E", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Factura), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Factura__IdForma__49E3F248", "FormaPago", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.FormaPago), "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Factura), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Factura__IdPromo__4DB4832C", "Promocion", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Promocion), "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Factura), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Factura__idUsuar__4EA8A765", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.Factura), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__FacturaDe__IdNum__7C6F7215", "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Factura), "FacturaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.FacturaDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__GuiaRemis__IdNum__74CE504D", "Factura", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Factura), "GuiaRemisionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.GuiaRemisionDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__FacturaDe__idEst__7F4BDEC0", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "FacturaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.FacturaDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__FacturaDe__idUsu__7E57BA87", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "FacturaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.FacturaDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__FacturaDet__7D63964E", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Articulo), "FacturaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.FacturaDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Cotizacio__IdNum__5C02A283", "Cotizacion", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Cotizacion), "CotizacionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CotizacionDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Cotizacio__idEst__5EDF0F2E", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Estado), "CotizacionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CotizacionDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__Cotizacio__idUsu__5DEAEAF5", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Facturacion.Usuario), "CotizacionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CotizacionDet), true)]
+[assembly: EdmRelationshipAttribute("FacturacionModel", "FK__CotizacionDet__5CF6C6BC", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Facturacion.Articulo), "CotizacionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Facturacion.CotizacionDet), true)]
 
 #endregion
 
@@ -308,22 +311,6 @@ namespace datos.Facturacion
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<CotizacionDet> CotizacionDet
-        {
-            get
-            {
-                if ((_CotizacionDet == null))
-                {
-                    _CotizacionDet = base.CreateObjectSet<CotizacionDet>("CotizacionDet");
-                }
-                return _CotizacionDet;
-            }
-        }
-        private ObjectSet<CotizacionDet> _CotizacionDet;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<DevolucionDet> DevolucionDet
         {
             get
@@ -352,38 +339,6 @@ namespace datos.Facturacion
             }
         }
         private ObjectSet<DevolucionVenta> _DevolucionVenta;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Factura> Factura
-        {
-            get
-            {
-                if ((_Factura == null))
-                {
-                    _Factura = base.CreateObjectSet<Factura>("Factura");
-                }
-                return _Factura;
-            }
-        }
-        private ObjectSet<Factura> _Factura;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<FacturaDet> FacturaDet
-        {
-            get
-            {
-                if ((_FacturaDet == null))
-                {
-                    _FacturaDet = base.CreateObjectSet<FacturaDet>("FacturaDet");
-                }
-                return _FacturaDet;
-            }
-        }
-        private ObjectSet<FacturaDet> _FacturaDet;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -720,6 +675,86 @@ namespace datos.Facturacion
             }
         }
         private ObjectSet<Usuario> _Usuario;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<IngresoEgresoCab> IngresoEgresoCab
+        {
+            get
+            {
+                if ((_IngresoEgresoCab == null))
+                {
+                    _IngresoEgresoCab = base.CreateObjectSet<IngresoEgresoCab>("IngresoEgresoCab");
+                }
+                return _IngresoEgresoCab;
+            }
+        }
+        private ObjectSet<IngresoEgresoCab> _IngresoEgresoCab;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<IngresoEgresoDet> IngresoEgresoDet
+        {
+            get
+            {
+                if ((_IngresoEgresoDet == null))
+                {
+                    _IngresoEgresoDet = base.CreateObjectSet<IngresoEgresoDet>("IngresoEgresoDet");
+                }
+                return _IngresoEgresoDet;
+            }
+        }
+        private ObjectSet<IngresoEgresoDet> _IngresoEgresoDet;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Factura> Factura
+        {
+            get
+            {
+                if ((_Factura == null))
+                {
+                    _Factura = base.CreateObjectSet<Factura>("Factura");
+                }
+                return _Factura;
+            }
+        }
+        private ObjectSet<Factura> _Factura;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<FacturaDet> FacturaDet
+        {
+            get
+            {
+                if ((_FacturaDet == null))
+                {
+                    _FacturaDet = base.CreateObjectSet<FacturaDet>("FacturaDet");
+                }
+                return _FacturaDet;
+            }
+        }
+        private ObjectSet<FacturaDet> _FacturaDet;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<CotizacionDet> CotizacionDet
+        {
+            get
+            {
+                if ((_CotizacionDet == null))
+                {
+                    _CotizacionDet = base.CreateObjectSet<CotizacionDet>("CotizacionDet");
+                }
+                return _CotizacionDet;
+            }
+        }
+        private ObjectSet<CotizacionDet> _CotizacionDet;
 
         #endregion
         #region AddTo Methods
@@ -789,14 +824,6 @@ namespace datos.Facturacion
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the CotizacionDet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToCotizacionDet(CotizacionDet cotizacionDet)
-        {
-            base.AddObject("CotizacionDet", cotizacionDet);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the DevolucionDet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToDevolucionDet(DevolucionDet devolucionDet)
@@ -810,22 +837,6 @@ namespace datos.Facturacion
         public void AddToDevolucionVenta(DevolucionVenta devolucionVenta)
         {
             base.AddObject("DevolucionVenta", devolucionVenta);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Factura EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToFactura(Factura factura)
-        {
-            base.AddObject("Factura", factura);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the FacturaDet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToFacturaDet(FacturaDet facturaDet)
-        {
-            base.AddObject("FacturaDet", facturaDet);
         }
     
         /// <summary>
@@ -994,6 +1005,46 @@ namespace datos.Facturacion
         public void AddToUsuario(Usuario usuario)
         {
             base.AddObject("Usuario", usuario);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the IngresoEgresoCab EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToIngresoEgresoCab(IngresoEgresoCab ingresoEgresoCab)
+        {
+            base.AddObject("IngresoEgresoCab", ingresoEgresoCab);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the IngresoEgresoDet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToIngresoEgresoDet(IngresoEgresoDet ingresoEgresoDet)
+        {
+            base.AddObject("IngresoEgresoDet", ingresoEgresoDet);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Factura EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToFactura(Factura factura)
+        {
+            base.AddObject("Factura", factura);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the FacturaDet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToFacturaDet(FacturaDet facturaDet)
+        {
+            base.AddObject("FacturaDet", facturaDet);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the CotizacionDet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToCotizacionDet(CotizacionDet cotizacionDet)
+        {
+            base.AddObject("CotizacionDet", cotizacionDet);
         }
 
         #endregion
@@ -1626,28 +1677,6 @@ namespace datos.Facturacion
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CotizacionDet__5CF6C6BC", "CotizacionDet")]
-        public EntityCollection<CotizacionDet> CotizacionDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CotizacionDet>("FacturacionModel.FK__CotizacionDet__5CF6C6BC", "CotizacionDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CotizacionDet>("FacturacionModel.FK__CotizacionDet__5CF6C6BC", "CotizacionDet", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__DevolucionDet__0504B816", "DevolucionDet")]
         public EntityCollection<DevolucionDet> DevolucionDet
         {
@@ -1660,28 +1689,6 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DevolucionDet>("FacturacionModel.FK__DevolucionDet__0504B816", "DevolucionDet", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__FacturaDet__7D63964E", "FacturaDet")]
-        public EntityCollection<FacturaDet> FacturaDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FacturaDet>("FacturacionModel.FK__FacturaDet__7D63964E", "FacturaDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FacturaDet>("FacturacionModel.FK__FacturaDet__7D63964E", "FacturaDet", value);
                 }
             }
         }
@@ -2100,6 +2107,72 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoMaterial>("FacturacionModel.FK__Articulo__IdTipo__61F08603", "TipoMaterial", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEgresoDet__18178C8A", "IngresoEgresoDet")]
+        public EntityCollection<IngresoEgresoDet> IngresoEgresoDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoDet>("FacturacionModel.FK__IngresoEgresoDet__18178C8A", "IngresoEgresoDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoDet>("FacturacionModel.FK__IngresoEgresoDet__18178C8A", "IngresoEgresoDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__FacturaDet__7D63964E", "FacturaDet")]
+        public EntityCollection<FacturaDet> FacturaDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FacturaDet>("FacturacionModel.FK__FacturaDet__7D63964E", "FacturaDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FacturaDet>("FacturacionModel.FK__FacturaDet__7D63964E", "FacturaDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CotizacionDet__5CF6C6BC", "CotizacionDet")]
+        public EntityCollection<CotizacionDet> CotizacionDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CotizacionDet>("FacturacionModel.FK__CotizacionDet__5CF6C6BC", "CotizacionDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CotizacionDet>("FacturacionModel.FK__CotizacionDet__5CF6C6BC", "CotizacionDet", value);
                 }
             }
         }
@@ -3885,44 +3958,6 @@ namespace datos.Facturacion
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__ComisionD__IdNum__6497E884", "Factura")]
-        public Factura Factura
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__ComisionD__IdNum__6497E884", "Factura").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__ComisionD__IdNum__6497E884", "Factura").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Factura> FacturaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__ComisionD__IdNum__6497E884", "Factura");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Factura>("FacturacionModel.FK__ComisionD__IdNum__6497E884", "Factura", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__ComisionD__idUsu__6774552F", "Usuario")]
         public Usuario Usuario
         {
@@ -3989,6 +4024,44 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empleado>("FacturacionModel.FK__ComisionDet__658C0CBD", "Empleado", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__ComisionD__IdNum__6497E884", "Factura")]
+        public Factura Factura
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__ComisionD__IdNum__6497E884", "Factura").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__ComisionD__IdNum__6497E884", "Factura").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Factura> FacturaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__ComisionD__IdNum__6497E884", "Factura");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Factura>("FacturacionModel.FK__ComisionD__IdNum__6497E884", "Factura", value);
                 }
             }
         }
@@ -4531,28 +4604,6 @@ namespace datos.Facturacion
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Cotizacio__IdNum__5C02A283", "CotizacionDet")]
-        public EntityCollection<CotizacionDet> CotizacionDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CotizacionDet>("FacturacionModel.FK__Cotizacio__IdNum__5C02A283", "CotizacionDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CotizacionDet>("FacturacionModel.FK__Cotizacio__IdNum__5C02A283", "CotizacionDet", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Cotizacio__idUsu__2E3BD7D3", "Usuario")]
         public Usuario Usuario
         {
@@ -4603,6 +4654,28 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Factura>("FacturacionModel.FK__Factura__IdNumer__4CC05EF3", "Factura", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Cotizacio__IdNum__5C02A283", "CotizacionDet")]
+        public EntityCollection<CotizacionDet> CotizacionDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CotizacionDet>("FacturacionModel.FK__Cotizacio__IdNum__5C02A283", "CotizacionDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CotizacionDet>("FacturacionModel.FK__Cotizacio__IdNum__5C02A283", "CotizacionDet", value);
                 }
             }
         }
@@ -4893,6 +4966,30 @@ namespace datos.Facturacion
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> costo
+        {
+            get
+            {
+                return _costo;
+            }
+            set
+            {
+                OncostoChanging(value);
+                ReportPropertyChanging("costo");
+                _costo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("costo");
+                OncostoChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _costo;
+        partial void OncostoChanging(Nullable<global::System.Decimal> value);
+        partial void OncostoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public Nullable<global::System.Int32> cantidad
         {
             get
@@ -5111,26 +5208,20 @@ namespace datos.Facturacion
         /// <param name="idEmpresa">Initial value of the idEmpresa property.</param>
         /// <param name="idUsuario">Initial value of the idUsuario property.</param>
         /// <param name="idCuentaxCobrar">Initial value of the idCuentaxCobrar property.</param>
-        /// <param name="idTransaccion">Initial value of the idTransaccion property.</param>
-        /// <param name="idFactura">Initial value of the idFactura property.</param>
         /// <param name="modulo">Initial value of the Modulo property.</param>
-        /// <param name="idCabeceraComprobante">Initial value of the idCabeceraComprobante property.</param>
+        /// <param name="idNumeroFactura">Initial value of the idNumeroFactura property.</param>
         /// <param name="totalCuotas">Initial value of the TotalCuotas property.</param>
         /// <param name="porcentaje_interes">Initial value of the porcentaje_interes property.</param>
-        /// <param name="idEstado">Initial value of the idEstado property.</param>
-        public static CuentaxCobrar CreateCuentaxCobrar(global::System.Int32 idEmpresa, global::System.Int32 idUsuario, global::System.Int32 idCuentaxCobrar, global::System.Int32 idTransaccion, global::System.Int32 idFactura, global::System.Int32 modulo, global::System.Int32 idCabeceraComprobante, global::System.Int32 totalCuotas, global::System.Decimal porcentaje_interes, global::System.Int32 idEstado)
+        public static CuentaxCobrar CreateCuentaxCobrar(global::System.Int32 idEmpresa, global::System.Int32 idUsuario, global::System.Int32 idCuentaxCobrar, global::System.Int32 modulo, global::System.Int32 idNumeroFactura, global::System.Int32 totalCuotas, global::System.Decimal porcentaje_interes)
         {
             CuentaxCobrar cuentaxCobrar = new CuentaxCobrar();
             cuentaxCobrar.idEmpresa = idEmpresa;
             cuentaxCobrar.idUsuario = idUsuario;
             cuentaxCobrar.idCuentaxCobrar = idCuentaxCobrar;
-            cuentaxCobrar.idTransaccion = idTransaccion;
-            cuentaxCobrar.idFactura = idFactura;
             cuentaxCobrar.Modulo = modulo;
-            cuentaxCobrar.idCabeceraComprobante = idCabeceraComprobante;
+            cuentaxCobrar.idNumeroFactura = idNumeroFactura;
             cuentaxCobrar.TotalCuotas = totalCuotas;
             cuentaxCobrar.porcentaje_interes = porcentaje_interes;
-            cuentaxCobrar.idEstado = idEstado;
             return cuentaxCobrar;
         }
 
@@ -5241,54 +5332,6 @@ namespace datos.Facturacion
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 idTransaccion
-        {
-            get
-            {
-                return _idTransaccion;
-            }
-            set
-            {
-                OnidTransaccionChanging(value);
-                ReportPropertyChanging("idTransaccion");
-                _idTransaccion = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idTransaccion");
-                OnidTransaccionChanged();
-            }
-        }
-        private global::System.Int32 _idTransaccion;
-        partial void OnidTransaccionChanging(global::System.Int32 value);
-        partial void OnidTransaccionChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 idFactura
-        {
-            get
-            {
-                return _idFactura;
-            }
-            set
-            {
-                OnidFacturaChanging(value);
-                ReportPropertyChanging("idFactura");
-                _idFactura = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idFactura");
-                OnidFacturaChanged();
-            }
-        }
-        private global::System.Int32 _idFactura;
-        partial void OnidFacturaChanging(global::System.Int32 value);
-        partial void OnidFacturaChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.Int32 Modulo
         {
             get
@@ -5313,24 +5356,24 @@ namespace datos.Facturacion
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 idCabeceraComprobante
+        public global::System.Int32 idNumeroFactura
         {
             get
             {
-                return _idCabeceraComprobante;
+                return _idNumeroFactura;
             }
             set
             {
-                OnidCabeceraComprobanteChanging(value);
-                ReportPropertyChanging("idCabeceraComprobante");
-                _idCabeceraComprobante = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idCabeceraComprobante");
-                OnidCabeceraComprobanteChanged();
+                OnidNumeroFacturaChanging(value);
+                ReportPropertyChanging("idNumeroFactura");
+                _idNumeroFactura = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idNumeroFactura");
+                OnidNumeroFacturaChanged();
             }
         }
-        private global::System.Int32 _idCabeceraComprobante;
-        partial void OnidCabeceraComprobanteChanging(global::System.Int32 value);
-        partial void OnidCabeceraComprobanteChanged();
+        private global::System.Int32 _idNumeroFactura;
+        partial void OnidNumeroFacturaChanging(global::System.Int32 value);
+        partial void OnidNumeroFacturaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5383,26 +5426,26 @@ namespace datos.Facturacion
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Int32 idEstado
+        public global::System.String estado
         {
             get
             {
-                return _idEstado;
+                return _estado;
             }
             set
             {
-                OnidEstadoChanging(value);
-                ReportPropertyChanging("idEstado");
-                _idEstado = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idEstado");
-                OnidEstadoChanged();
+                OnestadoChanging(value);
+                ReportPropertyChanging("estado");
+                _estado = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("estado");
+                OnestadoChanged();
             }
         }
-        private global::System.Int32 _idEstado;
-        partial void OnidEstadoChanging(global::System.Int32 value);
-        partial void OnidEstadoChanged();
+        private global::System.String _estado;
+        partial void OnestadoChanging(global::System.String value);
+        partial void OnestadoChanged();
 
         #endregion
     
@@ -5414,16 +5457,16 @@ namespace datos.Facturacion
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idEmp__6B0FDBE9", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idEmp__2D32A501", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("FacturacionModel.FK__CuentaxCo__idEmp__6B0FDBE9", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("FacturacionModel.FK__CuentaxCo__idEmp__2D32A501", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("FacturacionModel.FK__CuentaxCo__idEmp__6B0FDBE9", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("FacturacionModel.FK__CuentaxCo__idEmp__2D32A501", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -5435,13 +5478,13 @@ namespace datos.Facturacion
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("FacturacionModel.FK__CuentaxCo__idEmp__6B0FDBE9", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("FacturacionModel.FK__CuentaxCo__idEmp__2D32A501", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("FacturacionModel.FK__CuentaxCo__idEmp__6B0FDBE9", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("FacturacionModel.FK__CuentaxCo__idEmp__2D32A501", "Empresa", value);
                 }
             }
         }
@@ -5452,130 +5495,16 @@ namespace datos.Facturacion
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idEst__6FD49106", "Estado")]
-        public Estado Estado
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("FacturacionModel.FK__CuentaxCo__idEst__6FD49106", "Estado").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("FacturacionModel.FK__CuentaxCo__idEst__6FD49106", "Estado").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Estado> EstadoReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("FacturacionModel.FK__CuentaxCo__idEst__6FD49106", "Estado");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Estado>("FacturacionModel.FK__CuentaxCo__idEst__6FD49106", "Estado", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idFac__6DEC4894", "Factura")]
-        public Factura Factura
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__CuentaxCo__idFac__6DEC4894", "Factura").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__CuentaxCo__idFac__6DEC4894", "Factura").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Factura> FacturaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__CuentaxCo__idFac__6DEC4894", "Factura");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Factura>("FacturacionModel.FK__CuentaxCo__idFac__6DEC4894", "Factura", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idTra__6CF8245B", "Factura")]
-        public Factura Factura1
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__CuentaxCo__idTra__6CF8245B", "Factura").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__CuentaxCo__idTra__6CF8245B", "Factura").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Factura> Factura1Reference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__CuentaxCo__idTra__6CF8245B", "Factura");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Factura>("FacturacionModel.FK__CuentaxCo__idTra__6CF8245B", "Factura", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idUsu__6C040022", "Usuario")]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idUsu__2E26C93A", "Usuario")]
         public Usuario Usuario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("FacturacionModel.FK__CuentaxCo__idUsu__6C040022", "Usuario").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("FacturacionModel.FK__CuentaxCo__idUsu__2E26C93A", "Usuario").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("FacturacionModel.FK__CuentaxCo__idUsu__6C040022", "Usuario").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("FacturacionModel.FK__CuentaxCo__idUsu__2E26C93A", "Usuario").Value = value;
             }
         }
         /// <summary>
@@ -5587,13 +5516,13 @@ namespace datos.Facturacion
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("FacturacionModel.FK__CuentaxCo__idUsu__6C040022", "Usuario");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("FacturacionModel.FK__CuentaxCo__idUsu__2E26C93A", "Usuario");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("FacturacionModel.FK__CuentaxCo__idUsu__6C040022", "Usuario", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("FacturacionModel.FK__CuentaxCo__idUsu__2E26C93A", "Usuario", value);
                 }
             }
         }
@@ -5614,8 +5543,6 @@ namespace datos.Facturacion
         /// <summary>
         /// Create a new CuentaxCobrarDet object.
         /// </summary>
-        /// <param name="idEmpresa">Initial value of the idEmpresa property.</param>
-        /// <param name="idUsuario">Initial value of the idUsuario property.</param>
         /// <param name="idCuentaxCobrar">Initial value of the idCuentaxCobrar property.</param>
         /// <param name="numero">Initial value of the Numero property.</param>
         /// <param name="numero_cuota">Initial value of the numero_cuota property.</param>
@@ -5624,12 +5551,9 @@ namespace datos.Facturacion
         /// <param name="valor_mora">Initial value of the valor_mora property.</param>
         /// <param name="fecha_cobro">Initial value of the fecha_cobro property.</param>
         /// <param name="fecha_vencimiento">Initial value of the fecha_vencimiento property.</param>
-        /// <param name="idEstado">Initial value of the idEstado property.</param>
-        public static CuentaxCobrarDet CreateCuentaxCobrarDet(global::System.Int32 idEmpresa, global::System.Int32 idUsuario, global::System.Int32 idCuentaxCobrar, global::System.Int32 numero, global::System.Int32 numero_cuota, global::System.Decimal valor_cuota, global::System.Decimal valor_interes, global::System.Decimal valor_mora, global::System.DateTime fecha_cobro, global::System.DateTime fecha_vencimiento, global::System.Int32 idEstado)
+        public static CuentaxCobrarDet CreateCuentaxCobrarDet(global::System.Int32 idCuentaxCobrar, global::System.Int32 numero, global::System.Int32 numero_cuota, global::System.Decimal valor_cuota, global::System.Decimal valor_interes, global::System.Decimal valor_mora, global::System.DateTime fecha_cobro, global::System.DateTime fecha_vencimiento)
         {
             CuentaxCobrarDet cuentaxCobrarDet = new CuentaxCobrarDet();
-            cuentaxCobrarDet.idEmpresa = idEmpresa;
-            cuentaxCobrarDet.idUsuario = idUsuario;
             cuentaxCobrarDet.idCuentaxCobrar = idCuentaxCobrar;
             cuentaxCobrarDet.Numero = numero;
             cuentaxCobrarDet.numero_cuota = numero_cuota;
@@ -5638,60 +5562,11 @@ namespace datos.Facturacion
             cuentaxCobrarDet.valor_mora = valor_mora;
             cuentaxCobrarDet.fecha_cobro = fecha_cobro;
             cuentaxCobrarDet.fecha_vencimiento = fecha_vencimiento;
-            cuentaxCobrarDet.idEstado = idEstado;
             return cuentaxCobrarDet;
         }
 
         #endregion
         #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 idEmpresa
-        {
-            get
-            {
-                return _idEmpresa;
-            }
-            set
-            {
-                OnidEmpresaChanging(value);
-                ReportPropertyChanging("idEmpresa");
-                _idEmpresa = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idEmpresa");
-                OnidEmpresaChanged();
-            }
-        }
-        private global::System.Int32 _idEmpresa;
-        partial void OnidEmpresaChanging(global::System.Int32 value);
-        partial void OnidEmpresaChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 idUsuario
-        {
-            get
-            {
-                return _idUsuario;
-            }
-            set
-            {
-                OnidUsuarioChanging(value);
-                ReportPropertyChanging("idUsuario");
-                _idUsuario = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idUsuario");
-                OnidUsuarioChanged();
-            }
-        }
-        private global::System.Int32 _idUsuario;
-        partial void OnidUsuarioChanging(global::System.Int32 value);
-        partial void OnidUsuarioChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -5918,146 +5793,29 @@ namespace datos.Facturacion
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Int32 idEstado
+        public global::System.String estado
         {
             get
             {
-                return _idEstado;
+                return _estado;
             }
             set
             {
-                OnidEstadoChanging(value);
-                ReportPropertyChanging("idEstado");
-                _idEstado = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idEstado");
-                OnidEstadoChanged();
+                OnestadoChanging(value);
+                ReportPropertyChanging("estado");
+                _estado = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("estado");
+                OnestadoChanged();
             }
         }
-        private global::System.Int32 _idEstado;
-        partial void OnidEstadoChanging(global::System.Int32 value);
-        partial void OnidEstadoChanged();
+        private global::System.String _estado;
+        partial void OnestadoChanging(global::System.String value);
+        partial void OnestadoChanged();
 
         #endregion
     
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idEmp__74994623", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("FacturacionModel.FK__CuentaxCo__idEmp__74994623", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("FacturacionModel.FK__CuentaxCo__idEmp__74994623", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("FacturacionModel.FK__CuentaxCo__idEmp__74994623", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("FacturacionModel.FK__CuentaxCo__idEmp__74994623", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idEst__76818E95", "Estado")]
-        public Estado Estado
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("FacturacionModel.FK__CuentaxCo__idEst__76818E95", "Estado").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("FacturacionModel.FK__CuentaxCo__idEst__76818E95", "Estado").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Estado> EstadoReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("FacturacionModel.FK__CuentaxCo__idEst__76818E95", "Estado");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Estado>("FacturacionModel.FK__CuentaxCo__idEst__76818E95", "Estado", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idUsu__758D6A5C", "Usuario")]
-        public Usuario Usuario
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("FacturacionModel.FK__CuentaxCo__idUsu__758D6A5C", "Usuario").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("FacturacionModel.FK__CuentaxCo__idUsu__758D6A5C", "Usuario").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Usuario> UsuarioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("FacturacionModel.FK__CuentaxCo__idUsu__758D6A5C", "Usuario");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("FacturacionModel.FK__CuentaxCo__idUsu__758D6A5C", "Usuario", value);
-                }
-            }
-        }
-
-        #endregion
     }
     
     /// <summary>
@@ -6720,44 +6478,6 @@ namespace datos.Facturacion
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Devolucio__IdNum__6D2D2E85", "Factura")]
-        public Factura Factura
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__Devolucio__IdNum__6D2D2E85", "Factura").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__Devolucio__IdNum__6D2D2E85", "Factura").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Factura> FacturaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__Devolucio__IdNum__6D2D2E85", "Factura");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Factura>("FacturacionModel.FK__Devolucio__IdNum__6D2D2E85", "Factura", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Devolucio__idUsu__6F1576F7", "Usuario")]
         public Usuario Usuario
         {
@@ -6786,6 +6506,44 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("FacturacionModel.FK__Devolucio__idUsu__6F1576F7", "Usuario", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Devolucio__IdNum__6D2D2E85", "Factura")]
+        public Factura Factura
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__Devolucio__IdNum__6D2D2E85", "Factura").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__Devolucio__IdNum__6D2D2E85", "Factura").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Factura> FacturaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__Devolucio__IdNum__6D2D2E85", "Factura");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Factura>("FacturacionModel.FK__Devolucio__IdNum__6D2D2E85", "Factura", value);
                 }
             }
         }
@@ -7441,40 +7199,18 @@ namespace datos.Facturacion
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idEmp__6B0FDBE9", "CuentaxCobrar")]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idEmp__2D32A501", "CuentaxCobrar")]
         public EntityCollection<CuentaxCobrar> CuentaxCobrar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaxCobrar>("FacturacionModel.FK__CuentaxCo__idEmp__6B0FDBE9", "CuentaxCobrar");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaxCobrar>("FacturacionModel.FK__CuentaxCo__idEmp__2D32A501", "CuentaxCobrar");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaxCobrar>("FacturacionModel.FK__CuentaxCo__idEmp__6B0FDBE9", "CuentaxCobrar", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idEmp__74994623", "CuentaxCobrarDet")]
-        public EntityCollection<CuentaxCobrarDet> CuentaxCobrarDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaxCobrarDet>("FacturacionModel.FK__CuentaxCo__idEmp__74994623", "CuentaxCobrarDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaxCobrarDet>("FacturacionModel.FK__CuentaxCo__idEmp__74994623", "CuentaxCobrarDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaxCobrar>("FacturacionModel.FK__CuentaxCo__idEmp__2D32A501", "CuentaxCobrar", value);
                 }
             }
         }
@@ -8067,50 +7803,6 @@ namespace datos.Facturacion
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idEst__6FD49106", "CuentaxCobrar")]
-        public EntityCollection<CuentaxCobrar> CuentaxCobrar
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaxCobrar>("FacturacionModel.FK__CuentaxCo__idEst__6FD49106", "CuentaxCobrar");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaxCobrar>("FacturacionModel.FK__CuentaxCo__idEst__6FD49106", "CuentaxCobrar", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idEst__76818E95", "CuentaxCobrarDet")]
-        public EntityCollection<CuentaxCobrarDet> CuentaxCobrarDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaxCobrarDet>("FacturacionModel.FK__CuentaxCo__idEst__76818E95", "CuentaxCobrarDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaxCobrarDet>("FacturacionModel.FK__CuentaxCo__idEst__76818E95", "CuentaxCobrarDet", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__ClienteDe__idEst__269AB60B", "ClienteDefactura")]
         public EntityCollection<ClienteDefactura> ClienteDefactura
         {
@@ -8199,28 +7891,6 @@ namespace datos.Facturacion
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Cotizacio__idEst__5EDF0F2E", "CotizacionDet")]
-        public EntityCollection<CotizacionDet> CotizacionDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CotizacionDet>("FacturacionModel.FK__Cotizacio__idEst__5EDF0F2E", "CotizacionDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CotizacionDet>("FacturacionModel.FK__Cotizacio__idEst__5EDF0F2E", "CotizacionDet", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Devolucio__idEst__06ED0088", "DevolucionDet")]
         public EntityCollection<DevolucionDet> DevolucionDet
         {
@@ -8255,50 +7925,6 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DevolucionVenta>("FacturacionModel.FK__Devolucio__idEst__70099B30", "DevolucionVenta", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Factura__idEstad__4F9CCB9E", "Factura")]
-        public EntityCollection<Factura> Factura
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Factura>("FacturacionModel.FK__Factura__idEstad__4F9CCB9E", "Factura");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Factura>("FacturacionModel.FK__Factura__idEstad__4F9CCB9E", "Factura", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__FacturaDe__idEst__7F4BDEC0", "FacturaDet")]
-        public EntityCollection<FacturaDet> FacturaDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FacturaDet>("FacturacionModel.FK__FacturaDe__idEst__7F4BDEC0", "FacturaDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FacturaDet>("FacturacionModel.FK__FacturaDe__idEst__7F4BDEC0", "FacturaDet", value);
                 }
             }
         }
@@ -8717,6 +8343,94 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Usuario>("FacturacionModel.FK__Usuario__IdEstad__3A81B327", "Usuario", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEg__IdEst__0D99FE17", "IngresoEgresoCab")]
+        public EntityCollection<IngresoEgresoCab> IngresoEgresoCab
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("FacturacionModel.FK__IngresoEg__IdEst__0D99FE17", "IngresoEgresoCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("FacturacionModel.FK__IngresoEg__IdEst__0D99FE17", "IngresoEgresoCab", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Factura__idEstad__4F9CCB9E", "Factura")]
+        public EntityCollection<Factura> Factura
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Factura>("FacturacionModel.FK__Factura__idEstad__4F9CCB9E", "Factura");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Factura>("FacturacionModel.FK__Factura__idEstad__4F9CCB9E", "Factura", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__FacturaDe__idEst__7F4BDEC0", "FacturaDet")]
+        public EntityCollection<FacturaDet> FacturaDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FacturaDet>("FacturacionModel.FK__FacturaDe__idEst__7F4BDEC0", "FacturaDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FacturaDet>("FacturacionModel.FK__FacturaDe__idEst__7F4BDEC0", "FacturaDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Cotizacio__idEst__5EDF0F2E", "CotizacionDet")]
+        public EntityCollection<CotizacionDet> CotizacionDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CotizacionDet>("FacturacionModel.FK__Cotizacio__idEst__5EDF0F2E", "CotizacionDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CotizacionDet>("FacturacionModel.FK__Cotizacio__idEst__5EDF0F2E", "CotizacionDet", value);
                 }
             }
         }
@@ -9170,50 +8884,6 @@ namespace datos.Facturacion
         #endregion
     
         #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idFac__6DEC4894", "CuentaxCobrar")]
-        public EntityCollection<CuentaxCobrar> CuentaxCobrar
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaxCobrar>("FacturacionModel.FK__CuentaxCo__idFac__6DEC4894", "CuentaxCobrar");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaxCobrar>("FacturacionModel.FK__CuentaxCo__idFac__6DEC4894", "CuentaxCobrar", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idTra__6CF8245B", "CuentaxCobrar")]
-        public EntityCollection<CuentaxCobrar> CuentaxCobrar1
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaxCobrar>("FacturacionModel.FK__CuentaxCo__idTra__6CF8245B", "CuentaxCobrar");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaxCobrar>("FacturacionModel.FK__CuentaxCo__idTra__6CF8245B", "CuentaxCobrar", value);
-                }
-            }
-        }
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -9817,6 +9487,30 @@ namespace datos.Facturacion
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> costo
+        {
+            get
+            {
+                return _costo;
+            }
+            set
+            {
+                OncostoChanging(value);
+                ReportPropertyChanging("costo");
+                _costo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("costo");
+                OncostoChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _costo;
+        partial void OncostoChanging(Nullable<global::System.Decimal> value);
+        partial void OncostoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public Nullable<global::System.Int32> cantidad
         {
             get
@@ -10204,28 +9898,6 @@ namespace datos.Facturacion
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Factura__IdForma__49E3F248", "Factura")]
-        public EntityCollection<Factura> Factura
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Factura>("FacturacionModel.FK__Factura__IdForma__49E3F248", "Factura");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Factura>("FacturacionModel.FK__Factura__IdForma__49E3F248", "Factura", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__FormaPago__IdEmp__1E05700A", "Empresa")]
         public Empresa Empresa
         {
@@ -10352,6 +10024,28 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PorcentajeComision>("FacturacionModel.FK__Porcentaj__IdFor__3AA1AEB8", "PorcentajeComision", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Factura__IdForma__49E3F248", "Factura")]
+        public EntityCollection<Factura> Factura
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Factura>("FacturacionModel.FK__Factura__IdForma__49E3F248", "Factura");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Factura>("FacturacionModel.FK__Factura__IdForma__49E3F248", "Factura", value);
                 }
             }
         }
@@ -10644,6 +10338,28 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoArticulo>("FacturacionModel.FK__Grupo__IdTipoArt__6BAEFA67", "TipoArticulo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEg__IdGru__190BB0C3", "IngresoEgresoDet")]
+        public EntityCollection<IngresoEgresoDet> IngresoEgresoDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoDet>("FacturacionModel.FK__IngresoEg__IdGru__190BB0C3", "IngresoEgresoDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoDet>("FacturacionModel.FK__IngresoEg__IdGru__190BB0C3", "IngresoEgresoDet", value);
                 }
             }
         }
@@ -11277,44 +10993,6 @@ namespace datos.Facturacion
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__GuiaRemis__IdNum__74CE504D", "Factura")]
-        public Factura Factura
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__GuiaRemis__IdNum__74CE504D", "Factura").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__GuiaRemis__IdNum__74CE504D", "Factura").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Factura> FacturaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__GuiaRemis__IdNum__74CE504D", "Factura");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Factura>("FacturacionModel.FK__GuiaRemis__IdNum__74CE504D", "Factura", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__GuiaRemis__IdEmp__75C27486", "Empresa")]
         public Empresa Empresa
         {
@@ -11419,6 +11097,1086 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("FacturacionModel.FK__GuiaRemis__idUsu__76B698BF", "Usuario", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__GuiaRemis__IdNum__74CE504D", "Factura")]
+        public Factura Factura
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__GuiaRemis__IdNum__74CE504D", "Factura").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__GuiaRemis__IdNum__74CE504D", "Factura").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Factura> FacturaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Factura>("FacturacionModel.FK__GuiaRemis__IdNum__74CE504D", "Factura");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Factura>("FacturacionModel.FK__GuiaRemis__IdNum__74CE504D", "Factura", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="FacturacionModel", Name="IngresoEgresoCab")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class IngresoEgresoCab : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new IngresoEgresoCab object.
+        /// </summary>
+        /// <param name="idEmpresa">Initial value of the IdEmpresa property.</param>
+        /// <param name="nroMovimiento">Initial value of the NroMovimiento property.</param>
+        public static IngresoEgresoCab CreateIngresoEgresoCab(global::System.Int32 idEmpresa, global::System.Int32 nroMovimiento)
+        {
+            IngresoEgresoCab ingresoEgresoCab = new IngresoEgresoCab();
+            ingresoEgresoCab.IdEmpresa = idEmpresa;
+            ingresoEgresoCab.NroMovimiento = nroMovimiento;
+            return ingresoEgresoCab;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdEmpresa
+        {
+            get
+            {
+                return _IdEmpresa;
+            }
+            set
+            {
+                if (_IdEmpresa != value)
+                {
+                    OnIdEmpresaChanging(value);
+                    ReportPropertyChanging("IdEmpresa");
+                    _IdEmpresa = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdEmpresa");
+                    OnIdEmpresaChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdEmpresa;
+        partial void OnIdEmpresaChanging(global::System.Int32 value);
+        partial void OnIdEmpresaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 NroMovimiento
+        {
+            get
+            {
+                return _NroMovimiento;
+            }
+            set
+            {
+                if (_NroMovimiento != value)
+                {
+                    OnNroMovimientoChanging(value);
+                    ReportPropertyChanging("NroMovimiento");
+                    _NroMovimiento = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("NroMovimiento");
+                    OnNroMovimientoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _NroMovimiento;
+        partial void OnNroMovimientoChanging(global::System.Int32 value);
+        partial void OnNroMovimientoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdTipoMovimiento
+        {
+            get
+            {
+                return _IdTipoMovimiento;
+            }
+            set
+            {
+                OnIdTipoMovimientoChanging(value);
+                ReportPropertyChanging("IdTipoMovimiento");
+                _IdTipoMovimiento = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdTipoMovimiento");
+                OnIdTipoMovimientoChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdTipoMovimiento;
+        partial void OnIdTipoMovimientoChanging(Nullable<global::System.Int32> value);
+        partial void OnIdTipoMovimientoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> FechaMovimiento
+        {
+            get
+            {
+                return _FechaMovimiento;
+            }
+            set
+            {
+                OnFechaMovimientoChanging(value);
+                ReportPropertyChanging("FechaMovimiento");
+                _FechaMovimiento = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FechaMovimiento");
+                OnFechaMovimientoChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _FechaMovimiento;
+        partial void OnFechaMovimientoChanging(Nullable<global::System.DateTime> value);
+        partial void OnFechaMovimientoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdOrdenCompra
+        {
+            get
+            {
+                return _IdOrdenCompra;
+            }
+            set
+            {
+                OnIdOrdenCompraChanging(value);
+                ReportPropertyChanging("IdOrdenCompra");
+                _IdOrdenCompra = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdOrdenCompra");
+                OnIdOrdenCompraChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdOrdenCompra;
+        partial void OnIdOrdenCompraChanging(Nullable<global::System.Int32> value);
+        partial void OnIdOrdenCompraChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdMotivo
+        {
+            get
+            {
+                return _IdMotivo;
+            }
+            set
+            {
+                OnIdMotivoChanging(value);
+                ReportPropertyChanging("IdMotivo");
+                _IdMotivo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdMotivo");
+                OnIdMotivoChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdMotivo;
+        partial void OnIdMotivoChanging(Nullable<global::System.Int32> value);
+        partial void OnIdMotivoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdBodega
+        {
+            get
+            {
+                return _IdBodega;
+            }
+            set
+            {
+                OnIdBodegaChanging(value);
+                ReportPropertyChanging("IdBodega");
+                _IdBodega = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdBodega");
+                OnIdBodegaChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdBodega;
+        partial void OnIdBodegaChanging(Nullable<global::System.Int32> value);
+        partial void OnIdBodegaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdResponsable
+        {
+            get
+            {
+                return _IdResponsable;
+            }
+            set
+            {
+                OnIdResponsableChanging(value);
+                ReportPropertyChanging("IdResponsable");
+                _IdResponsable = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdResponsable");
+                OnIdResponsableChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdResponsable;
+        partial void OnIdResponsableChanging(Nullable<global::System.Int32> value);
+        partial void OnIdResponsableChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> TotalPagar
+        {
+            get
+            {
+                return _TotalPagar;
+            }
+            set
+            {
+                OnTotalPagarChanging(value);
+                ReportPropertyChanging("TotalPagar");
+                _TotalPagar = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("TotalPagar");
+                OnTotalPagarChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _TotalPagar;
+        partial void OnTotalPagarChanging(Nullable<global::System.Decimal> value);
+        partial void OnTotalPagarChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Observacion
+        {
+            get
+            {
+                return _Observacion;
+            }
+            set
+            {
+                OnObservacionChanging(value);
+                ReportPropertyChanging("Observacion");
+                _Observacion = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Observacion");
+                OnObservacionChanged();
+            }
+        }
+        private global::System.String _Observacion;
+        partial void OnObservacionChanging(global::System.String value);
+        partial void OnObservacionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdUsuario
+        {
+            get
+            {
+                return _IdUsuario;
+            }
+            set
+            {
+                OnIdUsuarioChanging(value);
+                ReportPropertyChanging("IdUsuario");
+                _IdUsuario = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdUsuario");
+                OnIdUsuarioChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdUsuario;
+        partial void OnIdUsuarioChanging(Nullable<global::System.Int32> value);
+        partial void OnIdUsuarioChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdEstado
+        {
+            get
+            {
+                return _IdEstado;
+            }
+            set
+            {
+                OnIdEstadoChanging(value);
+                ReportPropertyChanging("IdEstado");
+                _IdEstado = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdEstado");
+                OnIdEstadoChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdEstado;
+        partial void OnIdEstadoChanging(Nullable<global::System.Int32> value);
+        partial void OnIdEstadoChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEgresoCab__0BB1B5A5", "OrdenCompra")]
+        public OrdenCompra OrdenCompra
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("FacturacionModel.FK__IngresoEgresoCab__0BB1B5A5", "OrdenCompra").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("FacturacionModel.FK__IngresoEgresoCab__0BB1B5A5", "OrdenCompra").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<OrdenCompra> OrdenCompraReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("FacturacionModel.FK__IngresoEgresoCab__0BB1B5A5", "OrdenCompra");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrdenCompra>("FacturacionModel.FK__IngresoEgresoCab__0BB1B5A5", "OrdenCompra", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEg__IdEst__0D99FE17", "Estado")]
+        public Estado Estado
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("FacturacionModel.FK__IngresoEg__IdEst__0D99FE17", "Estado").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("FacturacionModel.FK__IngresoEg__IdEst__0D99FE17", "Estado").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Estado> EstadoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("FacturacionModel.FK__IngresoEg__IdEst__0D99FE17", "Estado");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Estado>("FacturacionModel.FK__IngresoEg__IdEst__0D99FE17", "Estado", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEg__IdRes__10766AC2", "Persona")]
+        public Persona Persona
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("FacturacionModel.FK__IngresoEg__IdRes__10766AC2", "Persona").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("FacturacionModel.FK__IngresoEg__IdRes__10766AC2", "Persona").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Persona> PersonaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("FacturacionModel.FK__IngresoEg__IdRes__10766AC2", "Persona");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("FacturacionModel.FK__IngresoEg__IdRes__10766AC2", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEg__IdUsu__116A8EFB", "Usuario")]
+        public Usuario Usuario
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("FacturacionModel.FK__IngresoEg__IdUsu__116A8EFB", "Usuario").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("FacturacionModel.FK__IngresoEg__IdUsu__116A8EFB", "Usuario").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Usuario> UsuarioReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("FacturacionModel.FK__IngresoEg__IdUsu__116A8EFB", "Usuario");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("FacturacionModel.FK__IngresoEg__IdUsu__116A8EFB", "Usuario", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEgresoDet__17236851", "IngresoEgresoDet")]
+        public EntityCollection<IngresoEgresoDet> IngresoEgresoDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoDet>("FacturacionModel.FK__IngresoEgresoDet__17236851", "IngresoEgresoDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoDet>("FacturacionModel.FK__IngresoEgresoDet__17236851", "IngresoEgresoDet", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="FacturacionModel", Name="IngresoEgresoDet")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class IngresoEgresoDet : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new IngresoEgresoDet object.
+        /// </summary>
+        /// <param name="nroMovimiento">Initial value of the NroMovimiento property.</param>
+        /// <param name="numero">Initial value of the numero property.</param>
+        public static IngresoEgresoDet CreateIngresoEgresoDet(global::System.Int32 nroMovimiento, global::System.Int32 numero)
+        {
+            IngresoEgresoDet ingresoEgresoDet = new IngresoEgresoDet();
+            ingresoEgresoDet.NroMovimiento = nroMovimiento;
+            ingresoEgresoDet.numero = numero;
+            return ingresoEgresoDet;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdEmpresa
+        {
+            get
+            {
+                return _IdEmpresa;
+            }
+            set
+            {
+                OnIdEmpresaChanging(value);
+                ReportPropertyChanging("IdEmpresa");
+                _IdEmpresa = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdEmpresa");
+                OnIdEmpresaChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdEmpresa;
+        partial void OnIdEmpresaChanging(Nullable<global::System.Int32> value);
+        partial void OnIdEmpresaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 NroMovimiento
+        {
+            get
+            {
+                return _NroMovimiento;
+            }
+            set
+            {
+                if (_NroMovimiento != value)
+                {
+                    OnNroMovimientoChanging(value);
+                    ReportPropertyChanging("NroMovimiento");
+                    _NroMovimiento = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("NroMovimiento");
+                    OnNroMovimientoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _NroMovimiento;
+        partial void OnNroMovimientoChanging(global::System.Int32 value);
+        partial void OnNroMovimientoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 numero
+        {
+            get
+            {
+                return _numero;
+            }
+            set
+            {
+                if (_numero != value)
+                {
+                    OnnumeroChanging(value);
+                    ReportPropertyChanging("numero");
+                    _numero = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("numero");
+                    OnnumeroChanged();
+                }
+            }
+        }
+        private global::System.Int32 _numero;
+        partial void OnnumeroChanging(global::System.Int32 value);
+        partial void OnnumeroChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdTipoArticulo
+        {
+            get
+            {
+                return _IdTipoArticulo;
+            }
+            set
+            {
+                OnIdTipoArticuloChanging(value);
+                ReportPropertyChanging("IdTipoArticulo");
+                _IdTipoArticulo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdTipoArticulo");
+                OnIdTipoArticuloChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdTipoArticulo;
+        partial void OnIdTipoArticuloChanging(Nullable<global::System.Int32> value);
+        partial void OnIdTipoArticuloChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdArticulo
+        {
+            get
+            {
+                return _IdArticulo;
+            }
+            set
+            {
+                OnIdArticuloChanging(value);
+                ReportPropertyChanging("IdArticulo");
+                _IdArticulo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdArticulo");
+                OnIdArticuloChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdArticulo;
+        partial void OnIdArticuloChanging(Nullable<global::System.Int32> value);
+        partial void OnIdArticuloChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdGrupo
+        {
+            get
+            {
+                return _IdGrupo;
+            }
+            set
+            {
+                OnIdGrupoChanging(value);
+                ReportPropertyChanging("IdGrupo");
+                _IdGrupo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdGrupo");
+                OnIdGrupoChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdGrupo;
+        partial void OnIdGrupoChanging(Nullable<global::System.Int32> value);
+        partial void OnIdGrupoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdPercha
+        {
+            get
+            {
+                return _IdPercha;
+            }
+            set
+            {
+                OnIdPerchaChanging(value);
+                ReportPropertyChanging("IdPercha");
+                _IdPercha = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPercha");
+                OnIdPerchaChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdPercha;
+        partial void OnIdPerchaChanging(Nullable<global::System.Int32> value);
+        partial void OnIdPerchaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> CantidadPedida
+        {
+            get
+            {
+                return _CantidadPedida;
+            }
+            set
+            {
+                OnCantidadPedidaChanging(value);
+                ReportPropertyChanging("CantidadPedida");
+                _CantidadPedida = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CantidadPedida");
+                OnCantidadPedidaChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _CantidadPedida;
+        partial void OnCantidadPedidaChanging(Nullable<global::System.Int32> value);
+        partial void OnCantidadPedidaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> CantidadLlegada
+        {
+            get
+            {
+                return _CantidadLlegada;
+            }
+            set
+            {
+                OnCantidadLlegadaChanging(value);
+                ReportPropertyChanging("CantidadLlegada");
+                _CantidadLlegada = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CantidadLlegada");
+                OnCantidadLlegadaChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _CantidadLlegada;
+        partial void OnCantidadLlegadaChanging(Nullable<global::System.Int32> value);
+        partial void OnCantidadLlegadaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> Costo
+        {
+            get
+            {
+                return _Costo;
+            }
+            set
+            {
+                OnCostoChanging(value);
+                ReportPropertyChanging("Costo");
+                _Costo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Costo");
+                OnCostoChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _Costo;
+        partial void OnCostoChanging(Nullable<global::System.Decimal> value);
+        partial void OnCostoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> Subtotal
+        {
+            get
+            {
+                return _Subtotal;
+            }
+            set
+            {
+                OnSubtotalChanging(value);
+                ReportPropertyChanging("Subtotal");
+                _Subtotal = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Subtotal");
+                OnSubtotalChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _Subtotal;
+        partial void OnSubtotalChanging(Nullable<global::System.Decimal> value);
+        partial void OnSubtotalChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> ValorIVA
+        {
+            get
+            {
+                return _ValorIVA;
+            }
+            set
+            {
+                OnValorIVAChanging(value);
+                ReportPropertyChanging("ValorIVA");
+                _ValorIVA = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ValorIVA");
+                OnValorIVAChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _ValorIVA;
+        partial void OnValorIVAChanging(Nullable<global::System.Decimal> value);
+        partial void OnValorIVAChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> ValorTotal
+        {
+            get
+            {
+                return _ValorTotal;
+            }
+            set
+            {
+                OnValorTotalChanging(value);
+                ReportPropertyChanging("ValorTotal");
+                _ValorTotal = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ValorTotal");
+                OnValorTotalChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _ValorTotal;
+        partial void OnValorTotalChanging(Nullable<global::System.Decimal> value);
+        partial void OnValorTotalChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEgresoDet__18178C8A", "Articulo")]
+        public Articulo Articulo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("FacturacionModel.FK__IngresoEgresoDet__18178C8A", "Articulo").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("FacturacionModel.FK__IngresoEgresoDet__18178C8A", "Articulo").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Articulo> ArticuloReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("FacturacionModel.FK__IngresoEgresoDet__18178C8A", "Articulo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Articulo>("FacturacionModel.FK__IngresoEgresoDet__18178C8A", "Articulo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEg__IdGru__190BB0C3", "Grupo")]
+        public Grupo Grupo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Grupo>("FacturacionModel.FK__IngresoEg__IdGru__190BB0C3", "Grupo").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Grupo>("FacturacionModel.FK__IngresoEg__IdGru__190BB0C3", "Grupo").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Grupo> GrupoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Grupo>("FacturacionModel.FK__IngresoEg__IdGru__190BB0C3", "Grupo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Grupo>("FacturacionModel.FK__IngresoEg__IdGru__190BB0C3", "Grupo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEgresoDet__17236851", "IngresoEgresoCab")]
+        public IngresoEgresoCab IngresoEgresoCab
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("FacturacionModel.FK__IngresoEgresoDet__17236851", "IngresoEgresoCab").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("FacturacionModel.FK__IngresoEgresoDet__17236851", "IngresoEgresoCab").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<IngresoEgresoCab> IngresoEgresoCabReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("FacturacionModel.FK__IngresoEgresoDet__17236851", "IngresoEgresoCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<IngresoEgresoCab>("FacturacionModel.FK__IngresoEgresoDet__17236851", "IngresoEgresoCab", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEg__IdPer__19FFD4FC", "Percha")]
+        public Percha Percha
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("FacturacionModel.FK__IngresoEg__IdPer__19FFD4FC", "Percha").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("FacturacionModel.FK__IngresoEg__IdPer__19FFD4FC", "Percha").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Percha> PerchaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("FacturacionModel.FK__IngresoEg__IdPer__19FFD4FC", "Percha");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Percha>("FacturacionModel.FK__IngresoEg__IdPer__19FFD4FC", "Percha", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEg__IdTip__162F4418", "TipoArticulo")]
+        public TipoArticulo TipoArticulo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("FacturacionModel.FK__IngresoEg__IdTip__162F4418", "TipoArticulo").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("FacturacionModel.FK__IngresoEg__IdTip__162F4418", "TipoArticulo").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<TipoArticulo> TipoArticuloReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("FacturacionModel.FK__IngresoEg__IdTip__162F4418", "TipoArticulo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoArticulo>("FacturacionModel.FK__IngresoEg__IdTip__162F4418", "TipoArticulo", value);
                 }
             }
         }
@@ -12331,6 +13089,28 @@ namespace datos.Facturacion
                 }
             }
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEgresoCab__0BB1B5A5", "IngresoEgresoCab")]
+        public EntityCollection<IngresoEgresoCab> IngresoEgresoCab
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("FacturacionModel.FK__IngresoEgresoCab__0BB1B5A5", "IngresoEgresoCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("FacturacionModel.FK__IngresoEgresoCab__0BB1B5A5", "IngresoEgresoCab", value);
+                }
+            }
+        }
 
         #endregion
     }
@@ -12858,6 +13638,28 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Estado>("FacturacionModel.FK__Percha__IdEstado__689D8392", "Estado", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEg__IdPer__19FFD4FC", "IngresoEgresoDet")]
+        public EntityCollection<IngresoEgresoDet> IngresoEgresoDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoDet>("FacturacionModel.FK__IngresoEg__IdPer__19FFD4FC", "IngresoEgresoDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoDet>("FacturacionModel.FK__IngresoEg__IdPer__19FFD4FC", "IngresoEgresoDet", value);
                 }
             }
         }
@@ -13416,6 +14218,28 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("FacturacionModel.FK__Usuario__IdUsuar__3C69FB99", "Usuario", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEg__IdRes__10766AC2", "IngresoEgresoCab")]
+        public EntityCollection<IngresoEgresoCab> IngresoEgresoCab
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("FacturacionModel.FK__IngresoEg__IdRes__10766AC2", "IngresoEgresoCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("FacturacionModel.FK__IngresoEg__IdRes__10766AC2", "IngresoEgresoCab", value);
                 }
             }
         }
@@ -14114,28 +14938,6 @@ namespace datos.Facturacion
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Factura__IdPromo__4DB4832C", "Factura")]
-        public EntityCollection<Factura> Factura
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Factura>("FacturacionModel.FK__Factura__IdPromo__4DB4832C", "Factura");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Factura>("FacturacionModel.FK__Factura__IdPromo__4DB4832C", "Factura", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Promocion__IdEmp__33F4B129", "Empresa")]
         public Empresa Empresa
         {
@@ -14240,6 +15042,28 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("FacturacionModel.FK__Promocion__idUsu__34E8D562", "Usuario", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Factura__IdPromo__4DB4832C", "Factura")]
+        public EntityCollection<Factura> Factura
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Factura>("FacturacionModel.FK__Factura__IdPromo__4DB4832C", "Factura");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Factura>("FacturacionModel.FK__Factura__IdPromo__4DB4832C", "Factura", value);
                 }
             }
         }
@@ -14492,6 +15316,28 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Estado>("FacturacionModel.FK__TipoArtic__IdEst__65F62111", "Estado", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEg__IdTip__162F4418", "IngresoEgresoDet")]
+        public EntityCollection<IngresoEgresoDet> IngresoEgresoDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoDet>("FacturacionModel.FK__IngresoEg__IdTip__162F4418", "IngresoEgresoDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoDet>("FacturacionModel.FK__IngresoEg__IdTip__162F4418", "IngresoEgresoDet", value);
                 }
             }
         }
@@ -15390,40 +16236,18 @@ namespace datos.Facturacion
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idUsu__6C040022", "CuentaxCobrar")]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idUsu__2E26C93A", "CuentaxCobrar")]
         public EntityCollection<CuentaxCobrar> CuentaxCobrar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaxCobrar>("FacturacionModel.FK__CuentaxCo__idUsu__6C040022", "CuentaxCobrar");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaxCobrar>("FacturacionModel.FK__CuentaxCo__idUsu__2E26C93A", "CuentaxCobrar");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaxCobrar>("FacturacionModel.FK__CuentaxCo__idUsu__6C040022", "CuentaxCobrar", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__CuentaxCo__idUsu__758D6A5C", "CuentaxCobrarDet")]
-        public EntityCollection<CuentaxCobrarDet> CuentaxCobrarDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaxCobrarDet>("FacturacionModel.FK__CuentaxCo__idUsu__758D6A5C", "CuentaxCobrarDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaxCobrarDet>("FacturacionModel.FK__CuentaxCo__idUsu__758D6A5C", "CuentaxCobrarDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaxCobrar>("FacturacionModel.FK__CuentaxCo__idUsu__2E26C93A", "CuentaxCobrar", value);
                 }
             }
         }
@@ -15522,28 +16346,6 @@ namespace datos.Facturacion
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Cotizacio__idUsu__5DEAEAF5", "CotizacionDet")]
-        public EntityCollection<CotizacionDet> CotizacionDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CotizacionDet>("FacturacionModel.FK__Cotizacio__idUsu__5DEAEAF5", "CotizacionDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CotizacionDet>("FacturacionModel.FK__Cotizacio__idUsu__5DEAEAF5", "CotizacionDet", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Devolucio__idUsu__05F8DC4F", "DevolucionDet")]
         public EntityCollection<DevolucionDet> DevolucionDet
         {
@@ -15578,50 +16380,6 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DevolucionVenta>("FacturacionModel.FK__Devolucio__idUsu__6F1576F7", "DevolucionVenta", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Factura__idUsuar__4EA8A765", "Factura")]
-        public EntityCollection<Factura> Factura
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Factura>("FacturacionModel.FK__Factura__idUsuar__4EA8A765", "Factura");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Factura>("FacturacionModel.FK__Factura__idUsuar__4EA8A765", "Factura", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__FacturaDe__idUsu__7E57BA87", "FacturaDet")]
-        public EntityCollection<FacturaDet> FacturaDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FacturaDet>("FacturacionModel.FK__FacturaDe__idUsu__7E57BA87", "FacturaDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FacturaDet>("FacturacionModel.FK__FacturaDe__idUsu__7E57BA87", "FacturaDet", value);
                 }
             }
         }
@@ -15808,6 +16566,94 @@ namespace datos.Facturacion
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Estado>("FacturacionModel.FK__Usuario__IdEstad__3A81B327", "Estado", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__IngresoEg__IdUsu__116A8EFB", "IngresoEgresoCab")]
+        public EntityCollection<IngresoEgresoCab> IngresoEgresoCab
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("FacturacionModel.FK__IngresoEg__IdUsu__116A8EFB", "IngresoEgresoCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("FacturacionModel.FK__IngresoEg__IdUsu__116A8EFB", "IngresoEgresoCab", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Factura__idUsuar__4EA8A765", "Factura")]
+        public EntityCollection<Factura> Factura
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Factura>("FacturacionModel.FK__Factura__idUsuar__4EA8A765", "Factura");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Factura>("FacturacionModel.FK__Factura__idUsuar__4EA8A765", "Factura", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__FacturaDe__idUsu__7E57BA87", "FacturaDet")]
+        public EntityCollection<FacturaDet> FacturaDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FacturaDet>("FacturacionModel.FK__FacturaDe__idUsu__7E57BA87", "FacturaDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FacturaDet>("FacturacionModel.FK__FacturaDe__idUsu__7E57BA87", "FacturaDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("FacturacionModel", "FK__Cotizacio__idUsu__5DEAEAF5", "CotizacionDet")]
+        public EntityCollection<CotizacionDet> CotizacionDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CotizacionDet>("FacturacionModel.FK__Cotizacio__idUsu__5DEAEAF5", "CotizacionDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CotizacionDet>("FacturacionModel.FK__Cotizacio__idUsu__5DEAEAF5", "CotizacionDet", value);
                 }
             }
         }

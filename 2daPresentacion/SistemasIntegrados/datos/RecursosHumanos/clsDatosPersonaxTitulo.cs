@@ -8,7 +8,7 @@ namespace datos.RecursosHumanos
 {
     public class clsDatosPersonaxTitulo
     {
-        public List<clsPersonaxTitulo> ConsultaPersonaxTitulo()
+        public List<clsPersonaxTitulo>ConsultaPersonaxTitulo()
         {
             try
             {
@@ -22,10 +22,10 @@ namespace datos.RecursosHumanos
                     clas.IdEmpresa = item.IdEmpresa;
                     clas.IdPersona = item.IdPersona;
                     clas.IdEstado = item.IdEstado;
-
-
+                    
+                  
                     Lista.Add(clas);
-
+                    
                 }
                 return Lista;
             }
@@ -43,14 +43,14 @@ namespace datos.RecursosHumanos
             {
                 using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
                 {
-
+                    
                     PersonaxTitulo petit = new PersonaxTitulo()
                     {
-                        IdTitulo = peti.IdTitulo,
+                        IdTitulo =peti .IdTitulo,
                         IdEmpresa = peti.IdEmpresa,
                         IdPersona = peti.IdPersona,
                         IdEstado = peti.IdEstado,
-
+                        
 
                     };
                     ent.AddToPersonaxTitulo(petit);
@@ -68,12 +68,12 @@ namespace datos.RecursosHumanos
             using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
             {
 
-                var x = (from q in ent.PersonaxTitulo where q.IdPersona == pt.IdPersona select q).First();
-                x.IdTitulo = pt.IdTitulo;
-                x.IdEmpresa = pt.IdEmpresa;
+                var x = (from q in ent.PersonaxTitulo where q.IdPersona  == pt.IdPersona  select q).First();
+                x.IdTitulo =pt .IdTitulo;
+                x.IdEmpresa = pt.IdEmpresa; 
                 x.IdPersona = pt.IdPersona;
                 x.IdEstado = pt.IdEstado;
-
+                                
                 ent.SaveChanges();
 
             }
@@ -85,7 +85,7 @@ namespace datos.RecursosHumanos
             {
                 using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
                 {
-                    var x = (from q in ent.PersonaxTitulo where q.IdPersona == pti.IdPersona select q).First();
+                    var x = (from q in ent.PersonaxTitulo  where q.IdPersona  == pti.IdPersona  select q).First();
                     ent.DeleteObject(x);
                     ent.SaveChanges();
                 }

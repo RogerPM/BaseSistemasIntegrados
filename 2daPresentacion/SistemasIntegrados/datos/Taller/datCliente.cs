@@ -14,7 +14,7 @@ namespace datos.Taller
             try
             {
                 TallerEntities ent = new TallerEntities();
-                int x = ((from a in ent.Persona select a.Identificacion).Max()) + 1;
+                int x = ((from a in ent.Persona select a.IdPersona).Max()) + 1;
                 return x;
             }
             catch (Exception e)
@@ -35,6 +35,7 @@ namespace datos.Taller
                 foreach (var item in con)
                 {
                     clsCliente e = new clsCliente();
+                    e.IdPersona = item.IdPersona;
                     e.Identificacion = item.Identificacion;
                     e.IdTipoPersona = item.IdTipoPersona;
                     e.Nombre = item.NombreRazonSocial;
@@ -64,11 +65,12 @@ namespace datos.Taller
             try
             {
                 int id = getIdSiguiente();
-                e.Identificacion = id;
+                e.IdPersona = id;
                 using (TallerEntities ent = new TallerEntities())
                 { //se instancia el entity para poder usar los nombres de las tablas
                     Persona persona = new Persona()
                     {
+                        IdPersona = e.IdPersona,
                         Identificacion = e.Identificacion,
                         IdTipoPersona = e.IdTipoPersona,
                         NombreRazonSocial = e.Nombre,
@@ -102,18 +104,19 @@ namespace datos.Taller
                 using (TallerEntities ent = new TallerEntities())
                 {
                     //busca por PK el primero que encuentre lo coge
-                    var x = (from a in ent.Persona where a.Identificacion == e.Identificacion select a).First();
-                    x.IdTipoPersona = e.IdTipoPersona;
-                    x.NombreRazonSocial = e.Nombre;
-                    x.Apellido = e.Apellido;
-                    x.FechaNacimiento = e.FechaNacimiento;
-                    x.Genero = e.Genero;
-                    x.TipoIdentificacion = e.TipoIdentificacion;
-                    x.Direccion = e.Direccion;
-                    x.Telefono = e.Telefono;
-                    x.Mail = e.Mail;
-                    x.IdEstado = e.idEstado;
-                    x.IdEmpresa = e.idEmpresa;
+                    var x = (from a in ent.Persona where a.IdPersona == e.IdPersona select a).First();
+                        x.Identificacion = e.Identificacion;
+                        x.IdTipoPersona = e.IdTipoPersona;
+                        x.NombreRazonSocial = e.Nombre;
+                        x.Apellido = e.Apellido;
+                        x.FechaNacimiento = e.FechaNacimiento;
+                        x.Genero = e.Genero;
+                        x.TipoIdentificacion = e.TipoIdentificacion;
+                        x.Direccion = e.Direccion;
+                        x.Telefono = e.Telefono;
+                        x.Mail = e.Mail;
+                        x.IdEstado = e.idEstado;
+                        x.IdEmpresa = e.idEmpresa;
                     ent.SaveChanges();
                 }
                 return true;
@@ -133,7 +136,7 @@ namespace datos.Taller
                 using (TallerEntities ent = new TallerEntities())
                 {
                     //busca por PK el primero que encuentre lo coge
-                    var x = (from a in ent.Persona where a.Identificacion == e.Identificacion select a).First();
+                    var x = (from a in ent.Persona where a.IdPersona == e.IdPersona select a).First();
                     ent.DeleteObject(x);//elimina el registro
                     ent.SaveChanges();
                 }
@@ -146,6 +149,63 @@ namespace datos.Taller
 
             }
         }
+
+
+
+        public List<clsTipoIdentificacion> ConsultarTipoIdentificacion()
+        {
+            try
+            {
+                List<clsTipoIdentificacion> listatipoidentificacion = new List<clsTipoIdentificacion>();
+                TallerEntities ent = new TallerEntities();
+                var con = from w in ent.TipoIdentificacion select w;
+                foreach (var item in con)
+                {
+                    clsTipoIdentificacion e = new clsTipoIdentificacion();
+                    e.IdTipoIdentificacion = item.IdTipoIdentificacion;
+                    e.Descripcion = item.descripcion;
+                    e.IdEstado = item.IdEstado;
+                    e.IdEmpresa = item.IdEmpresa;
+                    listatipoidentificacion.Add(e);
+                }
+                return listatipoidentificacion;
+
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                Console.WriteLine("Error datTipoTrabajo: " + ex);
+                return null;
+            }
+        }
+
+
+
+        public List<clsTipoPersona> ConsultarTipoPersona()
+        {
+            try
+            {
+                List<clsTipoPersona> listatipopersona = new List<clsTipoPersona>();
+                TallerEntities ent = new TallerEntities();
+                var con = from w in ent.TipoPersona select w;
+                foreach (var item in con)
+                {
+                    clsTipoPersona e = new clsTipoPersona();
+                    e.IdTipoPersona = item.IdTipoPersona;
+                    e.Descripcion = item.Descripcion;
+                    e.IdEstado = item.IdEstado;
+                    e.IdEmpresa = item.IdEmpresa;
+                    listatipopersona.Add(e);
+                }
+                return listatipopersona;
+
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                Console.WriteLine("Error datTipoTrabajo: " + ex);
+                return null;
+            }
+        }
+
 
 
         //PARA EL TIPO PERSONA

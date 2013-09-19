@@ -118,9 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 54</value>
-  </metadata>
-  <metadata name="clsTrabajoDiarioCabBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tsbConsultado.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACkSURBVEhLY2AYBaMhMLJCoGSG9X8YpqrPYYYuP1DzH4RB
+        fKpYgGzwu+9X4Ibv2L4WtwXEeBHdYJIMR/YmulexGUy04aAwAxkAsgCkCVkjLoNJMhxkASjsQIYdephO
+        FJ6+PRisHm+Yo8c2SANIIyFLyDIc2Rf4LCHbcJhv8AUVxYbDLMEWVFQzHFtQUdVw9KCCJVOSUguxZQXI
+        UBgmVs+oOpJCAAC+hGlmZNcEqQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="clsTrabajoDiarioBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>122, 17</value>
   </metadata>
 </root>

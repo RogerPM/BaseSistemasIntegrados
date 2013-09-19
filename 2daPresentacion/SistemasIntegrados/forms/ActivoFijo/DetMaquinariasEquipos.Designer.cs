@@ -30,22 +30,46 @@ namespace forms.ActivoFijo
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAdicional = new DevExpress.XtraEditors.SimpleButton();
             this.rtbObservacion = new System.Windows.Forms.RichTextBox();
             this.lblObservacion = new DevExpress.XtraEditors.LabelControl();
             this.gbxMaquinarias = new System.Windows.Forms.GroupBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtAñosVidaUtil = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDimenAlto = new DevExpress.XtraEditors.TextEdit();
+            this.lblDimensionAlto = new DevExpress.XtraEditors.LabelControl();
             this.cbxColor = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsColorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lblColor = new DevExpress.XtraEditors.LabelControl();
             this.cbxMarca = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsMarcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colempresa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colcodigo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colestado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbxModelo = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsModeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colmarca = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lblModelo = new DevExpress.XtraEditors.LabelControl();
+            this.lblMarca = new DevExpress.XtraEditors.LabelControl();
             this.txtCosto = new DevExpress.XtraEditors.TextEdit();
             this.lblCosto = new DevExpress.XtraEditors.LabelControl();
             this.txtCantidad = new DevExpress.XtraEditors.TextEdit();
             this.lblCantidad = new DevExpress.XtraEditors.LabelControl();
             this.txtAñosDepreciados = new DevExpress.XtraEditors.TextEdit();
-            this.AñosVidaUtil = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblAñosDepreciados = new DevExpress.XtraEditors.LabelControl();
             this.lblAñosVidaUtil = new DevExpress.XtraEditors.LabelControl();
             this.lblV_Adquisición = new DevExpress.XtraEditors.LabelControl();
@@ -60,11 +84,9 @@ namespace forms.ActivoFijo
             this.lblCarga = new DevExpress.XtraEditors.LabelControl();
             this.txtDimenLargo = new DevExpress.XtraEditors.TextEdit();
             this.lblDimensionLargo = new DevExpress.XtraEditors.LabelControl();
-            this.lblColor = new DevExpress.XtraEditors.LabelControl();
-            this.lblModelo = new DevExpress.XtraEditors.LabelControl();
-            this.lblMarca = new DevExpress.XtraEditors.LabelControl();
             this.lblProveedor = new DevExpress.XtraEditors.LabelControl();
             this.cbxProveedor = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdPersona = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdentificacion = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -85,16 +107,20 @@ namespace forms.ActivoFijo
             this.colFoto = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lblComentario = new DevExpress.XtraEditors.LabelControl();
             this.gbxMaquinarias.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAñosVidaUtil.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDimenAlto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxColor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsColorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxMarca.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsMarcaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxModelo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsModeloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCosto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAñosDepreciados.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AñosVidaUtil.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtV_Residual.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtV_Adquisicion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaAdquisicion.Properties.VistaTimeProperties)).BeginInit();
@@ -103,6 +129,7 @@ namespace forms.ActivoFijo
             ((System.ComponentModel.ISupportInitialize)(this.txtCarga.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDimenLargo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxProveedor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsPersonaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,12 +141,14 @@ namespace forms.ActivoFijo
             this.btnAdicional.Size = new System.Drawing.Size(84, 23);
             this.btnAdicional.TabIndex = 258;
             this.btnAdicional.Text = "Adicional";
+            this.btnAdicional.Click += new System.EventHandler(this.btnAdicional_Click);
             // 
             // rtbObservacion
             // 
             this.rtbObservacion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.rtbObservacion.Enabled = false;
             this.rtbObservacion.Location = new System.Drawing.Point(100, 290);
+            this.rtbObservacion.MaxLength = 449;
             this.rtbObservacion.Name = "rtbObservacion";
             this.rtbObservacion.Size = new System.Drawing.Size(231, 61);
             this.rtbObservacion.TabIndex = 257;
@@ -135,15 +164,22 @@ namespace forms.ActivoFijo
             // 
             // gbxMaquinarias
             // 
+            this.gbxMaquinarias.Controls.Add(this.labelControl1);
+            this.gbxMaquinarias.Controls.Add(this.txtAñosVidaUtil);
+            this.gbxMaquinarias.Controls.Add(this.labelControl3);
+            this.gbxMaquinarias.Controls.Add(this.txtDimenAlto);
+            this.gbxMaquinarias.Controls.Add(this.lblDimensionAlto);
             this.gbxMaquinarias.Controls.Add(this.cbxColor);
+            this.gbxMaquinarias.Controls.Add(this.lblColor);
             this.gbxMaquinarias.Controls.Add(this.cbxMarca);
             this.gbxMaquinarias.Controls.Add(this.cbxModelo);
+            this.gbxMaquinarias.Controls.Add(this.lblModelo);
+            this.gbxMaquinarias.Controls.Add(this.lblMarca);
             this.gbxMaquinarias.Controls.Add(this.txtCosto);
             this.gbxMaquinarias.Controls.Add(this.lblCosto);
             this.gbxMaquinarias.Controls.Add(this.txtCantidad);
             this.gbxMaquinarias.Controls.Add(this.lblCantidad);
             this.gbxMaquinarias.Controls.Add(this.txtAñosDepreciados);
-            this.gbxMaquinarias.Controls.Add(this.AñosVidaUtil);
             this.gbxMaquinarias.Controls.Add(this.lblAñosDepreciados);
             this.gbxMaquinarias.Controls.Add(this.lblAñosVidaUtil);
             this.gbxMaquinarias.Controls.Add(this.lblV_Adquisición);
@@ -158,71 +194,270 @@ namespace forms.ActivoFijo
             this.gbxMaquinarias.Controls.Add(this.lblCarga);
             this.gbxMaquinarias.Controls.Add(this.txtDimenLargo);
             this.gbxMaquinarias.Controls.Add(this.lblDimensionLargo);
-            this.gbxMaquinarias.Controls.Add(this.lblColor);
-            this.gbxMaquinarias.Controls.Add(this.lblModelo);
-            this.gbxMaquinarias.Controls.Add(this.lblMarca);
             this.gbxMaquinarias.Location = new System.Drawing.Point(17, 48);
             this.gbxMaquinarias.Name = "gbxMaquinarias";
             this.gbxMaquinarias.Size = new System.Drawing.Size(458, 226);
             this.gbxMaquinarias.TabIndex = 251;
             this.gbxMaquinarias.TabStop = false;
-            this.gbxMaquinarias.Text = "Maquinarias";
+            this.gbxMaquinarias.Text = "Maquinarias/Equipos";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(167, 196);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(28, 16);
+            this.labelControl1.TabIndex = 335;
+            this.labelControl1.Text = "Años";
+            // 
+            // txtAñosVidaUtil
+            // 
+            this.txtAñosVidaUtil.EditValue = "0";
+            this.txtAñosVidaUtil.Enabled = false;
+            this.txtAñosVidaUtil.Location = new System.Drawing.Point(134, 194);
+            this.txtAñosVidaUtil.Name = "txtAñosVidaUtil";
+            this.txtAñosVidaUtil.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtAñosVidaUtil.Properties.Appearance.Options.UseForeColor = true;
+            this.txtAñosVidaUtil.Properties.Mask.EditMask = "n0";
+            this.txtAñosVidaUtil.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtAñosVidaUtil.Properties.MaxLength = 3;
+            this.txtAñosVidaUtil.Size = new System.Drawing.Size(31, 20);
+            this.txtAñosVidaUtil.TabIndex = 334;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Location = new System.Drawing.Point(420, 69);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(14, 16);
+            this.labelControl3.TabIndex = 333;
+            this.labelControl3.Text = "Kg";
+            // 
+            // txtDimenAlto
+            // 
+            this.txtDimenAlto.Location = new System.Drawing.Point(99, 145);
+            this.txtDimenAlto.Name = "txtDimenAlto";
+            this.txtDimenAlto.Properties.Mask.EditMask = "n2";
+            this.txtDimenAlto.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtDimenAlto.Properties.MaxLength = 12;
+            this.txtDimenAlto.Size = new System.Drawing.Size(96, 20);
+            this.txtDimenAlto.TabIndex = 324;
+            // 
+            // lblDimensionAlto
+            // 
+            this.lblDimensionAlto.Location = new System.Drawing.Point(29, 148);
+            this.lblDimensionAlto.Name = "lblDimensionAlto";
+            this.lblDimensionAlto.Size = new System.Drawing.Size(56, 13);
+            this.lblDimensionAlto.TabIndex = 323;
+            this.lblDimensionAlto.Text = "Dimen.Alto:";
             // 
             // cbxColor
             // 
-            this.cbxColor.Location = new System.Drawing.Point(323, 42);
+            this.cbxColor.Location = new System.Drawing.Point(323, 38);
             this.cbxColor.Name = "cbxColor";
             this.cbxColor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxColor.Properties.DataSource = this.clsColorBindingSource;
+            this.cbxColor.Properties.DisplayMember = "descripcion";
+            this.cbxColor.Properties.ValueMember = "descripcion";
             this.cbxColor.Properties.View = this.gridView4;
             this.cbxColor.Size = new System.Drawing.Size(111, 20);
-            this.cbxColor.TabIndex = 316;
+            this.cbxColor.TabIndex = 322;
+            // 
+            // clsColorBindingSource
+            // 
+            this.clsColorBindingSource.DataSource = typeof(clases.Inventario.clsColor);
             // 
             // gridView4
             // 
+            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn8,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn11});
             this.gridView4.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView4.Name = "gridView4";
             this.gridView4.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView4.OptionsView.ShowGroupPanel = false;
+            this.gridView4.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn11, DevExpress.Data.ColumnSortOrder.Ascending)});
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.FieldName = "empresa";
+            this.gridColumn8.Name = "gridColumn8";
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.FieldName = "codigo";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 0;
+            this.gridColumn9.Width = 106;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.FieldName = "descripcion";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 1;
+            this.gridColumn10.Width = 627;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.FieldName = "estado";
+            this.gridColumn11.Name = "gridColumn11";
+            // 
+            // lblColor
+            // 
+            this.lblColor.Location = new System.Drawing.Point(280, 41);
+            this.lblColor.Name = "lblColor";
+            this.lblColor.Size = new System.Drawing.Size(29, 13);
+            this.lblColor.TabIndex = 321;
+            this.lblColor.Text = "Color:";
             // 
             // cbxMarca
             // 
-            this.cbxMarca.Location = new System.Drawing.Point(99, 42);
+            this.cbxMarca.Location = new System.Drawing.Point(84, 38);
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxMarca.Properties.DataSource = this.clsMarcaBindingSource;
+            this.cbxMarca.Properties.DisplayMember = "descripcion";
+            this.cbxMarca.Properties.ValueMember = "descripcion";
             this.cbxMarca.Properties.View = this.gridLookUpEdit1View;
-            this.cbxMarca.Size = new System.Drawing.Size(96, 20);
-            this.cbxMarca.TabIndex = 314;
+            this.cbxMarca.Size = new System.Drawing.Size(111, 20);
+            this.cbxMarca.TabIndex = 319;
+            // 
+            // clsMarcaBindingSource
+            // 
+            this.clsMarcaBindingSource.DataSource = typeof(clases.Inventario.clsMarca);
             // 
             // gridLookUpEdit1View
             // 
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colempresa,
+            this.colcodigo,
+            this.coldescripcion,
+            this.colestado});
             this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            this.gridLookUpEdit1View.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colcodigo, DevExpress.Data.ColumnSortOrder.Ascending)});
+            // 
+            // colempresa
+            // 
+            this.colempresa.FieldName = "empresa";
+            this.colempresa.Name = "colempresa";
+            // 
+            // colcodigo
+            // 
+            this.colcodigo.FieldName = "codigo";
+            this.colcodigo.Name = "colcodigo";
+            this.colcodigo.Visible = true;
+            this.colcodigo.VisibleIndex = 0;
+            this.colcodigo.Width = 133;
+            // 
+            // coldescripcion
+            // 
+            this.coldescripcion.FieldName = "descripcion";
+            this.coldescripcion.Name = "coldescripcion";
+            this.coldescripcion.Visible = true;
+            this.coldescripcion.VisibleIndex = 1;
+            this.coldescripcion.Width = 299;
+            // 
+            // colestado
+            // 
+            this.colestado.FieldName = "estado";
+            this.colestado.Name = "colestado";
+            this.colestado.Width = 301;
             // 
             // cbxModelo
             // 
-            this.cbxModelo.Location = new System.Drawing.Point(99, 68);
+            this.cbxModelo.Location = new System.Drawing.Point(84, 65);
             this.cbxModelo.Name = "cbxModelo";
             this.cbxModelo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxModelo.Properties.DataSource = this.clsModeloBindingSource;
+            this.cbxModelo.Properties.DisplayMember = "descripcion";
+            this.cbxModelo.Properties.ValueMember = "descripcion";
             this.cbxModelo.Properties.View = this.gridView2;
-            this.cbxModelo.Size = new System.Drawing.Size(96, 20);
-            this.cbxModelo.TabIndex = 315;
+            this.cbxModelo.Size = new System.Drawing.Size(111, 20);
+            this.cbxModelo.TabIndex = 320;
+            // 
+            // clsModeloBindingSource
+            // 
+            this.clsModeloBindingSource.DataSource = typeof(clases.Inventario.clsModelo);
             // 
             // gridView2
             // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.colmarca,
+            this.gridColumn4});
             this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.FieldName = "empresa";
+            this.gridColumn1.Name = "gridColumn1";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.FieldName = "codigo";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 0;
+            this.gridColumn2.Width = 118;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.FieldName = "descripcion";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 1;
+            this.gridColumn3.Width = 615;
+            // 
+            // colmarca
+            // 
+            this.colmarca.FieldName = "marca";
+            this.colmarca.Name = "colmarca";
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.FieldName = "estado";
+            this.gridColumn4.Name = "gridColumn4";
+            // 
+            // lblModelo
+            // 
+            this.lblModelo.Location = new System.Drawing.Point(29, 75);
+            this.lblModelo.Name = "lblModelo";
+            this.lblModelo.Size = new System.Drawing.Size(38, 13);
+            this.lblModelo.TabIndex = 318;
+            this.lblModelo.Text = "Modelo:";
+            // 
+            // lblMarca
+            // 
+            this.lblMarca.Location = new System.Drawing.Point(28, 45);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(33, 13);
+            this.lblMarca.TabIndex = 317;
+            this.lblMarca.Text = "Marca:";
+            // 
             // txtCosto
             // 
             this.txtCosto.Location = new System.Drawing.Point(323, 123);
             this.txtCosto.Name = "txtCosto";
+            this.txtCosto.Properties.Mask.EditMask = "n2";
+            this.txtCosto.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtCosto.Properties.MaxLength = 12;
             this.txtCosto.Size = new System.Drawing.Size(73, 20);
             this.txtCosto.TabIndex = 145;
             // 
@@ -238,6 +473,9 @@ namespace forms.ActivoFijo
             // 
             this.txtCantidad.Location = new System.Drawing.Point(230, 13);
             this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Properties.Mask.EditMask = "n0";
+            this.txtCantidad.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtCantidad.Properties.MaxLength = 10;
             this.txtCantidad.Size = new System.Drawing.Size(79, 20);
             this.txtCantidad.TabIndex = 143;
             // 
@@ -251,23 +489,17 @@ namespace forms.ActivoFijo
             // 
             // txtAñosDepreciados
             // 
-            this.txtAñosDepreciados.Location = new System.Drawing.Point(134, 149);
+            this.txtAñosDepreciados.Location = new System.Drawing.Point(134, 168);
             this.txtAñosDepreciados.Name = "txtAñosDepreciados";
+            this.txtAñosDepreciados.Properties.Mask.EditMask = "n0";
+            this.txtAñosDepreciados.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtAñosDepreciados.Properties.MaxLength = 3;
             this.txtAñosDepreciados.Size = new System.Drawing.Size(61, 20);
             this.txtAñosDepreciados.TabIndex = 141;
             // 
-            // AñosVidaUtil
-            // 
-            this.AñosVidaUtil.Location = new System.Drawing.Point(133, 176);
-            this.AñosVidaUtil.Name = "AñosVidaUtil";
-            this.AñosVidaUtil.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.AñosVidaUtil.Size = new System.Drawing.Size(62, 20);
-            this.AñosVidaUtil.TabIndex = 140;
-            // 
             // lblAñosDepreciados
             // 
-            this.lblAñosDepreciados.Location = new System.Drawing.Point(28, 152);
+            this.lblAñosDepreciados.Location = new System.Drawing.Point(28, 171);
             this.lblAñosDepreciados.Name = "lblAñosDepreciados";
             this.lblAñosDepreciados.Size = new System.Drawing.Size(90, 13);
             this.lblAñosDepreciados.TabIndex = 139;
@@ -275,7 +507,7 @@ namespace forms.ActivoFijo
             // 
             // lblAñosVidaUtil
             // 
-            this.lblAñosVidaUtil.Location = new System.Drawing.Point(28, 179);
+            this.lblAñosVidaUtil.Location = new System.Drawing.Point(28, 198);
             this.lblAñosVidaUtil.Name = "lblAñosVidaUtil";
             this.lblAñosVidaUtil.Size = new System.Drawing.Size(69, 13);
             this.lblAñosVidaUtil.TabIndex = 138;
@@ -293,6 +525,9 @@ namespace forms.ActivoFijo
             // 
             this.txtV_Residual.Location = new System.Drawing.Point(323, 172);
             this.txtV_Residual.Name = "txtV_Residual";
+            this.txtV_Residual.Properties.Mask.EditMask = "n2";
+            this.txtV_Residual.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtV_Residual.Properties.MaxLength = 12;
             this.txtV_Residual.Size = new System.Drawing.Size(73, 20);
             this.txtV_Residual.TabIndex = 136;
             // 
@@ -308,6 +543,9 @@ namespace forms.ActivoFijo
             // 
             this.txtV_Adquisicion.Location = new System.Drawing.Point(323, 147);
             this.txtV_Adquisicion.Name = "txtV_Adquisicion";
+            this.txtV_Adquisicion.Properties.Mask.EditMask = "n2";
+            this.txtV_Adquisicion.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtV_Adquisicion.Properties.MaxLength = 12;
             this.txtV_Adquisicion.Size = new System.Drawing.Size(73, 20);
             this.txtV_Adquisicion.TabIndex = 134;
             // 
@@ -336,6 +574,9 @@ namespace forms.ActivoFijo
             // 
             this.txtDimenAncho.Location = new System.Drawing.Point(99, 123);
             this.txtDimenAncho.Name = "txtDimenAncho";
+            this.txtDimenAncho.Properties.Mask.EditMask = "n2";
+            this.txtDimenAncho.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtDimenAncho.Properties.MaxLength = 12;
             this.txtDimenAncho.Size = new System.Drawing.Size(96, 20);
             this.txtDimenAncho.TabIndex = 110;
             // 
@@ -351,7 +592,10 @@ namespace forms.ActivoFijo
             // 
             this.txtCarga.Location = new System.Drawing.Point(323, 68);
             this.txtCarga.Name = "txtCarga";
-            this.txtCarga.Size = new System.Drawing.Size(111, 20);
+            this.txtCarga.Properties.Mask.EditMask = "n2";
+            this.txtCarga.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtCarga.Properties.MaxLength = 12;
+            this.txtCarga.Size = new System.Drawing.Size(92, 20);
             this.txtCarga.TabIndex = 108;
             // 
             // lblCarga
@@ -366,6 +610,9 @@ namespace forms.ActivoFijo
             // 
             this.txtDimenLargo.Location = new System.Drawing.Point(99, 97);
             this.txtDimenLargo.Name = "txtDimenLargo";
+            this.txtDimenLargo.Properties.Mask.EditMask = "n2";
+            this.txtDimenLargo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtDimenLargo.Properties.MaxLength = 12;
             this.txtDimenLargo.Size = new System.Drawing.Size(96, 20);
             this.txtDimenLargo.TabIndex = 106;
             // 
@@ -376,30 +623,6 @@ namespace forms.ActivoFijo
             this.lblDimensionLargo.Size = new System.Drawing.Size(64, 13);
             this.lblDimensionLargo.TabIndex = 105;
             this.lblDimensionLargo.Text = "Dimen.Largo:";
-            // 
-            // lblColor
-            // 
-            this.lblColor.Location = new System.Drawing.Point(280, 45);
-            this.lblColor.Name = "lblColor";
-            this.lblColor.Size = new System.Drawing.Size(29, 13);
-            this.lblColor.TabIndex = 90;
-            this.lblColor.Text = "Color:";
-            // 
-            // lblModelo
-            // 
-            this.lblModelo.Location = new System.Drawing.Point(29, 71);
-            this.lblModelo.Name = "lblModelo";
-            this.lblModelo.Size = new System.Drawing.Size(38, 13);
-            this.lblModelo.TabIndex = 85;
-            this.lblModelo.Text = "Modelo:";
-            // 
-            // lblMarca
-            // 
-            this.lblMarca.Location = new System.Drawing.Point(29, 45);
-            this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(33, 13);
-            this.lblMarca.TabIndex = 84;
-            this.lblMarca.Text = "Marca:";
             // 
             // lblProveedor
             // 
@@ -415,11 +638,16 @@ namespace forms.ActivoFijo
             this.cbxProveedor.Name = "cbxProveedor";
             this.cbxProveedor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxProveedor.Properties.DataSource = this.clsPersonaBindingSource;
             this.cbxProveedor.Properties.DisplayMember = "NombreRazonSocial";
             this.cbxProveedor.Properties.ValueMember = "NombreRazonSocial";
             this.cbxProveedor.Properties.View = this.gridView1;
             this.cbxProveedor.Size = new System.Drawing.Size(129, 20);
             this.cbxProveedor.TabIndex = 309;
+            // 
+            // clsPersonaBindingSource
+            // 
+            this.clsPersonaBindingSource.DataSource = typeof(clases.RecursosHumanos.clsPersona);
             // 
             // gridView1
             // 
@@ -551,7 +779,7 @@ namespace forms.ActivoFijo
             // 
             this.lblComentario.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.lblComentario.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblComentario.Location = new System.Drawing.Point(303, 16);
+            this.lblComentario.Location = new System.Drawing.Point(307, 16);
             this.lblComentario.Name = "lblComentario";
             this.lblComentario.Size = new System.Drawing.Size(158, 13);
             this.lblComentario.TabIndex = 313;
@@ -573,16 +801,20 @@ namespace forms.ActivoFijo
             this.Load += new System.EventHandler(this.DetMaquinariasEquipos_Load);
             this.gbxMaquinarias.ResumeLayout(false);
             this.gbxMaquinarias.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAñosVidaUtil.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDimenAlto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxColor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsColorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxMarca.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsMarcaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxModelo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsModeloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCosto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAñosDepreciados.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AñosVidaUtil.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtV_Residual.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtV_Adquisicion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaAdquisicion.Properties.VistaTimeProperties)).EndInit();
@@ -591,6 +823,7 @@ namespace forms.ActivoFijo
             ((System.ComponentModel.ISupportInitialize)(this.txtCarga.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDimenLargo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxProveedor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsPersonaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -628,7 +861,6 @@ namespace forms.ActivoFijo
         public DevExpress.XtraEditors.TextEdit txtCantidad;
         public DevExpress.XtraEditors.LabelControl lblCantidad;
         public DevExpress.XtraEditors.TextEdit txtAñosDepreciados;
-        public DevExpress.XtraEditors.ComboBoxEdit AñosVidaUtil;
         public DevExpress.XtraEditors.LabelControl lblAñosDepreciados;
         public DevExpress.XtraEditors.LabelControl lblAñosVidaUtil;
         public DevExpress.XtraEditors.LabelControl lblV_Adquisición;
@@ -643,15 +875,37 @@ namespace forms.ActivoFijo
         public DevExpress.XtraEditors.LabelControl lblCarga;
         public DevExpress.XtraEditors.TextEdit txtDimenLargo;
         public DevExpress.XtraEditors.LabelControl lblDimensionLargo;
-        public DevExpress.XtraEditors.LabelControl lblColor;
-        public DevExpress.XtraEditors.LabelControl lblModelo;
-        public DevExpress.XtraEditors.LabelControl lblMarca;
         public DevExpress.XtraEditors.LabelControl lblComentario;
+        private System.Windows.Forms.BindingSource clsPersonaBindingSource;
         public DevExpress.XtraEditors.GridLookUpEdit cbxMarca;
         private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private DevExpress.XtraGrid.Columns.GridColumn colempresa;
+        private DevExpress.XtraGrid.Columns.GridColumn colcodigo;
+        private DevExpress.XtraGrid.Columns.GridColumn coldescripcion;
+        private DevExpress.XtraGrid.Columns.GridColumn colestado;
         public DevExpress.XtraEditors.GridLookUpEdit cbxModelo;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn colmarca;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        public DevExpress.XtraEditors.LabelControl lblModelo;
+        public DevExpress.XtraEditors.LabelControl lblMarca;
         public DevExpress.XtraEditors.GridLookUpEdit cbxColor;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        public DevExpress.XtraEditors.LabelControl lblColor;
+        private System.Windows.Forms.BindingSource clsMarcaBindingSource;
+        private System.Windows.Forms.BindingSource clsColorBindingSource;
+        private System.Windows.Forms.BindingSource clsModeloBindingSource;
+        public DevExpress.XtraEditors.TextEdit txtDimenAlto;
+        public DevExpress.XtraEditors.LabelControl lblDimensionAlto;
+        public DevExpress.XtraEditors.LabelControl labelControl3;
+        public DevExpress.XtraEditors.TextEdit txtAñosVidaUtil;
+        public DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

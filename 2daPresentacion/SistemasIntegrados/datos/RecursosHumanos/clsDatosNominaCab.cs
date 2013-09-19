@@ -8,26 +8,26 @@ namespace datos.RecursosHumanos
 {
     public class clsDatosNominaCab
     {
-        public List<clsNominaCab> ConsultaNominaCab()
+         public List<clsNominaCab  > ConsultaNominaCab()
         {
             try
             {
-                List<clsNominaCab> Lista = new List<clsNominaCab>();
+                List<clsNominaCab  > Lista = new List<clsNominaCab >();
                 RecursosHumanosEntities ent = new RecursosHumanosEntities();
-                var con = from w in ent.NominaCab select w;
+                var con = from w in ent.NominaCab   select w;
                 foreach (var item in con)
                 {
-                    clsNominaCab clas = new clsNominaCab();
-                    clas.NumNomina = item.NumNomina;
-                    clas.Fecha = item.Fecha;
-                    clas.FechaModificacion = Convert.ToDateTime(item.FechaModificacion);
-                    clas.Periodo = item.Periodo;
-                    clas.Total = Convert.ToDouble(item.Total);
-                    clas.IdEstado = item.IdEstado;
+                    clsNominaCab   clas = new clsNominaCab  ();
+                    clas .NumNomina=item.NumNomina;
+                    clas.Fecha=item .Fecha ;
+                    clas.FechaModificacion=Convert.ToDateTime( item.FechaModificacion);
+                    clas.Periodo=item.Periodo;
+                    clas.Total= Convert .ToDouble (item.Total);
+                    clas .IdEstado=item .IdEstado;
                     clas.IdEmpresa = item.IdEmpresa;
-                    clas.Observacion = item.Observacion;
+                    clas.Observacion=item.Observacion;
 
-
+                    
                     Lista.Add(clas);
 
                 }
@@ -46,22 +46,22 @@ namespace datos.RecursosHumanos
                 using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
                 {
 
-                    NominaCab nec = new NominaCab()
+                    NominaCab   nec = new NominaCab  ()
                     {
-
-                        NumNomina = nc.NumNomina,
-                        Fecha = nc.Fecha,
-                        FechaModificacion = nc.FechaModificacion,
-                        Periodo = nc.Periodo,
-                        Total = Convert.ToDecimal(nc.Total),
-                        IdEstado = nc.IdEstado,
-                        IdEmpresa = nc.IdEmpresa,
-                        Observacion = nc.Observacion,
+                    
+                       NumNomina=nc.NumNomina,
+                       Fecha= nc .Fecha,
+                       FechaModificacion =nc .FechaModificacion,
+                       Periodo =nc .Periodo ,
+                       Total =Convert .ToDecimal  ( nc.Total),
+                       IdEstado =nc .IdEstado ,
+                       IdEmpresa =nc .IdEmpresa, 
+                       Observacion =nc .Observacion,
 
                     };
                     ent.AddToNominaCab(nec);
                     ent.SaveChanges();
-                }
+                 }
                 return true;
             }
             catch (Exception)
@@ -69,21 +69,21 @@ namespace datos.RecursosHumanos
                 return false;
             }
         }
-        public void Modificar(clsNominaCab nc)
+        public void Modificar(clsNominaCab  nc)
         {
             using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
             {
 
-                var x = (from q in ent.NominaCab where q.NumNomina == nc.NumNomina select q).First();
-                x.NumNomina = nc.NumNomina;
-                x.Fecha = nc.Fecha;
-                x.FechaModificacion = nc.FechaModificacion;
-                x.Periodo = nc.Periodo;
-                x.Total = Convert.ToDecimal(nc.Total);
-                x.IdEstado = nc.IdEstado;
-                x.IdEmpresa = nc.IdEmpresa;
-                x.Observacion = nc.Observacion;
-
+                var x = (from q in ent.NominaCab where q.NumNomina == nc.NumNomina  select q).First();
+                x .NumNomina  =nc .NumNomina  ;
+                x.Fecha =nc .Fecha;
+                x.FechaModificacion =nc.FechaModificacion ;
+                x.Periodo =nc .Periodo ;
+                x.Total =Convert .ToDecimal(nc.Total) ;
+                x.IdEstado =nc .IdEstado ;
+                x.IdEmpresa =nc .IdEmpresa ;
+                x.Observacion =nc .Observacion; 
+                
                 ent.SaveChanges();
 
             }
@@ -95,7 +95,7 @@ namespace datos.RecursosHumanos
             {
                 using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
                 {
-                    var x = (from q in ent.NominaCab where q.NumNomina == nomc.NumNomina select q).First();
+                    var x = (from q in ent.NominaCab   where q.NumNomina   == nomc .NumNomina   select q).First();
                     ent.DeleteObject(x);
                     ent.SaveChanges();
                 }
@@ -114,7 +114,7 @@ namespace datos.RecursosHumanos
             try
             {
                 RecursosHumanosEntities ent = new RecursosHumanosEntities();
-                int x = ((from a in ent.NominaCab select a.NumNomina).Max()) + 1;
+                int x = ((from a in ent.NominaCab   select a.NumNomina  ).Max()) + 1;
                 return x;
             }
             catch (Exception e)
@@ -123,9 +123,9 @@ namespace datos.RecursosHumanos
                 return 1; //en caso de que no exista algun registro
             }
         }
-
-
-
+        
+     
+    
         public clsDatosNominaCab()
         {
 

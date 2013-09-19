@@ -72,6 +72,12 @@
             this.txtD = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtH = new System.Windows.Forms.TextBox();
+            this.cmbTipotransaccion = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.clsTipoTransaccionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.colIdTransaccion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldescripcion1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label5 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -83,6 +89,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.clsCuentaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboCuentaGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DebeHaber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTipotransaccion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTipoTransaccionBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -158,11 +167,13 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.cmbTipotransaccion);
             this.panelControl1.Controls.Add(this.btnBuscar);
             this.panelControl1.Controls.Add(this.txtNumCom);
             this.panelControl1.Controls.Add(this.dtFecha);
             this.panelControl1.Controls.Add(this.label3);
             this.panelControl1.Controls.Add(this.label4);
+            this.panelControl1.Controls.Add(this.label5);
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Controls.Add(this.txtGlosa);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -173,7 +184,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(217, 14);
+            this.btnBuscar.Location = new System.Drawing.Point(255, 14);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(23, 23);
             this.btnBuscar.TabIndex = 4;
@@ -182,7 +193,7 @@
             // 
             // txtNumCom
             // 
-            this.txtNumCom.Location = new System.Drawing.Point(137, 16);
+            this.txtNumCom.Location = new System.Drawing.Point(175, 16);
             this.txtNumCom.Name = "txtNumCom";
             this.txtNumCom.Properties.Mask.EditMask = "\\d{0,5}";
             this.txtNumCom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
@@ -441,6 +452,58 @@
             this.txtH.Size = new System.Drawing.Size(100, 20);
             this.txtH.TabIndex = 26;
             // 
+            // cmbTipotransaccion
+            // 
+            this.cmbTipotransaccion.Location = new System.Drawing.Point(117, 73);
+            this.cmbTipotransaccion.Name = "cmbTipotransaccion";
+            this.cmbTipotransaccion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbTipotransaccion.Properties.DataSource = this.clsTipoTransaccionBindingSource;
+            this.cmbTipotransaccion.Properties.DisplayMember = "descripcion";
+            this.cmbTipotransaccion.Properties.ValueMember = "IdTransaccion";
+            this.cmbTipotransaccion.Properties.View = this.gridLookUpEdit1View;
+            this.cmbTipotransaccion.Size = new System.Drawing.Size(161, 20);
+            this.cmbTipotransaccion.TabIndex = 5;
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colIdTransaccion,
+            this.coldescripcion1});
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // clsTipoTransaccionBindingSource
+            // 
+            this.clsTipoTransaccionBindingSource.DataSource = typeof(clases.Contabilidad.clsTipoTransaccion);
+            // 
+            // colIdTransaccion
+            // 
+            this.colIdTransaccion.FieldName = "IdTransaccion";
+            this.colIdTransaccion.Name = "colIdTransaccion";
+            this.colIdTransaccion.Visible = true;
+            this.colIdTransaccion.VisibleIndex = 1;
+            this.colIdTransaccion.Width = 95;
+            // 
+            // coldescripcion1
+            // 
+            this.coldescripcion1.FieldName = "descripcion";
+            this.coldescripcion1.Name = "coldescripcion1";
+            this.coldescripcion1.Visible = true;
+            this.coldescripcion1.VisibleIndex = 0;
+            this.coldescripcion1.Width = 1085;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 76);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Tipo Transaccion";
+            // 
             // frmComprobante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,6 +532,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.clsCuentaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboCuentaGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DebeHaber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTipotransaccion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTipoTransaccionBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -519,6 +585,12 @@
         private System.Windows.Forms.Button btnBuscar;
         private DevExpress.XtraEditors.TextEdit txtNumCom;
         private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.GridLookUpEdit cmbTipotransaccion;
+        private System.Windows.Forms.BindingSource clsTipoTransaccionBindingSource;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdTransaccion;
+        private DevExpress.XtraGrid.Columns.GridColumn coldescripcion1;
+        private System.Windows.Forms.Label label5;
 
     }
 }

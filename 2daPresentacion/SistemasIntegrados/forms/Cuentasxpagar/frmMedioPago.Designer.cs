@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedioPago));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new DevExpress.XtraEditors.SimpleButton();
             this.txtDescripcion = new DevExpress.XtraEditors.TextEdit();
             this.txtCodigo = new DevExpress.XtraEditors.TextEdit();
@@ -44,17 +42,14 @@
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsbSalir = new System.Windows.Forms.ToolStripButton();
-            this.deFechaRegistro = new DevExpress.XtraEditors.DateEdit();
-            this.clsEstadoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.clsEstadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtpFechaRegistro = new DevExpress.XtraEditors.DateEdit();
+            this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deFechaRegistro.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deFechaRegistro.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsEstadoBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsEstadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFechaRegistro.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFechaRegistro.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -69,24 +64,12 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 54);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(397, 159);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
-            // 
-            // cbxEstado
-            // 
-            this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxEstado.FormattingEnabled = true;
-            this.cbxEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.cbxEstado.Location = new System.Drawing.Point(101, 115);
-            this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(237, 21);
-            this.cbxEstado.TabIndex = 34;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(316, 34);
+            this.btnBuscar.Location = new System.Drawing.Point(344, 34);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(22, 17);
             this.btnBuscar.TabIndex = 33;
@@ -97,16 +80,18 @@
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(101, 75);
             this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Properties.Mask.EditMask = "\\p{L}+";
+            this.txtDescripcion.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtDescripcion.Size = new System.Drawing.Size(237, 20);
-            this.txtDescripcion.TabIndex = 1;
+            this.txtDescripcion.TabIndex = 31;
             // 
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
             this.txtCodigo.Location = new System.Drawing.Point(101, 31);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(209, 20);
-            this.txtCodigo.TabIndex = 0;
+            this.txtCodigo.Size = new System.Drawing.Size(237, 20);
+            this.txtCodigo.TabIndex = 32;
             // 
             // label1
             // 
@@ -149,7 +134,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(423, 25);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // tsbNuevo
             // 
@@ -160,7 +144,7 @@
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsbNuevo.Text = "Nuevo";
-            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click_1);
             // 
             // tsbGuardar
             // 
@@ -171,7 +155,7 @@
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
             this.tsbGuardar.Text = "Guardar";
-            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click_1);
             // 
             // tsbModificar
             // 
@@ -182,7 +166,7 @@
             this.tsbModificar.Name = "tsbModificar";
             this.tsbModificar.Size = new System.Drawing.Size(78, 22);
             this.tsbModificar.Text = "Modificar";
-            this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
+            this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click_1);
             // 
             // tsbEliminar
             // 
@@ -193,7 +177,7 @@
             this.tsbEliminar.Name = "tsbEliminar";
             this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
             this.tsbEliminar.Text = "Eliminar";
-            this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
+            this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click_1);
             // 
             // tsbSalir
             // 
@@ -202,35 +186,39 @@
             this.tsbSalir.Name = "tsbSalir";
             this.tsbSalir.Size = new System.Drawing.Size(49, 22);
             this.tsbSalir.Text = "Salir";
-            this.tsbSalir.Click += new System.EventHandler(this.tsbSalir_Click);
+            this.tsbSalir.Click += new System.EventHandler(this.tsbSalir_Click_1);
             // 
-            // deFechaRegistro
+            // dtpFechaRegistro
             // 
-            this.deFechaRegistro.EditValue = null;
-            this.deFechaRegistro.Enabled = false;
-            this.deFechaRegistro.Location = new System.Drawing.Point(309, 28);
-            this.deFechaRegistro.Name = "deFechaRegistro";
-            this.deFechaRegistro.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtpFechaRegistro.EditValue = null;
+            this.dtpFechaRegistro.Enabled = false;
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(309, 30);
+            this.dtpFechaRegistro.Name = "dtpFechaRegistro";
+            this.dtpFechaRegistro.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deFechaRegistro.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtpFechaRegistro.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.deFechaRegistro.Size = new System.Drawing.Size(100, 20);
-            this.deFechaRegistro.TabIndex = 0;
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(100, 20);
+            this.dtpFechaRegistro.TabIndex = 27;
             // 
-            // clsEstadoBindingSource1
+            // cbxEstado
             // 
-            this.clsEstadoBindingSource1.DataSource = typeof(clases.Seguridad.clsEstado);
-            // 
-            // clsEstadoBindingSource
-            // 
-            this.clsEstadoBindingSource.DataSource = typeof(clases.Seguridad.clsEstado);
+            this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxEstado.FormattingEnabled = true;
+            this.cbxEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cbxEstado.Location = new System.Drawing.Point(101, 120);
+            this.cbxEstado.Name = "cbxEstado";
+            this.cbxEstado.Size = new System.Drawing.Size(237, 21);
+            this.cbxEstado.TabIndex = 35;
             // 
             // frmMedioPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(423, 219);
-            this.Controls.Add(this.deFechaRegistro);
+            this.Controls.Add(this.dtpFechaRegistro);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -238,17 +226,14 @@
             this.Name = "frmMedioPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medios de Pago";
-            this.Load += new System.EventHandler(this.frmMedioPago_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deFechaRegistro.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deFechaRegistro.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsEstadoBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsEstadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFechaRegistro.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFechaRegistro.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,9 +254,7 @@
         private DevExpress.XtraEditors.TextEdit txtDescripcion;
         private DevExpress.XtraEditors.TextEdit txtCodigo;
         private System.Windows.Forms.ToolStripButton tsbSalir;
-        private DevExpress.XtraEditors.DateEdit deFechaRegistro;
-        private System.Windows.Forms.BindingSource clsEstadoBindingSource;
-        private System.Windows.Forms.BindingSource clsEstadoBindingSource1;
+        private DevExpress.XtraEditors.DateEdit dtpFechaRegistro;
         private System.Windows.Forms.ComboBox cbxEstado;
     }
 }

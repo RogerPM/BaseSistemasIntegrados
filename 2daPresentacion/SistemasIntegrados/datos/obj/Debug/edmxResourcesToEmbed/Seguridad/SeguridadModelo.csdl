@@ -6,7 +6,6 @@
     <EntitySet Name="Horario" EntityType="TECAv8Model.Horario" />
     <EntitySet Name="Imagen" EntityType="TECAv8Model.Imagen" />
     <EntitySet Name="Menu" EntityType="TECAv8Model.Menu" />
-    <EntitySet Name="MenuPorEmpresa" EntityType="TECAv8Model.MenuPorEmpresa" />
     <EntitySet Name="Modulo" EntityType="TECAv8Model.Modulo" />
     <EntitySet Name="Perfil" EntityType="TECAv8Model.Perfil" />
     <EntitySet Name="Permiso" EntityType="TECAv8Model.Permiso" />
@@ -16,10 +15,6 @@
     <AssociationSet Name="FK__Empresa__IdEstad__08EA5793" Association="TECAv8Model.FK__Empresa__IdEstad__08EA5793">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="Empresa" EntitySet="Empresa" />
-    </AssociationSet>
-    <AssociationSet Name="FK__MenuPorEm__IdEmp__0B5CAFEA" Association="TECAv8Model.FK__MenuPorEm__IdEmp__0B5CAFEA">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="MenuPorEmpresa" EntitySet="MenuPorEmpresa" />
     </AssociationSet>
     <AssociationSet Name="FK__TelefonoE__IdEmp__1D7B6025" Association="TECAv8Model.FK__TelefonoE__IdEmp__1D7B6025">
       <End Role="Empresa" EntitySet="Empresa" />
@@ -32,10 +27,6 @@
     <AssociationSet Name="FK__Menu__IdEstado__0697FACD" Association="TECAv8Model.FK__Menu__IdEstado__0697FACD">
       <End Role="Estado" EntitySet="Estado" />
       <End Role="Menu" EntitySet="Menu" />
-    </AssociationSet>
-    <AssociationSet Name="FK__MenuPorEm__IdEst__0D44F85C" Association="TECAv8Model.FK__MenuPorEm__IdEst__0D44F85C">
-      <End Role="Estado" EntitySet="Estado" />
-      <End Role="MenuPorEmpresa" EntitySet="MenuPorEmpresa" />
     </AssociationSet>
     <AssociationSet Name="FK__Modulo__IdEstado__7FEAFD3E" Association="TECAv8Model.FK__Modulo__IdEstado__7FEAFD3E">
       <End Role="Estado" EntitySet="Estado" />
@@ -65,10 +56,6 @@
       <End Role="Menu" EntitySet="Menu" />
       <End Role="Menu1" EntitySet="Menu" />
     </AssociationSet>
-    <AssociationSet Name="FK__MenuPorEm__IdMen__0C50D423" Association="TECAv8Model.FK__MenuPorEm__IdMen__0C50D423">
-      <End Role="Menu" EntitySet="Menu" />
-      <End Role="MenuPorEmpresa" EntitySet="MenuPorEmpresa" />
-    </AssociationSet>
     <AssociationSet Name="FK__Permiso__IdMenu__17C286CF" Association="TECAv8Model.FK__Permiso__IdMenu__17C286CF">
       <End Role="Menu" EntitySet="Menu" />
       <End Role="Permiso" EntitySet="Permiso" />
@@ -86,8 +73,14 @@
       <End Role="UsuarioPorEmpresa" EntitySet="UsuarioPorEmpresa" />
     </AssociationSet>
     <EntitySet Name="Menu_X_Usuario" EntityType="TECAv8Model.Menu_X_Usuario" />
-    <EntitySet Name="UsuarioInformacion" EntityType="TECAv8Model.UsuarioInformacion" />
+    <EntitySet Name="Historial" EntityType="TECAv8Model.Historial" />
+    <AssociationSet Name="FK__Historial__Fecha__1B13F4C6" Association="TECAv8Model.FK__Historial__Fecha__1B13F4C6">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Historial" EntitySet="Historial" />
+    </AssociationSet>
     <EntitySet Name="UsuariodPermisos" EntityType="TECAv8Model.UsuariodPermisos" />
+    <EntitySet Name="UsuarioInformacion" EntityType="TECAv8Model.UsuarioInformacion" />
+    <EntitySet Name="IniciosDeSesion" EntityType="TECAv8Model.IniciosDeSesion" />
   </EntityContainer>
   <EntityType Name="Empresa">
     <Key>
@@ -106,7 +99,6 @@
     <Property Name="Descripcion" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" />
     <NavigationProperty Name="Estado" Relationship="TECAv8Model.FK__Empresa__IdEstad__08EA5793" FromRole="Empresa" ToRole="Estado" />
-    <NavigationProperty Name="MenuPorEmpresa" Relationship="TECAv8Model.FK__MenuPorEm__IdEmp__0B5CAFEA" FromRole="Empresa" ToRole="MenuPorEmpresa" />
     <NavigationProperty Name="TelefonoEmpresa" Relationship="TECAv8Model.FK__TelefonoE__IdEmp__1D7B6025" FromRole="Empresa" ToRole="TelefonoEmpresa" />
     <NavigationProperty Name="UsuarioPorEmpresa" Relationship="TECAv8Model.FK__UsuarioPo__IdEmp__7B264821" FromRole="Empresa" ToRole="UsuarioPorEmpresa" />
   </EntityType>
@@ -118,7 +110,6 @@
     <Property Name="Descripcion" Type="String" MaxLength="220" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="Empresa" Relationship="TECAv8Model.FK__Empresa__IdEstad__08EA5793" FromRole="Estado" ToRole="Empresa" />
     <NavigationProperty Name="Menu" Relationship="TECAv8Model.FK__Menu__IdEstado__0697FACD" FromRole="Estado" ToRole="Menu" />
-    <NavigationProperty Name="MenuPorEmpresa" Relationship="TECAv8Model.FK__MenuPorEm__IdEst__0D44F85C" FromRole="Estado" ToRole="MenuPorEmpresa" />
     <NavigationProperty Name="Modulo" Relationship="TECAv8Model.FK__Modulo__IdEstado__7FEAFD3E" FromRole="Estado" ToRole="Modulo" />
     <NavigationProperty Name="Perfil" Relationship="TECAv8Model.FK__Perfil__IdEstado__35BCFE0A" FromRole="Estado" ToRole="Perfil" />
     <NavigationProperty Name="Usuario" Relationship="TECAv8Model.FK__Usuario__IdEstad__3A81B327" FromRole="Estado" ToRole="Usuario" />
@@ -183,22 +174,7 @@
     <NavigationProperty Name="Modulo" Relationship="TECAv8Model.FK__Menu__IdModulo__04AFB25B" FromRole="Menu" ToRole="Modulo" />
     <NavigationProperty Name="Menu1" Relationship="TECAv8Model.FK__Menu__IdPadre__05A3D694" FromRole="Menu" ToRole="Menu1" />
     <NavigationProperty Name="Menu2" Relationship="TECAv8Model.FK__Menu__IdPadre__05A3D694" FromRole="Menu1" ToRole="Menu" />
-    <NavigationProperty Name="MenuPorEmpresa" Relationship="TECAv8Model.FK__MenuPorEm__IdMen__0C50D423" FromRole="Menu" ToRole="MenuPorEmpresa" />
     <NavigationProperty Name="Permiso" Relationship="TECAv8Model.FK__Permiso__IdMenu__17C286CF" FromRole="Menu" ToRole="Permiso" />
-  </EntityType>
-  <EntityType Name="MenuPorEmpresa">
-    <Key>
-      <PropertyRef Name="IdEmpresa" />
-      <PropertyRef Name="IdMenu" />
-    </Key>
-    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <Property Name="IdMenu" Type="Int32" Nullable="false" />
-    <Property Name="NombreAsamblyPorEmpresa" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
-    <Property Name="NomFormularioPorEmpresa" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Empresa" Relationship="TECAv8Model.FK__MenuPorEm__IdEmp__0B5CAFEA" FromRole="MenuPorEmpresa" ToRole="Empresa" />
-    <NavigationProperty Name="Estado" Relationship="TECAv8Model.FK__MenuPorEm__IdEst__0D44F85C" FromRole="MenuPorEmpresa" ToRole="Estado" />
-    <NavigationProperty Name="Menu" Relationship="TECAv8Model.FK__MenuPorEm__IdMen__0C50D423" FromRole="MenuPorEmpresa" ToRole="Menu" />
   </EntityType>
   <EntityType Name="Modulo">
     <Key>
@@ -253,14 +229,15 @@
       <PropertyRef Name="IdUsuario" />
     </Key>
     <Property Name="IdUsuario" Type="Int32" Nullable="false" />
-    <Property Name="NombreUsuario" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
-    <Property Name="Contrasena" Type="String" MaxLength="220" Unicode="false" FixedLength="false" />
+    <Property Name="NombreUsuario" Type="String" MaxLength="20" Unicode="false" FixedLength="false" Nullable="false" />
+    <Property Name="Contrasena" Type="String" MaxLength="220" Unicode="false" FixedLength="false" Nullable="false" />
     <Property Name="IdEstado" Type="Int32" />
     <Property Name="IdImagen" Type="Int32" />
     <Property Name="IdPerfil" Type="Int32" />
     <NavigationProperty Name="Estado" Relationship="TECAv8Model.FK__Usuario__IdEstad__3A81B327" FromRole="Usuario" ToRole="Estado" />
     <NavigationProperty Name="Imagen" Relationship="TECAv8Model.FK__Usuario__IdImage__3B75D760" FromRole="Usuario" ToRole="Imagen" />
     <NavigationProperty Name="UsuarioPorEmpresa" Relationship="TECAv8Model.FK__UsuarioPo__IdUsu__7A3223E8" FromRole="Usuario" ToRole="UsuarioPorEmpresa" />
+    <NavigationProperty Name="Historial" Relationship="TECAv8Model.FK__Historial__Fecha__1B13F4C6" FromRole="Usuario" ToRole="Historial" />
   </EntityType>
   <EntityType Name="UsuarioPorEmpresa">
     <Key>
@@ -282,18 +259,6 @@
       </Principal>
       <Dependent Role="Empresa">
         <PropertyRef Name="IdEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__MenuPorEm__IdEmp__0B5CAFEA">
-    <End Role="Empresa" Type="TECAv8Model.Empresa" Multiplicity="1" />
-    <End Role="MenuPorEmpresa" Type="TECAv8Model.MenuPorEmpresa" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="MenuPorEmpresa">
-        <PropertyRef Name="IdEmpresa" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -329,18 +294,6 @@
         <PropertyRef Name="IdEstado" />
       </Principal>
       <Dependent Role="Menu">
-        <PropertyRef Name="IdEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__MenuPorEm__IdEst__0D44F85C">
-    <End Role="Estado" Type="TECAv8Model.Estado" Multiplicity="0..1" />
-    <End Role="MenuPorEmpresa" Type="TECAv8Model.MenuPorEmpresa" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Estado">
-        <PropertyRef Name="IdEstado" />
-      </Principal>
-      <Dependent Role="MenuPorEmpresa">
         <PropertyRef Name="IdEstado" />
       </Dependent>
     </ReferentialConstraint>
@@ -429,18 +382,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__MenuPorEm__IdMen__0C50D423">
-    <End Role="Menu" Type="TECAv8Model.Menu" Multiplicity="1" />
-    <End Role="MenuPorEmpresa" Type="TECAv8Model.MenuPorEmpresa" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Menu">
-        <PropertyRef Name="IdMenu" />
-      </Principal>
-      <Dependent Role="MenuPorEmpresa">
-        <PropertyRef Name="IdMenu" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__Permiso__IdMenu__17C286CF">
     <End Role="Menu" Type="TECAv8Model.Menu" Multiplicity="0..1" />
     <End Role="Permiso" Type="TECAv8Model.Permiso" Multiplicity="*" />
@@ -500,8 +441,8 @@
       <PropertyRef Name="Eliminacion" />
     </Key>
     <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
-    <Property Type="String" Name="NombreUsuario" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Contrasena" MaxLength="220" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreUsuario" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Type="String" Name="Contrasena" MaxLength="220" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Type="Int32" Name="IdMenu" Nullable="false" />
     <Property Type="Int32" Name="IdModulo" />
     <Property Type="Int32" Name="IdPadre" />
@@ -517,24 +458,31 @@
     <Property Type="Boolean" Name="Escritura" Nullable="false" />
     <Property Type="Boolean" Name="Eliminacion" Nullable="false" />
   </EntityType>
-  <EntityType Name="UsuarioInformacion">
+  <EntityType Name="Historial">
     <Key>
-      <PropertyRef Name="IdUsuario" />
-      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdHistorial" />
     </Key>
+    <Property Type="Int32" Name="IdHistorial" Nullable="false" />
     <Property Type="Int32" Name="IdUsuario" Nullable="false" />
-    <Property Type="String" Name="NombreUsuario" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Contrasena" MaxLength="220" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="IdEstado" />
-    <Property Type="String" Name="Descripcion" MaxLength="220" FixedLength="false" Unicode="false" />
-    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
-    <Property Type="String" Name="NombreComercial" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="RazonSocial" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Type="String" Name="Ruc" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaInicioSesion" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="TECAv8Model.FK__Historial__Fecha__1B13F4C6" FromRole="Historial" ToRole="Usuario" />
   </EntityType>
+  <Association Name="FK__Historial__Fecha__1B13F4C6">
+    <End Type="TECAv8Model.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="TECAv8Model.Historial" Role="Historial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Historial">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityType Name="UsuariodPermisos">
     <Key>
       <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="NombreUsuario" />
       <PropertyRef Name="IdModulo" />
       <PropertyRef Name="Lectura" />
       <PropertyRef Name="Escritura" />
@@ -543,7 +491,7 @@
     </Key>
     <Property Type="Int64" Name="id" Nullable="false" />
     <Property Type="Int32" Name="IdUsuario" Nullable="false" />
-    <Property Type="String" Name="NombreUsuario" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreUsuario" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Type="String" Name="Descripcion" MaxLength="70" FixedLength="false" Unicode="false" />
     <Property Type="Int32" Name="IdModulo" Nullable="false" />
     <Property Type="String" Name="Nombre" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -551,5 +499,37 @@
     <Property Type="Boolean" Name="Lectura" Nullable="false" />
     <Property Type="Boolean" Name="Escritura" Nullable="false" />
     <Property Type="Boolean" Name="Eliminacion" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuarioInformacion">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="NombreUsuario" />
+      <PropertyRef Name="Contrasena" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="String" Name="NombreUsuario" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Contrasena" Nullable="false" MaxLength="220" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <Property Type="String" Name="Descripcion" MaxLength="220" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="String" Name="NombreComercial" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RazonSocial" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Ruc" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="IniciosDeSesion">
+    <Key>
+      <PropertyRef Name="IdHistorial" />
+      <PropertyRef Name="IdUsuario" />
+      <PropertyRef Name="NombreUsuario" />
+      <PropertyRef Name="FechaInicioSesion" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int64" Name="id" Nullable="false" />
+    <Property Type="Int32" Name="IdHistorial" Nullable="false" />
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="String" Name="NombreUsuario" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaInicioSesion" Nullable="false" />
   </EntityType>
 </Schema>

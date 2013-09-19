@@ -101,6 +101,7 @@ namespace forms.ActivoFijo
             this.colIdImagen});
             this.gridView1.GridControl = this.GridConsultaCodigoBarra;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colIdImagen, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 

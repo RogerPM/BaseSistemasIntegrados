@@ -27,7 +27,7 @@ namespace clases.Cuentasxpagar
         public decimal _SaldoDeuda { get; set; }
         public int _IdUsuario { get; set; }
         public int _IdEmpresa { get; set; }
-        public List<clsDetCredito> _DetCredito { get; set; }
+        public List<clsCuentaPorPagarDetalle> _DetCredito { get; set; }
         public List<clsImpuestoCuenta> _ImpuestoCuenta { get; set; }
 
         public clsCuentaPorPagar()

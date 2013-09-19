@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnGenerar = new System.Windows.Forms.ToolStripButton();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
@@ -39,13 +40,13 @@
             this.dateHasta = new DevExpress.XtraEditors.DateEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.grpTipoBalance = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.rdbFlujoEfectivo = new System.Windows.Forms.RadioButton();
+            this.rdlibrodiario = new System.Windows.Forms.RadioButton();
             this.rdbEstadoResultados = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbNivel = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.clsvwlibrodiarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vwlibrodiarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAnoFiscal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
@@ -56,6 +57,8 @@
             this.grpTipoBalance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNivel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsvwlibrodiarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwlibrodiarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -68,22 +71,25 @@
             this.toolStrip1.Size = new System.Drawing.Size(513, 25);
             this.toolStrip1.TabIndex = 22;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // btnGenerar
             // 
             this.btnGenerar.Image = global::forms.Properties.Resources.generarReporte;
             this.btnGenerar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(68, 22);
+            this.btnGenerar.Size = new System.Drawing.Size(57, 22);
             this.btnGenerar.Text = "Generar";
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // btnSalir
             // 
             this.btnSalir.Image = global::forms.Properties.Resources._24_cancelar;
             this.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(49, 22);
+            this.btnSalir.Size = new System.Drawing.Size(42, 22);
             this.btnSalir.Text = "Salir";
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // label1
             // 
@@ -155,60 +161,37 @@
             // 
             // grpTipoBalance
             // 
-            this.grpTipoBalance.Controls.Add(this.radioButton2);
-            this.grpTipoBalance.Controls.Add(this.rdbFlujoEfectivo);
+            this.grpTipoBalance.Controls.Add(this.rdlibrodiario);
             this.grpTipoBalance.Controls.Add(this.rdbEstadoResultados);
-            this.grpTipoBalance.Controls.Add(this.radioButton1);
             this.grpTipoBalance.Location = new System.Drawing.Point(35, 53);
             this.grpTipoBalance.Name = "grpTipoBalance";
-            this.grpTipoBalance.Size = new System.Drawing.Size(228, 161);
+            this.grpTipoBalance.Size = new System.Drawing.Size(228, 104);
             this.grpTipoBalance.TabIndex = 30;
             this.grpTipoBalance.TabStop = false;
             this.grpTipoBalance.Text = "Tipo de Balance";
             // 
-            // radioButton2
+            // rdlibrodiario
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(40, 29);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(78, 17);
-            this.radioButton2.TabIndex = 32;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Libro Diario";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // rdbFlujoEfectivo
-            // 
-            this.rdbFlujoEfectivo.AutoSize = true;
-            this.rdbFlujoEfectivo.Location = new System.Drawing.Point(40, 91);
-            this.rdbFlujoEfectivo.Name = "rdbFlujoEfectivo";
-            this.rdbFlujoEfectivo.Size = new System.Drawing.Size(94, 17);
-            this.rdbFlujoEfectivo.TabIndex = 31;
-            this.rdbFlujoEfectivo.TabStop = true;
-            this.rdbFlujoEfectivo.Text = "Mayor General";
-            this.rdbFlujoEfectivo.UseVisualStyleBackColor = true;
+            this.rdlibrodiario.AutoSize = true;
+            this.rdlibrodiario.Location = new System.Drawing.Point(40, 29);
+            this.rdlibrodiario.Name = "rdlibrodiario";
+            this.rdlibrodiario.Size = new System.Drawing.Size(78, 17);
+            this.rdlibrodiario.TabIndex = 32;
+            this.rdlibrodiario.TabStop = true;
+            this.rdlibrodiario.Text = "Libro Diario";
+            this.rdlibrodiario.UseVisualStyleBackColor = true;
             // 
             // rdbEstadoResultados
             // 
             this.rdbEstadoResultados.AutoSize = true;
-            this.rdbEstadoResultados.Location = new System.Drawing.Point(40, 123);
+            this.rdbEstadoResultados.Location = new System.Drawing.Point(40, 68);
             this.rdbEstadoResultados.Name = "rdbEstadoResultados";
             this.rdbEstadoResultados.Size = new System.Drawing.Size(129, 17);
             this.rdbEstadoResultados.TabIndex = 1;
             this.rdbEstadoResultados.TabStop = true;
             this.rdbEstadoResultados.Text = "Estado de Resultados";
             this.rdbEstadoResultados.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(40, 59);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(104, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Balance General";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdbEstadoResultados.CheckedChanged += new System.EventHandler(this.rdbEstadoResultados_CheckedChanged);
             // 
             // label3
             // 
@@ -236,11 +219,19 @@
             this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
+            // clsvwlibrodiarioBindingSource
+            // 
+            this.clsvwlibrodiarioBindingSource.DataSource = typeof(clases.Contabilidad.clsvwlibrodiario);
+            // 
+            // vwlibrodiarioBindingSource
+            // 
+            this.vwlibrodiarioBindingSource.DataSource = typeof(datos.Contabilidad.vwlibrodiario);
+            // 
             // frmReporteEstados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 266);
+            this.ClientSize = new System.Drawing.Size(513, 244);
             this.Controls.Add(this.cmbNivel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.grpTipoBalance);
@@ -254,6 +245,7 @@
             this.Name = "frmReporteEstados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Reportes";
+            this.Load += new System.EventHandler(this.frmReporteEstados_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAnoFiscal.Properties)).EndInit();
@@ -266,6 +258,8 @@
             this.grpTipoBalance.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbNivel.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsvwlibrodiarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwlibrodiarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,16 +274,16 @@
         private DevExpress.XtraEditors.GridLookUpEdit cmbAnoFiscal;
         private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
         private System.Windows.Forms.Label Desde;
-        private DevExpress.XtraEditors.DateEdit dateDesde;
-        private DevExpress.XtraEditors.DateEdit dateHasta;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox grpTipoBalance;
-        private System.Windows.Forms.RadioButton rdbFlujoEfectivo;
         private System.Windows.Forms.RadioButton rdbEstadoResultados;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.GridLookUpEdit cmbNivel;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdlibrodiario;
+        private System.Windows.Forms.BindingSource vwlibrodiarioBindingSource;
+        private System.Windows.Forms.BindingSource clsvwlibrodiarioBindingSource;
+        public DevExpress.XtraEditors.DateEdit dateDesde;
+        public DevExpress.XtraEditors.DateEdit dateHasta;
     }
 }

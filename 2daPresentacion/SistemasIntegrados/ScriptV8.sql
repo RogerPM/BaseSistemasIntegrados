@@ -52,9 +52,9 @@ go
 
 create table  Seguridad.Imagen
 (
-	 IdImagen				int				primary key,
-	 Descripcion			varchar(50),
-	 Imagen					image
+	 IdImagen			int				primary key,
+	 Descripcion		varchar(50),
+	 Imagen				image
 )
 go
 
@@ -75,7 +75,6 @@ create table Seguridad.Empresa
 	 IdEstado				int				foreign key references Seguridad.Estado on delete cascade
 )
 go
-
 
 /**************************Recursos humanos******************************
 ************************************************************************/
@@ -210,13 +209,20 @@ create table Seguridad.Usuario
 	 Contrasena			varchar(220)		not null,
 	 IdEstado			int					references Seguridad.Estado on delete cascade,
 	 IdImagen			int					references Seguridad.Imagen on delete cascade,
-	 IdPerfil int ,
+	 IdPerfil			int ,
 	 primary key(IdUsuario),
 	 -- foreign key(IdPerfil) references Seguridad.Perfil,
 	 foreign key (IdUsuario) references RecursosHumanos.Persona on delete cascade --el id usuario es el mismo q id persona
 )
 go
 
+create table Seguridad.Historial(
+	IdHistorial int primary key,
+	IdUsuario int not null,
+	FechaInicioSesion datetime not null
+	foreign key(IdUsuario) references Seguridad.Usuario
+)
+go
 
 /*PROVEEDOR REasignado a Compras.Proveedor hasta que RRHH tome la batuta*/
 create table RecursosHumanos.Proveedor
@@ -379,7 +385,6 @@ create table RecursosHumanos.Cargo
 	Descripcion				varchar(45) not null,
 	Sueldo					numeric(10,2) not null,
 	IdEstado				int not null,
-
 )
 go
 
@@ -393,7 +398,6 @@ create table RecursosHumanos.CargoxDepartamento
 	IdEstado				int not null,
 	primary key (idCargo,idDepartamento),
 	foreign key (IdCargo) references RecursosHumanos.Cargo,
-
 	foreign key (IdDepartamento) references RecursosHumanos.Departamento
 )
 go
@@ -409,7 +413,6 @@ create table RecursosHumanos.Rubro
 	IdCargo					int not null,
 	IdDepartamento			int not null,
 	foreign key (IdCargo,IdDepartamento) references RecursosHumanos.CargoxDepartamento,
-
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -421,9 +424,7 @@ create table RecursosHumanos.PersonaxTitulo
 	IdEmpresa				int not null,
 	IdPersona				int not null,
 	IdEstado				int not null,
-
 	primary key (idpersona,idtitulo),
-
 	foreign key (IdTitulo) references RecursosHumanos.Titulo,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdPersona) references RecursosHumanos.Persona
@@ -471,7 +472,6 @@ create  table RecursosHumanos.Parentesco
 	Descripcion				varchar(50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -487,7 +487,6 @@ create table RecursosHumanos.CargaFamiliar
 	FechaModificacion		datetime,
 	IdEstado				int not null,
 	primary key (idpersona,idparentesco),
-
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdParentesco) references RecursosHumanos.Parentesco
@@ -498,14 +497,13 @@ go
 create table RecursosHumanos.AnticipoCab
 (
 	NumAnticipo				int not null,
-	IdEmpleado				int not null,
 	Fecha					date not null,
 	FechaModificacion		datetime,
 	Total					numeric(10,2) not null,
 	Observacion				varchar(50) null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-	foreign key (IdEmpleado) references RecursosHumanos.Persona,
+	Porcentaje				int not null,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 
 	primary key (NumAnticipo, IdEmpresa)
@@ -517,14 +515,14 @@ create table RecursosHumanos.AnticipoDet
 (
 	NumLinea				int not null,
 	NumAnticipo				int not null,
-	FechaCobro				date not null,
-	FechaModificacion		datetime,
+	IdPersona				int not null,
+	ValorLiquido			money not null,
 	IdEmpresa int not null references Seguridad.Empresa,
 	foreign key (NumAnticipo, IdEmpresa) references RecursosHumanos.AnticipoCab,
+	foreign key (IdPersona) references RecursosHumanos.Persona,
 	primary key (NumLinea,IdEmpresa)
 )
 go
-
 /*BENEFICIOS*/
 create table RecursosHumanos.Beneficios
 (
@@ -535,6 +533,7 @@ create table RecursosHumanos.Beneficios
 	foreign key (IdEmpresa)references Seguridad.Empresa
 )
 go
+
 
 /*NOMINA CABECERA*/
 create table RecursosHumanos.NominaCab
@@ -584,7 +583,6 @@ create table RecursosHumanos.TipoContrato
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
-
 /*CONTRATO*/
 create table RecursosHumanos.Contrato
 (
@@ -614,6 +612,8 @@ create table RecursosHumanos.Contrato
 )
 go
 
+
+
 /*TIPO PERMISO*/
 create table RecursosHumanos.TipoPermiso
 (
@@ -621,7 +621,6 @@ create table RecursosHumanos.TipoPermiso
 	Descripcion				varchar(50) not null,
 	IdEmpresa				int not null,
 	IdEstado				int not null,
-
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -641,7 +640,6 @@ create table RecursosHumanos.Permiso
 	foreign key (IdUsuario) references Seguridad.Usuario,
 	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (IdTipoPermiso) references RecursosHumanos.TipoPermiso,
-
 	foreign key (IdEmpresa) references Seguridad.Empresa
 )
 go
@@ -663,7 +661,6 @@ create table RecursosHumanos.Liquidacion
 	IdEstado				int not null,
 	primary key (NumLiquidacion,IdEmpresa,Idpersona),
 	foreign key (IdPersona,NumContrato,IdEmpresa) references RecursosHumanos.Contrato,
-
 	foreign key (IdPersona) references RecursosHumanos.persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 )
@@ -681,7 +678,6 @@ create table RecursosHumanos.Vacacion
 	IdEstado				int not null,
 	foreign key (IdEmpleado) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-
 )
 go
 
@@ -701,52 +697,47 @@ go
 create table RecursosHumanos.Prestamo
 (
 	IdPrestamo 				int not null primary key,
-	IdTipoPrestamo 			int not null,
 	IdPersona 				int not null,
 	FechaModificacion		datetime,
 	Monto					money not null,
 	Pago					money not null,
+	Interes					decimal not null,
+	Total					money not null,
+	TotalPagado				money not null,
+	Periodos				int not null,
 	IdEstado 				int not null,
 	IdEmpresa 				int not null,
 	foreign key (IdPersona) references RecursosHumanos.Persona,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
 
-	foreign key (IdTipoPrestamo) references RecursosHumanos.TipoPrestamo,
+	
 )
 go
 
 /*TRABAJO DIARIO CABECERA*/
-create table RecursosHumanos.TrabajoDiarioCab
+create table RecursosHumanos.TrabajoDiario
 (
 	NumTrabajo				int not null,
-	Fecha					datetime not null,
-	IdEstado				int not null,
-	IdEmpresa				int not null,
-	Observacion				varchar(50) null,
-	
-	foreign key (IdEmpresa) references Seguridad.Empresa,
-	primary key (NumTrabajo, IdEmpresa)
-)
-go
-
-/*TRABAJO DIARIO DETALLE*/
-create table RecursosHumanos.TrabajoDiarioDet
-(
-	NumLinea				int not null,
-	NumTrabajo				int not null,
-	IdPersona				int not null,
+	IdPersna				int not null,
+	FechaDesde				datetime not null,
+	FechaHasta				datetime not null,
+	NDias					int not null,
 	HoraEntrada				varchar(50) not null,
 	HoraSalida				varchar(50) not null,
 	HoraTrabajada			int not null,
 	HoraExtraM				int null,
 	HoraExtraT				int null,
 	HoraRango				int not null,
-	IdEmpresa				int not null
-	foreign key (IdPersona) references RecursosHumanos.Persona,
-	foreign key (NumTrabajo,IdEmpresa)references RecursosHumanos.TrabajoDiarioCab,
-	primary key (NumLinea, IdEmpresa)
+	IdEstado				int not null,
+	IdEmpresa				int not null,
+	Observacion				varchar(50) null,
+	
+	foreign key (IdEmpresa) references Seguridad.Empresa,
+	primary key (NumTrabajo,IdEmpresa)
 )
 go
+
+
 
 /****************************SEGURIDAD****************************/
 /*USUARIO POR EMPRESA*/
@@ -912,21 +903,30 @@ create table Contabilidad.Cuenta
 )
 go
 
+create table Contabilidad.TipoTransaccion
+(
+	IdTransaccion 			int primary key,
+	modulo 					int references Seguridad.Modulo not null,
+	TipoDocumento			varchar(50),
+	descripcion				varchar(50) not null
+)
+go
 create table Contabilidad.CabeceraComprobante
 (
 	IdEmpresa 				int ,
 	numero_comprobante		numeric(4) ,
 	fecha					date not null,
-	glosa					varchar(50) not null,
+	glosa					varchar(500) not null,
 	periodo_contable		numeric(6,0) ,
 	periodo_contable_IdAFiscal numeric(4,0),
 	IdUsuario 				int,
 	FechaModificacion		datetime, 
+	TipoTransaccion			int,
 	primary key(IdEmpresa, numero_comprobante),
 	foreign key(IdEmpresa,periodo_contable,periodo_contable_IdAFiscal) references Contabilidad.PeriodoContable,
+	foreign key(TipoTransaccion) references Contabilidad.TipoTransaccion,
 	foreign key(IdEmpresa) references Seguridad.Empresa
 )
-go
 
 create table Contabilidad.DetalleComprobante
 (
@@ -958,16 +958,6 @@ create table Contabilidad.Saldo
 )
 go
 
---modulo no es tabla de contabilidad segun la ruth
-
-create table Contabilidad.TipoTransaccion
-(
-	IdTransaccion 			int primary key,
-	modulo 					int references Seguridad.Modulo not null,
-	TipoDocumento			varchar(50),
-	descripcion				varchar(50) not null
-)
-go
 
 create table Contabilidad.ModeloAsiento
 (
@@ -990,10 +980,10 @@ go
 
 create table Inventario.TipoArticulo
 (
-IdEmpresa	int,
+IdEmpresa		int,
 IdTipoArticulo	int not null,
-Descripcion	varchar(500)not null,
-IdEstado	int,
+Descripcion		varchar(500)not null,
+IdEstado		int,
 primary key (IdTipoArticulo),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1002,11 +992,11 @@ go
 
 create table Inventario.Grupo
 (
-IdEmpresa	int,
-IdGrupo	int not null,
-Descripcion	varchar(100) not null,
-IdTipoArticulo int,
-IdEstado	int,
+IdEmpresa		int,
+IdGrupo			int not null,
+Descripcion		varchar(100) not null,
+IdTipoArticulo  int,
+IdEstado		int,
 primary key (IdGrupo),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdTipoArticulo) references Inventario.TipoArticulo,
@@ -1120,15 +1110,15 @@ go
 
 create table Inventario.Bodega
 (
-IdEmpresa	int not null,
-IdBodega	int not null,
-Decripcion	varchar(100),
-Capacidadm2	int,
+IdEmpresa		int not null,
+IdBodega		int not null,
+Decripcion		varchar(100),
+Capacidadm2		int,
 IdResponsable	int,
-IdPercha	int,
-Direccion	varchar(100),
-Telefono varchar(15),
-IdEstado	int,
+IdPercha		int,
+Direccion		varchar(100),
+Telefono		varchar(15),
+IdEstado		int,
 primary key (IdBodega, IdEmpresa),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdResponsable) references RecursosHumanos.Persona,
@@ -1141,10 +1131,10 @@ go
  
 create table Inventario.UnidadMedida
 (
-IdEmpresa	int,
+IdEmpresa		int,
 IdUnidadMedida	int not null,
-Descripcion	varchar(100) not null,
-IdEstado	int,
+Descripcion		varchar(100) not null,
+IdEstado		int,
 primary key (IdUnidadMedida),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1179,10 +1169,10 @@ go
 
 create table Inventario.TipoCombustible
 (
-IdEmpresa	int,
+IdEmpresa			int,
 IdTipoCombustible	int not null,
-Descripcion	varchar(100),
-IdEstado	int,
+Descripcion			varchar(100),
+IdEstado			int,
 primary key (IdTipoCombustible),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1191,10 +1181,10 @@ go
 
 create table Inventario.Color
 (
-IdEmpresa	int,
-IdColor	int not null,
-Descripcion	varchar(100) not null,
-IdEstado	int,
+IdEmpresa		int,
+IdColor			int not null,
+Descripcion		varchar(100) not null,
+IdEstado		int,
 primary key (IdColor),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1204,10 +1194,10 @@ go
 
 create table Inventario.Marca
 (
-IdEmpresa	int,
-IdMarca	int not null,
-Descripcion	varchar(100) not null,
-IdEstado	int,
+IdEmpresa		int,
+IdMarca			int not null,
+Descripcion		varchar(100) not null,
+IdEstado		int,
 primary key (IdMarca),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1216,11 +1206,11 @@ go
 
 create table Inventario.Modelo
 (
-IdEmpresa	int,
-IdModelo	int not null,
-Descripcion	varchar(100) not null,
-IdMarca int,
-IdEstado	int,
+IdEmpresa		int,
+IdModelo		int not null,
+Descripcion		varchar(100) not null,
+IdMarca			int,
+IdEstado		int,
 primary key (IdModelo),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1230,10 +1220,10 @@ go
 
 create table Inventario.TipoMaterial
 (
-IdEmpresa	int,
+IdEmpresa		int,
 IdTipoMaterial	int not null,
-Descripcion	varchar(100),
-IdEstado	int,
+Descripcion		varchar(100),
+IdEstado		int,
 primary key (IdTipoMaterial),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1242,9 +1232,9 @@ go
 
 create table Inventario.Articulo
 (
-IdEmpresa	int,
-IdArticulo	int not null,
-Descripcion	varchar(100) not null,
+IdEmpresa		int,
+IdArticulo		int not null,
+Descripcion		varchar(100) not null,
 FechaProduccion date,
 CantidadMinima	numeric(5,0),
 CantidadMaxima	numeric(5,0),
@@ -1252,33 +1242,33 @@ CantidadActual	numeric(5,0),
 IdUnidadMedida	int,
 FechaCaducidad	date,
 IdTipoArticulo	int not null,
-IdGrupo	int not null,
+IdGrupo			int not null,
 --IdSubgrupo int,
-IdChasis	int,
-SerieChasis varchar(17),
-IdTipoMotor	int,
-SerieMotor varchar(11),
-NroPlaca	varchar(8),
+IdChasis		int,
+SerieChasis		varchar(17),
+IdTipoMotor		int,
+SerieMotor		varchar(11),
+NroPlaca		varchar(8),
 IdTipoCombustible int,
-IdColor	int,
-IdMarca	int,
-IdModelo	int,
+IdColor			int,
+IdMarca			int,
+IdModelo		int,
 IdTipoMaterial	int,
-Observacion	varchar(100),
-IdEstado	int,
+Observacion		varchar(100),
+IdEstado		int,
 primary key (IdArticulo, IdEmpresa),
 foreign key(IdEstado)references Seguridad.Estado,
 foreign key(IdEmpresa)references Seguridad.Empresa,
 foreign key(IdUnidadMedida)references Inventario.UnidadMedida,
-foreign key (IdTipoArticulo)references Inventario.TipoArticulo,
-foreign key (IdGrupo)references Inventario.Grupo,
-foreign key (IdChasis)references Inventario.Chasis,
-foreign key (IdTipoMotor)references Inventario.TipoMotor,
-foreign key (IdTipoCombustible)references Inventario.TipoCombustible,
-foreign key (IdColor)references Inventario.Color,
-foreign key (IdMarca)references Inventario.Marca,
-foreign key (IdModelo)references Inventario.Modelo,
-foreign key (IdTipoMaterial)references Inventario.TipoMaterial,
+foreign key(IdTipoArticulo)references Inventario.TipoArticulo,
+foreign key(IdGrupo)references Inventario.Grupo,
+foreign key(IdChasis)references Inventario.Chasis,
+foreign key(IdTipoMotor)references Inventario.TipoMotor,
+foreign key(IdTipoCombustible)references Inventario.TipoCombustible,
+foreign key(IdColor)references Inventario.Color,
+foreign key(IdMarca)references Inventario.Marca,
+foreign key(IdModelo)references Inventario.Modelo,
+foreign key(IdTipoMaterial)references Inventario.TipoMaterial,
 )
 go
 
@@ -1286,16 +1276,16 @@ go
 
 create table Inventario.Percha
 (
-IdEmpresa	int not null,
-IdPercha	int not null,
-Descripcion varchar(10),
+IdEmpresa		int not null,
+IdPercha		int not null,
+Descripcion		varchar(10),
 Nro_Divisiones	numeric(10,0) not null,
-IdBodega	int not null,
-IdEstado	int,
-primary key (IdPercha),
-foreign key (IdEmpresa) references Seguridad.Empresa,
-foreign key (IdBodega, IdEmpresa) references Inventario.Bodega,
-foreign key (IdEstado) references Seguridad.Estado,
+IdBodega		int not null,
+IdEstado		int,
+primary key(IdPercha),
+foreign key(IdEmpresa) references Seguridad.Empresa,
+foreign key(IdBodega, IdEmpresa) references Inventario.Bodega,
+foreign key(IdEstado) references Seguridad.Estado,
 )
 go
 
@@ -1313,16 +1303,16 @@ go
 
 create table Inventario.TransferenciaBodegaCab
 (
-IdEmpresa	int,
+IdEmpresa			int,
 NroTransferencia	int not null,
 FechaTransferencia	date,
-FechaModificacion datetime,
-IdBodegaOrigen	int,
-IdBodegaDestino	int,
-IdMotivo	int,
-Observacion	varchar(150),
-IdUsuario	int,
-IdEstado	int,
+FechaModificacion	datetime,
+IdBodegaOrigen		int,
+IdBodegaDestino		int,
+IdMotivo			int,
+Observacion			varchar(150),
+IdUsuario			int,
+IdEstado			int,
 Fecha datetime,
 primary key (NroTransferencia),
 foreign key (IdEmpresa) references Seguridad.Empresa,
@@ -1336,11 +1326,11 @@ go
 
 create table Inventario.TransferenciaBodegaDet
 (
-IdEmpresa	int,
+IdEmpresa			int,
 NroTransferencia	int not null,
 CantidadTrasladada	int,
-Articulo	numeric(10,0),
-IdEstado	int,
+Articulo			numeric(10,0),
+IdEstado			int,
 primary key(NroTransferencia),
 foreign key(NroTransferencia) references Inventario.TransferenciaBodegaCab,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1349,18 +1339,18 @@ go
 
 create table Inventario.TomaFisicaCab
 (
-IdEmpresa	int,
-NroTomaFisica	int not null,
-IdMotivo	int,
-FechaTomaFisica	date,
-FechaModificacion datetime,
-Usuario	numeric(10,0),
-IdTipoArticulo	int,
-IdBodega	int,
-IdUsuario	int,
-Auditor	varchar(50),
-Observacion	varchar(150),
-IdEstado	int,
+IdEmpresa			int,
+NroTomaFisica		int not null,
+IdMotivo			int,
+FechaTomaFisica		date,
+FechaModificacion	datetime,
+Usuario				numeric(10,0),
+IdTipoArticulo		int,
+IdBodega			int,
+IdUsuario			int,
+Auditor				varchar(50),
+Observacion			varchar(150),
+IdEstado			int,
 primary key (NroTomaFisica),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key(IdMotivo) references Inventario.Motivo,
@@ -1374,14 +1364,15 @@ go
 
 create table Inventario.TomaFisicaDet
 (
-IdEmpresa	int,
-NroTomaFisica	int not null,
-IdArticulo	int,
+IdEmpresa			int,
+NroTomaFisica		int not null,
+linea				int,
+IdArticulo			int,
 ExistenciaSistema	int,
 ExistenciaFisica	int,
 CantidadAjustada	int,
 FechaAjuste	date,
-primary key (NroTomaFisica),
+primary key (NroTomaFisica,linea),
 foreign key(IdEmpresa) references Seguridad.Empresa,
 foreign key(IdArticulo, IdEmpresa) references Inventario.Articulo,
 )
@@ -1389,10 +1380,10 @@ go
 
 create table Inventario.TipoMovimiento
 (
-IdEmpresa	int,
+IdEmpresa			int,
 IdTipoMovimiento	int,
-Descripcion	varchar(25),
-IdEstado	int,
+Descripcion			varchar(25),
+IdEstado			int,
 primary key (IdTipoMovimiento),
 foreign key (IdEmpresa) references Seguridad.Empresa,
 foreign key (IdEstado) references Seguridad.Estado,
@@ -1402,11 +1393,11 @@ go
 
 create table Inventario.ArticuloBodega
 (
-IdEmpresa	int,
+IdEmpresa			int,
 IdArticuloBodega	int,
-IdArticulo	int,
-IdPercha	int,
-Cantidad	int,
+IdArticulo			int,
+IdPercha			int,
+Cantidad			int,
 --Fecha datetime,
 primary key	(IdArticuloBodega),
 foreign key(IdEmpresa) references Seguridad.Empresa,
@@ -1418,11 +1409,11 @@ go
 /************************MODULO DE FACTURACION INTEGRACION********************/
 CREATE TABLE Facturacion.FormaPago
 (
-IdEmpresa int NOT NULL,
-idUsuario int NOT NULL,
-IdFormaPago int NOT NULL,
-Descripcion varchar (250) NULL,
-idEstado int NOT NULL,
+IdEmpresa			int NOT NULL,
+idUsuario			int NOT NULL,
+IdFormaPago			int NOT NULL,
+Descripcion			varchar (250) NULL,
+idEstado			int NOT NULL,
 primary key(IdFormaPago),	
 foreign key (idEmpresa) references Seguridad.Empresa,
 foreign key (idUsuario) references Seguridad.Usuario,
@@ -1432,20 +1423,20 @@ GO
 
 CREATE TABLE Facturacion.ClienteDefactura
 (
-IdEmpresa int NOT NULL,
-idUsuario int NOT NULL,
-IdNumeroCliente int NOT NULL,
-Identificacion int NOT NULL,
-Fecha	date NOT NULL,
-NombreRazonSocial varchar(50) NOT NULL,
-Apellido varchar(50) NULL,
-FechaNacimiento date NULL,
-Genero varchar(10) NULL,
-Direccion varchar(100) NOT NULL,
-Telefono int NOT NULL,
-Celular int NOT NULL,
-CorreoElectronico varchar(50) NULL,
-idEstado int NOT NULL,
+IdEmpresa			int NOT NULL,
+idUsuario			int NOT NULL,
+IdNumeroCliente		int NOT NULL,
+Identificacion		int NOT NULL,
+Fecha				date NOT NULL,
+NombreRazonSocial	varchar(50) NOT NULL,
+Apellido			varchar(50) NULL,
+FechaNacimiento		date NULL,
+Genero				varchar(10) NULL,
+Direccion			varchar(100) NOT NULL,
+Telefono			int NOT NULL,
+Celular				int NOT NULL,
+CorreoElectronico	varchar(50) NULL,
+idEstado			int NOT NULL,
 primary key(IdNumeroCliente),	
 foreign key (idEmpresa) references Seguridad.Empresa,
 foreign key (idUsuario) references Seguridad.Usuario,
@@ -1455,20 +1446,20 @@ GO
 
 CREATE TABLE Facturacion.Cotizacion
 (
-IdEmpresa int NOT NULL,
-idUsuario int NOT NULL,
-IdNumeroCotizacion int NOT NULL,
-IdFormaPago int NOT NULL,/*Desvinculada de CXP.FormaPago*/
-IdNumeroCliente int NOT NULL,
-Fecha	date NULL,
-PorcentajeEntrada	money NULL,
-ValorEntrada	money NULL,
-EntradaMinimaRequerida	money NULL,
-ValorCancelar	money NULL,
-FechaInicialPago	date NULL,
-FechaFinalPago	date NULL,
-Seguro	bit NULL,
-idEstado int NOT NULL,
+IdEmpresa			int NOT NULL,
+idUsuario			int NOT NULL,
+IdNumeroCotizacion  int NOT NULL,
+IdFormaPago			int NOT NULL,/*Desvinculada de CXP.FormaPago*/
+IdNumeroCliente		int NOT NULL,
+Fecha				date ,
+PorcentajeEntrada	money ,
+ValorEntrada		money,
+EntradaMinimaRequerida	money ,
+ValorCancelar		money ,
+FechaInicialPago	date ,
+FechaFinalPago		date ,
+Seguro				bit ,
+idEstado			int NOT NULL,
 primary key(IdNumeroCotizacion),	
 foreign key (IdNumeroCliente) references Facturacion.ClienteDeFactura,
 foreign key (IdFormaPago) references Facturacion.FormaPago,
@@ -1708,19 +1699,16 @@ IdEmpresa	int not null,
 NroMovimiento	int,
 IdTipoMovimiento	int,
 FechaMovimiento	date,
-IdOrdenCompra	int,
 IdMotivo		int,
 IdBodega	int,
 IdResponsable	int,
-TotalPagar	numeric(7,2),
 Observacion	varchar(150),
 IdUsuario	int,
 IdEstado	int,
 primary key(IdEmpresa,NroMovimiento),
-foreign key(IdOrdenCompra,IdEmpresa)references Compras.OrdenCompra,
-foreign key (IdTipoMovimiento) references Inventario.TipoMovimiento,
+foreign key(IdTipoMovimiento) references Inventario.TipoMovimiento,
 foreign key(IdEstado)references Seguridad.Estado,
-foreign key (IdMotivo) references Inventario.Motivo,
+foreign key(IdMotivo) references Inventario.Motivo,
 foreign key(IdBodega,IdEmpresa)references Inventario.Bodega,
 foreign key(IdResponsable)references RecursosHumanos.Persona,
 foreign key(IdUsuario)references Seguridad.Usuario
@@ -1729,27 +1717,66 @@ foreign key(IdUsuario)references Seguridad.Usuario
  
  create table Inventario.IngresoEgresoDet
 (
-IdEmpresa	int,
+IdEmpresa		int,
 NroMovimiento	int not null,
-numero int not null,
-IdTipoArticulo int,
-IdArticulo	int,
-IdGrupo	int,
-IdPercha int,
-CantidadPedida	int,
-CantidadLlegada int,
-Costo	numeric(5,2),
-Subtotal	numeric(5,2),
-ValorIVA	numeric(5,2),
-ValorTotal	numeric(5,2),
-primary key (NroMovimiento, numero),
-foreign key(IdTipoArticulo)references Inventario.TipoArticulo,
-foreign key (IdEmpresa, NroMovimiento) references Inventario.IngresoEgresoCab,
+numero			int not null,
+IdArticulo		int,
+IdPercha		int,
+Cantidad		int,
+primary key(NroMovimiento, numero),
+foreign key(IdEmpresa, NroMovimiento) references Inventario.IngresoEgresoCab,
 foreign key(IdArticulo,IdEmpresa)references Inventario.Articulo,
-foreign key(IdGrupo)references Inventario.Grupo,
 foreign key(IdPercha)references Inventario.Percha,
 )
 go
+
+create table Inventario.LlegadaMercaderiaCab
+(
+IdEmpresa			int not null,
+NroMovimiento		int,
+IdTipoMovimiento	int,
+IdOrdenCompra		int,
+IdProveedor			int,
+Factura				numeric(15,0),
+FechaMovimiento		date,
+IdMotivo			int,
+IdBodega			int,
+IdResponsable		int,
+Observacion			varchar(150),
+IdUsuario			int,
+IdEstado			int,
+primary key(IdEmpresa,NroMovimiento),
+foreign key(IdOrdenCompra,IdEmpresa)references Compras.OrdenCompra,
+foreign key(IdProveedor)references Compras.Proveedor,
+foreign key(IdTipoMovimiento) references Inventario.TipoMovimiento,
+foreign key(IdEstado)references Seguridad.Estado,
+foreign key(IdMotivo) references Inventario.Motivo,
+foreign key(IdBodega,IdEmpresa)references Inventario.Bodega,
+foreign key(IdResponsable)references RecursosHumanos.Persona,
+foreign key(IdUsuario)references Seguridad.Usuario
+)
+go
+
+create table Inventario.LlegadaMercaderiaDet
+(
+IdEmpresa			int,
+NroMovimiento		int not null,
+numero				int not null,
+IdArticulo			int,
+IdPercha			int,
+CantidadPedida		int,
+CantidadLlegada		int,
+Precio				numeric(5,2),
+Subtotal			numeric(5,2),
+ValorIVA			numeric(5,2),
+ValorTotal			numeric(5,2),
+primary key(IdEmpresa,NroMovimiento, numero),
+foreign key(IdEmpresa, NroMovimiento) references Inventario.LlegadaMercaderiaCab,
+foreign key(IdArticulo,IdEmpresa)references Inventario.Articulo,
+foreign key(IdPercha)references Inventario.Percha,
+)
+go
+
 
 /****************** Cuentas por cobrar **********************/
 /************************************************************/
@@ -1760,7 +1787,7 @@ create table CuentaxPagar.MedioPago/*TABLA SUBIDA PORQUE LA USA CXP.COBRO*/
 	IdMedioPago 			int not null ,
 	Descripcion				varchar(30) not null,
 	fechaRegistro			date not null,
-	Estado 				int not null,
+	Estado 					int not null,
 	IdEmpresa 				int not null references Seguridad.Empresa,
 	IdUsuario 				int not null,
 	foreign key (IdUsuario) references Seguridad.Usuario,
@@ -1881,22 +1908,25 @@ CREATE TABLE CuentasPorCobrar.Inversion
 	idTipoInversion 		int NOT NULL,
 	Tiempo 					int NOT NULL,
 	idUnidadTiempo 			int NOT NULL,
+	idBanco					int,
 	Valor					money NOT NULL,
 	Porcentaje				numeric(18, 0) NOT NULL,
+	Ganancia				decimal(18, 2),
 	Fecha					date NOT NULL,
 	FechaModificacion		datetime, 
 	FechaInicio				date NOT NULL,
 	FechaFinal				date NOT NULL,
-	idEstado				int NOT NULL,
+	idEstado				varchar(1) NOT NULL,
 	primary key (idInversion),
 	foreign key (idEmpresa) references Seguridad.Empresa,
 	foreign key (idUsuario) references Seguridad.Usuario,
 	foreign key (idEntidad) references RecursosHumanos.Persona,
 	foreign key (idTipoInversion) references CuentasPorCobrar.TipoInversion,
 	foreign key (idUnidadTiempo) references CuentasPorCobrar.UnidadTiempo,
-	foreign key (idEstado) references Seguridad.Estado
+	foreign key (idBanco) references CuentasPorCobrar.Banco
  )
  go
+
  
 CREATE TABLE CuentasPorCobrar.AperturaCaja
 (
@@ -1961,57 +1991,25 @@ create table CuentasPorCobrar.CuentaxCobrar
 	idUsuario 				int NOT NULL,
 	idCuentaxCobrar 		int NOT NULL,	
 	numero_comprobante		numeric(4,0),
-	idTransaccion 			int NOT NULL,
-	idFactura 				int NOT NULL,
-	Modulo				int NOT NULL,
-	idCabeceraComprobante 	int NOT NULL,
+	Modulo					int NOT NULL,
+	idNumeroFactura 		int NOT NULL,
 	TotalCuotas 			int NOT NULL,
 	porcentaje_interes		numeric NOT NULL,
-	idEstado 				int NOT NULL,
+	estado 					varchar(10) NULL,
 	primary key (idCuentaxCobrar),
 	foreign key (idEmpresa) references Seguridad.Empresa,
 	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idTransaccion) references Facturacion.Factura,
-	foreign key (idFactura) references Facturacion.Factura,
-	foreign key (IdEmpresa, numero_comprobante) references Contabilidad.CabeceraComprobante,
-	foreign key (idEstado) references Seguridad.Estado
+	foreign key (IdEmpresa,numero_comprobante) references Contabilidad.CabeceraComprobante
 )
-go
 
-CREATE TABLE CuentasPorCobrar.CuentaxCobrarDet
-(
-	idEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
-	idCuentaxCobrar 		int NOT NULL,
-	/*idCobro 				int NOT NULL,*//*se cambio logica de referencia a cobro*/
-	Numero 					int NOT NULL,
-	numero_cuota 			int NOT NULL,
-	valor_cuota				money NOT NULL,
-	valor_interes			money NOT NULL,
-	valor_mora				money NOT NULL,
-	fecha_cobro				date NOT NULL,
-	fecha_vencimiento		date NOT NULL,
-	FechaModificacion		datetime, 
-	idEstado int NOT NULL,
-	primary key (idCuentaxCobrar, numero),
-	foreign key (idEmpresa) references Seguridad.Empresa,
-	foreign key (idUsuario) references Seguridad.Usuario,
-	/*foreign key (idCobro) references CuentasPorCobrar.Cobro,*/
-	foreign key (idEstado) references Seguridad.Estado
-)
-go
- 
+
  CREATE TABLE CuentasPorCobrar.Cobro
 (
 	idEmpresa 				int NOT NULL,
 	idUsuario 				int NOT NULL,
 	idCobro 				int NOT NULL,
-	idTransaccion 			int NOT NULL,
-	idFactura 				int NOT NULL,
-	idCliente 				int NOT NULL,
+	idNumeroFactura 		int NOT NULL,
 	idCabeceraComprobante	numeric(4,0) NOT NULL,
-	idCuentaxCobrar			int NOT NULL,/*AGREGADO CAMBIO LOGICA*/
-	numeroCuentaxCobrar		int NOT NULL,/*AGREGADO CAMBIO LOGICA*/
 	Fecha					date NOT NULL,
 	FechaModificacion		datetime, 
 	NumeroCuota 			int NOT NULL,
@@ -2020,23 +2018,34 @@ go
 	Mora					money NOT NULL,
 	ValorPagado				money NOT NULL,
 	Saldo					money NOT NULL,
-	idEstado 				int NOT NULL,
+	idEstado 				varchar(10) NOT NULL,
 	primary key (idCobro),
 	foreign key (idEmpresa) references Seguridad.Empresa,
 	foreign key (idUsuario) references Seguridad.Usuario,
-	foreign key (idTransaccion) references Facturacion.Factura,
-	foreign key (idFactura) references Facturacion.Factura,
-	foreign key (idCliente) references RecursosHumanos.Persona,
-	foreign key (IdEmpresa,idCabeceraComprobante) references Contabilidad.CabeceraComprobante,
-	foreign key (idCuentaxCobrar, numeroCuentaxCobrar) references CuentasPorCobrar.CuentaxCobrarDet,/*agregada ref de cambio de log*/
-	foreign key (idEstado) references Seguridad.Estado
+	foreign key (IdEmpresa,idCabeceraComprobante) references Contabilidad.CabeceraComprobante --asiento contable
 )
 go
+
+CREATE TABLE CuentasPorCobrar.CuentaxCobrarDet
+(
+	idCuentaxCobrar 		int NOT NULL,
+	Numero 					int NOT NULL,
+	numero_cuota 			int NOT NULL,
+	valor_cuota				money NOT NULL,
+	valor_interes			money NOT NULL,
+	valor_mora				money NOT NULL,
+	fecha_cobro				date NOT NULL,
+	fecha_vencimiento		date NOT NULL,
+	FechaModificacion		datetime, 
+	estado 					varchar NULL
+	primary key (idCuentaxCobrar, numero),
+)
+Go
+ 
+
  
 CREATE TABLE CuentasPorCobrar.CobroDet
 (
-	idEmpresa 				int NOT NULL,
-	idUsuario 				int NOT NULL,
 	idCobro 				int NOT NULL,
 	numero 					int NOT NULL,
 	idBanco 				int NOT NULL,
@@ -2044,17 +2053,15 @@ CREATE TABLE CuentasPorCobrar.CobroDet
 	Valor					money NOT NULL,
 	NumeroDocumento 		int NOT NULL,
 	Observacion				varchar(150) NOT NULL,
-	idEstado 				int NOT NULL,
+	idEstado 				varchar(10) NOT NULL,
+	idEmpresa	int not null
 	primary key(idCobro,numero),
-	foreign key(idEmpresa)references Seguridad.Empresa,
-	foreign key(idUsuario)references Seguridad.Usuario,
 	foreign key(idCobro)references CuentasPorCobrar.Cobro,/*Se agrego la referencia a cobro que le quitaron*/
 	foreign key(idBanco)references CuentasPorCobrar.Banco,
-	foreign key (idMedioPago, idEmpresa)references CuentaxPagar.MedioPago,/*se corrige la referencia*/
-	foreign key (idEstado) references Seguridad.Estado 
+	foreign key (idMedioPago,idEmpresa)references CuentaxPagar.MedioPago,/*se corrige la referencia*/
  )
  go
- 
+
 CREATE TABLE CuentasPorCobrar.AperturaDet
 (
 	idEmpresa 				int NOT NULL,
@@ -2100,11 +2107,10 @@ create table CuentaxPagar.TelefonoEmpresaServicio
 		IdEmpresa 				int not null,
 		IdEmpresaServicio 		varchar(13) not null,
 		IdTelefono 				int not null,
-		Serie 					int not null,
 		foreign key (IdEmpresa)references Seguridad.Empresa, 
 		foreign key (IdEmpresaServicio, IdEmpresa)references CuentaxPagar.EmpresaServicio,
 		foreign key (IdTelefono)references RecursosHumanos.Telefono, 
-		primary key(IdEmpresaServicio,IdEmpresa, Serie, IdTelefono)	
+		primary key(IdEmpresaServicio, IdEmpresa, IdTelefono)	
 )
 go	
 
@@ -2116,6 +2122,7 @@ create table CuentaxPagar.Impuesto
 	Porcentaje				decimal(4,2)not null,
 	FechaRegistro			date not null,
 	Estado 					int not null,
+	NatureAcree				int not null,
 	IdEmpresa 				int not null,
 	IdUsuario 				int not null,
 	foreign key (IdUsuario)references Seguridad.Usuario,
@@ -2158,16 +2165,16 @@ go
 create table CuentaxPagar.CuentaPorPagar 
 (
 	NumCuentaPorPagar 		int not null ,
-	NumIngresoEgreso 		int not null,
+	NumIngresoEgreso 		int null,
 	FechaIngreso			date not null,
-	Factura 				int not null,
+	NumeroFactura 			varchar(18) not null,
 	FechaTransaccion		date not null,
-	IdPersona 				int null,
+	IdProveedor 			int null,
 	IdEmpresaServicio		varchar(13) null,
 	Motivo					varchar(30) not null,
-	Detalle					varchar(150) not null,
+	Detalle					varchar(1500) null,
 	Subtotal				numeric(10,2) not null,
-	Descuento				numeric(10,2) not null,
+	Descuento				numeric(10,2) null,
 	Total					numeric (10,2) not null,
 	FormaPago				char not null,
 	ValorEntrada			numeric(10,2) null,
@@ -2180,7 +2187,7 @@ create table CuentaxPagar.CuentaPorPagar
     foreign key (IdUsuario)references Seguridad.Usuario,
     foreign key (IdFrecuencia, IdEmpresa)references CuentaxPagar.FrecuenciaPago,
     foreign key (IdEmpresaServicio, IdEmpresa)references CuentaxPagar.EmpresaServicio,
-	foreign key (IdPersona)references RecursosHumanos.Persona,		
+	foreign key (IdProveedor)references Compras.Proveedor,		
     foreign key (NumIngresoEgreso, IdEmpresa)references Inventario.IngresoEgresoCab,
     foreign key (IdEmpresa) references Seguridad.Empresa,
 	primary key(NumCuentaPorPagar, IdEmpresa)
@@ -2194,7 +2201,7 @@ create table CuentaxPagar.DeudaDet--esta tabla debe llamarse CuentaPorPagarDetal
 	NumDetalleDeuda 		int not null,
 	ValorLetra				numeric(10,2) not null,
 	FechaVencimiento		date not null,
-	Estado 				int not null,
+	Estado 					int not null,
     foreign key (NumCuentaPorPagar, IdEmpresa) references CuentaxPagar.CuentaPorPagar,
 	primary key(IdEmpresa, NumCuentaPorPagar, NumDetalleDeuda)
 )
@@ -2219,7 +2226,7 @@ create table CuentaxPagar.OrdenPagoCab
 	NumOrdenPago 			int not null,
 	fechadeEmision			date not null,
 	IdPersona 				int null,
-	Estado 				int not null,
+	Estado 					int not null,
 	TotalPagar				numeric(10,2) not null,
 	TipoOrdenPago			char not null,
 	IdUsuario 				int not null,
@@ -2234,6 +2241,7 @@ create table CuentaxPagar.OrdenPagoEmpleadoDet
 (
 	NumOrdenPago 			int not null,
 	IdEmpresa 				int not null,
+	AutorizarPago			bit not null,
 	Linea 					int not null,
 	IdPersona 				int not null,
 	SueldoTotal				numeric(10,2) null,
@@ -2256,6 +2264,7 @@ create table CuentaxPagar.OrdenPagoDet
 	NumOrdenCab 			int not null,
 	TotalPagar				numeric(10,0) not null,
     IdEmpresa 				int not null,
+    AutorizarPago			bit not null,
     foreign key(NumOrdenCab, IdEmpresa) references CuentaxPagar.OrdenPagoCab,
     foreign key (NumDetalleDeuda, NumCuentaPorPagar, IdEmpresa)references CuentaxPagar.DeudaDet, 
     primary key(NumLinea, NumOrdenCab, IdEmpresa)
@@ -2378,7 +2387,7 @@ create table ActivoFijo.ActivoFijo
 	foreign key (IdEmpresa) references Seguridad.Empresa,--relacion tablas de Seguridad
 	foreign key (IdDepartamento)references RecursosHumanos.Departamento,--relacaion tablas de RRHH
 	foreign key (IdArticuloBodega)references Inventario.ArticuloBodega,--relacion tablas de inventario,
-	foreign key (IdResponsable,IdEmpresa)references RecursosHumanos.Empleado,--relacaion tablas de RRHH
+	foreign key (IdResponsable)references RecursosHumanos.Persona,--relacaion tablas de RRHH
 	foreign key (IdUsuario)references Seguridad.Usuario,
 	foreign key (IdTipo)references Inventario.TipoArticulo,--relacion tablas de inventario,
 	foreign key (IdGrupo)references Inventario.Grupo,
@@ -2416,7 +2425,7 @@ create table ActivoFijo.EquipoMaquinariaMuebles
 	IdMarca 				int   null,--relacion tablas de inventario,
 	IdModelo 				int   null,--relacion tablas de inventario
 	IdColor 				int   null,--relacion tablas de inventario,
-	Carga					int   null,
+	Carga					numeric(10,2)   null,
 	AniosDepreciados		int   null,
 	DimensionAncho			numeric(10,2)   null,
 	DimensionLargo			numeric(10,2)   null,
@@ -2454,7 +2463,7 @@ create table ActivoFijo.DepreciacionDet
 	IdCabecera 				  int,
 	Secuencia_DepreciacionDet int,
 	IdActivoFijo 		      int   null,
-	Periodo                   date null,
+	Periodo                   int null,
 	IdEmpresa				  int   null,
 	DepreAnual				  numeric(10,2)   null,--campos nuevos insertados*******
 	DepreAcumulada		      numeric(10,2)   null,--campos nuevos insertados*******
@@ -2526,7 +2535,7 @@ go
 create table ActivoFijo.Transferencia
 (
 	Idtransferencia 			int primary key,
-	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
+	EstadoProceso				varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	IdActivoFijo 				int   null,
 	fecha						date  null,
 	--IdTipoTransferencia 		int   null,
@@ -2551,7 +2560,7 @@ create table ActivoFijo.Edifico
 (
 	IdActivoFijo 				int primary key,
 	FechaConstruccion			date  null,
-	CodigoCatastral 			int   null,
+	CodigoCatastral 			varchar(12)   null,
 	NumeroPisos 				int   null,
 	AniosDepreciados 			int   null,
 	Ubicacion 					varchar(100)  null, 
@@ -2568,7 +2577,7 @@ create table ActivoFijo.revalorizacion
 (
 	IdRevalorizacion 			int primary key,
 	IdUsuario 				    int  null,
-	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
+	EstadoProceso				varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	Fecha						date null,
 	IdActivoFijo 				int   null,
 	ValorAtual					numeric(10,2)   null,
@@ -2578,32 +2587,43 @@ create table ActivoFijo.revalorizacion
 	foreign key (IdActivoFijo) references ActivoFijo.ActivoFijo--relacion tabla general de Estado
 )
 go
+--******************* MOTIVO BAJA*****************
+create table ActivoFijo.MotivoBaja
+(
+	IdMotivoBaja	int primary key,
+	descripcion		varchar (50) null,
+	Idestado		int NULL,
+--referencia al constraint
+	foreign key (IdEstado) references Seguridad.Estado,
+)
+go
 
 create table ActivoFijo.BajaActivo
 (
 	idBajaActivo 				int primary key,
-	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
+	EstadoProceso				varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	IdActivoFIjo 				int   null,
-	IdGrupo						int  null,
-	IdSubgrupo					int  null,
+	--IdGrupo						int  null,
+	--IdSubgrupo					int  null,
 	Fecha						date null,
-	IdEstado 					int  null,
+	--IdEstado 					int  null,
 	IdEmpresa 					int  null,
 	Descripcion 				varchar(50)   null,
-	Motivo 						varchar(25)   null,
-	IdProveedor					int  null,
+	IdMotivoBaja 				int   null,
+	--IdProveedor					int  null,
 	IdCabeceraComprobante		numeric(4,0)  null,
 	Observacion 				varchar(300)  null,
-	IdImagen				int  null,
+	IdImagen					int  null,
 	--haciendo las referencias constraint
 	foreign key (IdActivoFIjo) references ActivoFijo.ActivoFijo,
-	foreign key (IdGrupo)references Inventario.Grupo,
-	foreign key (IdSubgrupo)references ActivoFijo.SubGrupos,
-	foreign key (IdEstado) references Seguridad.Estado,
+	--foreign key (IdGrupo)references Inventario.Grupo,
+	--foreign key (IdSubgrupo)references ActivoFijo.SubGrupos,
+	--foreign key (IdEstado) references Seguridad.Estado,
 	foreign key (IdEmpresa) references Seguridad.Empresa,
-	foreign key (IdProveedor) references Compras.Proveedor,
+	--foreign key (IdProveedor) references Compras.Proveedor,
 	FOREIGN KEY (IdImagen)REFERENCES ActivoFijo.Imagen,
-	foreign key (IdEmpresa, IdCabeceraComprobante) references Contabilidad.CabeceraComprobante
+	foreign key (IdEmpresa, IdCabeceraComprobante) references Contabilidad.CabeceraComprobante,
+	foreign key (IdMotivoBaja) references ActivoFijo.MotivoBaja
 )
 go
 
@@ -2625,7 +2645,7 @@ create table ActivoFijo.VentaGarageCab
 	CantidadTransferencia 		int   null,
 	CantidadDeposito 			int   null,
 	CantidadCheque 				int   null,
-	EstadoProceso			varchar(30)   null,--Es para identificar si esta anulado o no el proceso
+	EstadoProceso				varchar(30)   null,--Es para identificar si esta anulado o no el proceso
 	--haciendo las referencias constraint
 	primary key (idVentaGarage,IdEmpresa),
 	foreign key (IdUsuario)references Seguridad.Usuario,
@@ -2681,7 +2701,7 @@ CREATE TABLE Compras.OrdenCompraDet  --ok
 	 Numero    				int   NOT NULL,
 	 IdEmpresa    			int   NOT NULL,
 	 Linea    				int   NOT NULL,
-	 IdArticulo				int  NOT NULL,
+	 IdArticulo				int	  NOT NULL,
 	 Cantidad				int   NOT NULL,
 	 Precio					int   NOT NULL,
 	foreign key (Numero, IdEmpresa) references Compras.OrdenCompra,
@@ -2840,8 +2860,8 @@ Create table Compras.NotaDebito
 	Numero					int		not null,
 	idEmpresa				int		not null,
 	NumeroDevolucionCompra	int		not null,
-	Fecha			date	NOT NULL Default Getdate(),
-    FechaModificacion date  NOT NULL Default Getdate(),
+	Fecha					date	NOT NULL Default Getdate(),
+    FechaModificacion		date    NOT NULL Default Getdate(),
 	SubTotal				int		not null,
 	Descuento				int		not null,
 	idEstado				int		not null
@@ -2894,9 +2914,6 @@ foreign key (TipoIdentificacion)references RecursosHumanos.TipoIdentificacion
 go
 
 
-
-
-
 --ARTICULO
 create table Taller.Articulo(
 IdEmpresa		int not null,
@@ -2939,7 +2956,6 @@ go
 
 
 
-
 --PRESUPUESTO
 CREATE TABLE Taller.Presupuesto
 ( 
@@ -2952,8 +2968,8 @@ CREATE TABLE Taller.Presupuesto
 	Subtotal             decimal(18,2) not null,
 	TotalPresupuesto     decimal(18,2) not null,
 	Observacion          varchar(100) not null,
-	IdEstado 	     int not null,
-	IdEmpresa		 int  not null,
+	IdEstado 			int not null,
+	IdEmpresa			int  not null,
 	foreign key (IdEmpresa)references Seguridad.Empresa,
 	foreign key (IdEstado)references Seguridad.Estado,
 	foreign key(IdPersona)references Taller.Persona, 
@@ -2987,8 +3003,11 @@ CREATE TABLE Taller.OrdenTrabajo
 	InicioReparacion     date  not null,
 	FechaIngreso	     datetime  not null,
 	FechaEntrega		 date  not null,
+	IvaTrabajos		     decimal(18,2) not null,
 	TotalTrabajos 	     decimal(18,2) not null,
+	IvaRepuestos		 decimal(18,2) not null,
 	TotalRepuestos 	     decimal(18,2) not null,
+	IvaOtros		     decimal(18,2) not null,
 	TotalOtros 	         decimal(18,2) not null,
 	Observacion			 varchar(100), 
 	IdEstado 	         int not null,
@@ -3055,7 +3074,7 @@ go
 --Otros
 CREATE TABLE Taller.Otros
 ( 
-	IdOtros      int  not null primary key,
+	IdOtros			 int  not null primary key,
 	IdOrdenTrabajo   int  not null,
 	Descripcion      varchar(100)  not null,
 	Precio			 decimal(18,2) not null,
@@ -3071,19 +3090,36 @@ CREATE TABLE Taller.Liquidacion
 	IdOrdenTrabajo    int  not null,
 	Fecha             date not null,	
 	TotalPagar		  decimal(18,2) not null,
+	IdFormaPago		  int not null,
+	NumeroCuotaMensual int null,
+	CuotaMensual	  decimal(18,2) null,
+	FechaInicialPago  date not null,
+	FechaFinalPago	  date not null,
 	Observacion       varchar(100),
 	IdEstado 	      int not null, 
 	IdEmpresa		  int  not null,
 	foreign key(IdEstado)references Seguridad.Estado,
 	foreign key (IdEmpresa)references Seguridad.Empresa,
+	foreign key (IdFormaPago) references Facturacion.FormaPago,
 	foreign key(IdOrdenTrabajo)references Taller.OrdenTrabajo
 )
 go
 
+
+
+
+/*************contabilidad***************/
+create table Contabilidad.SaldoxComprobante(
+IdEmpresa	int,
+numero_comprobante	numeric(4, 0),
+primary key (IdEmpresa,numero_comprobante)
+)
+
+
 -- de aqui en adelante sera para creacion de vistas, stored procedures, etc
 -- siempre y cuando no afecten la integridad funcional de este script
 PRINT N'3.creando vistas'
---SEGURIDAD
+-------------------------------------SEGURIDAD
 go
 create view Seguridad.UsuariodPermisos as
 SELECT distinct ROW_NUMBER() OVER(ORDER BY Seguridad.Usuario.IdUsuario) AS id,Seguridad.Usuario.IdUsuario, Seguridad.Usuario.NombreUsuario, Seguridad.Perfil.Descripcion, Seguridad.Modulo.IdModulo, Seguridad.Modulo.Nombre, Seguridad.Menu.NombreFormulario, 
@@ -3102,6 +3138,13 @@ FROM Seguridad.Usuario usu, Seguridad.Empresa emp, Seguridad.UsuarioPorEmpresa u
 WHERE uxe.IdEmpresa = emp.IdEmpresa
 AND uxe.IdUsuario = usu.IdUsuario
 AND usu.IdEstado = est.IdEstado
+go
+        
+create view Seguridad.IniciosDeSesion as
+select distinct ROW_NUMBER() OVER(ORDER BY h.IdHistorial) AS id, h.IdHistorial, h.IdUsuario, u.NombreUsuario, p.Descripcion, h.FechaInicioSesion
+from Seguridad.Historial h, Seguridad.Usuario u, Seguridad.Perfil p
+where h.IdUsuario=u.IdUsuario
+and u.IdPerfil=p.IdPerfil
 go
                  
 -- view in disuse
@@ -3124,4 +3167,221 @@ from		Seguridad.Usuario a inner join
 			Seguridad.Permiso c on a.IdPerfil = c.IdPerfil and b.IdPerfil = b.IdPerfil inner join 
 			Seguridad.Menu d on c.IdMenu = d.IdMenu inner join
 			Seguridad.UsuarioPorEmpresa e on e.IdUsuario = a.IdUsuario
+go
+
+--fix by roger
+create view UsuarioEmpresa as
+SELECT distinct ROW_NUMBER() OVER(ORDER BY Seguridad.UsuarioPorEmpresa.IdEmpresa) AS id,     Seguridad.Empresa.RazonSocial, Seguridad.Empresa.Ruc, Seguridad.Empresa.Correo, Seguridad.Usuario.NombreUsuario, 
+                      RecursosHumanos.Persona.NombreRazonSocial, RecursosHumanos.Persona.Apellido, Seguridad.Usuario.IdPerfil
+FROM         Seguridad.UsuarioPorEmpresa inner join
+                      Seguridad.Usuario on Seguridad.UsuarioPorEmpresa.IdUsuario = Seguridad.Usuario.IdUsuario inner join
+                      Seguridad.Empresa on Seguridad.UsuarioPorEmpresa.IdEmpresa = Seguridad.Empresa.IdEmpresa inner join
+                      RecursosHumanos.Persona on Seguridad.Usuario.IdUsuario = RecursosHumanos.Persona.IdPersona
+go
+
+
+
+/***************************COMPRAS****************************/
+use TECA
+go
+-- Vista Proveedor
+Create view Compras.ProveedorDescripcion as
+SELECT	p.IdProveedor, p.IdPersona, NombreRazonSocial, p.IdEmpresa, RazonSocial, p.IdTipoArticulo, t.Descripcion, p.Estado
+FROM	Compras.Proveedor p, RecursosHumanos.Persona, Seguridad.Empresa, Inventario.TipoArticulo t
+WHERE	RecursosHumanos.Persona.IdPersona  = p.IdPersona 
+and		Seguridad.Empresa.IdEmpresa = p.IdEmpresa
+and     p.IdTipoArticulo = t.IdTipoArticulo
+go
+--vista vehiculo
+Create view Compras.Vehiculo_Vista
+as
+Select	emp.NombreComercial, art.IdArticulo, art.Descripcion,  art.CantidadActual, art.IdTipoArticulo, tip.Descripcion TipoArticulo, art.IdGrupo, 
+		gru.Descripcion Grupo,cha.Descripcion Chasis, mot.Descripcion TipoMotor,tco.Descripcion TipoComb, 
+		col.Descripcion Color, mar.Descripcion Marca , mol.Descripcion Modelo, tma.Descripcion TipoMaterial, art.idestado, est.Descripcion Estado
+from	Inventario.Articulo art, Inventario.TipoArticulo tip, Inventario.Grupo gru, Inventario.Chasis cha, Inventario.TipoMotor mot, 
+		Inventario.TipoCombustible tco, Inventario.Color col, Inventario.Marca mar, Inventario.Modelo mol, Inventario.TipoMaterial tma,
+		Seguridad.Estado est, Seguridad.Empresa emp
+where	art.IdEmpresa=emp.IdEmpresa
+and		art.IdTipoArticulo = tip.IdTipoArticulo
+and		art.IdGrupo= gru.IdGrupo
+and		art.IdChasis= cha.IdChasis
+and		art.IdTipoMotor= mot.IdTipoMotor
+and		art.IdTipoCombustible= tco.IdTipoCombustible
+and		art.IdColor= col.IdColor
+and		art.IdMarca= mar.IdMarca
+and		art.IdModelo= mol.IdModelo
+and		art.IdTipoMaterial= tma.IdTipoMaterial
+and		art.IdEstado= est.IdEstado
+and		art.IdGrupo= 6
+go
+--vista articulos
+Create view Compras.Articulo_Vista
+as
+select	art.IdArticulo, art.Descripcion, art.CantidadActual, art.IdTipoArticulo, tip.Descripcion TipoArticulo, art.IdGrupo,
+		gru.Descripcion Grupo,art.IdEmpresa, emp.NombreComercial ,art.IdEstado,est.Descripcion Estado
+from	Seguridad.Empresa emp, Inventario.Articulo art, Inventario.TipoArticulo tip, Inventario.Grupo gru, Seguridad.Estado est
+where	art.IdEmpresa= emp.IdEmpresa
+and		art.IdTipoArticulo= tip.IdTipoArticulo
+and		art.IdGrupo= gru.IdGrupo
+and		art.IdEstado= est.IdEstado
+and		art.IdGrupo != 6
+go
+--vista cabecera de solicitudes
+Create view Compras.SolicitudCab
+as
+select	cab.Numero, cab.idEmpresa ,emp.NombreComercial Empresa, cab.idtipoArticulo, tip.Descripcion TipoArticulo, cab.IdUsuario,usu.NombreUsuario Usuario, 
+		cab.idDepartamento,dep.Descripcion Departamento, cab.Fecha, cab.idEstado,est.Descripcion Estado
+from	Compras.Solicitud cab,  Seguridad.Empresa emp, Inventario.TipoArticulo tip, Seguridad.Usuario usu,
+		RecursosHumanos.Departamento dep, Compras.Estado est
+where	cab.idEmpresa= emp.IdEmpresa
+and		cab.IdTipoArticulo= tip.IdTipoArticulo
+and		cab.IdUsuario= usu.IdUsuario
+and		cab.idDepartamento= dep.IdDepartamento
+and		cab.idEstado= est.IdEstado
+go
+
+--vista detalle de solicitudes
+Create View Compras.SolicitudDetalle
+as
+select	det.numero, det.Linea, det.idArticulo, art.Descripcion Articulo, det.Cantidad, det.idEmpresa, emp.NombreComercial Empresa
+from	Compras.SolicitudDet det, Compras.Solicitud cab, Inventario.Articulo art, Seguridad.Empresa emp
+where	det.Numero= cab.Numero
+and		det.idArticulo= art.IdArticulo
+and		det.idEmpresa= emp.IdEmpresa
+go
+-- Vista cabecera Pedido
+Create view Compras.PedidoCabecera_Vista
+as
+select	cab.Numero, cab.idTipoArticulo, tip.Descripcion TipoArticulo, cab.Fecha, cab.idEmpresa, emp.NombreComercial Empresa,
+		cab.idUsuario, usu.NombreUsuario Usuario,
+		cab.idEstado, est.Descripcion Estado
+from	Compras.Pedido cab, Inventario.TipoArticulo tip, Seguridad.Empresa emp, Compras.Estado est, Seguridad.Usuario usu
+where	cab.idTipoArticulo = tip.IdTipoArticulo
+and		cab.idEmpresa= emp.IdEmpresa
+and		cab.idEstado= est.idEstado
+and		cab.idUsuario= usu.idUsuario
+go
+--Vista Detalle Pedido
+Create view Compras.PedidoDetalle_Vista
+as
+select	det.numero, det.Linea, det.idArticulo, art.Descripcion Articulo, det.Cantidad, det.idEmpresa, emp.NombreComercial Empresa
+from	Compras.PedidoDet det, Compras.Pedido cab, Inventario.Articulo art, Seguridad.Empresa emp
+where	det.Numero= cab.Numero
+and		det.idArticulo= art.IdArticulo
+and		det.idEmpresa= emp.IdEmpresa
+go
+-- Vista Cotizacion Cabecera
+Create view Compras.CotizacionCab_Vista
+as
+select  cab.Numero, cab.idproveedor, pro.NombreRazonSocial Proveedor, cab.Fecha, cab.idEstado, est.descripcion Estado, 
+		cab.idEmpresa, emp.NombreComercial Empresa, cab.IdUsuario, usu.NombreUsuario Usuario
+from	Compras.Cotizacion cab, Compras.Proveedordescripcion pro, Compras.estado est, Seguridad.Empresa emp, Seguridad.Usuario usu
+where	cab.idproveedor= pro.idProveedor
+and		cab.idEstado= est.idestado
+and		cab.idEmpresa= emp.IdEmpresa
+and		cab.IdUsuario= usu.IdUsuario
+go
+--Vista Cotizacion Detalle
+Create View  Compras.CotizacionDetalle_Vista
+as
+select		det.Numero, det.Linea, det.NumeroPedido, ped.idUsuario, usu.NombreUsuario, ped.Fecha, ped.idTipoArticulo,
+			tip.Descripcion TipoArticulo, det.idEmpresa, emp.NombreComercial Empresa
+from		Compras.CotizacionDet det, Seguridad.Empresa emp, Compras.Pedido ped, Seguridad.Usuario usu, Inventario.TipoArticulo tip
+where		det.idEmpresa= emp.IdEmpresa
+and			det.NumeroPedido= ped.Numero
+and			ped.idUsuario= usu.IdUsuario
+and			ped.idTipoArticulo= tip.IdTipoArticulo
+go
+
+Create View Compras.OrdenCompraCab_Vista
+as
+select		cab.IdOrdenCompra, cab.idProveedor,pro.NombreRazonSocial Proveedor , cab.NumeroCotizacion, cab.Fecha,
+			cab.IdUsuario, usu.NombreUsuario,cab.idEmpresa, emp.NombreComercial,cab.idEstado,est.Descripcion Estado, cab.Observaciones
+from		Compras.OrdenCompra cab, Seguridad.Empresa emp, Seguridad.Usuario usu, Compras.ProveedorDescripcion pro, Compras.Estado est
+where		cab.idEmpresa= emp.IdEmpresa
+and			cab.IdUsuario= usu.IdUsuario
+and			cab.idProveedor= pro.idProveedor
+and			cab.idEstado= est.idEstado
+GO			
+
+Create view Compras.OrdenCompraDetalle_Vista
+as
+select		det.Numero, det.Linea, det.IdArticulo, art.Descripcion Articulo, det.Cantidad, det.Precio,
+			det.IdEmpresa, emp.NombreComercial
+from		Compras.OrdenCompraDet det, Seguridad.Empresa emp, Inventario.Articulo art
+where		det.IdEmpresa= emp.IdEmpresa
+and			det.IdArticulo= art.IdArticulo
+go
+
+Create view OrdenCompraDetalleArticulo_Vista
+as
+SELECT     cotcab.Numero, peddet.Linea, cotcab.idEmpresa, emp.NombreComercial, cotdet.NumeroPedido, peddet.idArticulo, art.Descripcion, peddet.Cantidad
+FROM         Compras.Cotizacion AS cotcab INNER JOIN
+                      Compras.CotizacionDet AS cotdet ON cotcab.Numero = cotdet.Numero INNER JOIN
+                      Compras.PedidoDet AS peddet ON cotdet.NumeroPedido = peddet.Numero INNER JOIN
+                      Seguridad.Empresa AS emp ON cotcab.idEmpresa = emp.IdEmpresa INNER JOIN
+                      Inventario.Articulo AS art ON peddet.idArticulo = art.IdArticulo
+                   
+go
+/********************CONTABILIDAD*****************************/
+create view Contabilidad.vwCuenta as
+SELECT        Contabilidad.Cuenta.IdEmpresa, Contabilidad.Cuenta.IdCuenta, Contabilidad.Cuenta.codigo_padre, Contabilidad.Cuenta.nombre, 
+                         Contabilidad.Cuenta.descripcion, Contabilidad.Cuenta.IdNivelCuenta, Contabilidad.Cuenta.IdTipoCuenta, Contabilidad.Cuenta.naturaleza_cuenta, 
+                         Contabilidad.Cuenta.IdUsuario, Contabilidad.Cuenta.FechaModificacion, Contabilidad.NivelCuenta.digitos
+FROM            Contabilidad.Cuenta INNER JOIN
+                         Contabilidad.NivelCuenta ON Contabilidad.Cuenta.IdNivelCuenta + 1 = Contabilidad.NivelCuenta.IdNivelCuenta
+go
+
+create view Contabilidad.vwTipoTransaccion as
+SELECT     Contabilidad.TipoTransaccion.IdTransaccion, Contabilidad.TipoTransaccion.modulo, Contabilidad.TipoTransaccion.TipoDocumento, Contabilidad.TipoTransaccion.descripcion, 
+                      Seguridad.Modulo.Nombre AS NombreModulo
+FROM         Contabilidad.TipoTransaccion INNER JOIN
+                      Seguridad.Modulo ON Contabilidad.TipoTransaccion.modulo = Seguridad.Modulo.IdModulo
+go
+
+
+create view Contabilidad.vwComprobanteMayorizar as                       
+SELECT     Contabilidad.CabeceraComprobante.IdEmpresa, Contabilidad.CabeceraComprobante.fecha, Contabilidad.CabeceraComprobante.numero_comprobante, Contabilidad.CabeceraComprobante.glosa, 
+                      SUM(Contabilidad.DetalleComprobante.haber) AS haber, SUM(Contabilidad.DetalleComprobante.debe) AS debe
+FROM         Contabilidad.CabeceraComprobante INNER JOIN
+                      Contabilidad.DetalleComprobante ON Contabilidad.CabeceraComprobante.IdEmpresa = Contabilidad.DetalleComprobante.IdEmpresa AND 
+                      Contabilidad.CabeceraComprobante.numero_comprobante = Contabilidad.DetalleComprobante.cabecera_comprobante LEFT OUTER JOIN
+                      Contabilidad.SaldoxComprobante ON Contabilidad.CabeceraComprobante.IdEmpresa = Contabilidad.SaldoxComprobante.IdEmpresa AND 
+                      Contabilidad.CabeceraComprobante.numero_comprobante = Contabilidad.SaldoxComprobante.numero_comprobante
+GROUP BY Contabilidad.CabeceraComprobante.numero_comprobante, Contabilidad.CabeceraComprobante.fecha, Contabilidad.CabeceraComprobante.IdEmpresa, Contabilidad.CabeceraComprobante.glosa
+go
+create view Contabilidad.vwlibrodiario as 
+SELECT     Contabilidad.CabeceraComprobante.IdEmpresa, Contabilidad.CabeceraComprobante.numero_comprobante, Contabilidad.CabeceraComprobante.fecha, Contabilidad.CabeceraComprobante.glosa, 
+                      Contabilidad.DetalleComprobante.cuenta, Contabilidad.Cuenta.nombre, Contabilidad.DetalleComprobante.debe, Contabilidad.DetalleComprobante.haber, 
+                      Contabilidad.CabeceraComprobante.TipoTransaccion, Contabilidad.vwTipoTransaccion.NombreModulo
+FROM         Contabilidad.DetalleComprobante INNER JOIN
+                      Contabilidad.CabeceraComprobante ON Contabilidad.DetalleComprobante.IdEmpresa = Contabilidad.CabeceraComprobante.IdEmpresa AND 
+                      Contabilidad.DetalleComprobante.cabecera_comprobante = Contabilidad.CabeceraComprobante.numero_comprobante INNER JOIN
+                      Contabilidad.Cuenta ON Contabilidad.DetalleComprobante.IdEmpresa = Contabilidad.Cuenta.IdEmpresa AND 
+                      Contabilidad.DetalleComprobante.cuenta = Contabilidad.Cuenta.IdCuenta LEFT OUTER JOIN
+                      Contabilidad.vwTipoTransaccion ON Contabilidad.CabeceraComprobante.TipoTransaccion = Contabilidad.vwTipoTransaccion.IdTransaccion                    
+go                      
+create procedure reporteResultado
+@fecha date
+as 
+begin
+select IdCuenta as Codigo,nombre as Cuenta, null as Saldo from Contabilidad.Cuenta where SUBSTRING(IdCuenta,1,1)=4 and IdNivelCuenta=1
+union
+select c.IdCuenta as Codigo,c.nombre as Cuenta, (SUM(s.saldo_deudor) - SUM(s.saldo_acreedor))*-1 as Saldo  from Contabilidad.Cuenta as c,Contabilidad.Saldo as s where c.IdCuenta=s.cuenta and SUBSTRING(s.cuenta,1,1)=4 and c.IdNivelCuenta=5 and s.fecha<=@fecha GROUP BY c.nombre,c.IdCuenta
+union
+select '----------------------------------------4999' as Codigo, 'TOTAL  INGRESOS' as Cuenta, isnull((SUM(s.saldo_acreedor) - SUM(s.saldo_deudor)),0) as Saldo from Contabilidad.Saldo as s where SUBSTRING(s.cuenta,1,1)=4 and s.fecha<=@fecha
+union
+select '----------------------------------------49999' as Codigo, '-----------------------------------------------------' as Cuenta, null as Saldo from Contabilidad.Cuenta where SUBSTRING(IdCuenta,1,1)=5 and IdNivelCuenta=1
+union
+select IdCuenta as Codigo, nombre as Cuenta, null as Saldo from Contabilidad.Cuenta where SUBSTRING(IdCuenta,1,1)=5 and IdNivelCuenta=1
+union
+select c.IdCuenta as Codigo,c.nombre as Cuenta, (SUM(s.saldo_acreedor) - SUM(s.saldo_deudor))*-1 as Saldo  from Contabilidad.Cuenta as c,Contabilidad.Saldo as s where c.IdCuenta=s.cuenta and SUBSTRING(c.codigo_padre,1,1)=5 and c.IdNivelCuenta=5 and s.fecha<=@fecha and c.IdCuenta!='51205001' and c.IdCuenta!='51205002' GROUP BY c.nombre,c.IdCuenta
+union
+select '----------------------------------------58' as Codigo, 'TOTAL  EGRESOS' as Cuenta, isnull((SUM(s.saldo_deudor) - SUM(s.saldo_acreedor)),0) as Saldo from Contabilidad.Saldo as s where SUBSTRING(s.cuenta,1,1)=5 and s.fecha<=@fecha
+union
+
+select '----------------------------------------589' as Codigo, '-----------------------------------------------------' as Cuenta, null as Saldo from Contabilidad.Cuenta where SUBSTRING(IdCuenta,1,1)=2 and IdNivelCuenta=1
+union
+select '----------------------------------------59' as Codigo, 'UTILIDAD  ANTES  DE  IMPUESTOS' as Cuenta, isnull((SUM(s.saldo_acreedor) - SUM(s.saldo_deudor)),0)-isnull((select SUM(saldo_deudor) - SUM(saldo_acreedor) as Saldo from Contabilidad.Saldo where SUBSTRING(cuenta,1,1)=5 and fecha<=@fecha),0) as Saldo from Contabilidad.Saldo as s where SUBSTRING(s.cuenta,1,1)=4 and s.fecha<=@fecha
+end
 go

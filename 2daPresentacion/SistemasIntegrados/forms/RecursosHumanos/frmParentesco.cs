@@ -25,5 +25,10 @@ namespace forms.RecursosHumanos
         {
 
         }
+
+        private void frmParentesco_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

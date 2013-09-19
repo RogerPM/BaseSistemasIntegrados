@@ -18,7 +18,7 @@ namespace forms.RecursosHumanos
 
         private void frmMantenimientoMulta_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void textEdit2_EditValueChanged(object sender, EventArgs e)

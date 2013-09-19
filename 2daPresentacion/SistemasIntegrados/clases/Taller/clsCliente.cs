@@ -7,7 +7,8 @@ namespace clases.Taller
 {
     public class clsCliente
     {
-        public int Identificacion { get; set; }
+        public int IdPersona { get; set; }
+        public string Identificacion { get; set; }
         public int IdTipoPersona { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -15,7 +16,7 @@ namespace clases.Taller
         public string Genero { get; set; }
         public int TipoIdentificacion { get; set; }
         public string Direccion { get; set; }
-        public int Telefono { get; set; }
+        public string Telefono { get; set; }
         public string Mail { get; set; }
         public int idEstado { get; set; }
         public int idEmpresa { get; set; }

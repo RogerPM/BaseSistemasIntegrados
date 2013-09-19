@@ -48,14 +48,10 @@
           <ScalarProperty Name="idBajaActivo" ColumnName="idBajaActivo" />
           <ScalarProperty Name="EstadoProceso" ColumnName="EstadoProceso" />
           <ScalarProperty Name="IdActivoFIjo" ColumnName="IdActivoFIjo" />
-          <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
-          <ScalarProperty Name="IdSubgrupo" ColumnName="IdSubgrupo" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
-          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="IdMotivoBaja" ColumnName="IdMotivoBaja" />
           <ScalarProperty Name="IdCabeceraComprobante" ColumnName="IdCabeceraComprobante" />
           <ScalarProperty Name="Observacion" ColumnName="Observacion" />
           <ScalarProperty Name="IdImagen" ColumnName="IdImagen" />
@@ -77,6 +73,19 @@
           <ScalarProperty Name="Idformato" ColumnName="Idformato" />
           <ScalarProperty Name="IdImagen" ColumnName="IdImagen" />
           <ScalarProperty Name="EstadoProceso" ColumnName="EstadoProceso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DepreciacionCab">
+      <EntityTypeMapping TypeName="ActivoFijoModel.DepreciacionCab">
+        <MappingFragment StoreEntitySet="DepreciacionCab">
+          <ScalarProperty Name="Secuencia_DepreciacionCab" ColumnName="Secuencia_DepreciacionCab" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="EstadoProceso" ColumnName="EstadoProceso" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="fechaModificacion" ColumnName="fechaModificacion" />
+          <ScalarProperty Name="observacion" ColumnName="observacion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -260,16 +269,12 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DepreciacionCab">
-      <EntityTypeMapping TypeName="ActivoFijoModel.DepreciacionCab">
-        <MappingFragment StoreEntitySet="DepreciacionCab">
-          <ScalarProperty Name="observacion" ColumnName="observacion" />
-          <ScalarProperty Name="fechaModificacion" ColumnName="fechaModificacion" />
-          <ScalarProperty Name="fecha" ColumnName="fecha" />
-          <ScalarProperty Name="EstadoProceso" ColumnName="EstadoProceso" />
-          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
-          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
-          <ScalarProperty Name="Secuencia_DepreciacionCab" ColumnName="Secuencia_DepreciacionCab" />
+    <EntitySetMapping Name="MotivoBaja">
+      <EntityTypeMapping TypeName="ActivoFijoModel.MotivoBaja">
+        <MappingFragment StoreEntitySet="MotivoBaja">
+          <ScalarProperty Name="Idestado" ColumnName="Idestado" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="IdMotivoBaja" ColumnName="IdMotivoBaja" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

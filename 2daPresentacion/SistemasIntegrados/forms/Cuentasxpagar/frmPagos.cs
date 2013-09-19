@@ -26,12 +26,46 @@ namespace forms.Cuentasxpagar
         bool resultado=false;
         private void frmPagos_Load(object sender, EventArgs e)
         {
-            datosPago pgo = new datosPago();
+           
 
+            datosPago pgo = new datosPago();
+            if (tbcPagos.SelectedIndex == 0)
+            {
+                string tipo = "P";
+                cbxNroOrdenPagoProveedores.Visible = true;
+                cbxEmpleado.Visible = false;
+                cbxVarios.Visible = false;
+                cbxNroOrdenPagoProveedores.Properties.DataSource = pgo.ConsultaOrden(Empresa, tipo);
+
+                gdcdetalle.Visible = true;
+                gdcDetalleNomina.Visible = false;
+            }
+            if (tbcPagos.SelectedIndex == 1)
+            {
+                string tipo = "E";
+                cbxNroOrdenPagoProveedores.Enabled = false;
+                cbxEmpleado.Visible = true;
+                cbxEmpleado.Properties.DataSource = pgo.ConsultaOrden(Empresa, tipo);
+                gdcdetalle.Visible = false;
+                gdcDetalleNomina.Visible = true;
+            }
+            if (tbcPagos.SelectedIndex == 2)
+            {
+                string tipo = "V";
+                cbxVarios.Visible = true;
+                cbxVarios.Properties.DataSource = pgo.ConsultaOrden(Empresa, tipo);
+                cbxNroOrdenPagoProveedores.Visible = false;
+                cbxEmpleado.Visible = false;
+                gdcdetalle.Visible = false;
+                gdcDetalleNomina.Visible = true;
+
+
+            }
 
             deFechaActual.EditValue = DateTime.Today;
+            
             cbxMedioPago.Properties.DataSource = pgo.consultaMedio();
-            cbxNroOrdenPagoProveedores.Properties.DataSource = pgo.ConsultaOrden(Empresa);
+           // cbxNroOrdenPagoProveedores.Properties.DataSource = pgo.ConsultaOrden(Empresa);
 
             // gleBanco.DataSource = pgo.ConsultaBanco();
             cbxBanco.Properties.DataSource = pgo.ConsultaBanco();
@@ -43,32 +77,48 @@ namespace forms.Cuentasxpagar
             //  gdcdetalle.DataSource = pd.consulta();
           
             gdcConsultaBancaria.DataSource = pgo.ConsultaCuentaBancaria(Empresa );
-            gdcNomina.DataSource = datdet.consultaNomina(Empresa);
+         //   gdcNomina.DataSource = datdet.consultaNomina(Empresa);
+          
 
 
         }
         void frmPago_event_click(object sender, EventArgs e)
         {
+            datosPago pgo = new datosPago();
             if (tbcPagos.SelectedIndex == 0)
             {
-                cbxNroOrdenPagoProveedores.Enabled = true;
+                string tipo = "P";
+                cbxNroOrdenPagoProveedores.Visible = true;
+                cbxEmpleado.Visible = false;
+                cbxVarios.Visible = false;
+
+                cbxNroOrdenPagoProveedores.Properties.DataSource = pgo.ConsultaOrden(Empresa, tipo);
+
                 gdcdetalle.Visible = true;
                 gdcDetalleNomina.Visible = false;
             }
             if (tbcPagos.SelectedIndex == 1)
             {
-                cbxNroOrdenPagoProveedores.Enabled = false;
+                string tipo = "E";
+                cbxNroOrdenPagoProveedores.Visible = false;
+                cbxEmpleado.Visible = true;
+                cbxVarios.Visible = false;
+
+                cbxEmpleado.Properties.DataSource = pgo.ConsultaOrden(Empresa, tipo);
                 gdcdetalle.Visible = false;
                 gdcDetalleNomina.Visible = true;
             }
             if (tbcPagos.SelectedIndex == 2)
             {
-                cbxNroOrdenPagoProveedores.Enabled = false;
+                string tipo = "V";
+                cbxNroOrdenPagoProveedores.Visible = false;
+                cbxEmpleado.Visible = false;
+                cbxVarios.Visible = true;
+                cbxVarios.Properties.DataSource = pgo.ConsultaOrden(Empresa, tipo);
                 gdcdetalle.Visible = false;
                 gdcDetalleNomina.Visible = true;
-            
-            }
 
+            }
         }
 
         public clsPago clas = new clsPago();
@@ -94,7 +144,8 @@ namespace forms.Cuentasxpagar
                 {
 
                     MessageBox.Show(men.Guardar_ok, men.Titulo, MessageBoxButtons.OK);
-
+                    limpiar();
+                    limpiarGrid();
                 }
                 else
                 {
@@ -127,7 +178,7 @@ namespace forms.Cuentasxpagar
             clas.NumOrdenPago = Convert.ToInt32(cbxNroOrdenPagoProveedores.EditValue);
            
             clas.TotalPagar = Convert.ToInt32(txtMonto.Text);
-            clas.IdUsuario = solo;
+            clas.IdUsuario = 11;
             clas.IdEmpresa = solo;
             if (cbxEstado.Text == "Activo")
                 clas.IdEstado = 1;
@@ -150,12 +201,17 @@ namespace forms.Cuentasxpagar
             
             if (clas.IdEstado == 1)
             {
-                cbxEstado.Text = "Activo";
+                cbxEstado.Text = "En Proceso";
             }
-            else
+            else if (clas.IdEstado == 0)
             {
-                cbxEstado.Text = "Inactivo";
+                cbxEstado.Text = "Generada";
             }
+            else if (clas.IdEstado == 2)
+            {
+                cbxEstado.Text = "Pagada";
+            }
+
             solo = Convert.ToInt32(clas.NumComprobante);
 
         }
@@ -175,12 +231,16 @@ namespace forms.Cuentasxpagar
 
             clasdos.FechaIngreso = Convert.ToDateTime(deFechaActual.EditValue);
             clasdos.TotalPagar = Convert.ToInt32(txtMonto.Text);
-            clasdos.IdUsuario = solo;
+            clasdos.IdUsuario = 11;
             clasdos.IdEmpresa = solo;
-            if (cbxEstado.Text == "Activo")
+            if (cbxEstado.Text == "En Proceso")
                 clasdos.IdEstado = 1;
-            else
+            else if (cbxEstado.Text == "Generada")
                 clasdos.IdEstado = 0;
+            else if (cbxEstado.Text == "Pagada")
+            {
+                clasdos.IdEstado = 2;
+            }
             clasdos.NumComprobante = solo;
 
         }
@@ -192,14 +252,19 @@ namespace forms.Cuentasxpagar
             solo = clasdos.IdUsuario;
             solo = clasdos.IdEmpresa;
 
-            if (clasdos.IdEstado == 1)
+            if (clas.IdEstado == 1)
             {
-                cbxEstado.Text = "Activo";
+                cbxEstado.Text = "En Proceso";
             }
-            else
+            else if (clas.IdEstado == 0)
             {
-                cbxEstado.Text = "Inactivo";
+                cbxEstado.Text = "Generada";
             }
+            else if (clas.IdEstado == 2)
+            {
+                cbxEstado.Text = "Pagada";
+            }
+
             solo = Convert.ToInt32(clasdos.NumComprobante);
 
         }
@@ -210,12 +275,20 @@ namespace forms.Cuentasxpagar
 
             deFechaActual.Text = "";
             txtNumPago.Text = "";
-
+           // cbxNroOrdenPagoProveedores.EditValue = "";
             (txtTotalPagar.Text) = "";
+          //  limpiarGrid();
 
         }
 
-      
+        public void limpiarGrid()
+        {
+            for (int i = 0; i < gridView1.RowCount; i++)
+            {
+                gridView5.DeleteRow(i);
+            }
+        }
+
 
      
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -302,7 +375,71 @@ namespace forms.Cuentasxpagar
                     {
                        
                         get();
+                        //#region Cont
+                        ////guargar numero com
+                        ////clas.NumComprobante = numero;
+                        //clsDatoComprobante datoCon = new clsDatoComprobante();
+                        //clsCabeceraComprobante cabecera = new clsCabeceraComprobante();
+                        //List<clsDetalleComprobante> listaDetalle = new List<clsDetalleComprobante>();
+                        //cabecera.IdEmpresa = 1;
+                        //cabecera.fecha = DateTime.Now;
+
+                        ////cabecera.TipoTransaccion = 5;
+
+
+
+                        //datosOrdenPagoCab orden = new datosOrdenPagoCab();
+                        //string tipoOrden = "";
+                        //try
+                        //{
+                        //    tipoOrden = (from q in orden.ConsultaOrdenPagoCabecera() where q.NumOrdenPago == clas.NumOrdenPago select q.TipoOrdenPago).First().ToString();
+                        //}
+                        //catch (Exception) { }
+                        ////pago por proveedor
+
+                        //clsDetalleComprobante detalle = new clsDetalleComprobante();
+                        //if (tipoOrden == "P")
+                        //{
+                        //    cabecera.glosa = "Cuentas por pagar a proveedores";
+                        //    cabecera.TipoTransaccion = 5;
+                        //    detalle.cuenta = "21101001";
+                        //}
+                        //else
+                        //{
+                        //    cabecera.glosa = "Cuentas por pagar a empleados";
+                        //    cabecera.TipoTransaccion = 7;
+                        //    detalle.cuenta = "21201001";
+
+                        //}
+                        //detalle.debe = Convert.ToDecimal(txtMonto.Text);
+                        //detalle.IdEmpresa = 1;
+                        //detalle.linea_comprobante = 1;
+                        //listaDetalle.Add(detalle);
+
+                        ////pago por banco
+                        //detalle = new clsDetalleComprobante();
+                        //if (cbxMedioPago.Text == "Efectivo")
+                        //{
+                        //    detalle.cuenta = "11101001";
+                        //}
+                        //else
+                        //{
+                        //    detalle.cuenta = "11102001";
+                        //}
+                        //detalle.haber = Convert.ToDecimal(txtMonto.Text);
+                        //detalle.IdEmpresa = 1;
+                        //detalle.linea_comprobante = 2;
+                        //listaDetalle.Add(detalle);
+                        //cabecera.Detalle = listaDetalle;
+                        //datoCon.GuardarCabecera(ref cabecera);
+                        //clas.NumComprobante = cabecera.numero_comprobante;
+                        //#endregion
                         resultado = dato.Guardar(clas);
+                    }
+                    if (resultado == true)
+                    {
+                        cbxVarios.Enabled = false;
+                        cbxEmpleado.Enabled = false;
                     }
                 getDet();
               //  accion = "A";
@@ -342,7 +479,7 @@ namespace forms.Cuentasxpagar
                     idbanco = Convert.ToInt32(cbxBanco.EditValue);
                     cuenta = Convert.ToInt32(cbxcuenta.EditValue);
                     saldo = dato.ConsultaSaldo(cuenta);
-
+                    numero = Convert.ToInt32(cbxEmpleado.EditValue);
                     if (Convert.ToInt32(saldo) >= Convert.ToInt32(txtMonto.Text))
                     {
 
@@ -351,6 +488,70 @@ namespace forms.Cuentasxpagar
                         {
                             getDos();
                             resultado = dato.GuardarNomina(clasdos);
+                            //#region Cont
+                            ////guargar numero com
+                            ////clas.NumComprobante = numero;
+                            //clsDatoComprobante datoCon = new clsDatoComprobante();
+                            //clsCabeceraComprobante cabecera = new clsCabeceraComprobante();
+                            //List<clsDetalleComprobante> listaDetalle = new List<clsDetalleComprobante>();
+                            //cabecera.IdEmpresa = 1;
+                            //cabecera.fecha = DateTime.Now;
+
+                            ////cabecera.TipoTransaccion = 5;
+
+
+
+                            //datosOrdenPagoCab orden = new datosOrdenPagoCab();
+                            //string tipoOrden = "";
+                            //try
+                            //{
+                            //    tipoOrden = (from q in orden.ConsultaOrdenPagoCabecera() where q.NumOrdenPago == clas.NumOrdenPago select q.TipoOrdenPago).First().ToString();
+                            //}
+                            //catch (Exception) { }
+                            ////pago por proveedor
+
+                            //clsDetalleComprobante detalle = new clsDetalleComprobante();
+                            //if (tipoOrden == "P")
+                            //{
+                            //    cabecera.glosa = "Cuentas por pagar a proveedores";
+                            //    cabecera.TipoTransaccion = 5;
+                            //    detalle.cuenta = "21101001";
+                            //}
+                            //else
+                            //{
+                            //    cabecera.glosa = "Cuentas por pagar a empleados";
+                            //    cabecera.TipoTransaccion = 7;
+                            //    detalle.cuenta = "21201001";
+
+                            //}
+                            //detalle.debe = Convert.ToDecimal(txtMonto.Text);
+                            //detalle.IdEmpresa = 1;
+                            //detalle.linea_comprobante = 1;
+                            //listaDetalle.Add(detalle);
+
+                            ////pago por banco
+                            //detalle = new clsDetalleComprobante();
+                            //if (cbxMedioPago.Text == "Efectivo")
+                            //{
+                            //    detalle.cuenta = "11101001";
+                            //}
+                            //else
+                            //{
+                            //    detalle.cuenta = "11102001";
+                            //}
+                            //detalle.haber = Convert.ToDecimal(txtMonto.Text);
+                            //detalle.IdEmpresa = 1;
+                            //detalle.linea_comprobante = 2;
+                            //listaDetalle.Add(detalle);
+                            //cabecera.Detalle = listaDetalle;
+                            //datoCon.GuardarCabecera(ref cabecera);
+                            //clas.NumComprobante = cabecera.numero_comprobante;
+                            //#endregion
+                        }
+                        if (resultado == true)
+                        {
+                            cbxNroOrdenPagoProveedores.Enabled = false;
+                            cbxVarios.Enabled = false;
                         }
                         getDetNomina();
                         //  accion = "A";
@@ -364,7 +565,7 @@ namespace forms.Cuentasxpagar
                             //  cargarDetalle();
                             valor = (Convert.ToInt32(saldo)) - (Convert.ToInt32(txtMonto.Text));
                             dato.ModificarSaldo(cuenta, valor);
-                         //   dato.ModificarEstadoOrden(numero);
+                            dato.ModificarEstadoOrden(numero);
                             cargarDos();
                         }
                         else
@@ -403,7 +604,72 @@ namespace forms.Cuentasxpagar
                         {
                             getDos();
                             resultado = dato.GuardarNomina(clasdos);
+                            //#region Cont
+                            ////guargar numero com
+                            ////clas.NumComprobante = numero;
+                            //clsDatoComprobante datoCon = new clsDatoComprobante();
+                            //clsCabeceraComprobante cabecera = new clsCabeceraComprobante();
+                            //List<clsDetalleComprobante> listaDetalle = new List<clsDetalleComprobante>();
+                            //cabecera.IdEmpresa = 1;
+                            //cabecera.fecha = DateTime.Now;
+
+                            ////cabecera.TipoTransaccion = 5;
+
+
+
+                            //datosOrdenPagoCab orden = new datosOrdenPagoCab();
+                            //string tipoOrden = "";
+                            //try
+                            //{
+                            //    tipoOrden = (from q in orden.ConsultaOrdenPagoCabecera() where q.NumOrdenPago == clas.NumOrdenPago select q.TipoOrdenPago).First().ToString();
+                            //}
+                            //catch (Exception) { }
+                            ////pago por proveedor
+
+                            //clsDetalleComprobante detalle = new clsDetalleComprobante();
+                            //if (tipoOrden == "P")
+                            //{
+                            //    cabecera.glosa = "Cuentas por pagar a proveedores";
+                            //    cabecera.TipoTransaccion = 5;
+                            //    detalle.cuenta = "21101001";
+                            //}
+                            //else
+                            //{
+                            //    cabecera.glosa = "Cuentas por pagar a empleados";
+                            //    cabecera.TipoTransaccion = 7;
+                            //    detalle.cuenta = "21201001";
+
+                            //}
+                            //detalle.debe = Convert.ToDecimal(txtMonto.Text);
+                            //detalle.IdEmpresa = 1;
+                            //detalle.linea_comprobante = 1;
+                            //listaDetalle.Add(detalle);
+
+                            ////pago por banco
+                            //detalle = new clsDetalleComprobante();
+                            //if (cbxMedioPago.Text == "Efectivo")
+                            //{
+                            //    detalle.cuenta = "11101001";
+                            //}
+                            //else
+                            //{
+                            //    detalle.cuenta = "11102001";
+                            //}
+                            //detalle.haber = Convert.ToDecimal(txtMonto.Text);
+                            //detalle.IdEmpresa = 1;
+                            //detalle.linea_comprobante = 2;
+                            //listaDetalle.Add(detalle);
+                            //cabecera.Detalle = listaDetalle;
+                            //datoCon.GuardarCabecera(ref cabecera);
+                            //clas.NumComprobante = cabecera.numero_comprobante;
+                            //#endregion
                         }
+                         if (resultado == true)
+                        {
+                            cbxNroOrdenPagoProveedores.Enabled = false;
+                            cbxVarios.Enabled = false;
+                        }
+                       
                         getDetNomina();
                         //  accion = "A";
                         //if (accion == "A")
@@ -456,8 +722,8 @@ namespace forms.Cuentasxpagar
             clasdet.IdMedioPago = Convert.ToInt32(cbxMedioPago.EditValue);
             clasdet.Monto = Convert.ToInt32(txtMonto.Text);
             clasdet.NumeroCuenta = Convert.ToInt32(cbxcuenta.EditValue);
-            clasdet.IdEmpresa = solo;
-            clasdet.IdBanco = Convert.ToInt32(cbxBanco.EditValue);
+            clasdet.IdEmpresa =  solo;
+            clasdet.IdBanco =Convert.ToInt32(cbxBanco.EditValue);
             clasdet.NumComprobante = solo;
             //  clasdet.NumComision = 1;// Convert.ToInt32(null);
             //clasdet.NumNominaCab =1;//Convert.ToInt32(null);
@@ -517,7 +783,7 @@ namespace forms.Cuentasxpagar
             (cbxBanco.EditValue) = clasdetdos.IdBanco;
             solo = Convert.ToInt32(clasdetdos.NumComprobante);
             //   nulo   =Convert.ToString (clasdet.NumComision);
-          //  txtlocura .Text  =Convert.ToString  (clasdetdos.NumNominaCab);
+        //    txtlocura .Text  =Convert.ToString  (clasdetdos.NumNominaCab);
             (txtNumPago.EditValue) = clasdetdos.NumPago;
 
             // txtTotalPagar.Text = Convert.ToString(clas.TotalPagar);
@@ -553,11 +819,7 @@ namespace forms.Cuentasxpagar
             
         }
 
-        private void gdcdetalle_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void btnModificar_Click(object sender, EventArgs e)
         {
 
@@ -571,12 +833,69 @@ namespace forms.Cuentasxpagar
 
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+       
+        private void cbxVarios_EditValueChanged(object sender, EventArgs e)
         {
+            int numero;
 
+            numero = Convert.ToInt32(cbxVarios.EditValue);
+            txtProveedor.Text = dato.ConsultaNombre(numero);
+            //
+
+
+            cargarDetalleVarios(numero);
+
+            txtTotalito.Text = Convert.ToString(datdet.consultaTotal(numero));
+            tbcPagos.SelectTab(2);
+            
         }
 
-       
+        private void cbxEmpleado_EditValueChanged(object sender, EventArgs e)
+        {
+            int numero;
+
+            numero = Convert.ToInt32(cbxEmpleado.EditValue);
+            txtProveedor.Text = dato.ConsultaNombre(numero);
+            //
+
+
+            cargarDetalleEmpleado(numero);
+
+            txtTotalEmpleado.Text = Convert.ToString(datdet.consultaTotalEmpleado(numero));
+            tbcPagos.SelectTab(1);
+            
+        }
+
+        public void cargarDetalleEmpleado(int numero)
+        {
+            datosPagoDetalle pgo = new datosPagoDetalle();
+
+            gdcNomina.DataSource = pgo.ConsultaOrdenDetalleEmpleado(numero);
+        }
+        public void cargarDetalleVarios(int numero)
+        {
+            datosPago pgo = new datosPago();
+
+            gdcDeudaServicio.DataSource = pgo.ConsultaOrdenDetalle(numero);
+        }
+
+        private void tsbImprimir_Click(object sender, EventArgs e)
+        {
+            datosPago dat = new datosPago();
+
+            Reporte rpt = new Reporte();
+            ReporteClase clasRe = new ReporteClase();
+            List<ReporteClase> listare = new List<ReporteClase>();
+
+            clasRe.pagocab = dat.consulta(1);
+            clasRe.NombreEmpresa = "TECA ";
+
+
+            listare.Add(clasRe);
+            rpt.loadReport(listare);
+
+            rpt.ShowPreview();
+        }
 
 
     }  

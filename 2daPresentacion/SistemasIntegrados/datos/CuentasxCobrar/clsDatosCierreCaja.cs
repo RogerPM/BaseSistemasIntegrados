@@ -128,6 +128,23 @@ namespace datos.CuentasxCobrar
 
         }
 
+        public Boolean consultaCerrada(DateTime FechaHoy, int idUsuario)
+        {
+            using (CuentasPorCobrarEntities ent = new CuentasPorCobrarEntities())
+            {
+
+                var x = (from q in ent.CierreCaja where q.FechaCierre == FechaHoy.Date && q.idUsuario == idUsuario select q);
+                if (x.Count() > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
         public Boolean guardar(clsCierreCaja CierreCaja)
         {
             try

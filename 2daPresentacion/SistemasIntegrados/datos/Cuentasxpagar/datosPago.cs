@@ -8,23 +8,22 @@ using clases.CuentasxCobrar;
 namespace datos.Cuentasxpagar
 {
     public class datosPago
-                               
     {
-         
+
         public List<clsPago> consulta(int Empresa)
         {
             try
             {
                 List<clsPago> lista = new List<clsPago>();
                 CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
-                var con = from w in ent.PagoCab where w.IdEmpresa ==Empresa  select w;
+                var con = from w in ent.PagoCab where w.IdEmpresa == Empresa select w;
                 foreach (var item in con)
                 {
                     clsPago clas = new clsPago();
                     clas.NumPago = item.NumPago;
                     clas.FechaIngreso = item.FechaIngreso;
-                    clas.NumOrdenPago =Convert.ToInt32  (item.NumOrdenPago);
-                    
+                    clas.NumOrdenPago = Convert.ToInt32(item.NumOrdenPago);
+
                     clas.TotalPagar = item.TotalPagar;
                     clas.IdUsuario = item.IdUsuario;
                     clas.IdEmpresa = item.IdEmpresa;
@@ -48,11 +47,11 @@ namespace datos.Cuentasxpagar
         {
             using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
             {
-                var x = (from q in ent.CuentaBancaria  where q.idCuentaBancaria == numero select q).First();
+                var x = (from q in ent.CuentaBancaria where q.idCuentaBancaria == numero select q).First();
 
-               
-                x.Saldo = Saldo ;
-               
+
+                x.Saldo = Saldo;
+
                 ent.SaveChanges();
 
             }
@@ -61,7 +60,7 @@ namespace datos.Cuentasxpagar
         {
             using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
             {
-                var x = (from q in ent.OrdenPagoCab  where q.NumOrdenPago == numero select q).First();
+                var x = (from q in ent.OrdenPagoCab where q.NumOrdenPago == numero select q).First();
 
 
                 x.Estado = 2;
@@ -70,20 +69,8 @@ namespace datos.Cuentasxpagar
 
             }
         }
-        public void ModificarEstadoOrden()
-        {
-            using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
-            {
-                var x = (from q in ent.NominaCab where q.IdEstado ==1 select q).First();
+        
 
-
-                x.IdEstado = 2;
-
-                ent.SaveChanges();
-
-            }
-        }
-     
         public void Modificar(clsPago Pago)
         {
             using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
@@ -92,7 +79,7 @@ namespace datos.Cuentasxpagar
                 x.NumPago = Pago.NumPago;
                 x.FechaIngreso = Pago.FechaIngreso;
                 x.NumOrdenPago = Pago.NumOrdenPago;
-               
+
                 x.TotalPagar = Pago.TotalPagar;
                 x.IdUsuario = Pago.IdUsuario;
                 x.IdEmpresa = Pago.IdEmpresa;
@@ -115,7 +102,7 @@ namespace datos.Cuentasxpagar
                         NumPago = id,
                         FechaIngreso = Pago.FechaIngreso,
                         NumOrdenPago = Pago.NumOrdenPago,
-                      
+
                         TotalPagar = Pago.TotalPagar,
                         IdUsuario = Pago.IdUsuario,
                         IdEmpresa = Pago.IdEmpresa,
@@ -175,7 +162,7 @@ namespace datos.Cuentasxpagar
                 {
 
                     var x = (from q in ent.PagoCab where q.NumPago == Pag.NumPago select q).First();
-                    
+
                     ent.DeleteObject(x);
 
                     ent.SaveChanges();
@@ -197,9 +184,9 @@ namespace datos.Cuentasxpagar
                 {
 
                     var x = (from q in ent.PagoCab where q.NumPago == Pag.NumPago select q).First();
-                    
+
                     x.Estado = Pag.IdEstado;
-                                      
+
 
                     ent.SaveChanges();
 
@@ -213,33 +200,33 @@ namespace datos.Cuentasxpagar
 
         }
 
-        decimal  saldito=0;
-        public decimal  ConsultaSaldo(int  cuenta)
+        decimal saldito = 0;
+        public decimal ConsultaSaldo(int cuenta)
         {
-            
+
             try
             {
                 using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
                 {
 
-                    var x = (from q in ent.CuentaBancaria where q.idCuentaBancaria   == (cuenta) select q).First();
+                    var x = (from q in ent.CuentaBancaria where q.idCuentaBancaria == (cuenta) select q).First();
 
-                    
+
                     saldito = (x.Saldo);
-                   
+
 
                 }
-               
+
             }
             catch (Exception ex)
             {
                 return saldito;
-                
+
             }
             return saldito;
         }
-        string Nombre="nada";
-        public string  ConsultaNombre(int idPersona)
+        string Nombre = "nada";
+        public string ConsultaNombre(int idPersona)
         {
 
             try
@@ -247,10 +234,10 @@ namespace datos.Cuentasxpagar
                 using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
                 {
 
-                    var x = (from q in ent.Persona where q.IdPersona  == (idPersona) select q).First();
+                    var x = (from q in ent.Persona where q.IdPersona == (idPersona) select q).First();
 
 
-                    Nombre  = (x.NombreRazonSocial)+ x.Apellido ;
+                    Nombre = (x.NombreRazonSocial) + x.Apellido;
 
 
                 }
@@ -258,12 +245,12 @@ namespace datos.Cuentasxpagar
             }
             catch (Exception ex)
             {
-                return Nombre ;
+                return Nombre;
 
             }
-            return Nombre ;
+            return Nombre;
         }
-        public Boolean  ConsultaVerificaOrdenPagada(int numero)
+        public Boolean ConsultaVerificaOrdenPagada(int numero)
         {
 
             try
@@ -276,7 +263,8 @@ namespace datos.Cuentasxpagar
                     {
                         return true;
                     }
-                    else{
+                    else
+                    {
                         return false;
                     }
                 }
@@ -284,12 +272,12 @@ namespace datos.Cuentasxpagar
             }
             catch (Exception ex)
             {
-                return false ;
+                return false;
 
             }
-           
+
         }
-        
+
         public List<clsMedioPago> consultaMedio()
         {
             try
@@ -302,12 +290,12 @@ namespace datos.Cuentasxpagar
                     clsMedioPago med = new clsMedioPago();
                     med.IdMedioPago = item.IdMedioPago;
                     med.Descripcion = item.Descripcion;
-                    med.FechaRegistro= item.fechaRegistro;
+                    med.FechaRegistro = item.fechaRegistro;
                     med.Estado = item.Estado;
                     med.IdEmpresa = item.IdEmpresa;
                     med.IdUsuario = item.IdUsuario;
                     lista.Add(med);
-                 }
+                }
 
                 return lista;
             }
@@ -318,27 +306,27 @@ namespace datos.Cuentasxpagar
             }
 
         }
-        public List<clsOrdenPago> ConsultaOrden(int idempresa )
+        public List<clsOrdenPagoCab> ConsultaOrden(int idempresa, string tipo)
         {
             try
             {
-                List<clsOrdenPago> lista = new List<clsOrdenPago>();
+                List<clsOrdenPagoCab> lista = new List<clsOrdenPagoCab>();
                 CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
-                var con = from w in ent.OrdenPagoCab where w.IdEmpresa ==idempresa & w.Estado ==1 select w;
+                var con = from w in ent.OrdenPagoCab where w.IdEmpresa == idempresa & w.Estado == 1 & w.TipoOrdenPago == tipo select w;
                 foreach (var item in con)
                 {
-                    clsOrdenPago ord = new clsOrdenPago();
+                    clsOrdenPagoCab ord = new clsOrdenPagoCab();
                     ord.NumOrdenPago = item.NumOrdenPago;
                     ord.fechadeEmision = item.fechadeEmision;
-                    ord.IdPersona =Convert.ToInt32  ( item.IdPersona);
-                    ord.IdEstado = item.Estado;
+                    ord.IdPersona = Convert.ToInt32(item.IdPersona);
+                    ord.Estado = item.Estado;
                     ord.TotalPagar = item.TotalPagar;
-                    ord.TipoOrdenPago =Convert.ToChar  (item.TipoOrdenPago);
+                    ord.TipoOrdenPago = Convert.ToChar(item.TipoOrdenPago);
                     ord.IdUsuario = item.IdUsuario;
                     ord.IdEmpresa = item.IdEmpresa;
                     lista.Add(ord);
 
-                   
+
                 }
 
                 return lista;
@@ -354,16 +342,16 @@ namespace datos.Cuentasxpagar
         {
             try
             {
-                List<clsBanco> lista = new List<clsBanco >();
+                List<clsBanco> lista = new List<clsBanco>();
                 CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
-                var con = from w in ent.Banco  select w;
+                var con = from w in ent.Banco select w;
                 foreach (var item in con)
                 {
-                    clsBanco  ord = new clsBanco ();
-                    ord.idEmpresa  = item.idEmpresa;
+                    clsBanco ord = new clsBanco();
+                    ord.idEmpresa = item.idEmpresa;
                     ord.idBanco = item.idBanco;
-                    ord.Nombre =(item.Nombre);
-                    ord.Estado=Convert.ToString(item.Estado);
+                    ord.Nombre = (item.Nombre);
+                    ord.Estado = (string)(item.Estado);
                     lista.Add(ord);
 
 
@@ -378,25 +366,25 @@ namespace datos.Cuentasxpagar
             }
 
         }
-      
-        public List<clsOrdenPagoDetalle> ConsultaOrdenDetalle(int numero)
+
+        public List<clsOrdenPagoDet> ConsultaOrdenDetalle(int numero)
         {
             try
             {
-                List<clsOrdenPagoDetalle> lista = new List<clsOrdenPagoDetalle>();
+                List<clsOrdenPagoDet> lista = new List<clsOrdenPagoDet>();
                 CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
-                var con = from w in ent.OrdenPagoDet where w.NumOrdenCab == numero  select w;
-                
+                var con = from w in ent.OrdenPagoDet where w.NumOrdenCab == numero select w;
+
                 foreach (var item in con)
                 {
-                    clsOrdenPagoDetalle ord = new clsOrdenPagoDetalle();
-                    ord.NumLinea = item.NumLinea ;
-                    ord.NumCuentaPorPagar = item.NumCuentaPorPagar ;
-                    ord.NumDetalleDeuda =(item.NumDetalleDeuda);
+                    clsOrdenPagoDet ord = new clsOrdenPagoDet();
+                    ord.NumLinea = item.NumLinea;
+                    ord.NumCuentaPorPagar = item.NumCuentaPorPagar;
+                    ord.NumDetalleDeuda = (item.NumDetalleDeuda);
                     ord.SaldoDeuda = item.SaldoDeuda;
                     ord.NumeroPagosRealizar = item.NumeroPagosRealizar;
-                    ord.NumOrdenCab = (item.NumOrdenCab);
-                    ord.TotalPagar  = item.TotalPagar;
+                    ord.NumOrdenPagoCab = (item.NumOrdenCab);
+                    ord.TotalPagar = item.TotalPagar;
                     ord.IdEmpresa = item.IdEmpresa;
 
                     lista.Add(ord);
@@ -414,24 +402,24 @@ namespace datos.Cuentasxpagar
 
         }
 
-        public List<clsCuentaBancaria > ConsultaCuentaBancaria(int Empresa)
+        public List<clsCuentaBancaria> ConsultaCuentaBancaria(int Empresa)
         {
             try
             {
-                List<clsCuentaBancaria > lista = new List<clsCuentaBancaria >();
+                List<clsCuentaBancaria> lista = new List<clsCuentaBancaria>();
                 CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
-                var con = from w in ent.CuentaBancaria where w.idEmpresa == (Empresa ) select w;
+                var con = from w in ent.CuentaBancaria where w.idEmpresa == (Empresa) select w;
                 foreach (var item in con)
                 {
-                    clsCuentaBancaria  ord = new clsCuentaBancaria();
-                    ord.idEmpresa = item.idEmpresa ;
+                    clsCuentaBancaria ord = new clsCuentaBancaria();
+                    ord.idEmpresa = item.idEmpresa;
                     ord.idCuentaBancaria = item.idCuentaBancaria;
                     ord.idBanco = (item.idBanco);
-                    ord.idTitular = Convert.ToInt32  (item.idTitular);
+                    ord.idTitular = Convert.ToInt32(item.idTitular);
                     ord.NumeroCuenta = item.NumeroCuenta;
                     ord.TipoCuenta = (item.TipoCuenta);
                     ord.Saldo = item.Saldo;
-                    ord.Estado = Convert.ToString(item.Estado);
+                    ord.Estado = (string)(item.Estado);
 
                     lista.Add(ord);
 
@@ -468,3 +456,4 @@ namespace datos.Cuentasxpagar
     }
 
 }
+

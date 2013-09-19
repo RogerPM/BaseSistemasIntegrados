@@ -24,11 +24,6 @@ namespace forms.Cuentasxpagar
             clsEmpresaServicioDAT1 consulta = new clsEmpresaServicioDAT1();
             gdcConsulta.DataSource = consulta.ConsultaEmpresaServicio();
         }
-        
-         private void roomDataGridView_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-         {
-              MessageBox.Show(e.RowIndex.ToString());
-         }
 
          public clsEmpresaServicio GetSelection()
          {
@@ -40,7 +35,6 @@ namespace forms.Cuentasxpagar
              empserv._Direccion = Convert.ToString(gdvConsulta.GetFocusedRowCellValue(col_Direccion));
              empserv._Email = Convert.ToString(gdvConsulta.GetFocusedRowCellValue(col_Email));
 
-             //empserv._CuentaBancaria
              return empserv;
          }
 

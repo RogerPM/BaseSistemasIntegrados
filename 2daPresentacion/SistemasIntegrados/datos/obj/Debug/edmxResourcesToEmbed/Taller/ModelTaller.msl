@@ -1,8 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="TallerModelStoreContainer" CdmEntityContainer="TallerEntities">
+  <EntityContainerMapping StorageEntityContainer="TalllerModelStoreContainer" CdmEntityContainer="TallerEntities">
+    <EntitySetMapping Name="CabeceraComprobante">
+      <EntityTypeMapping TypeName="TalllerModel.CabeceraComprobante">
+        <MappingFragment StoreEntitySet="CabeceraComprobante">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="glosa" ColumnName="glosa" />
+          <ScalarProperty Name="periodo_contable" ColumnName="periodo_contable" />
+          <ScalarProperty Name="periodo_contable_IdAFiscal" ColumnName="periodo_contable_IdAFiscal" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="TipoTransaccion" ColumnName="TipoTransaccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleComprobante">
+      <EntityTypeMapping TypeName="TalllerModel.DetalleComprobante">
+        <MappingFragment StoreEntitySet="DetalleComprobante">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="cabecera_comprobante" ColumnName="cabecera_comprobante" />
+          <ScalarProperty Name="linea_comprobante" ColumnName="linea_comprobante" />
+          <ScalarProperty Name="cuenta" ColumnName="cuenta" />
+          <ScalarProperty Name="debe" ColumnName="debe" />
+          <ScalarProperty Name="haber" ColumnName="haber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuentaxCobrar">
+      <EntityTypeMapping TypeName="TalllerModel.CuentaxCobrar">
+        <MappingFragment StoreEntitySet="CuentaxCobrar">
+          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="idCuentaxCobrar" ColumnName="idCuentaxCobrar" />
+          <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
+          <ScalarProperty Name="Modulo" ColumnName="Modulo" />
+          <ScalarProperty Name="idNumeroFactura" ColumnName="idNumeroFactura" />
+          <ScalarProperty Name="TotalCuotas" ColumnName="TotalCuotas" />
+          <ScalarProperty Name="porcentaje_interes" ColumnName="porcentaje_interes" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuentaxCobrarDet">
+      <EntityTypeMapping TypeName="TalllerModel.CuentaxCobrarDet">
+        <MappingFragment StoreEntitySet="CuentaxCobrarDet">
+          <ScalarProperty Name="idCuentaxCobrar" ColumnName="idCuentaxCobrar" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="numero_cuota" ColumnName="numero_cuota" />
+          <ScalarProperty Name="valor_cuota" ColumnName="valor_cuota" />
+          <ScalarProperty Name="valor_interes" ColumnName="valor_interes" />
+          <ScalarProperty Name="valor_mora" ColumnName="valor_mora" />
+          <ScalarProperty Name="fecha_cobro" ColumnName="fecha_cobro" />
+          <ScalarProperty Name="fecha_vencimiento" ColumnName="fecha_vencimiento" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormaPago">
+      <EntityTypeMapping TypeName="TalllerModel.FormaPago">
+        <MappingFragment StoreEntitySet="FormaPago">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="IdFormaPago" ColumnName="IdFormaPago" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Chasis">
-      <EntityTypeMapping TypeName="TallerModel.Chasis">
+      <EntityTypeMapping TypeName="TalllerModel.Chasis">
         <MappingFragment StoreEntitySet="Chasis">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdChasis" ColumnName="IdChasis" />
@@ -12,7 +81,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Color">
-      <EntityTypeMapping TypeName="TallerModel.Color">
+      <EntityTypeMapping TypeName="TalllerModel.Color">
         <MappingFragment StoreEntitySet="Color">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdColor" ColumnName="IdColor" />
@@ -22,7 +91,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Grupo">
-      <EntityTypeMapping TypeName="TallerModel.Grupo">
+      <EntityTypeMapping TypeName="TalllerModel.Grupo">
         <MappingFragment StoreEntitySet="Grupo">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
@@ -33,7 +102,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Marca">
-      <EntityTypeMapping TypeName="TallerModel.Marca">
+      <EntityTypeMapping TypeName="TalllerModel.Marca">
         <MappingFragment StoreEntitySet="Marca">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdMarca" ColumnName="IdMarca" />
@@ -43,7 +112,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Modelo">
-      <EntityTypeMapping TypeName="TallerModel.Modelo">
+      <EntityTypeMapping TypeName="TalllerModel.Modelo">
         <MappingFragment StoreEntitySet="Modelo">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdModelo" ColumnName="IdModelo" />
@@ -54,7 +123,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoCombustible">
-      <EntityTypeMapping TypeName="TallerModel.TipoCombustible">
+      <EntityTypeMapping TypeName="TalllerModel.TipoCombustible">
         <MappingFragment StoreEntitySet="TipoCombustible">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdTipoCombustible" ColumnName="IdTipoCombustible" />
@@ -64,7 +133,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoMaterial">
-      <EntityTypeMapping TypeName="TallerModel.TipoMaterial">
+      <EntityTypeMapping TypeName="TalllerModel.TipoMaterial">
         <MappingFragment StoreEntitySet="TipoMaterial">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdTipoMaterial" ColumnName="IdTipoMaterial" />
@@ -74,7 +143,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoMotor">
-      <EntityTypeMapping TypeName="TallerModel.TipoMotor">
+      <EntityTypeMapping TypeName="TalllerModel.TipoMotor">
         <MappingFragment StoreEntitySet="TipoMotor">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdTipoMotor" ColumnName="IdTipoMotor" />
@@ -84,7 +153,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="UnidadMedida">
-      <EntityTypeMapping TypeName="TallerModel.UnidadMedida">
+      <EntityTypeMapping TypeName="TalllerModel.UnidadMedida">
         <MappingFragment StoreEntitySet="UnidadMedida">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdUnidadMedida" ColumnName="IdUnidadMedida" />
@@ -94,7 +163,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoIdentificacion">
-      <EntityTypeMapping TypeName="TallerModel.TipoIdentificacion">
+      <EntityTypeMapping TypeName="TalllerModel.TipoIdentificacion">
         <MappingFragment StoreEntitySet="TipoIdentificacion">
           <ScalarProperty Name="IdTipoIdentificacion" ColumnName="IdTipoIdentificacion" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
@@ -104,7 +173,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoPersona">
-      <EntityTypeMapping TypeName="TallerModel.TipoPersona">
+      <EntityTypeMapping TypeName="TalllerModel.TipoPersona">
         <MappingFragment StoreEntitySet="TipoPersona">
           <ScalarProperty Name="IdTipoPersona" ColumnName="IdTipoPersona" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
@@ -113,11 +182,38 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Empresa">
+      <EntityTypeMapping TypeName="TalllerModel.Empresa">
+        <MappingFragment StoreEntitySet="Empresa">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="NombreComercial" ColumnName="NombreComercial" />
+          <ScalarProperty Name="Ruc" ColumnName="Ruc" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Logotipo" ColumnName="Logotipo" />
+          <ScalarProperty Name="FechaInicioSistema" ColumnName="FechaInicioSistema" />
+          <ScalarProperty Name="Correo" ColumnName="Correo" />
+          <ScalarProperty Name="SitioWeb" ColumnName="SitioWeb" />
+          <ScalarProperty Name="Sector" ColumnName="Sector" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estado">
+      <EntityTypeMapping TypeName="TalllerModel.Estado">
+        <MappingFragment StoreEntitySet="Estado">
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Articulo">
-      <EntityTypeMapping TypeName="TallerModel.Articulo">
+      <EntityTypeMapping TypeName="TalllerModel.Articulo">
         <MappingFragment StoreEntitySet="Articulo">
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
           <ScalarProperty Name="IdArticulo" ColumnName="IdArticulo" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="FechaProduccion" ColumnName="FechaProduccion" />
           <ScalarProperty Name="CantidadMinima" ColumnName="CantidadMinima" />
@@ -133,78 +229,84 @@
           <ScalarProperty Name="IdMarca" ColumnName="IdMarca" />
           <ScalarProperty Name="IdModelo" ColumnName="IdModelo" />
           <ScalarProperty Name="IdTipoMaterial" ColumnName="IdTipoMaterial" />
+          <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
           <ScalarProperty Name="Observacion" ColumnName="Observacion" />
           <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
           <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="EmpresaAseguradora">
-      <EntityTypeMapping TypeName="TallerModel.EmpresaAseguradora">
-        <MappingFragment StoreEntitySet="EmpresaAseguradora">
-          <ScalarProperty Name="IdEmpresaAseguradora" ColumnName="IdEmpresaAseguradora" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Liquidacion">
-      <EntityTypeMapping TypeName="TallerModel.Liquidacion">
+      <EntityTypeMapping TypeName="TalllerModel.Liquidacion">
         <MappingFragment StoreEntitySet="Liquidacion">
           <ScalarProperty Name="IdLiquidacion" ColumnName="IdLiquidacion" />
-          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
           <ScalarProperty Name="IdOrdenTrabajo" ColumnName="IdOrdenTrabajo" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
           <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
+          <ScalarProperty Name="IdFormaPago" ColumnName="IdFormaPago" />
+          <ScalarProperty Name="NumeroCuotaMensual" ColumnName="NumeroCuotaMensual" />
+          <ScalarProperty Name="CuotaMensual" ColumnName="CuotaMensual" />
+          <ScalarProperty Name="FechaInicialPago" ColumnName="FechaInicialPago" />
+          <ScalarProperty Name="FechaFinalPago" ColumnName="FechaFinalPago" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
           <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ManoObra">
-      <EntityTypeMapping TypeName="TallerModel.ManoObra">
+      <EntityTypeMapping TypeName="TalllerModel.ManoObra">
         <MappingFragment StoreEntitySet="ManoObra">
           <ScalarProperty Name="IdManoObra" ColumnName="IdManoObra" />
           <ScalarProperty Name="IdTipoTrabajo" ColumnName="IdTipoTrabajo" />
-          <ScalarProperty Name="IdPresupuesto" ColumnName="IdPresupuesto" />
-          <ScalarProperty Name="IdOrdenTrabajo" ColumnName="IdOrdenTrabajo" />
           <ScalarProperty Name="PrecioHora" ColumnName="PrecioHora" />
           <ScalarProperty Name="Horas" ColumnName="Horas" />
           <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
           <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="OrdenTrabajo">
-      <EntityTypeMapping TypeName="TallerModel.OrdenTrabajo">
+      <EntityTypeMapping TypeName="TalllerModel.OrdenTrabajo">
         <MappingFragment StoreEntitySet="OrdenTrabajo">
           <ScalarProperty Name="IdOrdenTrabajo" ColumnName="IdOrdenTrabajo" />
           <ScalarProperty Name="IdPresupuesto" ColumnName="IdPresupuesto" />
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="IdArticulo" ColumnName="IdArticulo" />
+          <ScalarProperty Name="Kilometraje" ColumnName="Kilometraje" />
+          <ScalarProperty Name="Deposito" ColumnName="Deposito" />
           <ScalarProperty Name="FechaRecepcion" ColumnName="FechaRecepcion" />
           <ScalarProperty Name="InicioReparacion" ColumnName="InicioReparacion" />
-          <ScalarProperty Name="FechaIngresoVehiculo" ColumnName="FechaIngresoVehiculo" />
-          <ScalarProperty Name="HoraIngreso" ColumnName="HoraIngreso" />
-          <ScalarProperty Name="FechaEstimadaEntrega" ColumnName="FechaEstimadaEntrega" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="FechaEntrega" ColumnName="FechaEntrega" />
+          <ScalarProperty Name="IvaTrabajos" ColumnName="IvaTrabajos" />
+          <ScalarProperty Name="TotalTrabajos" ColumnName="TotalTrabajos" />
+          <ScalarProperty Name="IvaRepuestos" ColumnName="IvaRepuestos" />
+          <ScalarProperty Name="TotalRepuestos" ColumnName="TotalRepuestos" />
+          <ScalarProperty Name="IvaOtros" ColumnName="IvaOtros" />
+          <ScalarProperty Name="TotalOtros" ColumnName="TotalOtros" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
           <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Otros">
-      <EntityTypeMapping TypeName="TallerModel.Otros">
+      <EntityTypeMapping TypeName="TalllerModel.Otros">
         <MappingFragment StoreEntitySet="Otros">
           <ScalarProperty Name="IdOtros" ColumnName="IdOtros" />
           <ScalarProperty Name="IdOrdenTrabajo" ColumnName="IdOrdenTrabajo" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="Precio" ColumnName="Precio" />
-          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
-          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Persona">
-      <EntityTypeMapping TypeName="TallerModel.Persona">
+      <EntityTypeMapping TypeName="TalllerModel.Persona">
         <MappingFragment StoreEntitySet="Persona">
+          <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
           <ScalarProperty Name="Identificacion" ColumnName="Identificacion" />
           <ScalarProperty Name="IdTipoPersona" ColumnName="IdTipoPersona" />
           <ScalarProperty Name="NombreRazonSocial" ColumnName="NombreRazonSocial" />
@@ -221,15 +323,15 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Presupuesto">
-      <EntityTypeMapping TypeName="TallerModel.Presupuesto">
+      <EntityTypeMapping TypeName="TalllerModel.Presupuesto">
         <MappingFragment StoreEntitySet="Presupuesto">
           <ScalarProperty Name="IdPresupuesto" ColumnName="IdPresupuesto" />
           <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+          <ScalarProperty Name="IdArticulo" ColumnName="IdArticulo" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-          <ScalarProperty Name="IdSeguro" ColumnName="IdSeguro" />
           <ScalarProperty Name="TotalTiempoTrabajo" ColumnName="TotalTiempoTrabajo" />
-          <ScalarProperty Name="TotalManoObra" ColumnName="TotalManoObra" />
           <ScalarProperty Name="Iva" ColumnName="Iva" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
           <ScalarProperty Name="TotalPresupuesto" ColumnName="TotalPresupuesto" />
           <ScalarProperty Name="Observacion" ColumnName="Observacion" />
           <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
@@ -237,34 +339,33 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="PresupuestoxManoObra">
+      <EntityTypeMapping TypeName="TalllerModel.PresupuestoxManoObra">
+        <MappingFragment StoreEntitySet="PresupuestoxManoObra">
+          <ScalarProperty Name="IdPresupuestoMO" ColumnName="IdPresupuestoMO" />
+          <ScalarProperty Name="IdPresupuesto" ColumnName="IdPresupuesto" />
+          <ScalarProperty Name="IdManoObra" ColumnName="IdManoObra" />
+          <ScalarProperty Name="IdTrabajo" ColumnName="IdTrabajo" />
+          <ScalarProperty Name="PrecioHora" ColumnName="PrecioHora" />
+          <ScalarProperty Name="Horas" ColumnName="Horas" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Repuestos">
-      <EntityTypeMapping TypeName="TallerModel.Repuestos">
+      <EntityTypeMapping TypeName="TalllerModel.Repuestos">
         <MappingFragment StoreEntitySet="Repuestos">
           <ScalarProperty Name="IdRepuestos" ColumnName="IdRepuestos" />
           <ScalarProperty Name="IdArticulo" ColumnName="IdArticulo" />
           <ScalarProperty Name="IdOrdenTrabajo" ColumnName="IdOrdenTrabajo" />
-          <ScalarProperty Name="IdManoObra" ColumnName="IdManoObra" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
           <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
           <ScalarProperty Name="Total" ColumnName="Total" />
-          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
-          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Seguro">
-      <EntityTypeMapping TypeName="TallerModel.Seguro">
-        <MappingFragment StoreEntitySet="Seguro">
-          <ScalarProperty Name="IdSeguro" ColumnName="IdSeguro" />
-          <ScalarProperty Name="NroSeguro" ColumnName="NroSeguro" />
-          <ScalarProperty Name="IdEmpresaAseguradora" ColumnName="IdEmpresaAseguradora" />
-          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TipoTrabajo">
-      <EntityTypeMapping TypeName="TallerModel.TipoTrabajo">
+      <EntityTypeMapping TypeName="TalllerModel.TipoTrabajo">
         <MappingFragment StoreEntitySet="TipoTrabajo">
           <ScalarProperty Name="IdTipoTrabajo" ColumnName="IdTipoTrabajo" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />

@@ -1,125 +1,389 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="TallerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+<Schema Namespace="TalllerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
   <EntityContainer Name="TallerEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Chasis" EntityType="TallerModel.Chasis" />
-    <EntitySet Name="Color" EntityType="TallerModel.Color" />
-    <EntitySet Name="Grupo" EntityType="TallerModel.Grupo" />
-    <EntitySet Name="Marca" EntityType="TallerModel.Marca" />
-    <EntitySet Name="Modelo" EntityType="TallerModel.Modelo" />
-    <EntitySet Name="TipoCombustible" EntityType="TallerModel.TipoCombustible" />
-    <EntitySet Name="TipoMaterial" EntityType="TallerModel.TipoMaterial" />
-    <EntitySet Name="TipoMotor" EntityType="TallerModel.TipoMotor" />
-    <EntitySet Name="UnidadMedida" EntityType="TallerModel.UnidadMedida" />
-    <EntitySet Name="TipoIdentificacion" EntityType="TallerModel.TipoIdentificacion" />
-    <EntitySet Name="TipoPersona" EntityType="TallerModel.TipoPersona" />
-    <EntitySet Name="Articulo" EntityType="TallerModel.Articulo" />
-    <EntitySet Name="EmpresaAseguradora" EntityType="TallerModel.EmpresaAseguradora" />
-    <EntitySet Name="Liquidacion" EntityType="TallerModel.Liquidacion" />
-    <EntitySet Name="ManoObra" EntityType="TallerModel.ManoObra" />
-    <EntitySet Name="OrdenTrabajo" EntityType="TallerModel.OrdenTrabajo" />
-    <EntitySet Name="Otros" EntityType="TallerModel.Otros" />
-    <EntitySet Name="Persona" EntityType="TallerModel.Persona" />
-    <EntitySet Name="Presupuesto" EntityType="TallerModel.Presupuesto" />
-    <EntitySet Name="Repuestos" EntityType="TallerModel.Repuestos" />
-    <EntitySet Name="Seguro" EntityType="TallerModel.Seguro" />
-    <EntitySet Name="TipoTrabajo" EntityType="TallerModel.TipoTrabajo" />
-    <AssociationSet Name="FK__Articulo__IdChas__1D314762" Association="TallerModel.FK__Articulo__IdChas__1D314762">
+    <EntitySet Name="CabeceraComprobante" EntityType="TalllerModel.CabeceraComprobante" />
+    <EntitySet Name="DetalleComprobante" EntityType="TalllerModel.DetalleComprobante" />
+    <EntitySet Name="CuentaxCobrar" EntityType="TalllerModel.CuentaxCobrar" />
+    <EntitySet Name="CuentaxCobrarDet" EntityType="TalllerModel.CuentaxCobrarDet" />
+    <EntitySet Name="FormaPago" EntityType="TalllerModel.FormaPago" />
+    <EntitySet Name="Chasis" EntityType="TalllerModel.Chasis" />
+    <EntitySet Name="Color" EntityType="TalllerModel.Color" />
+    <EntitySet Name="Grupo" EntityType="TalllerModel.Grupo" />
+    <EntitySet Name="Marca" EntityType="TalllerModel.Marca" />
+    <EntitySet Name="Modelo" EntityType="TalllerModel.Modelo" />
+    <EntitySet Name="TipoCombustible" EntityType="TalllerModel.TipoCombustible" />
+    <EntitySet Name="TipoMaterial" EntityType="TalllerModel.TipoMaterial" />
+    <EntitySet Name="TipoMotor" EntityType="TalllerModel.TipoMotor" />
+    <EntitySet Name="UnidadMedida" EntityType="TalllerModel.UnidadMedida" />
+    <EntitySet Name="TipoIdentificacion" EntityType="TalllerModel.TipoIdentificacion" />
+    <EntitySet Name="TipoPersona" EntityType="TalllerModel.TipoPersona" />
+    <EntitySet Name="Empresa" EntityType="TalllerModel.Empresa" />
+    <EntitySet Name="Estado" EntityType="TalllerModel.Estado" />
+    <EntitySet Name="Articulo" EntityType="TalllerModel.Articulo" />
+    <EntitySet Name="Liquidacion" EntityType="TalllerModel.Liquidacion" />
+    <EntitySet Name="ManoObra" EntityType="TalllerModel.ManoObra" />
+    <EntitySet Name="OrdenTrabajo" EntityType="TalllerModel.OrdenTrabajo" />
+    <EntitySet Name="Otros" EntityType="TalllerModel.Otros" />
+    <EntitySet Name="Persona" EntityType="TalllerModel.Persona" />
+    <EntitySet Name="Presupuesto" EntityType="TalllerModel.Presupuesto" />
+    <EntitySet Name="PresupuestoxManoObra" EntityType="TalllerModel.PresupuestoxManoObra" />
+    <EntitySet Name="Repuestos" EntityType="TalllerModel.Repuestos" />
+    <EntitySet Name="TipoTrabajo" EntityType="TalllerModel.TipoTrabajo" />
+    <AssociationSet Name="FK__CabeceraC__IdEmp__4C364F0E" Association="TalllerModel.FK__CabeceraC__IdEmp__4C364F0E">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaxCobrar__7B4643B2" Association="TalllerModel.FK__CuentaxCobrar__7B4643B2">
+      <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleComproban__52E34C9D" Association="TalllerModel.FK__DetalleComproban__52E34C9D">
+      <End Role="CabeceraComprobante" EntitySet="CabeceraComprobante" />
+      <End Role="DetalleComprobante" EntitySet="DetalleComprobante" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleCo__IdEmp__50FB042B" Association="TalllerModel.FK__DetalleCo__IdEmp__50FB042B">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="DetalleComprobante" EntitySet="DetalleComprobante" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaxCo__idEmp__795DFB40" Association="TalllerModel.FK__CuentaxCo__idEmp__795DFB40">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FormaPago__IdEmp__1D114BD1" Association="TalllerModel.FK__FormaPago__IdEmp__1D114BD1">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="FormaPago" EntitySet="FormaPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FormaPago__idEst__1EF99443" Association="TalllerModel.FK__FormaPago__idEst__1EF99443">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="FormaPago" EntitySet="FormaPago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Liquidaci__IdFor__0618D7E0" Association="TalllerModel.FK__Liquidaci__IdFor__0618D7E0">
+      <End Role="FormaPago" EntitySet="FormaPago" />
+      <End Role="Liquidacion" EntitySet="Liquidacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdChas__4DD47EBD" Association="TalllerModel.FK__Articulo__IdChas__4DD47EBD">
       <End Role="Chasis" EntitySet="Chasis" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdColo__200DB40D" Association="TallerModel.FK__Articulo__IdColo__200DB40D">
+    <AssociationSet Name="FK__Chasis__IdEmpres__2D7CBDC4" Association="TalllerModel.FK__Chasis__IdEmpres__2D7CBDC4">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Chasis" EntitySet="Chasis" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chasis__IdEstado__2E70E1FD" Association="TalllerModel.FK__Chasis__IdEstado__2E70E1FD">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Chasis" EntitySet="Chasis" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdColo__50B0EB68" Association="TalllerModel.FK__Articulo__IdColo__50B0EB68">
       <End Role="Color" EntitySet="Color" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdGrup__1C3D2329" Association="TallerModel.FK__Articulo__IdGrup__1C3D2329">
+    <AssociationSet Name="FK__Color__IdEmpresa__3EA749C6" Association="TalllerModel.FK__Color__IdEmpresa__3EA749C6">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Color" EntitySet="Color" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Color__IdEstado__3F9B6DFF" Association="TalllerModel.FK__Color__IdEstado__3F9B6DFF">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Color" EntitySet="Color" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdGrup__4CE05A84" Association="TalllerModel.FK__Articulo__IdGrup__4CE05A84">
       <End Role="Grupo" EntitySet="Grupo" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdMarc__2101D846" Association="TallerModel.FK__Articulo__IdMarc__2101D846">
+    <AssociationSet Name="FK__Grupo__IdEmpresa__69C6B1F5" Association="TalllerModel.FK__Grupo__IdEmpresa__69C6B1F5">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Grupo" EntitySet="Grupo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Grupo__IdEstado__6BAEFA67" Association="TalllerModel.FK__Grupo__IdEstado__6BAEFA67">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Grupo" EntitySet="Grupo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdMarc__51A50FA1" Association="TalllerModel.FK__Articulo__IdMarc__51A50FA1">
       <End Role="Marca" EntitySet="Marca" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Modelo__IdMarca__3DB3258D" Association="TallerModel.FK__Modelo__IdMarca__3DB3258D">
+    <AssociationSet Name="FK__Marca__IdEmpresa__4460231C" Association="TalllerModel.FK__Marca__IdEmpresa__4460231C">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Marca" EntitySet="Marca" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Marca__IdEstado__45544755" Association="TalllerModel.FK__Marca__IdEstado__45544755">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Marca" EntitySet="Marca" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Modelo__IdMarca__4C0144E4" Association="TalllerModel.FK__Modelo__IdMarca__4C0144E4">
       <End Role="Marca" EntitySet="Marca" />
       <End Role="Modelo" EntitySet="Modelo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdMode__21F5FC7F" Association="TallerModel.FK__Articulo__IdMode__21F5FC7F">
+    <AssociationSet Name="FK__Articulo__IdMode__529933DA" Association="TalllerModel.FK__Articulo__IdMode__529933DA">
       <End Role="Modelo" EntitySet="Modelo" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdTipo__1F198FD4" Association="TallerModel.FK__Articulo__IdTipo__1F198FD4">
+    <AssociationSet Name="FK__Modelo__IdEmpres__4A18FC72" Association="TalllerModel.FK__Modelo__IdEmpres__4A18FC72">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Modelo" EntitySet="Modelo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Modelo__IdEstado__4B0D20AB" Association="TalllerModel.FK__Modelo__IdEstado__4B0D20AB">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Modelo" EntitySet="Modelo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdTipo__4FBCC72F" Association="TalllerModel.FK__Articulo__IdTipo__4FBCC72F">
       <End Role="TipoCombustible" EntitySet="TipoCombustible" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdTipo__22EA20B8" Association="TallerModel.FK__Articulo__IdTipo__22EA20B8">
+    <AssociationSet Name="FK__TipoCombu__IdEmp__38EE7070" Association="TalllerModel.FK__TipoCombu__IdEmp__38EE7070">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoCombustible" EntitySet="TipoCombustible" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoCombu__IdEst__39E294A9" Association="TalllerModel.FK__TipoCombu__IdEst__39E294A9">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="TipoCombustible" EntitySet="TipoCombustible" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdTipo__538D5813" Association="TalllerModel.FK__Articulo__IdTipo__538D5813">
       <End Role="TipoMaterial" EntitySet="TipoMaterial" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdTipo__1E256B9B" Association="TallerModel.FK__Articulo__IdTipo__1E256B9B">
+    <AssociationSet Name="FK__TipoMater__IdEmp__50C5FA01" Association="TalllerModel.FK__TipoMater__IdEmp__50C5FA01">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoMaterial" EntitySet="TipoMaterial" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoMater__IdEst__51BA1E3A" Association="TalllerModel.FK__TipoMater__IdEst__51BA1E3A">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="TipoMaterial" EntitySet="TipoMaterial" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdTipo__4EC8A2F6" Association="TalllerModel.FK__Articulo__IdTipo__4EC8A2F6">
       <End Role="TipoMotor" EntitySet="TipoMotor" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdUnid__1B48FEF0" Association="TallerModel.FK__Articulo__IdUnid__1B48FEF0">
+    <AssociationSet Name="FK__TipoMotor__IdEmp__3335971A" Association="TalllerModel.FK__TipoMotor__IdEmp__3335971A">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoMotor" EntitySet="TipoMotor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoMotor__IdEst__3429BB53" Association="TalllerModel.FK__TipoMotor__IdEst__3429BB53">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="TipoMotor" EntitySet="TipoMotor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdUnid__4BEC364B" Association="TalllerModel.FK__Articulo__IdUnid__4BEC364B">
       <End Role="UnidadMedida" EntitySet="UnidadMedida" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Persona__TipoIde__13A7DD28" Association="TallerModel.FK__Persona__TipoIde__13A7DD28">
+    <AssociationSet Name="FK__UnidadMed__IdEmp__27C3E46E" Association="TalllerModel.FK__UnidadMed__IdEmp__27C3E46E">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="UnidadMedida" EntitySet="UnidadMedida" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UnidadMed__IdEst__28B808A7" Association="TalllerModel.FK__UnidadMed__IdEst__28B808A7">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="UnidadMedida" EntitySet="UnidadMedida" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__TipoIde__4356F04A" Association="TalllerModel.FK__Persona__TipoIde__4356F04A">
       <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
       <End Role="Persona" EntitySet="Persona" />
     </AssociationSet>
-    <AssociationSet Name="FK__Persona__IdTipoP__12B3B8EF" Association="TallerModel.FK__Persona__IdTipoP__12B3B8EF">
+    <AssociationSet Name="FK__TipoIdent__IdEmp__173876EA" Association="TalllerModel.FK__TipoIdent__IdEmp__173876EA">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__IdTipoP__4262CC11" Association="TalllerModel.FK__Persona__IdTipoP__4262CC11">
       <End Role="TipoPersona" EntitySet="TipoPersona" />
       <End Role="Persona" EntitySet="Persona" />
     </AssociationSet>
-    <AssociationSet Name="FK__Seguro__IdEmpres__2D67AF2B" Association="TallerModel.FK__Seguro__IdEmpres__2D67AF2B">
-      <End Role="EmpresaAseguradora" EntitySet="EmpresaAseguradora" />
-      <End Role="Seguro" EntitySet="Seguro" />
+    <AssociationSet Name="FK__TipoPerso__IdEmp__117F9D94" Association="TalllerModel.FK__TipoPerso__IdEmp__117F9D94">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoPersona" EntitySet="TipoPersona" />
     </AssociationSet>
-    <AssociationSet Name="FK__Liquidaci__IdOrd__5EFF0ABF" Association="TallerModel.FK__Liquidaci__IdOrd__5EFF0ABF">
+    <AssociationSet Name="FK__TipoPerso__IdEst__1273C1CD" Association="TalllerModel.FK__TipoPerso__IdEst__1273C1CD">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="TipoPersona" EntitySet="TipoPersona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdEmpr__481BA567" Association="TalllerModel.FK__Articulo__IdEmpr__481BA567">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdEmpr__4AF81212" Association="TalllerModel.FK__Articulo__IdEmpr__4AF81212">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empresa__IdEstad__0CBAE877" Association="TalllerModel.FK__Empresa__IdEstad__0CBAE877">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Empresa" EntitySet="Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Liquidaci__IdEmp__0524B3A7" Association="TalllerModel.FK__Liquidaci__IdEmp__0524B3A7">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Liquidacion" EntitySet="Liquidacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ManoObra__IdEmpr__6E414E4F" Association="TalllerModel.FK__ManoObra__IdEmpr__6E414E4F">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="ManoObra" EntitySet="ManoObra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenTrab__IdEmp__65AC084E" Association="TalllerModel.FK__OrdenTrab__IdEmp__65AC084E">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__IdEmpre__407A839F" Association="TalllerModel.FK__Persona__IdEmpre__407A839F">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Presupues__IdEmp__58520D30" Association="TalllerModel.FK__Presupues__IdEmp__58520D30">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Presupuesto" EntitySet="Presupuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdEsta__4A03EDD9" Association="TalllerModel.FK__Articulo__IdEsta__4A03EDD9">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Liquidaci__IdEst__04308F6E" Association="TalllerModel.FK__Liquidaci__IdEst__04308F6E">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Liquidacion" EntitySet="Liquidacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ManoObra__IdEsta__6D4D2A16" Association="TalllerModel.FK__ManoObra__IdEsta__6D4D2A16">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="ManoObra" EntitySet="ManoObra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenTrab__IdEst__64B7E415" Association="TalllerModel.FK__OrdenTrab__IdEst__64B7E415">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Persona__IdEstad__416EA7D8" Association="TalllerModel.FK__Persona__IdEstad__416EA7D8">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Presupues__IdEst__59463169" Association="TalllerModel.FK__Presupues__IdEst__59463169">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Presupuesto" EntitySet="Presupuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoTraba__IdEst__5FF32EF8" Association="TalllerModel.FK__TipoTraba__IdEst__5FF32EF8">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="TipoTrabajo" EntitySet="TipoTrabajo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdPers__490FC9A0" Association="TalllerModel.FK__Articulo__IdPers__490FC9A0">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenTrab__IdArt__688874F9" Association="TalllerModel.FK__OrdenTrab__IdArt__688874F9">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Presupues__IdArt__5B2E79DB" Association="TalllerModel.FK__Presupues__IdArt__5B2E79DB">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="Presupuesto" EntitySet="Presupuesto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Repuestos__IdArt__7AA72534" Association="TalllerModel.FK__Repuestos__IdArt__7AA72534">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="Repuestos" EntitySet="Repuestos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Liquidaci__IdOrd__070CFC19" Association="TalllerModel.FK__Liquidaci__IdOrd__070CFC19">
       <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
       <End Role="Liquidacion" EntitySet="Liquidacion" />
     </AssociationSet>
-    <AssociationSet Name="FK__ManoObra__IdMano__490FC9A0" Association="TallerModel.FK__ManoObra__IdMano__490FC9A0">
-      <End Role="ManoObra" EntitySet="ManoObra" />
-      <End Role="ManoObra1" EntitySet="ManoObra" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ManoObra__IdOrde__481BA567" Association="TallerModel.FK__ManoObra__IdOrde__481BA567">
-      <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
-      <End Role="ManoObra" EntitySet="ManoObra" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ManoObra__IdPres__4727812E" Association="TallerModel.FK__ManoObra__IdPres__4727812E">
-      <End Role="Presupuesto" EntitySet="Presupuesto" />
-      <End Role="ManoObra" EntitySet="ManoObra" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ManoObra__IdTipo__4A03EDD9" Association="TallerModel.FK__ManoObra__IdTipo__4A03EDD9">
+    <AssociationSet Name="FK__ManoObra__IdTipo__6F357288" Association="TalllerModel.FK__ManoObra__IdTipo__6F357288">
       <End Role="TipoTrabajo" EntitySet="TipoTrabajo" />
       <End Role="ManoObra" EntitySet="ManoObra" />
     </AssociationSet>
-    <AssociationSet Name="FK__Repuestos__IdMan__51A50FA1" Association="TallerModel.FK__Repuestos__IdMan__51A50FA1">
+    <AssociationSet Name="FK__Presupues__IdMan__74EE4BDE" Association="TalllerModel.FK__Presupues__IdMan__74EE4BDE">
       <End Role="ManoObra" EntitySet="ManoObra" />
-      <End Role="Repuestos" EntitySet="Repuestos" />
+      <End Role="PresupuestoxManoObra" EntitySet="PresupuestoxManoObra" />
     </AssociationSet>
-    <AssociationSet Name="FK__OrdenTrab__IdPre__407A839F" Association="TallerModel.FK__OrdenTrab__IdPre__407A839F">
+    <AssociationSet Name="FK__OrdenTrab__IdPer__679450C0" Association="TalllerModel.FK__OrdenTrab__IdPer__679450C0">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenTrab__IdPre__66A02C87" Association="TalllerModel.FK__OrdenTrab__IdPre__66A02C87">
       <End Role="Presupuesto" EntitySet="Presupuesto" />
       <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Otros__IdOrdenTr__58520D30" Association="TallerModel.FK__Otros__IdOrdenTr__58520D30">
+    <AssociationSet Name="FK__Otros__IdOrdenTr__7F6BDA51" Association="TalllerModel.FK__Otros__IdOrdenTr__7F6BDA51">
       <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
       <End Role="Otros" EntitySet="Otros" />
     </AssociationSet>
-    <AssociationSet Name="FK__Repuestos__IdOrd__50B0EB68" Association="TallerModel.FK__Repuestos__IdOrd__50B0EB68">
+    <AssociationSet Name="FK__Repuestos__IdOrd__79B300FB" Association="TalllerModel.FK__Repuestos__IdOrd__79B300FB">
       <End Role="OrdenTrabajo" EntitySet="OrdenTrabajo" />
       <End Role="Repuestos" EntitySet="Repuestos" />
     </AssociationSet>
-    <AssociationSet Name="FK__Presupues__IdPer__3414ACBA" Association="TallerModel.FK__Presupues__IdPer__3414ACBA">
+    <AssociationSet Name="FK__Presupues__IdPer__5A3A55A2" Association="TalllerModel.FK__Presupues__IdPer__5A3A55A2">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Presupuesto" EntitySet="Presupuesto" />
     </AssociationSet>
-    <AssociationSet Name="FK__Presupues__IdSeg__3508D0F3" Association="TallerModel.FK__Presupues__IdSeg__3508D0F3">
-      <End Role="Seguro" EntitySet="Seguro" />
+    <AssociationSet Name="FK__Presupues__IdPre__73FA27A5" Association="TalllerModel.FK__Presupues__IdPre__73FA27A5">
       <End Role="Presupuesto" EntitySet="Presupuesto" />
+      <End Role="PresupuestoxManoObra" EntitySet="PresupuestoxManoObra" />
     </AssociationSet>
   </EntityContainer>
+  <EntityType Name="CabeceraComprobante">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="numero_comprobante" />
+    </Key>
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="numero_comprobante" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" />
+    <Property Name="glosa" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="periodo_contable" Type="Decimal" Precision="6" Scale="0" />
+    <Property Name="periodo_contable_IdAFiscal" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="IdUsuario" Type="Int32" />
+    <Property Name="FechaModificacion" Type="DateTime" />
+    <Property Name="TipoTransaccion" Type="Int32" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__CabeceraC__IdEmp__4C364F0E" FromRole="CabeceraComprobante" ToRole="Empresa" />
+    <NavigationProperty Name="CuentaxCobrar" Relationship="TalllerModel.FK__CuentaxCobrar__7B4643B2" FromRole="CabeceraComprobante" ToRole="CuentaxCobrar" />
+    <NavigationProperty Name="DetalleComprobante" Relationship="TalllerModel.FK__DetalleComproban__52E34C9D" FromRole="CabeceraComprobante" ToRole="DetalleComprobante" />
+  </EntityType>
+  <EntityType Name="DetalleComprobante">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="cabecera_comprobante" />
+      <PropertyRef Name="linea_comprobante" />
+    </Key>
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="cabecera_comprobante" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+    <Property Name="linea_comprobante" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+    <Property Name="cuenta" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="debe" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+    <Property Name="haber" Type="Decimal" Nullable="false" Precision="14" Scale="2" />
+    <NavigationProperty Name="CabeceraComprobante" Relationship="TalllerModel.FK__DetalleComproban__52E34C9D" FromRole="DetalleComprobante" ToRole="CabeceraComprobante" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__DetalleCo__IdEmp__50FB042B" FromRole="DetalleComprobante" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="CuentaxCobrar">
+    <Key>
+      <PropertyRef Name="idCuentaxCobrar" />
+    </Key>
+    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="idCuentaxCobrar" Type="Int32" Nullable="false" />
+    <Property Name="numero_comprobante" Type="Decimal" Precision="4" Scale="0" />
+    <Property Name="Modulo" Type="Int32" Nullable="false" />
+    <Property Name="idNumeroFactura" Type="Int32" Nullable="false" />
+    <Property Name="TotalCuotas" Type="Int32" Nullable="false" />
+    <Property Name="porcentaje_interes" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="estado" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="CabeceraComprobante" Relationship="TalllerModel.FK__CuentaxCobrar__7B4643B2" FromRole="CuentaxCobrar" ToRole="CabeceraComprobante" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__CuentaxCo__idEmp__795DFB40" FromRole="CuentaxCobrar" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="CuentaxCobrarDet">
+    <Key>
+      <PropertyRef Name="idCuentaxCobrar" />
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="idCuentaxCobrar" Type="Int32" Nullable="false" />
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="numero_cuota" Type="Int32" Nullable="false" />
+    <Property Name="valor_cuota" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="valor_interes" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="valor_mora" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="fecha_cobro" Type="DateTime" Nullable="false" />
+    <Property Name="fecha_vencimiento" Type="DateTime" Nullable="false" />
+    <Property Name="FechaModificacion" Type="DateTime" />
+    <Property Name="estado" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="FormaPago">
+    <Key>
+      <PropertyRef Name="IdFormaPago" />
+    </Key>
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="IdFormaPago" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="idEstado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__FormaPago__IdEmp__1D114BD1" FromRole="FormaPago" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__FormaPago__idEst__1EF99443" FromRole="FormaPago" ToRole="Estado" />
+    <NavigationProperty Name="Liquidacion" Relationship="TalllerModel.FK__Liquidaci__IdFor__0618D7E0" FromRole="FormaPago" ToRole="Liquidacion" />
+  </EntityType>
   <EntityType Name="Chasis">
     <Key>
       <PropertyRef Name="IdChasis" />
@@ -128,7 +392,9 @@
     <Property Name="IdChasis" Type="Int32" Nullable="false" />
     <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdChas__1D314762" FromRole="Chasis" ToRole="Articulo" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__Articulo__IdChas__4DD47EBD" FromRole="Chasis" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__Chasis__IdEmpres__2D7CBDC4" FromRole="Chasis" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__Chasis__IdEstado__2E70E1FD" FromRole="Chasis" ToRole="Estado" />
   </EntityType>
   <EntityType Name="Color">
     <Key>
@@ -138,7 +404,9 @@
     <Property Name="IdColor" Type="Int32" Nullable="false" />
     <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdColo__200DB40D" FromRole="Color" ToRole="Articulo" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__Articulo__IdColo__50B0EB68" FromRole="Color" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__Color__IdEmpresa__3EA749C6" FromRole="Color" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__Color__IdEstado__3F9B6DFF" FromRole="Color" ToRole="Estado" />
   </EntityType>
   <EntityType Name="Grupo">
     <Key>
@@ -149,7 +417,9 @@
     <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdTipoArticulo" Type="Int32" />
     <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdGrup__1C3D2329" FromRole="Grupo" ToRole="Articulo" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__Articulo__IdGrup__4CE05A84" FromRole="Grupo" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__Grupo__IdEmpresa__69C6B1F5" FromRole="Grupo" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__Grupo__IdEstado__6BAEFA67" FromRole="Grupo" ToRole="Estado" />
   </EntityType>
   <EntityType Name="Marca">
     <Key>
@@ -159,8 +429,10 @@
     <Property Name="IdMarca" Type="Int32" Nullable="false" />
     <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdMarc__2101D846" FromRole="Marca" ToRole="Articulo" />
-    <NavigationProperty Name="Modelo" Relationship="TallerModel.FK__Modelo__IdMarca__3DB3258D" FromRole="Marca" ToRole="Modelo" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__Articulo__IdMarc__51A50FA1" FromRole="Marca" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__Marca__IdEmpresa__4460231C" FromRole="Marca" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__Marca__IdEstado__45544755" FromRole="Marca" ToRole="Estado" />
+    <NavigationProperty Name="Modelo" Relationship="TalllerModel.FK__Modelo__IdMarca__4C0144E4" FromRole="Marca" ToRole="Modelo" />
   </EntityType>
   <EntityType Name="Modelo">
     <Key>
@@ -171,8 +443,10 @@
     <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdMarca" Type="Int32" />
     <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Marca" Relationship="TallerModel.FK__Modelo__IdMarca__3DB3258D" FromRole="Modelo" ToRole="Marca" />
-    <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdMode__21F5FC7F" FromRole="Modelo" ToRole="Articulo" />
+    <NavigationProperty Name="Marca" Relationship="TalllerModel.FK__Modelo__IdMarca__4C0144E4" FromRole="Modelo" ToRole="Marca" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__Articulo__IdMode__529933DA" FromRole="Modelo" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__Modelo__IdEmpres__4A18FC72" FromRole="Modelo" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__Modelo__IdEstado__4B0D20AB" FromRole="Modelo" ToRole="Estado" />
   </EntityType>
   <EntityType Name="TipoCombustible">
     <Key>
@@ -182,7 +456,9 @@
     <Property Name="IdTipoCombustible" Type="Int32" Nullable="false" />
     <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdTipo__1F198FD4" FromRole="TipoCombustible" ToRole="Articulo" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__Articulo__IdTipo__4FBCC72F" FromRole="TipoCombustible" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__TipoCombu__IdEmp__38EE7070" FromRole="TipoCombustible" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__TipoCombu__IdEst__39E294A9" FromRole="TipoCombustible" ToRole="Estado" />
   </EntityType>
   <EntityType Name="TipoMaterial">
     <Key>
@@ -192,7 +468,9 @@
     <Property Name="IdTipoMaterial" Type="Int32" Nullable="false" />
     <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdTipo__22EA20B8" FromRole="TipoMaterial" ToRole="Articulo" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__Articulo__IdTipo__538D5813" FromRole="TipoMaterial" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__TipoMater__IdEmp__50C5FA01" FromRole="TipoMaterial" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__TipoMater__IdEst__51BA1E3A" FromRole="TipoMaterial" ToRole="Estado" />
   </EntityType>
   <EntityType Name="TipoMotor">
     <Key>
@@ -202,7 +480,9 @@
     <Property Name="IdTipoMotor" Type="Int32" Nullable="false" />
     <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdTipo__1E256B9B" FromRole="TipoMotor" ToRole="Articulo" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__Articulo__IdTipo__4EC8A2F6" FromRole="TipoMotor" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__TipoMotor__IdEmp__3335971A" FromRole="TipoMotor" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__TipoMotor__IdEst__3429BB53" FromRole="TipoMotor" ToRole="Estado" />
   </EntityType>
   <EntityType Name="UnidadMedida">
     <Key>
@@ -212,7 +492,9 @@
     <Property Name="IdUnidadMedida" Type="Int32" Nullable="false" />
     <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="TallerModel.FK__Articulo__IdUnid__1B48FEF0" FromRole="UnidadMedida" ToRole="Articulo" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__Articulo__IdUnid__4BEC364B" FromRole="UnidadMedida" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__UnidadMed__IdEmp__27C3E46E" FromRole="UnidadMedida" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__UnidadMed__IdEst__28B808A7" FromRole="UnidadMedida" ToRole="Estado" />
   </EntityType>
   <EntityType Name="TipoIdentificacion">
     <Key>
@@ -222,7 +504,8 @@
     <Property Name="descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
     <Property Name="IdEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Persona" Relationship="TallerModel.FK__Persona__TipoIde__13A7DD28" FromRole="TipoIdentificacion" ToRole="Persona" />
+    <NavigationProperty Name="Persona" Relationship="TalllerModel.FK__Persona__TipoIde__4356F04A" FromRole="TipoIdentificacion" ToRole="Persona" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__TipoIdent__IdEmp__173876EA" FromRole="TipoIdentificacion" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="TipoPersona">
     <Key>
@@ -232,7 +515,75 @@
     <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
     <Property Name="IdEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Persona" Relationship="TallerModel.FK__Persona__IdTipoP__12B3B8EF" FromRole="TipoPersona" ToRole="Persona" />
+    <NavigationProperty Name="Persona" Relationship="TalllerModel.FK__Persona__IdTipoP__4262CC11" FromRole="TipoPersona" ToRole="Persona" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__TipoPerso__IdEmp__117F9D94" FromRole="TipoPersona" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__TipoPerso__IdEst__1273C1CD" FromRole="TipoPersona" ToRole="Estado" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
+    <Property Name="RazonSocial" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NombreComercial" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Ruc" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Direccion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Logotipo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="FechaInicioSistema" Type="DateTime" />
+    <Property Name="Correo" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+    <Property Name="SitioWeb" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+    <Property Name="Sector" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="IdEstado" Type="Int32" />
+    <NavigationProperty Name="CabeceraComprobante" Relationship="TalllerModel.FK__CabeceraC__IdEmp__4C364F0E" FromRole="Empresa" ToRole="CabeceraComprobante" />
+    <NavigationProperty Name="DetalleComprobante" Relationship="TalllerModel.FK__DetalleCo__IdEmp__50FB042B" FromRole="Empresa" ToRole="DetalleComprobante" />
+    <NavigationProperty Name="CuentaxCobrar" Relationship="TalllerModel.FK__CuentaxCo__idEmp__795DFB40" FromRole="Empresa" ToRole="CuentaxCobrar" />
+    <NavigationProperty Name="FormaPago" Relationship="TalllerModel.FK__FormaPago__IdEmp__1D114BD1" FromRole="Empresa" ToRole="FormaPago" />
+    <NavigationProperty Name="Chasis" Relationship="TalllerModel.FK__Chasis__IdEmpres__2D7CBDC4" FromRole="Empresa" ToRole="Chasis" />
+    <NavigationProperty Name="Color" Relationship="TalllerModel.FK__Color__IdEmpresa__3EA749C6" FromRole="Empresa" ToRole="Color" />
+    <NavigationProperty Name="Grupo" Relationship="TalllerModel.FK__Grupo__IdEmpresa__69C6B1F5" FromRole="Empresa" ToRole="Grupo" />
+    <NavigationProperty Name="Marca" Relationship="TalllerModel.FK__Marca__IdEmpresa__4460231C" FromRole="Empresa" ToRole="Marca" />
+    <NavigationProperty Name="Modelo" Relationship="TalllerModel.FK__Modelo__IdEmpres__4A18FC72" FromRole="Empresa" ToRole="Modelo" />
+    <NavigationProperty Name="TipoCombustible" Relationship="TalllerModel.FK__TipoCombu__IdEmp__38EE7070" FromRole="Empresa" ToRole="TipoCombustible" />
+    <NavigationProperty Name="TipoMaterial" Relationship="TalllerModel.FK__TipoMater__IdEmp__50C5FA01" FromRole="Empresa" ToRole="TipoMaterial" />
+    <NavigationProperty Name="TipoMotor" Relationship="TalllerModel.FK__TipoMotor__IdEmp__3335971A" FromRole="Empresa" ToRole="TipoMotor" />
+    <NavigationProperty Name="UnidadMedida" Relationship="TalllerModel.FK__UnidadMed__IdEmp__27C3E46E" FromRole="Empresa" ToRole="UnidadMedida" />
+    <NavigationProperty Name="TipoIdentificacion" Relationship="TalllerModel.FK__TipoIdent__IdEmp__173876EA" FromRole="Empresa" ToRole="TipoIdentificacion" />
+    <NavigationProperty Name="TipoPersona" Relationship="TalllerModel.FK__TipoPerso__IdEmp__117F9D94" FromRole="Empresa" ToRole="TipoPersona" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__Articulo__IdEmpr__481BA567" FromRole="Empresa" ToRole="Articulo" />
+    <NavigationProperty Name="Articulo1" Relationship="TalllerModel.FK__Articulo__IdEmpr__4AF81212" FromRole="Empresa" ToRole="Articulo" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__Empresa__IdEstad__0CBAE877" FromRole="Empresa" ToRole="Estado" />
+    <NavigationProperty Name="Liquidacion" Relationship="TalllerModel.FK__Liquidaci__IdEmp__0524B3A7" FromRole="Empresa" ToRole="Liquidacion" />
+    <NavigationProperty Name="ManoObra" Relationship="TalllerModel.FK__ManoObra__IdEmpr__6E414E4F" FromRole="Empresa" ToRole="ManoObra" />
+    <NavigationProperty Name="OrdenTrabajo" Relationship="TalllerModel.FK__OrdenTrab__IdEmp__65AC084E" FromRole="Empresa" ToRole="OrdenTrabajo" />
+    <NavigationProperty Name="Persona" Relationship="TalllerModel.FK__Persona__IdEmpre__407A839F" FromRole="Empresa" ToRole="Persona" />
+    <NavigationProperty Name="Presupuesto" Relationship="TalllerModel.FK__Presupues__IdEmp__58520D30" FromRole="Empresa" ToRole="Presupuesto" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Name="IdEstado" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="220" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="FormaPago" Relationship="TalllerModel.FK__FormaPago__idEst__1EF99443" FromRole="Estado" ToRole="FormaPago" />
+    <NavigationProperty Name="Chasis" Relationship="TalllerModel.FK__Chasis__IdEstado__2E70E1FD" FromRole="Estado" ToRole="Chasis" />
+    <NavigationProperty Name="Color" Relationship="TalllerModel.FK__Color__IdEstado__3F9B6DFF" FromRole="Estado" ToRole="Color" />
+    <NavigationProperty Name="Grupo" Relationship="TalllerModel.FK__Grupo__IdEstado__6BAEFA67" FromRole="Estado" ToRole="Grupo" />
+    <NavigationProperty Name="Marca" Relationship="TalllerModel.FK__Marca__IdEstado__45544755" FromRole="Estado" ToRole="Marca" />
+    <NavigationProperty Name="Modelo" Relationship="TalllerModel.FK__Modelo__IdEstado__4B0D20AB" FromRole="Estado" ToRole="Modelo" />
+    <NavigationProperty Name="TipoCombustible" Relationship="TalllerModel.FK__TipoCombu__IdEst__39E294A9" FromRole="Estado" ToRole="TipoCombustible" />
+    <NavigationProperty Name="TipoMaterial" Relationship="TalllerModel.FK__TipoMater__IdEst__51BA1E3A" FromRole="Estado" ToRole="TipoMaterial" />
+    <NavigationProperty Name="TipoMotor" Relationship="TalllerModel.FK__TipoMotor__IdEst__3429BB53" FromRole="Estado" ToRole="TipoMotor" />
+    <NavigationProperty Name="UnidadMedida" Relationship="TalllerModel.FK__UnidadMed__IdEst__28B808A7" FromRole="Estado" ToRole="UnidadMedida" />
+    <NavigationProperty Name="TipoPersona" Relationship="TalllerModel.FK__TipoPerso__IdEst__1273C1CD" FromRole="Estado" ToRole="TipoPersona" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__Empresa__IdEstad__0CBAE877" FromRole="Estado" ToRole="Empresa" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__Articulo__IdEsta__4A03EDD9" FromRole="Estado" ToRole="Articulo" />
+    <NavigationProperty Name="Liquidacion" Relationship="TalllerModel.FK__Liquidaci__IdEst__04308F6E" FromRole="Estado" ToRole="Liquidacion" />
+    <NavigationProperty Name="ManoObra" Relationship="TalllerModel.FK__ManoObra__IdEsta__6D4D2A16" FromRole="Estado" ToRole="ManoObra" />
+    <NavigationProperty Name="OrdenTrabajo" Relationship="TalllerModel.FK__OrdenTrab__IdEst__64B7E415" FromRole="Estado" ToRole="OrdenTrabajo" />
+    <NavigationProperty Name="Persona" Relationship="TalllerModel.FK__Persona__IdEstad__416EA7D8" FromRole="Estado" ToRole="Persona" />
+    <NavigationProperty Name="Presupuesto" Relationship="TalllerModel.FK__Presupues__IdEst__59463169" FromRole="Estado" ToRole="Presupuesto" />
+    <NavigationProperty Name="TipoTrabajo" Relationship="TalllerModel.FK__TipoTraba__IdEst__5FF32EF8" FromRole="Estado" ToRole="TipoTrabajo" />
   </EntityType>
   <EntityType Name="Articulo">
     <Key>
@@ -240,6 +591,7 @@
     </Key>
     <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
     <Property Name="IdArticulo" Type="Int32" Nullable="false" />
+    <Property Name="IdPersona" Type="Int32" />
     <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="FechaProduccion" Type="DateTime" />
     <Property Name="CantidadMinima" Type="Decimal" Precision="5" Scale="0" />
@@ -249,45 +601,53 @@
     <Property Name="IdGrupo" Type="Int32" Nullable="false" />
     <Property Name="IdChasis" Type="Int32" />
     <Property Name="IdTipoMotor" Type="Int32" />
-    <Property Name="NroPlaca" Type="Int32" />
+    <Property Name="NroPlaca" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
     <Property Name="IdTipoCombustible" Type="Int32" />
     <Property Name="IdColor" Type="Int32" />
     <Property Name="IdMarca" Type="Int32" />
     <Property Name="IdModelo" Type="Int32" />
     <Property Name="IdTipoMaterial" Type="Int32" />
+    <Property Name="PrecioUnitario" Type="Decimal" Precision="18" Scale="2" />
     <Property Name="Observacion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdUsuario" Type="Int32" />
     <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Chasis" Relationship="TallerModel.FK__Articulo__IdChas__1D314762" FromRole="Articulo" ToRole="Chasis" />
-    <NavigationProperty Name="Color" Relationship="TallerModel.FK__Articulo__IdColo__200DB40D" FromRole="Articulo" ToRole="Color" />
-    <NavigationProperty Name="Grupo" Relationship="TallerModel.FK__Articulo__IdGrup__1C3D2329" FromRole="Articulo" ToRole="Grupo" />
-    <NavigationProperty Name="Marca" Relationship="TallerModel.FK__Articulo__IdMarc__2101D846" FromRole="Articulo" ToRole="Marca" />
-    <NavigationProperty Name="Modelo" Relationship="TallerModel.FK__Articulo__IdMode__21F5FC7F" FromRole="Articulo" ToRole="Modelo" />
-    <NavigationProperty Name="TipoCombustible" Relationship="TallerModel.FK__Articulo__IdTipo__1F198FD4" FromRole="Articulo" ToRole="TipoCombustible" />
-    <NavigationProperty Name="TipoMaterial" Relationship="TallerModel.FK__Articulo__IdTipo__22EA20B8" FromRole="Articulo" ToRole="TipoMaterial" />
-    <NavigationProperty Name="TipoMotor" Relationship="TallerModel.FK__Articulo__IdTipo__1E256B9B" FromRole="Articulo" ToRole="TipoMotor" />
-    <NavigationProperty Name="UnidadMedida" Relationship="TallerModel.FK__Articulo__IdUnid__1B48FEF0" FromRole="Articulo" ToRole="UnidadMedida" />
-  </EntityType>
-  <EntityType Name="EmpresaAseguradora">
-    <Key>
-      <PropertyRef Name="IdEmpresaAseguradora" />
-    </Key>
-    <Property Name="IdEmpresaAseguradora" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Seguro" Relationship="TallerModel.FK__Seguro__IdEmpres__2D67AF2B" FromRole="EmpresaAseguradora" ToRole="Seguro" />
+    <NavigationProperty Name="Chasis" Relationship="TalllerModel.FK__Articulo__IdChas__4DD47EBD" FromRole="Articulo" ToRole="Chasis" />
+    <NavigationProperty Name="Color" Relationship="TalllerModel.FK__Articulo__IdColo__50B0EB68" FromRole="Articulo" ToRole="Color" />
+    <NavigationProperty Name="Grupo" Relationship="TalllerModel.FK__Articulo__IdGrup__4CE05A84" FromRole="Articulo" ToRole="Grupo" />
+    <NavigationProperty Name="Marca" Relationship="TalllerModel.FK__Articulo__IdMarc__51A50FA1" FromRole="Articulo" ToRole="Marca" />
+    <NavigationProperty Name="Modelo" Relationship="TalllerModel.FK__Articulo__IdMode__529933DA" FromRole="Articulo" ToRole="Modelo" />
+    <NavigationProperty Name="TipoCombustible" Relationship="TalllerModel.FK__Articulo__IdTipo__4FBCC72F" FromRole="Articulo" ToRole="TipoCombustible" />
+    <NavigationProperty Name="TipoMaterial" Relationship="TalllerModel.FK__Articulo__IdTipo__538D5813" FromRole="Articulo" ToRole="TipoMaterial" />
+    <NavigationProperty Name="TipoMotor" Relationship="TalllerModel.FK__Articulo__IdTipo__4EC8A2F6" FromRole="Articulo" ToRole="TipoMotor" />
+    <NavigationProperty Name="UnidadMedida" Relationship="TalllerModel.FK__Articulo__IdUnid__4BEC364B" FromRole="Articulo" ToRole="UnidadMedida" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__Articulo__IdEmpr__481BA567" FromRole="Articulo" ToRole="Empresa" />
+    <NavigationProperty Name="Empresa1" Relationship="TalllerModel.FK__Articulo__IdEmpr__4AF81212" FromRole="Articulo" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__Articulo__IdEsta__4A03EDD9" FromRole="Articulo" ToRole="Estado" />
+    <NavigationProperty Name="Persona" Relationship="TalllerModel.FK__Articulo__IdPers__490FC9A0" FromRole="Articulo" ToRole="Persona" />
+    <NavigationProperty Name="OrdenTrabajo" Relationship="TalllerModel.FK__OrdenTrab__IdArt__688874F9" FromRole="Articulo" ToRole="OrdenTrabajo" />
+    <NavigationProperty Name="Presupuesto" Relationship="TalllerModel.FK__Presupues__IdArt__5B2E79DB" FromRole="Articulo" ToRole="Presupuesto" />
+    <NavigationProperty Name="Repuestos" Relationship="TalllerModel.FK__Repuestos__IdArt__7AA72534" FromRole="Articulo" ToRole="Repuestos" />
   </EntityType>
   <EntityType Name="Liquidacion">
     <Key>
       <PropertyRef Name="IdLiquidacion" />
     </Key>
     <Property Name="IdLiquidacion" Type="Int32" Nullable="false" />
-    <Property Name="Fecha" Type="DateTime" Nullable="false" />
     <Property Name="IdOrdenTrabajo" Type="Int32" Nullable="false" />
-    <Property Name="TotalPagar" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="TotalPagar" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IdFormaPago" Type="Int32" Nullable="false" />
+    <Property Name="NumeroCuotaMensual" Type="Int32" />
+    <Property Name="CuotaMensual" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FechaInicialPago" Type="DateTime" Nullable="false" />
+    <Property Name="FechaFinalPago" Type="DateTime" Nullable="false" />
+    <Property Name="Observacion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" Nullable="false" />
     <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="OrdenTrabajo" Relationship="TallerModel.FK__Liquidaci__IdOrd__5EFF0ABF" FromRole="Liquidacion" ToRole="OrdenTrabajo" />
+    <NavigationProperty Name="FormaPago" Relationship="TalllerModel.FK__Liquidaci__IdFor__0618D7E0" FromRole="Liquidacion" ToRole="FormaPago" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__Liquidaci__IdEmp__0524B3A7" FromRole="Liquidacion" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__Liquidaci__IdEst__04308F6E" FromRole="Liquidacion" ToRole="Estado" />
+    <NavigationProperty Name="OrdenTrabajo" Relationship="TalllerModel.FK__Liquidaci__IdOrd__070CFC19" FromRole="Liquidacion" ToRole="OrdenTrabajo" />
   </EntityType>
   <EntityType Name="ManoObra">
     <Key>
@@ -295,19 +655,16 @@
     </Key>
     <Property Name="IdManoObra" Type="Int32" Nullable="false" />
     <Property Name="IdTipoTrabajo" Type="Int32" Nullable="false" />
-    <Property Name="IdPresupuesto" Type="Int32" Nullable="false" />
-    <Property Name="IdOrdenTrabajo" Type="Int32" Nullable="false" />
-    <Property Name="PrecioHora" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+    <Property Name="PrecioHora" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="Horas" Type="Int32" Nullable="false" />
-    <Property Name="Total" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+    <Property Name="Total" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Observacion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" Nullable="false" />
     <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="ManoObra1" Relationship="TallerModel.FK__ManoObra__IdMano__490FC9A0" FromRole="ManoObra" ToRole="ManoObra1" />
-    <NavigationProperty Name="ManoObra2" Relationship="TallerModel.FK__ManoObra__IdMano__490FC9A0" FromRole="ManoObra1" ToRole="ManoObra" />
-    <NavigationProperty Name="OrdenTrabajo" Relationship="TallerModel.FK__ManoObra__IdOrde__481BA567" FromRole="ManoObra" ToRole="OrdenTrabajo" />
-    <NavigationProperty Name="Presupuesto" Relationship="TallerModel.FK__ManoObra__IdPres__4727812E" FromRole="ManoObra" ToRole="Presupuesto" />
-    <NavigationProperty Name="TipoTrabajo" Relationship="TallerModel.FK__ManoObra__IdTipo__4A03EDD9" FromRole="ManoObra" ToRole="TipoTrabajo" />
-    <NavigationProperty Name="Repuestos" Relationship="TallerModel.FK__Repuestos__IdMan__51A50FA1" FromRole="ManoObra" ToRole="Repuestos" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__ManoObra__IdEmpr__6E414E4F" FromRole="ManoObra" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__ManoObra__IdEsta__6D4D2A16" FromRole="ManoObra" ToRole="Estado" />
+    <NavigationProperty Name="TipoTrabajo" Relationship="TalllerModel.FK__ManoObra__IdTipo__6F357288" FromRole="ManoObra" ToRole="TipoTrabajo" />
+    <NavigationProperty Name="PresupuestoxManoObra" Relationship="TalllerModel.FK__Presupues__IdMan__74EE4BDE" FromRole="ManoObra" ToRole="PresupuestoxManoObra" />
   </EntityType>
   <EntityType Name="OrdenTrabajo">
     <Key>
@@ -315,18 +672,31 @@
     </Key>
     <Property Name="IdOrdenTrabajo" Type="Int32" Nullable="false" />
     <Property Name="IdPresupuesto" Type="Int32" Nullable="false" />
+    <Property Name="IdPersona" Type="Int32" Nullable="false" />
+    <Property Name="IdArticulo" Type="Int32" Nullable="false" />
+    <Property Name="Kilometraje" Type="Int32" Nullable="false" />
+    <Property Name="Deposito" Type="Int32" Nullable="false" />
     <Property Name="FechaRecepcion" Type="DateTime" Nullable="false" />
     <Property Name="InicioReparacion" Type="DateTime" Nullable="false" />
-    <Property Name="FechaIngresoVehiculo" Type="DateTime" Nullable="false" />
-    <Property Name="HoraIngreso" Type="DateTime" Nullable="false" />
-    <Property Name="FechaEstimadaEntrega" Type="DateTime" Nullable="false" />
+    <Property Name="FechaIngreso" Type="DateTime" Nullable="false" />
+    <Property Name="FechaEntrega" Type="DateTime" Nullable="false" />
+    <Property Name="IvaTrabajos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TotalTrabajos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IvaRepuestos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TotalRepuestos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IvaOtros" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TotalOtros" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Observacion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" Nullable="false" />
     <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Liquidacion" Relationship="TallerModel.FK__Liquidaci__IdOrd__5EFF0ABF" FromRole="OrdenTrabajo" ToRole="Liquidacion" />
-    <NavigationProperty Name="ManoObra" Relationship="TallerModel.FK__ManoObra__IdOrde__481BA567" FromRole="OrdenTrabajo" ToRole="ManoObra" />
-    <NavigationProperty Name="Presupuesto" Relationship="TallerModel.FK__OrdenTrab__IdPre__407A839F" FromRole="OrdenTrabajo" ToRole="Presupuesto" />
-    <NavigationProperty Name="Otros" Relationship="TallerModel.FK__Otros__IdOrdenTr__58520D30" FromRole="OrdenTrabajo" ToRole="Otros" />
-    <NavigationProperty Name="Repuestos" Relationship="TallerModel.FK__Repuestos__IdOrd__50B0EB68" FromRole="OrdenTrabajo" ToRole="Repuestos" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__OrdenTrab__IdEmp__65AC084E" FromRole="OrdenTrabajo" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__OrdenTrab__IdEst__64B7E415" FromRole="OrdenTrabajo" ToRole="Estado" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__OrdenTrab__IdArt__688874F9" FromRole="OrdenTrabajo" ToRole="Articulo" />
+    <NavigationProperty Name="Liquidacion" Relationship="TalllerModel.FK__Liquidaci__IdOrd__070CFC19" FromRole="OrdenTrabajo" ToRole="Liquidacion" />
+    <NavigationProperty Name="Persona" Relationship="TalllerModel.FK__OrdenTrab__IdPer__679450C0" FromRole="OrdenTrabajo" ToRole="Persona" />
+    <NavigationProperty Name="Presupuesto" Relationship="TalllerModel.FK__OrdenTrab__IdPre__66A02C87" FromRole="OrdenTrabajo" ToRole="Presupuesto" />
+    <NavigationProperty Name="Otros" Relationship="TalllerModel.FK__Otros__IdOrdenTr__7F6BDA51" FromRole="OrdenTrabajo" ToRole="Otros" />
+    <NavigationProperty Name="Repuestos" Relationship="TalllerModel.FK__Repuestos__IdOrd__79B300FB" FromRole="OrdenTrabajo" ToRole="Repuestos" />
   </EntityType>
   <EntityType Name="Otros">
     <Key>
@@ -334,17 +704,16 @@
     </Key>
     <Property Name="IdOtros" Type="Int32" Nullable="false" />
     <Property Name="IdOrdenTrabajo" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="Precio" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
-    <Property Name="IdEstado" Type="Int32" Nullable="false" />
-    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="OrdenTrabajo" Relationship="TallerModel.FK__Otros__IdOrdenTr__58520D30" FromRole="Otros" ToRole="OrdenTrabajo" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Precio" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="OrdenTrabajo" Relationship="TalllerModel.FK__Otros__IdOrdenTr__7F6BDA51" FromRole="Otros" ToRole="OrdenTrabajo" />
   </EntityType>
   <EntityType Name="Persona">
     <Key>
-      <PropertyRef Name="Identificacion" />
+      <PropertyRef Name="IdPersona" />
     </Key>
-    <Property Name="Identificacion" Type="Int32" Nullable="false" />
+    <Property Name="IdPersona" Type="Int32" Nullable="false" />
+    <Property Name="Identificacion" Type="String" Nullable="false" MaxLength="14" Unicode="false" FixedLength="false" />
     <Property Name="IdTipoPersona" Type="Int32" Nullable="false" />
     <Property Name="NombreRazonSocial" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="Apellido" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
@@ -352,13 +721,17 @@
     <Property Name="Genero" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
     <Property Name="TipoIdentificacion" Type="Int32" Nullable="false" />
     <Property Name="Direccion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="Telefono" Type="Int32" Nullable="false" />
+    <Property Name="Telefono" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
     <Property Name="Mail" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" Nullable="false" />
     <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="TipoIdentificacion1" Relationship="TallerModel.FK__Persona__TipoIde__13A7DD28" FromRole="Persona" ToRole="TipoIdentificacion" />
-    <NavigationProperty Name="TipoPersona" Relationship="TallerModel.FK__Persona__IdTipoP__12B3B8EF" FromRole="Persona" ToRole="TipoPersona" />
-    <NavigationProperty Name="Presupuesto" Relationship="TallerModel.FK__Presupues__IdPer__3414ACBA" FromRole="Persona" ToRole="Presupuesto" />
+    <NavigationProperty Name="TipoIdentificacion1" Relationship="TalllerModel.FK__Persona__TipoIde__4356F04A" FromRole="Persona" ToRole="TipoIdentificacion" />
+    <NavigationProperty Name="TipoPersona" Relationship="TalllerModel.FK__Persona__IdTipoP__4262CC11" FromRole="Persona" ToRole="TipoPersona" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__Persona__IdEmpre__407A839F" FromRole="Persona" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__Persona__IdEstad__416EA7D8" FromRole="Persona" ToRole="Estado" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__Articulo__IdPers__490FC9A0" FromRole="Persona" ToRole="Articulo" />
+    <NavigationProperty Name="OrdenTrabajo" Relationship="TalllerModel.FK__OrdenTrab__IdPer__679450C0" FromRole="Persona" ToRole="OrdenTrabajo" />
+    <NavigationProperty Name="Presupuesto" Relationship="TalllerModel.FK__Presupues__IdPer__5A3A55A2" FromRole="Persona" ToRole="Presupuesto" />
   </EntityType>
   <EntityType Name="Presupuesto">
     <Key>
@@ -366,19 +739,35 @@
     </Key>
     <Property Name="IdPresupuesto" Type="Int32" Nullable="false" />
     <Property Name="IdPersona" Type="Int32" Nullable="false" />
+    <Property Name="IdArticulo" Type="Int32" Nullable="false" />
     <Property Name="Fecha" Type="DateTime" Nullable="false" />
-    <Property Name="IdSeguro" Type="Int32" Nullable="false" />
     <Property Name="TotalTiempoTrabajo" Type="Int32" Nullable="false" />
-    <Property Name="TotalManoObra" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
-    <Property Name="Iva" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
-    <Property Name="TotalPresupuesto" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
-    <Property Name="Observacion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Iva" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Subtotal" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TotalPresupuesto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Observacion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" Nullable="false" />
     <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="ManoObra" Relationship="TallerModel.FK__ManoObra__IdPres__4727812E" FromRole="Presupuesto" ToRole="ManoObra" />
-    <NavigationProperty Name="OrdenTrabajo" Relationship="TallerModel.FK__OrdenTrab__IdPre__407A839F" FromRole="Presupuesto" ToRole="OrdenTrabajo" />
-    <NavigationProperty Name="Persona" Relationship="TallerModel.FK__Presupues__IdPer__3414ACBA" FromRole="Presupuesto" ToRole="Persona" />
-    <NavigationProperty Name="Seguro" Relationship="TallerModel.FK__Presupues__IdSeg__3508D0F3" FromRole="Presupuesto" ToRole="Seguro" />
+    <NavigationProperty Name="Empresa" Relationship="TalllerModel.FK__Presupues__IdEmp__58520D30" FromRole="Presupuesto" ToRole="Empresa" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__Presupues__IdEst__59463169" FromRole="Presupuesto" ToRole="Estado" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__Presupues__IdArt__5B2E79DB" FromRole="Presupuesto" ToRole="Articulo" />
+    <NavigationProperty Name="OrdenTrabajo" Relationship="TalllerModel.FK__OrdenTrab__IdPre__66A02C87" FromRole="Presupuesto" ToRole="OrdenTrabajo" />
+    <NavigationProperty Name="Persona" Relationship="TalllerModel.FK__Presupues__IdPer__5A3A55A2" FromRole="Presupuesto" ToRole="Persona" />
+    <NavigationProperty Name="PresupuestoxManoObra" Relationship="TalllerModel.FK__Presupues__IdPre__73FA27A5" FromRole="Presupuesto" ToRole="PresupuestoxManoObra" />
+  </EntityType>
+  <EntityType Name="PresupuestoxManoObra">
+    <Key>
+      <PropertyRef Name="IdPresupuestoMO" />
+    </Key>
+    <Property Name="IdPresupuestoMO" Type="Int32" Nullable="false" />
+    <Property Name="IdPresupuesto" Type="Int32" Nullable="false" />
+    <Property Name="IdManoObra" Type="Int32" Nullable="false" />
+    <Property Name="IdTrabajo" Type="Int32" Nullable="false" />
+    <Property Name="PrecioHora" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Horas" Type="Int32" Nullable="false" />
+    <Property Name="Total" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="ManoObra" Relationship="TalllerModel.FK__Presupues__IdMan__74EE4BDE" FromRole="PresupuestoxManoObra" ToRole="ManoObra" />
+    <NavigationProperty Name="Presupuesto" Relationship="TalllerModel.FK__Presupues__IdPre__73FA27A5" FromRole="PresupuestoxManoObra" ToRole="Presupuesto" />
   </EntityType>
   <EntityType Name="Repuestos">
     <Key>
@@ -387,26 +776,11 @@
     <Property Name="IdRepuestos" Type="Int32" Nullable="false" />
     <Property Name="IdArticulo" Type="Int32" Nullable="false" />
     <Property Name="IdOrdenTrabajo" Type="Int32" Nullable="false" />
-    <Property Name="IdManoObra" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="Cantidad" Type="Int32" Nullable="false" />
-    <Property Name="PrecioUnitario" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
-    <Property Name="Total" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
-    <Property Name="IdEstado" Type="Int32" Nullable="false" />
-    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="ManoObra" Relationship="TallerModel.FK__Repuestos__IdMan__51A50FA1" FromRole="Repuestos" ToRole="ManoObra" />
-    <NavigationProperty Name="OrdenTrabajo" Relationship="TallerModel.FK__Repuestos__IdOrd__50B0EB68" FromRole="Repuestos" ToRole="OrdenTrabajo" />
-  </EntityType>
-  <EntityType Name="Seguro">
-    <Key>
-      <PropertyRef Name="IdSeguro" />
-    </Key>
-    <Property Name="IdSeguro" Type="Int32" Nullable="false" />
-    <Property Name="NroSeguro" Type="Int32" Nullable="false" />
-    <Property Name="IdEmpresaAseguradora" Type="Int32" Nullable="false" />
-    <Property Name="IdEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="EmpresaAseguradora" Relationship="TallerModel.FK__Seguro__IdEmpres__2D67AF2B" FromRole="Seguro" ToRole="EmpresaAseguradora" />
-    <NavigationProperty Name="Presupuesto" Relationship="TallerModel.FK__Presupues__IdSeg__3508D0F3" FromRole="Seguro" ToRole="Presupuesto" />
+    <Property Name="PrecioUnitario" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Total" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="Articulo" Relationship="TalllerModel.FK__Repuestos__IdArt__7AA72534" FromRole="Repuestos" ToRole="Articulo" />
+    <NavigationProperty Name="OrdenTrabajo" Relationship="TalllerModel.FK__Repuestos__IdOrd__79B300FB" FromRole="Repuestos" ToRole="OrdenTrabajo" />
   </EntityType>
   <EntityType Name="TipoTrabajo">
     <Key>
@@ -416,11 +790,112 @@
     <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="Observación" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="IdEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="ManoObra" Relationship="TallerModel.FK__ManoObra__IdTipo__4A03EDD9" FromRole="TipoTrabajo" ToRole="ManoObra" />
+    <NavigationProperty Name="Estado" Relationship="TalllerModel.FK__TipoTraba__IdEst__5FF32EF8" FromRole="TipoTrabajo" ToRole="Estado" />
+    <NavigationProperty Name="ManoObra" Relationship="TalllerModel.FK__ManoObra__IdTipo__6F357288" FromRole="TipoTrabajo" ToRole="ManoObra" />
   </EntityType>
-  <Association Name="FK__Articulo__IdChas__1D314762">
-    <End Role="Chasis" Type="TallerModel.Chasis" Multiplicity="0..1" />
-    <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+  <Association Name="FK__CabeceraC__IdEmp__4C364F0E">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="1" />
+    <End Role="CabeceraComprobante" Type="TalllerModel.CabeceraComprobante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CabeceraComprobante">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaxCobrar__7B4643B2">
+    <End Role="CabeceraComprobante" Type="TalllerModel.CabeceraComprobante" Multiplicity="0..1" />
+    <End Role="CuentaxCobrar" Type="TalllerModel.CuentaxCobrar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CabeceraComprobante">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="numero_comprobante" />
+      </Principal>
+      <Dependent Role="CuentaxCobrar">
+        <PropertyRef Name="idEmpresa" />
+        <PropertyRef Name="numero_comprobante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleComproban__52E34C9D">
+    <End Role="CabeceraComprobante" Type="TalllerModel.CabeceraComprobante" Multiplicity="1" />
+    <End Role="DetalleComprobante" Type="TalllerModel.DetalleComprobante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CabeceraComprobante">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="numero_comprobante" />
+      </Principal>
+      <Dependent Role="DetalleComprobante">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="cabecera_comprobante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleCo__IdEmp__50FB042B">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="1" />
+    <End Role="DetalleComprobante" Type="TalllerModel.DetalleComprobante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="DetalleComprobante">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaxCo__idEmp__795DFB40">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="1" />
+    <End Role="CuentaxCobrar" Type="TalllerModel.CuentaxCobrar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CuentaxCobrar">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FormaPago__IdEmp__1D114BD1">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="1" />
+    <End Role="FormaPago" Type="TalllerModel.FormaPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="FormaPago">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FormaPago__idEst__1EF99443">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="1" />
+    <End Role="FormaPago" Type="TalllerModel.FormaPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="FormaPago">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Liquidaci__IdFor__0618D7E0">
+    <End Role="FormaPago" Type="TalllerModel.FormaPago" Multiplicity="1" />
+    <End Role="Liquidacion" Type="TalllerModel.Liquidacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormaPago">
+        <PropertyRef Name="IdFormaPago" />
+      </Principal>
+      <Dependent Role="Liquidacion">
+        <PropertyRef Name="IdFormaPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdChas__4DD47EBD">
+    <End Role="Chasis" Type="TalllerModel.Chasis" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Chasis">
         <PropertyRef Name="IdChasis" />
@@ -430,9 +905,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdColo__200DB40D">
-    <End Role="Color" Type="TallerModel.Color" Multiplicity="0..1" />
-    <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+  <Association Name="FK__Chasis__IdEmpres__2D7CBDC4">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="0..1" />
+    <End Role="Chasis" Type="TalllerModel.Chasis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Chasis">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chasis__IdEstado__2E70E1FD">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="0..1" />
+    <End Role="Chasis" Type="TalllerModel.Chasis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Chasis">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdColo__50B0EB68">
+    <End Role="Color" Type="TalllerModel.Color" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Color">
         <PropertyRef Name="IdColor" />
@@ -442,9 +941,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdGrup__1C3D2329">
-    <End Role="Grupo" Type="TallerModel.Grupo" Multiplicity="1" />
-    <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+  <Association Name="FK__Color__IdEmpresa__3EA749C6">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="0..1" />
+    <End Role="Color" Type="TalllerModel.Color" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Color">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Color__IdEstado__3F9B6DFF">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="0..1" />
+    <End Role="Color" Type="TalllerModel.Color" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Color">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdGrup__4CE05A84">
+    <End Role="Grupo" Type="TalllerModel.Grupo" Multiplicity="1" />
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Grupo">
         <PropertyRef Name="IdGrupo" />
@@ -454,9 +977,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdMarc__2101D846">
-    <End Role="Marca" Type="TallerModel.Marca" Multiplicity="0..1" />
-    <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+  <Association Name="FK__Grupo__IdEmpresa__69C6B1F5">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="0..1" />
+    <End Role="Grupo" Type="TalllerModel.Grupo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Grupo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Grupo__IdEstado__6BAEFA67">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="0..1" />
+    <End Role="Grupo" Type="TalllerModel.Grupo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Grupo">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdMarc__51A50FA1">
+    <End Role="Marca" Type="TalllerModel.Marca" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Marca">
         <PropertyRef Name="IdMarca" />
@@ -466,9 +1013,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Modelo__IdMarca__3DB3258D">
-    <End Role="Marca" Type="TallerModel.Marca" Multiplicity="0..1" />
-    <End Role="Modelo" Type="TallerModel.Modelo" Multiplicity="*" />
+  <Association Name="FK__Marca__IdEmpresa__4460231C">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="0..1" />
+    <End Role="Marca" Type="TalllerModel.Marca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Marca">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Marca__IdEstado__45544755">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="0..1" />
+    <End Role="Marca" Type="TalllerModel.Marca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Marca">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Modelo__IdMarca__4C0144E4">
+    <End Role="Marca" Type="TalllerModel.Marca" Multiplicity="0..1" />
+    <End Role="Modelo" Type="TalllerModel.Modelo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Marca">
         <PropertyRef Name="IdMarca" />
@@ -478,9 +1049,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdMode__21F5FC7F">
-    <End Role="Modelo" Type="TallerModel.Modelo" Multiplicity="0..1" />
-    <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+  <Association Name="FK__Articulo__IdMode__529933DA">
+    <End Role="Modelo" Type="TalllerModel.Modelo" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Modelo">
         <PropertyRef Name="IdModelo" />
@@ -490,9 +1061,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdTipo__1F198FD4">
-    <End Role="TipoCombustible" Type="TallerModel.TipoCombustible" Multiplicity="0..1" />
-    <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+  <Association Name="FK__Modelo__IdEmpres__4A18FC72">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="0..1" />
+    <End Role="Modelo" Type="TalllerModel.Modelo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Modelo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Modelo__IdEstado__4B0D20AB">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="0..1" />
+    <End Role="Modelo" Type="TalllerModel.Modelo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Modelo">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdTipo__4FBCC72F">
+    <End Role="TipoCombustible" Type="TalllerModel.TipoCombustible" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoCombustible">
         <PropertyRef Name="IdTipoCombustible" />
@@ -502,9 +1097,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdTipo__22EA20B8">
-    <End Role="TipoMaterial" Type="TallerModel.TipoMaterial" Multiplicity="0..1" />
-    <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+  <Association Name="FK__TipoCombu__IdEmp__38EE7070">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="0..1" />
+    <End Role="TipoCombustible" Type="TalllerModel.TipoCombustible" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoCombustible">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoCombu__IdEst__39E294A9">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="0..1" />
+    <End Role="TipoCombustible" Type="TalllerModel.TipoCombustible" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="TipoCombustible">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdTipo__538D5813">
+    <End Role="TipoMaterial" Type="TalllerModel.TipoMaterial" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoMaterial">
         <PropertyRef Name="IdTipoMaterial" />
@@ -514,9 +1133,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdTipo__1E256B9B">
-    <End Role="TipoMotor" Type="TallerModel.TipoMotor" Multiplicity="0..1" />
-    <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+  <Association Name="FK__TipoMater__IdEmp__50C5FA01">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="0..1" />
+    <End Role="TipoMaterial" Type="TalllerModel.TipoMaterial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoMaterial">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoMater__IdEst__51BA1E3A">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="0..1" />
+    <End Role="TipoMaterial" Type="TalllerModel.TipoMaterial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="TipoMaterial">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdTipo__4EC8A2F6">
+    <End Role="TipoMotor" Type="TalllerModel.TipoMotor" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoMotor">
         <PropertyRef Name="IdTipoMotor" />
@@ -526,9 +1169,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdUnid__1B48FEF0">
-    <End Role="UnidadMedida" Type="TallerModel.UnidadMedida" Multiplicity="0..1" />
-    <End Role="Articulo" Type="TallerModel.Articulo" Multiplicity="*" />
+  <Association Name="FK__TipoMotor__IdEmp__3335971A">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="0..1" />
+    <End Role="TipoMotor" Type="TalllerModel.TipoMotor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoMotor">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoMotor__IdEst__3429BB53">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="0..1" />
+    <End Role="TipoMotor" Type="TalllerModel.TipoMotor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="TipoMotor">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdUnid__4BEC364B">
+    <End Role="UnidadMedida" Type="TalllerModel.UnidadMedida" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UnidadMedida">
         <PropertyRef Name="IdUnidadMedida" />
@@ -538,9 +1205,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Persona__TipoIde__13A7DD28">
-    <End Role="TipoIdentificacion" Type="TallerModel.TipoIdentificacion" Multiplicity="1" />
-    <End Role="Persona" Type="TallerModel.Persona" Multiplicity="*" />
+  <Association Name="FK__UnidadMed__IdEmp__27C3E46E">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="0..1" />
+    <End Role="UnidadMedida" Type="TalllerModel.UnidadMedida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="UnidadMedida">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UnidadMed__IdEst__28B808A7">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="0..1" />
+    <End Role="UnidadMedida" Type="TalllerModel.UnidadMedida" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="UnidadMedida">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__TipoIde__4356F04A">
+    <End Role="TipoIdentificacion" Type="TalllerModel.TipoIdentificacion" Multiplicity="1" />
+    <End Role="Persona" Type="TalllerModel.Persona" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoIdentificacion">
         <PropertyRef Name="IdTipoIdentificacion" />
@@ -550,9 +1241,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Persona__IdTipoP__12B3B8EF">
-    <End Role="TipoPersona" Type="TallerModel.TipoPersona" Multiplicity="1" />
-    <End Role="Persona" Type="TallerModel.Persona" Multiplicity="*" />
+  <Association Name="FK__TipoIdent__IdEmp__173876EA">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="1" />
+    <End Role="TipoIdentificacion" Type="TalllerModel.TipoIdentificacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoIdentificacion">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__IdTipoP__4262CC11">
+    <End Role="TipoPersona" Type="TalllerModel.TipoPersona" Multiplicity="1" />
+    <End Role="Persona" Type="TalllerModel.Persona" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoPersona">
         <PropertyRef Name="IdTipoPersona" />
@@ -562,21 +1265,263 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Seguro__IdEmpres__2D67AF2B">
-    <End Role="EmpresaAseguradora" Type="TallerModel.EmpresaAseguradora" Multiplicity="1" />
-    <End Role="Seguro" Type="TallerModel.Seguro" Multiplicity="*" />
+  <Association Name="FK__TipoPerso__IdEmp__117F9D94">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="1" />
+    <End Role="TipoPersona" Type="TalllerModel.TipoPersona" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="EmpresaAseguradora">
-        <PropertyRef Name="IdEmpresaAseguradora" />
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
       </Principal>
-      <Dependent Role="Seguro">
-        <PropertyRef Name="IdEmpresaAseguradora" />
+      <Dependent Role="TipoPersona">
+        <PropertyRef Name="IdEmpresa" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Liquidaci__IdOrd__5EFF0ABF">
-    <End Role="OrdenTrabajo" Type="TallerModel.OrdenTrabajo" Multiplicity="1" />
-    <End Role="Liquidacion" Type="TallerModel.Liquidacion" Multiplicity="*" />
+  <Association Name="FK__TipoPerso__IdEst__1273C1CD">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="1" />
+    <End Role="TipoPersona" Type="TalllerModel.TipoPersona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="TipoPersona">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdEmpr__481BA567">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="1" />
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdEmpr__4AF81212">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="1" />
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empresa__IdEstad__0CBAE877">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Liquidaci__IdEmp__0524B3A7">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="1" />
+    <End Role="Liquidacion" Type="TalllerModel.Liquidacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Liquidacion">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ManoObra__IdEmpr__6E414E4F">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="1" />
+    <End Role="ManoObra" Type="TalllerModel.ManoObra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="ManoObra">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenTrab__IdEmp__65AC084E">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="1" />
+    <End Role="OrdenTrabajo" Type="TalllerModel.OrdenTrabajo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenTrabajo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__IdEmpre__407A839F">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="1" />
+    <End Role="Persona" Type="TalllerModel.Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Presupues__IdEmp__58520D30">
+    <End Role="Empresa" Type="TalllerModel.Empresa" Multiplicity="1" />
+    <End Role="Presupuesto" Type="TalllerModel.Presupuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Presupuesto">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdEsta__4A03EDD9">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Liquidaci__IdEst__04308F6E">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="1" />
+    <End Role="Liquidacion" Type="TalllerModel.Liquidacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Liquidacion">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ManoObra__IdEsta__6D4D2A16">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="1" />
+    <End Role="ManoObra" Type="TalllerModel.ManoObra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="ManoObra">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenTrab__IdEst__64B7E415">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="1" />
+    <End Role="OrdenTrabajo" Type="TalllerModel.OrdenTrabajo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="OrdenTrabajo">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Persona__IdEstad__416EA7D8">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="1" />
+    <End Role="Persona" Type="TalllerModel.Persona" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Presupues__IdEst__59463169">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="1" />
+    <End Role="Presupuesto" Type="TalllerModel.Presupuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Presupuesto">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoTraba__IdEst__5FF32EF8">
+    <End Role="Estado" Type="TalllerModel.Estado" Multiplicity="1" />
+    <End Role="TipoTrabajo" Type="TalllerModel.TipoTrabajo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="TipoTrabajo">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdPers__490FC9A0">
+    <End Role="Persona" Type="TalllerModel.Persona" Multiplicity="0..1" />
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenTrab__IdArt__688874F9">
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="1" />
+    <End Role="OrdenTrabajo" Type="TalllerModel.OrdenTrabajo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IdArticulo" />
+      </Principal>
+      <Dependent Role="OrdenTrabajo">
+        <PropertyRef Name="IdArticulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Presupues__IdArt__5B2E79DB">
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="1" />
+    <End Role="Presupuesto" Type="TalllerModel.Presupuesto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IdArticulo" />
+      </Principal>
+      <Dependent Role="Presupuesto">
+        <PropertyRef Name="IdArticulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Repuestos__IdArt__7AA72534">
+    <End Role="Articulo" Type="TalllerModel.Articulo" Multiplicity="1" />
+    <End Role="Repuestos" Type="TalllerModel.Repuestos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IdArticulo" />
+      </Principal>
+      <Dependent Role="Repuestos">
+        <PropertyRef Name="IdArticulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Liquidaci__IdOrd__070CFC19">
+    <End Role="OrdenTrabajo" Type="TalllerModel.OrdenTrabajo" Multiplicity="1" />
+    <End Role="Liquidacion" Type="TalllerModel.Liquidacion" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="OrdenTrabajo">
         <PropertyRef Name="IdOrdenTrabajo" />
@@ -586,45 +1531,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ManoObra__IdMano__490FC9A0">
-    <End Role="ManoObra" Type="TallerModel.ManoObra" Multiplicity="1" />
-    <End Role="ManoObra1" Type="TallerModel.ManoObra" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="ManoObra">
-        <PropertyRef Name="IdManoObra" />
-      </Principal>
-      <Dependent Role="ManoObra1">
-        <PropertyRef Name="IdManoObra" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ManoObra__IdOrde__481BA567">
-    <End Role="OrdenTrabajo" Type="TallerModel.OrdenTrabajo" Multiplicity="1" />
-    <End Role="ManoObra" Type="TallerModel.ManoObra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="OrdenTrabajo">
-        <PropertyRef Name="IdOrdenTrabajo" />
-      </Principal>
-      <Dependent Role="ManoObra">
-        <PropertyRef Name="IdOrdenTrabajo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ManoObra__IdPres__4727812E">
-    <End Role="Presupuesto" Type="TallerModel.Presupuesto" Multiplicity="1" />
-    <End Role="ManoObra" Type="TallerModel.ManoObra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Presupuesto">
-        <PropertyRef Name="IdPresupuesto" />
-      </Principal>
-      <Dependent Role="ManoObra">
-        <PropertyRef Name="IdPresupuesto" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ManoObra__IdTipo__4A03EDD9">
-    <End Role="TipoTrabajo" Type="TallerModel.TipoTrabajo" Multiplicity="1" />
-    <End Role="ManoObra" Type="TallerModel.ManoObra" Multiplicity="*" />
+  <Association Name="FK__ManoObra__IdTipo__6F357288">
+    <End Role="TipoTrabajo" Type="TalllerModel.TipoTrabajo" Multiplicity="1" />
+    <End Role="ManoObra" Type="TalllerModel.ManoObra" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoTrabajo">
         <PropertyRef Name="IdTipoTrabajo" />
@@ -634,21 +1543,33 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Repuestos__IdMan__51A50FA1">
-    <End Role="ManoObra" Type="TallerModel.ManoObra" Multiplicity="1" />
-    <End Role="Repuestos" Type="TallerModel.Repuestos" Multiplicity="*" />
+  <Association Name="FK__Presupues__IdMan__74EE4BDE">
+    <End Role="ManoObra" Type="TalllerModel.ManoObra" Multiplicity="1" />
+    <End Role="PresupuestoxManoObra" Type="TalllerModel.PresupuestoxManoObra" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="ManoObra">
         <PropertyRef Name="IdManoObra" />
       </Principal>
-      <Dependent Role="Repuestos">
+      <Dependent Role="PresupuestoxManoObra">
         <PropertyRef Name="IdManoObra" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__OrdenTrab__IdPre__407A839F">
-    <End Role="Presupuesto" Type="TallerModel.Presupuesto" Multiplicity="1" />
-    <End Role="OrdenTrabajo" Type="TallerModel.OrdenTrabajo" Multiplicity="*" />
+  <Association Name="FK__OrdenTrab__IdPer__679450C0">
+    <End Role="Persona" Type="TalllerModel.Persona" Multiplicity="1" />
+    <End Role="OrdenTrabajo" Type="TalllerModel.OrdenTrabajo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="OrdenTrabajo">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenTrab__IdPre__66A02C87">
+    <End Role="Presupuesto" Type="TalllerModel.Presupuesto" Multiplicity="1" />
+    <End Role="OrdenTrabajo" Type="TalllerModel.OrdenTrabajo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Presupuesto">
         <PropertyRef Name="IdPresupuesto" />
@@ -658,9 +1579,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Otros__IdOrdenTr__58520D30">
-    <End Role="OrdenTrabajo" Type="TallerModel.OrdenTrabajo" Multiplicity="1" />
-    <End Role="Otros" Type="TallerModel.Otros" Multiplicity="*" />
+  <Association Name="FK__Otros__IdOrdenTr__7F6BDA51">
+    <End Role="OrdenTrabajo" Type="TalllerModel.OrdenTrabajo" Multiplicity="1" />
+    <End Role="Otros" Type="TalllerModel.Otros" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="OrdenTrabajo">
         <PropertyRef Name="IdOrdenTrabajo" />
@@ -670,9 +1591,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Repuestos__IdOrd__50B0EB68">
-    <End Role="OrdenTrabajo" Type="TallerModel.OrdenTrabajo" Multiplicity="1" />
-    <End Role="Repuestos" Type="TallerModel.Repuestos" Multiplicity="*" />
+  <Association Name="FK__Repuestos__IdOrd__79B300FB">
+    <End Role="OrdenTrabajo" Type="TalllerModel.OrdenTrabajo" Multiplicity="1" />
+    <End Role="Repuestos" Type="TalllerModel.Repuestos" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="OrdenTrabajo">
         <PropertyRef Name="IdOrdenTrabajo" />
@@ -682,27 +1603,27 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Presupues__IdPer__3414ACBA">
-    <End Role="Persona" Type="TallerModel.Persona" Multiplicity="1" />
-    <End Role="Presupuesto" Type="TallerModel.Presupuesto" Multiplicity="*" />
+  <Association Name="FK__Presupues__IdPer__5A3A55A2">
+    <End Role="Persona" Type="TalllerModel.Persona" Multiplicity="1" />
+    <End Role="Presupuesto" Type="TalllerModel.Presupuesto" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
-        <PropertyRef Name="Identificacion" />
+        <PropertyRef Name="IdPersona" />
       </Principal>
       <Dependent Role="Presupuesto">
         <PropertyRef Name="IdPersona" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Presupues__IdSeg__3508D0F3">
-    <End Role="Seguro" Type="TallerModel.Seguro" Multiplicity="1" />
-    <End Role="Presupuesto" Type="TallerModel.Presupuesto" Multiplicity="*" />
+  <Association Name="FK__Presupues__IdPre__73FA27A5">
+    <End Role="Presupuesto" Type="TalllerModel.Presupuesto" Multiplicity="1" />
+    <End Role="PresupuestoxManoObra" Type="TalllerModel.PresupuestoxManoObra" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Seguro">
-        <PropertyRef Name="IdSeguro" />
+      <Principal Role="Presupuesto">
+        <PropertyRef Name="IdPresupuesto" />
       </Principal>
-      <Dependent Role="Presupuesto">
-        <PropertyRef Name="IdSeguro" />
+      <Dependent Role="PresupuestoxManoObra">
+        <PropertyRef Name="IdPresupuesto" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

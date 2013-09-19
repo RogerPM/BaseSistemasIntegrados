@@ -11,20 +11,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CabeceraComprobante">
-      <EntityTypeMapping TypeName="TECAModel.CabeceraComprobante">
-        <MappingFragment StoreEntitySet="CabeceraComprobante">
-          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
-          <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
-          <ScalarProperty Name="fecha" ColumnName="fecha" />
-          <ScalarProperty Name="glosa" ColumnName="glosa" />
-          <ScalarProperty Name="periodo_contable" ColumnName="periodo_contable" />
-          <ScalarProperty Name="periodo_contable_IdAFiscal" ColumnName="periodo_contable_IdAFiscal" />
-          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
-          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Cuenta">
       <EntityTypeMapping TypeName="TECAModel.Cuenta">
         <MappingFragment StoreEntitySet="Cuenta">
@@ -121,28 +107,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TipoTransaccion">
-      <EntityTypeMapping TypeName="TECAModel.TipoTransaccion">
-        <MappingFragment StoreEntitySet="TipoTransaccion">
-          <ScalarProperty Name="IdTransaccion" ColumnName="IdTransaccion" />
-          <ScalarProperty Name="modulo" ColumnName="modulo" />
-          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
-          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="vwComprobanteMayorizar">
-      <EntityTypeMapping TypeName="TECAModel.vwComprobanteMayorizar">
-        <MappingFragment StoreEntitySet="vwComprobanteMayorizar">
-          <ScalarProperty Name="debe" ColumnName="debe" />
-          <ScalarProperty Name="haber" ColumnName="haber" />
-          <ScalarProperty Name="glosa" ColumnName="glosa" />
-          <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
-          <ScalarProperty Name="fecha" ColumnName="fecha" />
-          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="vwTipoTransaccion">
       <EntityTypeMapping TypeName="TECAModel.vwTipoTransaccion">
         <MappingFragment StoreEntitySet="vwTipoTransaccion">
@@ -171,5 +135,67 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="CabeceraComprobante">
+      <EntityTypeMapping TypeName="TECAModel.CabeceraComprobante">
+        <MappingFragment StoreEntitySet="CabeceraComprobante">
+          <ScalarProperty Name="TipoTransaccion" ColumnName="TipoTransaccion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="periodo_contable_IdAFiscal" ColumnName="periodo_contable_IdAFiscal" />
+          <ScalarProperty Name="periodo_contable" ColumnName="periodo_contable" />
+          <ScalarProperty Name="glosa" ColumnName="glosa" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoTransaccion">
+      <EntityTypeMapping TypeName="TECAModel.TipoTransaccion">
+        <MappingFragment StoreEntitySet="TipoTransaccion">
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="modulo" ColumnName="modulo" />
+          <ScalarProperty Name="IdTransaccion" ColumnName="IdTransaccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwComprobanteMayorizar">
+      <EntityTypeMapping TypeName="TECAModel.vwComprobanteMayorizar">
+        <MappingFragment StoreEntitySet="vwComprobanteMayorizar">
+          <ScalarProperty Name="debe" ColumnName="debe" />
+          <ScalarProperty Name="haber" ColumnName="haber" />
+          <ScalarProperty Name="glosa" ColumnName="glosa" />
+          <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwlibrodiario">
+      <EntityTypeMapping TypeName="TECAModel.vwlibrodiario">
+        <MappingFragment StoreEntitySet="vwlibrodiario">
+          <ScalarProperty Name="NombreModulo" ColumnName="NombreModulo" />
+          <ScalarProperty Name="TipoTransaccion" ColumnName="TipoTransaccion" />
+          <ScalarProperty Name="haber" ColumnName="haber" />
+          <ScalarProperty Name="debe" ColumnName="debe" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="cuenta" ColumnName="cuenta" />
+          <ScalarProperty Name="glosa" ColumnName="glosa" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="reporteResultado" FunctionName="TECAModel.Store.reporteResultado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TECAModel.reporteResultado_Result">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
+          <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

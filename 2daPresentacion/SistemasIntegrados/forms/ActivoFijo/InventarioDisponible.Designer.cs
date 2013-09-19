@@ -28,86 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.btnAsignar = new DevExpress.XtraEditors.SimpleButton();
-            this.cbxSubGrupo = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cbxGrupo = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.btnCOnsultarGeneral = new DevExpress.XtraEditors.SimpleButton();
             this.lblSubGrupo = new DevExpress.XtraEditors.LabelControl();
             this.lblGrupo = new DevExpress.XtraEditors.LabelControl();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.dtFechaRegistro = new DevExpress.XtraEditors.DateEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.dtFecha = new DevExpress.XtraEditors.DateEdit();
-            this.lblFecha = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxSubGrupo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxGrupo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtFecha.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtFecha.Properties)).BeginInit();
+            this.lblFechaAdquisicion = new DevExpress.XtraEditors.LabelControl();
+            this.btnCOnsultaEspecifica = new DevExpress.XtraEditors.SimpleButton();
+            this.Buscar = new DevExpress.XtraEditors.SimpleButton();
+            this.txtGrupo = new DevExpress.XtraEditors.TextEdit();
+            this.txtSubGrupo = new DevExpress.XtraEditors.TextEdit();
+            this.dtFechaAdquisicion = new DevExpress.XtraEditors.DateEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFechaRegistro.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFechaRegistro.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGrupo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubGrupo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFechaAdquisicion.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFechaAdquisicion.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateEdit2
+            // btnCOnsultarGeneral
             // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Enabled = false;
-            this.dateEdit2.Location = new System.Drawing.Point(350, 60);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit2.Size = new System.Drawing.Size(111, 20);
-            this.dateEdit2.TabIndex = 92;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(311, 63);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(33, 13);
-            this.labelControl2.TabIndex = 91;
-            this.labelControl2.Text = "Fecha:";
-            // 
-            // btnAsignar
-            // 
-            this.btnAsignar.Location = new System.Drawing.Point(167, 186);
-            this.btnAsignar.Name = "btnAsignar";
-            this.btnAsignar.Size = new System.Drawing.Size(111, 22);
-            this.btnAsignar.TabIndex = 90;
-            this.btnAsignar.Text = "Consultar";
-            // 
-            // cbxSubGrupo
-            // 
-            this.cbxSubGrupo.Location = new System.Drawing.Point(99, 82);
-            this.cbxSubGrupo.Name = "cbxSubGrupo";
-            this.cbxSubGrupo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxSubGrupo.Size = new System.Drawing.Size(112, 20);
-            this.cbxSubGrupo.TabIndex = 89;
-            // 
-            // cbxGrupo
-            // 
-            this.cbxGrupo.Location = new System.Drawing.Point(99, 60);
-            this.cbxGrupo.Name = "cbxGrupo";
-            this.cbxGrupo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxGrupo.Properties.Items.AddRange(new object[] {
-            "Articulos/Suministros de Oficinas",
-            "Vehiculos",
-            "Muebles y Enseres",
-            "Edificios",
-            "Terrenos",
-            "Equipos",
-            "Maquinarias"});
-            this.cbxGrupo.Size = new System.Drawing.Size(112, 20);
-            this.cbxGrupo.TabIndex = 88;
+            this.btnCOnsultarGeneral.Location = new System.Drawing.Point(344, 116);
+            this.btnCOnsultarGeneral.Name = "btnCOnsultarGeneral";
+            this.btnCOnsultarGeneral.Size = new System.Drawing.Size(111, 22);
+            this.btnCOnsultarGeneral.TabIndex = 90;
+            this.btnCOnsultarGeneral.Text = "Consultar General";
+            this.btnCOnsultarGeneral.Click += new System.EventHandler(this.btnAsignar_Click);
             // 
             // lblSubGrupo
             // 
-            this.lblSubGrupo.Location = new System.Drawing.Point(15, 85);
+            this.lblSubGrupo.Location = new System.Drawing.Point(17, 91);
             this.lblSubGrupo.Name = "lblSubGrupo";
             this.lblSubGrupo.Size = new System.Drawing.Size(51, 13);
             this.lblSubGrupo.TabIndex = 87;
@@ -115,7 +67,7 @@
             // 
             // lblGrupo
             // 
-            this.lblGrupo.Location = new System.Drawing.Point(15, 63);
+            this.lblGrupo.Location = new System.Drawing.Point(16, 68);
             this.lblGrupo.Name = "lblGrupo";
             this.lblGrupo.Size = new System.Drawing.Size(33, 13);
             this.lblGrupo.TabIndex = 86;
@@ -131,74 +83,105 @@
             this.label1.TabIndex = 85;
             this.label1.Text = "Inventario Disponible";
             // 
-            // dateEdit1
+            // dtFechaRegistro
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(350, 137);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtFechaRegistro.EditValue = null;
+            this.dtFechaRegistro.Location = new System.Drawing.Point(112, 136);
+            this.dtFechaRegistro.Name = "dtFechaRegistro";
+            this.dtFechaRegistro.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtFechaRegistro.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit1.Size = new System.Drawing.Size(111, 20);
-            this.dateEdit1.TabIndex = 84;
+            this.dtFechaRegistro.Size = new System.Drawing.Size(110, 20);
+            this.dtFechaRegistro.TabIndex = 84;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(267, 140);
+            this.labelControl1.Location = new System.Drawing.Point(16, 139);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(64, 13);
+            this.labelControl1.Size = new System.Drawing.Size(76, 13);
             this.labelControl1.TabIndex = 83;
-            this.labelControl1.Text = "Fecha Hasta:";
+            this.labelControl1.Text = "Fecha Registro:";
             // 
-            // dtFecha
+            // lblFechaAdquisicion
             // 
-            this.dtFecha.EditValue = null;
-            this.dtFecha.Location = new System.Drawing.Point(100, 137);
-            this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lblFechaAdquisicion.Location = new System.Drawing.Point(17, 116);
+            this.lblFechaAdquisicion.Name = "lblFechaAdquisicion";
+            this.lblFechaAdquisicion.Size = new System.Drawing.Size(89, 13);
+            this.lblFechaAdquisicion.TabIndex = 81;
+            this.lblFechaAdquisicion.Text = "Fecha Adquisicion:";
+            // 
+            // btnCOnsultaEspecifica
+            // 
+            this.btnCOnsultaEspecifica.Location = new System.Drawing.Point(344, 80);
+            this.btnCOnsultaEspecifica.Name = "btnCOnsultaEspecifica";
+            this.btnCOnsultaEspecifica.Size = new System.Drawing.Size(111, 22);
+            this.btnCOnsultaEspecifica.TabIndex = 91;
+            this.btnCOnsultaEspecifica.Text = "ConsultaEspecifica";
+            this.btnCOnsultaEspecifica.Click += new System.EventHandler(this.btnCOnsultaEspecifica_Click);
+            // 
+            // Buscar
+            // 
+            this.Buscar.Location = new System.Drawing.Point(228, 63);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(57, 22);
+            this.Buscar.TabIndex = 92;
+            this.Buscar.Text = "...";
+            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
+            // 
+            // txtGrupo
+            // 
+            this.txtGrupo.Location = new System.Drawing.Point(111, 65);
+            this.txtGrupo.Name = "txtGrupo";
+            this.txtGrupo.Size = new System.Drawing.Size(111, 20);
+            this.txtGrupo.TabIndex = 93;
+           // this.txtGrupo.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            // 
+            // txtSubGrupo
+            // 
+            this.txtSubGrupo.Location = new System.Drawing.Point(112, 88);
+            this.txtSubGrupo.Name = "txtSubGrupo";
+            this.txtSubGrupo.Size = new System.Drawing.Size(111, 20);
+            this.txtSubGrupo.TabIndex = 94;
+            // 
+            // dtFechaAdquisicion
+            // 
+            this.dtFechaAdquisicion.EditValue = null;
+            this.dtFechaAdquisicion.Location = new System.Drawing.Point(112, 112);
+            this.dtFechaAdquisicion.Name = "dtFechaAdquisicion";
+            this.dtFechaAdquisicion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtFecha.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dtFechaAdquisicion.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dtFecha.Size = new System.Drawing.Size(111, 20);
-            this.dtFecha.TabIndex = 82;
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.Location = new System.Drawing.Point(17, 140);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(66, 13);
-            this.lblFecha.TabIndex = 81;
-            this.lblFecha.Text = "Fecha Desde:";
+            this.dtFechaAdquisicion.Size = new System.Drawing.Size(110, 20);
+            this.dtFechaAdquisicion.TabIndex = 96;
             // 
             // RptInventarioDisponible
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 224);
-            this.Controls.Add(this.dateEdit2);
-            this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.btnAsignar);
-            this.Controls.Add(this.cbxSubGrupo);
-            this.Controls.Add(this.cbxGrupo);
+            this.ClientSize = new System.Drawing.Size(477, 172);
+            this.Controls.Add(this.dtFechaAdquisicion);
+            this.Controls.Add(this.txtSubGrupo);
+            this.Controls.Add(this.txtGrupo);
+            this.Controls.Add(this.Buscar);
+            this.Controls.Add(this.btnCOnsultaEspecifica);
+            this.Controls.Add(this.btnCOnsultarGeneral);
             this.Controls.Add(this.lblSubGrupo);
             this.Controls.Add(this.lblGrupo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateEdit1);
+            this.Controls.Add(this.dtFechaRegistro);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.dtFecha);
-            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblFechaAdquisicion);
             this.Name = "RptInventarioDisponible";
             this.Text = "InventarioDisponible";
             this.Load += new System.EventHandler(this.InventarioDisponible_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxSubGrupo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxGrupo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtFecha.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtFecha.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFechaRegistro.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFechaRegistro.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGrupo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubGrupo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFechaAdquisicion.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtFechaAdquisicion.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,18 +189,18 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.SimpleButton btnAsignar;
-        private DevExpress.XtraEditors.ComboBoxEdit cbxSubGrupo;
-        private DevExpress.XtraEditors.ComboBoxEdit cbxGrupo;
+        private DevExpress.XtraEditors.SimpleButton btnCOnsultarGeneral;
         private DevExpress.XtraEditors.LabelControl lblSubGrupo;
         private DevExpress.XtraEditors.LabelControl lblGrupo;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit dtFechaRegistro;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.DateEdit dtFecha;
-        private DevExpress.XtraEditors.LabelControl lblFecha;
+        private DevExpress.XtraEditors.LabelControl lblFechaAdquisicion;
+        private DevExpress.XtraEditors.SimpleButton btnCOnsultaEspecifica;
+        private DevExpress.XtraEditors.SimpleButton Buscar;
+        private DevExpress.XtraEditors.TextEdit txtGrupo;
+        private DevExpress.XtraEditors.TextEdit txtSubGrupo;
+        private DevExpress.XtraEditors.DateEdit dtFechaAdquisicion;
 
 
     }

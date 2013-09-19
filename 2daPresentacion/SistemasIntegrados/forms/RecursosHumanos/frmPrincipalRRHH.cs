@@ -150,6 +150,18 @@ namespace forms
 
         }
 
+        private void barButtonItem2_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmConsultaReporteEmpleado f = new frmConsultaReporteEmpleado();
+            f.ShowDialog();
+        }
+
+        private void barButtonItem5_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmConsultaReporteRol f = new frmConsultaReporteRol();
+            f.ShowDialog();
+        }
+
     
 
      

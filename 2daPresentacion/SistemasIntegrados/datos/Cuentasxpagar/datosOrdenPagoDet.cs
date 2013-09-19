@@ -12,6 +12,8 @@ namespace datos.Cuentasxpagar
     public class datosOrdenPagoDet
     {
 
+        OrdenPagoDet OrdenPagoDeta;
+
         public List<clsOrdenPagoDet> Consulta()
         {
 
@@ -45,6 +47,39 @@ namespace datos.Cuentasxpagar
             }
 
         }
+        public List<clsCuentaPorPagarDetalle> ConsultaDetalleCuentas()
+        {
+            try
+            {
+                List<clsCuentaPorPagarDetalle> lista = new List<clsCuentaPorPagarDetalle>();
+                CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
+                var con = from w in ent.DeudaDet select w;
+                foreach (var item in con)
+                {
+                    clsCuentaPorPagarDetalle clase = new clsCuentaPorPagarDetalle();
+                    clase._IdEmpresa = item.IdEmpresa;
+                    clase._NumCuentaPorPagar = item.NumCuentaPorPagar;
+                    clase._NumCuentaPorPagarDetalle = item.NumDetalleDeuda;
+                    clase._ValorLetra = item.ValorLetra;
+                    clase._FechaVencimiento = item.FechaVencimiento;
+                    clase._Estado = item.Estado;
+                    clase._numeroPagos = 0;
+                    clase._totalPagar = 0;
+                    clase._AutorizarPago = false;
+                    lista.Add(clase);
+                }
+                return lista;
+
+            }
+
+
+            catch (Exception)
+            {
+                return null;
+            }
+
+        }
+
 
         public void Modificar(clsOrdenPagoDet OrdenDet)
         {
@@ -119,6 +154,59 @@ namespace datos.Cuentasxpagar
                 return false;
             }
 
+        }
+
+        public int getNumDetOrdenPago()
+        {
+            try
+            {
+                CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
+                int x = ((from a in ent.OrdenPagoDet select a.NumDetalleDeuda).Max()) + 1;
+                return x;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: " + e);
+                return 1;
+            }
+        }
+
+
+        public Boolean GuardarDetOrdenPago(List<clsOrdenPagoDet> a)
+        {
+            try
+            {
+                using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
+                {
+                    int aux = a.Count;
+                    List<clsOrdenPagoDet> Detalle = a;
+                    for (int i = 0; i < aux; i++)
+                    {
+                        int NumDetOrden = getNumDetOrdenPago();
+                        OrdenPagoDeta = new OrdenPagoDet()
+                        {
+                            NumLinea = Detalle[i].NumLinea,
+                            NumCuentaPorPagar = Detalle[i].NumCuentaPorPagar,
+                            NumDetalleDeuda = NumDetOrden,
+                            SaldoDeuda = Detalle[i].SaldoDeuda,
+                            NumeroPagosRealizar = Detalle[i].NumeroPagosRealizar,
+                            NumOrdenCab = Detalle[i].NumOrdenPagoCab,
+                            TotalPagar = Detalle[i].TotalPagar,
+                            IdEmpresa = Detalle[i].IdEmpresa,
+                            AutorizarPago = Detalle[i].AutorizarPago,
+                        };
+                        ent.AddToOrdenPagoDet(OrdenPagoDeta);
+                        ent.SaveChanges();
+                    }
+                }
+
+                return true;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public int getIdSiguiente()

@@ -14,9 +14,9 @@ namespace clases.Contabilidad
         public decimal periodo_contable { get; set; }
         public decimal periodo_contable_IdAFiscal { get; set; }
         public int IdUsuario { get; set; }
+        public int? TipoTransaccion { get; set; }
         public DateTime FechaModificacion { get; set; }
         public List<clsDetalleComprobante> Detalle { get; set; }
-    
         public clsCabeceraComprobante()
         {
         }

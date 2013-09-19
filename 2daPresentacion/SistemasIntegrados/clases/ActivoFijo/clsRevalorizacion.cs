@@ -11,10 +11,14 @@ namespace clases.ActivoFijo
         public int usuario { get; set; }
         public DateTime Fecha { get; set; }
         public int _idActivoFijo { get; set; }
-        public double valorActual { get; set; }
+        public double ValoAdquisicion { get; set; }
         public double valorRevalorizado { get; set; }
         public double valorResidual { get; set; }
         public string nomActivo { get; set; }
 
+        public clsRevalorizacion()
+        {
+            usuario = 1;
+        }
     }
 }

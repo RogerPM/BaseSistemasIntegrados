@@ -33,7 +33,6 @@
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbGenerarActa = new System.Windows.Forms.ToolStripButton();
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
-            this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.gcHaberes = new DevExpress.XtraEditors.GroupControl();
             this.txtTotal = new DevExpress.XtraEditors.TextEdit();
             this.lblTotal = new DevExpress.XtraEditors.LabelControl();
@@ -126,8 +125,7 @@
             this.tsbNuevo,
             this.tsbGuardar,
             this.tsbGenerarActa,
-            this.tsbModificar,
-            this.tsbEliminar});
+            this.tsbModificar});
             this.tsMenu.Location = new System.Drawing.Point(0, 0);
             this.tsMenu.Name = "tsMenu";
             this.tsMenu.Size = new System.Drawing.Size(637, 25);
@@ -139,7 +137,7 @@
             this.tsbNuevo.Image = global::forms.Properties.Resources.nuevo;
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Size = new System.Drawing.Size(51, 22);
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
@@ -148,7 +146,7 @@
             this.tsbGuardar.Image = global::forms.Properties.Resources.guardar;
             this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbGuardar.Name = "tsbGuardar";
-            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Size = new System.Drawing.Size(57, 22);
             this.tsbGuardar.Text = "Guardar";
             // 
             // tsbGenerarActa
@@ -156,7 +154,7 @@
             this.tsbGenerarActa.Image = global::forms.Properties.Resources._24_aceptar;
             this.tsbGenerarActa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbGenerarActa.Name = "tsbGenerarActa";
-            this.tsbGenerarActa.Size = new System.Drawing.Size(95, 22);
+            this.tsbGenerarActa.Size = new System.Drawing.Size(77, 22);
             this.tsbGenerarActa.Text = "Generar Acta";
             // 
             // tsbModificar
@@ -164,16 +162,8 @@
             this.tsbModificar.Image = global::forms.Properties.Resources.modificar;
             this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModificar.Name = "tsbModificar";
-            this.tsbModificar.Size = new System.Drawing.Size(78, 22);
+            this.tsbModificar.Size = new System.Drawing.Size(62, 22);
             this.tsbModificar.Text = "Modificar";
-            // 
-            // tsbEliminar
-            // 
-            this.tsbEliminar.Image = global::forms.Properties.Resources.eliminar1;
-            this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEliminar.Name = "tsbEliminar";
-            this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
-            this.tsbEliminar.Text = "Eliminar";
             // 
             // gcHaberes
             // 
@@ -728,6 +718,7 @@
             this.Name = "frmProcesoLiquidacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Liquidacion";
+            this.Load += new System.EventHandler(this.frmProcesoLiquidacion_Load);
             this.tsMenu.ResumeLayout(false);
             this.tsMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcHaberes)).EndInit();
@@ -772,7 +763,6 @@
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbModificar;
-        private System.Windows.Forms.ToolStripButton tsbEliminar;
         private System.Windows.Forms.ToolStripButton tsbGenerarActa;
         private DevExpress.XtraEditors.GroupControl gcHaberes;
         private DevExpress.XtraGrid.GridControl gvHaberes;

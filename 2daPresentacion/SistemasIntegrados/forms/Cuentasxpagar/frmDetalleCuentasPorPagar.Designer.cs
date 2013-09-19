@@ -64,6 +64,7 @@
             this.tsbSalir.Name = "tsbSalir";
             this.tsbSalir.Size = new System.Drawing.Size(49, 22);
             this.tsbSalir.Text = "Salir";
+            this.tsbSalir.Click += new System.EventHandler(this.tsbSalir_Click);
             // 
             // gridControl1
             // 
@@ -114,6 +115,7 @@
             this.col_NumCuentaPorPagarDetalle.Caption = "Número";
             this.col_NumCuentaPorPagarDetalle.FieldName = "_NumCuentaPorPagarDetalle";
             this.col_NumCuentaPorPagarDetalle.Name = "col_NumCuentaPorPagarDetalle";
+            this.col_NumCuentaPorPagarDetalle.OptionsColumn.AllowEdit = false;
             this.col_NumCuentaPorPagarDetalle.Visible = true;
             this.col_NumCuentaPorPagarDetalle.VisibleIndex = 0;
             // 
@@ -126,6 +128,7 @@
             this.col_ValorLetra.Caption = "Valor";
             this.col_ValorLetra.FieldName = "_ValorLetra";
             this.col_ValorLetra.Name = "col_ValorLetra";
+            this.col_ValorLetra.OptionsColumn.AllowEdit = false;
             this.col_ValorLetra.Visible = true;
             this.col_ValorLetra.VisibleIndex = 1;
             // 
@@ -138,6 +141,7 @@
             this.col_FechaVencimiento.Caption = "Fecha de vencimiento";
             this.col_FechaVencimiento.FieldName = "_FechaVencimiento";
             this.col_FechaVencimiento.Name = "col_FechaVencimiento";
+            this.col_FechaVencimiento.OptionsColumn.AllowEdit = false;
             this.col_FechaVencimiento.Visible = true;
             this.col_FechaVencimiento.VisibleIndex = 2;
             // 
@@ -159,6 +163,7 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmDetalleCuentasPorPagar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle de Cuentas Por Pagar";
             this.Load += new System.EventHandler(this.frmDetalleCuentasPorPagar_Load);
             this.toolStrip1.ResumeLayout(false);

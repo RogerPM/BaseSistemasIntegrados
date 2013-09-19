@@ -28,390 +28,543 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tsMenu = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tsbGenerar = new System.Windows.Forms.ToolStripButton();
+            this.tsbGenerarNomina = new System.Windows.Forms.ToolStripButton();
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
-            this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
-            this.lblTotalAnticipo = new System.Windows.Forms.Label();
+            this.cmbMes = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cmbPeriodo = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtNumero = new DevExpress.XtraEditors.TextEdit();
+            this.btnBuscar = new DevExpress.XtraEditors.SimpleButton();
+            this.deFecha = new DevExpress.XtraEditors.DateEdit();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblObservacion = new System.Windows.Forms.Label();
-            this.lblTipoAnticipo = new System.Windows.Forms.Label();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.grdColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gcNomina = new DevExpress.XtraGrid.GridControl();
-            this.btnGenerarNom = new DevExpress.XtraEditors.SimpleButton();
-            this.deFecha = new DevExpress.XtraEditors.DateEdit();
-            this.cmbTipoAnticipo = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.txtCodigo = new DevExpress.XtraEditors.TextEdit();
+            this.lblPeriodo = new System.Windows.Forms.Label();
             this.txtObservacion = new DevExpress.XtraEditors.MemoEdit();
             this.cmbEstado = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.btnBuscar = new DevExpress.XtraEditors.SimpleButton();
-            this.txtTotalAnticipo = new DevExpress.XtraEditors.TextEdit();
-            this.teHora = new DevExpress.XtraEditors.TimeEdit();
-            this.lblHora = new DevExpress.XtraEditors.LabelControl();
-            this.lblPUsuario = new DevExpress.XtraEditors.LabelControl();
-            this.lblUsuario = new DevExpress.XtraEditors.LabelControl();
+            this.btnGenerarNomina = new DevExpress.XtraEditors.SimpleButton();
+            this.gcNomina = new DevExpress.XtraGrid.GridControl();
+            this.clsAnticipoDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gvNomina = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colNumLinea = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNumAnticipo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdPersona = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdentificacion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNombre = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colApellido = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSueldoNominal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colValorLiquido = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdEmpresa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.combo1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemTextEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemTextEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemTextEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemTextEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemTextEdit7 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemTextEdit8 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemTextEdit9 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.txtTotalPagar = new DevExpress.XtraEditors.TextEdit();
+            this.lblTotalPagar = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPorcentaje = new DevExpress.XtraEditors.TextEdit();
+            this.label3 = new System.Windows.Forms.Label();
             this.tsMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcNomina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbMes.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPeriodo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumero.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFecha.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFecha.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoAnticipo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtObservacion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEstado.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalAnticipo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teHora.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcNomina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsAnticipoDetalleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvNomina)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.combo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalPagar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPorcentaje.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tsMenu
             // 
             this.tsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
-            this.tsbGenerar,
-            this.tsbModificar,
-            this.tsbEliminar});
+            this.tsbGenerarNomina,
+            this.tsbModificar});
             this.tsMenu.Location = new System.Drawing.Point(0, 0);
             this.tsMenu.Name = "tsMenu";
             this.tsMenu.Size = new System.Drawing.Size(759, 25);
-            this.tsMenu.TabIndex = 22;
+            this.tsMenu.TabIndex = 86;
             this.tsMenu.Text = "toolStrip1";
             // 
             // tsbNuevo
             // 
+            this.tsbNuevo.Enabled = false;
             this.tsbNuevo.Image = global::forms.Properties.Resources.nuevo;
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click_1);
             // 
-            // tsbGenerar
+            // tsbGenerarNomina
             // 
-            this.tsbGenerar.Image = global::forms.Properties.Resources.guardar;
-            this.tsbGenerar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbGenerar.Name = "tsbGenerar";
-            this.tsbGenerar.Size = new System.Drawing.Size(116, 22);
-            this.tsbGenerar.Text = "Generar Anticipo";
+            this.tsbGenerarNomina.Enabled = false;
+            this.tsbGenerarNomina.Image = global::forms.Properties.Resources.guardar;
+            this.tsbGenerarNomina.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGenerarNomina.Name = "tsbGenerarNomina";
+            this.tsbGenerarNomina.Size = new System.Drawing.Size(114, 22);
+            this.tsbGenerarNomina.Text = "Generar Nomina";
+            this.tsbGenerarNomina.Click += new System.EventHandler(this.tsbGenerarNomina_Click_1);
             // 
             // tsbModificar
             // 
+            this.tsbModificar.Enabled = false;
             this.tsbModificar.Image = global::forms.Properties.Resources.modificar;
             this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModificar.Name = "tsbModificar";
             this.tsbModificar.Size = new System.Drawing.Size(78, 22);
             this.tsbModificar.Text = "Modificar";
+            this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click_1);
             // 
-            // tsbEliminar
+            // cmbMes
             // 
-            this.tsbEliminar.Image = global::forms.Properties.Resources.eliminar1;
-            this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEliminar.Name = "tsbEliminar";
-            this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
-            this.tsbEliminar.Text = "Eliminar";
+            this.cmbMes.Location = new System.Drawing.Point(107, 99);
+            this.cmbMes.Name = "cmbMes";
+            this.cmbMes.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbMes.Properties.Items.AddRange(new object[] {
+            "---Seleccione Mes",
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"});
+            this.cmbMes.Size = new System.Drawing.Size(127, 20);
+            this.cmbMes.TabIndex = 118;
             // 
-            // lblTotalAnticipo
+            // label1
             // 
-            this.lblTotalAnticipo.AutoSize = true;
-            this.lblTotalAnticipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAnticipo.Location = new System.Drawing.Point(550, 397);
-            this.lblTotalAnticipo.Name = "lblTotalAnticipo";
-            this.lblTotalAnticipo.Size = new System.Drawing.Size(92, 13);
-            this.lblTotalAnticipo.TabIndex = 35;
-            this.lblTotalAnticipo.Text = "Total Anticipos";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(41, 102);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 117;
+            this.label1.Text = "Mes :";
             // 
-            // lblEstado
+            // cmbPeriodo
             // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.lblEstado.Location = new System.Drawing.Point(437, 87);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(104, 13);
-            this.lblEstado.TabIndex = 31;
-            this.lblEstado.Text = "Estado del Registro:";
+            this.cmbPeriodo.Location = new System.Drawing.Point(107, 66);
+            this.cmbPeriodo.Name = "cmbPeriodo";
+            this.cmbPeriodo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbPeriodo.Properties.Items.AddRange(new object[] {
+            "---Seleccione Periodo",
+            "Quincenal",
+            "Mensual",
+            "Semanal"});
+            this.cmbPeriodo.Size = new System.Drawing.Size(127, 20);
+            this.cmbPeriodo.TabIndex = 116;
             // 
-            // lblFecha
+            // txtNumero
             // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.lblFecha.Location = new System.Drawing.Point(501, 57);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(40, 13);
-            this.lblFecha.TabIndex = 29;
-            this.lblFecha.Text = "Fecha:";
+            this.txtNumero.Enabled = false;
+            this.txtNumero.Location = new System.Drawing.Point(109, 40);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(71, 20);
+            this.txtNumero.TabIndex = 114;
             // 
-            // lblNumero
+            // btnBuscar
             // 
-            this.lblNumero.AutoSize = true;
-            this.lblNumero.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.lblNumero.Location = new System.Drawing.Point(75, 54);
-            this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(48, 13);
-            this.lblNumero.TabIndex = 27;
-            this.lblNumero.Text = "Numero:";
-            // 
-            // lblObservacion
-            // 
-            this.lblObservacion.AutoSize = true;
-            this.lblObservacion.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.lblObservacion.Location = new System.Drawing.Point(52, 124);
-            this.lblObservacion.Name = "lblObservacion";
-            this.lblObservacion.Size = new System.Drawing.Size(71, 13);
-            this.lblObservacion.TabIndex = 25;
-            this.lblObservacion.Text = "Observación:";
-            // 
-            // lblTipoAnticipo
-            // 
-            this.lblTipoAnticipo.AutoSize = true;
-            this.lblTipoAnticipo.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.lblTipoAnticipo.Location = new System.Drawing.Point(51, 81);
-            this.lblTipoAnticipo.Name = "lblTipoAnticipo";
-            this.lblTipoAnticipo.Size = new System.Drawing.Size(72, 13);
-            this.lblTipoAnticipo.TabIndex = 23;
-            this.lblTipoAnticipo.Text = "Tipo Anticipo:";
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.grdColumn1,
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6});
-            this.gridView1.GridControl = this.gcNomina;
-            this.gridView1.Name = "gridView1";
-            // 
-            // grdColumn1
-            // 
-            this.grdColumn1.Caption = "Codigo";
-            this.grdColumn1.Name = "grdColumn1";
-            this.grdColumn1.Visible = true;
-            this.grdColumn1.VisibleIndex = 0;
-            this.grdColumn1.Width = 69;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Nombres Empleado";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 102;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Observación";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 102;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.Caption = "Fecha Cobro (DD/MM/AA)";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 137;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.Caption = "Total Anticipo";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 91;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Valor Anticipo";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 5;
-            this.gridColumn5.Width = 91;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Estado Proceso";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 6;
-            this.gridColumn6.Width = 108;
-            // 
-            // gcNomina
-            // 
-            this.gcNomina.Location = new System.Drawing.Point(29, 217);
-            this.gcNomina.MainView = this.gridView1;
-            this.gcNomina.Name = "gcNomina";
-            this.gcNomina.Size = new System.Drawing.Size(718, 158);
-            this.gcNomina.TabIndex = 37;
-            this.gcNomina.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.gcNomina.Click += new System.EventHandler(this.gridControl1_Click);
-            // 
-            // btnGenerarNom
-            // 
-            this.btnGenerarNom.Location = new System.Drawing.Point(323, 181);
-            this.btnGenerarNom.Name = "btnGenerarNom";
-            this.btnGenerarNom.Size = new System.Drawing.Size(122, 30);
-            this.btnGenerarNom.TabIndex = 71;
-            this.btnGenerarNom.Text = "Generar Nómina";
-            this.btnGenerarNom.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btnBuscar.Image = global::forms.Properties.Resources.consultar;
+            this.btnBuscar.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnBuscar.Location = new System.Drawing.Point(211, 39);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(23, 20);
+            this.btnBuscar.TabIndex = 113;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // deFecha
             // 
             this.deFecha.EditValue = new System.DateTime(2013, 7, 11, 21, 20, 29, 313);
-            this.deFecha.Location = new System.Drawing.Point(575, 47);
+            this.deFecha.Enabled = false;
+            this.deFecha.Location = new System.Drawing.Point(594, 39);
             this.deFecha.Name = "deFecha";
             this.deFecha.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deFecha.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.deFecha.Size = new System.Drawing.Size(100, 20);
-            this.deFecha.TabIndex = 75;
-            this.deFecha.EditValueChanged += new System.EventHandler(this.dateEdit3_EditValueChanged);
+            this.deFecha.TabIndex = 112;
             // 
-            // cmbTipoAnticipo
+            // lblEstado
             // 
-            this.cmbTipoAnticipo.Location = new System.Drawing.Point(139, 84);
-            this.cmbTipoAnticipo.Name = "cmbTipoAnticipo";
-            this.cmbTipoAnticipo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbTipoAnticipo.Size = new System.Drawing.Size(127, 20);
-            this.cmbTipoAnticipo.TabIndex = 76;
-            this.cmbTipoAnticipo.SelectedIndexChanged += new System.EventHandler(this.comboBoxEdit1_SelectedIndexChanged);
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Location = new System.Drawing.Point(483, 71);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(102, 13);
+            this.lblEstado.TabIndex = 110;
+            this.lblEstado.Text = "Estado del Proceso:";
             // 
-            // txtCodigo
+            // lblFecha
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(139, 51);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(92, 20);
-            this.txtCodigo.TabIndex = 77;
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(542, 42);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(40, 13);
+            this.lblFecha.TabIndex = 109;
+            this.lblFecha.Text = "Fecha:";
+            // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Location = new System.Drawing.Point(41, 47);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(47, 13);
+            this.lblNumero.TabIndex = 108;
+            this.lblNumero.Text = "Número:";
+            // 
+            // lblObservacion
+            // 
+            this.lblObservacion.AutoSize = true;
+            this.lblObservacion.Location = new System.Drawing.Point(18, 127);
+            this.lblObservacion.Name = "lblObservacion";
+            this.lblObservacion.Size = new System.Drawing.Size(70, 13);
+            this.lblObservacion.TabIndex = 107;
+            this.lblObservacion.Text = "Observación:";
+            // 
+            // lblPeriodo
+            // 
+            this.lblPeriodo.AutoSize = true;
+            this.lblPeriodo.Location = new System.Drawing.Point(41, 71);
+            this.lblPeriodo.Name = "lblPeriodo";
+            this.lblPeriodo.Size = new System.Drawing.Size(46, 13);
+            this.lblPeriodo.TabIndex = 106;
+            this.lblPeriodo.Text = "Periodo:";
             // 
             // txtObservacion
             // 
-            this.txtObservacion.Location = new System.Drawing.Point(139, 121);
+            this.txtObservacion.Location = new System.Drawing.Point(109, 125);
             this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(536, 54);
-            this.txtObservacion.TabIndex = 78;
-            this.txtObservacion.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            this.txtObservacion.Size = new System.Drawing.Size(585, 35);
+            this.txtObservacion.TabIndex = 115;
             // 
             // cmbEstado
             // 
-            this.cmbEstado.Location = new System.Drawing.Point(575, 84);
+            this.cmbEstado.Location = new System.Drawing.Point(594, 69);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbEstado.Size = new System.Drawing.Size(127, 20);
-            this.cmbEstado.TabIndex = 79;
+            this.cmbEstado.Properties.DisplayFormat.FormatString = "d";
+            this.cmbEstado.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.cmbEstado.Properties.EditFormat.FormatString = "d";
+            this.cmbEstado.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.cmbEstado.Properties.Items.AddRange(new object[] {
+            "---Seleccione Estado",
+            "Generado",
+            "Realizado"});
+            this.cmbEstado.Size = new System.Drawing.Size(100, 20);
+            this.cmbEstado.TabIndex = 111;
             // 
-            // btnBuscar
+            // btnGenerarNomina
             // 
-            this.btnBuscar.Image = global::forms.Properties.Resources.consultar;
-            this.btnBuscar.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnBuscar.Location = new System.Drawing.Point(243, 47);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(23, 20);
-            this.btnBuscar.TabIndex = 80;
+            this.btnGenerarNomina.Enabled = false;
+            this.btnGenerarNomina.Location = new System.Drawing.Point(318, 181);
+            this.btnGenerarNomina.Name = "btnGenerarNomina";
+            this.btnGenerarNomina.Size = new System.Drawing.Size(122, 30);
+            this.btnGenerarNomina.TabIndex = 119;
+            this.btnGenerarNomina.Text = "Generar Nómina";
+            this.btnGenerarNomina.Click += new System.EventHandler(this.btnGenerarNomina_Click_1);
             // 
-            // txtTotalAnticipo
+            // gcNomina
             // 
-            this.txtTotalAnticipo.Location = new System.Drawing.Point(655, 394);
-            this.txtTotalAnticipo.Name = "txtTotalAnticipo";
-            this.txtTotalAnticipo.Size = new System.Drawing.Size(92, 20);
-            this.txtTotalAnticipo.TabIndex = 81;
-            this.txtTotalAnticipo.EditValueChanged += new System.EventHandler(this.textEdit2_EditValueChanged);
+            this.gcNomina.DataSource = this.clsAnticipoDetalleBindingSource;
+            this.gcNomina.Location = new System.Drawing.Point(21, 229);
+            this.gcNomina.MainView = this.gvNomina;
+            this.gcNomina.Name = "gcNomina";
+            this.gcNomina.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemComboBox1,
+            this.combo1,
+            this.repositoryItemTextEdit1,
+            this.repositoryItemTextEdit2,
+            this.repositoryItemTextEdit3,
+            this.repositoryItemTextEdit4,
+            this.repositoryItemTextEdit5,
+            this.repositoryItemTextEdit6,
+            this.repositoryItemTextEdit7,
+            this.repositoryItemTextEdit8,
+            this.repositoryItemTextEdit9});
+            this.gcNomina.Size = new System.Drawing.Size(710, 129);
+            this.gcNomina.TabIndex = 120;
+            this.gcNomina.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvNomina});
             // 
-            // teHora
+            // clsAnticipoDetalleBindingSource
             // 
-            this.teHora.EditValue = new System.DateTime(2013, 6, 20, 0, 0, 0, 0);
-            this.teHora.Location = new System.Drawing.Point(647, 439);
-            this.teHora.Name = "teHora";
-            this.teHora.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.teHora.Size = new System.Drawing.Size(100, 20);
-            this.teHora.TabIndex = 85;
+            this.clsAnticipoDetalleBindingSource.DataSource = typeof(clases.RecursosHumanos.clsAnticipoDetalle);
             // 
-            // lblHora
+            // gvNomina
             // 
-            this.lblHora.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(611, 442);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(30, 13);
-            this.lblHora.TabIndex = 84;
-            this.lblHora.Text = "Hora:";
+            this.gvNomina.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colNumLinea,
+            this.colNumAnticipo,
+            this.colIdPersona,
+            this.colIdentificacion,
+            this.colNombre,
+            this.colApellido,
+            this.colSueldoNominal,
+            this.colValorLiquido,
+            this.colIdEmpresa});
+            this.gvNomina.GridControl = this.gcNomina;
+            this.gvNomina.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            this.gvNomina.Name = "gvNomina";
             // 
-            // lblPUsuario
+            // colNumLinea
             // 
-            this.lblPUsuario.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPUsuario.Location = new System.Drawing.Point(55, 442);
-            this.lblPUsuario.Name = "lblPUsuario";
-            this.lblPUsuario.Size = new System.Drawing.Size(56, 13);
-            this.lblPUsuario.TabIndex = 83;
-            this.lblPUsuario.Text = "María Perez";
+            this.colNumLinea.FieldName = "NumLinea";
+            this.colNumLinea.Name = "colNumLinea";
             // 
-            // lblUsuario
+            // colNumAnticipo
             // 
-            this.lblUsuario.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(1, 442);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
-            this.lblUsuario.TabIndex = 82;
-            this.lblUsuario.Text = "Usuario:";
+            this.colNumAnticipo.FieldName = "NumAnticipo";
+            this.colNumAnticipo.Name = "colNumAnticipo";
+            // 
+            // colIdPersona
+            // 
+            this.colIdPersona.FieldName = "IdPersona";
+            this.colIdPersona.Name = "colIdPersona";
+            // 
+            // colIdentificacion
+            // 
+            this.colIdentificacion.FieldName = "Identificacion";
+            this.colIdentificacion.Name = "colIdentificacion";
+            this.colIdentificacion.Visible = true;
+            this.colIdentificacion.VisibleIndex = 0;
+            // 
+            // colNombre
+            // 
+            this.colNombre.FieldName = "Nombre";
+            this.colNombre.Name = "colNombre";
+            this.colNombre.Visible = true;
+            this.colNombre.VisibleIndex = 1;
+            // 
+            // colApellido
+            // 
+            this.colApellido.FieldName = "Apellido";
+            this.colApellido.Name = "colApellido";
+            this.colApellido.Visible = true;
+            this.colApellido.VisibleIndex = 2;
+            // 
+            // colSueldoNominal
+            // 
+            this.colSueldoNominal.FieldName = "SueldoNominal";
+            this.colSueldoNominal.Name = "colSueldoNominal";
+            this.colSueldoNominal.Visible = true;
+            this.colSueldoNominal.VisibleIndex = 3;
+            // 
+            // colValorLiquido
+            // 
+            this.colValorLiquido.FieldName = "ValorLiquido";
+            this.colValorLiquido.Name = "colValorLiquido";
+            this.colValorLiquido.Visible = true;
+            this.colValorLiquido.VisibleIndex = 4;
+            // 
+            // colIdEmpresa
+            // 
+            this.colIdEmpresa.FieldName = "IdEmpresa";
+            this.colIdEmpresa.Name = "colIdEmpresa";
+            // 
+            // repositoryItemComboBox1
+            // 
+            this.repositoryItemComboBox1.AutoHeight = false;
+            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
+            // 
+            // combo1
+            // 
+            this.combo1.AutoHeight = false;
+            this.combo1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.combo1.Name = "combo1";
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            this.repositoryItemTextEdit1.ReadOnly = true;
+            // 
+            // repositoryItemTextEdit2
+            // 
+            this.repositoryItemTextEdit2.AutoHeight = false;
+            this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
+            this.repositoryItemTextEdit2.ReadOnly = true;
+            // 
+            // repositoryItemTextEdit3
+            // 
+            this.repositoryItemTextEdit3.AutoHeight = false;
+            this.repositoryItemTextEdit3.Name = "repositoryItemTextEdit3";
+            this.repositoryItemTextEdit3.ReadOnly = true;
+            // 
+            // repositoryItemTextEdit4
+            // 
+            this.repositoryItemTextEdit4.AutoHeight = false;
+            this.repositoryItemTextEdit4.Name = "repositoryItemTextEdit4";
+            this.repositoryItemTextEdit4.ReadOnly = true;
+            // 
+            // repositoryItemTextEdit5
+            // 
+            this.repositoryItemTextEdit5.AutoHeight = false;
+            this.repositoryItemTextEdit5.Name = "repositoryItemTextEdit5";
+            this.repositoryItemTextEdit5.ReadOnly = true;
+            // 
+            // repositoryItemTextEdit6
+            // 
+            this.repositoryItemTextEdit6.AutoHeight = false;
+            this.repositoryItemTextEdit6.Name = "repositoryItemTextEdit6";
+            this.repositoryItemTextEdit6.ReadOnly = true;
+            // 
+            // repositoryItemTextEdit7
+            // 
+            this.repositoryItemTextEdit7.AutoHeight = false;
+            this.repositoryItemTextEdit7.Name = "repositoryItemTextEdit7";
+            this.repositoryItemTextEdit7.ReadOnly = true;
+            // 
+            // repositoryItemTextEdit8
+            // 
+            this.repositoryItemTextEdit8.AutoHeight = false;
+            this.repositoryItemTextEdit8.Name = "repositoryItemTextEdit8";
+            this.repositoryItemTextEdit8.ReadOnly = true;
+            // 
+            // repositoryItemTextEdit9
+            // 
+            this.repositoryItemTextEdit9.AutoHeight = false;
+            this.repositoryItemTextEdit9.Name = "repositoryItemTextEdit9";
+            this.repositoryItemTextEdit9.ReadOnly = true;
+            // 
+            // txtTotalPagar
+            // 
+            this.txtTotalPagar.Enabled = false;
+            this.txtTotalPagar.Location = new System.Drawing.Point(628, 374);
+            this.txtTotalPagar.Name = "txtTotalPagar";
+            this.txtTotalPagar.Size = new System.Drawing.Size(103, 20);
+            this.txtTotalPagar.TabIndex = 122;
+            // 
+            // lblTotalPagar
+            // 
+            this.lblTotalPagar.AutoSize = true;
+            this.lblTotalPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPagar.Location = new System.Drawing.Point(537, 377);
+            this.lblTotalPagar.Name = "lblTotalPagar";
+            this.lblTotalPagar.Size = new System.Drawing.Size(85, 13);
+            this.lblTotalPagar.TabIndex = 121;
+            this.lblTotalPagar.Text = "Total A Pagar";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(518, 102);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.TabIndex = 123;
+            this.label2.Text = "Porcentaje :";
+            // 
+            // txtPorcentaje
+            // 
+            this.txtPorcentaje.Location = new System.Drawing.Point(594, 99);
+            this.txtPorcentaje.Name = "txtPorcentaje";
+            this.txtPorcentaje.Size = new System.Drawing.Size(71, 20);
+            this.txtPorcentaje.TabIndex = 124;
+            this.txtPorcentaje.EditValueChanged += new System.EventHandler(this.txtPorcentaje_EditValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(679, 102);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(15, 13);
+            this.label3.TabIndex = 125;
+            this.label3.Text = "%";
             // 
             // frmProcesoAnticiposEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 467);
-            this.Controls.Add(this.teHora);
-            this.Controls.Add(this.lblHora);
-            this.Controls.Add(this.lblPUsuario);
-            this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.txtTotalAnticipo);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.cmbEstado);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.cmbTipoAnticipo);
-            this.Controls.Add(this.deFecha);
-            this.Controls.Add(this.btnGenerarNom);
+            this.ClientSize = new System.Drawing.Size(759, 414);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtPorcentaje);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtTotalPagar);
+            this.Controls.Add(this.lblTotalPagar);
             this.Controls.Add(this.gcNomina);
-            this.Controls.Add(this.lblTotalAnticipo);
+            this.Controls.Add(this.btnGenerarNomina);
+            this.Controls.Add(this.cmbMes);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cmbPeriodo);
+            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.deFecha);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblNumero);
             this.Controls.Add(this.lblObservacion);
-            this.Controls.Add(this.lblTipoAnticipo);
-            this.Controls.Add(this.tsMenu);
+            this.Controls.Add(this.lblPeriodo);
             this.Controls.Add(this.txtObservacion);
+            this.Controls.Add(this.cmbEstado);
+            this.Controls.Add(this.tsMenu);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(775, 505);
-            this.MinimumSize = new System.Drawing.Size(775, 505);
             this.Name = "frmProcesoAnticiposEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anticipos Empleado";
             this.Load += new System.EventHandler(this.frmProcesoAnticiposEmpleado_Load);
             this.tsMenu.ResumeLayout(false);
             this.tsMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gcNomina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbMes.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPeriodo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumero.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFecha.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deFecha.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoAnticipo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtObservacion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbEstado.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTotalAnticipo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teHora.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gcNomina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsAnticipoDetalleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvNomina)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.combo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalPagar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPorcentaje.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,35 +574,49 @@
 
         private System.Windows.Forms.ToolStrip tsMenu;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
-        private System.Windows.Forms.ToolStripButton tsbGenerar;
+        private System.Windows.Forms.ToolStripButton tsbGenerarNomina;
         private System.Windows.Forms.ToolStripButton tsbModificar;
-        private System.Windows.Forms.ToolStripButton tsbEliminar;
-        private System.Windows.Forms.Label lblTotalAnticipo;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbMes;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbPeriodo;
+        private DevExpress.XtraEditors.TextEdit txtNumero;
+        private DevExpress.XtraEditors.SimpleButton btnBuscar;
+        private DevExpress.XtraEditors.DateEdit deFecha;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.Label lblObservacion;
-        private System.Windows.Forms.Label lblTipoAnticipo;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn grdColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.GridControl gcNomina;
-        private DevExpress.XtraEditors.SimpleButton btnGenerarNom;
-        private DevExpress.XtraEditors.DateEdit deFecha;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbTipoAnticipo;
-        private DevExpress.XtraEditors.TextEdit txtCodigo;
+        private System.Windows.Forms.Label lblPeriodo;
         private DevExpress.XtraEditors.MemoEdit txtObservacion;
         private DevExpress.XtraEditors.ComboBoxEdit cmbEstado;
-        private DevExpress.XtraEditors.SimpleButton btnBuscar;
-        private DevExpress.XtraEditors.TextEdit txtTotalAnticipo;
-        private DevExpress.XtraEditors.TimeEdit teHora;
-        private DevExpress.XtraEditors.LabelControl lblHora;
-        private DevExpress.XtraEditors.LabelControl lblPUsuario;
-        private DevExpress.XtraEditors.LabelControl lblUsuario;
+        private DevExpress.XtraEditors.SimpleButton btnGenerarNomina;
+        private DevExpress.XtraGrid.GridControl gcNomina;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvNomina;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit5;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit6;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit7;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit8;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit9;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit combo1;
+        private DevExpress.XtraEditors.TextEdit txtTotalPagar;
+        private System.Windows.Forms.Label lblTotalPagar;
+        private System.Windows.Forms.BindingSource clsAnticipoDetalleBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colNumLinea;
+        private DevExpress.XtraGrid.Columns.GridColumn colNumAnticipo;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdPersona;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdentificacion;
+        private DevExpress.XtraGrid.Columns.GridColumn colNombre;
+        private DevExpress.XtraGrid.Columns.GridColumn colApellido;
+        private DevExpress.XtraGrid.Columns.GridColumn colSueldoNominal;
+        private DevExpress.XtraGrid.Columns.GridColumn colValorLiquido;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdEmpresa;
+        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.TextEdit txtPorcentaje;
+        private System.Windows.Forms.Label label3;
     }
 }

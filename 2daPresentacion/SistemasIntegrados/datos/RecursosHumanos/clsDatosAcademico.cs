@@ -8,27 +8,27 @@ namespace datos.RecursosHumanos
 {
     public class clsDatosAcademico
     {
-        public List<clsAcademico> ConsultaAcademico()
+        public List<clsAcademico>ConsultaAcademico()
         {
             try
             {
                 List<clsAcademico> Lista = new List<clsAcademico>();
                 RecursosHumanosEntities ent = new RecursosHumanosEntities();
-                var con = from w in ent.Academico select w;
+                var con = from w in ent.Academico  select w;
                 foreach (var item in con)
                 {
                     clsAcademico clas = new clsAcademico();
-                    clas.IdAcademico = item.IdAcademico;
+                    clas .IdAcademico =item .IdAcademico ;
                     clas.IdPersona = item.IdPersona;
                     clas.IdTitulo = item.IdTitulo;
                     clas.IdEmpresa = item.IdEmpresa;
-                    clas.IdUniversidad = item.IdUniversidad;
+                    clas.IdUniversidad =item.IdUniversidad ;
                     clas.IdEstado = item.IdEstado;
-
-
-
+                    
+                    
+                  
                     Lista.Add(clas);
-
+                    
                 }
                 return Lista;
             }
@@ -46,19 +46,19 @@ namespace datos.RecursosHumanos
             {
                 using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
                 {
-
-                    Academico aca = new Academico()
+                    
+                    Academico  aca = new Academico ()
                     {
-                        IdAcademico = a.IdAcademico,
+                        IdAcademico =a.IdAcademico,
                         IdPersona = a.IdPersona,
-                        IdTitulo = a.IdTitulo,
+                        IdTitulo =a.IdTitulo,
                         IdEmpresa = a.IdEmpresa,
-                        IdUniversidad = a.IdUniversidad,
+                        IdUniversidad =a.IdUniversidad,
                         IdEstado = a.IdEstado,
-
+                        
 
                     };
-                    ent.AddToAcademico(aca);
+                    ent.AddToAcademico (aca);
                     ent.SaveChanges();
                 }
                 return true;
@@ -73,14 +73,14 @@ namespace datos.RecursosHumanos
             using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
             {
 
-                var x = (from q in ent.Academico where q.IdPersona == ac.IdPersona select q).First();
+                var x = (from q in ent.Academico  where q.IdPersona  == ac.IdPersona  select q).First();
                 x.IdAcademico = ac.IdAcademico;
                 x.IdPersona = ac.IdPersona;
-                x.IdTitulo = ac.IdTitulo;
+                x.IdTitulo =ac.IdTitulo;
                 x.IdEmpresa = ac.IdEmpresa;
                 x.IdUniversidad = ac.IdUniversidad;
                 x.IdEstado = ac.IdEstado;
-
+                                
                 ent.SaveChanges();
 
             }
@@ -92,7 +92,7 @@ namespace datos.RecursosHumanos
             {
                 using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
                 {
-                    var x = (from q in ent.Academico where q.IdPersona == acad.IdPersona select q).First();
+                    var x = (from q in ent.Academico   where q.IdPersona  == acad.IdPersona  select q).First();
                     ent.DeleteObject(x);
                     ent.SaveChanges();
                 }
@@ -111,7 +111,7 @@ namespace datos.RecursosHumanos
             try
             {
                 RecursosHumanosEntities ent = new RecursosHumanosEntities();
-                int x = ((from a in ent.Academico select a.IdAcademico).Max()) + 1;
+                int x = ((from a in ent.Academico  select a.IdAcademico).Max()) + 1;
                 return x;
             }
             catch (Exception e)
@@ -123,7 +123,7 @@ namespace datos.RecursosHumanos
 
         public clsDatosAcademico()
         {
-
+            
         }
     }
 }

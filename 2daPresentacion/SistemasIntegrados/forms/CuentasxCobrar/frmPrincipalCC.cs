@@ -77,21 +77,15 @@ namespace forms.CuentasxCobrar
 
         }
 
-        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            frm_ReporteEstadoCuenta mi = new frm_ReporteEstadoCuenta();
-            mi.ShowDialog();
-        }
-
         private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm_reporteBanco mi = new frm_reporteBanco();
+            frm_ReporteBanco mi = new frm_ReporteBanco();
             mi.ShowDialog();
         }
 
         private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm_ReporteCobro mi = new frm_ReporteCobro();
+            frm_ReporteInversion mi = new frm_ReporteInversion();
             mi.ShowDialog();
         }
 
@@ -103,7 +97,7 @@ namespace forms.CuentasxCobrar
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frm_ReporteEstadoCuenta mi = new frm_ReporteEstadoCuenta ();
+            frm_ReporteMovimientoBancario mi = new frm_ReporteMovimientoBancario ();
             mi.ShowDialog();
 
         }

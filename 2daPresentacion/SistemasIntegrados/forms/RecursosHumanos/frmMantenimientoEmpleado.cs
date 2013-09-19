@@ -18,6 +18,23 @@ namespace forms.RecursosHumanos
 
     public partial class frmMantenimientoEmpleado : Form
     {
+        #region "Distributed by security team 3/3"
+        //si este bloque ha sido parcial o totalmente editado, los miembros del equipo de seguridad no 
+        //se responzabilizan en el caso de que exista un mal funcionamiento de este form.
+        private void Seguridad()
+        {
+            //lecturas
+            btnBuscarCedula.Visible = frmPrincipal.Lectura;
+            //escrituras
+            tsbNuevo.Visible = frmPrincipal.Escritura;
+            tsbGuardar.Visible = frmPrincipal.Escritura;
+            tsbModificar.Visible = frmPrincipal.Escritura;
+            //eliminacion
+            tsbEliminar.Visible = frmPrincipal.Eliminacion;
+        }
+
+        #endregion
+
         public frmMantenimientoEmpleado()
         {
             InitializeComponent();
@@ -242,11 +259,11 @@ namespace forms.RecursosHumanos
 
 
 
-        private void tsbNuevo_Click(object sender, EventArgs e)
+        private void tsbNuevo_Click_1(object sender, EventArgs e)
         {
             Limpiar();
-            txtid .Text = Convert.ToString(dato.getIdSiguiente());
-            
+            txtid.Text = Convert.ToString(dato.getIdSiguiente());
+
         }
 
         private void tsbGuardar_Click(object sender, EventArgs e)
@@ -307,9 +324,10 @@ namespace forms.RecursosHumanos
         private void btnBuscarCedula_Click(object sender, EventArgs e)
         {
             frmMConsultaEmpleado cPer = new frmMConsultaEmpleado();
-           
+            cPer.band = 1;
             cPer.ShowDialog();
             clas = cPer.p ;
+           
             txtid.Text = Convert.ToString(clas.IdPersona  );
             txtCedula.Text = Convert.ToString(clas.Identificacion);
             solo = clas.IdEmpresa;
@@ -353,6 +371,7 @@ namespace forms.RecursosHumanos
             {
                 Set();
             }
+            Seguridad();
         }
 
         private void tsbModificar_Click_1(object sender, EventArgs e)
@@ -399,6 +418,13 @@ namespace forms.RecursosHumanos
                 frmMantenimientoEmpleado_event_Click(sender, e);
             }
         }
+
+        private void txtid_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
 
      
 

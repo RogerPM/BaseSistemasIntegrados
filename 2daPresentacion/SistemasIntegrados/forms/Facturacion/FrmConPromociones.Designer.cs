@@ -1,4 +1,4 @@
-﻿namespace forms.Facturacion.Consultas
+﻿namespace forms.Facturacion
 {
     partial class FrmConPromociones
     {
@@ -40,7 +40,7 @@
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(705, 215);
+            this.groupBox1.Size = new System.Drawing.Size(705, 247);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -50,15 +50,16 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 16);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(699, 196);
+            this.dataGridView1.Size = new System.Drawing.Size(699, 228);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(340, 256);
+            this.button1.Location = new System.Drawing.Point(338, 266);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(81, 24);
             this.button1.TabIndex = 1;
             this.button1.Text = "Salir";
             this.button1.UseVisualStyleBackColor = true;

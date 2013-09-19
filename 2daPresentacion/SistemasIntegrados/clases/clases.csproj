@@ -31,12 +31,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.1.Core, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.1, Version=12.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,9 +53,11 @@
     <Compile Include="ActivoFijo\clsActivoFijo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ActivoFijo\clsArticulo_SuministroOfic.cs" />
     <Compile Include="ActivoFijo\clsBajaActivo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ActivoFijo\clsBajaActivoProc.cs" />
     <Compile Include="ActivoFijo\clsCodigoBarra.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -62,6 +70,8 @@
     <Compile Include="ActivoFijo\clsDepreciacionDet.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ActivoFijo\clsEdificio.cs" />
+    <Compile Include="ActivoFijo\clsEquipoMaquinariaMebles.cs" />
     <Compile Include="ActivoFijo\clsGridCodigoBarra.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -74,40 +84,81 @@
     <Compile Include="ActivoFijo\clsMensajesActivoFijos.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ActivoFijo\clsMotivoBaja.cs" />
     <Compile Include="ActivoFijo\clsPrueba.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ActivoFijo\clsReporte.cs" />
     <Compile Include="ActivoFijo\clsRevalorizacion.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ActivoFijo\clsSubgrupoActivoFijo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ActivoFijo\clsTerreno.cs" />
+    <Compile Include="ActivoFijo\clsTransferencia.cs" />
+    <Compile Include="ActivoFijo\clsVehiculos.cs" />
+    <Compile Include="ActivoFijo\clsventaActivo.cs" />
+    <Compile Include="ActivoFijo\clsventaActivocab.cs" />
+    <Compile Include="ActivoFijo\clsventaActivodet.cs" />
     <Compile Include="Compras\clsComprasPersona.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Compras\clscompras_articulos.cs" />
-    <Compile Include="Compras\clscompras_grupo.cs" />
-    <Compile Include="Compras\clscompras_subgrupo.cs" />
-    <Compile Include="Compras\clsConsolidacionPedido.cs" />
-    <Compile Include="Compras\clsConsolidacionPedidoDet.cs" />
-    <Compile Include="Compras\clsConsolidacionPedidoDetalleVista.cs" />
-    <Compile Include="Compras\clsConsolidacionPedidoVista.cs" />
-    <Compile Include="Compras\clsCotizacionCab.cs" />
-    <Compile Include="Compras\clsCotizacionCabecera_Vista.cs" />
-    <Compile Include="Compras\clsCotizacionDet.cs" />
-    <Compile Include="Compras\clsCotizacionDetalle_Vista.cs" />
-    <Compile Include="Compras\clsOrdenCompraCabecera_Vista.cs" />
-    <Compile Include="Compras\clsOrdenCompraDetalle_Vista.cs" />
+    <Compile Include="Compras\clscompras_articulos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\clscompras_grupo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\clscompras_subgrupo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\clsConsolidacionPedido.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\clsConsolidacionPedidoDet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\clsConsolidacionPedidoDetalleVista.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\clsConsolidacionPedidoVista.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\clsCotizacionCab.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\clsCotizacionCabecera_Vista.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\clsCotizacionDet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\clsCotizacionDetalle_Vista.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\clsOrdenCompraCabecera_Vista.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\clsOrdenCompraDetalle_Vista.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Compras\clsProveedor.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Compras\clsProveedorDescripcion.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Compras\clsSolicitud.cs" />
-    <Compile Include="Compras\clsSolicitudDet.cs" />
-    <Compile Include="Compras\clsSolicitud_DetT.cs" />
+    <Compile Include="Compras\clsRptSolicitud1.cs" />
+    <Compile Include="Compras\clsSolicitud.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\clsSolicitudDet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compras\clsSolicitud_DetT.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Compras\MensajesCompras.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -120,10 +171,14 @@
     <Compile Include="Contabilidad\clsModeloAsiento.cs" />
     <Compile Include="Contabilidad\clsModulo.cs" />
     <Compile Include="Contabilidad\clsPeriodoContable.cs" />
+    <Compile Include="Contabilidad\clsReporteLB.cs" />
+    <Compile Include="Contabilidad\clsResultado.cs" />
+    <Compile Include="Contabilidad\clsRPTEstadoResultado.cs" />
     <Compile Include="Contabilidad\clsSaldo.cs" />
     <Compile Include="Contabilidad\clsTipoCuenta.cs" />
     <Compile Include="Contabilidad\clsTipoTransaccion.cs" />
     <Compile Include="Contabilidad\clsvwComprobanteMayorizar.cs" />
+    <Compile Include="Contabilidad\clsvwlibrodiario.cs" />
     <Compile Include="Contabilidad\DatEnt.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -133,58 +188,113 @@
     <Compile Include="Contabilidad\EPeriodoContable.cs" />
     <Compile Include="Contabilidad\NModeloAsiento.cs" />
     <Compile Include="Contabilidad\NPeriodo.cs" />
-    <Compile Include="CuentasxCobrar\clsAperturaCaja.cs" />
-    <Compile Include="CuentasxCobrar\clsAperturaDet.cs" />
-    <Compile Include="CuentasxCobrar\clsBanco.cs" />
-    <Compile Include="CuentasxCobrar\clsCierreCaja.cs" />
-    <Compile Include="CuentasxCobrar\clsCuentaBancaria.cs" />
-    <Compile Include="CuentasxCobrar\clsGridCierreCaja.cs" />
-    <Compile Include="CuentasxCobrar\clsInversion.cs" />
-    <Compile Include="CuentasxCobrar\clsMensaje.cs" />
-    <Compile Include="CuentasxCobrar\clsMonetarioDetalle.cs" />
-    <Compile Include="CuentasxCobrar\clsMovimientobancario.cs" />
-    <Compile Include="CuentasxCobrar\clsPersonaCXC.cs" />
-    <Compile Include="CuentasxCobrar\clsTarjetaCredito.cs" />
-    <Compile Include="CuentasxCobrar\clsTipoInversion.cs" />
-    <Compile Include="CuentasxCobrar\clsUnidadTiempo.cs" />
-    <Compile Include="CuentasxCobrar\ObjetoGenerico.cs" />
-    <Compile Include="Cuentasxpagar\clsBancosCXP.cs" />
-    <Compile Include="Cuentasxpagar\clsCtaBancaria2.cs" />
-    <Compile Include="Cuentasxpagar\clsCuentaBancaria2.cs">
+    <Compile Include="CuentasxCobrar\clsAperturaCaja.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Cuentasxpagar\clsCuentaPorPagar.cs" />
-    <Compile Include="Cuentasxpagar\clsCuentaPorPagarDetalle.cs" />
-    <Compile Include="Cuentasxpagar\clsDetalleTelefono.cs" />
-    <Compile Include="Cuentasxpagar\clsDetalleTelefonoCXP.cs" />
-    <Compile Include="Cuentasxpagar\clsDetCredito.cs" />
+    <Compile Include="CuentasxCobrar\clsAperturaDet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsBanco.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsCierreCaja.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsCobro.cs" />
+    <Compile Include="CuentasxCobrar\clsCobroDet.cs" />
+    <Compile Include="CuentasxCobrar\clsconciliacion.cs" />
+    <Compile Include="CuentasxCobrar\clsConciliacionBancaria.cs" />
+    <Compile Include="CuentasxCobrar\clsCuentaBancaria.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsCuentaxCobrar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsCuentaxCobrarDet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsGridCierreCaja.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsInversion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsMensaje.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsMonetarioDetalle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsMovimientobancario.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsPagocab.cs" />
+    <Compile Include="CuentasxCobrar\clsPagodet.cs" />
+    <Compile Include="CuentasxCobrar\clsPersonaCXC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsTarjetaCredito.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsTipoInversion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\clsUnidadTiempo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CuentasxCobrar\ObjetoGenerico.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsBancosCXP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsCtaBancaria2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsCuentaPorPagar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsCuentaPorPagarDetalle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsDetalleTelefono.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsDetalleTelefonoCXP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsDetCredito.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Cuentasxpagar\clsEmpresaServicio.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Cuentasxpagar\clsFrecuencia.cs" />
-    <Compile Include="Cuentasxpagar\clsFrecuenciaPago.cs">
+    <Compile Include="Cuentasxpagar\clsFrecuencia.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Cuentasxpagar\clsImpuesto.cs">
+    <Compile Include="Cuentasxpagar\clsImpuestoCuenta.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Cuentasxpagar\clsImpuestoCuenta.cs" />
-    <Compile Include="Cuentasxpagar\clsImpuestos.cs" />
+    <Compile Include="Cuentasxpagar\clsImpuestos.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Cuentasxpagar\clsMedioPago.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Cuentasxpagar\clsMensaje.cs" />
     <Compile Include="Cuentasxpagar\clsMensajeCxP.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Cuentasxpagar\clsMsgCuentasPorPagar.cs" />
-    <Compile Include="Cuentasxpagar\clsOrdenPago.cs">
+    <Compile Include="Cuentasxpagar\clsMsgCuentasPorPagar.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Cuentasxpagar\clsOrdenPagoCab.cs" />
-    <Compile Include="Cuentasxpagar\clsOrdenPagoDet.cs" />
-    <Compile Include="Cuentasxpagar\clsOrdenPagoDetalle.cs">
+    <Compile Include="Cuentasxpagar\clsOrdenPagoCab.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Cuentasxpagar\clsOrdenPagoDet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsOrdenPagoEmpleadoDet.cs" />
     <Compile Include="Cuentasxpagar\clsPago.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -197,8 +307,14 @@
     <Compile Include="Cuentasxpagar\clsPagoDos.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Cuentasxpagar\clsTipoPersonaCXP.cs" />
-    <Compile Include="Cuentasxpagar\clsTipoTelefonoCXP.cs" />
+    <Compile Include="Cuentasxpagar\clsTipoPersonaCXP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\clsTipoTelefonoCXP.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cuentasxpagar\lista.cs" />
+    <Compile Include="Cuentasxpagar\ReporteClase.cs" />
     <Compile Include="Inventario\clsArticulo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -221,6 +337,8 @@
     <Compile Include="Inventario\clsIngresoEgresoDET.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Inventario\clsLlegadaMercaderia.cs" />
+    <Compile Include="Inventario\clsLlegadaMercaderiaDet.cs" />
     <Compile Include="Inventario\clsMarca.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -230,9 +348,11 @@
     <Compile Include="Inventario\clsMotivo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Inventario\clsOrdenCompraDET.cs" />
     <Compile Include="Inventario\clsPercha.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Inventario\clsrptIngreso.cs" />
     <Compile Include="Inventario\clsTipoArticulo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -251,6 +371,7 @@
     <Compile Include="Inventario\clsTipoMovimiento.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Inventario\clsTomaFisica.cs" />
     <Compile Include="Inventario\clsTomaFisicaCAB.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -275,14 +396,20 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="RecursosHumanos\clsAcademico.cs" />
+    <Compile Include="RecursosHumanos\clsAcademico.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsAnticipoCabecera.cs" />
+    <Compile Include="RecursosHumanos\clsAnticipoDetalle.cs" />
     <Compile Include="RecursosHumanos\clsCargo.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="RecursosHumanos\clsCargoxDepartamento.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="RecursosHumanos\clsContrato.cs" />
+    <Compile Include="RecursosHumanos\clsContrato.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="RecursosHumanos\clsDepartamento.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -301,13 +428,19 @@
     <Compile Include="RecursosHumanos\clsNominaDet.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="RecursosHumanos\clsOrdenPagCabRH.cs" />
+    <Compile Include="RecursosHumanos\clsOrdenPagoEmpleadoDetalle.cs" />
     <Compile Include="RecursosHumanos\clsPersona.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="RecursosHumanos\clsPersonaxCargo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="RecursosHumanos\clsPersonaxTitulo.cs" />
+    <Compile Include="RecursosHumanos\clsPersonaxTitulo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsPrestamo.cs" />
+    <Compile Include="RecursosHumanos\clsReporte.cs" />
     <Compile Include="RecursosHumanos\clsTipoContrato.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -323,29 +456,91 @@
     <Compile Include="RecursosHumanos\clsTitulo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="RecursosHumanos\clsTrabajoDiarioCab.cs" />
-    <Compile Include="RecursosHumanos\clsTrabajoDiarioDet.cs" />
+    <Compile Include="RecursosHumanos\clsTrabajoDiario.cs" />
+    <Compile Include="RecursosHumanos\clsTrabajoDiarioCab.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\clsTrabajoDiarioDet.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="RecursosHumanos\clsUniversidad.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Seguridad\clsEmpresa.cs" />
-    <Compile Include="Seguridad\clsEstado.cs" />
-    <Compile Include="Seguridad\clsHorario.cs" />
-    <Compile Include="Seguridad\clsImagen.cs" />
-    <Compile Include="Seguridad\clsMensajesSeguridad.cs" />
-    <Compile Include="Seguridad\clsModulo.cs" />
-    <Compile Include="Seguridad\clsPerfil.cs" />
-    <Compile Include="Seguridad\clsMenuXUsuario.cs" />
-    <Compile Include="Seguridad\clsModuloR.cs" />
-    <Compile Include="Seguridad\clsMenu.cs" />
-    <Compile Include="Seguridad\clsUsuario.cs" />
-    <Compile Include="Seguridad\clsUsuarioPorEmpresa.cs" />
-    <Compile Include="Seguridad\clsVwUsuarioInformacion.cs" />
-    <Compile Include="Seguridad\clsVwUsuarioPermisos.cs" />
-    <Compile Include="Taller\clsArticulo.cs" />
-    <Compile Include="Taller\clsCliente.cs" />
-    <Compile Include="Taller\clsMensajesTaller.cs" />
-    <Compile Include="Taller\clsTiposTrabajos.cs" />
+    <Compile Include="Seguridad\clsEmpresa.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsEstado.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsHistorial.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsHorario.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsImagen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsMensajesSeguridad.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsMenu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsMenuXUsuario.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsModulo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsModuloR.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsPerfil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsRptAccesoUsuarios.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsRptPxU.cs" />
+    <Compile Include="Seguridad\clsUsuario.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsUsuarioPorEmpresa.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsVwIniciosDeSesion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsVwUsuarioInformacion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Seguridad\clsVwUsuarioPermisos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Taller\clsArticulo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Taller\clsCliente.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Taller\clsConsultaClienteP.cs" />
+    <Compile Include="Taller\clsFormaPago.cs" />
+    <Compile Include="Taller\clsLiquidacion.cs" />
+    <Compile Include="Taller\clsManoObra.cs" />
+    <Compile Include="Taller\clsMensajesTaller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Taller\clsOrdenTrabajo.cs" />
+    <Compile Include="Taller\clsOrdenTrabajoR.cs" />
+    <Compile Include="Taller\clsOtros.cs" />
+    <Compile Include="Taller\clsPresupuesto.cs" />
+    <Compile Include="Taller\clsPresupuestoMO.cs" />
+    <Compile Include="Taller\clsTipoIdentificacion.cs" />
+    <Compile Include="Taller\clsTipoPersona.cs" />
+    <Compile Include="Taller\clsTiposTrabajos.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Facturacion\" />

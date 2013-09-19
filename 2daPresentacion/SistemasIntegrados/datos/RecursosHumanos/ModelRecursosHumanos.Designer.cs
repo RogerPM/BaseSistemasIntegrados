@@ -18,80 +18,82 @@ using System.Runtime.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Academico__IdEmp__1BC821DD", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Academico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Academico), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Academico__IdTit__1AD3FDA4", "Titulo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Titulo), "Academico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Academico), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Academico__IdUni__1CBC4616", "Universidad", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Universidad), "Academico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Academico), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__AnticipoC__IdEmp__3493CFA7", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "AnticipoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.AnticipoCab), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__AnticipoDet__3A4CA8FD", "AnticipoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.AnticipoCab), "AnticipoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.AnticipoDet), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__AnticipoD__IdEmp__395884C4", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "AnticipoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.AnticipoDet), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Beneficio__IdEmp__3F115E1A", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Beneficios", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Beneficios), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__CargaFami__IdEmp__2CF2ADDF", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "CargaFamiliar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.CargaFamiliar), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__CargaFami__IdPar__2EDAF651", "Parentesco", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Parentesco), "CargaFamiliar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.CargaFamiliar), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__CargoxDep__IdDep__08B54D69", "Departamento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Departamento), "CargoxDepartamento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.CargoxDepartamento), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Contrato__IdEmpr__5224328E", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Contrato", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Contrato), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Contrato__IdJorn__55F4C372", "Jornada", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Jornada), "Contrato", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Contrato), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Contrato__IdTipo__540C7B00", "TipoContrato", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.TipoContrato), "Contrato", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Contrato), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Liquidacion__671F4F74", "Contrato", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Contrato), "Liquidacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Liquidacion), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Curso__IdEmpresa__45F365D3", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Curso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Curso), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__PersonaxC__IdCur__5165187F", "Curso", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Curso), "PersonaxCurso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxCurso), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__PersonaxD__IdDep__7D439ABD", "Departamento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Departamento), "PersonaxDepartamento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxDepartamento), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Empleado__IdEmpr__239E4DCF", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Empleado", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Empleado), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Maternidad__2A4B4B5E", "Empleado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empleado), "Maternidad", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Maternidad), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Jornada__IdEmpre__6C190EBB", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Jornada", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Jornada), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Jornada__IdTipoJ__6B24EA82", "TipoJornada", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.TipoJornada), "Jornada", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Jornada), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Liquidaci__IdEmp__690797E6", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Liquidacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Liquidacion), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Multa__IdEmpresa__71D1E811", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Multa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Multa), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__MultaxPer__IdMul__76969D2E", "Multa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Multa), "MultaxPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.MultaxPersona), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__MultaxPer__IdEmp__778AC167", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "MultaxPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.MultaxPersona), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__NominaCab__IdEmp__43D61337", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "NominaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.NominaCab), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__NominaDet__489AC854", "NominaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.NominaCab), "NominaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.NominaDet), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Parentesc__IdEmp__282DF8C2", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Parentesco", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Parentesco), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Permiso__IdEmpre__625A9A57", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Permiso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Permiso), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Permiso__IdTipoP__6166761E", "TipoPermiso", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.TipoPermiso), "Permiso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Permiso), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__PersonaxC__IdEmp__22751F6C", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "PersonaxCargo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxCargo), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__PersonaxC__IdEmp__4F7CD00D", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "PersonaxCurso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxCurso), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__PersonaxD__IdEmp__7E37BEF6", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "PersonaxDepartamento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxDepartamento), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__PersonaxT__IdEmp__14270015", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "PersonaxTitulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxTitulo), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__PersonaxT__IdTit__1332DBDC", "Titulo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Titulo), "PersonaxTitulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxTitulo), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Prestamo__IdEmpr__793DFFAF", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Prestamo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Prestamo), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Prestamo__IdTipo__7A3223E8", "TipoPrestamo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.TipoPrestamo), "Prestamo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Prestamo), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Telefono__IdTipo__5BE2A6F2", "TipoTelefono", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.TipoTelefono), "Telefono", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Telefono), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__TipoContr__IdEmp__4D5F7D71", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TipoContrato", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TipoContrato), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__TipoIdent__IdEmp__173876EA", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TipoIdentificacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TipoIdentificacion), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__TipoJorna__IdEmp__66603565", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TipoJornada", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TipoJornada), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__TipoPermi__IdEmp__5AB9788F", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TipoPermiso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TipoPermiso), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__TipoPerso__IdEmp__117F9D94", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TipoPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TipoPersona), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__TipoPrest__IdEmp__73852659", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TipoPrestamo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TipoPrestamo), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__TipoTelef__IdEmp__571DF1D5", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TipoTelefono", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TipoTelefono), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Titulo__IdEmpres__60A75C0F", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Titulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Titulo), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Titulo__IdUniver__619B8048", "Universidad", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Universidad), "Titulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Titulo), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__TrabajoDi__IdEmp__7EF6D905", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TrabajoDiarioCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TrabajoDiarioCab), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__TrabajoDiarioDet__04AFB25B", "TrabajoDiarioCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.TrabajoDiarioCab), "TrabajoDiarioDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TrabajoDiarioDet), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Universid__IdEmp__4AB81AF0", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Universidad", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Universidad), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Vacacion__IdEmpr__6EC0713C", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Vacacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Vacacion), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Academico__IdPer__19DFD96B", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Academico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Academico), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__AnticipoC__IdEmp__339FAB6E", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "AnticipoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.AnticipoCab), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__CargaFami__IdPer__2DE6D218", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "CargaFamiliar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.CargaFamiliar), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Contrato__IdPers__531856C7", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Contrato", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Contrato), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Empleado__IdPers__24927208", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Empleado", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Empleado), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Jornada__IdPerso__6D0D32F4", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Jornada", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Jornada), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Liquidaci__IdPer__681373AD", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Liquidacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Liquidacion), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__MultaxPer__IdPer__787EE5A0", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "MultaxPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.MultaxPersona), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Permiso__IdEmple__607251E5", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Permiso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Permiso), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Persona__IdEmpre__1BFD2C07", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Persona), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Persona__IdTipoP__1CF15040", "TipoPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.TipoPersona), "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Persona), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Persona__TipoIde__1DE57479", "TipoIdentificacion", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.TipoIdentificacion), "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Persona), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__PersonaxC__IdPer__2180FB33", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "PersonaxCargo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxCargo), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__PersonaxC__IdPer__5070F446", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "PersonaxCurso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxCurso), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__PersonaxD__IdPer__7F2BE32F", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "PersonaxDepartamento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxDepartamento), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__PersonaxT__IdPer__151B244E", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "PersonaxTitulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxTitulo), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Prestamo__IdPers__7849DB76", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Prestamo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Prestamo), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Proveedor__IdPer__412EB0B6", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Proveedor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Proveedor), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__TrabajoDi__IdEmp__03BB8E22", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "TrabajoDiarioDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TrabajoDiarioDet), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Vacacion__IdEmpl__6DCC4D03", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Vacacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Vacacion), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__CargoxDep__IdCar__07C12930", "Cargo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Cargo), "CargoxDepartamento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.CargoxDepartamento), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__Contrato__IdCarg__55009F39", "Cargo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Cargo), "Contrato", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Contrato), true)]
-[assembly: EdmRelationshipAttribute("TECAModel1", "FK__PersonaxC__IdCar__236943A5", "Cargo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Cargo), "PersonaxCargo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxCargo), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__OrdenPago__IdEmp__4F32B74A", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "OrdenPagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.OrdenPagoCab), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__OrdenPagoEmplead__53F76C67", "OrdenPagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.OrdenPagoCab), "OrdenPagoEmpleadoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.OrdenPagoEmpleadoDet), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__OrdenPago__IdEmp__54EB90A0", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "OrdenPagoEmpleadoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.OrdenPagoEmpleadoDet), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Academico__IdEmp__208CD6FA", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Academico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Academico), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Academico__IdPer__1EA48E88", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Academico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Academico), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Academico__IdTit__1F98B2C1", "Titulo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Titulo), "Academico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Academico), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Academico__IdUni__2180FB33", "Universidad", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Universidad), "Academico", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Academico), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__AnticipoC__IdEmp__3864608B", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "AnticipoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.AnticipoCab), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__AnticipoDet__3E1D39E1", "AnticipoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.AnticipoCab), "AnticipoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.AnticipoDet), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__AnticipoD__IdEmp__3D2915A8", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "AnticipoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.AnticipoDet), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__AnticipoD__IdPer__3F115E1A", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "AnticipoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.AnticipoDet), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Beneficio__IdEmp__43D61337", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Beneficios", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Beneficios), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__CargaFami__IdEmp__31B762FC", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "CargaFamiliar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.CargaFamiliar), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__CargaFami__IdPar__339FAB6E", "Parentesco", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Parentesco), "CargaFamiliar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.CargaFamiliar), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__CargaFami__IdPer__32AB8735", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "CargaFamiliar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.CargaFamiliar), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__CargoxDep__IdCar__0C85DE4D", "Cargo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Cargo), "CargoxDepartamento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.CargoxDepartamento), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Contrato__IdCarg__59C55456", "Cargo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Cargo), "Contrato", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Contrato), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__PersonaxC__IdCar__282DF8C2", "Cargo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Cargo), "PersonaxCargo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxCargo), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__CargoxDep__IdDep__0D7A0286", "Departamento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Departamento), "CargoxDepartamento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.CargoxDepartamento), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Rubro__123EB7A3", "CargoxDepartamento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.CargoxDepartamento), "Rubro", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Rubro), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Contrato__IdEmpr__56E8E7AB", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Contrato", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Contrato), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Contrato__IdJorn__5AB9788F", "Jornada", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Jornada), "Contrato", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Contrato), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Contrato__IdPers__57DD0BE4", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Contrato", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Contrato), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Contrato__IdTipo__58D1301D", "TipoContrato", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.TipoContrato), "Contrato", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Contrato), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Liquidacion__6BE40491", "Contrato", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Contrato), "Liquidacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Liquidacion), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Curso__IdEmpresa__4AB81AF0", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Curso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Curso), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__PersonaxC__IdCur__5629CD9C", "Curso", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Curso), "PersonaxCurso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxCurso), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__PersonaxD__IdDep__02084FDA", "Departamento", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Departamento), "PersonaxDepartamento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxDepartamento), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Empleado__IdEmpr__239E4DCF", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Empleado", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Empleado), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Empleado__IdPers__24927208", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Empleado", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Empleado), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Maternidad__2A4B4B5E", "Empleado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empleado), "Maternidad", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Maternidad), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Jornada__IdEmpre__70DDC3D8", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Jornada", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Jornada), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Jornada__IdPerso__71D1E811", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Jornada", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Jornada), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Jornada__IdTipoJ__6FE99F9F", "TipoJornada", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.TipoJornada), "Jornada", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Jornada), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Liquidaci__IdEmp__6DCC4D03", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Liquidacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Liquidacion), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Liquidaci__IdPer__6CD828CA", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Liquidacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Liquidacion), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Multa__IdEmpresa__76969D2E", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Multa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Multa), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__MultaxPer__IdMul__7B5B524B", "Multa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Multa), "MultaxPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.MultaxPersona), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__MultaxPer__IdEmp__7C4F7684", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "MultaxPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.MultaxPersona), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__MultaxPer__IdPer__7D439ABD", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "MultaxPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.MultaxPersona), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__NominaCab__IdEmp__489AC854", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "NominaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.NominaCab), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__NominaDet__4D5F7D71", "NominaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.NominaCab), "NominaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.NominaDet), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Parentesc__IdEmp__2CF2ADDF", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Parentesco", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Parentesco), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Permiso__IdEmple__65370702", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Permiso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Permiso), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Permiso__IdEmpre__671F4F74", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Permiso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Permiso), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Permiso__IdTipoP__662B2B3B", "TipoPermiso", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.TipoPermiso), "Permiso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Permiso), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Persona__IdEmpre__1BFD2C07", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Persona), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Persona__IdTipoP__1CF15040", "TipoPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.TipoPersona), "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Persona), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Persona__TipoIde__1DE57479", "TipoIdentificacion", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.TipoIdentificacion), "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Persona), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__PersonaxC__IdPer__2645B050", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "PersonaxCargo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxCargo), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__PersonaxC__IdPer__5535A963", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "PersonaxCurso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxCurso), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__PersonaxD__IdPer__03F0984C", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "PersonaxDepartamento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxDepartamento), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__PersonaxT__IdPer__19DFD96B", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "PersonaxTitulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxTitulo), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Prestamo__IdPers__7D0E9093", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Prestamo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Prestamo), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Proveedor__IdPer__45F365D3", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Proveedor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Proveedor), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Vacacion__IdEmpl__72910220", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Persona), "Vacacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Vacacion), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__PersonaxC__IdEmp__2739D489", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "PersonaxCargo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxCargo), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__PersonaxC__IdEmp__5441852A", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "PersonaxCurso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxCurso), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__PersonaxD__IdEmp__02FC7413", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "PersonaxDepartamento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxDepartamento), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__PersonaxT__IdEmp__18EBB532", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "PersonaxTitulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxTitulo), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__PersonaxT__IdTit__17F790F9", "Titulo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Titulo), "PersonaxTitulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.PersonaxTitulo), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Prestamo__IdEmpr__7E02B4CC", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Prestamo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Prestamo), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Rubro__IdEmpresa__1332DBDC", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Rubro", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Rubro), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Telefono__IdTipo__60A75C0F", "TipoTelefono", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.TipoTelefono), "Telefono", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Telefono), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__TipoContr__IdEmp__5224328E", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TipoContrato", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TipoContrato), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__TipoIdent__IdEmp__173876EA", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TipoIdentificacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TipoIdentificacion), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__TipoJorna__IdEmp__6B24EA82", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TipoJornada", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TipoJornada), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__TipoPermi__IdEmp__5F7E2DAC", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TipoPermiso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TipoPermiso), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__TipoPerso__IdEmp__117F9D94", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TipoPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TipoPersona), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__TipoPrest__IdEmp__7849DB76", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TipoPrestamo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TipoPrestamo), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__TipoTelef__IdEmp__5BE2A6F2", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TipoTelefono", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TipoTelefono), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Titulo__IdEmpres__656C112C", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Titulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Titulo), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Titulo__IdUniver__66603565", "Universidad", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Universidad), "Titulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Titulo), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__TrabajoDi__IdEmp__02C769E9", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "TrabajoDiario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.TrabajoDiario), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Universid__IdEmp__4F7CD00D", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Universidad", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Universidad), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__Vacacion__IdEmpr__73852659", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.RecursosHumanos.Empresa), "Vacacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.RecursosHumanos.Vacacion), true)]
 
 #endregion
 
@@ -142,6 +144,38 @@ namespace datos.RecursosHumanos
         #endregion
     
         #region ObjectSet Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<OrdenPagoCab> OrdenPagoCab
+        {
+            get
+            {
+                if ((_OrdenPagoCab == null))
+                {
+                    _OrdenPagoCab = base.CreateObjectSet<OrdenPagoCab>("OrdenPagoCab");
+                }
+                return _OrdenPagoCab;
+            }
+        }
+        private ObjectSet<OrdenPagoCab> _OrdenPagoCab;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<OrdenPagoEmpleadoDet> OrdenPagoEmpleadoDet
+        {
+            get
+            {
+                if ((_OrdenPagoEmpleadoDet == null))
+                {
+                    _OrdenPagoEmpleadoDet = base.CreateObjectSet<OrdenPagoEmpleadoDet>("OrdenPagoEmpleadoDet");
+                }
+                return _OrdenPagoEmpleadoDet;
+            }
+        }
+        private ObjectSet<OrdenPagoEmpleadoDet> _OrdenPagoEmpleadoDet;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -222,6 +256,22 @@ namespace datos.RecursosHumanos
             }
         }
         private ObjectSet<CargaFamiliar> _CargaFamiliar;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Cargo> Cargo
+        {
+            get
+            {
+                if ((_Cargo == null))
+                {
+                    _Cargo = base.CreateObjectSet<Cargo>("Cargo");
+                }
+                return _Cargo;
+            }
+        }
+        private ObjectSet<Cargo> _Cargo;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -450,6 +500,22 @@ namespace datos.RecursosHumanos
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<Persona> Persona
+        {
+            get
+            {
+                if ((_Persona == null))
+                {
+                    _Persona = base.CreateObjectSet<Persona>("Persona");
+                }
+                return _Persona;
+            }
+        }
+        private ObjectSet<Persona> _Persona;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<PersonaxCargo> PersonaxCargo
         {
             get
@@ -542,6 +608,22 @@ namespace datos.RecursosHumanos
             }
         }
         private ObjectSet<Proveedor> _Proveedor;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Rubro> Rubro
+        {
+            get
+            {
+                if ((_Rubro == null))
+                {
+                    _Rubro = base.CreateObjectSet<Rubro>("Rubro");
+                }
+                return _Rubro;
+            }
+        }
+        private ObjectSet<Rubro> _Rubro;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -690,34 +772,18 @@ namespace datos.RecursosHumanos
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<TrabajoDiarioCab> TrabajoDiarioCab
+        public ObjectSet<TrabajoDiario> TrabajoDiario
         {
             get
             {
-                if ((_TrabajoDiarioCab == null))
+                if ((_TrabajoDiario == null))
                 {
-                    _TrabajoDiarioCab = base.CreateObjectSet<TrabajoDiarioCab>("TrabajoDiarioCab");
+                    _TrabajoDiario = base.CreateObjectSet<TrabajoDiario>("TrabajoDiario");
                 }
-                return _TrabajoDiarioCab;
+                return _TrabajoDiario;
             }
         }
-        private ObjectSet<TrabajoDiarioCab> _TrabajoDiarioCab;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<TrabajoDiarioDet> TrabajoDiarioDet
-        {
-            get
-            {
-                if ((_TrabajoDiarioDet == null))
-                {
-                    _TrabajoDiarioDet = base.CreateObjectSet<TrabajoDiarioDet>("TrabajoDiarioDet");
-                }
-                return _TrabajoDiarioDet;
-            }
-        }
-        private ObjectSet<TrabajoDiarioDet> _TrabajoDiarioDet;
+        private ObjectSet<TrabajoDiario> _TrabajoDiario;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -766,41 +832,25 @@ namespace datos.RecursosHumanos
             }
         }
         private ObjectSet<Empresa> _Empresa;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Persona> Persona
-        {
-            get
-            {
-                if ((_Persona == null))
-                {
-                    _Persona = base.CreateObjectSet<Persona>("Persona");
-                }
-                return _Persona;
-            }
-        }
-        private ObjectSet<Persona> _Persona;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Cargo> Cargo
-        {
-            get
-            {
-                if ((_Cargo == null))
-                {
-                    _Cargo = base.CreateObjectSet<Cargo>("Cargo");
-                }
-                return _Cargo;
-            }
-        }
-        private ObjectSet<Cargo> _Cargo;
 
         #endregion
         #region AddTo Methods
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the OrdenPagoCab EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToOrdenPagoCab(OrdenPagoCab ordenPagoCab)
+        {
+            base.AddObject("OrdenPagoCab", ordenPagoCab);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the OrdenPagoEmpleadoDet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToOrdenPagoEmpleadoDet(OrdenPagoEmpleadoDet ordenPagoEmpleadoDet)
+        {
+            base.AddObject("OrdenPagoEmpleadoDet", ordenPagoEmpleadoDet);
+        }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the Academico EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
@@ -840,6 +890,14 @@ namespace datos.RecursosHumanos
         public void AddToCargaFamiliar(CargaFamiliar cargaFamiliar)
         {
             base.AddObject("CargaFamiliar", cargaFamiliar);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Cargo EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToCargo(Cargo cargo)
+        {
+            base.AddObject("Cargo", cargo);
         }
     
         /// <summary>
@@ -955,6 +1013,14 @@ namespace datos.RecursosHumanos
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the Persona EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToPersona(Persona persona)
+        {
+            base.AddObject("Persona", persona);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the PersonaxCargo EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToPersonaxCargo(PersonaxCargo personaxCargo)
@@ -1000,6 +1066,14 @@ namespace datos.RecursosHumanos
         public void AddToProveedor(Proveedor proveedor)
         {
             base.AddObject("Proveedor", proveedor);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Rubro EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToRubro(Rubro rubro)
+        {
+            base.AddObject("Rubro", rubro);
         }
     
         /// <summary>
@@ -1075,19 +1149,11 @@ namespace datos.RecursosHumanos
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the TrabajoDiarioCab EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the TrabajoDiario EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToTrabajoDiarioCab(TrabajoDiarioCab trabajoDiarioCab)
+        public void AddToTrabajoDiario(TrabajoDiario trabajoDiario)
         {
-            base.AddObject("TrabajoDiarioCab", trabajoDiarioCab);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the TrabajoDiarioDet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToTrabajoDiarioDet(TrabajoDiarioDet trabajoDiarioDet)
-        {
-            base.AddObject("TrabajoDiarioDet", trabajoDiarioDet);
+            base.AddObject("TrabajoDiario", trabajoDiario);
         }
     
         /// <summary>
@@ -1113,22 +1179,6 @@ namespace datos.RecursosHumanos
         {
             base.AddObject("Empresa", empresa);
         }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Persona EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToPersona(Persona persona)
-        {
-            base.AddObject("Persona", persona);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Cargo EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToCargo(Cargo cargo)
-        {
-            base.AddObject("Cargo", cargo);
-        }
 
         #endregion
     }
@@ -1141,7 +1191,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Academico")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Academico")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Academico : EntityObject
@@ -1329,16 +1379,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Academico__IdEmp__1BC821DD", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Academico__IdEmp__208CD6FA", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Academico__IdEmp__1BC821DD", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Academico__IdEmp__208CD6FA", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Academico__IdEmp__1BC821DD", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Academico__IdEmp__208CD6FA", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -1350,13 +1400,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Academico__IdEmp__1BC821DD", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Academico__IdEmp__208CD6FA", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Academico__IdEmp__1BC821DD", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Academico__IdEmp__208CD6FA", "Empresa", value);
                 }
             }
         }
@@ -1367,92 +1417,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Academico__IdTit__1AD3FDA4", "Titulo")]
-        public Titulo Titulo
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Titulo>("TECAModel1.FK__Academico__IdTit__1AD3FDA4", "Titulo").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Titulo>("TECAModel1.FK__Academico__IdTit__1AD3FDA4", "Titulo").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Titulo> TituloReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Titulo>("TECAModel1.FK__Academico__IdTit__1AD3FDA4", "Titulo");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Titulo>("TECAModel1.FK__Academico__IdTit__1AD3FDA4", "Titulo", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Academico__IdUni__1CBC4616", "Universidad")]
-        public Universidad Universidad
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Universidad>("TECAModel1.FK__Academico__IdUni__1CBC4616", "Universidad").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Universidad>("TECAModel1.FK__Academico__IdUni__1CBC4616", "Universidad").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Universidad> UniversidadReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Universidad>("TECAModel1.FK__Academico__IdUni__1CBC4616", "Universidad");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Universidad>("TECAModel1.FK__Academico__IdUni__1CBC4616", "Universidad", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Academico__IdPer__19DFD96B", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Academico__IdPer__1EA48E88", "Persona")]
         public Persona Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Academico__IdPer__19DFD96B", "Persona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Academico__IdPer__1EA48E88", "Persona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Academico__IdPer__19DFD96B", "Persona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Academico__IdPer__1EA48E88", "Persona").Value = value;
             }
         }
         /// <summary>
@@ -1464,13 +1438,89 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Academico__IdPer__19DFD96B", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Academico__IdPer__1EA48E88", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__Academico__IdPer__19DFD96B", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__Academico__IdPer__1EA48E88", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Academico__IdTit__1F98B2C1", "Titulo")]
+        public Titulo Titulo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Titulo>("TECAModel.FK__Academico__IdTit__1F98B2C1", "Titulo").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Titulo>("TECAModel.FK__Academico__IdTit__1F98B2C1", "Titulo").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Titulo> TituloReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Titulo>("TECAModel.FK__Academico__IdTit__1F98B2C1", "Titulo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Titulo>("TECAModel.FK__Academico__IdTit__1F98B2C1", "Titulo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Academico__IdUni__2180FB33", "Universidad")]
+        public Universidad Universidad
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Universidad>("TECAModel.FK__Academico__IdUni__2180FB33", "Universidad").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Universidad>("TECAModel.FK__Academico__IdUni__2180FB33", "Universidad").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Universidad> UniversidadReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Universidad>("TECAModel.FK__Academico__IdUni__2180FB33", "Universidad");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Universidad>("TECAModel.FK__Academico__IdUni__2180FB33", "Universidad", value);
                 }
             }
         }
@@ -1481,7 +1531,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="AnticipoCab")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="AnticipoCab")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class AnticipoCab : EntityObject
@@ -1492,20 +1542,20 @@ namespace datos.RecursosHumanos
         /// Create a new AnticipoCab object.
         /// </summary>
         /// <param name="numAnticipo">Initial value of the NumAnticipo property.</param>
-        /// <param name="idEmpleado">Initial value of the IdEmpleado property.</param>
         /// <param name="fecha">Initial value of the Fecha property.</param>
         /// <param name="total">Initial value of the Total property.</param>
         /// <param name="idEmpresa">Initial value of the IdEmpresa property.</param>
         /// <param name="idEstado">Initial value of the IdEstado property.</param>
-        public static AnticipoCab CreateAnticipoCab(global::System.Int32 numAnticipo, global::System.Int32 idEmpleado, global::System.DateTime fecha, global::System.Decimal total, global::System.Int32 idEmpresa, global::System.Int32 idEstado)
+        /// <param name="porcentaje">Initial value of the Porcentaje property.</param>
+        public static AnticipoCab CreateAnticipoCab(global::System.Int32 numAnticipo, global::System.DateTime fecha, global::System.Decimal total, global::System.Int32 idEmpresa, global::System.Int32 idEstado, global::System.Int32 porcentaje)
         {
             AnticipoCab anticipoCab = new AnticipoCab();
             anticipoCab.NumAnticipo = numAnticipo;
-            anticipoCab.IdEmpleado = idEmpleado;
             anticipoCab.Fecha = fecha;
             anticipoCab.Total = total;
             anticipoCab.IdEmpresa = idEmpresa;
             anticipoCab.IdEstado = idEstado;
+            anticipoCab.Porcentaje = porcentaje;
             return anticipoCab;
         }
 
@@ -1538,30 +1588,6 @@ namespace datos.RecursosHumanos
         private global::System.Int32 _NumAnticipo;
         partial void OnNumAnticipoChanging(global::System.Int32 value);
         partial void OnNumAnticipoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdEmpleado
-        {
-            get
-            {
-                return _IdEmpleado;
-            }
-            set
-            {
-                OnIdEmpleadoChanging(value);
-                ReportPropertyChanging("IdEmpleado");
-                _IdEmpleado = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdEmpleado");
-                OnIdEmpleadoChanged();
-            }
-        }
-        private global::System.Int32 _IdEmpleado;
-        partial void OnIdEmpleadoChanging(global::System.Int32 value);
-        partial void OnIdEmpleadoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1709,6 +1735,30 @@ namespace datos.RecursosHumanos
         private global::System.Int32 _IdEstado;
         partial void OnIdEstadoChanging(global::System.Int32 value);
         partial void OnIdEstadoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Porcentaje
+        {
+            get
+            {
+                return _Porcentaje;
+            }
+            set
+            {
+                OnPorcentajeChanging(value);
+                ReportPropertyChanging("Porcentaje");
+                _Porcentaje = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Porcentaje");
+                OnPorcentajeChanged();
+            }
+        }
+        private global::System.Int32 _Porcentaje;
+        partial void OnPorcentajeChanging(global::System.Int32 value);
+        partial void OnPorcentajeChanged();
 
         #endregion
     
@@ -1720,16 +1770,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__AnticipoC__IdEmp__3493CFA7", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__AnticipoC__IdEmp__3864608B", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__AnticipoC__IdEmp__3493CFA7", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__AnticipoC__IdEmp__3864608B", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__AnticipoC__IdEmp__3493CFA7", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__AnticipoC__IdEmp__3864608B", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -1741,13 +1791,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__AnticipoC__IdEmp__3493CFA7", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__AnticipoC__IdEmp__3864608B", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__AnticipoC__IdEmp__3493CFA7", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__AnticipoC__IdEmp__3864608B", "Empresa", value);
                 }
             }
         }
@@ -1758,56 +1808,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__AnticipoDet__3A4CA8FD", "AnticipoDet")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__AnticipoDet__3E1D39E1", "AnticipoDet")]
         public EntityCollection<AnticipoDet> AnticipoDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AnticipoDet>("TECAModel1.FK__AnticipoDet__3A4CA8FD", "AnticipoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AnticipoDet>("TECAModel.FK__AnticipoDet__3E1D39E1", "AnticipoDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AnticipoDet>("TECAModel1.FK__AnticipoDet__3A4CA8FD", "AnticipoDet", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__AnticipoC__IdEmp__339FAB6E", "Persona")]
-        public Persona Persona
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__AnticipoC__IdEmp__339FAB6E", "Persona").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__AnticipoC__IdEmp__339FAB6E", "Persona").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Persona> PersonaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__AnticipoC__IdEmp__339FAB6E", "Persona");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__AnticipoC__IdEmp__339FAB6E", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AnticipoDet>("TECAModel.FK__AnticipoDet__3E1D39E1", "AnticipoDet", value);
                 }
             }
         }
@@ -1818,7 +1830,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="AnticipoDet")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="AnticipoDet")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class AnticipoDet : EntityObject
@@ -1830,14 +1842,16 @@ namespace datos.RecursosHumanos
         /// </summary>
         /// <param name="numLinea">Initial value of the NumLinea property.</param>
         /// <param name="numAnticipo">Initial value of the NumAnticipo property.</param>
-        /// <param name="fechaCobro">Initial value of the FechaCobro property.</param>
+        /// <param name="idPersona">Initial value of the IdPersona property.</param>
+        /// <param name="valorLiquido">Initial value of the ValorLiquido property.</param>
         /// <param name="idEmpresa">Initial value of the IdEmpresa property.</param>
-        public static AnticipoDet CreateAnticipoDet(global::System.Int32 numLinea, global::System.Int32 numAnticipo, global::System.DateTime fechaCobro, global::System.Int32 idEmpresa)
+        public static AnticipoDet CreateAnticipoDet(global::System.Int32 numLinea, global::System.Int32 numAnticipo, global::System.Int32 idPersona, global::System.Decimal valorLiquido, global::System.Int32 idEmpresa)
         {
             AnticipoDet anticipoDet = new AnticipoDet();
             anticipoDet.NumLinea = numLinea;
             anticipoDet.NumAnticipo = numAnticipo;
-            anticipoDet.FechaCobro = fechaCobro;
+            anticipoDet.IdPersona = idPersona;
+            anticipoDet.ValorLiquido = valorLiquido;
             anticipoDet.IdEmpresa = idEmpresa;
             return anticipoDet;
         }
@@ -1901,48 +1915,48 @@ namespace datos.RecursosHumanos
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime FechaCobro
+        public global::System.Int32 IdPersona
         {
             get
             {
-                return _FechaCobro;
+                return _IdPersona;
             }
             set
             {
-                OnFechaCobroChanging(value);
-                ReportPropertyChanging("FechaCobro");
-                _FechaCobro = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FechaCobro");
-                OnFechaCobroChanged();
+                OnIdPersonaChanging(value);
+                ReportPropertyChanging("IdPersona");
+                _IdPersona = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPersona");
+                OnIdPersonaChanged();
             }
         }
-        private global::System.DateTime _FechaCobro;
-        partial void OnFechaCobroChanging(global::System.DateTime value);
-        partial void OnFechaCobroChanged();
+        private global::System.Int32 _IdPersona;
+        partial void OnIdPersonaChanging(global::System.Int32 value);
+        partial void OnIdPersonaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> FechaModificacion
+        public global::System.Decimal ValorLiquido
         {
             get
             {
-                return _FechaModificacion;
+                return _ValorLiquido;
             }
             set
             {
-                OnFechaModificacionChanging(value);
-                ReportPropertyChanging("FechaModificacion");
-                _FechaModificacion = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FechaModificacion");
-                OnFechaModificacionChanged();
+                OnValorLiquidoChanging(value);
+                ReportPropertyChanging("ValorLiquido");
+                _ValorLiquido = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ValorLiquido");
+                OnValorLiquidoChanged();
             }
         }
-        private Nullable<global::System.DateTime> _FechaModificacion;
-        partial void OnFechaModificacionChanging(Nullable<global::System.DateTime> value);
-        partial void OnFechaModificacionChanged();
+        private global::System.Decimal _ValorLiquido;
+        partial void OnValorLiquidoChanging(global::System.Decimal value);
+        partial void OnValorLiquidoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -1981,16 +1995,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__AnticipoDet__3A4CA8FD", "AnticipoCab")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__AnticipoDet__3E1D39E1", "AnticipoCab")]
         public AnticipoCab AnticipoCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AnticipoCab>("TECAModel1.FK__AnticipoDet__3A4CA8FD", "AnticipoCab").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AnticipoCab>("TECAModel.FK__AnticipoDet__3E1D39E1", "AnticipoCab").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AnticipoCab>("TECAModel1.FK__AnticipoDet__3A4CA8FD", "AnticipoCab").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AnticipoCab>("TECAModel.FK__AnticipoDet__3E1D39E1", "AnticipoCab").Value = value;
             }
         }
         /// <summary>
@@ -2002,13 +2016,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AnticipoCab>("TECAModel1.FK__AnticipoDet__3A4CA8FD", "AnticipoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AnticipoCab>("TECAModel.FK__AnticipoDet__3E1D39E1", "AnticipoCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<AnticipoCab>("TECAModel1.FK__AnticipoDet__3A4CA8FD", "AnticipoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<AnticipoCab>("TECAModel.FK__AnticipoDet__3E1D39E1", "AnticipoCab", value);
                 }
             }
         }
@@ -2019,16 +2033,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__AnticipoD__IdEmp__395884C4", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__AnticipoD__IdEmp__3D2915A8", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__AnticipoD__IdEmp__395884C4", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__AnticipoD__IdEmp__3D2915A8", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__AnticipoD__IdEmp__395884C4", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__AnticipoD__IdEmp__3D2915A8", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -2040,13 +2054,51 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__AnticipoD__IdEmp__395884C4", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__AnticipoD__IdEmp__3D2915A8", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__AnticipoD__IdEmp__395884C4", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__AnticipoD__IdEmp__3D2915A8", "Empresa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__AnticipoD__IdPer__3F115E1A", "Persona")]
+        public Persona Persona
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__AnticipoD__IdPer__3F115E1A", "Persona").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__AnticipoD__IdPer__3F115E1A", "Persona").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Persona> PersonaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__AnticipoD__IdPer__3F115E1A", "Persona");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__AnticipoD__IdPer__3F115E1A", "Persona", value);
                 }
             }
         }
@@ -2057,7 +2109,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Beneficios")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Beneficios")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Beneficios : EntityObject
@@ -2193,16 +2245,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Beneficio__IdEmp__3F115E1A", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Beneficio__IdEmp__43D61337", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Beneficio__IdEmp__3F115E1A", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Beneficio__IdEmp__43D61337", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Beneficio__IdEmp__3F115E1A", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Beneficio__IdEmp__43D61337", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -2214,13 +2266,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Beneficio__IdEmp__3F115E1A", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Beneficio__IdEmp__43D61337", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Beneficio__IdEmp__3F115E1A", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Beneficio__IdEmp__43D61337", "Empresa", value);
                 }
             }
         }
@@ -2231,7 +2283,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="CargaFamiliar")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="CargaFamiliar")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class CargaFamiliar : EntityObject
@@ -2446,16 +2498,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__CargaFami__IdEmp__2CF2ADDF", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CargaFami__IdEmp__31B762FC", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__CargaFami__IdEmp__2CF2ADDF", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__CargaFami__IdEmp__31B762FC", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__CargaFami__IdEmp__2CF2ADDF", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__CargaFami__IdEmp__31B762FC", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -2467,13 +2519,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__CargaFami__IdEmp__2CF2ADDF", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__CargaFami__IdEmp__31B762FC", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__CargaFami__IdEmp__2CF2ADDF", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__CargaFami__IdEmp__31B762FC", "Empresa", value);
                 }
             }
         }
@@ -2484,16 +2536,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__CargaFami__IdPar__2EDAF651", "Parentesco")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CargaFami__IdPar__339FAB6E", "Parentesco")]
         public Parentesco Parentesco
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Parentesco>("TECAModel1.FK__CargaFami__IdPar__2EDAF651", "Parentesco").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Parentesco>("TECAModel.FK__CargaFami__IdPar__339FAB6E", "Parentesco").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Parentesco>("TECAModel1.FK__CargaFami__IdPar__2EDAF651", "Parentesco").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Parentesco>("TECAModel.FK__CargaFami__IdPar__339FAB6E", "Parentesco").Value = value;
             }
         }
         /// <summary>
@@ -2505,13 +2557,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Parentesco>("TECAModel1.FK__CargaFami__IdPar__2EDAF651", "Parentesco");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Parentesco>("TECAModel.FK__CargaFami__IdPar__339FAB6E", "Parentesco");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Parentesco>("TECAModel1.FK__CargaFami__IdPar__2EDAF651", "Parentesco", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Parentesco>("TECAModel.FK__CargaFami__IdPar__339FAB6E", "Parentesco", value);
                 }
             }
         }
@@ -2522,16 +2574,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__CargaFami__IdPer__2DE6D218", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CargaFami__IdPer__32AB8735", "Persona")]
         public Persona Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__CargaFami__IdPer__2DE6D218", "Persona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__CargaFami__IdPer__32AB8735", "Persona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__CargaFami__IdPer__2DE6D218", "Persona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__CargaFami__IdPer__32AB8735", "Persona").Value = value;
             }
         }
         /// <summary>
@@ -2543,13 +2595,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__CargaFami__IdPer__2DE6D218", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__CargaFami__IdPer__32AB8735", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__CargaFami__IdPer__2DE6D218", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__CargaFami__IdPer__32AB8735", "Persona", value);
                 }
             }
         }
@@ -2560,7 +2612,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Cargo")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Cargo")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Cargo : EntityObject
@@ -2696,18 +2748,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__CargoxDep__IdCar__07C12930", "CargoxDepartamento")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CargoxDep__IdCar__0C85DE4D", "CargoxDepartamento")]
         public EntityCollection<CargoxDepartamento> CargoxDepartamento
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CargoxDepartamento>("TECAModel1.FK__CargoxDep__IdCar__07C12930", "CargoxDepartamento");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CargoxDepartamento>("TECAModel.FK__CargoxDep__IdCar__0C85DE4D", "CargoxDepartamento");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CargoxDepartamento>("TECAModel1.FK__CargoxDep__IdCar__07C12930", "CargoxDepartamento", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CargoxDepartamento>("TECAModel.FK__CargoxDep__IdCar__0C85DE4D", "CargoxDepartamento", value);
                 }
             }
         }
@@ -2718,18 +2770,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Contrato__IdCarg__55009F39", "Contrato")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Contrato__IdCarg__59C55456", "Contrato")]
         public EntityCollection<Contrato> Contrato
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Contrato>("TECAModel1.FK__Contrato__IdCarg__55009F39", "Contrato");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Contrato>("TECAModel.FK__Contrato__IdCarg__59C55456", "Contrato");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Contrato>("TECAModel1.FK__Contrato__IdCarg__55009F39", "Contrato", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Contrato>("TECAModel.FK__Contrato__IdCarg__59C55456", "Contrato", value);
                 }
             }
         }
@@ -2740,18 +2792,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxC__IdCar__236943A5", "PersonaxCargo")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxC__IdCar__282DF8C2", "PersonaxCargo")]
         public EntityCollection<PersonaxCargo> PersonaxCargo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxCargo>("TECAModel1.FK__PersonaxC__IdCar__236943A5", "PersonaxCargo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxCargo>("TECAModel.FK__PersonaxC__IdCar__282DF8C2", "PersonaxCargo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxCargo>("TECAModel1.FK__PersonaxC__IdCar__236943A5", "PersonaxCargo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxCargo>("TECAModel.FK__PersonaxC__IdCar__282DF8C2", "PersonaxCargo", value);
                 }
             }
         }
@@ -2762,7 +2814,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="CargoxDepartamento")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="CargoxDepartamento")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class CargoxDepartamento : EntityObject
@@ -2925,54 +2977,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__CargoxDep__IdDep__08B54D69", "Departamento")]
-        public Departamento Departamento
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("TECAModel1.FK__CargoxDep__IdDep__08B54D69", "Departamento").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("TECAModel1.FK__CargoxDep__IdDep__08B54D69", "Departamento").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Departamento> DepartamentoReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("TECAModel1.FK__CargoxDep__IdDep__08B54D69", "Departamento");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Departamento>("TECAModel1.FK__CargoxDep__IdDep__08B54D69", "Departamento", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__CargoxDep__IdCar__07C12930", "Cargo")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CargoxDep__IdCar__0C85DE4D", "Cargo")]
         public Cargo Cargo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel1.FK__CargoxDep__IdCar__07C12930", "Cargo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel.FK__CargoxDep__IdCar__0C85DE4D", "Cargo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel1.FK__CargoxDep__IdCar__07C12930", "Cargo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel.FK__CargoxDep__IdCar__0C85DE4D", "Cargo").Value = value;
             }
         }
         /// <summary>
@@ -2984,13 +2998,73 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel1.FK__CargoxDep__IdCar__07C12930", "Cargo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel.FK__CargoxDep__IdCar__0C85DE4D", "Cargo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cargo>("TECAModel1.FK__CargoxDep__IdCar__07C12930", "Cargo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cargo>("TECAModel.FK__CargoxDep__IdCar__0C85DE4D", "Cargo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CargoxDep__IdDep__0D7A0286", "Departamento")]
+        public Departamento Departamento
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("TECAModel.FK__CargoxDep__IdDep__0D7A0286", "Departamento").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("TECAModel.FK__CargoxDep__IdDep__0D7A0286", "Departamento").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Departamento> DepartamentoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("TECAModel.FK__CargoxDep__IdDep__0D7A0286", "Departamento");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Departamento>("TECAModel.FK__CargoxDep__IdDep__0D7A0286", "Departamento", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Rubro__123EB7A3", "Rubro")]
+        public EntityCollection<Rubro> Rubro
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rubro>("TECAModel.FK__Rubro__123EB7A3", "Rubro");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rubro>("TECAModel.FK__Rubro__123EB7A3", "Rubro", value);
                 }
             }
         }
@@ -3001,7 +3075,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Contrato")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Contrato")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Contrato : EntityObject
@@ -3419,190 +3493,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Contrato__IdEmpr__5224328E", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Contrato__IdEmpr__5224328E", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Contrato__IdEmpr__5224328E", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Contrato__IdEmpr__5224328E", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Contrato__IdEmpr__5224328E", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Contrato__IdJorn__55F4C372", "Jornada")]
-        public Jornada Jornada
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Jornada>("TECAModel1.FK__Contrato__IdJorn__55F4C372", "Jornada").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Jornada>("TECAModel1.FK__Contrato__IdJorn__55F4C372", "Jornada").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Jornada> JornadaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Jornada>("TECAModel1.FK__Contrato__IdJorn__55F4C372", "Jornada");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Jornada>("TECAModel1.FK__Contrato__IdJorn__55F4C372", "Jornada", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Contrato__IdTipo__540C7B00", "TipoContrato")]
-        public TipoContrato TipoContrato
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoContrato>("TECAModel1.FK__Contrato__IdTipo__540C7B00", "TipoContrato").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoContrato>("TECAModel1.FK__Contrato__IdTipo__540C7B00", "TipoContrato").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<TipoContrato> TipoContratoReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoContrato>("TECAModel1.FK__Contrato__IdTipo__540C7B00", "TipoContrato");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoContrato>("TECAModel1.FK__Contrato__IdTipo__540C7B00", "TipoContrato", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Liquidacion__671F4F74", "Liquidacion")]
-        public EntityCollection<Liquidacion> Liquidacion
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Liquidacion>("TECAModel1.FK__Liquidacion__671F4F74", "Liquidacion");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Liquidacion>("TECAModel1.FK__Liquidacion__671F4F74", "Liquidacion", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Contrato__IdPers__531856C7", "Persona")]
-        public Persona Persona
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Contrato__IdPers__531856C7", "Persona").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Contrato__IdPers__531856C7", "Persona").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Persona> PersonaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Contrato__IdPers__531856C7", "Persona");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__Contrato__IdPers__531856C7", "Persona", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Contrato__IdCarg__55009F39", "Cargo")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Contrato__IdCarg__59C55456", "Cargo")]
         public Cargo Cargo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel1.FK__Contrato__IdCarg__55009F39", "Cargo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel.FK__Contrato__IdCarg__59C55456", "Cargo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel1.FK__Contrato__IdCarg__55009F39", "Cargo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel.FK__Contrato__IdCarg__59C55456", "Cargo").Value = value;
             }
         }
         /// <summary>
@@ -3614,13 +3514,187 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel1.FK__Contrato__IdCarg__55009F39", "Cargo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel.FK__Contrato__IdCarg__59C55456", "Cargo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cargo>("TECAModel1.FK__Contrato__IdCarg__55009F39", "Cargo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cargo>("TECAModel.FK__Contrato__IdCarg__59C55456", "Cargo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Contrato__IdEmpr__56E8E7AB", "Empresa")]
+        public Empresa Empresa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Contrato__IdEmpr__56E8E7AB", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Contrato__IdEmpr__56E8E7AB", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Contrato__IdEmpr__56E8E7AB", "Empresa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Contrato__IdEmpr__56E8E7AB", "Empresa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Contrato__IdJorn__5AB9788F", "Jornada")]
+        public Jornada Jornada
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Jornada>("TECAModel.FK__Contrato__IdJorn__5AB9788F", "Jornada").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Jornada>("TECAModel.FK__Contrato__IdJorn__5AB9788F", "Jornada").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Jornada> JornadaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Jornada>("TECAModel.FK__Contrato__IdJorn__5AB9788F", "Jornada");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Jornada>("TECAModel.FK__Contrato__IdJorn__5AB9788F", "Jornada", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Contrato__IdPers__57DD0BE4", "Persona")]
+        public Persona Persona
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Contrato__IdPers__57DD0BE4", "Persona").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Contrato__IdPers__57DD0BE4", "Persona").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Persona> PersonaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Contrato__IdPers__57DD0BE4", "Persona");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__Contrato__IdPers__57DD0BE4", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Contrato__IdTipo__58D1301D", "TipoContrato")]
+        public TipoContrato TipoContrato
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoContrato>("TECAModel.FK__Contrato__IdTipo__58D1301D", "TipoContrato").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoContrato>("TECAModel.FK__Contrato__IdTipo__58D1301D", "TipoContrato").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<TipoContrato> TipoContratoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoContrato>("TECAModel.FK__Contrato__IdTipo__58D1301D", "TipoContrato");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoContrato>("TECAModel.FK__Contrato__IdTipo__58D1301D", "TipoContrato", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Liquidacion__6BE40491", "Liquidacion")]
+        public EntityCollection<Liquidacion> Liquidacion
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Liquidacion>("TECAModel.FK__Liquidacion__6BE40491", "Liquidacion");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Liquidacion>("TECAModel.FK__Liquidacion__6BE40491", "Liquidacion", value);
                 }
             }
         }
@@ -3631,7 +3705,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Curso")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Curso")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Curso : EntityObject
@@ -3767,16 +3841,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Curso__IdEmpresa__45F365D3", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Curso__IdEmpresa__4AB81AF0", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Curso__IdEmpresa__45F365D3", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Curso__IdEmpresa__4AB81AF0", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Curso__IdEmpresa__45F365D3", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Curso__IdEmpresa__4AB81AF0", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -3788,13 +3862,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Curso__IdEmpresa__45F365D3", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Curso__IdEmpresa__4AB81AF0", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Curso__IdEmpresa__45F365D3", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Curso__IdEmpresa__4AB81AF0", "Empresa", value);
                 }
             }
         }
@@ -3805,18 +3879,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxC__IdCur__5165187F", "PersonaxCurso")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxC__IdCur__5629CD9C", "PersonaxCurso")]
         public EntityCollection<PersonaxCurso> PersonaxCurso
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxCurso>("TECAModel1.FK__PersonaxC__IdCur__5165187F", "PersonaxCurso");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxCurso>("TECAModel.FK__PersonaxC__IdCur__5629CD9C", "PersonaxCurso");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxCurso>("TECAModel1.FK__PersonaxC__IdCur__5165187F", "PersonaxCurso", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxCurso>("TECAModel.FK__PersonaxC__IdCur__5629CD9C", "PersonaxCurso", value);
                 }
             }
         }
@@ -3827,7 +3901,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Departamento")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Departamento")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Departamento : EntityObject
@@ -3937,18 +4011,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__CargoxDep__IdDep__08B54D69", "CargoxDepartamento")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CargoxDep__IdDep__0D7A0286", "CargoxDepartamento")]
         public EntityCollection<CargoxDepartamento> CargoxDepartamento
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CargoxDepartamento>("TECAModel1.FK__CargoxDep__IdDep__08B54D69", "CargoxDepartamento");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CargoxDepartamento>("TECAModel.FK__CargoxDep__IdDep__0D7A0286", "CargoxDepartamento");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CargoxDepartamento>("TECAModel1.FK__CargoxDep__IdDep__08B54D69", "CargoxDepartamento", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CargoxDepartamento>("TECAModel.FK__CargoxDep__IdDep__0D7A0286", "CargoxDepartamento", value);
                 }
             }
         }
@@ -3959,18 +4033,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxD__IdDep__7D439ABD", "PersonaxDepartamento")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxD__IdDep__02084FDA", "PersonaxDepartamento")]
         public EntityCollection<PersonaxDepartamento> PersonaxDepartamento
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxDepartamento>("TECAModel1.FK__PersonaxD__IdDep__7D439ABD", "PersonaxDepartamento");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxDepartamento>("TECAModel.FK__PersonaxD__IdDep__02084FDA", "PersonaxDepartamento");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxDepartamento>("TECAModel1.FK__PersonaxD__IdDep__7D439ABD", "PersonaxDepartamento", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxDepartamento>("TECAModel.FK__PersonaxD__IdDep__02084FDA", "PersonaxDepartamento", value);
                 }
             }
         }
@@ -3981,7 +4055,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Empleado")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Empleado")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Empleado : EntityObject
@@ -4146,16 +4220,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Empleado__IdEmpr__239E4DCF", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Empleado__IdEmpr__239E4DCF", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Empleado__IdEmpr__239E4DCF", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Empleado__IdEmpr__239E4DCF", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Empleado__IdEmpr__239E4DCF", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Empleado__IdEmpr__239E4DCF", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -4167,13 +4241,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Empleado__IdEmpr__239E4DCF", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Empleado__IdEmpr__239E4DCF", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Empleado__IdEmpr__239E4DCF", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Empleado__IdEmpr__239E4DCF", "Empresa", value);
                 }
             }
         }
@@ -4184,38 +4258,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Maternidad__2A4B4B5E", "Maternidad")]
-        public EntityCollection<Maternidad> Maternidad
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Maternidad>("TECAModel1.FK__Maternidad__2A4B4B5E", "Maternidad");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Maternidad>("TECAModel1.FK__Maternidad__2A4B4B5E", "Maternidad", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Empleado__IdPers__24927208", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Empleado__IdPers__24927208", "Persona")]
         public Persona Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Empleado__IdPers__24927208", "Persona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Empleado__IdPers__24927208", "Persona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Empleado__IdPers__24927208", "Persona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Empleado__IdPers__24927208", "Persona").Value = value;
             }
         }
         /// <summary>
@@ -4227,13 +4279,35 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Empleado__IdPers__24927208", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Empleado__IdPers__24927208", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__Empleado__IdPers__24927208", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__Empleado__IdPers__24927208", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Maternidad__2A4B4B5E", "Maternidad")]
+        public EntityCollection<Maternidad> Maternidad
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Maternidad>("TECAModel.FK__Maternidad__2A4B4B5E", "Maternidad");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Maternidad>("TECAModel.FK__Maternidad__2A4B4B5E", "Maternidad", value);
                 }
             }
         }
@@ -4244,7 +4318,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Empresa")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Empresa")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Empresa : EntityObject
@@ -4566,18 +4640,62 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Academico__IdEmp__1BC821DD", "Academico")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__OrdenPago__IdEmp__4F32B74A", "OrdenPagoCab")]
+        public EntityCollection<OrdenPagoCab> OrdenPagoCab
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoCab>("TECAModel.FK__OrdenPago__IdEmp__4F32B74A", "OrdenPagoCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoCab>("TECAModel.FK__OrdenPago__IdEmp__4F32B74A", "OrdenPagoCab", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__OrdenPago__IdEmp__54EB90A0", "OrdenPagoEmpleadoDet")]
+        public EntityCollection<OrdenPagoEmpleadoDet> OrdenPagoEmpleadoDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoEmpleadoDet>("TECAModel.FK__OrdenPago__IdEmp__54EB90A0", "OrdenPagoEmpleadoDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoEmpleadoDet>("TECAModel.FK__OrdenPago__IdEmp__54EB90A0", "OrdenPagoEmpleadoDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Academico__IdEmp__208CD6FA", "Academico")]
         public EntityCollection<Academico> Academico
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Academico>("TECAModel1.FK__Academico__IdEmp__1BC821DD", "Academico");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Academico>("TECAModel.FK__Academico__IdEmp__208CD6FA", "Academico");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Academico>("TECAModel1.FK__Academico__IdEmp__1BC821DD", "Academico", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Academico>("TECAModel.FK__Academico__IdEmp__208CD6FA", "Academico", value);
                 }
             }
         }
@@ -4588,18 +4706,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__AnticipoC__IdEmp__3493CFA7", "AnticipoCab")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__AnticipoC__IdEmp__3864608B", "AnticipoCab")]
         public EntityCollection<AnticipoCab> AnticipoCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AnticipoCab>("TECAModel1.FK__AnticipoC__IdEmp__3493CFA7", "AnticipoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AnticipoCab>("TECAModel.FK__AnticipoC__IdEmp__3864608B", "AnticipoCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AnticipoCab>("TECAModel1.FK__AnticipoC__IdEmp__3493CFA7", "AnticipoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AnticipoCab>("TECAModel.FK__AnticipoC__IdEmp__3864608B", "AnticipoCab", value);
                 }
             }
         }
@@ -4610,18 +4728,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__AnticipoD__IdEmp__395884C4", "AnticipoDet")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__AnticipoD__IdEmp__3D2915A8", "AnticipoDet")]
         public EntityCollection<AnticipoDet> AnticipoDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AnticipoDet>("TECAModel1.FK__AnticipoD__IdEmp__395884C4", "AnticipoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AnticipoDet>("TECAModel.FK__AnticipoD__IdEmp__3D2915A8", "AnticipoDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AnticipoDet>("TECAModel1.FK__AnticipoD__IdEmp__395884C4", "AnticipoDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AnticipoDet>("TECAModel.FK__AnticipoD__IdEmp__3D2915A8", "AnticipoDet", value);
                 }
             }
         }
@@ -4632,18 +4750,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Beneficio__IdEmp__3F115E1A", "Beneficios")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Beneficio__IdEmp__43D61337", "Beneficios")]
         public EntityCollection<Beneficios> Beneficios
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Beneficios>("TECAModel1.FK__Beneficio__IdEmp__3F115E1A", "Beneficios");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Beneficios>("TECAModel.FK__Beneficio__IdEmp__43D61337", "Beneficios");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Beneficios>("TECAModel1.FK__Beneficio__IdEmp__3F115E1A", "Beneficios", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Beneficios>("TECAModel.FK__Beneficio__IdEmp__43D61337", "Beneficios", value);
                 }
             }
         }
@@ -4654,18 +4772,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__CargaFami__IdEmp__2CF2ADDF", "CargaFamiliar")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CargaFami__IdEmp__31B762FC", "CargaFamiliar")]
         public EntityCollection<CargaFamiliar> CargaFamiliar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CargaFamiliar>("TECAModel1.FK__CargaFami__IdEmp__2CF2ADDF", "CargaFamiliar");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CargaFamiliar>("TECAModel.FK__CargaFami__IdEmp__31B762FC", "CargaFamiliar");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CargaFamiliar>("TECAModel1.FK__CargaFami__IdEmp__2CF2ADDF", "CargaFamiliar", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CargaFamiliar>("TECAModel.FK__CargaFami__IdEmp__31B762FC", "CargaFamiliar", value);
                 }
             }
         }
@@ -4676,18 +4794,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Contrato__IdEmpr__5224328E", "Contrato")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Contrato__IdEmpr__56E8E7AB", "Contrato")]
         public EntityCollection<Contrato> Contrato
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Contrato>("TECAModel1.FK__Contrato__IdEmpr__5224328E", "Contrato");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Contrato>("TECAModel.FK__Contrato__IdEmpr__56E8E7AB", "Contrato");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Contrato>("TECAModel1.FK__Contrato__IdEmpr__5224328E", "Contrato", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Contrato>("TECAModel.FK__Contrato__IdEmpr__56E8E7AB", "Contrato", value);
                 }
             }
         }
@@ -4698,18 +4816,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Curso__IdEmpresa__45F365D3", "Curso")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Curso__IdEmpresa__4AB81AF0", "Curso")]
         public EntityCollection<Curso> Curso
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Curso>("TECAModel1.FK__Curso__IdEmpresa__45F365D3", "Curso");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Curso>("TECAModel.FK__Curso__IdEmpresa__4AB81AF0", "Curso");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Curso>("TECAModel1.FK__Curso__IdEmpresa__45F365D3", "Curso", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Curso>("TECAModel.FK__Curso__IdEmpresa__4AB81AF0", "Curso", value);
                 }
             }
         }
@@ -4720,18 +4838,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Empleado__IdEmpr__239E4DCF", "Empleado")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Empleado__IdEmpr__239E4DCF", "Empleado")]
         public EntityCollection<Empleado> Empleado
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Empleado>("TECAModel1.FK__Empleado__IdEmpr__239E4DCF", "Empleado");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Empleado>("TECAModel.FK__Empleado__IdEmpr__239E4DCF", "Empleado");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Empleado>("TECAModel1.FK__Empleado__IdEmpr__239E4DCF", "Empleado", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Empleado>("TECAModel.FK__Empleado__IdEmpr__239E4DCF", "Empleado", value);
                 }
             }
         }
@@ -4742,18 +4860,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Jornada__IdEmpre__6C190EBB", "Jornada")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Jornada__IdEmpre__70DDC3D8", "Jornada")]
         public EntityCollection<Jornada> Jornada
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Jornada>("TECAModel1.FK__Jornada__IdEmpre__6C190EBB", "Jornada");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Jornada>("TECAModel.FK__Jornada__IdEmpre__70DDC3D8", "Jornada");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Jornada>("TECAModel1.FK__Jornada__IdEmpre__6C190EBB", "Jornada", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Jornada>("TECAModel.FK__Jornada__IdEmpre__70DDC3D8", "Jornada", value);
                 }
             }
         }
@@ -4764,18 +4882,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Liquidaci__IdEmp__690797E6", "Liquidacion")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Liquidaci__IdEmp__6DCC4D03", "Liquidacion")]
         public EntityCollection<Liquidacion> Liquidacion
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Liquidacion>("TECAModel1.FK__Liquidaci__IdEmp__690797E6", "Liquidacion");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Liquidacion>("TECAModel.FK__Liquidaci__IdEmp__6DCC4D03", "Liquidacion");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Liquidacion>("TECAModel1.FK__Liquidaci__IdEmp__690797E6", "Liquidacion", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Liquidacion>("TECAModel.FK__Liquidaci__IdEmp__6DCC4D03", "Liquidacion", value);
                 }
             }
         }
@@ -4786,18 +4904,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Multa__IdEmpresa__71D1E811", "Multa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Multa__IdEmpresa__76969D2E", "Multa")]
         public EntityCollection<Multa> Multa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Multa>("TECAModel1.FK__Multa__IdEmpresa__71D1E811", "Multa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Multa>("TECAModel.FK__Multa__IdEmpresa__76969D2E", "Multa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Multa>("TECAModel1.FK__Multa__IdEmpresa__71D1E811", "Multa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Multa>("TECAModel.FK__Multa__IdEmpresa__76969D2E", "Multa", value);
                 }
             }
         }
@@ -4808,18 +4926,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__MultaxPer__IdEmp__778AC167", "MultaxPersona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__MultaxPer__IdEmp__7C4F7684", "MultaxPersona")]
         public EntityCollection<MultaxPersona> MultaxPersona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MultaxPersona>("TECAModel1.FK__MultaxPer__IdEmp__778AC167", "MultaxPersona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MultaxPersona>("TECAModel.FK__MultaxPer__IdEmp__7C4F7684", "MultaxPersona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MultaxPersona>("TECAModel1.FK__MultaxPer__IdEmp__778AC167", "MultaxPersona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MultaxPersona>("TECAModel.FK__MultaxPer__IdEmp__7C4F7684", "MultaxPersona", value);
                 }
             }
         }
@@ -4830,18 +4948,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__NominaCab__IdEmp__43D61337", "NominaCab")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__NominaCab__IdEmp__489AC854", "NominaCab")]
         public EntityCollection<NominaCab> NominaCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<NominaCab>("TECAModel1.FK__NominaCab__IdEmp__43D61337", "NominaCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<NominaCab>("TECAModel.FK__NominaCab__IdEmp__489AC854", "NominaCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<NominaCab>("TECAModel1.FK__NominaCab__IdEmp__43D61337", "NominaCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<NominaCab>("TECAModel.FK__NominaCab__IdEmp__489AC854", "NominaCab", value);
                 }
             }
         }
@@ -4852,18 +4970,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Parentesc__IdEmp__282DF8C2", "Parentesco")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Parentesc__IdEmp__2CF2ADDF", "Parentesco")]
         public EntityCollection<Parentesco> Parentesco
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Parentesco>("TECAModel1.FK__Parentesc__IdEmp__282DF8C2", "Parentesco");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Parentesco>("TECAModel.FK__Parentesc__IdEmp__2CF2ADDF", "Parentesco");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Parentesco>("TECAModel1.FK__Parentesc__IdEmp__282DF8C2", "Parentesco", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Parentesco>("TECAModel.FK__Parentesc__IdEmp__2CF2ADDF", "Parentesco", value);
                 }
             }
         }
@@ -4874,18 +4992,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Permiso__IdEmpre__625A9A57", "Permiso")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Permiso__IdEmpre__671F4F74", "Permiso")]
         public EntityCollection<Permiso> Permiso
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Permiso>("TECAModel1.FK__Permiso__IdEmpre__625A9A57", "Permiso");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Permiso>("TECAModel.FK__Permiso__IdEmpre__671F4F74", "Permiso");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Permiso>("TECAModel1.FK__Permiso__IdEmpre__625A9A57", "Permiso", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Permiso>("TECAModel.FK__Permiso__IdEmpre__671F4F74", "Permiso", value);
                 }
             }
         }
@@ -4896,370 +5014,392 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxC__IdEmp__22751F6C", "PersonaxCargo")]
-        public EntityCollection<PersonaxCargo> PersonaxCargo
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxCargo>("TECAModel1.FK__PersonaxC__IdEmp__22751F6C", "PersonaxCargo");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxCargo>("TECAModel1.FK__PersonaxC__IdEmp__22751F6C", "PersonaxCargo", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxC__IdEmp__4F7CD00D", "PersonaxCurso")]
-        public EntityCollection<PersonaxCurso> PersonaxCurso
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxCurso>("TECAModel1.FK__PersonaxC__IdEmp__4F7CD00D", "PersonaxCurso");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxCurso>("TECAModel1.FK__PersonaxC__IdEmp__4F7CD00D", "PersonaxCurso", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxD__IdEmp__7E37BEF6", "PersonaxDepartamento")]
-        public EntityCollection<PersonaxDepartamento> PersonaxDepartamento
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxDepartamento>("TECAModel1.FK__PersonaxD__IdEmp__7E37BEF6", "PersonaxDepartamento");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxDepartamento>("TECAModel1.FK__PersonaxD__IdEmp__7E37BEF6", "PersonaxDepartamento", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxT__IdEmp__14270015", "PersonaxTitulo")]
-        public EntityCollection<PersonaxTitulo> PersonaxTitulo
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxTitulo>("TECAModel1.FK__PersonaxT__IdEmp__14270015", "PersonaxTitulo");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxTitulo>("TECAModel1.FK__PersonaxT__IdEmp__14270015", "PersonaxTitulo", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Prestamo__IdEmpr__793DFFAF", "Prestamo")]
-        public EntityCollection<Prestamo> Prestamo
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Prestamo>("TECAModel1.FK__Prestamo__IdEmpr__793DFFAF", "Prestamo");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Prestamo>("TECAModel1.FK__Prestamo__IdEmpr__793DFFAF", "Prestamo", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TipoContr__IdEmp__4D5F7D71", "TipoContrato")]
-        public EntityCollection<TipoContrato> TipoContrato
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoContrato>("TECAModel1.FK__TipoContr__IdEmp__4D5F7D71", "TipoContrato");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoContrato>("TECAModel1.FK__TipoContr__IdEmp__4D5F7D71", "TipoContrato", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TipoIdent__IdEmp__173876EA", "TipoIdentificacion")]
-        public EntityCollection<TipoIdentificacion> TipoIdentificacion
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoIdentificacion>("TECAModel1.FK__TipoIdent__IdEmp__173876EA", "TipoIdentificacion");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoIdentificacion>("TECAModel1.FK__TipoIdent__IdEmp__173876EA", "TipoIdentificacion", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TipoJorna__IdEmp__66603565", "TipoJornada")]
-        public EntityCollection<TipoJornada> TipoJornada
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoJornada>("TECAModel1.FK__TipoJorna__IdEmp__66603565", "TipoJornada");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoJornada>("TECAModel1.FK__TipoJorna__IdEmp__66603565", "TipoJornada", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TipoPermi__IdEmp__5AB9788F", "TipoPermiso")]
-        public EntityCollection<TipoPermiso> TipoPermiso
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoPermiso>("TECAModel1.FK__TipoPermi__IdEmp__5AB9788F", "TipoPermiso");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoPermiso>("TECAModel1.FK__TipoPermi__IdEmp__5AB9788F", "TipoPermiso", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TipoPerso__IdEmp__117F9D94", "TipoPersona")]
-        public EntityCollection<TipoPersona> TipoPersona
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoPersona>("TECAModel1.FK__TipoPerso__IdEmp__117F9D94", "TipoPersona");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoPersona>("TECAModel1.FK__TipoPerso__IdEmp__117F9D94", "TipoPersona", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TipoPrest__IdEmp__73852659", "TipoPrestamo")]
-        public EntityCollection<TipoPrestamo> TipoPrestamo
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoPrestamo>("TECAModel1.FK__TipoPrest__IdEmp__73852659", "TipoPrestamo");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoPrestamo>("TECAModel1.FK__TipoPrest__IdEmp__73852659", "TipoPrestamo", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TipoTelef__IdEmp__571DF1D5", "TipoTelefono")]
-        public EntityCollection<TipoTelefono> TipoTelefono
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoTelefono>("TECAModel1.FK__TipoTelef__IdEmp__571DF1D5", "TipoTelefono");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoTelefono>("TECAModel1.FK__TipoTelef__IdEmp__571DF1D5", "TipoTelefono", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Titulo__IdEmpres__60A75C0F", "Titulo")]
-        public EntityCollection<Titulo> Titulo
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Titulo>("TECAModel1.FK__Titulo__IdEmpres__60A75C0F", "Titulo");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Titulo>("TECAModel1.FK__Titulo__IdEmpres__60A75C0F", "Titulo", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TrabajoDi__IdEmp__7EF6D905", "TrabajoDiarioCab")]
-        public EntityCollection<TrabajoDiarioCab> TrabajoDiarioCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TrabajoDiarioCab>("TECAModel1.FK__TrabajoDi__IdEmp__7EF6D905", "TrabajoDiarioCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TrabajoDiarioCab>("TECAModel1.FK__TrabajoDi__IdEmp__7EF6D905", "TrabajoDiarioCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Universid__IdEmp__4AB81AF0", "Universidad")]
-        public EntityCollection<Universidad> Universidad
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Universidad>("TECAModel1.FK__Universid__IdEmp__4AB81AF0", "Universidad");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Universidad>("TECAModel1.FK__Universid__IdEmp__4AB81AF0", "Universidad", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Vacacion__IdEmpr__6EC0713C", "Vacacion")]
-        public EntityCollection<Vacacion> Vacacion
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Vacacion>("TECAModel1.FK__Vacacion__IdEmpr__6EC0713C", "Vacacion");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Vacacion>("TECAModel1.FK__Vacacion__IdEmpr__6EC0713C", "Vacacion", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Persona__IdEmpre__1BFD2C07", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Persona__IdEmpre__1BFD2C07", "Persona")]
         public EntityCollection<Persona> Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Persona>("TECAModel1.FK__Persona__IdEmpre__1BFD2C07", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Persona>("TECAModel.FK__Persona__IdEmpre__1BFD2C07", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Persona>("TECAModel1.FK__Persona__IdEmpre__1BFD2C07", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Persona>("TECAModel.FK__Persona__IdEmpre__1BFD2C07", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxC__IdEmp__2739D489", "PersonaxCargo")]
+        public EntityCollection<PersonaxCargo> PersonaxCargo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxCargo>("TECAModel.FK__PersonaxC__IdEmp__2739D489", "PersonaxCargo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxCargo>("TECAModel.FK__PersonaxC__IdEmp__2739D489", "PersonaxCargo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxC__IdEmp__5441852A", "PersonaxCurso")]
+        public EntityCollection<PersonaxCurso> PersonaxCurso
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxCurso>("TECAModel.FK__PersonaxC__IdEmp__5441852A", "PersonaxCurso");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxCurso>("TECAModel.FK__PersonaxC__IdEmp__5441852A", "PersonaxCurso", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxD__IdEmp__02FC7413", "PersonaxDepartamento")]
+        public EntityCollection<PersonaxDepartamento> PersonaxDepartamento
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxDepartamento>("TECAModel.FK__PersonaxD__IdEmp__02FC7413", "PersonaxDepartamento");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxDepartamento>("TECAModel.FK__PersonaxD__IdEmp__02FC7413", "PersonaxDepartamento", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxT__IdEmp__18EBB532", "PersonaxTitulo")]
+        public EntityCollection<PersonaxTitulo> PersonaxTitulo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxTitulo>("TECAModel.FK__PersonaxT__IdEmp__18EBB532", "PersonaxTitulo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxTitulo>("TECAModel.FK__PersonaxT__IdEmp__18EBB532", "PersonaxTitulo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Prestamo__IdEmpr__7E02B4CC", "Prestamo")]
+        public EntityCollection<Prestamo> Prestamo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Prestamo>("TECAModel.FK__Prestamo__IdEmpr__7E02B4CC", "Prestamo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Prestamo>("TECAModel.FK__Prestamo__IdEmpr__7E02B4CC", "Prestamo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Rubro__IdEmpresa__1332DBDC", "Rubro")]
+        public EntityCollection<Rubro> Rubro
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rubro>("TECAModel.FK__Rubro__IdEmpresa__1332DBDC", "Rubro");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rubro>("TECAModel.FK__Rubro__IdEmpresa__1332DBDC", "Rubro", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TipoContr__IdEmp__5224328E", "TipoContrato")]
+        public EntityCollection<TipoContrato> TipoContrato
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoContrato>("TECAModel.FK__TipoContr__IdEmp__5224328E", "TipoContrato");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoContrato>("TECAModel.FK__TipoContr__IdEmp__5224328E", "TipoContrato", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TipoIdent__IdEmp__173876EA", "TipoIdentificacion")]
+        public EntityCollection<TipoIdentificacion> TipoIdentificacion
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoIdentificacion>("TECAModel.FK__TipoIdent__IdEmp__173876EA", "TipoIdentificacion");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoIdentificacion>("TECAModel.FK__TipoIdent__IdEmp__173876EA", "TipoIdentificacion", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TipoJorna__IdEmp__6B24EA82", "TipoJornada")]
+        public EntityCollection<TipoJornada> TipoJornada
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoJornada>("TECAModel.FK__TipoJorna__IdEmp__6B24EA82", "TipoJornada");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoJornada>("TECAModel.FK__TipoJorna__IdEmp__6B24EA82", "TipoJornada", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TipoPermi__IdEmp__5F7E2DAC", "TipoPermiso")]
+        public EntityCollection<TipoPermiso> TipoPermiso
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoPermiso>("TECAModel.FK__TipoPermi__IdEmp__5F7E2DAC", "TipoPermiso");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoPermiso>("TECAModel.FK__TipoPermi__IdEmp__5F7E2DAC", "TipoPermiso", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TipoPerso__IdEmp__117F9D94", "TipoPersona")]
+        public EntityCollection<TipoPersona> TipoPersona
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoPersona>("TECAModel.FK__TipoPerso__IdEmp__117F9D94", "TipoPersona");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoPersona>("TECAModel.FK__TipoPerso__IdEmp__117F9D94", "TipoPersona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TipoPrest__IdEmp__7849DB76", "TipoPrestamo")]
+        public EntityCollection<TipoPrestamo> TipoPrestamo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoPrestamo>("TECAModel.FK__TipoPrest__IdEmp__7849DB76", "TipoPrestamo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoPrestamo>("TECAModel.FK__TipoPrest__IdEmp__7849DB76", "TipoPrestamo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TipoTelef__IdEmp__5BE2A6F2", "TipoTelefono")]
+        public EntityCollection<TipoTelefono> TipoTelefono
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoTelefono>("TECAModel.FK__TipoTelef__IdEmp__5BE2A6F2", "TipoTelefono");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoTelefono>("TECAModel.FK__TipoTelef__IdEmp__5BE2A6F2", "TipoTelefono", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Titulo__IdEmpres__656C112C", "Titulo")]
+        public EntityCollection<Titulo> Titulo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Titulo>("TECAModel.FK__Titulo__IdEmpres__656C112C", "Titulo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Titulo>("TECAModel.FK__Titulo__IdEmpres__656C112C", "Titulo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TrabajoDi__IdEmp__02C769E9", "TrabajoDiario")]
+        public EntityCollection<TrabajoDiario> TrabajoDiario
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TrabajoDiario>("TECAModel.FK__TrabajoDi__IdEmp__02C769E9", "TrabajoDiario");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TrabajoDiario>("TECAModel.FK__TrabajoDi__IdEmp__02C769E9", "TrabajoDiario", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Universid__IdEmp__4F7CD00D", "Universidad")]
+        public EntityCollection<Universidad> Universidad
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Universidad>("TECAModel.FK__Universid__IdEmp__4F7CD00D", "Universidad");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Universidad>("TECAModel.FK__Universid__IdEmp__4F7CD00D", "Universidad", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Vacacion__IdEmpr__73852659", "Vacacion")]
+        public EntityCollection<Vacacion> Vacacion
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Vacacion>("TECAModel.FK__Vacacion__IdEmpr__73852659", "Vacacion");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Vacacion>("TECAModel.FK__Vacacion__IdEmpr__73852659", "Vacacion", value);
                 }
             }
         }
@@ -5270,7 +5410,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Jornada")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Jornada")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Jornada : EntityObject
@@ -5508,18 +5648,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Contrato__IdJorn__55F4C372", "Contrato")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Contrato__IdJorn__5AB9788F", "Contrato")]
         public EntityCollection<Contrato> Contrato
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Contrato>("TECAModel1.FK__Contrato__IdJorn__55F4C372", "Contrato");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Contrato>("TECAModel.FK__Contrato__IdJorn__5AB9788F", "Contrato");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Contrato>("TECAModel1.FK__Contrato__IdJorn__55F4C372", "Contrato", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Contrato>("TECAModel.FK__Contrato__IdJorn__5AB9788F", "Contrato", value);
                 }
             }
         }
@@ -5530,16 +5670,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Jornada__IdEmpre__6C190EBB", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Jornada__IdEmpre__70DDC3D8", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Jornada__IdEmpre__6C190EBB", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Jornada__IdEmpre__70DDC3D8", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Jornada__IdEmpre__6C190EBB", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Jornada__IdEmpre__70DDC3D8", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -5551,13 +5691,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Jornada__IdEmpre__6C190EBB", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Jornada__IdEmpre__70DDC3D8", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Jornada__IdEmpre__6C190EBB", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Jornada__IdEmpre__70DDC3D8", "Empresa", value);
                 }
             }
         }
@@ -5568,54 +5708,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Jornada__IdTipoJ__6B24EA82", "TipoJornada")]
-        public TipoJornada TipoJornada
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoJornada>("TECAModel1.FK__Jornada__IdTipoJ__6B24EA82", "TipoJornada").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoJornada>("TECAModel1.FK__Jornada__IdTipoJ__6B24EA82", "TipoJornada").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<TipoJornada> TipoJornadaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoJornada>("TECAModel1.FK__Jornada__IdTipoJ__6B24EA82", "TipoJornada");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoJornada>("TECAModel1.FK__Jornada__IdTipoJ__6B24EA82", "TipoJornada", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Jornada__IdPerso__6D0D32F4", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Jornada__IdPerso__71D1E811", "Persona")]
         public Persona Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Jornada__IdPerso__6D0D32F4", "Persona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Jornada__IdPerso__71D1E811", "Persona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Jornada__IdPerso__6D0D32F4", "Persona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Jornada__IdPerso__71D1E811", "Persona").Value = value;
             }
         }
         /// <summary>
@@ -5627,13 +5729,51 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Jornada__IdPerso__6D0D32F4", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Jornada__IdPerso__71D1E811", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__Jornada__IdPerso__6D0D32F4", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__Jornada__IdPerso__71D1E811", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Jornada__IdTipoJ__6FE99F9F", "TipoJornada")]
+        public TipoJornada TipoJornada
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoJornada>("TECAModel.FK__Jornada__IdTipoJ__6FE99F9F", "TipoJornada").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoJornada>("TECAModel.FK__Jornada__IdTipoJ__6FE99F9F", "TipoJornada").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<TipoJornada> TipoJornadaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoJornada>("TECAModel.FK__Jornada__IdTipoJ__6FE99F9F", "TipoJornada");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoJornada>("TECAModel.FK__Jornada__IdTipoJ__6FE99F9F", "TipoJornada", value);
                 }
             }
         }
@@ -5644,7 +5784,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Liquidacion")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Liquidacion")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Liquidacion : EntityObject
@@ -5992,16 +6132,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Liquidacion__671F4F74", "Contrato")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Liquidacion__6BE40491", "Contrato")]
         public Contrato Contrato
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Contrato>("TECAModel1.FK__Liquidacion__671F4F74", "Contrato").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Contrato>("TECAModel.FK__Liquidacion__6BE40491", "Contrato").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Contrato>("TECAModel1.FK__Liquidacion__671F4F74", "Contrato").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Contrato>("TECAModel.FK__Liquidacion__6BE40491", "Contrato").Value = value;
             }
         }
         /// <summary>
@@ -6013,13 +6153,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Contrato>("TECAModel1.FK__Liquidacion__671F4F74", "Contrato");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Contrato>("TECAModel.FK__Liquidacion__6BE40491", "Contrato");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Contrato>("TECAModel1.FK__Liquidacion__671F4F74", "Contrato", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Contrato>("TECAModel.FK__Liquidacion__6BE40491", "Contrato", value);
                 }
             }
         }
@@ -6030,16 +6170,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Liquidaci__IdEmp__690797E6", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Liquidaci__IdEmp__6DCC4D03", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Liquidaci__IdEmp__690797E6", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Liquidaci__IdEmp__6DCC4D03", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Liquidaci__IdEmp__690797E6", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Liquidaci__IdEmp__6DCC4D03", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -6051,13 +6191,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Liquidaci__IdEmp__690797E6", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Liquidaci__IdEmp__6DCC4D03", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Liquidaci__IdEmp__690797E6", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Liquidaci__IdEmp__6DCC4D03", "Empresa", value);
                 }
             }
         }
@@ -6068,16 +6208,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Liquidaci__IdPer__681373AD", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Liquidaci__IdPer__6CD828CA", "Persona")]
         public Persona Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Liquidaci__IdPer__681373AD", "Persona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Liquidaci__IdPer__6CD828CA", "Persona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Liquidaci__IdPer__681373AD", "Persona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Liquidaci__IdPer__6CD828CA", "Persona").Value = value;
             }
         }
         /// <summary>
@@ -6089,13 +6229,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Liquidaci__IdPer__681373AD", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Liquidaci__IdPer__6CD828CA", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__Liquidaci__IdPer__681373AD", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__Liquidaci__IdPer__6CD828CA", "Persona", value);
                 }
             }
         }
@@ -6106,7 +6246,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Maternidad")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Maternidad")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Maternidad : EntityObject
@@ -6344,16 +6484,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Maternidad__2A4B4B5E", "Empleado")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Maternidad__2A4B4B5E", "Empleado")]
         public Empleado Empleado
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empleado>("TECAModel1.FK__Maternidad__2A4B4B5E", "Empleado").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empleado>("TECAModel.FK__Maternidad__2A4B4B5E", "Empleado").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empleado>("TECAModel1.FK__Maternidad__2A4B4B5E", "Empleado").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empleado>("TECAModel.FK__Maternidad__2A4B4B5E", "Empleado").Value = value;
             }
         }
         /// <summary>
@@ -6365,13 +6505,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empleado>("TECAModel1.FK__Maternidad__2A4B4B5E", "Empleado");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empleado>("TECAModel.FK__Maternidad__2A4B4B5E", "Empleado");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empleado>("TECAModel1.FK__Maternidad__2A4B4B5E", "Empleado", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empleado>("TECAModel.FK__Maternidad__2A4B4B5E", "Empleado", value);
                 }
             }
         }
@@ -6382,7 +6522,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Multa")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Multa")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Multa : EntityObject
@@ -6542,16 +6682,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Multa__IdEmpresa__71D1E811", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Multa__IdEmpresa__76969D2E", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Multa__IdEmpresa__71D1E811", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Multa__IdEmpresa__76969D2E", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Multa__IdEmpresa__71D1E811", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Multa__IdEmpresa__76969D2E", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -6563,13 +6703,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Multa__IdEmpresa__71D1E811", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Multa__IdEmpresa__76969D2E", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Multa__IdEmpresa__71D1E811", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Multa__IdEmpresa__76969D2E", "Empresa", value);
                 }
             }
         }
@@ -6580,18 +6720,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__MultaxPer__IdMul__76969D2E", "MultaxPersona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__MultaxPer__IdMul__7B5B524B", "MultaxPersona")]
         public EntityCollection<MultaxPersona> MultaxPersona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MultaxPersona>("TECAModel1.FK__MultaxPer__IdMul__76969D2E", "MultaxPersona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MultaxPersona>("TECAModel.FK__MultaxPer__IdMul__7B5B524B", "MultaxPersona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MultaxPersona>("TECAModel1.FK__MultaxPer__IdMul__76969D2E", "MultaxPersona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MultaxPersona>("TECAModel.FK__MultaxPer__IdMul__7B5B524B", "MultaxPersona", value);
                 }
             }
         }
@@ -6602,7 +6742,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="MultaxPersona")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="MultaxPersona")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class MultaxPersona : EntityObject
@@ -6791,16 +6931,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__MultaxPer__IdMul__76969D2E", "Multa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__MultaxPer__IdMul__7B5B524B", "Multa")]
         public Multa Multa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Multa>("TECAModel1.FK__MultaxPer__IdMul__76969D2E", "Multa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Multa>("TECAModel.FK__MultaxPer__IdMul__7B5B524B", "Multa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Multa>("TECAModel1.FK__MultaxPer__IdMul__76969D2E", "Multa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Multa>("TECAModel.FK__MultaxPer__IdMul__7B5B524B", "Multa").Value = value;
             }
         }
         /// <summary>
@@ -6812,13 +6952,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Multa>("TECAModel1.FK__MultaxPer__IdMul__76969D2E", "Multa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Multa>("TECAModel.FK__MultaxPer__IdMul__7B5B524B", "Multa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Multa>("TECAModel1.FK__MultaxPer__IdMul__76969D2E", "Multa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Multa>("TECAModel.FK__MultaxPer__IdMul__7B5B524B", "Multa", value);
                 }
             }
         }
@@ -6829,16 +6969,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__MultaxPer__IdEmp__778AC167", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__MultaxPer__IdEmp__7C4F7684", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__MultaxPer__IdEmp__778AC167", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__MultaxPer__IdEmp__7C4F7684", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__MultaxPer__IdEmp__778AC167", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__MultaxPer__IdEmp__7C4F7684", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -6850,13 +6990,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__MultaxPer__IdEmp__778AC167", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__MultaxPer__IdEmp__7C4F7684", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__MultaxPer__IdEmp__778AC167", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__MultaxPer__IdEmp__7C4F7684", "Empresa", value);
                 }
             }
         }
@@ -6867,16 +7007,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__MultaxPer__IdPer__787EE5A0", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__MultaxPer__IdPer__7D439ABD", "Persona")]
         public Persona Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__MultaxPer__IdPer__787EE5A0", "Persona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__MultaxPer__IdPer__7D439ABD", "Persona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__MultaxPer__IdPer__787EE5A0", "Persona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__MultaxPer__IdPer__7D439ABD", "Persona").Value = value;
             }
         }
         /// <summary>
@@ -6888,13 +7028,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__MultaxPer__IdPer__787EE5A0", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__MultaxPer__IdPer__7D439ABD", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__MultaxPer__IdPer__787EE5A0", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__MultaxPer__IdPer__7D439ABD", "Persona", value);
                 }
             }
         }
@@ -6905,7 +7045,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="NominaCab")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="NominaCab")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class NominaCab : EntityObject
@@ -7144,16 +7284,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__NominaCab__IdEmp__43D61337", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__NominaCab__IdEmp__489AC854", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__NominaCab__IdEmp__43D61337", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__NominaCab__IdEmp__489AC854", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__NominaCab__IdEmp__43D61337", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__NominaCab__IdEmp__489AC854", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -7165,13 +7305,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__NominaCab__IdEmp__43D61337", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__NominaCab__IdEmp__489AC854", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__NominaCab__IdEmp__43D61337", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__NominaCab__IdEmp__489AC854", "Empresa", value);
                 }
             }
         }
@@ -7182,18 +7322,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__NominaDet__489AC854", "NominaDet")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__NominaDet__4D5F7D71", "NominaDet")]
         public EntityCollection<NominaDet> NominaDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<NominaDet>("TECAModel1.FK__NominaDet__489AC854", "NominaDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<NominaDet>("TECAModel.FK__NominaDet__4D5F7D71", "NominaDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<NominaDet>("TECAModel1.FK__NominaDet__489AC854", "NominaDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<NominaDet>("TECAModel.FK__NominaDet__4D5F7D71", "NominaDet", value);
                 }
             }
         }
@@ -7204,7 +7344,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="NominaDet")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="NominaDet")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class NominaDet : EntityObject
@@ -7492,16 +7632,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__NominaDet__489AC854", "NominaCab")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__NominaDet__4D5F7D71", "NominaCab")]
         public NominaCab NominaCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NominaCab>("TECAModel1.FK__NominaDet__489AC854", "NominaCab").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NominaCab>("TECAModel.FK__NominaDet__4D5F7D71", "NominaCab").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NominaCab>("TECAModel1.FK__NominaDet__489AC854", "NominaCab").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NominaCab>("TECAModel.FK__NominaDet__4D5F7D71", "NominaCab").Value = value;
             }
         }
         /// <summary>
@@ -7513,13 +7653,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NominaCab>("TECAModel1.FK__NominaDet__489AC854", "NominaCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NominaCab>("TECAModel.FK__NominaDet__4D5F7D71", "NominaCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<NominaCab>("TECAModel1.FK__NominaDet__489AC854", "NominaCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<NominaCab>("TECAModel.FK__NominaDet__4D5F7D71", "NominaCab", value);
                 }
             }
         }
@@ -7530,7 +7670,650 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Parentesco")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="OrdenPagoCab")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class OrdenPagoCab : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new OrdenPagoCab object.
+        /// </summary>
+        /// <param name="numOrdenPago">Initial value of the NumOrdenPago property.</param>
+        /// <param name="fechadeEmision">Initial value of the fechadeEmision property.</param>
+        /// <param name="estado">Initial value of the Estado property.</param>
+        /// <param name="totalPagar">Initial value of the TotalPagar property.</param>
+        /// <param name="tipoOrdenPago">Initial value of the TipoOrdenPago property.</param>
+        /// <param name="idUsuario">Initial value of the IdUsuario property.</param>
+        /// <param name="idEmpresa">Initial value of the IdEmpresa property.</param>
+        public static OrdenPagoCab CreateOrdenPagoCab(global::System.Int32 numOrdenPago, global::System.DateTime fechadeEmision, global::System.Int32 estado, global::System.Decimal totalPagar, global::System.String tipoOrdenPago, global::System.Int32 idUsuario, global::System.Int32 idEmpresa)
+        {
+            OrdenPagoCab ordenPagoCab = new OrdenPagoCab();
+            ordenPagoCab.NumOrdenPago = numOrdenPago;
+            ordenPagoCab.fechadeEmision = fechadeEmision;
+            ordenPagoCab.Estado = estado;
+            ordenPagoCab.TotalPagar = totalPagar;
+            ordenPagoCab.TipoOrdenPago = tipoOrdenPago;
+            ordenPagoCab.IdUsuario = idUsuario;
+            ordenPagoCab.IdEmpresa = idEmpresa;
+            return ordenPagoCab;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 NumOrdenPago
+        {
+            get
+            {
+                return _NumOrdenPago;
+            }
+            set
+            {
+                if (_NumOrdenPago != value)
+                {
+                    OnNumOrdenPagoChanging(value);
+                    ReportPropertyChanging("NumOrdenPago");
+                    _NumOrdenPago = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("NumOrdenPago");
+                    OnNumOrdenPagoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _NumOrdenPago;
+        partial void OnNumOrdenPagoChanging(global::System.Int32 value);
+        partial void OnNumOrdenPagoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime fechadeEmision
+        {
+            get
+            {
+                return _fechadeEmision;
+            }
+            set
+            {
+                OnfechadeEmisionChanging(value);
+                ReportPropertyChanging("fechadeEmision");
+                _fechadeEmision = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("fechadeEmision");
+                OnfechadeEmisionChanged();
+            }
+        }
+        private global::System.DateTime _fechadeEmision;
+        partial void OnfechadeEmisionChanging(global::System.DateTime value);
+        partial void OnfechadeEmisionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdPersona
+        {
+            get
+            {
+                return _IdPersona;
+            }
+            set
+            {
+                OnIdPersonaChanging(value);
+                ReportPropertyChanging("IdPersona");
+                _IdPersona = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPersona");
+                OnIdPersonaChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdPersona;
+        partial void OnIdPersonaChanging(Nullable<global::System.Int32> value);
+        partial void OnIdPersonaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+            set
+            {
+                OnEstadoChanging(value);
+                ReportPropertyChanging("Estado");
+                _Estado = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Estado");
+                OnEstadoChanged();
+            }
+        }
+        private global::System.Int32 _Estado;
+        partial void OnEstadoChanging(global::System.Int32 value);
+        partial void OnEstadoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal TotalPagar
+        {
+            get
+            {
+                return _TotalPagar;
+            }
+            set
+            {
+                OnTotalPagarChanging(value);
+                ReportPropertyChanging("TotalPagar");
+                _TotalPagar = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("TotalPagar");
+                OnTotalPagarChanged();
+            }
+        }
+        private global::System.Decimal _TotalPagar;
+        partial void OnTotalPagarChanging(global::System.Decimal value);
+        partial void OnTotalPagarChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String TipoOrdenPago
+        {
+            get
+            {
+                return _TipoOrdenPago;
+            }
+            set
+            {
+                OnTipoOrdenPagoChanging(value);
+                ReportPropertyChanging("TipoOrdenPago");
+                _TipoOrdenPago = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("TipoOrdenPago");
+                OnTipoOrdenPagoChanged();
+            }
+        }
+        private global::System.String _TipoOrdenPago;
+        partial void OnTipoOrdenPagoChanging(global::System.String value);
+        partial void OnTipoOrdenPagoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdUsuario
+        {
+            get
+            {
+                return _IdUsuario;
+            }
+            set
+            {
+                OnIdUsuarioChanging(value);
+                ReportPropertyChanging("IdUsuario");
+                _IdUsuario = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdUsuario");
+                OnIdUsuarioChanged();
+            }
+        }
+        private global::System.Int32 _IdUsuario;
+        partial void OnIdUsuarioChanging(global::System.Int32 value);
+        partial void OnIdUsuarioChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdEmpresa
+        {
+            get
+            {
+                return _IdEmpresa;
+            }
+            set
+            {
+                if (_IdEmpresa != value)
+                {
+                    OnIdEmpresaChanging(value);
+                    ReportPropertyChanging("IdEmpresa");
+                    _IdEmpresa = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdEmpresa");
+                    OnIdEmpresaChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdEmpresa;
+        partial void OnIdEmpresaChanging(global::System.Int32 value);
+        partial void OnIdEmpresaChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__OrdenPago__IdEmp__4F32B74A", "Empresa")]
+        public Empresa Empresa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__OrdenPago__IdEmp__4F32B74A", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__OrdenPago__IdEmp__4F32B74A", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__OrdenPago__IdEmp__4F32B74A", "Empresa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__OrdenPago__IdEmp__4F32B74A", "Empresa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__OrdenPagoEmplead__53F76C67", "OrdenPagoEmpleadoDet")]
+        public EntityCollection<OrdenPagoEmpleadoDet> OrdenPagoEmpleadoDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoEmpleadoDet>("TECAModel.FK__OrdenPagoEmplead__53F76C67", "OrdenPagoEmpleadoDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoEmpleadoDet>("TECAModel.FK__OrdenPagoEmplead__53F76C67", "OrdenPagoEmpleadoDet", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="OrdenPagoEmpleadoDet")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class OrdenPagoEmpleadoDet : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new OrdenPagoEmpleadoDet object.
+        /// </summary>
+        /// <param name="numOrdenPago">Initial value of the NumOrdenPago property.</param>
+        /// <param name="idEmpresa">Initial value of the IdEmpresa property.</param>
+        /// <param name="autorizarPago">Initial value of the AutorizarPago property.</param>
+        /// <param name="linea">Initial value of the Linea property.</param>
+        /// <param name="idPersona">Initial value of the IdPersona property.</param>
+        /// <param name="pagoNeto">Initial value of the PagoNeto property.</param>
+        public static OrdenPagoEmpleadoDet CreateOrdenPagoEmpleadoDet(global::System.Int32 numOrdenPago, global::System.Int32 idEmpresa, global::System.Boolean autorizarPago, global::System.Int32 linea, global::System.Int32 idPersona, global::System.Decimal pagoNeto)
+        {
+            OrdenPagoEmpleadoDet ordenPagoEmpleadoDet = new OrdenPagoEmpleadoDet();
+            ordenPagoEmpleadoDet.NumOrdenPago = numOrdenPago;
+            ordenPagoEmpleadoDet.IdEmpresa = idEmpresa;
+            ordenPagoEmpleadoDet.AutorizarPago = autorizarPago;
+            ordenPagoEmpleadoDet.Linea = linea;
+            ordenPagoEmpleadoDet.IdPersona = idPersona;
+            ordenPagoEmpleadoDet.PagoNeto = pagoNeto;
+            return ordenPagoEmpleadoDet;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 NumOrdenPago
+        {
+            get
+            {
+                return _NumOrdenPago;
+            }
+            set
+            {
+                if (_NumOrdenPago != value)
+                {
+                    OnNumOrdenPagoChanging(value);
+                    ReportPropertyChanging("NumOrdenPago");
+                    _NumOrdenPago = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("NumOrdenPago");
+                    OnNumOrdenPagoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _NumOrdenPago;
+        partial void OnNumOrdenPagoChanging(global::System.Int32 value);
+        partial void OnNumOrdenPagoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdEmpresa
+        {
+            get
+            {
+                return _IdEmpresa;
+            }
+            set
+            {
+                if (_IdEmpresa != value)
+                {
+                    OnIdEmpresaChanging(value);
+                    ReportPropertyChanging("IdEmpresa");
+                    _IdEmpresa = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdEmpresa");
+                    OnIdEmpresaChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdEmpresa;
+        partial void OnIdEmpresaChanging(global::System.Int32 value);
+        partial void OnIdEmpresaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Boolean AutorizarPago
+        {
+            get
+            {
+                return _AutorizarPago;
+            }
+            set
+            {
+                OnAutorizarPagoChanging(value);
+                ReportPropertyChanging("AutorizarPago");
+                _AutorizarPago = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("AutorizarPago");
+                OnAutorizarPagoChanged();
+            }
+        }
+        private global::System.Boolean _AutorizarPago;
+        partial void OnAutorizarPagoChanging(global::System.Boolean value);
+        partial void OnAutorizarPagoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Linea
+        {
+            get
+            {
+                return _Linea;
+            }
+            set
+            {
+                if (_Linea != value)
+                {
+                    OnLineaChanging(value);
+                    ReportPropertyChanging("Linea");
+                    _Linea = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Linea");
+                    OnLineaChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Linea;
+        partial void OnLineaChanging(global::System.Int32 value);
+        partial void OnLineaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdPersona
+        {
+            get
+            {
+                return _IdPersona;
+            }
+            set
+            {
+                OnIdPersonaChanging(value);
+                ReportPropertyChanging("IdPersona");
+                _IdPersona = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPersona");
+                OnIdPersonaChanged();
+            }
+        }
+        private global::System.Int32 _IdPersona;
+        partial void OnIdPersonaChanging(global::System.Int32 value);
+        partial void OnIdPersonaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> SueldoTotal
+        {
+            get
+            {
+                return _SueldoTotal;
+            }
+            set
+            {
+                OnSueldoTotalChanging(value);
+                ReportPropertyChanging("SueldoTotal");
+                _SueldoTotal = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("SueldoTotal");
+                OnSueldoTotalChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _SueldoTotal;
+        partial void OnSueldoTotalChanging(Nullable<global::System.Decimal> value);
+        partial void OnSueldoTotalChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> IngresoAdicional
+        {
+            get
+            {
+                return _IngresoAdicional;
+            }
+            set
+            {
+                OnIngresoAdicionalChanging(value);
+                ReportPropertyChanging("IngresoAdicional");
+                _IngresoAdicional = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IngresoAdicional");
+                OnIngresoAdicionalChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _IngresoAdicional;
+        partial void OnIngresoAdicionalChanging(Nullable<global::System.Decimal> value);
+        partial void OnIngresoAdicionalChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> DescuentoTotal
+        {
+            get
+            {
+                return _DescuentoTotal;
+            }
+            set
+            {
+                OnDescuentoTotalChanging(value);
+                ReportPropertyChanging("DescuentoTotal");
+                _DescuentoTotal = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("DescuentoTotal");
+                OnDescuentoTotalChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _DescuentoTotal;
+        partial void OnDescuentoTotalChanging(Nullable<global::System.Decimal> value);
+        partial void OnDescuentoTotalChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal PagoNeto
+        {
+            get
+            {
+                return _PagoNeto;
+            }
+            set
+            {
+                OnPagoNetoChanging(value);
+                ReportPropertyChanging("PagoNeto");
+                _PagoNeto = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PagoNeto");
+                OnPagoNetoChanged();
+            }
+        }
+        private global::System.Decimal _PagoNeto;
+        partial void OnPagoNetoChanging(global::System.Decimal value);
+        partial void OnPagoNetoChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__OrdenPagoEmplead__53F76C67", "OrdenPagoCab")]
+        public OrdenPagoCab OrdenPagoCab
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("TECAModel.FK__OrdenPagoEmplead__53F76C67", "OrdenPagoCab").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("TECAModel.FK__OrdenPagoEmplead__53F76C67", "OrdenPagoCab").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<OrdenPagoCab> OrdenPagoCabReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("TECAModel.FK__OrdenPagoEmplead__53F76C67", "OrdenPagoCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrdenPagoCab>("TECAModel.FK__OrdenPagoEmplead__53F76C67", "OrdenPagoCab", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__OrdenPago__IdEmp__54EB90A0", "Empresa")]
+        public Empresa Empresa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__OrdenPago__IdEmp__54EB90A0", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__OrdenPago__IdEmp__54EB90A0", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__OrdenPago__IdEmp__54EB90A0", "Empresa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__OrdenPago__IdEmp__54EB90A0", "Empresa", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Parentesco")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Parentesco : EntityObject
@@ -7666,18 +8449,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__CargaFami__IdPar__2EDAF651", "CargaFamiliar")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CargaFami__IdPar__339FAB6E", "CargaFamiliar")]
         public EntityCollection<CargaFamiliar> CargaFamiliar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CargaFamiliar>("TECAModel1.FK__CargaFami__IdPar__2EDAF651", "CargaFamiliar");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CargaFamiliar>("TECAModel.FK__CargaFami__IdPar__339FAB6E", "CargaFamiliar");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CargaFamiliar>("TECAModel1.FK__CargaFami__IdPar__2EDAF651", "CargaFamiliar", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CargaFamiliar>("TECAModel.FK__CargaFami__IdPar__339FAB6E", "CargaFamiliar", value);
                 }
             }
         }
@@ -7688,16 +8471,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Parentesc__IdEmp__282DF8C2", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Parentesc__IdEmp__2CF2ADDF", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Parentesc__IdEmp__282DF8C2", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Parentesc__IdEmp__2CF2ADDF", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Parentesc__IdEmp__282DF8C2", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Parentesc__IdEmp__2CF2ADDF", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -7709,13 +8492,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Parentesc__IdEmp__282DF8C2", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Parentesc__IdEmp__2CF2ADDF", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Parentesc__IdEmp__282DF8C2", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Parentesc__IdEmp__2CF2ADDF", "Empresa", value);
                 }
             }
         }
@@ -7726,7 +8509,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Permiso")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Permiso")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Permiso : EntityObject
@@ -7990,92 +8773,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Permiso__IdEmpre__625A9A57", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Permiso__IdEmpre__625A9A57", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Permiso__IdEmpre__625A9A57", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Permiso__IdEmpre__625A9A57", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Permiso__IdEmpre__625A9A57", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Permiso__IdTipoP__6166761E", "TipoPermiso")]
-        public TipoPermiso TipoPermiso
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPermiso>("TECAModel1.FK__Permiso__IdTipoP__6166761E", "TipoPermiso").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPermiso>("TECAModel1.FK__Permiso__IdTipoP__6166761E", "TipoPermiso").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<TipoPermiso> TipoPermisoReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPermiso>("TECAModel1.FK__Permiso__IdTipoP__6166761E", "TipoPermiso");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoPermiso>("TECAModel1.FK__Permiso__IdTipoP__6166761E", "TipoPermiso", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Permiso__IdEmple__607251E5", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Permiso__IdEmple__65370702", "Persona")]
         public Persona Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Permiso__IdEmple__607251E5", "Persona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Permiso__IdEmple__65370702", "Persona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Permiso__IdEmple__607251E5", "Persona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Permiso__IdEmple__65370702", "Persona").Value = value;
             }
         }
         /// <summary>
@@ -8087,13 +8794,89 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Permiso__IdEmple__607251E5", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Permiso__IdEmple__65370702", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__Permiso__IdEmple__607251E5", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__Permiso__IdEmple__65370702", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Permiso__IdEmpre__671F4F74", "Empresa")]
+        public Empresa Empresa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Permiso__IdEmpre__671F4F74", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Permiso__IdEmpre__671F4F74", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Permiso__IdEmpre__671F4F74", "Empresa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Permiso__IdEmpre__671F4F74", "Empresa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Permiso__IdTipoP__662B2B3B", "TipoPermiso")]
+        public TipoPermiso TipoPermiso
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPermiso>("TECAModel.FK__Permiso__IdTipoP__662B2B3B", "TipoPermiso").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPermiso>("TECAModel.FK__Permiso__IdTipoP__662B2B3B", "TipoPermiso").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<TipoPermiso> TipoPermisoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPermiso>("TECAModel.FK__Permiso__IdTipoP__662B2B3B", "TipoPermiso");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoPermiso>("TECAModel.FK__Permiso__IdTipoP__662B2B3B", "TipoPermiso", value);
                 }
             }
         }
@@ -8104,7 +8887,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Persona")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Persona")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Persona : EntityObject
@@ -8542,18 +9325,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Academico__IdPer__19DFD96B", "Academico")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Academico__IdPer__1EA48E88", "Academico")]
         public EntityCollection<Academico> Academico
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Academico>("TECAModel1.FK__Academico__IdPer__19DFD96B", "Academico");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Academico>("TECAModel.FK__Academico__IdPer__1EA48E88", "Academico");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Academico>("TECAModel1.FK__Academico__IdPer__19DFD96B", "Academico", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Academico>("TECAModel.FK__Academico__IdPer__1EA48E88", "Academico", value);
                 }
             }
         }
@@ -8564,18 +9347,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__AnticipoC__IdEmp__339FAB6E", "AnticipoCab")]
-        public EntityCollection<AnticipoCab> AnticipoCab
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__AnticipoD__IdPer__3F115E1A", "AnticipoDet")]
+        public EntityCollection<AnticipoDet> AnticipoDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AnticipoCab>("TECAModel1.FK__AnticipoC__IdEmp__339FAB6E", "AnticipoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<AnticipoDet>("TECAModel.FK__AnticipoD__IdPer__3F115E1A", "AnticipoDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AnticipoCab>("TECAModel1.FK__AnticipoC__IdEmp__339FAB6E", "AnticipoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<AnticipoDet>("TECAModel.FK__AnticipoD__IdPer__3F115E1A", "AnticipoDet", value);
                 }
             }
         }
@@ -8586,18 +9369,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__CargaFami__IdPer__2DE6D218", "CargaFamiliar")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CargaFami__IdPer__32AB8735", "CargaFamiliar")]
         public EntityCollection<CargaFamiliar> CargaFamiliar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CargaFamiliar>("TECAModel1.FK__CargaFami__IdPer__2DE6D218", "CargaFamiliar");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CargaFamiliar>("TECAModel.FK__CargaFami__IdPer__32AB8735", "CargaFamiliar");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CargaFamiliar>("TECAModel1.FK__CargaFami__IdPer__2DE6D218", "CargaFamiliar", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CargaFamiliar>("TECAModel.FK__CargaFami__IdPer__32AB8735", "CargaFamiliar", value);
                 }
             }
         }
@@ -8608,18 +9391,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Contrato__IdPers__531856C7", "Contrato")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Contrato__IdPers__57DD0BE4", "Contrato")]
         public EntityCollection<Contrato> Contrato
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Contrato>("TECAModel1.FK__Contrato__IdPers__531856C7", "Contrato");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Contrato>("TECAModel.FK__Contrato__IdPers__57DD0BE4", "Contrato");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Contrato>("TECAModel1.FK__Contrato__IdPers__531856C7", "Contrato", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Contrato>("TECAModel.FK__Contrato__IdPers__57DD0BE4", "Contrato", value);
                 }
             }
         }
@@ -8630,18 +9413,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Empleado__IdPers__24927208", "Empleado")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Empleado__IdPers__24927208", "Empleado")]
         public EntityCollection<Empleado> Empleado
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Empleado>("TECAModel1.FK__Empleado__IdPers__24927208", "Empleado");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Empleado>("TECAModel.FK__Empleado__IdPers__24927208", "Empleado");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Empleado>("TECAModel1.FK__Empleado__IdPers__24927208", "Empleado", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Empleado>("TECAModel.FK__Empleado__IdPers__24927208", "Empleado", value);
                 }
             }
         }
@@ -8652,18 +9435,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Jornada__IdPerso__6D0D32F4", "Jornada")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Jornada__IdPerso__71D1E811", "Jornada")]
         public EntityCollection<Jornada> Jornada
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Jornada>("TECAModel1.FK__Jornada__IdPerso__6D0D32F4", "Jornada");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Jornada>("TECAModel.FK__Jornada__IdPerso__71D1E811", "Jornada");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Jornada>("TECAModel1.FK__Jornada__IdPerso__6D0D32F4", "Jornada", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Jornada>("TECAModel.FK__Jornada__IdPerso__71D1E811", "Jornada", value);
                 }
             }
         }
@@ -8674,18 +9457,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Liquidaci__IdPer__681373AD", "Liquidacion")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Liquidaci__IdPer__6CD828CA", "Liquidacion")]
         public EntityCollection<Liquidacion> Liquidacion
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Liquidacion>("TECAModel1.FK__Liquidaci__IdPer__681373AD", "Liquidacion");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Liquidacion>("TECAModel.FK__Liquidaci__IdPer__6CD828CA", "Liquidacion");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Liquidacion>("TECAModel1.FK__Liquidaci__IdPer__681373AD", "Liquidacion", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Liquidacion>("TECAModel.FK__Liquidaci__IdPer__6CD828CA", "Liquidacion", value);
                 }
             }
         }
@@ -8696,18 +9479,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__MultaxPer__IdPer__787EE5A0", "MultaxPersona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__MultaxPer__IdPer__7D439ABD", "MultaxPersona")]
         public EntityCollection<MultaxPersona> MultaxPersona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MultaxPersona>("TECAModel1.FK__MultaxPer__IdPer__787EE5A0", "MultaxPersona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MultaxPersona>("TECAModel.FK__MultaxPer__IdPer__7D439ABD", "MultaxPersona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MultaxPersona>("TECAModel1.FK__MultaxPer__IdPer__787EE5A0", "MultaxPersona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MultaxPersona>("TECAModel.FK__MultaxPer__IdPer__7D439ABD", "MultaxPersona", value);
                 }
             }
         }
@@ -8718,18 +9501,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Permiso__IdEmple__607251E5", "Permiso")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Permiso__IdEmple__65370702", "Permiso")]
         public EntityCollection<Permiso> Permiso
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Permiso>("TECAModel1.FK__Permiso__IdEmple__607251E5", "Permiso");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Permiso>("TECAModel.FK__Permiso__IdEmple__65370702", "Permiso");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Permiso>("TECAModel1.FK__Permiso__IdEmple__607251E5", "Permiso", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Permiso>("TECAModel.FK__Permiso__IdEmple__65370702", "Permiso", value);
                 }
             }
         }
@@ -8740,16 +9523,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Persona__IdEmpre__1BFD2C07", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Persona__IdEmpre__1BFD2C07", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Persona__IdEmpre__1BFD2C07", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Persona__IdEmpre__1BFD2C07", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Persona__IdEmpre__1BFD2C07", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Persona__IdEmpre__1BFD2C07", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -8761,13 +9544,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Persona__IdEmpre__1BFD2C07", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Persona__IdEmpre__1BFD2C07", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Persona__IdEmpre__1BFD2C07", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Persona__IdEmpre__1BFD2C07", "Empresa", value);
                 }
             }
         }
@@ -8778,16 +9561,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Persona__IdTipoP__1CF15040", "TipoPersona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Persona__IdTipoP__1CF15040", "TipoPersona")]
         public TipoPersona TipoPersona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPersona>("TECAModel1.FK__Persona__IdTipoP__1CF15040", "TipoPersona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPersona>("TECAModel.FK__Persona__IdTipoP__1CF15040", "TipoPersona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPersona>("TECAModel1.FK__Persona__IdTipoP__1CF15040", "TipoPersona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPersona>("TECAModel.FK__Persona__IdTipoP__1CF15040", "TipoPersona").Value = value;
             }
         }
         /// <summary>
@@ -8799,13 +9582,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPersona>("TECAModel1.FK__Persona__IdTipoP__1CF15040", "TipoPersona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPersona>("TECAModel.FK__Persona__IdTipoP__1CF15040", "TipoPersona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoPersona>("TECAModel1.FK__Persona__IdTipoP__1CF15040", "TipoPersona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoPersona>("TECAModel.FK__Persona__IdTipoP__1CF15040", "TipoPersona", value);
                 }
             }
         }
@@ -8816,16 +9599,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Persona__TipoIde__1DE57479", "TipoIdentificacion")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Persona__TipoIde__1DE57479", "TipoIdentificacion")]
         public TipoIdentificacion TipoIdentificacion1
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoIdentificacion>("TECAModel1.FK__Persona__TipoIde__1DE57479", "TipoIdentificacion").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoIdentificacion>("TECAModel.FK__Persona__TipoIde__1DE57479", "TipoIdentificacion").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoIdentificacion>("TECAModel1.FK__Persona__TipoIde__1DE57479", "TipoIdentificacion").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoIdentificacion>("TECAModel.FK__Persona__TipoIde__1DE57479", "TipoIdentificacion").Value = value;
             }
         }
         /// <summary>
@@ -8837,13 +9620,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoIdentificacion>("TECAModel1.FK__Persona__TipoIde__1DE57479", "TipoIdentificacion");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoIdentificacion>("TECAModel.FK__Persona__TipoIde__1DE57479", "TipoIdentificacion");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoIdentificacion>("TECAModel1.FK__Persona__TipoIde__1DE57479", "TipoIdentificacion", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoIdentificacion>("TECAModel.FK__Persona__TipoIde__1DE57479", "TipoIdentificacion", value);
                 }
             }
         }
@@ -8854,18 +9637,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxC__IdPer__2180FB33", "PersonaxCargo")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxC__IdPer__2645B050", "PersonaxCargo")]
         public EntityCollection<PersonaxCargo> PersonaxCargo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxCargo>("TECAModel1.FK__PersonaxC__IdPer__2180FB33", "PersonaxCargo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxCargo>("TECAModel.FK__PersonaxC__IdPer__2645B050", "PersonaxCargo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxCargo>("TECAModel1.FK__PersonaxC__IdPer__2180FB33", "PersonaxCargo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxCargo>("TECAModel.FK__PersonaxC__IdPer__2645B050", "PersonaxCargo", value);
                 }
             }
         }
@@ -8876,18 +9659,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxC__IdPer__5070F446", "PersonaxCurso")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxC__IdPer__5535A963", "PersonaxCurso")]
         public EntityCollection<PersonaxCurso> PersonaxCurso
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxCurso>("TECAModel1.FK__PersonaxC__IdPer__5070F446", "PersonaxCurso");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxCurso>("TECAModel.FK__PersonaxC__IdPer__5535A963", "PersonaxCurso");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxCurso>("TECAModel1.FK__PersonaxC__IdPer__5070F446", "PersonaxCurso", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxCurso>("TECAModel.FK__PersonaxC__IdPer__5535A963", "PersonaxCurso", value);
                 }
             }
         }
@@ -8898,18 +9681,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxD__IdPer__7F2BE32F", "PersonaxDepartamento")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxD__IdPer__03F0984C", "PersonaxDepartamento")]
         public EntityCollection<PersonaxDepartamento> PersonaxDepartamento
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxDepartamento>("TECAModel1.FK__PersonaxD__IdPer__7F2BE32F", "PersonaxDepartamento");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxDepartamento>("TECAModel.FK__PersonaxD__IdPer__03F0984C", "PersonaxDepartamento");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxDepartamento>("TECAModel1.FK__PersonaxD__IdPer__7F2BE32F", "PersonaxDepartamento", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxDepartamento>("TECAModel.FK__PersonaxD__IdPer__03F0984C", "PersonaxDepartamento", value);
                 }
             }
         }
@@ -8920,18 +9703,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxT__IdPer__151B244E", "PersonaxTitulo")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxT__IdPer__19DFD96B", "PersonaxTitulo")]
         public EntityCollection<PersonaxTitulo> PersonaxTitulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxTitulo>("TECAModel1.FK__PersonaxT__IdPer__151B244E", "PersonaxTitulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxTitulo>("TECAModel.FK__PersonaxT__IdPer__19DFD96B", "PersonaxTitulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxTitulo>("TECAModel1.FK__PersonaxT__IdPer__151B244E", "PersonaxTitulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxTitulo>("TECAModel.FK__PersonaxT__IdPer__19DFD96B", "PersonaxTitulo", value);
                 }
             }
         }
@@ -8942,18 +9725,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Prestamo__IdPers__7849DB76", "Prestamo")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Prestamo__IdPers__7D0E9093", "Prestamo")]
         public EntityCollection<Prestamo> Prestamo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Prestamo>("TECAModel1.FK__Prestamo__IdPers__7849DB76", "Prestamo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Prestamo>("TECAModel.FK__Prestamo__IdPers__7D0E9093", "Prestamo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Prestamo>("TECAModel1.FK__Prestamo__IdPers__7849DB76", "Prestamo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Prestamo>("TECAModel.FK__Prestamo__IdPers__7D0E9093", "Prestamo", value);
                 }
             }
         }
@@ -8964,18 +9747,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Proveedor__IdPer__412EB0B6", "Proveedor")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Proveedor__IdPer__45F365D3", "Proveedor")]
         public EntityCollection<Proveedor> Proveedor
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Proveedor>("TECAModel1.FK__Proveedor__IdPer__412EB0B6", "Proveedor");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Proveedor>("TECAModel.FK__Proveedor__IdPer__45F365D3", "Proveedor");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Proveedor>("TECAModel1.FK__Proveedor__IdPer__412EB0B6", "Proveedor", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Proveedor>("TECAModel.FK__Proveedor__IdPer__45F365D3", "Proveedor", value);
                 }
             }
         }
@@ -8986,40 +9769,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TrabajoDi__IdEmp__03BB8E22", "TrabajoDiarioDet")]
-        public EntityCollection<TrabajoDiarioDet> TrabajoDiarioDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TrabajoDiarioDet>("TECAModel1.FK__TrabajoDi__IdEmp__03BB8E22", "TrabajoDiarioDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TrabajoDiarioDet>("TECAModel1.FK__TrabajoDi__IdEmp__03BB8E22", "TrabajoDiarioDet", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Vacacion__IdEmpl__6DCC4D03", "Vacacion")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Vacacion__IdEmpl__72910220", "Vacacion")]
         public EntityCollection<Vacacion> Vacacion
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Vacacion>("TECAModel1.FK__Vacacion__IdEmpl__6DCC4D03", "Vacacion");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Vacacion>("TECAModel.FK__Vacacion__IdEmpl__72910220", "Vacacion");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Vacacion>("TECAModel1.FK__Vacacion__IdEmpl__6DCC4D03", "Vacacion", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Vacacion>("TECAModel.FK__Vacacion__IdEmpl__72910220", "Vacacion", value);
                 }
             }
         }
@@ -9030,7 +9791,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="PersonaxCargo")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="PersonaxCargo")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class PersonaxCargo : EntityObject
@@ -9219,92 +9980,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxC__IdEmp__22751F6C", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__PersonaxC__IdEmp__22751F6C", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__PersonaxC__IdEmp__22751F6C", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__PersonaxC__IdEmp__22751F6C", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__PersonaxC__IdEmp__22751F6C", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxC__IdPer__2180FB33", "Persona")]
-        public Persona Persona
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__PersonaxC__IdPer__2180FB33", "Persona").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__PersonaxC__IdPer__2180FB33", "Persona").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Persona> PersonaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__PersonaxC__IdPer__2180FB33", "Persona");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__PersonaxC__IdPer__2180FB33", "Persona", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxC__IdCar__236943A5", "Cargo")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxC__IdCar__282DF8C2", "Cargo")]
         public Cargo Cargo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel1.FK__PersonaxC__IdCar__236943A5", "Cargo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel.FK__PersonaxC__IdCar__282DF8C2", "Cargo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel1.FK__PersonaxC__IdCar__236943A5", "Cargo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel.FK__PersonaxC__IdCar__282DF8C2", "Cargo").Value = value;
             }
         }
         /// <summary>
@@ -9316,13 +10001,89 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel1.FK__PersonaxC__IdCar__236943A5", "Cargo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("TECAModel.FK__PersonaxC__IdCar__282DF8C2", "Cargo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cargo>("TECAModel1.FK__PersonaxC__IdCar__236943A5", "Cargo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cargo>("TECAModel.FK__PersonaxC__IdCar__282DF8C2", "Cargo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxC__IdPer__2645B050", "Persona")]
+        public Persona Persona
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__PersonaxC__IdPer__2645B050", "Persona").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__PersonaxC__IdPer__2645B050", "Persona").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Persona> PersonaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__PersonaxC__IdPer__2645B050", "Persona");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__PersonaxC__IdPer__2645B050", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxC__IdEmp__2739D489", "Empresa")]
+        public Empresa Empresa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__PersonaxC__IdEmp__2739D489", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__PersonaxC__IdEmp__2739D489", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__PersonaxC__IdEmp__2739D489", "Empresa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__PersonaxC__IdEmp__2739D489", "Empresa", value);
                 }
             }
         }
@@ -9333,7 +10094,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="PersonaxCurso")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="PersonaxCurso")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class PersonaxCurso : EntityObject
@@ -9469,16 +10230,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxC__IdCur__5165187F", "Curso")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxC__IdCur__5629CD9C", "Curso")]
         public Curso Curso
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Curso>("TECAModel1.FK__PersonaxC__IdCur__5165187F", "Curso").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Curso>("TECAModel.FK__PersonaxC__IdCur__5629CD9C", "Curso").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Curso>("TECAModel1.FK__PersonaxC__IdCur__5165187F", "Curso").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Curso>("TECAModel.FK__PersonaxC__IdCur__5629CD9C", "Curso").Value = value;
             }
         }
         /// <summary>
@@ -9490,13 +10251,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Curso>("TECAModel1.FK__PersonaxC__IdCur__5165187F", "Curso");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Curso>("TECAModel.FK__PersonaxC__IdCur__5629CD9C", "Curso");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Curso>("TECAModel1.FK__PersonaxC__IdCur__5165187F", "Curso", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Curso>("TECAModel.FK__PersonaxC__IdCur__5629CD9C", "Curso", value);
                 }
             }
         }
@@ -9507,54 +10268,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxC__IdEmp__4F7CD00D", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__PersonaxC__IdEmp__4F7CD00D", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__PersonaxC__IdEmp__4F7CD00D", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__PersonaxC__IdEmp__4F7CD00D", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__PersonaxC__IdEmp__4F7CD00D", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxC__IdPer__5070F446", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxC__IdPer__5535A963", "Persona")]
         public Persona Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__PersonaxC__IdPer__5070F446", "Persona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__PersonaxC__IdPer__5535A963", "Persona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__PersonaxC__IdPer__5070F446", "Persona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__PersonaxC__IdPer__5535A963", "Persona").Value = value;
             }
         }
         /// <summary>
@@ -9566,13 +10289,51 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__PersonaxC__IdPer__5070F446", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__PersonaxC__IdPer__5535A963", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__PersonaxC__IdPer__5070F446", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__PersonaxC__IdPer__5535A963", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxC__IdEmp__5441852A", "Empresa")]
+        public Empresa Empresa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__PersonaxC__IdEmp__5441852A", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__PersonaxC__IdEmp__5441852A", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__PersonaxC__IdEmp__5441852A", "Empresa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__PersonaxC__IdEmp__5441852A", "Empresa", value);
                 }
             }
         }
@@ -9583,7 +10344,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="PersonaxDepartamento")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="PersonaxDepartamento")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class PersonaxDepartamento : EntityObject
@@ -9722,16 +10483,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxD__IdDep__7D439ABD", "Departamento")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxD__IdDep__02084FDA", "Departamento")]
         public Departamento Departamento
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("TECAModel1.FK__PersonaxD__IdDep__7D439ABD", "Departamento").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("TECAModel.FK__PersonaxD__IdDep__02084FDA", "Departamento").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("TECAModel1.FK__PersonaxD__IdDep__7D439ABD", "Departamento").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("TECAModel.FK__PersonaxD__IdDep__02084FDA", "Departamento").Value = value;
             }
         }
         /// <summary>
@@ -9743,13 +10504,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("TECAModel1.FK__PersonaxD__IdDep__7D439ABD", "Departamento");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Departamento>("TECAModel.FK__PersonaxD__IdDep__02084FDA", "Departamento");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Departamento>("TECAModel1.FK__PersonaxD__IdDep__7D439ABD", "Departamento", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Departamento>("TECAModel.FK__PersonaxD__IdDep__02084FDA", "Departamento", value);
                 }
             }
         }
@@ -9760,54 +10521,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxD__IdEmp__7E37BEF6", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__PersonaxD__IdEmp__7E37BEF6", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__PersonaxD__IdEmp__7E37BEF6", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__PersonaxD__IdEmp__7E37BEF6", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__PersonaxD__IdEmp__7E37BEF6", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxD__IdPer__7F2BE32F", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxD__IdPer__03F0984C", "Persona")]
         public Persona Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__PersonaxD__IdPer__7F2BE32F", "Persona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__PersonaxD__IdPer__03F0984C", "Persona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__PersonaxD__IdPer__7F2BE32F", "Persona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__PersonaxD__IdPer__03F0984C", "Persona").Value = value;
             }
         }
         /// <summary>
@@ -9819,13 +10542,51 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__PersonaxD__IdPer__7F2BE32F", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__PersonaxD__IdPer__03F0984C", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__PersonaxD__IdPer__7F2BE32F", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__PersonaxD__IdPer__03F0984C", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxD__IdEmp__02FC7413", "Empresa")]
+        public Empresa Empresa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__PersonaxD__IdEmp__02FC7413", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__PersonaxD__IdEmp__02FC7413", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__PersonaxD__IdEmp__02FC7413", "Empresa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__PersonaxD__IdEmp__02FC7413", "Empresa", value);
                 }
             }
         }
@@ -9836,7 +10597,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="PersonaxTitulo")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="PersonaxTitulo")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class PersonaxTitulo : EntityObject
@@ -9975,92 +10736,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxT__IdEmp__14270015", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__PersonaxT__IdEmp__14270015", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__PersonaxT__IdEmp__14270015", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__PersonaxT__IdEmp__14270015", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__PersonaxT__IdEmp__14270015", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxT__IdTit__1332DBDC", "Titulo")]
-        public Titulo Titulo
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Titulo>("TECAModel1.FK__PersonaxT__IdTit__1332DBDC", "Titulo").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Titulo>("TECAModel1.FK__PersonaxT__IdTit__1332DBDC", "Titulo").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Titulo> TituloReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Titulo>("TECAModel1.FK__PersonaxT__IdTit__1332DBDC", "Titulo");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Titulo>("TECAModel1.FK__PersonaxT__IdTit__1332DBDC", "Titulo", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxT__IdPer__151B244E", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxT__IdPer__19DFD96B", "Persona")]
         public Persona Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__PersonaxT__IdPer__151B244E", "Persona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__PersonaxT__IdPer__19DFD96B", "Persona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__PersonaxT__IdPer__151B244E", "Persona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__PersonaxT__IdPer__19DFD96B", "Persona").Value = value;
             }
         }
         /// <summary>
@@ -10072,13 +10757,89 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__PersonaxT__IdPer__151B244E", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__PersonaxT__IdPer__19DFD96B", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__PersonaxT__IdPer__151B244E", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__PersonaxT__IdPer__19DFD96B", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxT__IdEmp__18EBB532", "Empresa")]
+        public Empresa Empresa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__PersonaxT__IdEmp__18EBB532", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__PersonaxT__IdEmp__18EBB532", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__PersonaxT__IdEmp__18EBB532", "Empresa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__PersonaxT__IdEmp__18EBB532", "Empresa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxT__IdTit__17F790F9", "Titulo")]
+        public Titulo Titulo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Titulo>("TECAModel.FK__PersonaxT__IdTit__17F790F9", "Titulo").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Titulo>("TECAModel.FK__PersonaxT__IdTit__17F790F9", "Titulo").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Titulo> TituloReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Titulo>("TECAModel.FK__PersonaxT__IdTit__17F790F9", "Titulo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Titulo>("TECAModel.FK__PersonaxT__IdTit__17F790F9", "Titulo", value);
                 }
             }
         }
@@ -10089,7 +10850,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Prestamo")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Prestamo")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Prestamo : EntityObject
@@ -10100,20 +10861,26 @@ namespace datos.RecursosHumanos
         /// Create a new Prestamo object.
         /// </summary>
         /// <param name="idPrestamo">Initial value of the IdPrestamo property.</param>
-        /// <param name="idTipoPrestamo">Initial value of the IdTipoPrestamo property.</param>
         /// <param name="idPersona">Initial value of the IdPersona property.</param>
         /// <param name="monto">Initial value of the Monto property.</param>
         /// <param name="pago">Initial value of the Pago property.</param>
+        /// <param name="interes">Initial value of the Interes property.</param>
+        /// <param name="total">Initial value of the Total property.</param>
+        /// <param name="totalPagado">Initial value of the TotalPagado property.</param>
+        /// <param name="periodos">Initial value of the Periodos property.</param>
         /// <param name="idEstado">Initial value of the IdEstado property.</param>
         /// <param name="idEmpresa">Initial value of the IdEmpresa property.</param>
-        public static Prestamo CreatePrestamo(global::System.Int32 idPrestamo, global::System.Int32 idTipoPrestamo, global::System.Int32 idPersona, global::System.Decimal monto, global::System.Decimal pago, global::System.Int32 idEstado, global::System.Int32 idEmpresa)
+        public static Prestamo CreatePrestamo(global::System.Int32 idPrestamo, global::System.Int32 idPersona, global::System.Decimal monto, global::System.Decimal pago, global::System.Decimal interes, global::System.Decimal total, global::System.Decimal totalPagado, global::System.Int32 periodos, global::System.Int32 idEstado, global::System.Int32 idEmpresa)
         {
             Prestamo prestamo = new Prestamo();
             prestamo.IdPrestamo = idPrestamo;
-            prestamo.IdTipoPrestamo = idTipoPrestamo;
             prestamo.IdPersona = idPersona;
             prestamo.Monto = monto;
             prestamo.Pago = pago;
+            prestamo.Interes = interes;
+            prestamo.Total = total;
+            prestamo.TotalPagado = totalPagado;
+            prestamo.Periodos = periodos;
             prestamo.IdEstado = idEstado;
             prestamo.IdEmpresa = idEmpresa;
             return prestamo;
@@ -10148,30 +10915,6 @@ namespace datos.RecursosHumanos
         private global::System.Int32 _IdPrestamo;
         partial void OnIdPrestamoChanging(global::System.Int32 value);
         partial void OnIdPrestamoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdTipoPrestamo
-        {
-            get
-            {
-                return _IdTipoPrestamo;
-            }
-            set
-            {
-                OnIdTipoPrestamoChanging(value);
-                ReportPropertyChanging("IdTipoPrestamo");
-                _IdTipoPrestamo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdTipoPrestamo");
-                OnIdTipoPrestamoChanged();
-            }
-        }
-        private global::System.Int32 _IdTipoPrestamo;
-        partial void OnIdTipoPrestamoChanging(global::System.Int32 value);
-        partial void OnIdTipoPrestamoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -10274,6 +11017,102 @@ namespace datos.RecursosHumanos
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
+        public global::System.Decimal Interes
+        {
+            get
+            {
+                return _Interes;
+            }
+            set
+            {
+                OnInteresChanging(value);
+                ReportPropertyChanging("Interes");
+                _Interes = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Interes");
+                OnInteresChanged();
+            }
+        }
+        private global::System.Decimal _Interes;
+        partial void OnInteresChanging(global::System.Decimal value);
+        partial void OnInteresChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal Total
+        {
+            get
+            {
+                return _Total;
+            }
+            set
+            {
+                OnTotalChanging(value);
+                ReportPropertyChanging("Total");
+                _Total = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Total");
+                OnTotalChanged();
+            }
+        }
+        private global::System.Decimal _Total;
+        partial void OnTotalChanging(global::System.Decimal value);
+        partial void OnTotalChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal TotalPagado
+        {
+            get
+            {
+                return _TotalPagado;
+            }
+            set
+            {
+                OnTotalPagadoChanging(value);
+                ReportPropertyChanging("TotalPagado");
+                _TotalPagado = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("TotalPagado");
+                OnTotalPagadoChanged();
+            }
+        }
+        private global::System.Decimal _TotalPagado;
+        partial void OnTotalPagadoChanging(global::System.Decimal value);
+        partial void OnTotalPagadoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Periodos
+        {
+            get
+            {
+                return _Periodos;
+            }
+            set
+            {
+                OnPeriodosChanging(value);
+                ReportPropertyChanging("Periodos");
+                _Periodos = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Periodos");
+                OnPeriodosChanged();
+            }
+        }
+        private global::System.Int32 _Periodos;
+        partial void OnPeriodosChanging(global::System.Int32 value);
+        partial void OnPeriodosChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
         public global::System.Int32 IdEstado
         {
             get
@@ -10327,92 +11166,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Prestamo__IdEmpr__793DFFAF", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Prestamo__IdEmpr__793DFFAF", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Prestamo__IdEmpr__793DFFAF", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Prestamo__IdEmpr__793DFFAF", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Prestamo__IdEmpr__793DFFAF", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Prestamo__IdTipo__7A3223E8", "TipoPrestamo")]
-        public TipoPrestamo TipoPrestamo
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPrestamo>("TECAModel1.FK__Prestamo__IdTipo__7A3223E8", "TipoPrestamo").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPrestamo>("TECAModel1.FK__Prestamo__IdTipo__7A3223E8", "TipoPrestamo").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<TipoPrestamo> TipoPrestamoReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPrestamo>("TECAModel1.FK__Prestamo__IdTipo__7A3223E8", "TipoPrestamo");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoPrestamo>("TECAModel1.FK__Prestamo__IdTipo__7A3223E8", "TipoPrestamo", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Prestamo__IdPers__7849DB76", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Prestamo__IdPers__7D0E9093", "Persona")]
         public Persona Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Prestamo__IdPers__7849DB76", "Persona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Prestamo__IdPers__7D0E9093", "Persona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Prestamo__IdPers__7849DB76", "Persona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Prestamo__IdPers__7D0E9093", "Persona").Value = value;
             }
         }
         /// <summary>
@@ -10424,13 +11187,51 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Prestamo__IdPers__7849DB76", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Prestamo__IdPers__7D0E9093", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__Prestamo__IdPers__7849DB76", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__Prestamo__IdPers__7D0E9093", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Prestamo__IdEmpr__7E02B4CC", "Empresa")]
+        public Empresa Empresa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Prestamo__IdEmpr__7E02B4CC", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Prestamo__IdEmpr__7E02B4CC", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Prestamo__IdEmpr__7E02B4CC", "Empresa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Prestamo__IdEmpr__7E02B4CC", "Empresa", value);
                 }
             }
         }
@@ -10441,7 +11242,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Proveedor")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Proveedor")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Proveedor : EntityObject
@@ -10525,16 +11326,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Proveedor__IdPer__412EB0B6", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Proveedor__IdPer__45F365D3", "Persona")]
         public Persona Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Proveedor__IdPer__412EB0B6", "Persona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Proveedor__IdPer__45F365D3", "Persona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Proveedor__IdPer__412EB0B6", "Persona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Proveedor__IdPer__45F365D3", "Persona").Value = value;
             }
         }
         /// <summary>
@@ -10546,13 +11347,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Proveedor__IdPer__412EB0B6", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Proveedor__IdPer__45F365D3", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__Proveedor__IdPer__412EB0B6", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__Proveedor__IdPer__45F365D3", "Persona", value);
                 }
             }
         }
@@ -10563,7 +11364,297 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Telefono")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Rubro")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Rubro : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Rubro object.
+        /// </summary>
+        /// <param name="idRubro">Initial value of the IdRubro property.</param>
+        /// <param name="descripcion">Initial value of the Descripcion property.</param>
+        /// <param name="porcentaje">Initial value of the Porcentaje property.</param>
+        /// <param name="idEstado">Initial value of the IdEstado property.</param>
+        /// <param name="idEmpresa">Initial value of the IdEmpresa property.</param>
+        /// <param name="idCargo">Initial value of the IdCargo property.</param>
+        /// <param name="idDepartamento">Initial value of the IdDepartamento property.</param>
+        public static Rubro CreateRubro(global::System.Int32 idRubro, global::System.String descripcion, global::System.Double porcentaje, global::System.Int32 idEstado, global::System.Int32 idEmpresa, global::System.Int32 idCargo, global::System.Int32 idDepartamento)
+        {
+            Rubro rubro = new Rubro();
+            rubro.IdRubro = idRubro;
+            rubro.Descripcion = descripcion;
+            rubro.Porcentaje = porcentaje;
+            rubro.IdEstado = idEstado;
+            rubro.IdEmpresa = idEmpresa;
+            rubro.IdCargo = idCargo;
+            rubro.IdDepartamento = idDepartamento;
+            return rubro;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdRubro
+        {
+            get
+            {
+                return _IdRubro;
+            }
+            set
+            {
+                if (_IdRubro != value)
+                {
+                    OnIdRubroChanging(value);
+                    ReportPropertyChanging("IdRubro");
+                    _IdRubro = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdRubro");
+                    OnIdRubroChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdRubro;
+        partial void OnIdRubroChanging(global::System.Int32 value);
+        partial void OnIdRubroChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Descripcion
+        {
+            get
+            {
+                return _Descripcion;
+            }
+            set
+            {
+                OnDescripcionChanging(value);
+                ReportPropertyChanging("Descripcion");
+                _Descripcion = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Descripcion");
+                OnDescripcionChanged();
+            }
+        }
+        private global::System.String _Descripcion;
+        partial void OnDescripcionChanging(global::System.String value);
+        partial void OnDescripcionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Double Porcentaje
+        {
+            get
+            {
+                return _Porcentaje;
+            }
+            set
+            {
+                OnPorcentajeChanging(value);
+                ReportPropertyChanging("Porcentaje");
+                _Porcentaje = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Porcentaje");
+                OnPorcentajeChanged();
+            }
+        }
+        private global::System.Double _Porcentaje;
+        partial void OnPorcentajeChanging(global::System.Double value);
+        partial void OnPorcentajeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdEstado
+        {
+            get
+            {
+                return _IdEstado;
+            }
+            set
+            {
+                OnIdEstadoChanging(value);
+                ReportPropertyChanging("IdEstado");
+                _IdEstado = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdEstado");
+                OnIdEstadoChanged();
+            }
+        }
+        private global::System.Int32 _IdEstado;
+        partial void OnIdEstadoChanging(global::System.Int32 value);
+        partial void OnIdEstadoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdEmpresa
+        {
+            get
+            {
+                return _IdEmpresa;
+            }
+            set
+            {
+                OnIdEmpresaChanging(value);
+                ReportPropertyChanging("IdEmpresa");
+                _IdEmpresa = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdEmpresa");
+                OnIdEmpresaChanged();
+            }
+        }
+        private global::System.Int32 _IdEmpresa;
+        partial void OnIdEmpresaChanging(global::System.Int32 value);
+        partial void OnIdEmpresaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdCargo
+        {
+            get
+            {
+                return _IdCargo;
+            }
+            set
+            {
+                OnIdCargoChanging(value);
+                ReportPropertyChanging("IdCargo");
+                _IdCargo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdCargo");
+                OnIdCargoChanged();
+            }
+        }
+        private global::System.Int32 _IdCargo;
+        partial void OnIdCargoChanging(global::System.Int32 value);
+        partial void OnIdCargoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdDepartamento
+        {
+            get
+            {
+                return _IdDepartamento;
+            }
+            set
+            {
+                OnIdDepartamentoChanging(value);
+                ReportPropertyChanging("IdDepartamento");
+                _IdDepartamento = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdDepartamento");
+                OnIdDepartamentoChanged();
+            }
+        }
+        private global::System.Int32 _IdDepartamento;
+        partial void OnIdDepartamentoChanging(global::System.Int32 value);
+        partial void OnIdDepartamentoChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Rubro__123EB7A3", "CargoxDepartamento")]
+        public CargoxDepartamento CargoxDepartamento
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CargoxDepartamento>("TECAModel.FK__Rubro__123EB7A3", "CargoxDepartamento").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CargoxDepartamento>("TECAModel.FK__Rubro__123EB7A3", "CargoxDepartamento").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<CargoxDepartamento> CargoxDepartamentoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CargoxDepartamento>("TECAModel.FK__Rubro__123EB7A3", "CargoxDepartamento");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CargoxDepartamento>("TECAModel.FK__Rubro__123EB7A3", "CargoxDepartamento", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Rubro__IdEmpresa__1332DBDC", "Empresa")]
+        public Empresa Empresa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Rubro__IdEmpresa__1332DBDC", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Rubro__IdEmpresa__1332DBDC", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Rubro__IdEmpresa__1332DBDC", "Empresa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Rubro__IdEmpresa__1332DBDC", "Empresa", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Telefono")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Telefono : EntityObject
@@ -10673,16 +11764,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Telefono__IdTipo__5BE2A6F2", "TipoTelefono")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Telefono__IdTipo__60A75C0F", "TipoTelefono")]
         public TipoTelefono TipoTelefono
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTelefono>("TECAModel1.FK__Telefono__IdTipo__5BE2A6F2", "TipoTelefono").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTelefono>("TECAModel.FK__Telefono__IdTipo__60A75C0F", "TipoTelefono").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTelefono>("TECAModel1.FK__Telefono__IdTipo__5BE2A6F2", "TipoTelefono").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTelefono>("TECAModel.FK__Telefono__IdTipo__60A75C0F", "TipoTelefono").Value = value;
             }
         }
         /// <summary>
@@ -10694,13 +11785,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTelefono>("TECAModel1.FK__Telefono__IdTipo__5BE2A6F2", "TipoTelefono");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTelefono>("TECAModel.FK__Telefono__IdTipo__60A75C0F", "TipoTelefono");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoTelefono>("TECAModel1.FK__Telefono__IdTipo__5BE2A6F2", "TipoTelefono", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoTelefono>("TECAModel.FK__Telefono__IdTipo__60A75C0F", "TipoTelefono", value);
                 }
             }
         }
@@ -10711,7 +11802,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="TipoContrato")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="TipoContrato")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class TipoContrato : EntityObject
@@ -10873,18 +11964,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Contrato__IdTipo__540C7B00", "Contrato")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Contrato__IdTipo__58D1301D", "Contrato")]
         public EntityCollection<Contrato> Contrato
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Contrato>("TECAModel1.FK__Contrato__IdTipo__540C7B00", "Contrato");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Contrato>("TECAModel.FK__Contrato__IdTipo__58D1301D", "Contrato");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Contrato>("TECAModel1.FK__Contrato__IdTipo__540C7B00", "Contrato", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Contrato>("TECAModel.FK__Contrato__IdTipo__58D1301D", "Contrato", value);
                 }
             }
         }
@@ -10895,16 +11986,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TipoContr__IdEmp__4D5F7D71", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TipoContr__IdEmp__5224328E", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoContr__IdEmp__4D5F7D71", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoContr__IdEmp__5224328E", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoContr__IdEmp__4D5F7D71", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoContr__IdEmp__5224328E", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -10916,13 +12007,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoContr__IdEmp__4D5F7D71", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoContr__IdEmp__5224328E", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__TipoContr__IdEmp__4D5F7D71", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__TipoContr__IdEmp__5224328E", "Empresa", value);
                 }
             }
         }
@@ -10933,7 +12024,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="TipoIdentificacion")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="TipoIdentificacion")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class TipoIdentificacion : EntityObject
@@ -11069,16 +12160,38 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TipoIdent__IdEmp__173876EA", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Persona__TipoIde__1DE57479", "Persona")]
+        public EntityCollection<Persona> Persona
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Persona>("TECAModel.FK__Persona__TipoIde__1DE57479", "Persona");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Persona>("TECAModel.FK__Persona__TipoIde__1DE57479", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TipoIdent__IdEmp__173876EA", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoIdent__IdEmp__173876EA", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoIdent__IdEmp__173876EA", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoIdent__IdEmp__173876EA", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoIdent__IdEmp__173876EA", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -11090,35 +12203,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoIdent__IdEmp__173876EA", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoIdent__IdEmp__173876EA", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__TipoIdent__IdEmp__173876EA", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Persona__TipoIde__1DE57479", "Persona")]
-        public EntityCollection<Persona> Persona
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Persona>("TECAModel1.FK__Persona__TipoIde__1DE57479", "Persona");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Persona>("TECAModel1.FK__Persona__TipoIde__1DE57479", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__TipoIdent__IdEmp__173876EA", "Empresa", value);
                 }
             }
         }
@@ -11129,7 +12220,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="TipoJornada")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="TipoJornada")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class TipoJornada : EntityObject
@@ -11237,18 +12328,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Jornada__IdTipoJ__6B24EA82", "Jornada")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Jornada__IdTipoJ__6FE99F9F", "Jornada")]
         public EntityCollection<Jornada> Jornada
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Jornada>("TECAModel1.FK__Jornada__IdTipoJ__6B24EA82", "Jornada");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Jornada>("TECAModel.FK__Jornada__IdTipoJ__6FE99F9F", "Jornada");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Jornada>("TECAModel1.FK__Jornada__IdTipoJ__6B24EA82", "Jornada", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Jornada>("TECAModel.FK__Jornada__IdTipoJ__6FE99F9F", "Jornada", value);
                 }
             }
         }
@@ -11259,16 +12350,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TipoJorna__IdEmp__66603565", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TipoJorna__IdEmp__6B24EA82", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoJorna__IdEmp__66603565", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoJorna__IdEmp__6B24EA82", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoJorna__IdEmp__66603565", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoJorna__IdEmp__6B24EA82", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -11280,13 +12371,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoJorna__IdEmp__66603565", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoJorna__IdEmp__6B24EA82", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__TipoJorna__IdEmp__66603565", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__TipoJorna__IdEmp__6B24EA82", "Empresa", value);
                 }
             }
         }
@@ -11297,7 +12388,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="TipoPermiso")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="TipoPermiso")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class TipoPermiso : EntityObject
@@ -11433,18 +12524,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Permiso__IdTipoP__6166761E", "Permiso")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Permiso__IdTipoP__662B2B3B", "Permiso")]
         public EntityCollection<Permiso> Permiso
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Permiso>("TECAModel1.FK__Permiso__IdTipoP__6166761E", "Permiso");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Permiso>("TECAModel.FK__Permiso__IdTipoP__662B2B3B", "Permiso");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Permiso>("TECAModel1.FK__Permiso__IdTipoP__6166761E", "Permiso", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Permiso>("TECAModel.FK__Permiso__IdTipoP__662B2B3B", "Permiso", value);
                 }
             }
         }
@@ -11455,16 +12546,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TipoPermi__IdEmp__5AB9788F", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TipoPermi__IdEmp__5F7E2DAC", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoPermi__IdEmp__5AB9788F", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoPermi__IdEmp__5F7E2DAC", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoPermi__IdEmp__5AB9788F", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoPermi__IdEmp__5F7E2DAC", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -11476,13 +12567,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoPermi__IdEmp__5AB9788F", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoPermi__IdEmp__5F7E2DAC", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__TipoPermi__IdEmp__5AB9788F", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__TipoPermi__IdEmp__5F7E2DAC", "Empresa", value);
                 }
             }
         }
@@ -11493,7 +12584,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="TipoPersona")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="TipoPersona")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class TipoPersona : EntityObject
@@ -11629,16 +12720,38 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TipoPerso__IdEmp__117F9D94", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Persona__IdTipoP__1CF15040", "Persona")]
+        public EntityCollection<Persona> Persona
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Persona>("TECAModel.FK__Persona__IdTipoP__1CF15040", "Persona");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Persona>("TECAModel.FK__Persona__IdTipoP__1CF15040", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TipoPerso__IdEmp__117F9D94", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoPerso__IdEmp__117F9D94", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoPerso__IdEmp__117F9D94", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoPerso__IdEmp__117F9D94", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoPerso__IdEmp__117F9D94", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -11650,35 +12763,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoPerso__IdEmp__117F9D94", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoPerso__IdEmp__117F9D94", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__TipoPerso__IdEmp__117F9D94", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Persona__IdTipoP__1CF15040", "Persona")]
-        public EntityCollection<Persona> Persona
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Persona>("TECAModel1.FK__Persona__IdTipoP__1CF15040", "Persona");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Persona>("TECAModel1.FK__Persona__IdTipoP__1CF15040", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__TipoPerso__IdEmp__117F9D94", "Empresa", value);
                 }
             }
         }
@@ -11689,7 +12780,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="TipoPrestamo")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="TipoPrestamo")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class TipoPrestamo : EntityObject
@@ -11825,38 +12916,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Prestamo__IdTipo__7A3223E8", "Prestamo")]
-        public EntityCollection<Prestamo> Prestamo
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Prestamo>("TECAModel1.FK__Prestamo__IdTipo__7A3223E8", "Prestamo");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Prestamo>("TECAModel1.FK__Prestamo__IdTipo__7A3223E8", "Prestamo", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TipoPrest__IdEmp__73852659", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TipoPrest__IdEmp__7849DB76", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoPrest__IdEmp__73852659", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoPrest__IdEmp__7849DB76", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoPrest__IdEmp__73852659", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoPrest__IdEmp__7849DB76", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -11868,13 +12937,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoPrest__IdEmp__73852659", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoPrest__IdEmp__7849DB76", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__TipoPrest__IdEmp__73852659", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__TipoPrest__IdEmp__7849DB76", "Empresa", value);
                 }
             }
         }
@@ -11885,7 +12954,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="TipoTelefono")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="TipoTelefono")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class TipoTelefono : EntityObject
@@ -12021,18 +13090,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Telefono__IdTipo__5BE2A6F2", "Telefono")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Telefono__IdTipo__60A75C0F", "Telefono")]
         public EntityCollection<Telefono> Telefono
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Telefono>("TECAModel1.FK__Telefono__IdTipo__5BE2A6F2", "Telefono");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Telefono>("TECAModel.FK__Telefono__IdTipo__60A75C0F", "Telefono");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Telefono>("TECAModel1.FK__Telefono__IdTipo__5BE2A6F2", "Telefono", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Telefono>("TECAModel.FK__Telefono__IdTipo__60A75C0F", "Telefono", value);
                 }
             }
         }
@@ -12043,16 +13112,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TipoTelef__IdEmp__571DF1D5", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TipoTelef__IdEmp__5BE2A6F2", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoTelef__IdEmp__571DF1D5", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoTelef__IdEmp__5BE2A6F2", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoTelef__IdEmp__571DF1D5", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoTelef__IdEmp__5BE2A6F2", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -12064,13 +13133,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TipoTelef__IdEmp__571DF1D5", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TipoTelef__IdEmp__5BE2A6F2", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__TipoTelef__IdEmp__571DF1D5", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__TipoTelef__IdEmp__5BE2A6F2", "Empresa", value);
                 }
             }
         }
@@ -12081,7 +13150,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Titulo")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Titulo")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Titulo : EntityObject
@@ -12293,18 +13362,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Academico__IdTit__1AD3FDA4", "Academico")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Academico__IdTit__1F98B2C1", "Academico")]
         public EntityCollection<Academico> Academico
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Academico>("TECAModel1.FK__Academico__IdTit__1AD3FDA4", "Academico");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Academico>("TECAModel.FK__Academico__IdTit__1F98B2C1", "Academico");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Academico>("TECAModel1.FK__Academico__IdTit__1AD3FDA4", "Academico", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Academico>("TECAModel.FK__Academico__IdTit__1F98B2C1", "Academico", value);
                 }
             }
         }
@@ -12315,18 +13384,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__PersonaxT__IdTit__1332DBDC", "PersonaxTitulo")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__PersonaxT__IdTit__17F790F9", "PersonaxTitulo")]
         public EntityCollection<PersonaxTitulo> PersonaxTitulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxTitulo>("TECAModel1.FK__PersonaxT__IdTit__1332DBDC", "PersonaxTitulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaxTitulo>("TECAModel.FK__PersonaxT__IdTit__17F790F9", "PersonaxTitulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxTitulo>("TECAModel1.FK__PersonaxT__IdTit__1332DBDC", "PersonaxTitulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaxTitulo>("TECAModel.FK__PersonaxT__IdTit__17F790F9", "PersonaxTitulo", value);
                 }
             }
         }
@@ -12337,16 +13406,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Titulo__IdEmpres__60A75C0F", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Titulo__IdEmpres__656C112C", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Titulo__IdEmpres__60A75C0F", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Titulo__IdEmpres__656C112C", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Titulo__IdEmpres__60A75C0F", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Titulo__IdEmpres__656C112C", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -12358,13 +13427,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Titulo__IdEmpres__60A75C0F", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Titulo__IdEmpres__656C112C", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Titulo__IdEmpres__60A75C0F", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Titulo__IdEmpres__656C112C", "Empresa", value);
                 }
             }
         }
@@ -12375,16 +13444,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Titulo__IdUniver__619B8048", "Universidad")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Titulo__IdUniver__66603565", "Universidad")]
         public Universidad Universidad
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Universidad>("TECAModel1.FK__Titulo__IdUniver__619B8048", "Universidad").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Universidad>("TECAModel.FK__Titulo__IdUniver__66603565", "Universidad").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Universidad>("TECAModel1.FK__Titulo__IdUniver__619B8048", "Universidad").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Universidad>("TECAModel.FK__Titulo__IdUniver__66603565", "Universidad").Value = value;
             }
         }
         /// <summary>
@@ -12396,13 +13465,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Universidad>("TECAModel1.FK__Titulo__IdUniver__619B8048", "Universidad");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Universidad>("TECAModel.FK__Titulo__IdUniver__66603565", "Universidad");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Universidad>("TECAModel1.FK__Titulo__IdUniver__619B8048", "Universidad", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Universidad>("TECAModel.FK__Titulo__IdUniver__66603565", "Universidad", value);
                 }
             }
         }
@@ -12413,28 +13482,42 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="TrabajoDiarioCab")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="TrabajoDiario")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class TrabajoDiarioCab : EntityObject
+    public partial class TrabajoDiario : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new TrabajoDiarioCab object.
+        /// Create a new TrabajoDiario object.
         /// </summary>
         /// <param name="numTrabajo">Initial value of the NumTrabajo property.</param>
-        /// <param name="fecha">Initial value of the Fecha property.</param>
+        /// <param name="idPersna">Initial value of the IdPersna property.</param>
+        /// <param name="fechaDesde">Initial value of the FechaDesde property.</param>
+        /// <param name="fechaHasta">Initial value of the FechaHasta property.</param>
+        /// <param name="nDias">Initial value of the NDias property.</param>
+        /// <param name="horaEntrada">Initial value of the HoraEntrada property.</param>
+        /// <param name="horaSalida">Initial value of the HoraSalida property.</param>
+        /// <param name="horaTrabajada">Initial value of the HoraTrabajada property.</param>
+        /// <param name="horaRango">Initial value of the HoraRango property.</param>
         /// <param name="idEstado">Initial value of the IdEstado property.</param>
         /// <param name="idEmpresa">Initial value of the IdEmpresa property.</param>
-        public static TrabajoDiarioCab CreateTrabajoDiarioCab(global::System.Int32 numTrabajo, global::System.DateTime fecha, global::System.Int32 idEstado, global::System.Int32 idEmpresa)
+        public static TrabajoDiario CreateTrabajoDiario(global::System.Int32 numTrabajo, global::System.Int32 idPersna, global::System.DateTime fechaDesde, global::System.DateTime fechaHasta, global::System.Int32 nDias, global::System.String horaEntrada, global::System.String horaSalida, global::System.Int32 horaTrabajada, global::System.Int32 horaRango, global::System.Int32 idEstado, global::System.Int32 idEmpresa)
         {
-            TrabajoDiarioCab trabajoDiarioCab = new TrabajoDiarioCab();
-            trabajoDiarioCab.NumTrabajo = numTrabajo;
-            trabajoDiarioCab.Fecha = fecha;
-            trabajoDiarioCab.IdEstado = idEstado;
-            trabajoDiarioCab.IdEmpresa = idEmpresa;
-            return trabajoDiarioCab;
+            TrabajoDiario trabajoDiario = new TrabajoDiario();
+            trabajoDiario.NumTrabajo = numTrabajo;
+            trabajoDiario.IdPersna = idPersna;
+            trabajoDiario.FechaDesde = fechaDesde;
+            trabajoDiario.FechaHasta = fechaHasta;
+            trabajoDiario.NDias = nDias;
+            trabajoDiario.HoraEntrada = horaEntrada;
+            trabajoDiario.HoraSalida = horaSalida;
+            trabajoDiario.HoraTrabajada = horaTrabajada;
+            trabajoDiario.HoraRango = horaRango;
+            trabajoDiario.IdEstado = idEstado;
+            trabajoDiario.IdEmpresa = idEmpresa;
+            return trabajoDiario;
         }
 
         #endregion
@@ -12472,279 +13555,96 @@ namespace datos.RecursosHumanos
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.DateTime Fecha
+        public global::System.Int32 IdPersna
         {
             get
             {
-                return _Fecha;
+                return _IdPersna;
             }
             set
             {
-                OnFechaChanging(value);
-                ReportPropertyChanging("Fecha");
-                _Fecha = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Fecha");
-                OnFechaChanged();
+                OnIdPersnaChanging(value);
+                ReportPropertyChanging("IdPersna");
+                _IdPersna = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPersna");
+                OnIdPersnaChanged();
             }
         }
-        private global::System.DateTime _Fecha;
-        partial void OnFechaChanging(global::System.DateTime value);
-        partial void OnFechaChanged();
+        private global::System.Int32 _IdPersna;
+        partial void OnIdPersnaChanging(global::System.Int32 value);
+        partial void OnIdPersnaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 IdEstado
+        public global::System.DateTime FechaDesde
         {
             get
             {
-                return _IdEstado;
+                return _FechaDesde;
             }
             set
             {
-                OnIdEstadoChanging(value);
-                ReportPropertyChanging("IdEstado");
-                _IdEstado = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdEstado");
-                OnIdEstadoChanged();
+                OnFechaDesdeChanging(value);
+                ReportPropertyChanging("FechaDesde");
+                _FechaDesde = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FechaDesde");
+                OnFechaDesdeChanged();
             }
         }
-        private global::System.Int32 _IdEstado;
-        partial void OnIdEstadoChanging(global::System.Int32 value);
-        partial void OnIdEstadoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdEmpresa
-        {
-            get
-            {
-                return _IdEmpresa;
-            }
-            set
-            {
-                if (_IdEmpresa != value)
-                {
-                    OnIdEmpresaChanging(value);
-                    ReportPropertyChanging("IdEmpresa");
-                    _IdEmpresa = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdEmpresa");
-                    OnIdEmpresaChanged();
-                }
-            }
-        }
-        private global::System.Int32 _IdEmpresa;
-        partial void OnIdEmpresaChanging(global::System.Int32 value);
-        partial void OnIdEmpresaChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String Observacion
-        {
-            get
-            {
-                return _Observacion;
-            }
-            set
-            {
-                OnObservacionChanging(value);
-                ReportPropertyChanging("Observacion");
-                _Observacion = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Observacion");
-                OnObservacionChanged();
-            }
-        }
-        private global::System.String _Observacion;
-        partial void OnObservacionChanging(global::System.String value);
-        partial void OnObservacionChanged();
-
-        #endregion
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TrabajoDi__IdEmp__7EF6D905", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TrabajoDi__IdEmp__7EF6D905", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TrabajoDi__IdEmp__7EF6D905", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__TrabajoDi__IdEmp__7EF6D905", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__TrabajoDi__IdEmp__7EF6D905", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TrabajoDiarioDet__04AFB25B", "TrabajoDiarioDet")]
-        public EntityCollection<TrabajoDiarioDet> TrabajoDiarioDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TrabajoDiarioDet>("TECAModel1.FK__TrabajoDiarioDet__04AFB25B", "TrabajoDiarioDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TrabajoDiarioDet>("TECAModel1.FK__TrabajoDiarioDet__04AFB25B", "TrabajoDiarioDet", value);
-                }
-            }
-        }
-
-        #endregion
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="TrabajoDiarioDet")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class TrabajoDiarioDet : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new TrabajoDiarioDet object.
-        /// </summary>
-        /// <param name="numLinea">Initial value of the NumLinea property.</param>
-        /// <param name="numTrabajo">Initial value of the NumTrabajo property.</param>
-        /// <param name="idPersona">Initial value of the IdPersona property.</param>
-        /// <param name="horaEntrada">Initial value of the HoraEntrada property.</param>
-        /// <param name="horaSalida">Initial value of the HoraSalida property.</param>
-        /// <param name="horaTrabajada">Initial value of the HoraTrabajada property.</param>
-        /// <param name="horaRango">Initial value of the HoraRango property.</param>
-        /// <param name="idEmpresa">Initial value of the IdEmpresa property.</param>
-        public static TrabajoDiarioDet CreateTrabajoDiarioDet(global::System.Int32 numLinea, global::System.Int32 numTrabajo, global::System.Int32 idPersona, global::System.String horaEntrada, global::System.String horaSalida, global::System.Int32 horaTrabajada, global::System.Int32 horaRango, global::System.Int32 idEmpresa)
-        {
-            TrabajoDiarioDet trabajoDiarioDet = new TrabajoDiarioDet();
-            trabajoDiarioDet.NumLinea = numLinea;
-            trabajoDiarioDet.NumTrabajo = numTrabajo;
-            trabajoDiarioDet.IdPersona = idPersona;
-            trabajoDiarioDet.HoraEntrada = horaEntrada;
-            trabajoDiarioDet.HoraSalida = horaSalida;
-            trabajoDiarioDet.HoraTrabajada = horaTrabajada;
-            trabajoDiarioDet.HoraRango = horaRango;
-            trabajoDiarioDet.IdEmpresa = idEmpresa;
-            return trabajoDiarioDet;
-        }
-
-        #endregion
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 NumLinea
-        {
-            get
-            {
-                return _NumLinea;
-            }
-            set
-            {
-                if (_NumLinea != value)
-                {
-                    OnNumLineaChanging(value);
-                    ReportPropertyChanging("NumLinea");
-                    _NumLinea = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("NumLinea");
-                    OnNumLineaChanged();
-                }
-            }
-        }
-        private global::System.Int32 _NumLinea;
-        partial void OnNumLineaChanging(global::System.Int32 value);
-        partial void OnNumLineaChanged();
+        private global::System.DateTime _FechaDesde;
+        partial void OnFechaDesdeChanging(global::System.DateTime value);
+        partial void OnFechaDesdeChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 NumTrabajo
+        public global::System.DateTime FechaHasta
         {
             get
             {
-                return _NumTrabajo;
+                return _FechaHasta;
             }
             set
             {
-                OnNumTrabajoChanging(value);
-                ReportPropertyChanging("NumTrabajo");
-                _NumTrabajo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("NumTrabajo");
-                OnNumTrabajoChanged();
+                OnFechaHastaChanging(value);
+                ReportPropertyChanging("FechaHasta");
+                _FechaHasta = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FechaHasta");
+                OnFechaHastaChanged();
             }
         }
-        private global::System.Int32 _NumTrabajo;
-        partial void OnNumTrabajoChanging(global::System.Int32 value);
-        partial void OnNumTrabajoChanged();
+        private global::System.DateTime _FechaHasta;
+        partial void OnFechaHastaChanging(global::System.DateTime value);
+        partial void OnFechaHastaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 IdPersona
+        public global::System.Int32 NDias
         {
             get
             {
-                return _IdPersona;
+                return _NDias;
             }
             set
             {
-                OnIdPersonaChanging(value);
-                ReportPropertyChanging("IdPersona");
-                _IdPersona = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdPersona");
-                OnIdPersonaChanged();
+                OnNDiasChanging(value);
+                ReportPropertyChanging("NDias");
+                _NDias = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("NDias");
+                OnNDiasChanged();
             }
         }
-        private global::System.Int32 _IdPersona;
-        partial void OnIdPersonaChanging(global::System.Int32 value);
-        partial void OnIdPersonaChanged();
+        private global::System.Int32 _NDias;
+        partial void OnNDiasChanging(global::System.Int32 value);
+        partial void OnNDiasChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -12893,6 +13793,30 @@ namespace datos.RecursosHumanos
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdEstado
+        {
+            get
+            {
+                return _IdEstado;
+            }
+            set
+            {
+                OnIdEstadoChanging(value);
+                ReportPropertyChanging("IdEstado");
+                _IdEstado = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdEstado");
+                OnIdEstadoChanged();
+            }
+        }
+        private global::System.Int32 _IdEstado;
+        partial void OnIdEstadoChanging(global::System.Int32 value);
+        partial void OnIdEstadoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 IdEmpresa
@@ -12916,6 +13840,30 @@ namespace datos.RecursosHumanos
         private global::System.Int32 _IdEmpresa;
         partial void OnIdEmpresaChanging(global::System.Int32 value);
         partial void OnIdEmpresaChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Observacion
+        {
+            get
+            {
+                return _Observacion;
+            }
+            set
+            {
+                OnObservacionChanging(value);
+                ReportPropertyChanging("Observacion");
+                _Observacion = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Observacion");
+                OnObservacionChanged();
+            }
+        }
+        private global::System.String _Observacion;
+        partial void OnObservacionChanging(global::System.String value);
+        partial void OnObservacionChanged();
 
         #endregion
     
@@ -12927,16 +13875,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TrabajoDiarioDet__04AFB25B", "TrabajoDiarioCab")]
-        public TrabajoDiarioCab TrabajoDiarioCab
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__TrabajoDi__IdEmp__02C769E9", "Empresa")]
+        public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TrabajoDiarioCab>("TECAModel1.FK__TrabajoDiarioDet__04AFB25B", "TrabajoDiarioCab").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TrabajoDi__IdEmp__02C769E9", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TrabajoDiarioCab>("TECAModel1.FK__TrabajoDiarioDet__04AFB25B", "TrabajoDiarioCab").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TrabajoDi__IdEmp__02C769E9", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -12944,55 +13892,17 @@ namespace datos.RecursosHumanos
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<TrabajoDiarioCab> TrabajoDiarioCabReference
+        public EntityReference<Empresa> EmpresaReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TrabajoDiarioCab>("TECAModel1.FK__TrabajoDiarioDet__04AFB25B", "TrabajoDiarioCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__TrabajoDi__IdEmp__02C769E9", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TrabajoDiarioCab>("TECAModel1.FK__TrabajoDiarioDet__04AFB25B", "TrabajoDiarioCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__TrabajoDi__IdEmp__03BB8E22", "Persona")]
-        public Persona Persona
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__TrabajoDi__IdEmp__03BB8E22", "Persona").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__TrabajoDi__IdEmp__03BB8E22", "Persona").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Persona> PersonaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__TrabajoDi__IdEmp__03BB8E22", "Persona");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__TrabajoDi__IdEmp__03BB8E22", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__TrabajoDi__IdEmp__02C769E9", "Empresa", value);
                 }
             }
         }
@@ -13003,7 +13913,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Universidad")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Universidad")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Universidad : EntityObject
@@ -13113,18 +14023,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Academico__IdUni__1CBC4616", "Academico")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Academico__IdUni__2180FB33", "Academico")]
         public EntityCollection<Academico> Academico
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Academico>("TECAModel1.FK__Academico__IdUni__1CBC4616", "Academico");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Academico>("TECAModel.FK__Academico__IdUni__2180FB33", "Academico");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Academico>("TECAModel1.FK__Academico__IdUni__1CBC4616", "Academico", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Academico>("TECAModel.FK__Academico__IdUni__2180FB33", "Academico", value);
                 }
             }
         }
@@ -13135,18 +14045,18 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Titulo__IdUniver__619B8048", "Titulo")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Titulo__IdUniver__66603565", "Titulo")]
         public EntityCollection<Titulo> Titulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Titulo>("TECAModel1.FK__Titulo__IdUniver__619B8048", "Titulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Titulo>("TECAModel.FK__Titulo__IdUniver__66603565", "Titulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Titulo>("TECAModel1.FK__Titulo__IdUniver__619B8048", "Titulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Titulo>("TECAModel.FK__Titulo__IdUniver__66603565", "Titulo", value);
                 }
             }
         }
@@ -13157,16 +14067,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Universid__IdEmp__4AB81AF0", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Universid__IdEmp__4F7CD00D", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Universid__IdEmp__4AB81AF0", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Universid__IdEmp__4F7CD00D", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Universid__IdEmp__4AB81AF0", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Universid__IdEmp__4F7CD00D", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -13178,13 +14088,13 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Universid__IdEmp__4AB81AF0", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Universid__IdEmp__4F7CD00D", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Universid__IdEmp__4AB81AF0", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Universid__IdEmp__4F7CD00D", "Empresa", value);
                 }
             }
         }
@@ -13195,7 +14105,7 @@ namespace datos.RecursosHumanos
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAModel1", Name="Vacacion")]
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="Vacacion")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Vacacion : EntityObject
@@ -13407,54 +14317,16 @@ namespace datos.RecursosHumanos
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Vacacion__IdEmpr__6EC0713C", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Vacacion__IdEmpr__6EC0713C", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Vacacion__IdEmpr__6EC0713C", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel1.FK__Vacacion__IdEmpr__6EC0713C", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel1.FK__Vacacion__IdEmpr__6EC0713C", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel1", "FK__Vacacion__IdEmpl__6DCC4D03", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Vacacion__IdEmpl__72910220", "Persona")]
         public Persona Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Vacacion__IdEmpl__6DCC4D03", "Persona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Vacacion__IdEmpl__72910220", "Persona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Vacacion__IdEmpl__6DCC4D03", "Persona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Vacacion__IdEmpl__72910220", "Persona").Value = value;
             }
         }
         /// <summary>
@@ -13466,13 +14338,51 @@ namespace datos.RecursosHumanos
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel1.FK__Vacacion__IdEmpl__6DCC4D03", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("TECAModel.FK__Vacacion__IdEmpl__72910220", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel1.FK__Vacacion__IdEmpl__6DCC4D03", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("TECAModel.FK__Vacacion__IdEmpl__72910220", "Persona", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__Vacacion__IdEmpr__73852659", "Empresa")]
+        public Empresa Empresa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Vacacion__IdEmpr__73852659", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Vacacion__IdEmpr__73852659", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAModel.FK__Vacacion__IdEmpr__73852659", "Empresa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAModel.FK__Vacacion__IdEmpr__73852659", "Empresa", value);
                 }
             }
         }

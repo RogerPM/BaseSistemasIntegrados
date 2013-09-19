@@ -47,9 +47,8 @@ namespace datos.CuentasxCobrar
                 return lista;
             }                              
             
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine("Error:" + ex);
                 return null;
             }
 

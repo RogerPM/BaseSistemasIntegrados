@@ -16,7 +16,28 @@ namespace forms.CuentasxCobrar
 {
     public partial class frm_MovimientoBancario : Form
     {
-        
+        int idEmpresa = 1;
+        int idUsuario = 1;
+        int idTransaccion = 1;
+
+
+        #region "Distributed by security team 3/3"
+        //si este bloque ha sido parcial o totalmente editado, los miembros del equipo de seguridad no 
+        //se responzabilizan en el caso de que exista un mal funcionamiento de este form.        
+        private void Seguridad()
+        {
+            //lecturas
+            btnBuscar.Visible = frmPrincipal.Lectura;
+            tsbConsultar.Enabled = frmPrincipal.Lectura;
+            //escrituras
+            tsbNuevo.Enabled = frmPrincipal.Escritura;
+            tsbGuardar.Enabled = frmPrincipal.Escritura;
+            //eliminacion
+            tsbAnular.Enabled = frmPrincipal.Eliminacion;
+        }
+        #endregion
+
+
         public frm_MovimientoBancario()
         {
             InitializeComponent();
@@ -51,8 +72,8 @@ namespace forms.CuentasxCobrar
             txtValor.Text = Convert.ToString(clas.Valor);
 
             gleEstado.EditValue = clas.idEstado;
-            solo = clas.idEmpresa;
-            solo = clas.idUsuario;
+            idEmpresa = clas.idEmpresa;
+            idUsuario = clas.idUsuario;
             solo = clas.idTransaccion;
 
 
@@ -94,7 +115,7 @@ namespace forms.CuentasxCobrar
 
         public void limpiar()
         {
-            txtmovimiento.Text = "";
+            //txtmovimiento.Text = "";
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtObservacion.Text = "";
@@ -106,6 +127,7 @@ namespace forms.CuentasxCobrar
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             limpiar();
+            txtmovimiento.Text = Convert.ToString(dato.getIdSiguiente());
         }
 
         private void tsbSalir_Click(object sender, EventArgs e)
@@ -160,12 +182,15 @@ namespace forms.CuentasxCobrar
         {
             clsDatosMovimientoBancario dato2 = new clsDatosMovimientoBancario();
             gleEstado.Properties.DataSource = dato2.consultaEstado();
+            gleEstado.EditValue = 1;
 
+            txtmovimiento.Text = Convert.ToString(dato.getIdSiguiente());
+            txtmovimiento.Properties.ReadOnly = true;
             if (accion == "a")
             {
                 set();
             }
-            
+            Seguridad();
         }
 
         private void gleEstado_EditValueChanged(object sender, EventArgs e)
@@ -175,6 +200,23 @@ namespace forms.CuentasxCobrar
 
         private void tsbConsultar_Click(object sender, EventArgs e)
         {
+            clsDatosBanco objDatosBanco = new clsDatosBanco();
+            clsBanco objBanco = new clsBanco();
+            frm_ConsultaMovimientoBancario cmb = new frm_ConsultaMovimientoBancario();
+            cmb.ShowDialog();
+            clas = cmb.mb;
+            objBanco.idBanco = clas.idBanco;
+            objDatosBanco.consultaBancoEspecifica(objBanco);
+            txtCodigo.Text = Convert.ToString(objBanco.idBanco);
+            txtNombre.Text = Convert.ToString(objBanco.Nombre);
+            txtmovimiento.Text = Convert.ToString(clas.idMovimientoBancario);
+            txtdocumento.Text = Convert.ToString(clas.NumeroDocumento);
+            txtObservacion.Text = Convert.ToString(clas.Observacion);
+            txtValor.Text = Convert.ToString(clas.Valor);
+            dtpFecha.Text = Convert.ToString(clas.Fecha);
+            dtpFechaModificacion.Text = Convert.ToString(clas.FechaModificacion);
+            gleEstado.EditValue = Convert.ToString(clas.idEstado);
+
 
         }
 
@@ -195,5 +237,24 @@ namespace forms.CuentasxCobrar
             event_click(sender, e);
             frm_MovimientoBancario_event_click(sender, e);
         }
+
+        private void tsbImprimir_Click(object sender, EventArgs e)
+        {
+            clsDatosMovimientoBancario dat = new clsDatosMovimientoBancario();
+            /*
+            ReporteLis rpt = new ReporteLis();
+            ReporteClase clasre = new ReporteClase();
+            List<ReporteClase> listare = new List<ReporteClase>();
+
+            clasre.movimiento = dat.consulta();
+            clasre.NombreEmpresa = "TECA";
+
+            listare.Add(clasre);
+            rpt.loadreport(listare);
+
+            rpt.ShowPreview();*/
+        }
+
+        
     }
 }

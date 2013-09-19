@@ -20,13 +20,14 @@ using System.Xml.Serialization;
 #region Metadatos de relaciones en EDM
 
 [assembly: EdmRelationshipAttribute("TECAModel", "FK__PeriodoCo__IdAFi__39237A9A", "AnoFiscal", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Contabilidad.AnoFiscal), "PeriodoContable", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Contabilidad.PeriodoContable), true)]
-[assembly: EdmRelationshipAttribute("TECAModel", "FK__CabeceraComproba__477199F1", "PeriodoContable", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Contabilidad.PeriodoContable), "CabeceraComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Contabilidad.CabeceraComprobante), true)]
-[assembly: EdmRelationshipAttribute("TECAModel", "FK__DetalleComproban__4F12BBB9", "CabeceraComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Contabilidad.CabeceraComprobante), "DetalleComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Contabilidad.DetalleComprobante), true)]
 [assembly: EdmRelationshipAttribute("TECAModel", "FK__Cuenta__IdNivelC__40C49C62", "NivelCuenta", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Contabilidad.NivelCuenta), "Cuenta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Contabilidad.Cuenta), true)]
 [assembly: EdmRelationshipAttribute("TECAModel", "FK__Cuenta__IdTipoCu__41B8C09B", "TipoCuenta", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Contabilidad.TipoCuenta), "Cuenta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Contabilidad.Cuenta), true)]
 [assembly: EdmRelationshipAttribute("TECAModel", "FK__DetalleComproban__4E1E9780", "Cuenta", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Contabilidad.Cuenta), "DetalleComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Contabilidad.DetalleComprobante), true)]
 [assembly: EdmRelationshipAttribute("TECAModel", "FK__Saldo__54CB950F", "Cuenta", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Contabilidad.Cuenta), "Saldo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Contabilidad.Saldo), true)]
-[assembly: EdmRelationshipAttribute("TECAModel", "FK__ModeloAsi__IdTra__603D47BB", "TipoTransaccion", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Contabilidad.TipoTransaccion), "ModeloAsiento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Contabilidad.ModeloAsiento), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__CabeceraComproba__4A4E069C", "PeriodoContable", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Contabilidad.PeriodoContable), "CabeceraComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Contabilidad.CabeceraComprobante), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__DetalleComproban__52E34C9D", "CabeceraComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Contabilidad.CabeceraComprobante), "DetalleComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Contabilidad.DetalleComprobante), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__CabeceraC__TipoT__4B422AD5", "TipoTransaccion", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Contabilidad.TipoTransaccion), "CabeceraComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Contabilidad.CabeceraComprobante), true)]
+[assembly: EdmRelationshipAttribute("TECAModel", "FK__ModeloAsi__IdTra__5F492382", "TipoTransaccion", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Contabilidad.TipoTransaccion), "ModeloAsiento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Contabilidad.ModeloAsiento), true)]
 
 #endregion
 
@@ -93,22 +94,6 @@ namespace datos.Contabilidad
             }
         }
         private ObjectSet<AnoFiscal> _AnoFiscal;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        public ObjectSet<CabeceraComprobante> CabeceraComprobante
-        {
-            get
-            {
-                if ((_CabeceraComprobante == null))
-                {
-                    _CabeceraComprobante = base.CreateObjectSet<CabeceraComprobante>("CabeceraComprobante");
-                }
-                return _CabeceraComprobante;
-            }
-        }
-        private ObjectSet<CabeceraComprobante> _CabeceraComprobante;
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -241,6 +226,54 @@ namespace datos.Contabilidad
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
+        public ObjectSet<vwTipoTransaccion> vwTipoTransaccion
+        {
+            get
+            {
+                if ((_vwTipoTransaccion == null))
+                {
+                    _vwTipoTransaccion = base.CreateObjectSet<vwTipoTransaccion>("vwTipoTransaccion");
+                }
+                return _vwTipoTransaccion;
+            }
+        }
+        private ObjectSet<vwTipoTransaccion> _vwTipoTransaccion;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<vwCuenta> vwCuenta
+        {
+            get
+            {
+                if ((_vwCuenta == null))
+                {
+                    _vwCuenta = base.CreateObjectSet<vwCuenta>("vwCuenta");
+                }
+                return _vwCuenta;
+            }
+        }
+        private ObjectSet<vwCuenta> _vwCuenta;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<CabeceraComprobante> CabeceraComprobante
+        {
+            get
+            {
+                if ((_CabeceraComprobante == null))
+                {
+                    _CabeceraComprobante = base.CreateObjectSet<CabeceraComprobante>("CabeceraComprobante");
+                }
+                return _CabeceraComprobante;
+            }
+        }
+        private ObjectSet<CabeceraComprobante> _CabeceraComprobante;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
         public ObjectSet<TipoTransaccion> TipoTransaccion
         {
             get
@@ -273,34 +306,18 @@ namespace datos.Contabilidad
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        public ObjectSet<vwTipoTransaccion> vwTipoTransaccion
+        public ObjectSet<vwlibrodiario> vwlibrodiario
         {
             get
             {
-                if ((_vwTipoTransaccion == null))
+                if ((_vwlibrodiario == null))
                 {
-                    _vwTipoTransaccion = base.CreateObjectSet<vwTipoTransaccion>("vwTipoTransaccion");
+                    _vwlibrodiario = base.CreateObjectSet<vwlibrodiario>("vwlibrodiario");
                 }
-                return _vwTipoTransaccion;
+                return _vwlibrodiario;
             }
         }
-        private ObjectSet<vwTipoTransaccion> _vwTipoTransaccion;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        public ObjectSet<vwCuenta> vwCuenta
-        {
-            get
-            {
-                if ((_vwCuenta == null))
-                {
-                    _vwCuenta = base.CreateObjectSet<vwCuenta>("vwCuenta");
-                }
-                return _vwCuenta;
-            }
-        }
-        private ObjectSet<vwCuenta> _vwCuenta;
+        private ObjectSet<vwlibrodiario> _vwlibrodiario;
 
         #endregion
 
@@ -312,14 +329,6 @@ namespace datos.Contabilidad
         public void AddToAnoFiscal(AnoFiscal anoFiscal)
         {
             base.AddObject("AnoFiscal", anoFiscal);
-        }
-    
-        /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet CabeceraComprobante. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToCabeceraComprobante(CabeceraComprobante cabeceraComprobante)
-        {
-            base.AddObject("CabeceraComprobante", cabeceraComprobante);
         }
     
         /// <summary>
@@ -387,6 +396,30 @@ namespace datos.Contabilidad
         }
     
         /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet vwTipoTransaccion. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddTovwTipoTransaccion(vwTipoTransaccion vwTipoTransaccion)
+        {
+            base.AddObject("vwTipoTransaccion", vwTipoTransaccion);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet vwCuenta. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddTovwCuenta(vwCuenta vwCuenta)
+        {
+            base.AddObject("vwCuenta", vwCuenta);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet CabeceraComprobante. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToCabeceraComprobante(CabeceraComprobante cabeceraComprobante)
+        {
+            base.AddObject("CabeceraComprobante", cabeceraComprobante);
+        }
+    
+        /// <summary>
         /// Método desusado para agregar un nuevo objeto al EntitySet TipoTransaccion. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
         /// </summary>
         public void AddToTipoTransaccion(TipoTransaccion tipoTransaccion)
@@ -403,19 +436,34 @@ namespace datos.Contabilidad
         }
     
         /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet vwTipoTransaccion. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// Método desusado para agregar un nuevo objeto al EntitySet vwlibrodiario. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
         /// </summary>
-        public void AddTovwTipoTransaccion(vwTipoTransaccion vwTipoTransaccion)
+        public void AddTovwlibrodiario(vwlibrodiario vwlibrodiario)
         {
-            base.AddObject("vwTipoTransaccion", vwTipoTransaccion);
+            base.AddObject("vwlibrodiario", vwlibrodiario);
         }
+
+        #endregion
+
+        #region Importaciones de funciones
     
         /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet vwCuenta. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// No hay documentación de metadatos disponible.
         /// </summary>
-        public void AddTovwCuenta(vwCuenta vwCuenta)
+        /// <param name="fecha">No hay documentación de metadatos disponible.</param>
+        public ObjectResult<reporteResultado_Result> reporteResultado(Nullable<global::System.DateTime> fecha)
         {
-            base.AddObject("vwCuenta", vwCuenta);
+            ObjectParameter fechaParameter;
+            if (fecha.HasValue)
+            {
+                fechaParameter = new ObjectParameter("fecha", fecha);
+            }
+            else
+            {
+                fechaParameter = new ObjectParameter("fecha", typeof(global::System.DateTime));
+            }
+    
+            return base.ExecuteFunction<reporteResultado_Result>("reporteResultado", fechaParameter);
         }
 
         #endregion
@@ -811,6 +859,30 @@ namespace datos.Contabilidad
         private Nullable<global::System.DateTime> _FechaModificacion;
         partial void OnFechaModificacionChanging(Nullable<global::System.DateTime> value);
         partial void OnFechaModificacionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> TipoTransaccion
+        {
+            get
+            {
+                return _TipoTransaccion;
+            }
+            set
+            {
+                OnTipoTransaccionChanging(value);
+                ReportPropertyChanging("TipoTransaccion");
+                _TipoTransaccion = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("TipoTransaccion");
+                OnTipoTransaccionChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _TipoTransaccion;
+        partial void OnTipoTransaccionChanging(Nullable<global::System.Int32> value);
+        partial void OnTipoTransaccionChanged();
 
         #endregion
 
@@ -823,16 +895,16 @@ namespace datos.Contabilidad
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CabeceraComproba__477199F1", "PeriodoContable")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CabeceraComproba__4A4E069C", "PeriodoContable")]
         public PeriodoContable PeriodoContable
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PeriodoContable>("TECAModel.FK__CabeceraComproba__477199F1", "PeriodoContable").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PeriodoContable>("TECAModel.FK__CabeceraComproba__4A4E069C", "PeriodoContable").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PeriodoContable>("TECAModel.FK__CabeceraComproba__477199F1", "PeriodoContable").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PeriodoContable>("TECAModel.FK__CabeceraComproba__4A4E069C", "PeriodoContable").Value = value;
             }
         }
         /// <summary>
@@ -844,13 +916,13 @@ namespace datos.Contabilidad
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PeriodoContable>("TECAModel.FK__CabeceraComproba__477199F1", "PeriodoContable");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PeriodoContable>("TECAModel.FK__CabeceraComproba__4A4E069C", "PeriodoContable");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PeriodoContable>("TECAModel.FK__CabeceraComproba__477199F1", "PeriodoContable", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PeriodoContable>("TECAModel.FK__CabeceraComproba__4A4E069C", "PeriodoContable", value);
                 }
             }
         }
@@ -861,18 +933,56 @@ namespace datos.Contabilidad
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__DetalleComproban__4F12BBB9", "DetalleComprobante")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__DetalleComproban__52E34C9D", "DetalleComprobante")]
         public EntityCollection<DetalleComprobante> DetalleComprobante
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DetalleComprobante>("TECAModel.FK__DetalleComproban__4F12BBB9", "DetalleComprobante");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DetalleComprobante>("TECAModel.FK__DetalleComproban__52E34C9D", "DetalleComprobante");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DetalleComprobante>("TECAModel.FK__DetalleComproban__4F12BBB9", "DetalleComprobante", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DetalleComprobante>("TECAModel.FK__DetalleComproban__52E34C9D", "DetalleComprobante", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CabeceraC__TipoT__4B422AD5", "TipoTransaccion")]
+        public TipoTransaccion TipoTransaccion1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTransaccion>("TECAModel.FK__CabeceraC__TipoT__4B422AD5", "TipoTransaccion").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTransaccion>("TECAModel.FK__CabeceraC__TipoT__4B422AD5", "TipoTransaccion").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<TipoTransaccion> TipoTransaccion1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTransaccion>("TECAModel.FK__CabeceraC__TipoT__4B422AD5", "TipoTransaccion");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoTransaccion>("TECAModel.FK__CabeceraC__TipoT__4B422AD5", "TipoTransaccion", value);
                 }
             }
         }
@@ -1494,44 +1604,6 @@ namespace datos.Contabilidad
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__DetalleComproban__4F12BBB9", "CabeceraComprobante")]
-        public CabeceraComprobante CabeceraComprobante
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("TECAModel.FK__DetalleComproban__4F12BBB9", "CabeceraComprobante").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("TECAModel.FK__DetalleComproban__4F12BBB9", "CabeceraComprobante").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<CabeceraComprobante> CabeceraComprobanteReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("TECAModel.FK__DetalleComproban__4F12BBB9", "CabeceraComprobante");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CabeceraComprobante>("TECAModel.FK__DetalleComproban__4F12BBB9", "CabeceraComprobante", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__DetalleComproban__4E1E9780", "Cuenta")]
         public Cuenta Cuenta1
         {
@@ -1560,6 +1632,44 @@ namespace datos.Contabilidad
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cuenta>("TECAModel.FK__DetalleComproban__4E1E9780", "Cuenta", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__DetalleComproban__52E34C9D", "CabeceraComprobante")]
+        public CabeceraComprobante CabeceraComprobante
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("TECAModel.FK__DetalleComproban__52E34C9D", "CabeceraComprobante").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("TECAModel.FK__DetalleComproban__52E34C9D", "CabeceraComprobante").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<CabeceraComprobante> CabeceraComprobanteReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("TECAModel.FK__DetalleComproban__52E34C9D", "CabeceraComprobante");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CabeceraComprobante>("TECAModel.FK__DetalleComproban__52E34C9D", "CabeceraComprobante", value);
                 }
             }
         }
@@ -1835,16 +1945,16 @@ namespace datos.Contabilidad
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__ModeloAsi__IdTra__603D47BB", "TipoTransaccion")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__ModeloAsi__IdTra__5F492382", "TipoTransaccion")]
         public TipoTransaccion TipoTransaccion
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTransaccion>("TECAModel.FK__ModeloAsi__IdTra__603D47BB", "TipoTransaccion").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTransaccion>("TECAModel.FK__ModeloAsi__IdTra__5F492382", "TipoTransaccion").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTransaccion>("TECAModel.FK__ModeloAsi__IdTra__603D47BB", "TipoTransaccion").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTransaccion>("TECAModel.FK__ModeloAsi__IdTra__5F492382", "TipoTransaccion").Value = value;
             }
         }
         /// <summary>
@@ -1856,13 +1966,13 @@ namespace datos.Contabilidad
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTransaccion>("TECAModel.FK__ModeloAsi__IdTra__603D47BB", "TipoTransaccion");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTransaccion>("TECAModel.FK__ModeloAsi__IdTra__5F492382", "TipoTransaccion");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoTransaccion>("TECAModel.FK__ModeloAsi__IdTra__603D47BB", "TipoTransaccion", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoTransaccion>("TECAModel.FK__ModeloAsi__IdTra__5F492382", "TipoTransaccion", value);
                 }
             }
         }
@@ -2317,18 +2427,18 @@ namespace datos.Contabilidad
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CabeceraComproba__477199F1", "CabeceraComprobante")]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CabeceraComproba__4A4E069C", "CabeceraComprobante")]
         public EntityCollection<CabeceraComprobante> CabeceraComprobante
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CabeceraComprobante>("TECAModel.FK__CabeceraComproba__477199F1", "CabeceraComprobante");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CabeceraComprobante>("TECAModel.FK__CabeceraComproba__4A4E069C", "CabeceraComprobante");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CabeceraComprobante>("TECAModel.FK__CabeceraComproba__477199F1", "CabeceraComprobante", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CabeceraComprobante>("TECAModel.FK__CabeceraComproba__4A4E069C", "CabeceraComprobante", value);
                 }
             }
         }
@@ -2928,18 +3038,40 @@ namespace datos.Contabilidad
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__ModeloAsi__IdTra__603D47BB", "ModeloAsiento")]
-        public EntityCollection<ModeloAsiento> ModeloAsiento
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__CabeceraC__TipoT__4B422AD5", "CabeceraComprobante")]
+        public EntityCollection<CabeceraComprobante> CabeceraComprobante
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ModeloAsiento>("TECAModel.FK__ModeloAsi__IdTra__603D47BB", "ModeloAsiento");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CabeceraComprobante>("TECAModel.FK__CabeceraC__TipoT__4B422AD5", "CabeceraComprobante");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ModeloAsiento>("TECAModel.FK__ModeloAsi__IdTra__603D47BB", "ModeloAsiento", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CabeceraComprobante>("TECAModel.FK__CabeceraC__TipoT__4B422AD5", "CabeceraComprobante", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAModel", "FK__ModeloAsi__IdTra__5F492382", "ModeloAsiento")]
+        public EntityCollection<ModeloAsiento> ModeloAsiento
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ModeloAsiento>("TECAModel.FK__ModeloAsi__IdTra__5F492382", "ModeloAsiento");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ModeloAsiento>("TECAModel.FK__ModeloAsi__IdTra__5F492382", "ModeloAsiento", value);
                 }
             }
         }
@@ -3480,6 +3612,314 @@ namespace datos.Contabilidad
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="vwlibrodiario")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class vwlibrodiario : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto vwlibrodiario.
+        /// </summary>
+        /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
+        /// <param name="numero_comprobante">Valor inicial de la propiedad numero_comprobante.</param>
+        /// <param name="fecha">Valor inicial de la propiedad fecha.</param>
+        /// <param name="glosa">Valor inicial de la propiedad glosa.</param>
+        /// <param name="cuenta">Valor inicial de la propiedad cuenta.</param>
+        /// <param name="nombre">Valor inicial de la propiedad nombre.</param>
+        /// <param name="debe">Valor inicial de la propiedad debe.</param>
+        /// <param name="haber">Valor inicial de la propiedad haber.</param>
+        public static vwlibrodiario Createvwlibrodiario(global::System.Int32 idEmpresa, global::System.Decimal numero_comprobante, global::System.DateTime fecha, global::System.String glosa, global::System.String cuenta, global::System.String nombre, global::System.Decimal debe, global::System.Decimal haber)
+        {
+            vwlibrodiario vwlibrodiario = new vwlibrodiario();
+            vwlibrodiario.IdEmpresa = idEmpresa;
+            vwlibrodiario.numero_comprobante = numero_comprobante;
+            vwlibrodiario.fecha = fecha;
+            vwlibrodiario.glosa = glosa;
+            vwlibrodiario.cuenta = cuenta;
+            vwlibrodiario.nombre = nombre;
+            vwlibrodiario.debe = debe;
+            vwlibrodiario.haber = haber;
+            return vwlibrodiario;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdEmpresa
+        {
+            get
+            {
+                return _IdEmpresa;
+            }
+            set
+            {
+                if (_IdEmpresa != value)
+                {
+                    OnIdEmpresaChanging(value);
+                    ReportPropertyChanging("IdEmpresa");
+                    _IdEmpresa = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdEmpresa");
+                    OnIdEmpresaChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdEmpresa;
+        partial void OnIdEmpresaChanging(global::System.Int32 value);
+        partial void OnIdEmpresaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal numero_comprobante
+        {
+            get
+            {
+                return _numero_comprobante;
+            }
+            set
+            {
+                if (_numero_comprobante != value)
+                {
+                    Onnumero_comprobanteChanging(value);
+                    ReportPropertyChanging("numero_comprobante");
+                    _numero_comprobante = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("numero_comprobante");
+                    Onnumero_comprobanteChanged();
+                }
+            }
+        }
+        private global::System.Decimal _numero_comprobante;
+        partial void Onnumero_comprobanteChanging(global::System.Decimal value);
+        partial void Onnumero_comprobanteChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime fecha
+        {
+            get
+            {
+                return _fecha;
+            }
+            set
+            {
+                if (_fecha != value)
+                {
+                    OnfechaChanging(value);
+                    ReportPropertyChanging("fecha");
+                    _fecha = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("fecha");
+                    OnfechaChanged();
+                }
+            }
+        }
+        private global::System.DateTime _fecha;
+        partial void OnfechaChanging(global::System.DateTime value);
+        partial void OnfechaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String glosa
+        {
+            get
+            {
+                return _glosa;
+            }
+            set
+            {
+                if (_glosa != value)
+                {
+                    OnglosaChanging(value);
+                    ReportPropertyChanging("glosa");
+                    _glosa = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("glosa");
+                    OnglosaChanged();
+                }
+            }
+        }
+        private global::System.String _glosa;
+        partial void OnglosaChanging(global::System.String value);
+        partial void OnglosaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String cuenta
+        {
+            get
+            {
+                return _cuenta;
+            }
+            set
+            {
+                if (_cuenta != value)
+                {
+                    OncuentaChanging(value);
+                    ReportPropertyChanging("cuenta");
+                    _cuenta = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("cuenta");
+                    OncuentaChanged();
+                }
+            }
+        }
+        private global::System.String _cuenta;
+        partial void OncuentaChanging(global::System.String value);
+        partial void OncuentaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String nombre
+        {
+            get
+            {
+                return _nombre;
+            }
+            set
+            {
+                if (_nombre != value)
+                {
+                    OnnombreChanging(value);
+                    ReportPropertyChanging("nombre");
+                    _nombre = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("nombre");
+                    OnnombreChanged();
+                }
+            }
+        }
+        private global::System.String _nombre;
+        partial void OnnombreChanging(global::System.String value);
+        partial void OnnombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal debe
+        {
+            get
+            {
+                return _debe;
+            }
+            set
+            {
+                if (_debe != value)
+                {
+                    OndebeChanging(value);
+                    ReportPropertyChanging("debe");
+                    _debe = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("debe");
+                    OndebeChanged();
+                }
+            }
+        }
+        private global::System.Decimal _debe;
+        partial void OndebeChanging(global::System.Decimal value);
+        partial void OndebeChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal haber
+        {
+            get
+            {
+                return _haber;
+            }
+            set
+            {
+                if (_haber != value)
+                {
+                    OnhaberChanging(value);
+                    ReportPropertyChanging("haber");
+                    _haber = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("haber");
+                    OnhaberChanged();
+                }
+            }
+        }
+        private global::System.Decimal _haber;
+        partial void OnhaberChanging(global::System.Decimal value);
+        partial void OnhaberChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> TipoTransaccion
+        {
+            get
+            {
+                return _TipoTransaccion;
+            }
+            set
+            {
+                OnTipoTransaccionChanging(value);
+                ReportPropertyChanging("TipoTransaccion");
+                _TipoTransaccion = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("TipoTransaccion");
+                OnTipoTransaccionChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _TipoTransaccion;
+        partial void OnTipoTransaccionChanging(Nullable<global::System.Int32> value);
+        partial void OnTipoTransaccionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String NombreModulo
+        {
+            get
+            {
+                return _NombreModulo;
+            }
+            set
+            {
+                OnNombreModuloChanging(value);
+                ReportPropertyChanging("NombreModulo");
+                _NombreModulo = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("NombreModulo");
+                OnNombreModuloChanged();
+            }
+        }
+        private global::System.String _NombreModulo;
+        partial void OnNombreModuloChanging(global::System.String value);
+        partial void OnNombreModuloChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="TECAModel", Name="vwTipoTransaccion")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -3638,6 +4078,113 @@ namespace datos.Contabilidad
         #endregion
 
     
+    }
+
+    #endregion
+
+    #region ComplexTypes
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmComplexTypeAttribute(NamespaceName="TECAModel", Name="reporteResultado_Result")]
+    [DataContractAttribute(IsReference=true)]
+    [Serializable()]
+    public partial class reporteResultado_Result : ComplexObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto reporteResultado_Result.
+        /// </summary>
+        /// <param name="codigo">Valor inicial de la propiedad Codigo.</param>
+        /// <param name="cuenta">Valor inicial de la propiedad Cuenta.</param>
+        public static reporteResultado_Result CreatereporteResultado_Result(global::System.String codigo, global::System.String cuenta)
+        {
+            reporteResultado_Result reporteResultado_Result = new reporteResultado_Result();
+            reporteResultado_Result.Codigo = codigo;
+            reporteResultado_Result.Cuenta = cuenta;
+            return reporteResultado_Result;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Codigo
+        {
+            get
+            {
+                return _Codigo;
+            }
+            set
+            {
+                OnCodigoChanging(value);
+                ReportPropertyChanging("Codigo");
+                _Codigo = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Codigo");
+                OnCodigoChanged();
+            }
+        }
+        private global::System.String _Codigo;
+        partial void OnCodigoChanging(global::System.String value);
+        partial void OnCodigoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Cuenta
+        {
+            get
+            {
+                return _Cuenta;
+            }
+            set
+            {
+                OnCuentaChanging(value);
+                ReportPropertyChanging("Cuenta");
+                _Cuenta = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Cuenta");
+                OnCuentaChanged();
+            }
+        }
+        private global::System.String _Cuenta;
+        partial void OnCuentaChanging(global::System.String value);
+        partial void OnCuentaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> Saldo
+        {
+            get
+            {
+                return _Saldo;
+            }
+            set
+            {
+                OnSaldoChanging(value);
+                ReportPropertyChanging("Saldo");
+                _Saldo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Saldo");
+                OnSaldoChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _Saldo;
+        partial void OnSaldoChanging(Nullable<global::System.Decimal> value);
+        partial void OnSaldoChanged();
+
+        #endregion
+
     }
 
     #endregion

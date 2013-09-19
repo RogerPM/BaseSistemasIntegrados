@@ -281,9 +281,9 @@ namespace datos.ActivoFijo
 
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine("Error:" + ex);
+
                 return false;
             }
 

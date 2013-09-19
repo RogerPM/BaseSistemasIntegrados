@@ -230,6 +230,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frm_ConsultaReporteCobro";
             this.Text = "Consulta Reporte Cobro";
+            this.Load += new System.EventHandler(this.frm_ConsultaReporteCobro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();

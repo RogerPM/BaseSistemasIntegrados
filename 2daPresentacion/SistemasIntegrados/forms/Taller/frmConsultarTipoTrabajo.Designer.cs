@@ -36,8 +36,8 @@
             this.clsTiposTrabajosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clsEstadoTipoTrabajoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clsTiposTrabajosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colidTipoTrabajo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colObservacion = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -46,8 +46,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.clsTiposTrabajosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsEstadoTipoTrabajoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsTiposTrabajosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -80,20 +80,20 @@
             // 
             this.clsTiposTrabajosBindingSource.DataSource = typeof(clases.Taller.clsTiposTrabajos);
             // 
-            // clsEstadoTipoTrabajoBindingSource
-            // 
-            //this.clsEstadoTipoTrabajoBindingSource.DataSource = typeof(clases.Taller.clsEstadoTipoTrabajo);
-            // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.clsTiposTrabajosBindingSource1;
             this.gridControl1.Location = new System.Drawing.Point(0, 28);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(585, 253);
+            this.gridControl1.Size = new System.Drawing.Size(585, 199);
             this.gridControl1.TabIndex = 8;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            // 
+            // clsTiposTrabajosBindingSource1
+            // 
+            this.clsTiposTrabajosBindingSource1.DataSource = typeof(clases.Taller.clsTiposTrabajos);
             // 
             // gridView1
             // 
@@ -104,10 +104,6 @@
             this.colidEstado});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            // 
-            // clsTiposTrabajosBindingSource1
-            // 
-            this.clsTiposTrabajosBindingSource1.DataSource = typeof(clases.Taller.clsTiposTrabajos);
             // 
             // colidTipoTrabajo
             // 
@@ -137,14 +133,14 @@
             this.colidEstado.Visible = true;
             this.colidEstado.VisibleIndex = 3;
             // 
-            // frmConsultar
+            // frmConsultarTipoTrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 279);
+            this.ClientSize = new System.Drawing.Size(585, 229);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "frmConsultar";
+            this.Name = "frmConsultarTipoTrabajo";
             this.Text = "frmConsultar";
             this.Load += new System.EventHandler(this.frmConsultar_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -152,8 +148,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.clsTiposTrabajosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsEstadoTipoTrabajoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsTiposTrabajosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

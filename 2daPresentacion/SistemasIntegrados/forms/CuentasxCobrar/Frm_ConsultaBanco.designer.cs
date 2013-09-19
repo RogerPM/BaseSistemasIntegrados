@@ -38,10 +38,12 @@
             this.colidBanco = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNombre = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEstado = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clsBancoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdcBanco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsBancoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsBancoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -65,7 +67,7 @@
             // 
             // gdcBanco
             // 
-            this.gdcBanco.DataSource = this.clsBancoBindingSource;
+            this.gdcBanco.DataSource = this.clsBancoBindingSource1;
             this.gdcBanco.Location = new System.Drawing.Point(31, 38);
             this.gdcBanco.MainView = this.gridView1;
             this.gdcBanco.Name = "gdcBanco";
@@ -116,6 +118,10 @@
             this.colEstado.Visible = true;
             this.colEstado.VisibleIndex = 3;
             // 
+            // clsBancoBindingSource1
+            // 
+            this.clsBancoBindingSource1.DataSource = typeof(clases.CuentasxCobrar.clsBanco);
+            // 
             // Frm_ConsultaBanco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -131,6 +137,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gdcBanco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsBancoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsBancoBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,6 +154,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colNombre;
         private DevExpress.XtraGrid.Columns.GridColumn colEstado;
         private System.Windows.Forms.BindingSource clsBancoBindingSource;
+        private System.Windows.Forms.BindingSource clsBancoBindingSource1;
 
 
 

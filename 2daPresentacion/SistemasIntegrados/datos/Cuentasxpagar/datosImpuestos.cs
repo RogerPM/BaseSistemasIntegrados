@@ -23,6 +23,7 @@ namespace datos.Cuentasxpagar
                     clas.Descripcion = item.Descripcion;
                     clas.FechaRegistro = item.FechaRegistro;
                     clas.IdEstado = item.Estado;
+                    clas.naturAcree = item.NatureAcree;
                     clas.Porcentaje = item.Porcentaje;
                     clas.IdUsuario = item.IdUsuario;
                     clas.IdEmpresa = item.IdEmpresa;
@@ -44,11 +45,12 @@ namespace datos.Cuentasxpagar
         {
             using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
             {
-                var x = (from q in ent.MedioPago where q.IdMedioPago == Imp.IdImpuesto select q).First();
+                var x = (from q in ent.Impuesto where q.IdImpuesto == Imp.IdImpuesto select q).First();
 
                 x.Descripcion = Imp.Descripcion;
-                x.fechaRegistro = Imp.FechaRegistro;
+                x.FechaRegistro  = Imp.FechaRegistro;
                 x.Estado = Imp.IdEstado;
+                x.NatureAcree = Imp.naturAcree;
                 x.IdEmpresa = Imp.IdEmpresa;
                 x.IdUsuario = Imp.IdUsuario;
                 ent.SaveChanges();
@@ -82,6 +84,7 @@ namespace datos.Cuentasxpagar
                         Descripcion = Imp.Descripcion,
                         FechaRegistro = DateTime.Today, // Medio.FechaRegistro,
                         Estado = Imp.IdEstado,
+                        NatureAcree = Imp.naturAcree,
                         IdEmpresa = Imp.IdEmpresa,
                         IdUsuario = Imp.IdUsuario,
 

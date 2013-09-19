@@ -13,6 +13,21 @@ namespace forms.RecursosHumanos
 {
     public partial class frmProcesoContratos : Form
     {
+        #region "Distributed by security team 3/3"
+        //si este bloque ha sido parcial o totalmente editado, los miembros del equipo de seguridad no 
+        //se responzabilizan en el caso de que exista un mal funcionamiento de este form.
+        private void Seguridad()
+        {
+            //lecturas
+            btnBuscar.Visible = frmPrincipal.Lectura;
+            //escrituras
+            tsbNuevo.Visible = frmPrincipal.Escritura;
+            txbGuardar.Visible = frmPrincipal.Escritura;
+            tsbModificar.Visible = frmPrincipal.Escritura;
+        }
+
+        #endregion
+
         public frmProcesoContratos()
         {
             InitializeComponent();
@@ -194,6 +209,7 @@ namespace forms.RecursosHumanos
             cmbEstado.SelectedIndex = 1;
             cmbEstado.Enabled = false;
             tsbModificar.Enabled  = false;
+            txtRemuneracion.Enabled = true;
             txbGuardar.Enabled = true;
             txtNumero.Text = Convert.ToString(Contrato.getIdSiguiente());
 
@@ -296,6 +312,7 @@ namespace forms.RecursosHumanos
         private void btnBuscarCedula_Click(object sender, EventArgs e)
         {
             frmMConsultaEmpleado cPer = new frmMConsultaEmpleado();
+            cPer.band = 1;
             cPer.ShowDialog();
             clas = cPer.p;
             IdPersona = clas.IdPersona;
@@ -335,6 +352,7 @@ namespace forms.RecursosHumanos
             {
                 Set();
             }
+            Seguridad();
         }
 
          //*************************** MODIFICAR *******************************

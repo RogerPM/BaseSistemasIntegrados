@@ -13,7 +13,7 @@ namespace forms.Taller
 {
     public partial class frmConsultarArticulo : Form
     {
-        public clsArticulo e = new clsArticulo();
+        public clsArticuloTaller e = new clsArticuloTaller();
         public frmConsultarArticulo()
         {
             InitializeComponent();
@@ -28,6 +28,7 @@ namespace forms.Taller
         public void getSeleccion()
         {
             e.IdArticulo = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdArticulo));
+            e.IdPersona = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdPersona));
             e.Descripcion = Convert.ToString(gridView1.GetFocusedRowCellValue(colDescripcion));
             e.FechaProduccion = Convert.ToDateTime(gridView1.GetFocusedRowCellValue(colFechaProduccion));
             e.CantidadMinima = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colCantidadMinima));
@@ -38,12 +39,13 @@ namespace forms.Taller
             e.IdGrupo = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdGrupo));
             e.IdChasis = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdChasis));
             e.IdTipoMotor= Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdTipoMotor));
-            e.NroPlaca = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colNroPlaca));
+            e.NroPlaca = Convert.ToString(gridView1.GetFocusedRowCellValue(colNroPlaca));
             e.IdTipoCombustible = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdTipoCombustible));
             e.IdColor = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdColor));
             e.IdMarca = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdMarca));
             e.IdModelo = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdModelo));
             e.IdTipoMaterial = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdTipoMaterial));
+            e.PrecioUnitario = Convert.ToDecimal(gridView1.GetFocusedRowCellValue(colPrecioUnitario));
             e.Observacion = Convert.ToString(gridView1.GetFocusedRowCellValue(colObservacion));
             e.IdEmpresa = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdEmpresa));
             e.IdUsuario = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdUsuario));
@@ -52,7 +54,7 @@ namespace forms.Taller
 
         public void FillGrid()
         {
-            datArticulo odatArticulo= new datArticulo();
+            datArticuloTaller odatArticulo= new datArticuloTaller();
             gridControl1.DataSource = odatArticulo.Consultar();
         }
 

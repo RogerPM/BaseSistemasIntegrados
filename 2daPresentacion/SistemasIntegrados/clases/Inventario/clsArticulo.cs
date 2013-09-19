@@ -9,7 +9,7 @@ namespace clases.Inventario
     {
 
         public int EmpresaArt { get; set; }
-        public int IdArt { get; set; }
+        public int? IdArt { get; set; }
         public string DescArt { get; set; }
         public DateTime FProduccion { get; set; }
         public int CantMinima { get; set; }

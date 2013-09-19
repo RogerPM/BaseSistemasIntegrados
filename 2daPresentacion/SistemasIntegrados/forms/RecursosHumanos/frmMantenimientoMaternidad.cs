@@ -14,6 +14,23 @@ namespace forms.RecursosHumanos
 {
     public partial class frmMantenimientoMaternidad : Form
     {
+        #region "Distributed by security team 3/3"
+        //si este bloque ha sido parcial o totalmente editado, los miembros del equipo de seguridad no 
+        //se responzabilizan en el caso de que exista un mal funcionamiento de este form.
+        private void Seguridad()
+        {
+            //lecturas
+            btnBuscarNumero.Visible = frmPrincipal.Lectura;
+            //escrituras
+            tsbNuevo.Visible = frmPrincipal.Escritura;
+            tsbGuardar.Visible = frmPrincipal.Escritura;
+            tsbModificar.Visible = frmPrincipal.Escritura;
+            //eliminacion
+            tsbEliminar.Visible = frmPrincipal.Eliminacion;
+        }
+
+        #endregion
+
         public frmMantenimientoMaternidad()
         {
             InitializeComponent();
@@ -80,7 +97,7 @@ namespace forms.RecursosHumanos
             txtNumero.Text = Convert.ToString(a);
 
             clsDatosPersona perso = new clsDatosPersona();
-            gluEmpleado.Properties.DataSource = perso.ConsultaPersona();
+            gluEmpleado.Properties.DataSource = perso.ConsultaPersona1(1);
 
             clsDatosMaternidad mat = new clsDatosMaternidad();
 
@@ -97,8 +114,8 @@ namespace forms.RecursosHumanos
             // TODO: This line of code loads data into the 'tECAv8DataSet6.Estado' table. You can move, or remove it, as needed.
             
             // TODO: This line of code loads data into the 'tECADataSet3.Estado' table. You can move, or remove it, as needed.
-          
-            
+
+            Seguridad();
         }
 
         public void Limpiar()

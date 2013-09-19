@@ -9,26 +9,21 @@ namespace datos.Contabilidad
     public class clsDatoTipoTransaccion
     {
 
-        //public List<clsTipoTransaccion> Consulta(int Idtransaccion)
         public List<clsTipoTransaccion> Consulta()
         {
             try
             {
                 List<clsTipoTransaccion> lista = new List<clsTipoTransaccion>();
                 EntitiesContabilidad2 ent = new EntitiesContabilidad2();
-                 
-                //where tt.IdTransaccion.Equals(Idtransaccion)
-                var tipotran = from tt in ent.vwTipoTransaccion select tt;
-                              
-                foreach (var van in tipotran)
+                var tipotran = from tt in ent.TipoTransaccion select tt;
+                foreach (var item in tipotran)
                 {
                     clsTipoTransaccion ctipo = new clsTipoTransaccion();
                     //las variables puden ser nulas u no soportan el tipo de dato int por eso se realiza el convert
-                    ctipo.IdTransaccion = Convert.ToInt32(van.IdTransaccion);
-                    ctipo.modulo = van.modulo;
-                    ctipo.nombremodulo = van.NombreModulo;
-                    ctipo.TipoDocumento = van.TipoDocumento;
-                    ctipo.descripcion = van.descripcion;
+                    ctipo.IdTransaccion = Convert.ToInt32(item.IdTransaccion);
+                    ctipo.modulo = item.modulo;
+                    ctipo.TipoDocumento = item.TipoDocumento;
+                    ctipo.descripcion = item.descripcion;
                     lista.Add(ctipo);
 
                 }
@@ -46,7 +41,7 @@ namespace datos.Contabilidad
             try
             {
                 List<clsModulo> lista = new List<clsModulo>();
-                //EntitiesContabilidad ent = new EntitiesContabilidad();
+                //EntitiesContabilidad2 ent = new EntitiesContabilidad2();
                 //var tipotran = from tt in ent.Modulo select tt;
                 TECAv8Entities ent = new TECAv8Entities();
                 var tipotran = from tt in ent.Modulo select tt;

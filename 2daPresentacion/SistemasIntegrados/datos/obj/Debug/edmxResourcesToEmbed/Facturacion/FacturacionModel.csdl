@@ -9,11 +9,8 @@
     <EntitySet Name="Comision" EntityType="FacturacionModel.Comision" />
     <EntitySet Name="ComisionDet" EntityType="FacturacionModel.ComisionDet" />
     <EntitySet Name="Cotizacion" EntityType="FacturacionModel.Cotizacion" />
-    <EntitySet Name="CotizacionDet" EntityType="FacturacionModel.CotizacionDet" />
     <EntitySet Name="DevolucionDet" EntityType="FacturacionModel.DevolucionDet" />
     <EntitySet Name="DevolucionVenta" EntityType="FacturacionModel.DevolucionVenta" />
-    <EntitySet Name="Factura" EntityType="FacturacionModel.Factura" />
-    <EntitySet Name="FacturaDet" EntityType="FacturacionModel.FacturaDet" />
     <EntitySet Name="FormaPago" EntityType="FacturacionModel.FormaPago" />
     <EntitySet Name="GuiaRemision" EntityType="FacturacionModel.GuiaRemision" />
     <EntitySet Name="GuiaRemisionDet" EntityType="FacturacionModel.GuiaRemisionDet" />
@@ -51,37 +48,13 @@
       <End Role="Articulo" EntitySet="Articulo" />
       <End Role="OrdenCompraDet" EntitySet="OrdenCompraDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idEmp__6B0FDBE9" Association="FacturacionModel.FK__CuentaxCo__idEmp__6B0FDBE9">
+    <AssociationSet Name="FK__CuentaxCo__idEmp__2D32A501" Association="FacturacionModel.FK__CuentaxCo__idEmp__2D32A501">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
     </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idEst__6FD49106" Association="FacturacionModel.FK__CuentaxCo__idEst__6FD49106">
-      <End Role="Estado" EntitySet="Estado" />
-      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idFac__6DEC4894" Association="FacturacionModel.FK__CuentaxCo__idFac__6DEC4894">
-      <End Role="Factura" EntitySet="Factura" />
-      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idTra__6CF8245B" Association="FacturacionModel.FK__CuentaxCo__idTra__6CF8245B">
-      <End Role="Factura" EntitySet="Factura" />
-      <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idUsu__6C040022" Association="FacturacionModel.FK__CuentaxCo__idUsu__6C040022">
+    <AssociationSet Name="FK__CuentaxCo__idUsu__2E26C93A" Association="FacturacionModel.FK__CuentaxCo__idUsu__2E26C93A">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="CuentaxCobrar" EntitySet="CuentaxCobrar" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idEmp__74994623" Association="FacturacionModel.FK__CuentaxCo__idEmp__74994623">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="CuentaxCobrarDet" EntitySet="CuentaxCobrarDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idEst__76818E95" Association="FacturacionModel.FK__CuentaxCo__idEst__76818E95">
-      <End Role="Estado" EntitySet="Estado" />
-      <End Role="CuentaxCobrarDet" EntitySet="CuentaxCobrarDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CuentaxCo__idUsu__758D6A5C" Association="FacturacionModel.FK__CuentaxCo__idUsu__758D6A5C">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="CuentaxCobrarDet" EntitySet="CuentaxCobrarDet" />
     </AssociationSet>
     <AssociationSet Name="FK__ClienteDe__IdEmp__24B26D99" Association="FacturacionModel.FK__ClienteDe__IdEmp__24B26D99">
       <End Role="Empresa" EntitySet="Empresa" />
@@ -98,10 +71,6 @@
     <AssociationSet Name="FK__Cotizacio__IdNum__2B5F6B28" Association="FacturacionModel.FK__Cotizacio__IdNum__2B5F6B28">
       <End Role="ClienteDefactura" EntitySet="ClienteDefactura" />
       <End Role="Cotizacion" EntitySet="Cotizacion" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Factura__IdNumer__4BCC3ABA" Association="FacturacionModel.FK__Factura__IdNumer__4BCC3ABA">
-      <End Role="ClienteDefactura" EntitySet="ClienteDefactura" />
-      <End Role="Factura" EntitySet="Factura" />
     </AssociationSet>
     <AssociationSet Name="FK__Comision__idEsta__573DED66" Association="FacturacionModel.FK__Comision__idEsta__573DED66">
       <End Role="Estado" EntitySet="Estado" />
@@ -127,10 +96,6 @@
       <End Role="Estado" EntitySet="Estado" />
       <End Role="ComisionDet" EntitySet="ComisionDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__ComisionD__IdNum__6497E884" Association="FacturacionModel.FK__ComisionD__IdNum__6497E884">
-      <End Role="Factura" EntitySet="Factura" />
-      <End Role="ComisionDet" EntitySet="ComisionDet" />
-    </AssociationSet>
     <AssociationSet Name="FK__ComisionD__idUsu__6774552F" Association="FacturacionModel.FK__ComisionD__idUsu__6774552F">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="ComisionDet" EntitySet="ComisionDet" />
@@ -151,29 +116,9 @@
       <End Role="FormaPago" EntitySet="FormaPago" />
       <End Role="Cotizacion" EntitySet="Cotizacion" />
     </AssociationSet>
-    <AssociationSet Name="FK__Cotizacio__IdNum__5C02A283" Association="FacturacionModel.FK__Cotizacio__IdNum__5C02A283">
-      <End Role="Cotizacion" EntitySet="Cotizacion" />
-      <End Role="CotizacionDet" EntitySet="CotizacionDet" />
-    </AssociationSet>
     <AssociationSet Name="FK__Cotizacio__idUsu__2E3BD7D3" Association="FacturacionModel.FK__Cotizacio__idUsu__2E3BD7D3">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="Cotizacion" EntitySet="Cotizacion" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Factura__IdNumer__4CC05EF3" Association="FacturacionModel.FK__Factura__IdNumer__4CC05EF3">
-      <End Role="Cotizacion" EntitySet="Cotizacion" />
-      <End Role="Factura" EntitySet="Factura" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Cotizacio__idEst__5EDF0F2E" Association="FacturacionModel.FK__Cotizacio__idEst__5EDF0F2E">
-      <End Role="Estado" EntitySet="Estado" />
-      <End Role="CotizacionDet" EntitySet="CotizacionDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Cotizacio__idUsu__5DEAEAF5" Association="FacturacionModel.FK__Cotizacio__idUsu__5DEAEAF5">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="CotizacionDet" EntitySet="CotizacionDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__CotizacionDet__5CF6C6BC" Association="FacturacionModel.FK__CotizacionDet__5CF6C6BC">
-      <End Role="Articulo" EntitySet="Articulo" />
-      <End Role="CotizacionDet" EntitySet="CotizacionDet" />
     </AssociationSet>
     <AssociationSet Name="FK__Devolucio__idEst__06ED0088" Association="FacturacionModel.FK__Devolucio__idEst__06ED0088">
       <End Role="Estado" EntitySet="Estado" />
@@ -195,49 +140,9 @@
       <End Role="Estado" EntitySet="Estado" />
       <End Role="DevolucionVenta" EntitySet="DevolucionVenta" />
     </AssociationSet>
-    <AssociationSet Name="FK__Devolucio__IdNum__6D2D2E85" Association="FacturacionModel.FK__Devolucio__IdNum__6D2D2E85">
-      <End Role="Factura" EntitySet="Factura" />
-      <End Role="DevolucionVenta" EntitySet="DevolucionVenta" />
-    </AssociationSet>
     <AssociationSet Name="FK__Devolucio__idUsu__6F1576F7" Association="FacturacionModel.FK__Devolucio__idUsu__6F1576F7">
       <End Role="Usuario" EntitySet="Usuario" />
       <End Role="DevolucionVenta" EntitySet="DevolucionVenta" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Factura__idEstad__4F9CCB9E" Association="FacturacionModel.FK__Factura__idEstad__4F9CCB9E">
-      <End Role="Estado" EntitySet="Estado" />
-      <End Role="Factura" EntitySet="Factura" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Factura__IdForma__49E3F248" Association="FacturacionModel.FK__Factura__IdForma__49E3F248">
-      <End Role="FormaPago" EntitySet="FormaPago" />
-      <End Role="Factura" EntitySet="Factura" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Factura__IdPromo__4DB4832C" Association="FacturacionModel.FK__Factura__IdPromo__4DB4832C">
-      <End Role="Promocion" EntitySet="Promocion" />
-      <End Role="Factura" EntitySet="Factura" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Factura__idUsuar__4EA8A765" Association="FacturacionModel.FK__Factura__idUsuar__4EA8A765">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="Factura" EntitySet="Factura" />
-    </AssociationSet>
-    <AssociationSet Name="FK__FacturaDe__IdNum__7C6F7215" Association="FacturacionModel.FK__FacturaDe__IdNum__7C6F7215">
-      <End Role="Factura" EntitySet="Factura" />
-      <End Role="FacturaDet" EntitySet="FacturaDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__GuiaRemis__IdNum__74CE504D" Association="FacturacionModel.FK__GuiaRemis__IdNum__74CE504D">
-      <End Role="Factura" EntitySet="Factura" />
-      <End Role="GuiaRemisionDet" EntitySet="GuiaRemisionDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__FacturaDe__idEst__7F4BDEC0" Association="FacturacionModel.FK__FacturaDe__idEst__7F4BDEC0">
-      <End Role="Estado" EntitySet="Estado" />
-      <End Role="FacturaDet" EntitySet="FacturaDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__FacturaDe__idUsu__7E57BA87" Association="FacturacionModel.FK__FacturaDe__idUsu__7E57BA87">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="FacturaDet" EntitySet="FacturaDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__FacturaDet__7D63964E" Association="FacturacionModel.FK__FacturaDet__7D63964E">
-      <End Role="Articulo" EntitySet="Articulo" />
-      <End Role="FacturaDet" EntitySet="FacturaDet" />
     </AssociationSet>
     <AssociationSet Name="FK__FormaPago__IdEmp__1E05700A" Association="FacturacionModel.FK__FormaPago__IdEmp__1E05700A">
       <End Role="Empresa" EntitySet="Empresa" />
@@ -467,6 +372,115 @@
       <End Role="Estado" EntitySet="Estado" />
       <End Role="Usuario" EntitySet="Usuario" />
     </AssociationSet>
+    <EntitySet Name="IngresoEgresoCab" EntityType="FacturacionModel.IngresoEgresoCab" />
+    <EntitySet Name="IngresoEgresoDet" EntityType="FacturacionModel.IngresoEgresoDet" />
+    <AssociationSet Name="FK__IngresoEgresoCab__0BB1B5A5" Association="FacturacionModel.FK__IngresoEgresoCab__0BB1B5A5">
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEgresoDet__18178C8A" Association="FacturacionModel.FK__IngresoEgresoDet__18178C8A">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdGru__190BB0C3" Association="FacturacionModel.FK__IngresoEg__IdGru__190BB0C3">
+      <End Role="Grupo" EntitySet="Grupo" />
+      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdEst__0D99FE17" Association="FacturacionModel.FK__IngresoEg__IdEst__0D99FE17">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdRes__10766AC2" Association="FacturacionModel.FK__IngresoEg__IdRes__10766AC2">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdUsu__116A8EFB" Association="FacturacionModel.FK__IngresoEg__IdUsu__116A8EFB">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEgresoDet__17236851" Association="FacturacionModel.FK__IngresoEgresoDet__17236851">
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdPer__19FFD4FC" Association="FacturacionModel.FK__IngresoEg__IdPer__19FFD4FC">
+      <End Role="Percha" EntitySet="Percha" />
+      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdTip__162F4418" Association="FacturacionModel.FK__IngresoEg__IdTip__162F4418">
+      <End Role="TipoArticulo" EntitySet="TipoArticulo" />
+      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
+    </AssociationSet>
+    <EntitySet Name="Factura" EntityType="FacturacionModel.Factura" />
+    <EntitySet Name="FacturaDet" EntityType="FacturacionModel.FacturaDet" />
+    <AssociationSet Name="FK__Factura__IdNumer__4BCC3ABA" Association="FacturacionModel.FK__Factura__IdNumer__4BCC3ABA">
+      <End Role="ClienteDefactura" EntitySet="ClienteDefactura" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ComisionD__IdNum__6497E884" Association="FacturacionModel.FK__ComisionD__IdNum__6497E884">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="ComisionDet" EntitySet="ComisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__IdNumer__4CC05EF3" Association="FacturacionModel.FK__Factura__IdNumer__4CC05EF3">
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Devolucio__IdNum__6D2D2E85" Association="FacturacionModel.FK__Devolucio__IdNum__6D2D2E85">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="DevolucionVenta" EntitySet="DevolucionVenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__idEstad__4F9CCB9E" Association="FacturacionModel.FK__Factura__idEstad__4F9CCB9E">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__IdForma__49E3F248" Association="FacturacionModel.FK__Factura__IdForma__49E3F248">
+      <End Role="FormaPago" EntitySet="FormaPago" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__IdPromo__4DB4832C" Association="FacturacionModel.FK__Factura__IdPromo__4DB4832C">
+      <End Role="Promocion" EntitySet="Promocion" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Factura__idUsuar__4EA8A765" Association="FacturacionModel.FK__Factura__idUsuar__4EA8A765">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FacturaDe__IdNum__7C6F7215" Association="FacturacionModel.FK__FacturaDe__IdNum__7C6F7215">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="FacturaDet" EntitySet="FacturaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GuiaRemis__IdNum__74CE504D" Association="FacturacionModel.FK__GuiaRemis__IdNum__74CE504D">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="GuiaRemisionDet" EntitySet="GuiaRemisionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FacturaDe__idEst__7F4BDEC0" Association="FacturacionModel.FK__FacturaDe__idEst__7F4BDEC0">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="FacturaDet" EntitySet="FacturaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FacturaDe__idUsu__7E57BA87" Association="FacturacionModel.FK__FacturaDe__idUsu__7E57BA87">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="FacturaDet" EntitySet="FacturaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FacturaDet__7D63964E" Association="FacturacionModel.FK__FacturaDet__7D63964E">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="FacturaDet" EntitySet="FacturaDet" />
+    </AssociationSet>
+    <EntitySet Name="CotizacionDet" EntityType="FacturacionModel.CotizacionDet" />
+    <AssociationSet Name="FK__Cotizacio__IdNum__5C02A283" Association="FacturacionModel.FK__Cotizacio__IdNum__5C02A283">
+      <End Role="Cotizacion" EntitySet="Cotizacion" />
+      <End Role="CotizacionDet" EntitySet="CotizacionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cotizacio__idEst__5EDF0F2E" Association="FacturacionModel.FK__Cotizacio__idEst__5EDF0F2E">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="CotizacionDet" EntitySet="CotizacionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cotizacio__idUsu__5DEAEAF5" Association="FacturacionModel.FK__Cotizacio__idUsu__5DEAEAF5">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="CotizacionDet" EntitySet="CotizacionDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CotizacionDet__5CF6C6BC" Association="FacturacionModel.FK__CotizacionDet__5CF6C6BC">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="CotizacionDet" EntitySet="CotizacionDet" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="OrdenCompra">
     <Key>
@@ -485,6 +499,7 @@
     <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__OrdenComp__idEmp__0B27A5C0" FromRole="OrdenCompra" ToRole="Empresa" />
     <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__OrdenComp__IdUsu__0C1BC9F9" FromRole="OrdenCompra" ToRole="Usuario" />
     <NavigationProperty Name="OrdenCompraDet" Relationship="FacturacionModel.FK__OrdenCompraDet__63F8CA06" FromRole="OrdenCompra" ToRole="OrdenCompraDet" />
+    <NavigationProperty Name="IngresoEgresoCab" Relationship="FacturacionModel.FK__IngresoEgresoCab__0BB1B5A5" FromRole="OrdenCompra" ToRole="IngresoEgresoCab" />
   </EntityType>
   <EntityType Name="OrdenCompraDet">
     <Key>
@@ -509,26 +524,19 @@
     <Property Type="Int32" Name="idUsuario" Nullable="false" />
     <Property Type="Int32" Name="idCuentaxCobrar" Nullable="false" />
     <Property Type="Decimal" Name="numero_comprobante" Precision="4" Scale="0" />
-    <Property Type="Int32" Name="idTransaccion" Nullable="false" />
-    <Property Type="Int32" Name="idFactura" Nullable="false" />
     <Property Type="Int32" Name="Modulo" Nullable="false" />
-    <Property Type="Int32" Name="idCabeceraComprobante" Nullable="false" />
+    <Property Type="Int32" Name="idNumeroFactura" Nullable="false" />
     <Property Type="Int32" Name="TotalCuotas" Nullable="false" />
     <Property Type="Decimal" Name="porcentaje_interes" Nullable="false" Precision="18" Scale="0" />
-    <Property Type="Int32" Name="idEstado" Nullable="false" />
-    <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__CuentaxCo__idEmp__6B0FDBE9" FromRole="CuentaxCobrar" ToRole="Empresa" />
-    <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__CuentaxCo__idEst__6FD49106" FromRole="CuentaxCobrar" ToRole="Estado" />
-    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__CuentaxCo__idFac__6DEC4894" FromRole="CuentaxCobrar" ToRole="Factura" />
-    <NavigationProperty Name="Factura1" Relationship="FacturacionModel.FK__CuentaxCo__idTra__6CF8245B" FromRole="CuentaxCobrar" ToRole="Factura" />
-    <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__CuentaxCo__idUsu__6C040022" FromRole="CuentaxCobrar" ToRole="Usuario" />
+    <Property Type="String" Name="estado" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__CuentaxCo__idEmp__2D32A501" FromRole="CuentaxCobrar" ToRole="Empresa" />
+    <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__CuentaxCo__idUsu__2E26C93A" FromRole="CuentaxCobrar" ToRole="Usuario" />
   </EntityType>
   <EntityType Name="CuentaxCobrarDet">
     <Key>
       <PropertyRef Name="idCuentaxCobrar" />
       <PropertyRef Name="Numero" />
     </Key>
-    <Property Type="Int32" Name="idEmpresa" Nullable="false" />
-    <Property Type="Int32" Name="idUsuario" Nullable="false" />
     <Property Type="Int32" Name="idCuentaxCobrar" Nullable="false" />
     <Property Type="Int32" Name="Numero" Nullable="false" />
     <Property Type="Int32" Name="numero_cuota" Nullable="false" />
@@ -538,10 +546,7 @@
     <Property Type="DateTime" Name="fecha_cobro" Nullable="false" />
     <Property Type="DateTime" Name="fecha_vencimiento" Nullable="false" />
     <Property Type="DateTime" Name="FechaModificacion" />
-    <Property Type="Int32" Name="idEstado" Nullable="false" />
-    <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__CuentaxCo__idEmp__74994623" FromRole="CuentaxCobrarDet" ToRole="Empresa" />
-    <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__CuentaxCo__idEst__76818E95" FromRole="CuentaxCobrarDet" ToRole="Estado" />
-    <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__CuentaxCo__idUsu__758D6A5C" FromRole="CuentaxCobrarDet" ToRole="Usuario" />
+    <Property Type="String" Name="estado" MaxLength="1" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="ClienteDefactura">
     <Key>
@@ -602,9 +607,9 @@
     <NavigationProperty Name="Comision" Relationship="FacturacionModel.FK__ComisionD__IdNum__63A3C44B" FromRole="ComisionDet" ToRole="Comision" />
     <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__ComisionD__IdEmp__668030F6" FromRole="ComisionDet" ToRole="Empresa" />
     <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__ComisionD__idEst__68687968" FromRole="ComisionDet" ToRole="Estado" />
-    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__ComisionD__IdNum__6497E884" FromRole="ComisionDet" ToRole="Factura" />
     <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__ComisionD__idUsu__6774552F" FromRole="ComisionDet" ToRole="Usuario" />
     <NavigationProperty Name="Empleado" Relationship="FacturacionModel.FK__ComisionDet__658C0CBD" FromRole="ComisionDet" ToRole="Empleado" />
+    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__ComisionD__IdNum__6497E884" FromRole="ComisionDet" ToRole="Factura" />
   </EntityType>
   <EntityType Name="Cotizacion">
     <Key>
@@ -628,31 +633,9 @@
     <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__Cotizacio__IdEmp__2D47B39A" FromRole="Cotizacion" ToRole="Empresa" />
     <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__Cotizacio__idEst__2F2FFC0C" FromRole="Cotizacion" ToRole="Estado" />
     <NavigationProperty Name="FormaPago" Relationship="FacturacionModel.FK__Cotizacio__IdFor__2C538F61" FromRole="Cotizacion" ToRole="FormaPago" />
-    <NavigationProperty Name="CotizacionDet" Relationship="FacturacionModel.FK__Cotizacio__IdNum__5C02A283" FromRole="Cotizacion" ToRole="CotizacionDet" />
     <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__Cotizacio__idUsu__2E3BD7D3" FromRole="Cotizacion" ToRole="Usuario" />
     <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__Factura__IdNumer__4CC05EF3" FromRole="Cotizacion" ToRole="Factura" />
-  </EntityType>
-  <EntityType Name="CotizacionDet">
-    <Key>
-      <PropertyRef Name="Linea" />
-      <PropertyRef Name="IdNumeroCotizacion" />
-    </Key>
-    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
-    <Property Type="Int32" Name="idUsuario" Nullable="false" />
-    <Property Type="Int32" Name="Linea" Nullable="false" />
-    <Property Type="Int32" Name="IdNumeroCotizacion" Nullable="false" />
-    <Property Type="Int32" Name="IdArticulo" />
-    <Property Type="Int32" Name="CuotaMensual" />
-    <Property Type="Decimal" Name="Interes" Precision="19" Scale="4" />
-    <Property Type="DateTime" Name="FechaPago" />
-    <Property Type="DateTime" Name="FechaMaximaPago" />
-    <Property Type="Decimal" Name="precio" Precision="19" Scale="4" />
-    <Property Type="Int32" Name="cantidad" />
-    <Property Type="Int32" Name="idEstado" Nullable="false" />
-    <NavigationProperty Name="Cotizacion" Relationship="FacturacionModel.FK__Cotizacio__IdNum__5C02A283" FromRole="CotizacionDet" ToRole="Cotizacion" />
-    <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__Cotizacio__idEst__5EDF0F2E" FromRole="CotizacionDet" ToRole="Estado" />
-    <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__Cotizacio__idUsu__5DEAEAF5" FromRole="CotizacionDet" ToRole="Usuario" />
-    <NavigationProperty Name="Articulo" Relationship="FacturacionModel.FK__CotizacionDet__5CF6C6BC" FromRole="CotizacionDet" ToRole="Articulo" />
+    <NavigationProperty Name="CotizacionDet" Relationship="FacturacionModel.FK__Cotizacio__IdNum__5C02A283" FromRole="Cotizacion" ToRole="CotizacionDet" />
   </EntityType>
   <EntityType Name="DevolucionDet">
     <Key>
@@ -685,64 +668,8 @@
     <Property Type="Int32" Name="idEstado" Nullable="false" />
     <NavigationProperty Name="DevolucionDet" Relationship="FacturacionModel.FK__Devolucio__IdNum__041093DD" FromRole="DevolucionVenta" ToRole="DevolucionDet" />
     <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__Devolucio__idEst__70099B30" FromRole="DevolucionVenta" ToRole="Estado" />
-    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__Devolucio__IdNum__6D2D2E85" FromRole="DevolucionVenta" ToRole="Factura" />
     <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__Devolucio__idUsu__6F1576F7" FromRole="DevolucionVenta" ToRole="Usuario" />
-  </EntityType>
-  <EntityType Name="Factura">
-    <Key>
-      <PropertyRef Name="IdNumeroFactura" />
-    </Key>
-    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
-    <Property Type="Decimal" Name="cabecera_comprobante" Precision="4" Scale="0" />
-    <Property Type="Int32" Name="idUsuario" Nullable="false" />
-    <Property Type="Int32" Name="IdNumeroFactura" Nullable="false" />
-    <Property Type="Int32" Name="IdNumeroCotizacion" />
-    <Property Type="Int32" Name="IdPromocion" />
-    <Property Type="Int32" Name="IdFormaPago" Nullable="false" />
-    <Property Type="Int32" Name="IdNumeroCliente" />
-    <Property Type="DateTime" Name="Fecha" />
-    <Property Type="Decimal" Name="ValorEntrada" Precision="19" Scale="4" />
-    <Property Type="Int32" Name="NumeroCuotaMensual" />
-    <Property Type="Decimal" Name="Subtotal" Precision="19" Scale="4" />
-    <Property Type="Decimal" Name="Iva" Precision="19" Scale="4" />
-    <Property Type="Decimal" Name="Ice" Precision="19" Scale="4" />
-    <Property Type="Decimal" Name="Descuento" Precision="19" Scale="4" />
-    <Property Type="Decimal" Name="TotalPagar" Precision="19" Scale="4" />
-    <Property Type="Int32" Name="idEstado" Nullable="false" />
-    <NavigationProperty Name="CuentaxCobrar" Relationship="FacturacionModel.FK__CuentaxCo__idFac__6DEC4894" FromRole="Factura" ToRole="CuentaxCobrar" />
-    <NavigationProperty Name="CuentaxCobrar1" Relationship="FacturacionModel.FK__CuentaxCo__idTra__6CF8245B" FromRole="Factura" ToRole="CuentaxCobrar" />
-    <NavigationProperty Name="ClienteDefactura" Relationship="FacturacionModel.FK__Factura__IdNumer__4BCC3ABA" FromRole="Factura" ToRole="ClienteDefactura" />
-    <NavigationProperty Name="ComisionDet" Relationship="FacturacionModel.FK__ComisionD__IdNum__6497E884" FromRole="Factura" ToRole="ComisionDet" />
-    <NavigationProperty Name="Cotizacion" Relationship="FacturacionModel.FK__Factura__IdNumer__4CC05EF3" FromRole="Factura" ToRole="Cotizacion" />
-    <NavigationProperty Name="DevolucionVenta" Relationship="FacturacionModel.FK__Devolucio__IdNum__6D2D2E85" FromRole="Factura" ToRole="DevolucionVenta" />
-    <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__Factura__idEstad__4F9CCB9E" FromRole="Factura" ToRole="Estado" />
-    <NavigationProperty Name="FormaPago" Relationship="FacturacionModel.FK__Factura__IdForma__49E3F248" FromRole="Factura" ToRole="FormaPago" />
-    <NavigationProperty Name="Promocion" Relationship="FacturacionModel.FK__Factura__IdPromo__4DB4832C" FromRole="Factura" ToRole="Promocion" />
-    <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__Factura__idUsuar__4EA8A765" FromRole="Factura" ToRole="Usuario" />
-    <NavigationProperty Name="FacturaDet" Relationship="FacturacionModel.FK__FacturaDe__IdNum__7C6F7215" FromRole="Factura" ToRole="FacturaDet" />
-    <NavigationProperty Name="GuiaRemisionDet" Relationship="FacturacionModel.FK__GuiaRemis__IdNum__74CE504D" FromRole="Factura" ToRole="GuiaRemisionDet" />
-  </EntityType>
-  <EntityType Name="FacturaDet">
-    <Key>
-      <PropertyRef Name="Linea" />
-      <PropertyRef Name="IdNumeroFactura" />
-    </Key>
-    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
-    <Property Type="Int32" Name="idUsuario" Nullable="false" />
-    <Property Type="Int32" Name="Linea" Nullable="false" />
-    <Property Type="Int32" Name="IdNumeroFactura" Nullable="false" />
-    <Property Type="Int32" Name="IdArticulo" />
-    <Property Type="Decimal" Name="CuotaMensual" Precision="19" Scale="4" />
-    <Property Type="Decimal" Name="Interes" Precision="19" Scale="4" />
-    <Property Type="DateTime" Name="FechaPago" />
-    <Property Type="DateTime" Name="FechaMaximaPago" />
-    <Property Type="Decimal" Name="precio" Precision="19" Scale="4" />
-    <Property Type="Int32" Name="cantidad" />
-    <Property Type="Int32" Name="idEstado" Nullable="false" />
-    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__FacturaDe__IdNum__7C6F7215" FromRole="FacturaDet" ToRole="Factura" />
-    <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__FacturaDe__idEst__7F4BDEC0" FromRole="FacturaDet" ToRole="Estado" />
-    <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__FacturaDe__idUsu__7E57BA87" FromRole="FacturaDet" ToRole="Usuario" />
-    <NavigationProperty Name="Articulo" Relationship="FacturacionModel.FK__FacturaDet__7D63964E" FromRole="FacturaDet" ToRole="Articulo" />
+    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__Devolucio__IdNum__6D2D2E85" FromRole="DevolucionVenta" ToRole="Factura" />
   </EntityType>
   <EntityType Name="FormaPago">
     <Key>
@@ -754,11 +681,11 @@
     <Property Type="String" Name="Descripcion" MaxLength="250" FixedLength="false" Unicode="false" />
     <Property Type="Int32" Name="idEstado" Nullable="false" />
     <NavigationProperty Name="Cotizacion" Relationship="FacturacionModel.FK__Cotizacio__IdFor__2C538F61" FromRole="FormaPago" ToRole="Cotizacion" />
-    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__Factura__IdForma__49E3F248" FromRole="FormaPago" ToRole="Factura" />
     <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__FormaPago__IdEmp__1E05700A" FromRole="FormaPago" ToRole="Empresa" />
     <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__FormaPago__idEst__1FEDB87C" FromRole="FormaPago" ToRole="Estado" />
     <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__FormaPago__idUsu__1EF99443" FromRole="FormaPago" ToRole="Usuario" />
     <NavigationProperty Name="PorcentajeComision" Relationship="FacturacionModel.FK__Porcentaj__IdFor__3AA1AEB8" FromRole="FormaPago" ToRole="PorcentajeComision" />
+    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__Factura__IdForma__49E3F248" FromRole="FormaPago" ToRole="Factura" />
   </EntityType>
   <EntityType Name="GuiaRemision">
     <Key>
@@ -790,10 +717,10 @@
     <Property Type="Int32" Name="IdNumeroFactura" />
     <Property Type="DateTime" Name="FechaEntrega" />
     <Property Type="Int32" Name="idEstado" Nullable="false" />
-    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__GuiaRemis__IdNum__74CE504D" FromRole="GuiaRemisionDet" ToRole="Factura" />
     <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__GuiaRemis__IdEmp__75C27486" FromRole="GuiaRemisionDet" ToRole="Empresa" />
     <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__GuiaRemis__idEst__77AABCF8" FromRole="GuiaRemisionDet" ToRole="Estado" />
     <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__GuiaRemis__idUsu__76B698BF" FromRole="GuiaRemisionDet" ToRole="Usuario" />
+    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__GuiaRemis__IdNum__74CE504D" FromRole="GuiaRemisionDet" ToRole="Factura" />
   </EntityType>
   <EntityType Name="PorcentajeComision">
     <Key>
@@ -827,10 +754,10 @@
     <Property Type="String" Name="tipoPromocion" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Type="Decimal" Name="pordescuento" Precision="18" Scale="2" />
     <Property Type="Int32" Name="idEstado" Nullable="false" />
-    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__Factura__IdPromo__4DB4832C" FromRole="Promocion" ToRole="Factura" />
     <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__Promocion__IdEmp__33F4B129" FromRole="Promocion" ToRole="Empresa" />
     <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__Promocion__idEst__35DCF99B" FromRole="Promocion" ToRole="Estado" />
     <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__Promocion__idUsu__34E8D562" FromRole="Promocion" ToRole="Usuario" />
+    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__Factura__IdPromo__4DB4832C" FromRole="Promocion" ToRole="Factura" />
   </EntityType>
   <EntityType Name="Articulo">
     <Key>
@@ -861,9 +788,7 @@
     <Property Type="String" Name="Observacion" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Type="Int32" Name="IdEstado" />
     <NavigationProperty Name="OrdenCompraDet" Relationship="FacturacionModel.FK__OrdenCompraDet__64ECEE3F" FromRole="Articulo" ToRole="OrdenCompraDet" />
-    <NavigationProperty Name="CotizacionDet" Relationship="FacturacionModel.FK__CotizacionDet__5CF6C6BC" FromRole="Articulo" ToRole="CotizacionDet" />
     <NavigationProperty Name="DevolucionDet" Relationship="FacturacionModel.FK__DevolucionDet__0504B816" FromRole="Articulo" ToRole="DevolucionDet" />
-    <NavigationProperty Name="FacturaDet" Relationship="FacturacionModel.FK__FacturaDet__7D63964E" FromRole="Articulo" ToRole="FacturaDet" />
     <NavigationProperty Name="Chasis" Relationship="FacturacionModel.FK__Articulo__IdChas__5C37ACAD" FromRole="Articulo" ToRole="Chasis" />
     <NavigationProperty Name="Color" Relationship="FacturacionModel.FK__Articulo__IdColo__5F141958" FromRole="Articulo" ToRole="Color" />
     <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__Articulo__IdEmpr__58671BC9" FromRole="Articulo" ToRole="Empresa" />
@@ -875,6 +800,9 @@
     <NavigationProperty Name="TipoMotor" Relationship="FacturacionModel.FK__Articulo__IdTipo__5D2BD0E6" FromRole="Articulo" ToRole="TipoMotor" />
     <NavigationProperty Name="TipoCombustible" Relationship="FacturacionModel.FK__Articulo__IdTipo__5E1FF51F" FromRole="Articulo" ToRole="TipoCombustible" />
     <NavigationProperty Name="TipoMaterial" Relationship="FacturacionModel.FK__Articulo__IdTipo__61F08603" FromRole="Articulo" ToRole="TipoMaterial" />
+    <NavigationProperty Name="IngresoEgresoDet" Relationship="FacturacionModel.FK__IngresoEgresoDet__18178C8A" FromRole="Articulo" ToRole="IngresoEgresoDet" />
+    <NavigationProperty Name="FacturaDet" Relationship="FacturacionModel.FK__FacturaDet__7D63964E" FromRole="Articulo" ToRole="FacturaDet" />
+    <NavigationProperty Name="CotizacionDet" Relationship="FacturacionModel.FK__CotizacionDet__5CF6C6BC" FromRole="Articulo" ToRole="CotizacionDet" />
   </EntityType>
   <EntityType Name="Chasis">
     <Key>
@@ -913,6 +841,7 @@
     <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__Grupo__IdEmpresa__6ABAD62E" FromRole="Grupo" ToRole="Empresa" />
     <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__Grupo__IdEstado__6CA31EA0" FromRole="Grupo" ToRole="Estado" />
     <NavigationProperty Name="TipoArticulo" Relationship="FacturacionModel.FK__Grupo__IdTipoArt__6BAEFA67" FromRole="Grupo" ToRole="TipoArticulo" />
+    <NavigationProperty Name="IngresoEgresoDet" Relationship="FacturacionModel.FK__IngresoEg__IdGru__190BB0C3" FromRole="Grupo" ToRole="IngresoEgresoDet" />
   </EntityType>
   <EntityType Name="Marca">
     <Key>
@@ -953,6 +882,7 @@
     <Property Type="Int32" Name="IdEstado" />
     <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__Percha__IdEmpres__66B53B20" FromRole="Percha" ToRole="Empresa" />
     <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__Percha__IdEstado__689D8392" FromRole="Percha" ToRole="Estado" />
+    <NavigationProperty Name="IngresoEgresoDet" Relationship="FacturacionModel.FK__IngresoEg__IdPer__19FFD4FC" FromRole="Percha" ToRole="IngresoEgresoDet" />
   </EntityType>
   <EntityType Name="TipoArticulo">
     <Key>
@@ -966,6 +896,7 @@
     <NavigationProperty Name="Grupo" Relationship="FacturacionModel.FK__Grupo__IdTipoArt__6BAEFA67" FromRole="TipoArticulo" ToRole="Grupo" />
     <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__TipoArtic__IdEmp__6501FCD8" FromRole="TipoArticulo" ToRole="Empresa" />
     <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__TipoArtic__IdEst__65F62111" FromRole="TipoArticulo" ToRole="Estado" />
+    <NavigationProperty Name="IngresoEgresoDet" Relationship="FacturacionModel.FK__IngresoEg__IdTip__162F4418" FromRole="TipoArticulo" ToRole="IngresoEgresoDet" />
   </EntityType>
   <EntityType Name="TipoCombustible">
     <Key>
@@ -1042,6 +973,7 @@
     <NavigationProperty Name="Empleado" Relationship="FacturacionModel.FK__Empleado__IdPers__24927208" FromRole="Persona" ToRole="Empleado" />
     <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__Persona__IdEmpre__1BFD2C07" FromRole="Persona" ToRole="Empresa" />
     <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__Usuario__IdUsuar__3C69FB99" FromRole="Persona" ToRole="Usuario" />
+    <NavigationProperty Name="IngresoEgresoCab" Relationship="FacturacionModel.FK__IngresoEg__IdRes__10766AC2" FromRole="Persona" ToRole="IngresoEgresoCab" />
   </EntityType>
   <EntityType Name="Empresa">
     <Key>
@@ -1060,8 +992,7 @@
     <Property Type="String" Name="Descripcion" MaxLength="250" FixedLength="false" Unicode="false" />
     <Property Type="Int32" Name="IdEstado" />
     <NavigationProperty Name="OrdenCompra" Relationship="FacturacionModel.FK__OrdenComp__idEmp__0B27A5C0" FromRole="Empresa" ToRole="OrdenCompra" />
-    <NavigationProperty Name="CuentaxCobrar" Relationship="FacturacionModel.FK__CuentaxCo__idEmp__6B0FDBE9" FromRole="Empresa" ToRole="CuentaxCobrar" />
-    <NavigationProperty Name="CuentaxCobrarDet" Relationship="FacturacionModel.FK__CuentaxCo__idEmp__74994623" FromRole="Empresa" ToRole="CuentaxCobrarDet" />
+    <NavigationProperty Name="CuentaxCobrar" Relationship="FacturacionModel.FK__CuentaxCo__idEmp__2D32A501" FromRole="Empresa" ToRole="CuentaxCobrar" />
     <NavigationProperty Name="ClienteDefactura" Relationship="FacturacionModel.FK__ClienteDe__IdEmp__24B26D99" FromRole="Empresa" ToRole="ClienteDefactura" />
     <NavigationProperty Name="ComisionDet" Relationship="FacturacionModel.FK__ComisionD__IdEmp__668030F6" FromRole="Empresa" ToRole="ComisionDet" />
     <NavigationProperty Name="Cotizacion" Relationship="FacturacionModel.FK__Cotizacio__IdEmp__2D47B39A" FromRole="Empresa" ToRole="Cotizacion" />
@@ -1091,17 +1022,12 @@
     </Key>
     <Property Type="Int32" Name="IdEstado" Nullable="false" />
     <Property Type="String" Name="Descripcion" MaxLength="220" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="CuentaxCobrar" Relationship="FacturacionModel.FK__CuentaxCo__idEst__6FD49106" FromRole="Estado" ToRole="CuentaxCobrar" />
-    <NavigationProperty Name="CuentaxCobrarDet" Relationship="FacturacionModel.FK__CuentaxCo__idEst__76818E95" FromRole="Estado" ToRole="CuentaxCobrarDet" />
     <NavigationProperty Name="ClienteDefactura" Relationship="FacturacionModel.FK__ClienteDe__idEst__269AB60B" FromRole="Estado" ToRole="ClienteDefactura" />
     <NavigationProperty Name="Comision" Relationship="FacturacionModel.FK__Comision__idEsta__573DED66" FromRole="Estado" ToRole="Comision" />
     <NavigationProperty Name="ComisionDet" Relationship="FacturacionModel.FK__ComisionD__idEst__68687968" FromRole="Estado" ToRole="ComisionDet" />
     <NavigationProperty Name="Cotizacion" Relationship="FacturacionModel.FK__Cotizacio__idEst__2F2FFC0C" FromRole="Estado" ToRole="Cotizacion" />
-    <NavigationProperty Name="CotizacionDet" Relationship="FacturacionModel.FK__Cotizacio__idEst__5EDF0F2E" FromRole="Estado" ToRole="CotizacionDet" />
     <NavigationProperty Name="DevolucionDet" Relationship="FacturacionModel.FK__Devolucio__idEst__06ED0088" FromRole="Estado" ToRole="DevolucionDet" />
     <NavigationProperty Name="DevolucionVenta" Relationship="FacturacionModel.FK__Devolucio__idEst__70099B30" FromRole="Estado" ToRole="DevolucionVenta" />
-    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__Factura__idEstad__4F9CCB9E" FromRole="Estado" ToRole="Factura" />
-    <NavigationProperty Name="FacturaDet" Relationship="FacturacionModel.FK__FacturaDe__idEst__7F4BDEC0" FromRole="Estado" ToRole="FacturaDet" />
     <NavigationProperty Name="FormaPago" Relationship="FacturacionModel.FK__FormaPago__idEst__1FEDB87C" FromRole="Estado" ToRole="FormaPago" />
     <NavigationProperty Name="GuiaRemision" Relationship="FacturacionModel.FK__GuiaRemis__idEst__451F3D2B" FromRole="Estado" ToRole="GuiaRemision" />
     <NavigationProperty Name="GuiaRemisionDet" Relationship="FacturacionModel.FK__GuiaRemis__idEst__77AABCF8" FromRole="Estado" ToRole="GuiaRemisionDet" />
@@ -1121,6 +1047,10 @@
     <NavigationProperty Name="Empleado" Relationship="FacturacionModel.FK__Empleado__IdEsta__22AA2996" FromRole="Estado" ToRole="Empleado" />
     <NavigationProperty Name="Empresa" Relationship="FacturacionModel.FK__Empresa__IdEstad__0CBAE877" FromRole="Estado" ToRole="Empresa" />
     <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__Usuario__IdEstad__3A81B327" FromRole="Estado" ToRole="Usuario" />
+    <NavigationProperty Name="IngresoEgresoCab" Relationship="FacturacionModel.FK__IngresoEg__IdEst__0D99FE17" FromRole="Estado" ToRole="IngresoEgresoCab" />
+    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__Factura__idEstad__4F9CCB9E" FromRole="Estado" ToRole="Factura" />
+    <NavigationProperty Name="FacturaDet" Relationship="FacturacionModel.FK__FacturaDe__idEst__7F4BDEC0" FromRole="Estado" ToRole="FacturaDet" />
+    <NavigationProperty Name="CotizacionDet" Relationship="FacturacionModel.FK__Cotizacio__idEst__5EDF0F2E" FromRole="Estado" ToRole="CotizacionDet" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
@@ -1133,17 +1063,13 @@
     <Property Type="Int32" Name="IdImagen" />
     <Property Type="Int32" Name="IdPerfil" />
     <NavigationProperty Name="OrdenCompra" Relationship="FacturacionModel.FK__OrdenComp__IdUsu__0C1BC9F9" FromRole="Usuario" ToRole="OrdenCompra" />
-    <NavigationProperty Name="CuentaxCobrar" Relationship="FacturacionModel.FK__CuentaxCo__idUsu__6C040022" FromRole="Usuario" ToRole="CuentaxCobrar" />
-    <NavigationProperty Name="CuentaxCobrarDet" Relationship="FacturacionModel.FK__CuentaxCo__idUsu__758D6A5C" FromRole="Usuario" ToRole="CuentaxCobrarDet" />
+    <NavigationProperty Name="CuentaxCobrar" Relationship="FacturacionModel.FK__CuentaxCo__idUsu__2E26C93A" FromRole="Usuario" ToRole="CuentaxCobrar" />
     <NavigationProperty Name="ClienteDefactura" Relationship="FacturacionModel.FK__ClienteDe__idUsu__25A691D2" FromRole="Usuario" ToRole="ClienteDefactura" />
     <NavigationProperty Name="Comision" Relationship="FacturacionModel.FK__Comision__idUsua__5649C92D" FromRole="Usuario" ToRole="Comision" />
     <NavigationProperty Name="ComisionDet" Relationship="FacturacionModel.FK__ComisionD__idUsu__6774552F" FromRole="Usuario" ToRole="ComisionDet" />
     <NavigationProperty Name="Cotizacion" Relationship="FacturacionModel.FK__Cotizacio__idUsu__2E3BD7D3" FromRole="Usuario" ToRole="Cotizacion" />
-    <NavigationProperty Name="CotizacionDet" Relationship="FacturacionModel.FK__Cotizacio__idUsu__5DEAEAF5" FromRole="Usuario" ToRole="CotizacionDet" />
     <NavigationProperty Name="DevolucionDet" Relationship="FacturacionModel.FK__Devolucio__idUsu__05F8DC4F" FromRole="Usuario" ToRole="DevolucionDet" />
     <NavigationProperty Name="DevolucionVenta" Relationship="FacturacionModel.FK__Devolucio__idUsu__6F1576F7" FromRole="Usuario" ToRole="DevolucionVenta" />
-    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__Factura__idUsuar__4EA8A765" FromRole="Usuario" ToRole="Factura" />
-    <NavigationProperty Name="FacturaDet" Relationship="FacturacionModel.FK__FacturaDe__idUsu__7E57BA87" FromRole="Usuario" ToRole="FacturaDet" />
     <NavigationProperty Name="FormaPago" Relationship="FacturacionModel.FK__FormaPago__idUsu__1EF99443" FromRole="Usuario" ToRole="FormaPago" />
     <NavigationProperty Name="GuiaRemision" Relationship="FacturacionModel.FK__GuiaRemis__idUsu__442B18F2" FromRole="Usuario" ToRole="GuiaRemision" />
     <NavigationProperty Name="GuiaRemisionDet" Relationship="FacturacionModel.FK__GuiaRemis__idUsu__76B698BF" FromRole="Usuario" ToRole="GuiaRemisionDet" />
@@ -1151,6 +1077,10 @@
     <NavigationProperty Name="Promocion" Relationship="FacturacionModel.FK__Promocion__idUsu__34E8D562" FromRole="Usuario" ToRole="Promocion" />
     <NavigationProperty Name="Persona" Relationship="FacturacionModel.FK__Usuario__IdUsuar__3C69FB99" FromRole="Usuario" ToRole="Persona" />
     <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__Usuario__IdEstad__3A81B327" FromRole="Usuario" ToRole="Estado" />
+    <NavigationProperty Name="IngresoEgresoCab" Relationship="FacturacionModel.FK__IngresoEg__IdUsu__116A8EFB" FromRole="Usuario" ToRole="IngresoEgresoCab" />
+    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__Factura__idUsuar__4EA8A765" FromRole="Usuario" ToRole="Factura" />
+    <NavigationProperty Name="FacturaDet" Relationship="FacturacionModel.FK__FacturaDe__idUsu__7E57BA87" FromRole="Usuario" ToRole="FacturaDet" />
+    <NavigationProperty Name="CotizacionDet" Relationship="FacturacionModel.FK__Cotizacio__idUsu__5DEAEAF5" FromRole="Usuario" ToRole="CotizacionDet" />
   </EntityType>
   <Association Name="FK__OrdenComp__idEmp__0B27A5C0">
     <End Type="FacturacionModel.Empresa" Role="Empresa" Multiplicity="1" />
@@ -1204,7 +1134,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CuentaxCo__idEmp__6B0FDBE9">
+  <Association Name="FK__CuentaxCo__idEmp__2D32A501">
     <End Type="FacturacionModel.Empresa" Role="Empresa" Multiplicity="1" />
     <End Type="FacturacionModel.CuentaxCobrar" Role="CuentaxCobrar" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1216,43 +1146,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CuentaxCo__idEst__6FD49106">
-    <End Type="FacturacionModel.Estado" Role="Estado" Multiplicity="1" />
-    <End Type="FacturacionModel.CuentaxCobrar" Role="CuentaxCobrar" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Estado">
-        <PropertyRef Name="IdEstado" />
-      </Principal>
-      <Dependent Role="CuentaxCobrar">
-        <PropertyRef Name="idEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idFac__6DEC4894">
-    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="1" />
-    <End Type="FacturacionModel.CuentaxCobrar" Role="CuentaxCobrar" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Factura">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Principal>
-      <Dependent Role="CuentaxCobrar">
-        <PropertyRef Name="idFactura" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idTra__6CF8245B">
-    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="1" />
-    <End Type="FacturacionModel.CuentaxCobrar" Role="CuentaxCobrar" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Factura">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Principal>
-      <Dependent Role="CuentaxCobrar">
-        <PropertyRef Name="idTransaccion" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idUsu__6C040022">
+  <Association Name="FK__CuentaxCo__idUsu__2E26C93A">
     <End Type="FacturacionModel.Usuario" Role="Usuario" Multiplicity="1" />
     <End Type="FacturacionModel.CuentaxCobrar" Role="CuentaxCobrar" Multiplicity="*" />
     <ReferentialConstraint>
@@ -1260,42 +1154,6 @@
         <PropertyRef Name="IdUsuario" />
       </Principal>
       <Dependent Role="CuentaxCobrar">
-        <PropertyRef Name="idUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idEmp__74994623">
-    <End Type="FacturacionModel.Empresa" Role="Empresa" Multiplicity="1" />
-    <End Type="FacturacionModel.CuentaxCobrarDet" Role="CuentaxCobrarDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="CuentaxCobrarDet">
-        <PropertyRef Name="idEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idEst__76818E95">
-    <End Type="FacturacionModel.Estado" Role="Estado" Multiplicity="1" />
-    <End Type="FacturacionModel.CuentaxCobrarDet" Role="CuentaxCobrarDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Estado">
-        <PropertyRef Name="IdEstado" />
-      </Principal>
-      <Dependent Role="CuentaxCobrarDet">
-        <PropertyRef Name="idEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CuentaxCo__idUsu__758D6A5C">
-    <End Type="FacturacionModel.Usuario" Role="Usuario" Multiplicity="1" />
-    <End Type="FacturacionModel.CuentaxCobrarDet" Role="CuentaxCobrarDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="CuentaxCobrarDet">
         <PropertyRef Name="idUsuario" />
       </Dependent>
     </ReferentialConstraint>
@@ -1344,18 +1202,6 @@
         <PropertyRef Name="IdNumeroCliente" />
       </Principal>
       <Dependent Role="Cotizacion">
-        <PropertyRef Name="IdNumeroCliente" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Factura__IdNumer__4BCC3ABA">
-    <End Type="FacturacionModel.ClienteDefactura" Role="ClienteDefactura" Multiplicity="0..1" />
-    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ClienteDefactura">
-        <PropertyRef Name="IdNumeroCliente" />
-      </Principal>
-      <Dependent Role="Factura">
         <PropertyRef Name="IdNumeroCliente" />
       </Dependent>
     </ReferentialConstraint>
@@ -1432,18 +1278,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ComisionD__IdNum__6497E884">
-    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="0..1" />
-    <End Type="FacturacionModel.ComisionDet" Role="ComisionDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Factura">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Principal>
-      <Dependent Role="ComisionDet">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__ComisionD__idUsu__6774552F">
     <End Type="FacturacionModel.Usuario" Role="Usuario" Multiplicity="1" />
     <End Type="FacturacionModel.ComisionDet" Role="ComisionDet" Multiplicity="*" />
@@ -1506,18 +1340,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Cotizacio__IdNum__5C02A283">
-    <End Type="FacturacionModel.Cotizacion" Role="Cotizacion" Multiplicity="1" />
-    <End Type="FacturacionModel.CotizacionDet" Role="CotizacionDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Cotizacion">
-        <PropertyRef Name="IdNumeroCotizacion" />
-      </Principal>
-      <Dependent Role="CotizacionDet">
-        <PropertyRef Name="IdNumeroCotizacion" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__Cotizacio__idUsu__2E3BD7D3">
     <End Type="FacturacionModel.Usuario" Role="Usuario" Multiplicity="1" />
     <End Type="FacturacionModel.Cotizacion" Role="Cotizacion" Multiplicity="*" />
@@ -1527,56 +1349,6 @@
       </Principal>
       <Dependent Role="Cotizacion">
         <PropertyRef Name="idUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Factura__IdNumer__4CC05EF3">
-    <End Type="FacturacionModel.Cotizacion" Role="Cotizacion" Multiplicity="0..1" />
-    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Cotizacion">
-        <PropertyRef Name="IdNumeroCotizacion" />
-      </Principal>
-      <Dependent Role="Factura">
-        <PropertyRef Name="IdNumeroCotizacion" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Cotizacio__idEst__5EDF0F2E">
-    <End Type="FacturacionModel.Estado" Role="Estado" Multiplicity="1" />
-    <End Type="FacturacionModel.CotizacionDet" Role="CotizacionDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Estado">
-        <PropertyRef Name="IdEstado" />
-      </Principal>
-      <Dependent Role="CotizacionDet">
-        <PropertyRef Name="idEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Cotizacio__idUsu__5DEAEAF5">
-    <End Type="FacturacionModel.Usuario" Role="Usuario" Multiplicity="1" />
-    <End Type="FacturacionModel.CotizacionDet" Role="CotizacionDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="CotizacionDet">
-        <PropertyRef Name="idUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__CotizacionDet__5CF6C6BC">
-    <End Type="FacturacionModel.Articulo" Role="Articulo" Multiplicity="0..1" />
-    <End Type="FacturacionModel.CotizacionDet" Role="CotizacionDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Articulo">
-        <PropertyRef Name="IdArticulo" />
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="CotizacionDet">
-        <PropertyRef Name="IdArticulo" />
-        <PropertyRef Name="IdEmpresa" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1642,18 +1414,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Devolucio__IdNum__6D2D2E85">
-    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="0..1" />
-    <End Type="FacturacionModel.DevolucionVenta" Role="DevolucionVenta" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Factura">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Principal>
-      <Dependent Role="DevolucionVenta">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__Devolucio__idUsu__6F1576F7">
     <End Type="FacturacionModel.Usuario" Role="Usuario" Multiplicity="1" />
     <End Type="FacturacionModel.DevolucionVenta" Role="DevolucionVenta" Multiplicity="*" />
@@ -1663,116 +1423,6 @@
       </Principal>
       <Dependent Role="DevolucionVenta">
         <PropertyRef Name="idUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Factura__idEstad__4F9CCB9E">
-    <End Type="FacturacionModel.Estado" Role="Estado" Multiplicity="1" />
-    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Estado">
-        <PropertyRef Name="IdEstado" />
-      </Principal>
-      <Dependent Role="Factura">
-        <PropertyRef Name="idEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Factura__IdForma__49E3F248">
-    <End Type="FacturacionModel.FormaPago" Role="FormaPago" Multiplicity="1" />
-    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="FormaPago">
-        <PropertyRef Name="IdFormaPago" />
-      </Principal>
-      <Dependent Role="Factura">
-        <PropertyRef Name="IdFormaPago" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Factura__IdPromo__4DB4832C">
-    <End Type="FacturacionModel.Promocion" Role="Promocion" Multiplicity="0..1" />
-    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Promocion">
-        <PropertyRef Name="IdPromocion" />
-      </Principal>
-      <Dependent Role="Factura">
-        <PropertyRef Name="IdPromocion" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Factura__idUsuar__4EA8A765">
-    <End Type="FacturacionModel.Usuario" Role="Usuario" Multiplicity="1" />
-    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="Factura">
-        <PropertyRef Name="idUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__FacturaDe__IdNum__7C6F7215">
-    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="1" />
-    <End Type="FacturacionModel.FacturaDet" Role="FacturaDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Factura">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Principal>
-      <Dependent Role="FacturaDet">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__GuiaRemis__IdNum__74CE504D">
-    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="0..1" />
-    <End Type="FacturacionModel.GuiaRemisionDet" Role="GuiaRemisionDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Factura">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Principal>
-      <Dependent Role="GuiaRemisionDet">
-        <PropertyRef Name="IdNumeroFactura" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__FacturaDe__idEst__7F4BDEC0">
-    <End Type="FacturacionModel.Estado" Role="Estado" Multiplicity="1" />
-    <End Type="FacturacionModel.FacturaDet" Role="FacturaDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Estado">
-        <PropertyRef Name="IdEstado" />
-      </Principal>
-      <Dependent Role="FacturaDet">
-        <PropertyRef Name="idEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__FacturaDe__idUsu__7E57BA87">
-    <End Type="FacturacionModel.Usuario" Role="Usuario" Multiplicity="1" />
-    <End Type="FacturacionModel.FacturaDet" Role="FacturaDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="FacturaDet">
-        <PropertyRef Name="idUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__FacturaDet__7D63964E">
-    <End Type="FacturacionModel.Articulo" Role="Articulo" Multiplicity="0..1" />
-    <End Type="FacturacionModel.FacturaDet" Role="FacturaDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Articulo">
-        <PropertyRef Name="IdArticulo" />
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="FacturaDet">
-        <PropertyRef Name="IdArticulo" />
-        <PropertyRef Name="IdEmpresa" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -2457,6 +2107,453 @@
       </Principal>
       <Dependent Role="Usuario">
         <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="IngresoEgresoCab">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="NroMovimiento" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="NroMovimiento" Nullable="false" />
+    <Property Type="Int32" Name="IdTipoMovimiento" />
+    <Property Type="DateTime" Name="FechaMovimiento" />
+    <Property Type="Int32" Name="IdOrdenCompra" />
+    <Property Type="Int32" Name="IdMotivo" />
+    <Property Type="Int32" Name="IdBodega" />
+    <Property Type="Int32" Name="IdResponsable" />
+    <Property Type="Decimal" Name="TotalPagar" Precision="7" Scale="2" />
+    <Property Type="String" Name="Observacion" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdUsuario" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="OrdenCompra" Relationship="FacturacionModel.FK__IngresoEgresoCab__0BB1B5A5" FromRole="IngresoEgresoCab" ToRole="OrdenCompra" />
+    <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__IngresoEg__IdEst__0D99FE17" FromRole="IngresoEgresoCab" ToRole="Estado" />
+    <NavigationProperty Name="Persona" Relationship="FacturacionModel.FK__IngresoEg__IdRes__10766AC2" FromRole="IngresoEgresoCab" ToRole="Persona" />
+    <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__IngresoEg__IdUsu__116A8EFB" FromRole="IngresoEgresoCab" ToRole="Usuario" />
+    <NavigationProperty Name="IngresoEgresoDet" Relationship="FacturacionModel.FK__IngresoEgresoDet__17236851" FromRole="IngresoEgresoCab" ToRole="IngresoEgresoDet" />
+  </EntityType>
+  <EntityType Name="IngresoEgresoDet">
+    <Key>
+      <PropertyRef Name="NroMovimiento" />
+      <PropertyRef Name="numero" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="NroMovimiento" Nullable="false" />
+    <Property Type="Int32" Name="numero" Nullable="false" />
+    <Property Type="Int32" Name="IdTipoArticulo" />
+    <Property Type="Int32" Name="IdArticulo" />
+    <Property Type="Int32" Name="IdGrupo" />
+    <Property Type="Int32" Name="IdPercha" />
+    <Property Type="Int32" Name="CantidadPedida" />
+    <Property Type="Int32" Name="CantidadLlegada" />
+    <Property Type="Decimal" Name="Costo" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="Subtotal" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="ValorIVA" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="ValorTotal" Precision="5" Scale="2" />
+    <NavigationProperty Name="Articulo" Relationship="FacturacionModel.FK__IngresoEgresoDet__18178C8A" FromRole="IngresoEgresoDet" ToRole="Articulo" />
+    <NavigationProperty Name="Grupo" Relationship="FacturacionModel.FK__IngresoEg__IdGru__190BB0C3" FromRole="IngresoEgresoDet" ToRole="Grupo" />
+    <NavigationProperty Name="IngresoEgresoCab" Relationship="FacturacionModel.FK__IngresoEgresoDet__17236851" FromRole="IngresoEgresoDet" ToRole="IngresoEgresoCab" />
+    <NavigationProperty Name="Percha" Relationship="FacturacionModel.FK__IngresoEg__IdPer__19FFD4FC" FromRole="IngresoEgresoDet" ToRole="Percha" />
+    <NavigationProperty Name="TipoArticulo" Relationship="FacturacionModel.FK__IngresoEg__IdTip__162F4418" FromRole="IngresoEgresoDet" ToRole="TipoArticulo" />
+  </EntityType>
+  <Association Name="FK__IngresoEgresoCab__0BB1B5A5">
+    <End Type="FacturacionModel.OrdenCompra" Role="OrdenCompra" Multiplicity="0..1" />
+    <End Type="FacturacionModel.IngresoEgresoCab" Role="IngresoEgresoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenCompra">
+        <PropertyRef Name="IdOrdenCompra" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="IngresoEgresoCab">
+        <PropertyRef Name="IdOrdenCompra" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEgresoDet__18178C8A">
+    <End Type="FacturacionModel.Articulo" Role="Articulo" Multiplicity="0..1" />
+    <End Type="FacturacionModel.IngresoEgresoDet" Role="IngresoEgresoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="IngresoEgresoDet">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdGru__190BB0C3">
+    <End Type="FacturacionModel.Grupo" Role="Grupo" Multiplicity="0..1" />
+    <End Type="FacturacionModel.IngresoEgresoDet" Role="IngresoEgresoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo">
+        <PropertyRef Name="IdGrupo" />
+      </Principal>
+      <Dependent Role="IngresoEgresoDet">
+        <PropertyRef Name="IdGrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdEst__0D99FE17">
+    <End Type="FacturacionModel.Estado" Role="Estado" Multiplicity="0..1" />
+    <End Type="FacturacionModel.IngresoEgresoCab" Role="IngresoEgresoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="IngresoEgresoCab">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdRes__10766AC2">
+    <End Type="FacturacionModel.Persona" Role="Persona" Multiplicity="0..1" />
+    <End Type="FacturacionModel.IngresoEgresoCab" Role="IngresoEgresoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="IngresoEgresoCab">
+        <PropertyRef Name="IdResponsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdUsu__116A8EFB">
+    <End Type="FacturacionModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+    <End Type="FacturacionModel.IngresoEgresoCab" Role="IngresoEgresoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="IngresoEgresoCab">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEgresoDet__17236851">
+    <End Type="FacturacionModel.IngresoEgresoCab" Role="IngresoEgresoCab" Multiplicity="0..1" />
+    <End Type="FacturacionModel.IngresoEgresoDet" Role="IngresoEgresoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IngresoEgresoCab">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NroMovimiento" />
+      </Principal>
+      <Dependent Role="IngresoEgresoDet">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NroMovimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdPer__19FFD4FC">
+    <End Type="FacturacionModel.Percha" Role="Percha" Multiplicity="0..1" />
+    <End Type="FacturacionModel.IngresoEgresoDet" Role="IngresoEgresoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Percha">
+        <PropertyRef Name="IdPercha" />
+      </Principal>
+      <Dependent Role="IngresoEgresoDet">
+        <PropertyRef Name="IdPercha" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdTip__162F4418">
+    <End Type="FacturacionModel.TipoArticulo" Role="TipoArticulo" Multiplicity="0..1" />
+    <End Type="FacturacionModel.IngresoEgresoDet" Role="IngresoEgresoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoArticulo">
+        <PropertyRef Name="IdTipoArticulo" />
+      </Principal>
+      <Dependent Role="IngresoEgresoDet">
+        <PropertyRef Name="IdTipoArticulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="IdNumeroFactura" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Decimal" Name="cabecera_comprobante" Precision="4" Scale="0" />
+    <Property Type="Int32" Name="idUsuario" Nullable="false" />
+    <Property Type="Int32" Name="IdNumeroFactura" Nullable="false" />
+    <Property Type="Int32" Name="IdNumeroCotizacion" />
+    <Property Type="Int32" Name="IdPromocion" />
+    <Property Type="Int32" Name="IdFormaPago" Nullable="false" />
+    <Property Type="Int32" Name="IdNumeroCliente" />
+    <Property Type="DateTime" Name="Fecha" />
+    <Property Type="Decimal" Name="ValorEntrada" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="NumeroCuotaMensual" />
+    <Property Type="Decimal" Name="Subtotal" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Iva" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Ice" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Descuento" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="TotalPagar" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="idEstado" Nullable="false" />
+    <NavigationProperty Name="ClienteDefactura" Relationship="FacturacionModel.FK__Factura__IdNumer__4BCC3ABA" FromRole="Factura" ToRole="ClienteDefactura" />
+    <NavigationProperty Name="ComisionDet" Relationship="FacturacionModel.FK__ComisionD__IdNum__6497E884" FromRole="Factura" ToRole="ComisionDet" />
+    <NavigationProperty Name="Cotizacion" Relationship="FacturacionModel.FK__Factura__IdNumer__4CC05EF3" FromRole="Factura" ToRole="Cotizacion" />
+    <NavigationProperty Name="DevolucionVenta" Relationship="FacturacionModel.FK__Devolucio__IdNum__6D2D2E85" FromRole="Factura" ToRole="DevolucionVenta" />
+    <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__Factura__idEstad__4F9CCB9E" FromRole="Factura" ToRole="Estado" />
+    <NavigationProperty Name="FormaPago" Relationship="FacturacionModel.FK__Factura__IdForma__49E3F248" FromRole="Factura" ToRole="FormaPago" />
+    <NavigationProperty Name="Promocion" Relationship="FacturacionModel.FK__Factura__IdPromo__4DB4832C" FromRole="Factura" ToRole="Promocion" />
+    <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__Factura__idUsuar__4EA8A765" FromRole="Factura" ToRole="Usuario" />
+    <NavigationProperty Name="FacturaDet" Relationship="FacturacionModel.FK__FacturaDe__IdNum__7C6F7215" FromRole="Factura" ToRole="FacturaDet" />
+    <NavigationProperty Name="GuiaRemisionDet" Relationship="FacturacionModel.FK__GuiaRemis__IdNum__74CE504D" FromRole="Factura" ToRole="GuiaRemisionDet" />
+  </EntityType>
+  <EntityType Name="FacturaDet">
+    <Key>
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="IdNumeroFactura" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="idUsuario" Nullable="false" />
+    <Property Type="Int32" Name="Linea" Nullable="false" />
+    <Property Type="Int32" Name="IdNumeroFactura" Nullable="false" />
+    <Property Type="Int32" Name="IdArticulo" />
+    <Property Type="Decimal" Name="CuotaMensual" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="Interes" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="FechaPago" />
+    <Property Type="DateTime" Name="FechaMaximaPago" />
+    <Property Type="Decimal" Name="precio" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="costo" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="cantidad" />
+    <Property Type="Int32" Name="idEstado" Nullable="false" />
+    <NavigationProperty Name="Factura" Relationship="FacturacionModel.FK__FacturaDe__IdNum__7C6F7215" FromRole="FacturaDet" ToRole="Factura" />
+    <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__FacturaDe__idEst__7F4BDEC0" FromRole="FacturaDet" ToRole="Estado" />
+    <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__FacturaDe__idUsu__7E57BA87" FromRole="FacturaDet" ToRole="Usuario" />
+    <NavigationProperty Name="Articulo" Relationship="FacturacionModel.FK__FacturaDet__7D63964E" FromRole="FacturaDet" ToRole="Articulo" />
+  </EntityType>
+  <Association Name="FK__Factura__IdNumer__4BCC3ABA">
+    <End Type="FacturacionModel.ClienteDefactura" Role="ClienteDefactura" Multiplicity="0..1" />
+    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClienteDefactura">
+        <PropertyRef Name="IdNumeroCliente" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="IdNumeroCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ComisionD__IdNum__6497E884">
+    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="0..1" />
+    <End Type="FacturacionModel.ComisionDet" Role="ComisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Principal>
+      <Dependent Role="ComisionDet">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__IdNumer__4CC05EF3">
+    <End Type="FacturacionModel.Cotizacion" Role="Cotizacion" Multiplicity="0..1" />
+    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cotizacion">
+        <PropertyRef Name="IdNumeroCotizacion" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="IdNumeroCotizacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Devolucio__IdNum__6D2D2E85">
+    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="0..1" />
+    <End Type="FacturacionModel.DevolucionVenta" Role="DevolucionVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Principal>
+      <Dependent Role="DevolucionVenta">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__idEstad__4F9CCB9E">
+    <End Type="FacturacionModel.Estado" Role="Estado" Multiplicity="1" />
+    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__IdForma__49E3F248">
+    <End Type="FacturacionModel.FormaPago" Role="FormaPago" Multiplicity="1" />
+    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FormaPago">
+        <PropertyRef Name="IdFormaPago" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="IdFormaPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__IdPromo__4DB4832C">
+    <End Type="FacturacionModel.Promocion" Role="Promocion" Multiplicity="0..1" />
+    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Promocion">
+        <PropertyRef Name="IdPromocion" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="IdPromocion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Factura__idUsuar__4EA8A765">
+    <End Type="FacturacionModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FacturaDe__IdNum__7C6F7215">
+    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="1" />
+    <End Type="FacturacionModel.FacturaDet" Role="FacturaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Principal>
+      <Dependent Role="FacturaDet">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GuiaRemis__IdNum__74CE504D">
+    <End Type="FacturacionModel.Factura" Role="Factura" Multiplicity="0..1" />
+    <End Type="FacturacionModel.GuiaRemisionDet" Role="GuiaRemisionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Principal>
+      <Dependent Role="GuiaRemisionDet">
+        <PropertyRef Name="IdNumeroFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FacturaDe__idEst__7F4BDEC0">
+    <End Type="FacturacionModel.Estado" Role="Estado" Multiplicity="1" />
+    <End Type="FacturacionModel.FacturaDet" Role="FacturaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="FacturaDet">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FacturaDe__idUsu__7E57BA87">
+    <End Type="FacturacionModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="FacturacionModel.FacturaDet" Role="FacturaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="FacturaDet">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FacturaDet__7D63964E">
+    <End Type="FacturacionModel.Articulo" Role="Articulo" Multiplicity="0..1" />
+    <End Type="FacturacionModel.FacturaDet" Role="FacturaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="FacturaDet">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CotizacionDet">
+    <Key>
+      <PropertyRef Name="Linea" />
+      <PropertyRef Name="IdNumeroCotizacion" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="idUsuario" Nullable="false" />
+    <Property Type="Int32" Name="Linea" Nullable="false" />
+    <Property Type="Int32" Name="IdNumeroCotizacion" Nullable="false" />
+    <Property Type="Int32" Name="IdArticulo" />
+    <Property Type="Int32" Name="CuotaMensual" />
+    <Property Type="Decimal" Name="Interes" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="FechaPago" />
+    <Property Type="DateTime" Name="FechaMaximaPago" />
+    <Property Type="Decimal" Name="precio" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="costo" Precision="19" Scale="4" />
+    <Property Type="Int32" Name="cantidad" />
+    <Property Type="Int32" Name="idEstado" Nullable="false" />
+    <NavigationProperty Name="Cotizacion" Relationship="FacturacionModel.FK__Cotizacio__IdNum__5C02A283" FromRole="CotizacionDet" ToRole="Cotizacion" />
+    <NavigationProperty Name="Estado" Relationship="FacturacionModel.FK__Cotizacio__idEst__5EDF0F2E" FromRole="CotizacionDet" ToRole="Estado" />
+    <NavigationProperty Name="Usuario" Relationship="FacturacionModel.FK__Cotizacio__idUsu__5DEAEAF5" FromRole="CotizacionDet" ToRole="Usuario" />
+    <NavigationProperty Name="Articulo" Relationship="FacturacionModel.FK__CotizacionDet__5CF6C6BC" FromRole="CotizacionDet" ToRole="Articulo" />
+  </EntityType>
+  <Association Name="FK__Cotizacio__IdNum__5C02A283">
+    <End Type="FacturacionModel.Cotizacion" Role="Cotizacion" Multiplicity="1" />
+    <End Type="FacturacionModel.CotizacionDet" Role="CotizacionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cotizacion">
+        <PropertyRef Name="IdNumeroCotizacion" />
+      </Principal>
+      <Dependent Role="CotizacionDet">
+        <PropertyRef Name="IdNumeroCotizacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cotizacio__idEst__5EDF0F2E">
+    <End Type="FacturacionModel.Estado" Role="Estado" Multiplicity="1" />
+    <End Type="FacturacionModel.CotizacionDet" Role="CotizacionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="CotizacionDet">
+        <PropertyRef Name="idEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cotizacio__idUsu__5DEAEAF5">
+    <End Type="FacturacionModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="FacturacionModel.CotizacionDet" Role="CotizacionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="CotizacionDet">
+        <PropertyRef Name="idUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CotizacionDet__5CF6C6BC">
+    <End Type="FacturacionModel.Articulo" Role="Articulo" Multiplicity="0..1" />
+    <End Type="FacturacionModel.CotizacionDet" Role="CotizacionDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="CotizacionDet">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

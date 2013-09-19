@@ -8,9 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using datos;
 using Microsoft.VisualBasic;
-using forms.Facturacion.Consultas;
-using forms.Facturacion.Reportes;
 using datos.Facturacion;
+using datos.Contabilidad;
+using clases.Contabilidad;
 
 namespace forms.Facturacion
 {
@@ -122,6 +122,20 @@ namespace forms.Facturacion
                     return;
                 }
 
+                if (this.txtNumeroPromocion.Text == "")
+                {
+                    MessageBox.Show("Ingrese Promocion.", "Modulo de Facturacion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (this.txtPromocion.Text == "")
+                {
+                    MessageBox.Show("Ingrese Promocion.", "Modulo de Facturacion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 if (cbxFormaPago.SelectedValue == "")
                 {
                     MessageBox.Show("Seleccione Forma de Pago.", "Modulo de Facturacion",
@@ -158,8 +172,21 @@ namespace forms.Facturacion
                 
                 da.AddToFactura(obj);
                 int respuesta = da.SaveChanges();
+                double totalcosto = 0;
+
                 if (respuesta > 0)
                 {
+                    // registrar en contabilidad
+                    clsDatoComprobante objcontabilidad = new clsDatoComprobante();
+                    clsCabeceraComprobante objcontdet = new clsCabeceraComprobante();
+                    //objcontdet.fecha = 
+
+                    objcontdet.fecha = DateTime.Now;
+                    objcontdet.glosa = "Venta Modulo de Facturacion ";
+                    objcontdet.IdEmpresa = Seguridad.empresa;
+
+                    List<clsDetalleComprobante> Detalleconta = new List<clsDetalleComprobante>();
+
                     int i = 0;
                     while (i < tbldetalle.Rows.Count)
                     {
@@ -169,19 +196,107 @@ namespace forms.Facturacion
                         objdet.idEstado = Int32.Parse(cmbestado.SelectedValue.ToString());
 
                         objdet.Linea = i + 1;
-                        objdet.IdNumeroFactura = Int32.Parse(txtNumeroFactura.Text);
-
+                        objdet.IdNumeroFactura = Int32.Parse(txtNumeroFactura.Text);                        
                         objdet.IdArticulo = Int32.Parse(tbldetalle.Rows[i][0].ToString());
                         objdet.CuotaMensual = Decimal.Parse(tbldetalle.Rows[i][2].ToString());
                         objdet.FechaPago = DateTime.Parse(tbldetalle.Rows[i][3].ToString());
                         objdet.FechaMaximaPago = DateTime.Parse(tbldetalle.Rows[i][4].ToString());
                         objdet.precio = Decimal.Parse(tbldetalle.Rows[i][5].ToString());
                         objdet.cantidad = Int32.Parse(tbldetalle.Rows[i][6].ToString());
+                        objdet.costo = Decimal.Parse(tbldetalle.Rows[i][7].ToString());
                         da.AddToFacturaDet (objdet);
                         da.SaveChanges();
                         i++;
+                        totalcosto = totalcosto + Double.Parse(objdet.costo.ToString());
+                    }
+
+                    if (obj.IdFormaPago == 1)
+                    {
+                        clsDetalleComprobante obcontdet = new clsDetalleComprobante();
+                        obcontdet.cuenta = "11101001"; // caja
+                        obcontdet.debe = Decimal.Parse(obj.TotalPagar.ToString());
+                        obcontdet.haber = 0;
+                        Detalleconta.Add(obcontdet);
+
+                        clsDetalleComprobante obcontdet1 = new clsDetalleComprobante();
+                        obcontdet1.cuenta = "11401001"; // iva
+                        obcontdet1.debe = 0;
+                        obcontdet1.haber = Decimal.Parse(obj.Iva.ToString());
+                        Detalleconta.Add(obcontdet1);
+
+                        clsDetalleComprobante obcontdet2 = new clsDetalleComprobante();
+                        obcontdet2.cuenta = "11401003"; // ice
+                        obcontdet2.debe = 0;
+                        obcontdet2.haber = Decimal.Parse(obj.Ice.ToString()); ;
+                        Detalleconta.Add(obcontdet2);
+
+                        clsDetalleComprobante obcontdet3 = new clsDetalleComprobante();
+                        obcontdet3.cuenta = "41101001"; // ingreso por venta
+                        obcontdet3.debe = 0;
+                        obcontdet3.haber = Decimal.Parse(obj.Subtotal.ToString());
+                        Detalleconta.Add(obcontdet3);
+
+                        clsDetalleComprobante obcontdet4 = new clsDetalleComprobante();
+                        obcontdet4.cuenta = "51101001"; // costo de venta
+                        obcontdet4.debe = Decimal.Parse(totalcosto.ToString());
+                        obcontdet4.haber = 0;
+                        Detalleconta.Add(obcontdet4);
+
+                        clsDetalleComprobante obcontdet5 = new clsDetalleComprobante();
+                        obcontdet5.cuenta = "11301001"; // costo de venta
+                        obcontdet5.debe = 0;
+                        obcontdet5.haber = Decimal.Parse(totalcosto.ToString());
+                        Detalleconta.Add(obcontdet5);
 
                     }
+                    else {
+
+                        clsDetalleComprobante obcontdet0 = new clsDetalleComprobante();
+                        obcontdet0.cuenta = "11101001"; // caja
+                        obcontdet0.debe = Decimal.Parse(txtValorEntrada.Value.ToString());
+                        obcontdet0.haber = 0;
+                        Detalleconta.Add(obcontdet0);
+
+                        clsDetalleComprobante obcontdet = new clsDetalleComprobante();
+                        obcontdet.cuenta = "11201001"; // credito
+                        obcontdet.debe = Decimal.Parse((txtTotalPagar.Value - txtValorEntrada.Value).ToString());
+                        obcontdet.haber = 0;
+                        Detalleconta.Add(obcontdet);
+
+                        clsDetalleComprobante obcontdet1 = new clsDetalleComprobante();
+                        obcontdet1.cuenta = "11401001"; // iva
+                        obcontdet1.debe = 0;
+                        obcontdet1.haber = Decimal.Parse(obj.Iva.ToString());
+                        Detalleconta.Add(obcontdet1);
+
+                        clsDetalleComprobante obcontdet2 = new clsDetalleComprobante();
+                        obcontdet2.cuenta = "11401003"; // ice
+                        obcontdet2.debe = 0;
+                        obcontdet2.haber = Decimal.Parse(obj.Ice.ToString()); ;
+                        Detalleconta.Add(obcontdet2);
+
+                        clsDetalleComprobante obcontdet3 = new clsDetalleComprobante();
+                        obcontdet3.cuenta = "41101001"; // ingreso por venta
+                        obcontdet3.debe = 0;
+                        obcontdet3.haber = Decimal.Parse(obj.Subtotal.ToString());
+                        Detalleconta.Add(obcontdet3);
+
+                        clsDetalleComprobante obcontdet4 = new clsDetalleComprobante();
+                        obcontdet4.cuenta = "51101001"; // costo de venta
+                        obcontdet4.debe = Decimal.Parse(totalcosto.ToString());
+                        obcontdet4.haber = 0;
+                        Detalleconta.Add(obcontdet4);
+
+                        clsDetalleComprobante obcontdet5 = new clsDetalleComprobante();
+                        obcontdet5.cuenta = "11301001"; // costo de venta
+                        obcontdet5.debe = 0;
+                        obcontdet5.haber = Decimal.Parse(totalcosto.ToString());
+                        Detalleconta.Add(obcontdet5);
+                    
+                    }
+                    objcontdet.Detalle = Detalleconta;
+
+                    objcontabilidad.GuardarCabecera(ref objcontdet);
 
                     //guardar cuentas por cobrar
                    Int32 maxUnitsInStock=0;
@@ -201,8 +316,8 @@ namespace forms.Facturacion
                     CuentaxCobrar objcxc = new CuentaxCobrar();
                     objcxc.idCuentaxCobrar  =  Int32.Parse(maxUnitsInStock.ToString());
                     //objcxc.numero_comprobante =
-                    objcxc.idTransaccion =
-                    objcxc.idFactura =Int32.Parse(this.txtNumeroFactura.Text);
+                    //objcxc.idTransaccion =
+                    objcxc.idNumeroFactura =Int32.Parse(this.txtNumeroFactura.Text);
                     //objcxc.idCabeceraComprobante =
                     objcxc.TotalCuotas =Int32.Parse(txtNumeroCuotaMensual.Text);
                     objcxc.porcentaje_interes=Decimal.Parse(this.txtTasaFija.Text);
@@ -211,7 +326,9 @@ namespace forms.Facturacion
 
                     objcxc.idEmpresa = Seguridad.empresa;
                     objcxc.idUsuario = Seguridad.usuario;
-                    objcxc.idEstado = Int32.Parse(cmbestado.SelectedValue.ToString());
+                    //objcxc.estado = Int32.Parse(cmbestado.SelectedValue.ToString());
+                    objcxc.estado = cmbestado.SelectedValue.ToString();
+
                     da.AddToCuentaxCobrar(objcxc);
                      respuesta = da.SaveChanges();
                     if (respuesta > 0)
@@ -222,9 +339,10 @@ namespace forms.Facturacion
                             CuentaxCobrarDet objdetcxc = new CuentaxCobrarDet ();
                             objdetcxc.idCuentaxCobrar = objcxc.idCuentaxCobrar;
                             
-                            objdetcxc.idEmpresa = Seguridad.empresa;
-                            objdetcxc.idUsuario = Seguridad.usuario;
-                            objdetcxc.idEstado = Int32.Parse(cmbestado.SelectedValue.ToString());
+                            //objdetcxc.idEmpresa = Seguridad.empresa;
+                            //objdetcxc.idUsuario = Seguridad.usuario;
+                            //objdetcxc.idEstado = Int32.Parse(cmbestado.SelectedValue.ToString());
+                            objdetcxc.estado = cmbestado.SelectedValue.ToString();
 
                             objdetcxc.Numero = i + 1;
                             objdetcxc.numero_cuota = i + 1;
@@ -242,6 +360,9 @@ namespace forms.Facturacion
 
                         }
                     }
+
+                    
+
 
                     MessageBox.Show("Registro Ingresado con exito.", "Modulo de Facturacion",
              MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -282,6 +403,7 @@ namespace forms.Facturacion
             tbldetalle.Columns.Add("Fecha Maximo de pago");
             tbldetalle.Columns.Add("Precio");
             tbldetalle.Columns.Add("Cantidad");
+            tbldetalle.Columns.Add("Costo");
             dataGridView1.DataSource = tbldetalle;
 
             tblcutoas = new DataTable();
@@ -338,6 +460,7 @@ namespace forms.Facturacion
                 fila[4] = dtpFechaFinPago.Text;
                 fila[5] = txtprecio.Text;
                 fila[6] = txtcantidad.Value;
+                fila[7] = txtcosto.Text;
                 tbldetalle.Rows.Add(fila);
                 dataGridView1.DataSource = tbldetalle;
 
@@ -390,6 +513,7 @@ namespace forms.Facturacion
             this.txtcodarticulo.Text = obj.codigo;
             this.txtdesarticulo.Text = obj.descripcion;
             this.txtprecio.Text = obj.precio.ToString();
+            this.txtcosto.Text = obj.costo.ToString();
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -439,8 +563,8 @@ namespace forms.Facturacion
                         marca = c.Descripcion,
                         modelo = es.Descripcion,
                         chasis = b.Chasis.Descripcion,
-                        color = b.Color.Descripcion
-
+                        color = b.Color.Descripcion,
+                        a.costo
                     };
 
 
@@ -451,7 +575,7 @@ namespace forms.Facturacion
                   join d in da.Estado on a.idEstado equals d.IdEstado
                   join es in da.Usuario on a.idUsuario equals es.IdUsuario
                   join f in da.FormaPago on a.IdFormaPago equals f.IdFormaPago
-                  join g in da.CuentaxCobrar on a.IdNumeroFactura equals g.idFactura
+                  join g in da.CuentaxCobrar on a.IdNumeroFactura equals g.idNumeroFactura
                   join h in da.CuentaxCobrarDet on g.idCuentaxCobrar equals h.idCuentaxCobrar
                   where g.Modulo == 1 && a.IdNumeroFactura == cod
                   select new
@@ -502,6 +626,7 @@ namespace forms.Facturacion
                         fila[4] = dtpFechaFinPago.Text;
                         fila[5] = dataGridView1.Rows[i].Cells["precio"].Value.ToString();
                         fila[6] = dataGridView1.Rows[i].Cells["cantidad"].Value.ToString();
+                        fila[7] = dataGridView1.Rows[i].Cells["costo"].Value.ToString();
                         tbldetalle.Rows.Add(fila);
                         
 
@@ -577,7 +702,8 @@ namespace forms.Facturacion
                             a.FechaPago,
                             a.FechaMaximaPago,
                             a.precio,
-                            a.cantidad
+                            a.cantidad,
+                            a.costo
                         };
 
                 this.dataGridView1.DataSource = produc.ToList();
@@ -602,11 +728,9 @@ namespace forms.Facturacion
                         fila[4] = dtpFechaFinPago.Text;
                         fila[5] = dataGridView1.Rows[i].Cells["precio"].Value.ToString();
                         fila[6] = dataGridView1.Rows[i].Cells["cantidad"].Value.ToString();
+                        fila[7] = dataGridView1.Rows[i].Cells["costo"].Value.ToString();
                         tbldetalle.Rows.Add(fila);
-                        dataGridView1.DataSource = tbldetalle;
-
-
-                        i++;
+                      i++;
                     }
 
                     this.txtValorVehiculo.Text = valortotal.ToString();
@@ -800,10 +924,11 @@ namespace forms.Facturacion
                 }
                 da.SaveChanges();
 
-                var objcabCuota = da.CuentaxCobrar.Single(a => a.idFactura == numerofactura && a.Modulo ==1 );
+                var objcabCuota = da.CuentaxCobrar.Single(a => a.idNumeroFactura == numerofactura && a.Modulo ==1 );
                 if (objcabCuota != null)
                 {
-                    objcabCuota.idEstado = Int32.Parse(cmbestado.SelectedValue.ToString());                    
+                    objcabCuota.estado = cmbestado.SelectedValue.ToString();
+                    //objcabCuota.idEstado = Int32.Parse(cmbestado.SelectedValue.ToString());                    
                     int respuesta = da.SaveChanges();
                 }
 
@@ -820,7 +945,8 @@ namespace forms.Facturacion
                              select a;
                 foreach (CuentaxCobrarDet ord in objcabCuotadet)
                 {
-                    ord.idEstado = Int32.Parse(cmbestado.SelectedValue.ToString());
+                    //ord.idEstado = Int32.Parse(cmbestado.SelectedValue.ToString());
+                    ord.estado = cmbestado.SelectedValue.ToString().Substring(0,1);
                 }
                 da.SaveChanges();
 
@@ -830,6 +956,41 @@ namespace forms.Facturacion
             }
             catch (Exception ex)
             { }
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtsubtotal_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtice_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtiva_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
 
        

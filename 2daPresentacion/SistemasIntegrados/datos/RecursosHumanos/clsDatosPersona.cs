@@ -12,34 +12,98 @@ namespace datos.RecursosHumanos
     {
 
 
-        public List<clsPersona> ConsultaPersona()
+        public List<clsPersona> ConsultaPersona1(int band)
         {
             try
             {
+                
                 List<clsPersona> Lista = new List<clsPersona>();
-                RecursosHumanosEntities ent = new RecursosHumanosEntities();
-                var con = from w in ent.Persona select w;
-                foreach (var item in con)
-                {
-                    clsPersona clas = new clsPersona();
-                    clas.IdPersona = item.IdPersona;
-                    clas.Identificacion = Convert.ToInt64(item.Identificacion);
-                    clas.IdEmpresa = item.IdEmpresa;
-                    clas.IdTipoPersona = item.IdTipoPersona;
-                    clas.NombreRazonSocial = item.NombreRazonSocial;
-                    clas.Apellido = item.Apellido;
-                    clas.FechaNacimiento = Convert.ToDateTime(item.FechaNacimiento);
-                    clas.genero = item.genero;
-                    clas.TipoIdentificacion = item.TipoIdentificacion;
-                    clas.direccion = item.direccion;
-                    clas.General = Convert.ToInt32(item.TelefonoGneral);
-                    clas.Movil = Convert.ToInt32(item.TelefonoMovil);
-                    clas.Casa = Convert.ToInt32(item.TelefonoCasa);
-                    clas.Otros = Convert.ToInt32(item.TelefonoOtros);
-                    clas.mail = item.mail;
-                    clas.IdEstado = item.IdEstado;
-                    Lista.Add(clas);
-                }
+                RecursosHumanosEntities  ent = new RecursosHumanosEntities ();
+               
+                if (band == 1) {
+                    var con = from w in ent.Persona select w;
+
+                    foreach (var item in con)
+                    {
+                        clsPersona clas = new clsPersona();
+                        clas.IdPersona = item.IdPersona;
+                        clas.Identificacion = Convert.ToInt64(item.Identificacion);
+                        clas.IdEmpresa = item.IdEmpresa;
+                        clas.IdTipoPersona = item.IdTipoPersona;
+                        clas.NombreRazonSocial = item.NombreRazonSocial;
+                        clas.Apellido = item.Apellido;
+                        clas.FechaNacimiento = Convert.ToDateTime(item.FechaNacimiento);
+                        clas.genero = item.genero;
+                        clas.TipoIdentificacion = item.TipoIdentificacion;
+                        clas.direccion = item.direccion;
+                        clas.General = Convert.ToInt32(item.TelefonoGneral);
+                        clas.Movil = Convert.ToInt32(item.TelefonoMovil);
+                        clas.Casa = Convert.ToInt32(item.TelefonoCasa);
+                        clas.Otros = Convert.ToInt32(item.TelefonoOtros);
+                        clas.mail = item.mail;
+                        clas.IdEstado = item.IdEstado;
+                        Lista.Add(clas);
+
+
+                    }
+                }else 
+                    {
+                        if (band == 2)
+                        {
+                            var con = from p in ent.Persona
+                                      join c in ent.Contrato on p.IdPersona equals c.IdPersona
+                                      where p.IdPersona == c.IdPersona
+                                      select new
+                                      {
+                                          IdPersona = p.IdPersona,
+                                          Identificacion = p.Identificacion,
+                                          IdEmpresa = p.IdEmpresa,
+                                          IdTipoPersona = p.IdTipoPersona,
+                                          NombreRazonSocial = p.NombreRazonSocial,
+                                          Apellido = p.Apellido,
+                                          FechaNacimiento = p.FechaNacimiento,
+                                          genero = p.genero,
+                                          TipoIdentificacion = p.TipoIdentificacion,
+                                          direccion = p.direccion,
+                                          General = p.TelefonoGneral,
+                                          Movil = p.TelefonoMovil,
+                                          Casa = p.TelefonoCasa,
+                                          Otros = p.TelefonoOtros,
+                                          mail = p.mail,
+                                          IdEstado = p.IdEstado,
+                                      };
+
+                            foreach (var item in con)
+                            {
+                                clsPersona clas = new clsPersona();
+                                clas.IdPersona = item.IdPersona;
+                                clas.Identificacion = Convert.ToInt64(item.Identificacion);
+                                clas.IdEmpresa = item.IdEmpresa;
+                                clas.IdTipoPersona = item.IdTipoPersona;
+                                clas.NombreRazonSocial = item.NombreRazonSocial;
+                                clas.Apellido = item.Apellido;
+                                clas.FechaNacimiento = Convert.ToDateTime(item.FechaNacimiento);
+                                clas.genero = item.genero;
+                                clas.TipoIdentificacion = item.TipoIdentificacion;
+                                clas.direccion = item.direccion;
+                                clas.General = Convert.ToInt32(item.General);
+                                clas.Movil = Convert.ToInt32(item.Movil);
+                                clas.Casa = Convert.ToInt32(item.Casa);
+                                clas.Otros = Convert.ToInt32(item.Otros);
+                                clas.mail = item.mail;
+                                clas.IdEstado = item.IdEstado;
+                                Lista.Add(clas);
+
+                            }
+                        }
+                        
+                } 
+              
+                
+                   
+                
+              
+               
                 return Lista;
             }
             catch (Exception)
@@ -48,7 +112,50 @@ namespace datos.RecursosHumanos
             }
         }
 
+        public List<clsPersona> ConsultaPersona()
+        {
+            try
+            {
+                List<clsPersona> Lista = new List<clsPersona>();
+                RecursosHumanosEntities  ent = new RecursosHumanosEntities ();
 
+              
+                    var con = from w in ent.Persona select w;
+
+                    foreach (var item in con)
+                    {
+                        clsPersona clas = new clsPersona();
+                        clas.IdPersona = item.IdPersona;
+                        clas.Identificacion = Convert.ToInt64(item.Identificacion);
+                        clas.IdEmpresa = item.IdEmpresa;
+                        clas.IdTipoPersona = item.IdTipoPersona;
+                        clas.NombreRazonSocial = item.NombreRazonSocial;
+                        clas.Apellido = item.Apellido;
+                        clas.FechaNacimiento = Convert.ToDateTime(item.FechaNacimiento);
+                        clas.genero = item.genero;
+                        clas.TipoIdentificacion = item.TipoIdentificacion;
+                        clas.direccion = item.direccion;
+                        clas.General = Convert.ToInt32(item.TelefonoGneral);
+                        clas.Movil = Convert.ToInt32(item.TelefonoMovil);
+                        clas.Casa = Convert.ToInt32(item.TelefonoCasa);
+                        clas.Otros = Convert.ToInt32(item.TelefonoOtros);
+                        clas.mail = item.mail;
+                        clas.IdEstado = item.IdEstado;
+                        Lista.Add(clas);
+
+
+                    }
+                 return Lista;
+                }
+
+               
+            
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+       
 
         public Boolean Guardar(clsPersona pe)
         {
@@ -94,29 +201,29 @@ namespace datos.RecursosHumanos
         }
 
 
-        public void Modificar(clsPersona pe)
+            public void Modificar(clsPersona pe)
         {
             using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
             {
 
-                var x = (from q in ent.Persona where q.IdPersona == pe.IdPersona select q).First();
+                var x = (from q in ent.Persona   where q.IdPersona   == pe.IdPersona   select q).First();
                 x.IdPersona = pe.IdPersona;
-                x.Identificacion = pe.Identificacion;
-                x.IdTipoPersona = pe.IdTipoPersona;
-                x.NombreRazonSocial = pe.NombreRazonSocial;
-                x.Apellido = pe.Apellido;
-                x.FechaNacimiento = pe.FechaNacimiento;
-                x.genero = pe.genero;
-                x.TipoIdentificacion = pe.TipoIdentificacion;
-                x.direccion = pe.direccion;
-                x.TelefonoGneral = pe.General;
-                x.TelefonoMovil = pe.Movil;
-                x.TelefonoCasa = pe.Casa;
-                x.TelefonoOtros = pe.Otros;
-                x.mail = pe.mail;
-                // x.IdEmpresa =pe.IdEmpresa ;
-                x.IdEstado = pe.IdEstado;
-                // x.IdFoto =pe.foto;
+                x.Identificacion =pe.Identificacion ;
+                x.IdTipoPersona =pe.IdTipoPersona ;
+                x.NombreRazonSocial =pe.NombreRazonSocial ;
+                x.Apellido =pe.Apellido ;
+                x.FechaNacimiento =pe.FechaNacimiento ;
+                x.genero =pe.genero ;
+                x.TipoIdentificacion =pe.TipoIdentificacion ;
+                x.direccion =pe.direccion ;
+                x.TelefonoGneral =pe.General ;
+                x.TelefonoMovil =pe.Movil ;
+                x.TelefonoCasa =pe.Casa ;
+                x.TelefonoOtros =pe.Otros ;
+                x.mail =pe.mail ;
+               // x.IdEmpresa =pe.IdEmpresa ;
+                x.IdEstado =pe.IdEstado ;
+               // x.IdFoto =pe.foto;
 
                 ent.SaveChanges();
 
@@ -125,30 +232,30 @@ namespace datos.RecursosHumanos
 
         public Boolean Eliminar(clsPersona pe)
         {
-            try
+             try
             {
-                using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
+                 using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
                 {
-                    var x = (from q in ent.Persona where q.IdPersona == pe.IdPersona select q).First();
-                    ent.DeleteObject(x);
-                    ent.SaveChanges();
+                var x = (from q in ent.Persona where q.IdPersona   == pe.IdPersona   select q).First();
+                ent.DeleteObject(x);
+                ent.SaveChanges();
                 }
-                return true;
-            }
+                   return true;
+             }
             catch (Exception)
             {
                 return false;
             }
 
-
+           
         }
 
-        public int getIdSiguiente()
+     public int getIdSiguiente()
         {
             try
             {
-                RecursosHumanosEntities ent = new RecursosHumanosEntities();
-                int x = ((from a in ent.Persona select a.IdPersona).Max()) + 1;
+                RecursosHumanosEntities  ent = new RecursosHumanosEntities ();
+                int x = ((from a in ent.Persona  select a.IdPersona ).Max()) + 1;
                 return x;
             }
             catch (Exception e)
@@ -157,36 +264,10 @@ namespace datos.RecursosHumanos
                 return 1; //en caso de que no exista algun registro
             }
         }
-                //agregado por Cuentas por pagar
-        public void ConsultaEspecificaPersona(clsPersona pe)
-        {
-            using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
-            {
 
-                var x = (from q in ent.Persona where q.IdPersona == pe.IdPersona select q).First();
-                pe.IdPersona = x.IdPersona;
-                pe.Identificacion = Convert.ToInt32(x.Identificacion);
-                pe.IdTipoPersona = x.IdTipoPersona;
-                pe.NombreRazonSocial = x.NombreRazonSocial;
-                pe.Apellido = x.Apellido;
-                pe.FechaNacimiento = Convert.ToDateTime(x.FechaNacimiento);
-                pe.genero = x.genero;
-                pe.TipoIdentificacion = x.TipoIdentificacion;
-                pe.direccion = x.direccion;
-                pe.General = Convert.ToInt32(x.TelefonoGneral);
-                pe.Movil = Convert.ToInt32(x.TelefonoMovil);
-                pe.Casa = Convert.ToInt32(x.TelefonoCasa);
-                pe.Otros = Convert.ToInt32(x.TelefonoOtros);
-                pe.mail = x.mail;
-                pe.IdEmpresa = x.IdEmpresa;
-                x.IdEstado = pe.IdEstado;
-                // x.IdFoto =pe.foto;
-            }
-        }
+            
 
 
-    }
 
-
-    
+    }   
 }

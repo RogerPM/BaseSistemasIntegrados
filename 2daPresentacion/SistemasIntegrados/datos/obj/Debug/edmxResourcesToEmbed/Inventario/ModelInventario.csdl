@@ -1,18 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ModelInventario" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
   <EntityContainer Name="INVENTARIOEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Estado" EntityType="ModelInventario.Estado" />
-    <EntitySet Name="OrdenCompra" EntityType="ModelInventario.OrdenCompra" />
-    <EntitySet Name="OrdenCompraDet" EntityType="ModelInventario.OrdenCompraDet" />
     <EntitySet Name="Articulo" EntityType="ModelInventario.Articulo" />
     <EntitySet Name="ArticuloBodega" EntityType="ModelInventario.ArticuloBodega" />
     <EntitySet Name="Bodega" EntityType="ModelInventario.Bodega" />
     <EntitySet Name="Chasis" EntityType="ModelInventario.Chasis" />
     <EntitySet Name="Color" EntityType="ModelInventario.Color" />
     <EntitySet Name="Grupo" EntityType="ModelInventario.Grupo" />
-    <EntitySet Name="IngresoEgresoCab" EntityType="ModelInventario.IngresoEgresoCab" />
     <EntitySet Name="IngresoEgresoDet" EntityType="ModelInventario.IngresoEgresoDet" />
-    <EntitySet Name="Marca" EntityType="ModelInventario.Marca" />
+    <EntitySet Name="LlegadaMercaderiaCab" EntityType="ModelInventario.LlegadaMercaderiaCab" />
+    <EntitySet Name="LlegadaMercaderiaDet" EntityType="ModelInventario.LlegadaMercaderiaDet" />
     <EntitySet Name="Modelo" EntityType="ModelInventario.Modelo" />
     <EntitySet Name="Motivo" EntityType="ModelInventario.Motivo" />
     <EntitySet Name="Percha" EntityType="ModelInventario.Percha" />
@@ -25,821 +22,593 @@
     <EntitySet Name="TomaFisicaDet" EntityType="ModelInventario.TomaFisicaDet" />
     <EntitySet Name="TransferenciaBodegaCab" EntityType="ModelInventario.TransferenciaBodegaCab" />
     <EntitySet Name="TransferenciaBodegaDet" EntityType="ModelInventario.TransferenciaBodegaDet" />
-    <EntitySet Name="UnidadMedida" EntityType="ModelInventario.UnidadMedida" />
-    <EntitySet Name="Persona" EntityType="ModelInventario.Persona" />
-    <EntitySet Name="Empresa" EntityType="ModelInventario.Empresa" />
-    <EntitySet Name="Usuario" EntityType="ModelInventario.Usuario" />
-    <AssociationSet Name="FK__OrdenComp__idEst__0D0FEE32" Association="ModelInventario.FK__OrdenComp__idEst__0D0FEE32">
-      <End Role="Estado" EntitySet="Estado" />
-      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
-    </AssociationSet>
-    <AssociationSet Name="FK__IngresoEgresoCab__0BB1B5A5" Association="ModelInventario.FK__IngresoEgresoCab__0BB1B5A5">
-      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
-      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__OrdenComp__idEmp__0B27A5C0" Association="ModelInventario.FK__OrdenComp__idEmp__0B27A5C0">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
-    </AssociationSet>
-    <AssociationSet Name="FK__OrdenComp__IdUsu__0C1BC9F9" Association="ModelInventario.FK__OrdenComp__IdUsu__0C1BC9F9">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
-    </AssociationSet>
-    <AssociationSet Name="FK__OrdenCompraDet__63F8CA06" Association="ModelInventario.FK__OrdenCompraDet__63F8CA06">
-      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
-      <End Role="OrdenCompraDet" EntitySet="OrdenCompraDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__OrdenCompraDet__64ECEE3F" Association="ModelInventario.FK__OrdenCompraDet__64ECEE3F">
-      <End Role="Articulo" EntitySet="Articulo" />
-      <End Role="OrdenCompraDet" EntitySet="OrdenCompraDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdChas__5C37ACAD" Association="ModelInventario.FK__Articulo__IdChas__5C37ACAD">
+    <AssociationSet Name="FK__Articulo__IdChas__5006DFF2" Association="ModelInventario.FK__Articulo__IdChas__5006DFF2">
       <End Role="Chasis" EntitySet="Chasis" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdColo__5F141958" Association="ModelInventario.FK__Articulo__IdColo__5F141958">
+    <AssociationSet Name="FK__Articulo__IdColo__52E34C9D" Association="ModelInventario.FK__Articulo__IdColo__52E34C9D">
       <End Role="Color" EntitySet="Color" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdEmpr__58671BC9" Association="ModelInventario.FK__Articulo__IdEmpr__58671BC9">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="Articulo" EntitySet="Articulo" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdGrup__5B438874" Association="ModelInventario.FK__Articulo__IdGrup__5B438874">
+    <AssociationSet Name="FK__Articulo__IdGrup__4F12BBB9" Association="ModelInventario.FK__Articulo__IdGrup__4F12BBB9">
       <End Role="Grupo" EntitySet="Grupo" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdMarc__60083D91" Association="ModelInventario.FK__Articulo__IdMarc__60083D91">
-      <End Role="Marca" EntitySet="Marca" />
-      <End Role="Articulo" EntitySet="Articulo" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdMode__60FC61CA" Association="ModelInventario.FK__Articulo__IdMode__60FC61CA">
+    <AssociationSet Name="FK__Articulo__IdMode__54CB950F" Association="ModelInventario.FK__Articulo__IdMode__54CB950F">
       <End Role="Modelo" EntitySet="Modelo" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdTipo__5A4F643B" Association="ModelInventario.FK__Articulo__IdTipo__5A4F643B">
+    <AssociationSet Name="FK__Articulo__IdTipo__4E1E9780" Association="ModelInventario.FK__Articulo__IdTipo__4E1E9780">
       <End Role="TipoArticulo" EntitySet="TipoArticulo" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdTipo__5D2BD0E6" Association="ModelInventario.FK__Articulo__IdTipo__5D2BD0E6">
+    <AssociationSet Name="FK__Articulo__IdTipo__50FB042B" Association="ModelInventario.FK__Articulo__IdTipo__50FB042B">
       <End Role="TipoMotor" EntitySet="TipoMotor" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdTipo__5E1FF51F" Association="ModelInventario.FK__Articulo__IdTipo__5E1FF51F">
+    <AssociationSet Name="FK__Articulo__IdTipo__51EF2864" Association="ModelInventario.FK__Articulo__IdTipo__51EF2864">
       <End Role="TipoCombustible" EntitySet="TipoCombustible" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdTipo__61F08603" Association="ModelInventario.FK__Articulo__IdTipo__61F08603">
+    <AssociationSet Name="FK__Articulo__IdTipo__55BFB948" Association="ModelInventario.FK__Articulo__IdTipo__55BFB948">
       <End Role="TipoMaterial" EntitySet="TipoMaterial" />
       <End Role="Articulo" EntitySet="Articulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulo__IdUnid__595B4002" Association="ModelInventario.FK__Articulo__IdUnid__595B4002">
-      <End Role="UnidadMedida" EntitySet="UnidadMedida" />
-      <End Role="Articulo" EntitySet="Articulo" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ArticuloBodega__184C96B4" Association="ModelInventario.FK__ArticuloBodega__184C96B4">
+    <AssociationSet Name="FK__ArticuloBodega__7CD98669" Association="ModelInventario.FK__ArticuloBodega__7CD98669">
       <End Role="Articulo" EntitySet="Articulo" />
       <End Role="ArticuloBodega" EntitySet="ArticuloBodega" />
     </AssociationSet>
-    <AssociationSet Name="FK__IngresoEgresoDet__18178C8A" Association="ModelInventario.FK__IngresoEgresoDet__18178C8A">
+    <AssociationSet Name="FK__IngresoEgresoDet__5C37ACAD" Association="ModelInventario.FK__IngresoEgresoDet__5C37ACAD">
       <End Role="Articulo" EntitySet="Articulo" />
       <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__TomaFisicaDet__0CDAE408" Association="ModelInventario.FK__TomaFisicaDet__0CDAE408">
+    <AssociationSet Name="FK__LlegadaMercaderi__5AA469F6" Association="ModelInventario.FK__LlegadaMercaderi__5AA469F6">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="LlegadaMercaderiaDet" EntitySet="LlegadaMercaderiaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TomaFisicaDet__6BCEF5F8" Association="ModelInventario.FK__TomaFisicaDet__6BCEF5F8">
       <End Role="Articulo" EntitySet="Articulo" />
       <End Role="TomaFisicaDet" EntitySet="TomaFisicaDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__ArticuloB__IdEmp__1758727B" Association="ModelInventario.FK__ArticuloB__IdEmp__1758727B">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="ArticuloBodega" EntitySet="ArticuloBodega" />
-    </AssociationSet>
-    <AssociationSet Name="FK__ArticuloB__IdPer__1940BAED" Association="ModelInventario.FK__ArticuloB__IdPer__1940BAED">
+    <AssociationSet Name="FK__ArticuloB__IdPer__7DCDAAA2" Association="ModelInventario.FK__ArticuloB__IdPer__7DCDAAA2">
       <End Role="Percha" EntitySet="Percha" />
       <End Role="ArticuloBodega" EntitySet="ArticuloBodega" />
     </AssociationSet>
-    <AssociationSet Name="FK__Bodega__IdEmpres__220B0B18" Association="ModelInventario.FK__Bodega__IdEmpres__220B0B18">
-      <End Role="Empresa" EntitySet="Empresa" />
+    <AssociationSet Name="FK__LlegadaMercaderi__64CCF2AE" Association="ModelInventario.FK__LlegadaMercaderi__64CCF2AE">
       <End Role="Bodega" EntitySet="Bodega" />
+      <End Role="LlegadaMercaderiaCab" EntitySet="LlegadaMercaderiaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__Bodega__IdRespon__22FF2F51" Association="ModelInventario.FK__Bodega__IdRespon__22FF2F51">
-      <End Role="Persona" EntitySet="Persona" />
-      <End Role="Bodega" EntitySet="Bodega" />
-    </AssociationSet>
-    <AssociationSet Name="FK__IngresoEgresoCab__0F824689" Association="ModelInventario.FK__IngresoEgresoCab__0F824689">
-      <End Role="Bodega" EntitySet="Bodega" />
-      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Percha__67A95F59" Association="ModelInventario.FK__Percha__67A95F59">
+    <AssociationSet Name="FK__Percha__59904A2C" Association="ModelInventario.FK__Percha__59904A2C">
       <End Role="Bodega" EntitySet="Bodega" />
       <End Role="Percha" EntitySet="Percha" />
     </AssociationSet>
-    <AssociationSet Name="FK__TomaFisicaCab__0539C240" Association="ModelInventario.FK__TomaFisicaCab__0539C240">
+    <AssociationSet Name="FK__TomaFisicaCab__6F7F8B4B" Association="ModelInventario.FK__TomaFisicaCab__6F7F8B4B">
       <End Role="Bodega" EntitySet="Bodega" />
       <End Role="TomaFisicaCab" EntitySet="TomaFisicaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__TransferenciaBod__740F363E" Association="ModelInventario.FK__TransferenciaBod__740F363E">
+    <AssociationSet Name="FK__TransferenciaBod__6225902D" Association="ModelInventario.FK__TransferenciaBod__6225902D">
       <End Role="Bodega" EntitySet="Bodega" />
       <End Role="TransferenciaBodegaCab" EntitySet="TransferenciaBodegaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__TransferenciaBod__75035A77" Association="ModelInventario.FK__TransferenciaBod__75035A77">
+    <AssociationSet Name="FK__TransferenciaBod__6319B466" Association="ModelInventario.FK__TransferenciaBod__6319B466">
       <End Role="Bodega" EntitySet="Bodega" />
       <End Role="TransferenciaBodegaCab" EntitySet="TransferenciaBodegaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__Chasis__IdEmpres__2E70E1FD" Association="ModelInventario.FK__Chasis__IdEmpres__2E70E1FD">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="Chasis" EntitySet="Chasis" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Color__IdEmpresa__3F9B6DFF" Association="ModelInventario.FK__Color__IdEmpresa__3F9B6DFF">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="Color" EntitySet="Color" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Grupo__IdEmpresa__6ABAD62E" Association="ModelInventario.FK__Grupo__IdEmpresa__6ABAD62E">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="Grupo" EntitySet="Grupo" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Grupo__IdTipoArt__6BAEFA67" Association="ModelInventario.FK__Grupo__IdTipoArt__6BAEFA67">
+    <AssociationSet Name="FK__Grupo__IdTipoArt__7E02B4CC" Association="ModelInventario.FK__Grupo__IdTipoArt__7E02B4CC">
       <End Role="TipoArticulo" EntitySet="TipoArticulo" />
       <End Role="Grupo" EntitySet="Grupo" />
     </AssociationSet>
-    <AssociationSet Name="FK__IngresoEg__IdGru__190BB0C3" Association="ModelInventario.FK__IngresoEg__IdGru__190BB0C3">
-      <End Role="Grupo" EntitySet="Grupo" />
+    <AssociationSet Name="FK__IngresoEg__IdPer__5D2BD0E6" Association="ModelInventario.FK__IngresoEg__IdPer__5D2BD0E6">
+      <End Role="Percha" EntitySet="Percha" />
       <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__IngresoEg__IdMot__0E8E2250" Association="ModelInventario.FK__IngresoEg__IdMot__0E8E2250">
+    <AssociationSet Name="FK__LlegadaMe__IdMot__63D8CE75" Association="ModelInventario.FK__LlegadaMe__IdMot__63D8CE75">
       <End Role="Motivo" EntitySet="Motivo" />
-      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+      <End Role="LlegadaMercaderiaCab" EntitySet="LlegadaMercaderiaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__IngresoEg__IdRes__10766AC2" Association="ModelInventario.FK__IngresoEg__IdRes__10766AC2">
-      <End Role="Persona" EntitySet="Persona" />
-      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__IngresoEg__IdTip__0CA5D9DE" Association="ModelInventario.FK__IngresoEg__IdTip__0CA5D9DE">
+    <AssociationSet Name="FK__LlegadaMe__IdTip__61F08603" Association="ModelInventario.FK__LlegadaMe__IdTip__61F08603">
       <End Role="TipoMovimiento" EntitySet="TipoMovimiento" />
-      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+      <End Role="LlegadaMercaderiaCab" EntitySet="LlegadaMercaderiaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__IngresoEg__IdUsu__116A8EFB" Association="ModelInventario.FK__IngresoEg__IdUsu__116A8EFB">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+    <AssociationSet Name="FK__LlegadaMercaderi__59B045BD" Association="ModelInventario.FK__LlegadaMercaderi__59B045BD">
+      <End Role="LlegadaMercaderiaCab" EntitySet="LlegadaMercaderiaCab" />
+      <End Role="LlegadaMercaderiaDet" EntitySet="LlegadaMercaderiaDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__IngresoEgresoDet__17236851" Association="ModelInventario.FK__IngresoEgresoDet__17236851">
-      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
-      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__IngresoEg__IdPer__19FFD4FC" Association="ModelInventario.FK__IngresoEg__IdPer__19FFD4FC">
+    <AssociationSet Name="FK__LlegadaMe__IdPer__5B988E2F" Association="ModelInventario.FK__LlegadaMe__IdPer__5B988E2F">
       <End Role="Percha" EntitySet="Percha" />
-      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
+      <End Role="LlegadaMercaderiaDet" EntitySet="LlegadaMercaderiaDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__IngresoEg__IdTip__162F4418" Association="ModelInventario.FK__IngresoEg__IdTip__162F4418">
-      <End Role="TipoArticulo" EntitySet="TipoArticulo" />
-      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Marca__IdEmpresa__45544755" Association="ModelInventario.FK__Marca__IdEmpresa__45544755">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="Marca" EntitySet="Marca" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Modelo__IdMarca__4CF5691D" Association="ModelInventario.FK__Modelo__IdMarca__4CF5691D">
-      <End Role="Marca" EntitySet="Marca" />
-      <End Role="Modelo" EntitySet="Modelo" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Modelo__IdEmpres__4B0D20AB" Association="ModelInventario.FK__Modelo__IdEmpres__4B0D20AB">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="Modelo" EntitySet="Modelo" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Motivo__IdEmpres__6D6238AF" Association="ModelInventario.FK__Motivo__IdEmpres__6D6238AF">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="Motivo" EntitySet="Motivo" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TomaFisic__IdMot__035179CE" Association="ModelInventario.FK__TomaFisic__IdMot__035179CE">
+    <AssociationSet Name="FK__TomaFisic__IdMot__6D9742D9" Association="ModelInventario.FK__TomaFisic__IdMot__6D9742D9">
       <End Role="Motivo" EntitySet="Motivo" />
       <End Role="TomaFisicaCab" EntitySet="TomaFisicaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__Transfere__IdMot__75F77EB0" Association="ModelInventario.FK__Transfere__IdMot__75F77EB0">
+    <AssociationSet Name="FK__Transfere__IdMot__640DD89F" Association="ModelInventario.FK__Transfere__IdMot__640DD89F">
       <End Role="Motivo" EntitySet="Motivo" />
       <End Role="TransferenciaBodegaCab" EntitySet="TransferenciaBodegaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__Percha__IdEmpres__66B53B20" Association="ModelInventario.FK__Percha__IdEmpres__66B53B20">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="Percha" EntitySet="Percha" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TipoArtic__IdEmp__6501FCD8" Association="ModelInventario.FK__TipoArtic__IdEmp__6501FCD8">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="TipoArticulo" EntitySet="TipoArticulo" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TomaFisic__IdTip__04459E07" Association="ModelInventario.FK__TomaFisic__IdTip__04459E07">
+    <AssociationSet Name="FK__TomaFisic__IdTip__6E8B6712" Association="ModelInventario.FK__TomaFisic__IdTip__6E8B6712">
       <End Role="TipoArticulo" EntitySet="TipoArticulo" />
       <End Role="TomaFisicaCab" EntitySet="TomaFisicaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__TipoCombu__IdEmp__39E294A9" Association="ModelInventario.FK__TipoCombu__IdEmp__39E294A9">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="TipoCombustible" EntitySet="TipoCombustible" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TipoMater__IdEmp__51BA1E3A" Association="ModelInventario.FK__TipoMater__IdEmp__51BA1E3A">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="TipoMaterial" EntitySet="TipoMaterial" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TipoMotor__IdEmp__3429BB53" Association="ModelInventario.FK__TipoMotor__IdEmp__3429BB53">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="TipoMotor" EntitySet="TipoMotor" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TipoMovim__IdEmp__119F9925" Association="ModelInventario.FK__TipoMovim__IdEmp__119F9925">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="TipoMovimiento" EntitySet="TipoMovimiento" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TomaFisic__IdEmp__025D5595" Association="ModelInventario.FK__TomaFisic__IdEmp__025D5595">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="TomaFisicaCab" EntitySet="TomaFisicaCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TomaFisic__IdUsu__062DE679" Association="ModelInventario.FK__TomaFisic__IdUsu__062DE679">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="TomaFisicaCab" EntitySet="TomaFisicaCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TomaFisic__IdEmp__0BE6BFCF" Association="ModelInventario.FK__TomaFisic__IdEmp__0BE6BFCF">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="TomaFisicaDet" EntitySet="TomaFisicaDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Transfere__IdEmp__731B1205" Association="ModelInventario.FK__Transfere__IdEmp__731B1205">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="TransferenciaBodegaCab" EntitySet="TransferenciaBodegaCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Transfere__IdUsu__77DFC722" Association="ModelInventario.FK__Transfere__IdUsu__77DFC722">
-      <End Role="Usuario" EntitySet="Usuario" />
-      <End Role="TransferenciaBodegaCab" EntitySet="TransferenciaBodegaCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Transfere__NroTr__7CA47C3F" Association="ModelInventario.FK__Transfere__NroTr__7CA47C3F">
+    <AssociationSet Name="FK__Transfere__NroTr__68D28DBC" Association="ModelInventario.FK__Transfere__NroTr__68D28DBC">
       <End Role="TransferenciaBodegaCab" EntitySet="TransferenciaBodegaCab" />
       <End Role="TransferenciaBodegaDet" EntitySet="TransferenciaBodegaDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__UnidadMed__IdEmp__28B808A7" Association="ModelInventario.FK__UnidadMed__IdEmp__28B808A7">
+    <EntitySet Name="Marca" EntityType="ModelInventario.Marca" />
+    <AssociationSet Name="FK__Articulo__IdMarc__53D770D6" Association="ModelInventario.FK__Articulo__IdMarc__53D770D6">
+      <End Role="Marca" EntitySet="Marca" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Modelo__IdMarca__44952D46" Association="ModelInventario.FK__Modelo__IdMarca__44952D46">
+      <End Role="Marca" EntitySet="Marca" />
+      <End Role="Modelo" EntitySet="Modelo" />
+    </AssociationSet>
+    <EntitySet Name="OrdenCompra" EntityType="ModelInventario.OrdenCompra" />
+    <EntitySet Name="OrdenCompraDet" EntityType="ModelInventario.OrdenCompraDet" />
+    <AssociationSet Name="FK__LlegadaMercaderi__60083D91" Association="ModelInventario.FK__LlegadaMercaderi__60083D91">
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+      <End Role="LlegadaMercaderiaCab" EntitySet="LlegadaMercaderiaCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenCompraDet__48BAC3E5" Association="ModelInventario.FK__OrdenCompraDet__48BAC3E5">
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+      <End Role="OrdenCompraDet" EntitySet="OrdenCompraDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenCompraDet__49AEE81E" Association="ModelInventario.FK__OrdenCompraDet__49AEE81E">
+      <End Role="Articulo" EntitySet="Articulo" />
+      <End Role="OrdenCompraDet" EntitySet="OrdenCompraDet" />
+    </AssociationSet>
+    <EntitySet Name="UnidadMedida" EntityType="ModelInventario.UnidadMedida" />
+    <AssociationSet Name="FK__Articulo__IdUnid__4D2A7347" Association="ModelInventario.FK__Articulo__IdUnid__4D2A7347">
+      <End Role="UnidadMedida" EntitySet="UnidadMedida" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <EntitySet Name="Empresa" EntityType="ModelInventario.Empresa" />
+    <AssociationSet Name="FK__OrdenComp__idEmp__15DA3E5D" Association="ModelInventario.FK__OrdenComp__idEmp__15DA3E5D">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="OrdenCompra" EntitySet="OrdenCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Articulo__IdEmpr__4C364F0E" Association="ModelInventario.FK__Articulo__IdEmpr__4C364F0E">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Articulo" EntitySet="Articulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ArticuloB__IdEmp__7BE56230" Association="ModelInventario.FK__ArticuloB__IdEmp__7BE56230">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="ArticuloBodega" EntitySet="ArticuloBodega" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Bodega__IdEmpres__2704CA5F" Association="ModelInventario.FK__Bodega__IdEmpres__2704CA5F">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Bodega" EntitySet="Bodega" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chasis__IdEmpres__2F9A1060" Association="ModelInventario.FK__Chasis__IdEmpres__2F9A1060">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Chasis" EntitySet="Chasis" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Color__IdEmpresa__3B0BC30C" Association="ModelInventario.FK__Color__IdEmpresa__3B0BC30C">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Color" EntitySet="Color" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Grupo__IdEmpresa__7D0E9093" Association="ModelInventario.FK__Grupo__IdEmpresa__7D0E9093">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Grupo" EntitySet="Grupo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Marca__IdEmpresa__3EDC53F0" Association="ModelInventario.FK__Marca__IdEmpresa__3EDC53F0">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Marca" EntitySet="Marca" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Modelo__IdEmpres__42ACE4D4" Association="ModelInventario.FK__Modelo__IdEmpres__42ACE4D4">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Modelo" EntitySet="Modelo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Motivo__IdEmpres__5D60DB10" Association="ModelInventario.FK__Motivo__IdEmpres__5D60DB10">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Motivo" EntitySet="Motivo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Percha__IdEmpres__589C25F3" Association="ModelInventario.FK__Percha__IdEmpres__589C25F3">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Percha" EntitySet="Percha" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoArtic__IdEmp__793DFFAF" Association="ModelInventario.FK__TipoArtic__IdEmp__793DFFAF">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoArticulo" EntitySet="TipoArticulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoCombu__IdEmp__373B3228" Association="ModelInventario.FK__TipoCombu__IdEmp__373B3228">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoCombustible" EntitySet="TipoCombustible" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoMater__IdEmp__477199F1" Association="ModelInventario.FK__TipoMater__IdEmp__477199F1">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoMaterial" EntitySet="TipoMaterial" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoMotor__IdEmp__336AA144" Association="ModelInventario.FK__TipoMotor__IdEmp__336AA144">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoMotor" EntitySet="TipoMotor" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TipoMovim__IdEmp__7814D14C" Association="ModelInventario.FK__TipoMovim__IdEmp__7814D14C">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TipoMovimiento" EntitySet="TipoMovimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TomaFisic__IdEmp__6CA31EA0" Association="ModelInventario.FK__TomaFisic__IdEmp__6CA31EA0">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TomaFisicaCab" EntitySet="TomaFisicaCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TomaFisic__IdEmp__6ADAD1BF" Association="ModelInventario.FK__TomaFisic__IdEmp__6ADAD1BF">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TomaFisicaDet" EntitySet="TomaFisicaDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Transfere__IdEmp__61316BF4" Association="ModelInventario.FK__Transfere__IdEmp__61316BF4">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="TransferenciaBodegaCab" EntitySet="TransferenciaBodegaCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UnidadMed__IdEmp__2BC97F7C" Association="ModelInventario.FK__UnidadMed__IdEmp__2BC97F7C">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="UnidadMedida" EntitySet="UnidadMedida" />
     </AssociationSet>
-    <AssociationSet Name="FK__Persona__IdEmpre__1BFD2C07" Association="ModelInventario.FK__Persona__IdEmpre__1BFD2C07">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="Persona" EntitySet="Persona" />
+    <EntitySet Name="IngresoEgresoCab" EntityType="ModelInventario.IngresoEgresoCab" />
+    <AssociationSet Name="FK__IngresoEgresoCab__0D99FE17" Association="ModelInventario.FK__IngresoEgresoCab__0D99FE17">
+      <End Role="Bodega" EntitySet="Bodega" />
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__Usuario__IdUsuar__3C69FB99" Association="ModelInventario.FK__Usuario__IdUsuar__3C69FB99">
-      <End Role="Persona" EntitySet="Persona" />
-      <End Role="Usuario" EntitySet="Usuario" />
+    <AssociationSet Name="FK__IngresoEg__IdMot__0CA5D9DE" Association="ModelInventario.FK__IngresoEg__IdMot__0CA5D9DE">
+      <End Role="Motivo" EntitySet="Motivo" />
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEg__IdTip__0ABD916C" Association="ModelInventario.FK__IngresoEg__IdTip__0ABD916C">
+      <End Role="TipoMovimiento" EntitySet="TipoMovimiento" />
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IngresoEgresoDet__1446FBA6" Association="ModelInventario.FK__IngresoEgresoDet__1446FBA6">
+      <End Role="IngresoEgresoCab" EntitySet="IngresoEgresoCab" />
+      <End Role="IngresoEgresoDet" EntitySet="IngresoEgresoDet" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="Estado">
-    <Key>
-      <PropertyRef Name="idEstado" />
-    </Key>
-    <Property Name="idEstado" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-    <NavigationProperty Name="OrdenCompra" Relationship="ModelInventario.FK__OrdenComp__idEst__0D0FEE32" FromRole="Estado" ToRole="OrdenCompra" />
-  </EntityType>
-  <EntityType Name="OrdenCompra">
-    <Key>
-      <PropertyRef Name="IdOrdenCompra" />
-      <PropertyRef Name="idEmpresa" />
-    </Key>
-    <Property Name="IdOrdenCompra" Type="Int32" Nullable="false" />
-    <Property Name="idEmpresa" Type="Int32" Nullable="false" />
-    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
-    <Property Name="Fecha" Type="DateTime" Nullable="false" />
-    <Property Name="FechaModificacion" Type="DateTime" Nullable="false" />
-    <Property Name="idProveedor" Type="Int32" Nullable="false" />
-    <Property Name="NumeroCotizacion" Type="Int32" Nullable="false" />
-    <Property Name="idEstado" Type="Int32" Nullable="false" />
-    <Property Name="Observaciones" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
-    <NavigationProperty Name="Estado" Relationship="ModelInventario.FK__OrdenComp__idEst__0D0FEE32" FromRole="OrdenCompra" ToRole="Estado" />
-    <NavigationProperty Name="IngresoEgresoCab" Relationship="ModelInventario.FK__IngresoEgresoCab__0BB1B5A5" FromRole="OrdenCompra" ToRole="IngresoEgresoCab" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__OrdenComp__idEmp__0B27A5C0" FromRole="OrdenCompra" ToRole="Empresa" />
-    <NavigationProperty Name="Usuario" Relationship="ModelInventario.FK__OrdenComp__IdUsu__0C1BC9F9" FromRole="OrdenCompra" ToRole="Usuario" />
-    <NavigationProperty Name="OrdenCompraDet" Relationship="ModelInventario.FK__OrdenCompraDet__63F8CA06" FromRole="OrdenCompra" ToRole="OrdenCompraDet" />
-  </EntityType>
-  <EntityType Name="OrdenCompraDet">
-    <Key>
-      <PropertyRef Name="Numero" />
-      <PropertyRef Name="IdEmpresa" />
-      <PropertyRef Name="Linea" />
-    </Key>
-    <Property Name="Numero" Type="Int32" Nullable="false" />
-    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <Property Name="Linea" Type="Int32" Nullable="false" />
-    <Property Name="IdArticulo" Type="Int32" Nullable="false" />
-    <Property Name="Cantidad" Type="Int32" Nullable="false" />
-    <Property Name="Precio" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="OrdenCompra" Relationship="ModelInventario.FK__OrdenCompraDet__63F8CA06" FromRole="OrdenCompraDet" ToRole="OrdenCompra" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__OrdenCompraDet__64ECEE3F" FromRole="OrdenCompraDet" ToRole="Articulo" />
-  </EntityType>
   <EntityType Name="Articulo">
     <Key>
       <PropertyRef Name="IdEmpresa" />
       <PropertyRef Name="IdArticulo" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <Property Name="IdArticulo" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="FechaProduccion" Type="DateTime" />
-    <Property Name="CantidadMinima" Type="Decimal" Precision="5" Scale="0" />
-    <Property Name="CantidadMaxima" Type="Decimal" Precision="5" Scale="0" />
-    <Property Name="CantidadActual" Type="Decimal" Precision="5" Scale="0" />
-    <Property Name="IdUnidadMedida" Type="Int32" />
-    <Property Name="FechaCaducidad" Type="DateTime" />
-    <Property Name="IdTipoArticulo" Type="Int32" Nullable="false" />
-    <Property Name="IdGrupo" Type="Int32" Nullable="false" />
-    <Property Name="IdChasis" Type="Int32" />
-    <Property Name="SerieChasis" Type="String" MaxLength="17" Unicode="false" FixedLength="false" />
-    <Property Name="IdTipoMotor" Type="Int32" />
-    <Property Name="SerieMotor" Type="String" MaxLength="11" Unicode="false" FixedLength="false" />
-    <Property Name="NroPlaca" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
-    <Property Name="IdTipoCombustible" Type="Int32" />
-    <Property Name="IdColor" Type="Int32" />
-    <Property Name="IdMarca" Type="Int32" />
-    <Property Name="IdModelo" Type="Int32" />
-    <Property Name="IdTipoMaterial" Type="Int32" />
-    <Property Name="Observacion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="OrdenCompraDet" Relationship="ModelInventario.FK__OrdenCompraDet__64ECEE3F" FromRole="Articulo" ToRole="OrdenCompraDet" />
-    <NavigationProperty Name="Chasis" Relationship="ModelInventario.FK__Articulo__IdChas__5C37ACAD" FromRole="Articulo" ToRole="Chasis" />
-    <NavigationProperty Name="Color" Relationship="ModelInventario.FK__Articulo__IdColo__5F141958" FromRole="Articulo" ToRole="Color" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Articulo__IdEmpr__58671BC9" FromRole="Articulo" ToRole="Empresa" />
-    <NavigationProperty Name="Grupo" Relationship="ModelInventario.FK__Articulo__IdGrup__5B438874" FromRole="Articulo" ToRole="Grupo" />
-    <NavigationProperty Name="Marca" Relationship="ModelInventario.FK__Articulo__IdMarc__60083D91" FromRole="Articulo" ToRole="Marca" />
-    <NavigationProperty Name="Modelo" Relationship="ModelInventario.FK__Articulo__IdMode__60FC61CA" FromRole="Articulo" ToRole="Modelo" />
-    <NavigationProperty Name="TipoArticulo" Relationship="ModelInventario.FK__Articulo__IdTipo__5A4F643B" FromRole="Articulo" ToRole="TipoArticulo" />
-    <NavigationProperty Name="TipoMotor" Relationship="ModelInventario.FK__Articulo__IdTipo__5D2BD0E6" FromRole="Articulo" ToRole="TipoMotor" />
-    <NavigationProperty Name="TipoCombustible" Relationship="ModelInventario.FK__Articulo__IdTipo__5E1FF51F" FromRole="Articulo" ToRole="TipoCombustible" />
-    <NavigationProperty Name="TipoMaterial" Relationship="ModelInventario.FK__Articulo__IdTipo__61F08603" FromRole="Articulo" ToRole="TipoMaterial" />
-    <NavigationProperty Name="UnidadMedida" Relationship="ModelInventario.FK__Articulo__IdUnid__595B4002" FromRole="Articulo" ToRole="UnidadMedida" />
-    <NavigationProperty Name="ArticuloBodega" Relationship="ModelInventario.FK__ArticuloBodega__184C96B4" FromRole="Articulo" ToRole="ArticuloBodega" />
-    <NavigationProperty Name="IngresoEgresoDet" Relationship="ModelInventario.FK__IngresoEgresoDet__18178C8A" FromRole="Articulo" ToRole="IngresoEgresoDet" />
-    <NavigationProperty Name="TomaFisicaDet" Relationship="ModelInventario.FK__TomaFisicaDet__0CDAE408" FromRole="Articulo" ToRole="TomaFisicaDet" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="IdArticulo" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaProduccion" />
+    <Property Type="Decimal" Name="CantidadMinima" Precision="5" Scale="0" />
+    <Property Type="Decimal" Name="CantidadMaxima" Precision="5" Scale="0" />
+    <Property Type="Decimal" Name="CantidadActual" Precision="5" Scale="0" />
+    <Property Type="Int32" Name="IdUnidadMedida" />
+    <Property Type="DateTime" Name="FechaCaducidad" />
+    <Property Type="Int32" Name="IdTipoArticulo" Nullable="false" />
+    <Property Type="Int32" Name="IdGrupo" Nullable="false" />
+    <Property Type="Int32" Name="IdChasis" />
+    <Property Type="String" Name="SerieChasis" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdTipoMotor" />
+    <Property Type="String" Name="SerieMotor" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NroPlaca" MaxLength="8" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdTipoCombustible" />
+    <Property Type="Int32" Name="IdColor" />
+    <Property Type="Int32" Name="IdMarca" />
+    <Property Type="Int32" Name="IdModelo" />
+    <Property Type="Int32" Name="IdTipoMaterial" />
+    <Property Type="String" Name="Observacion" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="Chasis" Relationship="ModelInventario.FK__Articulo__IdChas__5006DFF2" FromRole="Articulo" ToRole="Chasis" />
+    <NavigationProperty Name="Color" Relationship="ModelInventario.FK__Articulo__IdColo__52E34C9D" FromRole="Articulo" ToRole="Color" />
+    <NavigationProperty Name="Grupo" Relationship="ModelInventario.FK__Articulo__IdGrup__4F12BBB9" FromRole="Articulo" ToRole="Grupo" />
+    <NavigationProperty Name="Modelo" Relationship="ModelInventario.FK__Articulo__IdMode__54CB950F" FromRole="Articulo" ToRole="Modelo" />
+    <NavigationProperty Name="TipoArticulo" Relationship="ModelInventario.FK__Articulo__IdTipo__4E1E9780" FromRole="Articulo" ToRole="TipoArticulo" />
+    <NavigationProperty Name="TipoMotor" Relationship="ModelInventario.FK__Articulo__IdTipo__50FB042B" FromRole="Articulo" ToRole="TipoMotor" />
+    <NavigationProperty Name="TipoCombustible" Relationship="ModelInventario.FK__Articulo__IdTipo__51EF2864" FromRole="Articulo" ToRole="TipoCombustible" />
+    <NavigationProperty Name="TipoMaterial" Relationship="ModelInventario.FK__Articulo__IdTipo__55BFB948" FromRole="Articulo" ToRole="TipoMaterial" />
+    <NavigationProperty Name="ArticuloBodega" Relationship="ModelInventario.FK__ArticuloBodega__7CD98669" FromRole="Articulo" ToRole="ArticuloBodega" />
+    <NavigationProperty Name="IngresoEgresoDet" Relationship="ModelInventario.FK__IngresoEgresoDet__5C37ACAD" FromRole="Articulo" ToRole="IngresoEgresoDet" />
+    <NavigationProperty Name="LlegadaMercaderiaDet" Relationship="ModelInventario.FK__LlegadaMercaderi__5AA469F6" FromRole="Articulo" ToRole="LlegadaMercaderiaDet" />
+    <NavigationProperty Name="TomaFisicaDet" Relationship="ModelInventario.FK__TomaFisicaDet__6BCEF5F8" FromRole="Articulo" ToRole="TomaFisicaDet" />
+    <NavigationProperty Name="Marca" Relationship="ModelInventario.FK__Articulo__IdMarc__53D770D6" FromRole="Articulo" ToRole="Marca" />
+    <NavigationProperty Name="OrdenCompraDet" Relationship="ModelInventario.FK__OrdenCompraDet__49AEE81E" FromRole="Articulo" ToRole="OrdenCompraDet" />
+    <NavigationProperty Name="UnidadMedida" Relationship="ModelInventario.FK__Articulo__IdUnid__4D2A7347" FromRole="Articulo" ToRole="UnidadMedida" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Articulo__IdEmpr__4C364F0E" FromRole="Articulo" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="ArticuloBodega">
     <Key>
       <PropertyRef Name="IdArticuloBodega" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="IdArticuloBodega" Type="Int32" Nullable="false" />
-    <Property Name="IdArticulo" Type="Int32" />
-    <Property Name="IdPercha" Type="Int32" />
-    <Property Name="Cantidad" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__ArticuloBodega__184C96B4" FromRole="ArticuloBodega" ToRole="Articulo" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__ArticuloB__IdEmp__1758727B" FromRole="ArticuloBodega" ToRole="Empresa" />
-    <NavigationProperty Name="Percha" Relationship="ModelInventario.FK__ArticuloB__IdPer__1940BAED" FromRole="ArticuloBodega" ToRole="Percha" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="IdArticuloBodega" Nullable="false" />
+    <Property Type="Int32" Name="IdArticulo" />
+    <Property Type="Int32" Name="IdPercha" />
+    <Property Type="Int32" Name="Cantidad" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__ArticuloBodega__7CD98669" FromRole="ArticuloBodega" ToRole="Articulo" />
+    <NavigationProperty Name="Percha" Relationship="ModelInventario.FK__ArticuloB__IdPer__7DCDAAA2" FromRole="ArticuloBodega" ToRole="Percha" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__ArticuloB__IdEmp__7BE56230" FromRole="ArticuloBodega" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="Bodega">
     <Key>
       <PropertyRef Name="IdEmpresa" />
       <PropertyRef Name="IdBodega" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <Property Name="IdBodega" Type="Int32" Nullable="false" />
-    <Property Name="Decripcion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="Capacidadm2" Type="Int32" />
-    <Property Name="IdResponsable" Type="Int32" />
-    <Property Name="IdPercha" Type="Int32" />
-    <Property Name="Direccion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="Telefono" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Bodega__IdEmpres__220B0B18" FromRole="Bodega" ToRole="Empresa" />
-    <NavigationProperty Name="Persona" Relationship="ModelInventario.FK__Bodega__IdRespon__22FF2F51" FromRole="Bodega" ToRole="Persona" />
-    <NavigationProperty Name="IngresoEgresoCab" Relationship="ModelInventario.FK__IngresoEgresoCab__0F824689" FromRole="Bodega" ToRole="IngresoEgresoCab" />
-    <NavigationProperty Name="Percha" Relationship="ModelInventario.FK__Percha__67A95F59" FromRole="Bodega" ToRole="Percha" />
-    <NavigationProperty Name="TomaFisicaCab" Relationship="ModelInventario.FK__TomaFisicaCab__0539C240" FromRole="Bodega" ToRole="TomaFisicaCab" />
-    <NavigationProperty Name="TransferenciaBodegaCab" Relationship="ModelInventario.FK__TransferenciaBod__740F363E" FromRole="Bodega" ToRole="TransferenciaBodegaCab" />
-    <NavigationProperty Name="TransferenciaBodegaCab1" Relationship="ModelInventario.FK__TransferenciaBod__75035A77" FromRole="Bodega" ToRole="TransferenciaBodegaCab" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="IdBodega" Nullable="false" />
+    <Property Type="String" Name="Decripcion" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Capacidadm2" />
+    <Property Type="Int32" Name="IdResponsable" />
+    <Property Type="Int32" Name="IdPercha" />
+    <Property Type="String" Name="Direccion" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Telefono" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="LlegadaMercaderiaCab" Relationship="ModelInventario.FK__LlegadaMercaderi__64CCF2AE" FromRole="Bodega" ToRole="LlegadaMercaderiaCab" />
+    <NavigationProperty Name="Percha" Relationship="ModelInventario.FK__Percha__59904A2C" FromRole="Bodega" ToRole="Percha" />
+    <NavigationProperty Name="TomaFisicaCab" Relationship="ModelInventario.FK__TomaFisicaCab__6F7F8B4B" FromRole="Bodega" ToRole="TomaFisicaCab" />
+    <NavigationProperty Name="TransferenciaBodegaCab" Relationship="ModelInventario.FK__TransferenciaBod__6225902D" FromRole="Bodega" ToRole="TransferenciaBodegaCab" />
+    <NavigationProperty Name="TransferenciaBodegaCab1" Relationship="ModelInventario.FK__TransferenciaBod__6319B466" FromRole="Bodega" ToRole="TransferenciaBodegaCab" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Bodega__IdEmpres__2704CA5F" FromRole="Bodega" ToRole="Empresa" />
+    <NavigationProperty Name="IngresoEgresoCab" Relationship="ModelInventario.FK__IngresoEgresoCab__0D99FE17" FromRole="Bodega" ToRole="IngresoEgresoCab" />
   </EntityType>
   <EntityType Name="Chasis">
     <Key>
       <PropertyRef Name="IdChasis" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="IdChasis" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdChas__5C37ACAD" FromRole="Chasis" ToRole="Articulo" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Chasis__IdEmpres__2E70E1FD" FromRole="Chasis" ToRole="Empresa" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="IdChasis" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdChas__5006DFF2" FromRole="Chasis" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Chasis__IdEmpres__2F9A1060" FromRole="Chasis" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="Color">
     <Key>
       <PropertyRef Name="IdColor" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="IdColor" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdColo__5F141958" FromRole="Color" ToRole="Articulo" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Color__IdEmpresa__3F9B6DFF" FromRole="Color" ToRole="Empresa" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="IdColor" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdColo__52E34C9D" FromRole="Color" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Color__IdEmpresa__3B0BC30C" FromRole="Color" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="Grupo">
     <Key>
       <PropertyRef Name="IdGrupo" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="IdGrupo" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="IdTipoArticulo" Type="Int32" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdGrup__5B438874" FromRole="Grupo" ToRole="Articulo" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Grupo__IdEmpresa__6ABAD62E" FromRole="Grupo" ToRole="Empresa" />
-    <NavigationProperty Name="TipoArticulo" Relationship="ModelInventario.FK__Grupo__IdTipoArt__6BAEFA67" FromRole="Grupo" ToRole="TipoArticulo" />
-    <NavigationProperty Name="IngresoEgresoDet" Relationship="ModelInventario.FK__IngresoEg__IdGru__190BB0C3" FromRole="Grupo" ToRole="IngresoEgresoDet" />
-  </EntityType>
-  <EntityType Name="IngresoEgresoCab">
-    <Key>
-      <PropertyRef Name="IdEmpresa" />
-      <PropertyRef Name="NroMovimiento" />
-    </Key>
-    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <Property Name="NroMovimiento" Type="Int32" Nullable="false" />
-    <Property Name="IdTipoMovimiento" Type="Int32" />
-    <Property Name="FechaMovimiento" Type="DateTime" />
-    <Property Name="IdOrdenCompra" Type="Int32" />
-    <Property Name="IdMotivo" Type="Int32" />
-    <Property Name="IdBodega" Type="Int32" />
-    <Property Name="IdResponsable" Type="Int32" />
-    <Property Name="TotalPagar" Type="Decimal" Precision="7" Scale="2" />
-    <Property Name="Observacion" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
-    <Property Name="IdUsuario" Type="Int32" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="OrdenCompra" Relationship="ModelInventario.FK__IngresoEgresoCab__0BB1B5A5" FromRole="IngresoEgresoCab" ToRole="OrdenCompra" />
-    <NavigationProperty Name="Bodega" Relationship="ModelInventario.FK__IngresoEgresoCab__0F824689" FromRole="IngresoEgresoCab" ToRole="Bodega" />
-    <NavigationProperty Name="Motivo" Relationship="ModelInventario.FK__IngresoEg__IdMot__0E8E2250" FromRole="IngresoEgresoCab" ToRole="Motivo" />
-    <NavigationProperty Name="Persona" Relationship="ModelInventario.FK__IngresoEg__IdRes__10766AC2" FromRole="IngresoEgresoCab" ToRole="Persona" />
-    <NavigationProperty Name="TipoMovimiento" Relationship="ModelInventario.FK__IngresoEg__IdTip__0CA5D9DE" FromRole="IngresoEgresoCab" ToRole="TipoMovimiento" />
-    <NavigationProperty Name="Usuario" Relationship="ModelInventario.FK__IngresoEg__IdUsu__116A8EFB" FromRole="IngresoEgresoCab" ToRole="Usuario" />
-    <NavigationProperty Name="IngresoEgresoDet" Relationship="ModelInventario.FK__IngresoEgresoDet__17236851" FromRole="IngresoEgresoCab" ToRole="IngresoEgresoDet" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="IdGrupo" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdTipoArticulo" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdGrup__4F12BBB9" FromRole="Grupo" ToRole="Articulo" />
+    <NavigationProperty Name="TipoArticulo" Relationship="ModelInventario.FK__Grupo__IdTipoArt__7E02B4CC" FromRole="Grupo" ToRole="TipoArticulo" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Grupo__IdEmpresa__7D0E9093" FromRole="Grupo" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="IngresoEgresoDet">
     <Key>
       <PropertyRef Name="NroMovimiento" />
       <PropertyRef Name="numero" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="NroMovimiento" Type="Int32" Nullable="false" />
-    <Property Name="numero" Type="Int32" Nullable="false" />
-    <Property Name="IdTipoArticulo" Type="Int32" />
-    <Property Name="IdArticulo" Type="Int32" />
-    <Property Name="IdGrupo" Type="Int32" />
-    <Property Name="IdPercha" Type="Int32" />
-    <Property Name="CantidadPedida" Type="Int32" />
-    <Property Name="CantidadLlegada" Type="Int32" />
-    <Property Name="Costo" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="Subtotal" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="ValorIVA" Type="Decimal" Precision="5" Scale="2" />
-    <Property Name="ValorTotal" Type="Decimal" Precision="5" Scale="2" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__IngresoEgresoDet__18178C8A" FromRole="IngresoEgresoDet" ToRole="Articulo" />
-    <NavigationProperty Name="Grupo" Relationship="ModelInventario.FK__IngresoEg__IdGru__190BB0C3" FromRole="IngresoEgresoDet" ToRole="Grupo" />
-    <NavigationProperty Name="IngresoEgresoCab" Relationship="ModelInventario.FK__IngresoEgresoDet__17236851" FromRole="IngresoEgresoDet" ToRole="IngresoEgresoCab" />
-    <NavigationProperty Name="Percha" Relationship="ModelInventario.FK__IngresoEg__IdPer__19FFD4FC" FromRole="IngresoEgresoDet" ToRole="Percha" />
-    <NavigationProperty Name="TipoArticulo" Relationship="ModelInventario.FK__IngresoEg__IdTip__162F4418" FromRole="IngresoEgresoDet" ToRole="TipoArticulo" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="NroMovimiento" Nullable="false" />
+    <Property Type="Int32" Name="numero" Nullable="false" />
+    <Property Type="Int32" Name="IdArticulo" />
+    <Property Type="Int32" Name="IdPercha" />
+    <Property Type="Int32" Name="Cantidad" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__IngresoEgresoDet__5C37ACAD" FromRole="IngresoEgresoDet" ToRole="Articulo" />
+    <NavigationProperty Name="Percha" Relationship="ModelInventario.FK__IngresoEg__IdPer__5D2BD0E6" FromRole="IngresoEgresoDet" ToRole="Percha" />
+    <NavigationProperty Name="IngresoEgresoCab" Relationship="ModelInventario.FK__IngresoEgresoDet__1446FBA6" FromRole="IngresoEgresoDet" ToRole="IngresoEgresoCab" />
   </EntityType>
-  <EntityType Name="Marca">
+  <EntityType Name="LlegadaMercaderiaCab">
     <Key>
-      <PropertyRef Name="IdMarca" />
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="NroMovimiento" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="IdMarca" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdMarc__60083D91" FromRole="Marca" ToRole="Articulo" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Marca__IdEmpresa__45544755" FromRole="Marca" ToRole="Empresa" />
-    <NavigationProperty Name="Modelo" Relationship="ModelInventario.FK__Modelo__IdMarca__4CF5691D" FromRole="Marca" ToRole="Modelo" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="NroMovimiento" Nullable="false" />
+    <Property Type="Int32" Name="IdTipoMovimiento" />
+    <Property Type="Int32" Name="IdOrdenCompra" />
+    <Property Type="Int32" Name="IdProveedor" />
+    <Property Type="Decimal" Name="Factura" Precision="15" Scale="0" />
+    <Property Type="DateTime" Name="FechaMovimiento" />
+    <Property Type="Int32" Name="IdMotivo" />
+    <Property Type="Int32" Name="IdBodega" />
+    <Property Type="Int32" Name="IdResponsable" />
+    <Property Type="String" Name="Observacion" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdUsuario" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="Bodega" Relationship="ModelInventario.FK__LlegadaMercaderi__64CCF2AE" FromRole="LlegadaMercaderiaCab" ToRole="Bodega" />
+    <NavigationProperty Name="Motivo" Relationship="ModelInventario.FK__LlegadaMe__IdMot__63D8CE75" FromRole="LlegadaMercaderiaCab" ToRole="Motivo" />
+    <NavigationProperty Name="TipoMovimiento" Relationship="ModelInventario.FK__LlegadaMe__IdTip__61F08603" FromRole="LlegadaMercaderiaCab" ToRole="TipoMovimiento" />
+    <NavigationProperty Name="LlegadaMercaderiaDet" Relationship="ModelInventario.FK__LlegadaMercaderi__59B045BD" FromRole="LlegadaMercaderiaCab" ToRole="LlegadaMercaderiaDet" />
+    <NavigationProperty Name="OrdenCompra" Relationship="ModelInventario.FK__LlegadaMercaderi__60083D91" FromRole="LlegadaMercaderiaCab" ToRole="OrdenCompra" />
+  </EntityType>
+  <EntityType Name="LlegadaMercaderiaDet">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="NroMovimiento" />
+      <PropertyRef Name="numero" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="NroMovimiento" Nullable="false" />
+    <Property Type="Int32" Name="numero" Nullable="false" />
+    <Property Type="Int32" Name="IdArticulo" />
+    <Property Type="Int32" Name="IdPercha" />
+    <Property Type="Int32" Name="CantidadPedida" />
+    <Property Type="Int32" Name="CantidadLlegada" />
+    <Property Type="Decimal" Name="Precio" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="Subtotal" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="ValorIVA" Precision="5" Scale="2" />
+    <Property Type="Decimal" Name="ValorTotal" Precision="5" Scale="2" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__LlegadaMercaderi__5AA469F6" FromRole="LlegadaMercaderiaDet" ToRole="Articulo" />
+    <NavigationProperty Name="LlegadaMercaderiaCab" Relationship="ModelInventario.FK__LlegadaMercaderi__59B045BD" FromRole="LlegadaMercaderiaDet" ToRole="LlegadaMercaderiaCab" />
+    <NavigationProperty Name="Percha" Relationship="ModelInventario.FK__LlegadaMe__IdPer__5B988E2F" FromRole="LlegadaMercaderiaDet" ToRole="Percha" />
   </EntityType>
   <EntityType Name="Modelo">
     <Key>
       <PropertyRef Name="IdModelo" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="IdModelo" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="IdMarca" Type="Int32" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdMode__60FC61CA" FromRole="Modelo" ToRole="Articulo" />
-    <NavigationProperty Name="Marca" Relationship="ModelInventario.FK__Modelo__IdMarca__4CF5691D" FromRole="Modelo" ToRole="Marca" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Modelo__IdEmpres__4B0D20AB" FromRole="Modelo" ToRole="Empresa" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="IdModelo" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdMarca" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdMode__54CB950F" FromRole="Modelo" ToRole="Articulo" />
+    <NavigationProperty Name="Marca" Relationship="ModelInventario.FK__Modelo__IdMarca__44952D46" FromRole="Modelo" ToRole="Marca" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Modelo__IdEmpres__42ACE4D4" FromRole="Modelo" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="Motivo">
     <Key>
       <PropertyRef Name="IdMotivo" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="IdMotivo" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="IngresoEgresoCab" Relationship="ModelInventario.FK__IngresoEg__IdMot__0E8E2250" FromRole="Motivo" ToRole="IngresoEgresoCab" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Motivo__IdEmpres__6D6238AF" FromRole="Motivo" ToRole="Empresa" />
-    <NavigationProperty Name="TomaFisicaCab" Relationship="ModelInventario.FK__TomaFisic__IdMot__035179CE" FromRole="Motivo" ToRole="TomaFisicaCab" />
-    <NavigationProperty Name="TransferenciaBodegaCab" Relationship="ModelInventario.FK__Transfere__IdMot__75F77EB0" FromRole="Motivo" ToRole="TransferenciaBodegaCab" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="IdMotivo" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="LlegadaMercaderiaCab" Relationship="ModelInventario.FK__LlegadaMe__IdMot__63D8CE75" FromRole="Motivo" ToRole="LlegadaMercaderiaCab" />
+    <NavigationProperty Name="TomaFisicaCab" Relationship="ModelInventario.FK__TomaFisic__IdMot__6D9742D9" FromRole="Motivo" ToRole="TomaFisicaCab" />
+    <NavigationProperty Name="TransferenciaBodegaCab" Relationship="ModelInventario.FK__Transfere__IdMot__640DD89F" FromRole="Motivo" ToRole="TransferenciaBodegaCab" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Motivo__IdEmpres__5D60DB10" FromRole="Motivo" ToRole="Empresa" />
+    <NavigationProperty Name="IngresoEgresoCab" Relationship="ModelInventario.FK__IngresoEg__IdMot__0CA5D9DE" FromRole="Motivo" ToRole="IngresoEgresoCab" />
   </EntityType>
   <EntityType Name="Percha">
     <Key>
       <PropertyRef Name="IdPercha" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <Property Name="IdPercha" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
-    <Property Name="Nro_Divisiones" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
-    <Property Name="IdBodega" Type="Int32" Nullable="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="ArticuloBodega" Relationship="ModelInventario.FK__ArticuloB__IdPer__1940BAED" FromRole="Percha" ToRole="ArticuloBodega" />
-    <NavigationProperty Name="Bodega" Relationship="ModelInventario.FK__Percha__67A95F59" FromRole="Percha" ToRole="Bodega" />
-    <NavigationProperty Name="IngresoEgresoDet" Relationship="ModelInventario.FK__IngresoEg__IdPer__19FFD4FC" FromRole="Percha" ToRole="IngresoEgresoDet" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Percha__IdEmpres__66B53B20" FromRole="Percha" ToRole="Empresa" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="IdPercha" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Nro_Divisiones" Nullable="false" Precision="10" Scale="0" />
+    <Property Type="Int32" Name="IdBodega" Nullable="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="ArticuloBodega" Relationship="ModelInventario.FK__ArticuloB__IdPer__7DCDAAA2" FromRole="Percha" ToRole="ArticuloBodega" />
+    <NavigationProperty Name="Bodega" Relationship="ModelInventario.FK__Percha__59904A2C" FromRole="Percha" ToRole="Bodega" />
+    <NavigationProperty Name="IngresoEgresoDet" Relationship="ModelInventario.FK__IngresoEg__IdPer__5D2BD0E6" FromRole="Percha" ToRole="IngresoEgresoDet" />
+    <NavigationProperty Name="LlegadaMercaderiaDet" Relationship="ModelInventario.FK__LlegadaMe__IdPer__5B988E2F" FromRole="Percha" ToRole="LlegadaMercaderiaDet" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Percha__IdEmpres__589C25F3" FromRole="Percha" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="TipoArticulo">
     <Key>
       <PropertyRef Name="IdTipoArticulo" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="IdTipoArticulo" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdTipo__5A4F643B" FromRole="TipoArticulo" ToRole="Articulo" />
-    <NavigationProperty Name="Grupo" Relationship="ModelInventario.FK__Grupo__IdTipoArt__6BAEFA67" FromRole="TipoArticulo" ToRole="Grupo" />
-    <NavigationProperty Name="IngresoEgresoDet" Relationship="ModelInventario.FK__IngresoEg__IdTip__162F4418" FromRole="TipoArticulo" ToRole="IngresoEgresoDet" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__TipoArtic__IdEmp__6501FCD8" FromRole="TipoArticulo" ToRole="Empresa" />
-    <NavigationProperty Name="TomaFisicaCab" Relationship="ModelInventario.FK__TomaFisic__IdTip__04459E07" FromRole="TipoArticulo" ToRole="TomaFisicaCab" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="IdTipoArticulo" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdTipo__4E1E9780" FromRole="TipoArticulo" ToRole="Articulo" />
+    <NavigationProperty Name="Grupo" Relationship="ModelInventario.FK__Grupo__IdTipoArt__7E02B4CC" FromRole="TipoArticulo" ToRole="Grupo" />
+    <NavigationProperty Name="TomaFisicaCab" Relationship="ModelInventario.FK__TomaFisic__IdTip__6E8B6712" FromRole="TipoArticulo" ToRole="TomaFisicaCab" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__TipoArtic__IdEmp__793DFFAF" FromRole="TipoArticulo" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="TipoCombustible">
     <Key>
       <PropertyRef Name="IdTipoCombustible" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="IdTipoCombustible" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdTipo__5E1FF51F" FromRole="TipoCombustible" ToRole="Articulo" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__TipoCombu__IdEmp__39E294A9" FromRole="TipoCombustible" ToRole="Empresa" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="IdTipoCombustible" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdTipo__51EF2864" FromRole="TipoCombustible" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__TipoCombu__IdEmp__373B3228" FromRole="TipoCombustible" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="TipoMaterial">
     <Key>
       <PropertyRef Name="IdTipoMaterial" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="IdTipoMaterial" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdTipo__61F08603" FromRole="TipoMaterial" ToRole="Articulo" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__TipoMater__IdEmp__51BA1E3A" FromRole="TipoMaterial" ToRole="Empresa" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="IdTipoMaterial" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdTipo__55BFB948" FromRole="TipoMaterial" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__TipoMater__IdEmp__477199F1" FromRole="TipoMaterial" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="TipoMotor">
     <Key>
       <PropertyRef Name="IdTipoMotor" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="IdTipoMotor" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdTipo__5D2BD0E6" FromRole="TipoMotor" ToRole="Articulo" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__TipoMotor__IdEmp__3429BB53" FromRole="TipoMotor" ToRole="Empresa" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="IdTipoMotor" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdTipo__50FB042B" FromRole="TipoMotor" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__TipoMotor__IdEmp__336AA144" FromRole="TipoMotor" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="TipoMovimiento">
     <Key>
       <PropertyRef Name="IdTipoMovimiento" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="IdTipoMovimiento" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="IngresoEgresoCab" Relationship="ModelInventario.FK__IngresoEg__IdTip__0CA5D9DE" FromRole="TipoMovimiento" ToRole="IngresoEgresoCab" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__TipoMovim__IdEmp__119F9925" FromRole="TipoMovimiento" ToRole="Empresa" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="IdTipoMovimiento" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="LlegadaMercaderiaCab" Relationship="ModelInventario.FK__LlegadaMe__IdTip__61F08603" FromRole="TipoMovimiento" ToRole="LlegadaMercaderiaCab" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__TipoMovim__IdEmp__7814D14C" FromRole="TipoMovimiento" ToRole="Empresa" />
+    <NavigationProperty Name="IngresoEgresoCab" Relationship="ModelInventario.FK__IngresoEg__IdTip__0ABD916C" FromRole="TipoMovimiento" ToRole="IngresoEgresoCab" />
   </EntityType>
   <EntityType Name="TomaFisicaCab">
     <Key>
       <PropertyRef Name="NroTomaFisica" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="NroTomaFisica" Type="Int32" Nullable="false" />
-    <Property Name="IdMotivo" Type="Int32" />
-    <Property Name="FechaTomaFisica" Type="DateTime" />
-    <Property Name="FechaModificacion" Type="DateTime" />
-    <Property Name="Usuario" Type="Decimal" Precision="10" Scale="0" />
-    <Property Name="IdTipoArticulo" Type="Int32" />
-    <Property Name="IdBodega" Type="Int32" />
-    <Property Name="IdUsuario" Type="Int32" />
-    <Property Name="Auditor" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="Observacion" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Bodega" Relationship="ModelInventario.FK__TomaFisicaCab__0539C240" FromRole="TomaFisicaCab" ToRole="Bodega" />
-    <NavigationProperty Name="Motivo" Relationship="ModelInventario.FK__TomaFisic__IdMot__035179CE" FromRole="TomaFisicaCab" ToRole="Motivo" />
-    <NavigationProperty Name="TipoArticulo" Relationship="ModelInventario.FK__TomaFisic__IdTip__04459E07" FromRole="TomaFisicaCab" ToRole="TipoArticulo" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__TomaFisic__IdEmp__025D5595" FromRole="TomaFisicaCab" ToRole="Empresa" />
-    <NavigationProperty Name="Usuario1" Relationship="ModelInventario.FK__TomaFisic__IdUsu__062DE679" FromRole="TomaFisicaCab" ToRole="Usuario" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="NroTomaFisica" Nullable="false" />
+    <Property Type="Int32" Name="IdMotivo" />
+    <Property Type="DateTime" Name="FechaTomaFisica" />
+    <Property Type="DateTime" Name="FechaModificacion" />
+    <Property Type="Decimal" Name="Usuario" Precision="10" Scale="0" />
+    <Property Type="Int32" Name="IdTipoArticulo" />
+    <Property Type="Int32" Name="IdBodega" />
+    <Property Type="Int32" Name="IdUsuario" />
+    <Property Type="String" Name="Auditor" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Observacion" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="Bodega" Relationship="ModelInventario.FK__TomaFisicaCab__6F7F8B4B" FromRole="TomaFisicaCab" ToRole="Bodega" />
+    <NavigationProperty Name="Motivo" Relationship="ModelInventario.FK__TomaFisic__IdMot__6D9742D9" FromRole="TomaFisicaCab" ToRole="Motivo" />
+    <NavigationProperty Name="TipoArticulo" Relationship="ModelInventario.FK__TomaFisic__IdTip__6E8B6712" FromRole="TomaFisicaCab" ToRole="TipoArticulo" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__TomaFisic__IdEmp__6CA31EA0" FromRole="TomaFisicaCab" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="TomaFisicaDet">
     <Key>
       <PropertyRef Name="NroTomaFisica" />
+      <PropertyRef Name="linea" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="NroTomaFisica" Type="Int32" Nullable="false" />
-    <Property Name="IdArticulo" Type="Int32" />
-    <Property Name="ExistenciaSistema" Type="Int32" />
-    <Property Name="ExistenciaFisica" Type="Int32" />
-    <Property Name="CantidadAjustada" Type="Int32" />
-    <Property Name="FechaAjuste" Type="DateTime" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__TomaFisicaDet__0CDAE408" FromRole="TomaFisicaDet" ToRole="Articulo" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__TomaFisic__IdEmp__0BE6BFCF" FromRole="TomaFisicaDet" ToRole="Empresa" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="NroTomaFisica" Nullable="false" />
+    <Property Type="Int32" Name="linea" Nullable="false" />
+    <Property Type="Int32" Name="IdArticulo" />
+    <Property Type="Int32" Name="ExistenciaSistema" />
+    <Property Type="Int32" Name="ExistenciaFisica" />
+    <Property Type="Int32" Name="CantidadAjustada" />
+    <Property Type="DateTime" Name="FechaAjuste" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__TomaFisicaDet__6BCEF5F8" FromRole="TomaFisicaDet" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__TomaFisic__IdEmp__6ADAD1BF" FromRole="TomaFisicaDet" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="TransferenciaBodegaCab">
     <Key>
       <PropertyRef Name="NroTransferencia" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="NroTransferencia" Type="Int32" Nullable="false" />
-    <Property Name="FechaTransferencia" Type="DateTime" />
-    <Property Name="FechaModificacion" Type="DateTime" />
-    <Property Name="IdBodegaOrigen" Type="Int32" />
-    <Property Name="IdBodegaDestino" Type="Int32" />
-    <Property Name="IdMotivo" Type="Int32" />
-    <Property Name="Observacion" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
-    <Property Name="IdUsuario" Type="Int32" />
-    <Property Name="IdEstado" Type="Int32" />
-    <Property Name="Fecha" Type="DateTime" />
-    <NavigationProperty Name="Bodega" Relationship="ModelInventario.FK__TransferenciaBod__740F363E" FromRole="TransferenciaBodegaCab" ToRole="Bodega" />
-    <NavigationProperty Name="Bodega1" Relationship="ModelInventario.FK__TransferenciaBod__75035A77" FromRole="TransferenciaBodegaCab" ToRole="Bodega" />
-    <NavigationProperty Name="Motivo" Relationship="ModelInventario.FK__Transfere__IdMot__75F77EB0" FromRole="TransferenciaBodegaCab" ToRole="Motivo" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Transfere__IdEmp__731B1205" FromRole="TransferenciaBodegaCab" ToRole="Empresa" />
-    <NavigationProperty Name="Usuario" Relationship="ModelInventario.FK__Transfere__IdUsu__77DFC722" FromRole="TransferenciaBodegaCab" ToRole="Usuario" />
-    <NavigationProperty Name="TransferenciaBodegaDet" Relationship="ModelInventario.FK__Transfere__NroTr__7CA47C3F" FromRole="TransferenciaBodegaCab" ToRole="TransferenciaBodegaDet" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="NroTransferencia" Nullable="false" />
+    <Property Type="DateTime" Name="FechaTransferencia" />
+    <Property Type="DateTime" Name="FechaModificacion" />
+    <Property Type="Int32" Name="IdBodegaOrigen" />
+    <Property Type="Int32" Name="IdBodegaDestino" />
+    <Property Type="Int32" Name="IdMotivo" />
+    <Property Type="String" Name="Observacion" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdUsuario" />
+    <Property Type="Int32" Name="IdEstado" />
+    <Property Type="DateTime" Name="Fecha" />
+    <NavigationProperty Name="Bodega" Relationship="ModelInventario.FK__TransferenciaBod__6225902D" FromRole="TransferenciaBodegaCab" ToRole="Bodega" />
+    <NavigationProperty Name="Bodega1" Relationship="ModelInventario.FK__TransferenciaBod__6319B466" FromRole="TransferenciaBodegaCab" ToRole="Bodega" />
+    <NavigationProperty Name="Motivo" Relationship="ModelInventario.FK__Transfere__IdMot__640DD89F" FromRole="TransferenciaBodegaCab" ToRole="Motivo" />
+    <NavigationProperty Name="TransferenciaBodegaDet" Relationship="ModelInventario.FK__Transfere__NroTr__68D28DBC" FromRole="TransferenciaBodegaCab" ToRole="TransferenciaBodegaDet" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Transfere__IdEmp__61316BF4" FromRole="TransferenciaBodegaCab" ToRole="Empresa" />
   </EntityType>
   <EntityType Name="TransferenciaBodegaDet">
     <Key>
       <PropertyRef Name="NroTransferencia" />
     </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="NroTransferencia" Type="Int32" Nullable="false" />
-    <Property Name="CantidadTrasladada" Type="Int32" />
-    <Property Name="Articulo" Type="Decimal" Precision="10" Scale="0" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="TransferenciaBodegaCab" Relationship="ModelInventario.FK__Transfere__NroTr__7CA47C3F" FromRole="TransferenciaBodegaDet" ToRole="TransferenciaBodegaCab" />
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="NroTransferencia" Nullable="false" />
+    <Property Type="Int32" Name="CantidadTrasladada" />
+    <Property Type="Decimal" Name="Articulo" Precision="10" Scale="0" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="TransferenciaBodegaCab" Relationship="ModelInventario.FK__Transfere__NroTr__68D28DBC" FromRole="TransferenciaBodegaDet" ToRole="TransferenciaBodegaCab" />
   </EntityType>
-  <EntityType Name="UnidadMedida">
-    <Key>
-      <PropertyRef Name="IdUnidadMedida" />
-    </Key>
-    <Property Name="IdEmpresa" Type="Int32" />
-    <Property Name="IdUnidadMedida" Type="Int32" Nullable="false" />
-    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdUnid__595B4002" FromRole="UnidadMedida" ToRole="Articulo" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__UnidadMed__IdEmp__28B808A7" FromRole="UnidadMedida" ToRole="Empresa" />
-  </EntityType>
-  <EntityType Name="Persona">
-    <Key>
-      <PropertyRef Name="IdPersona" />
-    </Key>
-    <Property Name="IdPersona" Type="Int32" Nullable="false" />
-    <Property Name="Identificacion" Type="Decimal" Nullable="false" Precision="14" Scale="0" />
-    <Property Name="IdTipoPersona" Type="Int32" Nullable="false" />
-    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <Property Name="NombreRazonSocial" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="Apellido" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="FechaNacimiento" Type="DateTime" />
-    <Property Name="genero" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
-    <Property Name="TipoIdentificacion" Type="Int32" Nullable="false" />
-    <Property Name="direccion" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
-    <Property Name="TelefonoGneral" Type="Decimal" Precision="14" Scale="0" />
-    <Property Name="TelefonoMovil" Type="Decimal" Nullable="false" Precision="14" Scale="0" />
-    <Property Name="TelefonoCasa" Type="Decimal" Nullable="false" Precision="14" Scale="0" />
-    <Property Name="TelefonoOtros" Type="Decimal" Precision="14" Scale="0" />
-    <Property Name="mail" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Bodega" Relationship="ModelInventario.FK__Bodega__IdRespon__22FF2F51" FromRole="Persona" ToRole="Bodega" />
-    <NavigationProperty Name="IngresoEgresoCab" Relationship="ModelInventario.FK__IngresoEg__IdRes__10766AC2" FromRole="Persona" ToRole="IngresoEgresoCab" />
-    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Persona__IdEmpre__1BFD2C07" FromRole="Persona" ToRole="Empresa" />
-    <NavigationProperty Name="Usuario" Relationship="ModelInventario.FK__Usuario__IdUsuar__3C69FB99" FromRole="Persona" ToRole="Usuario" />
-  </EntityType>
-  <EntityType Name="Empresa">
-    <Key>
-      <PropertyRef Name="IdEmpresa" />
-    </Key>
-    <Property Name="IdEmpresa" Type="Int32" Nullable="false" />
-    <Property Name="RazonSocial" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="NombreComercial" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
-    <Property Name="Ruc" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
-    <Property Name="Direccion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
-    <Property Name="Logotipo" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <Property Name="FechaInicioSistema" Type="DateTime" />
-    <Property Name="Correo" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
-    <Property Name="SitioWeb" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
-    <Property Name="Sector" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
-    <Property Name="Descripcion" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <NavigationProperty Name="OrdenCompra" Relationship="ModelInventario.FK__OrdenComp__idEmp__0B27A5C0" FromRole="Empresa" ToRole="OrdenCompra" />
-    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdEmpr__58671BC9" FromRole="Empresa" ToRole="Articulo" />
-    <NavigationProperty Name="ArticuloBodega" Relationship="ModelInventario.FK__ArticuloB__IdEmp__1758727B" FromRole="Empresa" ToRole="ArticuloBodega" />
-    <NavigationProperty Name="Bodega" Relationship="ModelInventario.FK__Bodega__IdEmpres__220B0B18" FromRole="Empresa" ToRole="Bodega" />
-    <NavigationProperty Name="Chasis" Relationship="ModelInventario.FK__Chasis__IdEmpres__2E70E1FD" FromRole="Empresa" ToRole="Chasis" />
-    <NavigationProperty Name="Color" Relationship="ModelInventario.FK__Color__IdEmpresa__3F9B6DFF" FromRole="Empresa" ToRole="Color" />
-    <NavigationProperty Name="Grupo" Relationship="ModelInventario.FK__Grupo__IdEmpresa__6ABAD62E" FromRole="Empresa" ToRole="Grupo" />
-    <NavigationProperty Name="Marca" Relationship="ModelInventario.FK__Marca__IdEmpresa__45544755" FromRole="Empresa" ToRole="Marca" />
-    <NavigationProperty Name="Modelo" Relationship="ModelInventario.FK__Modelo__IdEmpres__4B0D20AB" FromRole="Empresa" ToRole="Modelo" />
-    <NavigationProperty Name="Motivo" Relationship="ModelInventario.FK__Motivo__IdEmpres__6D6238AF" FromRole="Empresa" ToRole="Motivo" />
-    <NavigationProperty Name="Percha" Relationship="ModelInventario.FK__Percha__IdEmpres__66B53B20" FromRole="Empresa" ToRole="Percha" />
-    <NavigationProperty Name="TipoArticulo" Relationship="ModelInventario.FK__TipoArtic__IdEmp__6501FCD8" FromRole="Empresa" ToRole="TipoArticulo" />
-    <NavigationProperty Name="TipoCombustible" Relationship="ModelInventario.FK__TipoCombu__IdEmp__39E294A9" FromRole="Empresa" ToRole="TipoCombustible" />
-    <NavigationProperty Name="TipoMaterial" Relationship="ModelInventario.FK__TipoMater__IdEmp__51BA1E3A" FromRole="Empresa" ToRole="TipoMaterial" />
-    <NavigationProperty Name="TipoMotor" Relationship="ModelInventario.FK__TipoMotor__IdEmp__3429BB53" FromRole="Empresa" ToRole="TipoMotor" />
-    <NavigationProperty Name="TipoMovimiento" Relationship="ModelInventario.FK__TipoMovim__IdEmp__119F9925" FromRole="Empresa" ToRole="TipoMovimiento" />
-    <NavigationProperty Name="TomaFisicaCab" Relationship="ModelInventario.FK__TomaFisic__IdEmp__025D5595" FromRole="Empresa" ToRole="TomaFisicaCab" />
-    <NavigationProperty Name="TomaFisicaDet" Relationship="ModelInventario.FK__TomaFisic__IdEmp__0BE6BFCF" FromRole="Empresa" ToRole="TomaFisicaDet" />
-    <NavigationProperty Name="TransferenciaBodegaCab" Relationship="ModelInventario.FK__Transfere__IdEmp__731B1205" FromRole="Empresa" ToRole="TransferenciaBodegaCab" />
-    <NavigationProperty Name="UnidadMedida" Relationship="ModelInventario.FK__UnidadMed__IdEmp__28B808A7" FromRole="Empresa" ToRole="UnidadMedida" />
-    <NavigationProperty Name="Persona" Relationship="ModelInventario.FK__Persona__IdEmpre__1BFD2C07" FromRole="Empresa" ToRole="Persona" />
-  </EntityType>
-  <EntityType Name="Usuario">
-    <Key>
-      <PropertyRef Name="IdUsuario" />
-    </Key>
-    <Property Name="IdUsuario" Type="Int32" Nullable="false" />
-    <Property Name="NombreUsuario" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
-    <Property Name="Contrasena" Type="String" Nullable="false" MaxLength="220" Unicode="false" FixedLength="false" />
-    <Property Name="IdEstado" Type="Int32" />
-    <Property Name="IdImagen" Type="Int32" />
-    <Property Name="IdPerfil" Type="Int32" />
-    <NavigationProperty Name="OrdenCompra" Relationship="ModelInventario.FK__OrdenComp__IdUsu__0C1BC9F9" FromRole="Usuario" ToRole="OrdenCompra" />
-    <NavigationProperty Name="IngresoEgresoCab" Relationship="ModelInventario.FK__IngresoEg__IdUsu__116A8EFB" FromRole="Usuario" ToRole="IngresoEgresoCab" />
-    <NavigationProperty Name="TomaFisicaCab" Relationship="ModelInventario.FK__TomaFisic__IdUsu__062DE679" FromRole="Usuario" ToRole="TomaFisicaCab" />
-    <NavigationProperty Name="TransferenciaBodegaCab" Relationship="ModelInventario.FK__Transfere__IdUsu__77DFC722" FromRole="Usuario" ToRole="TransferenciaBodegaCab" />
-    <NavigationProperty Name="Persona" Relationship="ModelInventario.FK__Usuario__IdUsuar__3C69FB99" FromRole="Usuario" ToRole="Persona" />
-  </EntityType>
-  <Association Name="FK__OrdenComp__idEst__0D0FEE32">
-    <End Role="Estado" Type="ModelInventario.Estado" Multiplicity="1" />
-    <End Role="OrdenCompra" Type="ModelInventario.OrdenCompra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Estado">
-        <PropertyRef Name="idEstado" />
-      </Principal>
-      <Dependent Role="OrdenCompra">
-        <PropertyRef Name="idEstado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__IngresoEgresoCab__0BB1B5A5">
-    <End Role="OrdenCompra" Type="ModelInventario.OrdenCompra" Multiplicity="0..1" />
-    <End Role="IngresoEgresoCab" Type="ModelInventario.IngresoEgresoCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="OrdenCompra">
-        <PropertyRef Name="IdOrdenCompra" />
-        <PropertyRef Name="idEmpresa" />
-      </Principal>
-      <Dependent Role="IngresoEgresoCab">
-        <PropertyRef Name="IdOrdenCompra" />
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__OrdenComp__idEmp__0B27A5C0">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="1" />
-    <End Role="OrdenCompra" Type="ModelInventario.OrdenCompra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="OrdenCompra">
-        <PropertyRef Name="idEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__OrdenComp__IdUsu__0C1BC9F9">
-    <End Role="Usuario" Type="ModelInventario.Usuario" Multiplicity="1" />
-    <End Role="OrdenCompra" Type="ModelInventario.OrdenCompra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="OrdenCompra">
-        <PropertyRef Name="IdUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__OrdenCompraDet__63F8CA06">
-    <End Role="OrdenCompra" Type="ModelInventario.OrdenCompra" Multiplicity="1" />
-    <End Role="OrdenCompraDet" Type="ModelInventario.OrdenCompraDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="OrdenCompra">
-        <PropertyRef Name="IdOrdenCompra" />
-        <PropertyRef Name="idEmpresa" />
-      </Principal>
-      <Dependent Role="OrdenCompraDet">
-        <PropertyRef Name="Numero" />
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__OrdenCompraDet__64ECEE3F">
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="1" />
-    <End Role="OrdenCompraDet" Type="ModelInventario.OrdenCompraDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Articulo">
-        <PropertyRef Name="IdArticulo" />
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="OrdenCompraDet">
-        <PropertyRef Name="IdArticulo" />
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Articulo__IdChas__5C37ACAD">
-    <End Role="Chasis" Type="ModelInventario.Chasis" Multiplicity="0..1" />
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="*" />
+  <Association Name="FK__Articulo__IdChas__5006DFF2">
+    <End Type="ModelInventario.Chasis" Role="Chasis" Multiplicity="0..1" />
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Chasis">
         <PropertyRef Name="IdChasis" />
@@ -849,9 +618,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdColo__5F141958">
-    <End Role="Color" Type="ModelInventario.Color" Multiplicity="0..1" />
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="*" />
+  <Association Name="FK__Articulo__IdColo__52E34C9D">
+    <End Type="ModelInventario.Color" Role="Color" Multiplicity="0..1" />
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Color">
         <PropertyRef Name="IdColor" />
@@ -861,21 +630,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdEmpr__58671BC9">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="1" />
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="Articulo">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Articulo__IdGrup__5B438874">
-    <End Role="Grupo" Type="ModelInventario.Grupo" Multiplicity="1" />
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="*" />
+  <Association Name="FK__Articulo__IdGrup__4F12BBB9">
+    <End Type="ModelInventario.Grupo" Role="Grupo" Multiplicity="1" />
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Grupo">
         <PropertyRef Name="IdGrupo" />
@@ -885,21 +642,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdMarc__60083D91">
-    <End Role="Marca" Type="ModelInventario.Marca" Multiplicity="0..1" />
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Marca">
-        <PropertyRef Name="IdMarca" />
-      </Principal>
-      <Dependent Role="Articulo">
-        <PropertyRef Name="IdMarca" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Articulo__IdMode__60FC61CA">
-    <End Role="Modelo" Type="ModelInventario.Modelo" Multiplicity="0..1" />
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="*" />
+  <Association Name="FK__Articulo__IdMode__54CB950F">
+    <End Type="ModelInventario.Modelo" Role="Modelo" Multiplicity="0..1" />
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Modelo">
         <PropertyRef Name="IdModelo" />
@@ -909,9 +654,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdTipo__5A4F643B">
-    <End Role="TipoArticulo" Type="ModelInventario.TipoArticulo" Multiplicity="1" />
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="*" />
+  <Association Name="FK__Articulo__IdTipo__4E1E9780">
+    <End Type="ModelInventario.TipoArticulo" Role="TipoArticulo" Multiplicity="1" />
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoArticulo">
         <PropertyRef Name="IdTipoArticulo" />
@@ -921,9 +666,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdTipo__5D2BD0E6">
-    <End Role="TipoMotor" Type="ModelInventario.TipoMotor" Multiplicity="0..1" />
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="*" />
+  <Association Name="FK__Articulo__IdTipo__50FB042B">
+    <End Type="ModelInventario.TipoMotor" Role="TipoMotor" Multiplicity="0..1" />
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoMotor">
         <PropertyRef Name="IdTipoMotor" />
@@ -933,9 +678,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdTipo__5E1FF51F">
-    <End Role="TipoCombustible" Type="ModelInventario.TipoCombustible" Multiplicity="0..1" />
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="*" />
+  <Association Name="FK__Articulo__IdTipo__51EF2864">
+    <End Type="ModelInventario.TipoCombustible" Role="TipoCombustible" Multiplicity="0..1" />
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoCombustible">
         <PropertyRef Name="IdTipoCombustible" />
@@ -945,9 +690,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdTipo__61F08603">
-    <End Role="TipoMaterial" Type="ModelInventario.TipoMaterial" Multiplicity="0..1" />
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="*" />
+  <Association Name="FK__Articulo__IdTipo__55BFB948">
+    <End Type="ModelInventario.TipoMaterial" Role="TipoMaterial" Multiplicity="0..1" />
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoMaterial">
         <PropertyRef Name="IdTipoMaterial" />
@@ -957,21 +702,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulo__IdUnid__595B4002">
-    <End Role="UnidadMedida" Type="ModelInventario.UnidadMedida" Multiplicity="0..1" />
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="UnidadMedida">
-        <PropertyRef Name="IdUnidadMedida" />
-      </Principal>
-      <Dependent Role="Articulo">
-        <PropertyRef Name="IdUnidadMedida" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ArticuloBodega__184C96B4">
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="0..1" />
-    <End Role="ArticuloBodega" Type="ModelInventario.ArticuloBodega" Multiplicity="*" />
+  <Association Name="FK__ArticuloBodega__7CD98669">
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="0..1" />
+    <End Type="ModelInventario.ArticuloBodega" Role="ArticuloBodega" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Articulo">
         <PropertyRef Name="IdArticulo" />
@@ -983,9 +716,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__IngresoEgresoDet__18178C8A">
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="0..1" />
-    <End Role="IngresoEgresoDet" Type="ModelInventario.IngresoEgresoDet" Multiplicity="*" />
+  <Association Name="FK__IngresoEgresoDet__5C37ACAD">
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="0..1" />
+    <End Type="ModelInventario.IngresoEgresoDet" Role="IngresoEgresoDet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Articulo">
         <PropertyRef Name="IdArticulo" />
@@ -997,9 +730,23 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TomaFisicaDet__0CDAE408">
-    <End Role="Articulo" Type="ModelInventario.Articulo" Multiplicity="0..1" />
-    <End Role="TomaFisicaDet" Type="ModelInventario.TomaFisicaDet" Multiplicity="*" />
+  <Association Name="FK__LlegadaMercaderi__5AA469F6">
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="0..1" />
+    <End Type="ModelInventario.LlegadaMercaderiaDet" Role="LlegadaMercaderiaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="LlegadaMercaderiaDet">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TomaFisicaDet__6BCEF5F8">
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="0..1" />
+    <End Type="ModelInventario.TomaFisicaDet" Role="TomaFisicaDet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Articulo">
         <PropertyRef Name="IdArticulo" />
@@ -1011,21 +758,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ArticuloB__IdEmp__1758727B">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="ArticuloBodega" Type="ModelInventario.ArticuloBodega" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="ArticuloBodega">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__ArticuloB__IdPer__1940BAED">
-    <End Role="Percha" Type="ModelInventario.Percha" Multiplicity="0..1" />
-    <End Role="ArticuloBodega" Type="ModelInventario.ArticuloBodega" Multiplicity="*" />
+  <Association Name="FK__ArticuloB__IdPer__7DCDAAA2">
+    <End Type="ModelInventario.Percha" Role="Percha" Multiplicity="0..1" />
+    <End Type="ModelInventario.ArticuloBodega" Role="ArticuloBodega" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Percha">
         <PropertyRef Name="IdPercha" />
@@ -1035,47 +770,23 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Bodega__IdEmpres__220B0B18">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="1" />
-    <End Role="Bodega" Type="ModelInventario.Bodega" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="Bodega">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Bodega__IdRespon__22FF2F51">
-    <End Role="Persona" Type="ModelInventario.Persona" Multiplicity="0..1" />
-    <End Role="Bodega" Type="ModelInventario.Bodega" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Persona">
-        <PropertyRef Name="IdPersona" />
-      </Principal>
-      <Dependent Role="Bodega">
-        <PropertyRef Name="IdResponsable" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__IngresoEgresoCab__0F824689">
-    <End Role="Bodega" Type="ModelInventario.Bodega" Multiplicity="0..1" />
-    <End Role="IngresoEgresoCab" Type="ModelInventario.IngresoEgresoCab" Multiplicity="*" />
+  <Association Name="FK__LlegadaMercaderi__64CCF2AE">
+    <End Type="ModelInventario.Bodega" Role="Bodega" Multiplicity="0..1" />
+    <End Type="ModelInventario.LlegadaMercaderiaCab" Role="LlegadaMercaderiaCab" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Bodega">
         <PropertyRef Name="IdBodega" />
         <PropertyRef Name="IdEmpresa" />
       </Principal>
-      <Dependent Role="IngresoEgresoCab">
+      <Dependent Role="LlegadaMercaderiaCab">
         <PropertyRef Name="IdBodega" />
         <PropertyRef Name="IdEmpresa" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Percha__67A95F59">
-    <End Role="Bodega" Type="ModelInventario.Bodega" Multiplicity="1" />
-    <End Role="Percha" Type="ModelInventario.Percha" Multiplicity="*" />
+  <Association Name="FK__Percha__59904A2C">
+    <End Type="ModelInventario.Bodega" Role="Bodega" Multiplicity="1" />
+    <End Type="ModelInventario.Percha" Role="Percha" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Bodega">
         <PropertyRef Name="IdBodega" />
@@ -1087,9 +798,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TomaFisicaCab__0539C240">
-    <End Role="Bodega" Type="ModelInventario.Bodega" Multiplicity="0..1" />
-    <End Role="TomaFisicaCab" Type="ModelInventario.TomaFisicaCab" Multiplicity="*" />
+  <Association Name="FK__TomaFisicaCab__6F7F8B4B">
+    <End Type="ModelInventario.Bodega" Role="Bodega" Multiplicity="0..1" />
+    <End Type="ModelInventario.TomaFisicaCab" Role="TomaFisicaCab" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Bodega">
         <PropertyRef Name="IdBodega" />
@@ -1101,9 +812,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TransferenciaBod__740F363E">
-    <End Role="Bodega" Type="ModelInventario.Bodega" Multiplicity="0..1" />
-    <End Role="TransferenciaBodegaCab" Type="ModelInventario.TransferenciaBodegaCab" Multiplicity="*" />
+  <Association Name="FK__TransferenciaBod__6225902D">
+    <End Type="ModelInventario.Bodega" Role="Bodega" Multiplicity="0..1" />
+    <End Type="ModelInventario.TransferenciaBodegaCab" Role="TransferenciaBodegaCab" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Bodega">
         <PropertyRef Name="IdBodega" />
@@ -1115,9 +826,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TransferenciaBod__75035A77">
-    <End Role="Bodega" Type="ModelInventario.Bodega" Multiplicity="0..1" />
-    <End Role="TransferenciaBodegaCab" Type="ModelInventario.TransferenciaBodegaCab" Multiplicity="*" />
+  <Association Name="FK__TransferenciaBod__6319B466">
+    <End Type="ModelInventario.Bodega" Role="Bodega" Multiplicity="0..1" />
+    <End Type="ModelInventario.TransferenciaBodegaCab" Role="TransferenciaBodegaCab" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Bodega">
         <PropertyRef Name="IdBodega" />
@@ -1129,45 +840,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Chasis__IdEmpres__2E70E1FD">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="Chasis" Type="ModelInventario.Chasis" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="Chasis">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Color__IdEmpresa__3F9B6DFF">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="Color" Type="ModelInventario.Color" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="Color">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Grupo__IdEmpresa__6ABAD62E">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="Grupo" Type="ModelInventario.Grupo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="Grupo">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Grupo__IdTipoArt__6BAEFA67">
-    <End Role="TipoArticulo" Type="ModelInventario.TipoArticulo" Multiplicity="0..1" />
-    <End Role="Grupo" Type="ModelInventario.Grupo" Multiplicity="*" />
+  <Association Name="FK__Grupo__IdTipoArt__7E02B4CC">
+    <End Type="ModelInventario.TipoArticulo" Role="TipoArticulo" Multiplicity="0..1" />
+    <End Type="ModelInventario.Grupo" Role="Grupo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoArticulo">
         <PropertyRef Name="IdTipoArticulo" />
@@ -1177,83 +852,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__IngresoEg__IdGru__190BB0C3">
-    <End Role="Grupo" Type="ModelInventario.Grupo" Multiplicity="0..1" />
-    <End Role="IngresoEgresoDet" Type="ModelInventario.IngresoEgresoDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Grupo">
-        <PropertyRef Name="IdGrupo" />
-      </Principal>
-      <Dependent Role="IngresoEgresoDet">
-        <PropertyRef Name="IdGrupo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__IngresoEg__IdMot__0E8E2250">
-    <End Role="Motivo" Type="ModelInventario.Motivo" Multiplicity="0..1" />
-    <End Role="IngresoEgresoCab" Type="ModelInventario.IngresoEgresoCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Motivo">
-        <PropertyRef Name="IdMotivo" />
-      </Principal>
-      <Dependent Role="IngresoEgresoCab">
-        <PropertyRef Name="IdMotivo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__IngresoEg__IdRes__10766AC2">
-    <End Role="Persona" Type="ModelInventario.Persona" Multiplicity="0..1" />
-    <End Role="IngresoEgresoCab" Type="ModelInventario.IngresoEgresoCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Persona">
-        <PropertyRef Name="IdPersona" />
-      </Principal>
-      <Dependent Role="IngresoEgresoCab">
-        <PropertyRef Name="IdResponsable" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__IngresoEg__IdTip__0CA5D9DE">
-    <End Role="TipoMovimiento" Type="ModelInventario.TipoMovimiento" Multiplicity="0..1" />
-    <End Role="IngresoEgresoCab" Type="ModelInventario.IngresoEgresoCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TipoMovimiento">
-        <PropertyRef Name="IdTipoMovimiento" />
-      </Principal>
-      <Dependent Role="IngresoEgresoCab">
-        <PropertyRef Name="IdTipoMovimiento" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__IngresoEg__IdUsu__116A8EFB">
-    <End Role="Usuario" Type="ModelInventario.Usuario" Multiplicity="0..1" />
-    <End Role="IngresoEgresoCab" Type="ModelInventario.IngresoEgresoCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="IngresoEgresoCab">
-        <PropertyRef Name="IdUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__IngresoEgresoDet__17236851">
-    <End Role="IngresoEgresoCab" Type="ModelInventario.IngresoEgresoCab" Multiplicity="0..1" />
-    <End Role="IngresoEgresoDet" Type="ModelInventario.IngresoEgresoDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="IngresoEgresoCab">
-        <PropertyRef Name="IdEmpresa" />
-        <PropertyRef Name="NroMovimiento" />
-      </Principal>
-      <Dependent Role="IngresoEgresoDet">
-        <PropertyRef Name="IdEmpresa" />
-        <PropertyRef Name="NroMovimiento" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__IngresoEg__IdPer__19FFD4FC">
-    <End Role="Percha" Type="ModelInventario.Percha" Multiplicity="0..1" />
-    <End Role="IngresoEgresoDet" Type="ModelInventario.IngresoEgresoDet" Multiplicity="*" />
+  <Association Name="FK__IngresoEg__IdPer__5D2BD0E6">
+    <End Type="ModelInventario.Percha" Role="Percha" Multiplicity="0..1" />
+    <End Type="ModelInventario.IngresoEgresoDet" Role="IngresoEgresoDet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Percha">
         <PropertyRef Name="IdPercha" />
@@ -1263,69 +864,59 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__IngresoEg__IdTip__162F4418">
-    <End Role="TipoArticulo" Type="ModelInventario.TipoArticulo" Multiplicity="0..1" />
-    <End Role="IngresoEgresoDet" Type="ModelInventario.IngresoEgresoDet" Multiplicity="*" />
+  <Association Name="FK__LlegadaMe__IdMot__63D8CE75">
+    <End Type="ModelInventario.Motivo" Role="Motivo" Multiplicity="0..1" />
+    <End Type="ModelInventario.LlegadaMercaderiaCab" Role="LlegadaMercaderiaCab" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="TipoArticulo">
-        <PropertyRef Name="IdTipoArticulo" />
+      <Principal Role="Motivo">
+        <PropertyRef Name="IdMotivo" />
       </Principal>
-      <Dependent Role="IngresoEgresoDet">
-        <PropertyRef Name="IdTipoArticulo" />
+      <Dependent Role="LlegadaMercaderiaCab">
+        <PropertyRef Name="IdMotivo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Marca__IdEmpresa__45544755">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="Marca" Type="ModelInventario.Marca" Multiplicity="*" />
+  <Association Name="FK__LlegadaMe__IdTip__61F08603">
+    <End Type="ModelInventario.TipoMovimiento" Role="TipoMovimiento" Multiplicity="0..1" />
+    <End Type="ModelInventario.LlegadaMercaderiaCab" Role="LlegadaMercaderiaCab" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
+      <Principal Role="TipoMovimiento">
+        <PropertyRef Name="IdTipoMovimiento" />
       </Principal>
-      <Dependent Role="Marca">
-        <PropertyRef Name="IdEmpresa" />
+      <Dependent Role="LlegadaMercaderiaCab">
+        <PropertyRef Name="IdTipoMovimiento" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Modelo__IdMarca__4CF5691D">
-    <End Role="Marca" Type="ModelInventario.Marca" Multiplicity="0..1" />
-    <End Role="Modelo" Type="ModelInventario.Modelo" Multiplicity="*" />
+  <Association Name="FK__LlegadaMercaderi__59B045BD">
+    <End Type="ModelInventario.LlegadaMercaderiaCab" Role="LlegadaMercaderiaCab" Multiplicity="1" />
+    <End Type="ModelInventario.LlegadaMercaderiaDet" Role="LlegadaMercaderiaDet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Marca">
-        <PropertyRef Name="IdMarca" />
+      <Principal Role="LlegadaMercaderiaCab">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NroMovimiento" />
       </Principal>
-      <Dependent Role="Modelo">
-        <PropertyRef Name="IdMarca" />
+      <Dependent Role="LlegadaMercaderiaDet">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NroMovimiento" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Modelo__IdEmpres__4B0D20AB">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="Modelo" Type="ModelInventario.Modelo" Multiplicity="*" />
+  <Association Name="FK__LlegadaMe__IdPer__5B988E2F">
+    <End Type="ModelInventario.Percha" Role="Percha" Multiplicity="0..1" />
+    <End Type="ModelInventario.LlegadaMercaderiaDet" Role="LlegadaMercaderiaDet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
+      <Principal Role="Percha">
+        <PropertyRef Name="IdPercha" />
       </Principal>
-      <Dependent Role="Modelo">
-        <PropertyRef Name="IdEmpresa" />
+      <Dependent Role="LlegadaMercaderiaDet">
+        <PropertyRef Name="IdPercha" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Motivo__IdEmpres__6D6238AF">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="Motivo" Type="ModelInventario.Motivo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="Motivo">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TomaFisic__IdMot__035179CE">
-    <End Role="Motivo" Type="ModelInventario.Motivo" Multiplicity="0..1" />
-    <End Role="TomaFisicaCab" Type="ModelInventario.TomaFisicaCab" Multiplicity="*" />
+  <Association Name="FK__TomaFisic__IdMot__6D9742D9">
+    <End Type="ModelInventario.Motivo" Role="Motivo" Multiplicity="0..1" />
+    <End Type="ModelInventario.TomaFisicaCab" Role="TomaFisicaCab" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Motivo">
         <PropertyRef Name="IdMotivo" />
@@ -1335,9 +926,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Transfere__IdMot__75F77EB0">
-    <End Role="Motivo" Type="ModelInventario.Motivo" Multiplicity="0..1" />
-    <End Role="TransferenciaBodegaCab" Type="ModelInventario.TransferenciaBodegaCab" Multiplicity="*" />
+  <Association Name="FK__Transfere__IdMot__640DD89F">
+    <End Type="ModelInventario.Motivo" Role="Motivo" Multiplicity="0..1" />
+    <End Type="ModelInventario.TransferenciaBodegaCab" Role="TransferenciaBodegaCab" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Motivo">
         <PropertyRef Name="IdMotivo" />
@@ -1347,33 +938,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Percha__IdEmpres__66B53B20">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="1" />
-    <End Role="Percha" Type="ModelInventario.Percha" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="Percha">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TipoArtic__IdEmp__6501FCD8">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="TipoArticulo" Type="ModelInventario.TipoArticulo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="TipoArticulo">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TomaFisic__IdTip__04459E07">
-    <End Role="TipoArticulo" Type="ModelInventario.TipoArticulo" Multiplicity="0..1" />
-    <End Role="TomaFisicaCab" Type="ModelInventario.TomaFisicaCab" Multiplicity="*" />
+  <Association Name="FK__TomaFisic__IdTip__6E8B6712">
+    <End Type="ModelInventario.TipoArticulo" Role="TipoArticulo" Multiplicity="0..1" />
+    <End Type="ModelInventario.TomaFisicaCab" Role="TomaFisicaCab" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoArticulo">
         <PropertyRef Name="IdTipoArticulo" />
@@ -1383,117 +950,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TipoCombu__IdEmp__39E294A9">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="TipoCombustible" Type="ModelInventario.TipoCombustible" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="TipoCombustible">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TipoMater__IdEmp__51BA1E3A">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="TipoMaterial" Type="ModelInventario.TipoMaterial" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="TipoMaterial">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TipoMotor__IdEmp__3429BB53">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="TipoMotor" Type="ModelInventario.TipoMotor" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="TipoMotor">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TipoMovim__IdEmp__119F9925">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="TipoMovimiento" Type="ModelInventario.TipoMovimiento" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="TipoMovimiento">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TomaFisic__IdEmp__025D5595">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="TomaFisicaCab" Type="ModelInventario.TomaFisicaCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="TomaFisicaCab">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TomaFisic__IdUsu__062DE679">
-    <End Role="Usuario" Type="ModelInventario.Usuario" Multiplicity="0..1" />
-    <End Role="TomaFisicaCab" Type="ModelInventario.TomaFisicaCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="TomaFisicaCab">
-        <PropertyRef Name="IdUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TomaFisic__IdEmp__0BE6BFCF">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="TomaFisicaDet" Type="ModelInventario.TomaFisicaDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="TomaFisicaDet">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Transfere__IdEmp__731B1205">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="TransferenciaBodegaCab" Type="ModelInventario.TransferenciaBodegaCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Empresa">
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="TransferenciaBodegaCab">
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Transfere__IdUsu__77DFC722">
-    <End Role="Usuario" Type="ModelInventario.Usuario" Multiplicity="0..1" />
-    <End Role="TransferenciaBodegaCab" Type="ModelInventario.TransferenciaBodegaCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
-      </Principal>
-      <Dependent Role="TransferenciaBodegaCab">
-        <PropertyRef Name="IdUsuario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Transfere__NroTr__7CA47C3F">
-    <End Role="TransferenciaBodegaCab" Type="ModelInventario.TransferenciaBodegaCab" Multiplicity="1" />
-    <End Role="TransferenciaBodegaDet" Type="ModelInventario.TransferenciaBodegaDet" Multiplicity="0..1" />
+  <Association Name="FK__Transfere__NroTr__68D28DBC">
+    <End Type="ModelInventario.TransferenciaBodegaCab" Role="TransferenciaBodegaCab" Multiplicity="1" />
+    <End Type="ModelInventario.TransferenciaBodegaDet" Role="TransferenciaBodegaDet" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="TransferenciaBodegaCab">
         <PropertyRef Name="NroTransferencia" />
@@ -1503,9 +962,408 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__UnidadMed__IdEmp__28B808A7">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="0..1" />
-    <End Role="UnidadMedida" Type="ModelInventario.UnidadMedida" Multiplicity="*" />
+  <EntityType Name="Marca">
+    <Key>
+      <PropertyRef Name="IdMarca" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="IdMarca" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdMarc__53D770D6" FromRole="Marca" ToRole="Articulo" />
+    <NavigationProperty Name="Modelo" Relationship="ModelInventario.FK__Modelo__IdMarca__44952D46" FromRole="Marca" ToRole="Modelo" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__Marca__IdEmpresa__3EDC53F0" FromRole="Marca" ToRole="Empresa" />
+  </EntityType>
+  <Association Name="FK__Articulo__IdMarc__53D770D6">
+    <End Type="ModelInventario.Marca" Role="Marca" Multiplicity="0..1" />
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marca">
+        <PropertyRef Name="IdMarca" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdMarca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Modelo__IdMarca__44952D46">
+    <End Type="ModelInventario.Marca" Role="Marca" Multiplicity="0..1" />
+    <End Type="ModelInventario.Modelo" Role="Modelo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marca">
+        <PropertyRef Name="IdMarca" />
+      </Principal>
+      <Dependent Role="Modelo">
+        <PropertyRef Name="IdMarca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OrdenCompra">
+    <Key>
+      <PropertyRef Name="IdOrdenCompra" />
+      <PropertyRef Name="idEmpresa" />
+    </Key>
+    <Property Type="Int32" Name="IdOrdenCompra" Nullable="false" />
+    <Property Type="Int32" Name="idEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="IdUsuario" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="false" />
+    <Property Type="Int32" Name="idProveedor" Nullable="false" />
+    <Property Type="Int32" Name="NumeroCotizacion" Nullable="false" />
+    <Property Type="Int32" Name="idEstado" Nullable="false" />
+    <Property Type="String" Name="Observaciones" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="LlegadaMercaderiaCab" Relationship="ModelInventario.FK__LlegadaMercaderi__60083D91" FromRole="OrdenCompra" ToRole="LlegadaMercaderiaCab" />
+    <NavigationProperty Name="OrdenCompraDet" Relationship="ModelInventario.FK__OrdenCompraDet__48BAC3E5" FromRole="OrdenCompra" ToRole="OrdenCompraDet" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__OrdenComp__idEmp__15DA3E5D" FromRole="OrdenCompra" ToRole="Empresa" />
+  </EntityType>
+  <EntityType Name="OrdenCompraDet">
+    <Key>
+      <PropertyRef Name="Numero" />
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Type="Int32" Name="Numero" Nullable="false" />
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="Linea" Nullable="false" />
+    <Property Type="Int32" Name="IdArticulo" Nullable="false" />
+    <Property Type="Int32" Name="Cantidad" Nullable="false" />
+    <Property Type="Int32" Name="Precio" Nullable="false" />
+    <NavigationProperty Name="OrdenCompra" Relationship="ModelInventario.FK__OrdenCompraDet__48BAC3E5" FromRole="OrdenCompraDet" ToRole="OrdenCompra" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__OrdenCompraDet__49AEE81E" FromRole="OrdenCompraDet" ToRole="Articulo" />
+  </EntityType>
+  <Association Name="FK__LlegadaMercaderi__60083D91">
+    <End Type="ModelInventario.OrdenCompra" Role="OrdenCompra" Multiplicity="0..1" />
+    <End Type="ModelInventario.LlegadaMercaderiaCab" Role="LlegadaMercaderiaCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenCompra">
+        <PropertyRef Name="IdOrdenCompra" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="LlegadaMercaderiaCab">
+        <PropertyRef Name="IdOrdenCompra" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenCompraDet__48BAC3E5">
+    <End Type="ModelInventario.OrdenCompra" Role="OrdenCompra" Multiplicity="1" />
+    <End Type="ModelInventario.OrdenCompraDet" Role="OrdenCompraDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenCompra">
+        <PropertyRef Name="IdOrdenCompra" />
+        <PropertyRef Name="idEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenCompraDet">
+        <PropertyRef Name="Numero" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenCompraDet__49AEE81E">
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="1" />
+    <End Type="ModelInventario.OrdenCompraDet" Role="OrdenCompraDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Articulo">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenCompraDet">
+        <PropertyRef Name="IdArticulo" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="UnidadMedida">
+    <Key>
+      <PropertyRef Name="IdUnidadMedida" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" />
+    <Property Type="Int32" Name="IdUnidadMedida" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdUnid__4D2A7347" FromRole="UnidadMedida" ToRole="Articulo" />
+    <NavigationProperty Name="Empresa" Relationship="ModelInventario.FK__UnidadMed__IdEmp__2BC97F7C" FromRole="UnidadMedida" ToRole="Empresa" />
+  </EntityType>
+  <Association Name="FK__Articulo__IdUnid__4D2A7347">
+    <End Type="ModelInventario.UnidadMedida" Role="UnidadMedida" Multiplicity="0..1" />
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnidadMedida">
+        <PropertyRef Name="IdUnidadMedida" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdUnidadMedida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="String" Name="RazonSocial" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreComercial" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Ruc" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Direccion" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Binary" Name="Logotipo" MaxLength="Max" FixedLength="false" />
+    <Property Type="DateTime" Name="FechaInicioSistema" />
+    <Property Type="String" Name="Correo" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SitioWeb" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Sector" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="OrdenCompra" Relationship="ModelInventario.FK__OrdenComp__idEmp__15DA3E5D" FromRole="Empresa" ToRole="OrdenCompra" />
+    <NavigationProperty Name="Articulo" Relationship="ModelInventario.FK__Articulo__IdEmpr__4C364F0E" FromRole="Empresa" ToRole="Articulo" />
+    <NavigationProperty Name="ArticuloBodega" Relationship="ModelInventario.FK__ArticuloB__IdEmp__7BE56230" FromRole="Empresa" ToRole="ArticuloBodega" />
+    <NavigationProperty Name="Bodega" Relationship="ModelInventario.FK__Bodega__IdEmpres__2704CA5F" FromRole="Empresa" ToRole="Bodega" />
+    <NavigationProperty Name="Chasis" Relationship="ModelInventario.FK__Chasis__IdEmpres__2F9A1060" FromRole="Empresa" ToRole="Chasis" />
+    <NavigationProperty Name="Color" Relationship="ModelInventario.FK__Color__IdEmpresa__3B0BC30C" FromRole="Empresa" ToRole="Color" />
+    <NavigationProperty Name="Grupo" Relationship="ModelInventario.FK__Grupo__IdEmpresa__7D0E9093" FromRole="Empresa" ToRole="Grupo" />
+    <NavigationProperty Name="Marca" Relationship="ModelInventario.FK__Marca__IdEmpresa__3EDC53F0" FromRole="Empresa" ToRole="Marca" />
+    <NavigationProperty Name="Modelo" Relationship="ModelInventario.FK__Modelo__IdEmpres__42ACE4D4" FromRole="Empresa" ToRole="Modelo" />
+    <NavigationProperty Name="Motivo" Relationship="ModelInventario.FK__Motivo__IdEmpres__5D60DB10" FromRole="Empresa" ToRole="Motivo" />
+    <NavigationProperty Name="Percha" Relationship="ModelInventario.FK__Percha__IdEmpres__589C25F3" FromRole="Empresa" ToRole="Percha" />
+    <NavigationProperty Name="TipoArticulo" Relationship="ModelInventario.FK__TipoArtic__IdEmp__793DFFAF" FromRole="Empresa" ToRole="TipoArticulo" />
+    <NavigationProperty Name="TipoCombustible" Relationship="ModelInventario.FK__TipoCombu__IdEmp__373B3228" FromRole="Empresa" ToRole="TipoCombustible" />
+    <NavigationProperty Name="TipoMaterial" Relationship="ModelInventario.FK__TipoMater__IdEmp__477199F1" FromRole="Empresa" ToRole="TipoMaterial" />
+    <NavigationProperty Name="TipoMotor" Relationship="ModelInventario.FK__TipoMotor__IdEmp__336AA144" FromRole="Empresa" ToRole="TipoMotor" />
+    <NavigationProperty Name="TipoMovimiento" Relationship="ModelInventario.FK__TipoMovim__IdEmp__7814D14C" FromRole="Empresa" ToRole="TipoMovimiento" />
+    <NavigationProperty Name="TomaFisicaCab" Relationship="ModelInventario.FK__TomaFisic__IdEmp__6CA31EA0" FromRole="Empresa" ToRole="TomaFisicaCab" />
+    <NavigationProperty Name="TomaFisicaDet" Relationship="ModelInventario.FK__TomaFisic__IdEmp__6ADAD1BF" FromRole="Empresa" ToRole="TomaFisicaDet" />
+    <NavigationProperty Name="TransferenciaBodegaCab" Relationship="ModelInventario.FK__Transfere__IdEmp__61316BF4" FromRole="Empresa" ToRole="TransferenciaBodegaCab" />
+    <NavigationProperty Name="UnidadMedida" Relationship="ModelInventario.FK__UnidadMed__IdEmp__2BC97F7C" FromRole="Empresa" ToRole="UnidadMedida" />
+  </EntityType>
+  <Association Name="FK__OrdenComp__idEmp__15DA3E5D">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="ModelInventario.OrdenCompra" Role="OrdenCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenCompra">
+        <PropertyRef Name="idEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Articulo__IdEmpr__4C364F0E">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="ModelInventario.Articulo" Role="Articulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Articulo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ArticuloB__IdEmp__7BE56230">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.ArticuloBodega" Role="ArticuloBodega" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="ArticuloBodega">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Bodega__IdEmpres__2704CA5F">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="ModelInventario.Bodega" Role="Bodega" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Bodega">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chasis__IdEmpres__2F9A1060">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.Chasis" Role="Chasis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Chasis">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Color__IdEmpresa__3B0BC30C">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.Color" Role="Color" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Color">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Grupo__IdEmpresa__7D0E9093">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.Grupo" Role="Grupo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Grupo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Marca__IdEmpresa__3EDC53F0">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.Marca" Role="Marca" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Marca">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Modelo__IdEmpres__42ACE4D4">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.Modelo" Role="Modelo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Modelo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Motivo__IdEmpres__5D60DB10">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.Motivo" Role="Motivo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Motivo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Percha__IdEmpres__589C25F3">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="1" />
+    <End Type="ModelInventario.Percha" Role="Percha" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Percha">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoArtic__IdEmp__793DFFAF">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.TipoArticulo" Role="TipoArticulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoArticulo">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoCombu__IdEmp__373B3228">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.TipoCombustible" Role="TipoCombustible" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoCombustible">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoMater__IdEmp__477199F1">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.TipoMaterial" Role="TipoMaterial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoMaterial">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoMotor__IdEmp__336AA144">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.TipoMotor" Role="TipoMotor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoMotor">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TipoMovim__IdEmp__7814D14C">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.TipoMovimiento" Role="TipoMovimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TipoMovimiento">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TomaFisic__IdEmp__6CA31EA0">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.TomaFisicaCab" Role="TomaFisicaCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TomaFisicaCab">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TomaFisic__IdEmp__6ADAD1BF">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.TomaFisicaDet" Role="TomaFisicaDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TomaFisicaDet">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Transfere__IdEmp__61316BF4">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.TransferenciaBodegaCab" Role="TransferenciaBodegaCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="TransferenciaBodegaCab">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UnidadMed__IdEmp__2BC97F7C">
+    <End Type="ModelInventario.Empresa" Role="Empresa" Multiplicity="0..1" />
+    <End Type="ModelInventario.UnidadMedida" Role="UnidadMedida" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1515,29 +1373,75 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Persona__IdEmpre__1BFD2C07">
-    <End Role="Empresa" Type="ModelInventario.Empresa" Multiplicity="1" />
-    <End Role="Persona" Type="ModelInventario.Persona" Multiplicity="*" />
+  <EntityType Name="IngresoEgresoCab">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="NroMovimiento" />
+    </Key>
+    <Property Type="Int32" Name="IdEmpresa" Nullable="false" />
+    <Property Type="Int32" Name="NroMovimiento" Nullable="false" />
+    <Property Type="Int32" Name="IdTipoMovimiento" />
+    <Property Type="DateTime" Name="FechaMovimiento" />
+    <Property Type="Int32" Name="IdMotivo" />
+    <Property Type="Int32" Name="IdBodega" />
+    <Property Type="Int32" Name="IdResponsable" />
+    <Property Type="String" Name="Observacion" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdUsuario" />
+    <Property Type="Int32" Name="IdEstado" />
+    <NavigationProperty Name="Bodega" Relationship="ModelInventario.FK__IngresoEgresoCab__0D99FE17" FromRole="IngresoEgresoCab" ToRole="Bodega" />
+    <NavigationProperty Name="Motivo" Relationship="ModelInventario.FK__IngresoEg__IdMot__0CA5D9DE" FromRole="IngresoEgresoCab" ToRole="Motivo" />
+    <NavigationProperty Name="TipoMovimiento" Relationship="ModelInventario.FK__IngresoEg__IdTip__0ABD916C" FromRole="IngresoEgresoCab" ToRole="TipoMovimiento" />
+    <NavigationProperty Name="IngresoEgresoDet" Relationship="ModelInventario.FK__IngresoEgresoDet__1446FBA6" FromRole="IngresoEgresoCab" ToRole="IngresoEgresoDet" />
+  </EntityType>
+  <Association Name="FK__IngresoEgresoCab__0D99FE17">
+    <End Type="ModelInventario.Bodega" Role="Bodega" Multiplicity="0..1" />
+    <End Type="ModelInventario.IngresoEgresoCab" Role="IngresoEgresoCab" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Empresa">
+      <Principal Role="Bodega">
+        <PropertyRef Name="IdBodega" />
         <PropertyRef Name="IdEmpresa" />
       </Principal>
-      <Dependent Role="Persona">
+      <Dependent Role="IngresoEgresoCab">
+        <PropertyRef Name="IdBodega" />
         <PropertyRef Name="IdEmpresa" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Usuario__IdUsuar__3C69FB99">
-    <End Role="Persona" Type="ModelInventario.Persona" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Usuario" Type="ModelInventario.Usuario" Multiplicity="0..1" />
+  <Association Name="FK__IngresoEg__IdMot__0CA5D9DE">
+    <End Type="ModelInventario.Motivo" Role="Motivo" Multiplicity="0..1" />
+    <End Type="ModelInventario.IngresoEgresoCab" Role="IngresoEgresoCab" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Persona">
-        <PropertyRef Name="IdPersona" />
+      <Principal Role="Motivo">
+        <PropertyRef Name="IdMotivo" />
       </Principal>
-      <Dependent Role="Usuario">
-        <PropertyRef Name="IdUsuario" />
+      <Dependent Role="IngresoEgresoCab">
+        <PropertyRef Name="IdMotivo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEg__IdTip__0ABD916C">
+    <End Type="ModelInventario.TipoMovimiento" Role="TipoMovimiento" Multiplicity="0..1" />
+    <End Type="ModelInventario.IngresoEgresoCab" Role="IngresoEgresoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoMovimiento">
+        <PropertyRef Name="IdTipoMovimiento" />
+      </Principal>
+      <Dependent Role="IngresoEgresoCab">
+        <PropertyRef Name="IdTipoMovimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IngresoEgresoDet__1446FBA6">
+    <End Type="ModelInventario.IngresoEgresoCab" Role="IngresoEgresoCab" Multiplicity="0..1" />
+    <End Type="ModelInventario.IngresoEgresoDet" Role="IngresoEgresoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IngresoEgresoCab">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NroMovimiento" />
+      </Principal>
+      <Dependent Role="IngresoEgresoDet">
+        <PropertyRef Name="IdEmpresa" />
+        <PropertyRef Name="NroMovimiento" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

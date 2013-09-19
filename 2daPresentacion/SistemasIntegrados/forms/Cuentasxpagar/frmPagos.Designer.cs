@@ -88,22 +88,32 @@
             this.txtTotalito = new DevExpress.XtraEditors.TextEdit();
             this.tbpEmpleados = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTotalEmpleado = new DevExpress.XtraEditors.TextEdit();
             this.gdcNomina = new DevExpress.XtraGrid.GridControl();
-            this.clsNominaCabBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clsOrdenPagoEmpleadoDetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colNumNomina = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFechaEmision = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTotal = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colIdEmpleado = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colObservacion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNumOrdenPago = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdEmpresa2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAutorizarPago = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLinea = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdPersona = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSueldoTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIngresoAdicional = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDescuentoTotal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPagoNeto = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.tbpServicios = new System.Windows.Forms.TabPage();
             this.gdcDeudaServicio = new DevExpress.XtraGrid.GridControl();
             this.gridView12 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gdcNroFactura = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gdcMotivo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gdcTotalPagar = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNumLinea3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNumCuentaPorPagar1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNumDetalleDeuda1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSaldoDeuda1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNumeroPagosRealizar1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNumOrdenCab = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTotalPagar1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdEmpresa3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clsNominaCabBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbxNroOrdenPagoProveedores = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.clsOrdenPagoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchLookUpEdit4View = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -112,9 +122,9 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tsbModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
             this.tsbSalir = new System.Windows.Forms.ToolStripButton();
+            this.tsbImprimir = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNumPago = new DevExpress.XtraEditors.TextEdit();
             this.label9 = new System.Windows.Forms.Label();
@@ -131,6 +141,10 @@
             this.lblEstado = new System.Windows.Forms.Label();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.clsNominaDetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbxEmpleado = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.cbxVarios = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdcDetalleNomina)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsPagoDetalleDosBindingSource)).BeginInit();
@@ -156,14 +170,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalito.Properties)).BeginInit();
             this.tbpEmpleados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalEmpleado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdcNomina)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsNominaCabBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsOrdenPagoEmpleadoDetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             this.tbpServicios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdcDeudaServicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsNominaCabBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxNroOrdenPagoProveedores.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsOrdenPagoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit4View)).BeginInit();
@@ -176,6 +191,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gdcConsultaBancaria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsNominaDetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxEmpleado.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxVarios.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -235,6 +254,7 @@
             // 
             this.colNumLinea2.FieldName = "NumLinea";
             this.colNumLinea2.Name = "colNumLinea2";
+            this.colNumLinea2.OptionsColumn.AllowEdit = false;
             this.colNumLinea2.Visible = true;
             this.colNumLinea2.VisibleIndex = 0;
             // 
@@ -242,6 +262,7 @@
             // 
             this.colIdMedioPago1.FieldName = "IdMedioPago";
             this.colIdMedioPago1.Name = "colIdMedioPago1";
+            this.colIdMedioPago1.OptionsColumn.AllowEdit = false;
             this.colIdMedioPago1.Visible = true;
             this.colIdMedioPago1.VisibleIndex = 1;
             // 
@@ -249,6 +270,7 @@
             // 
             this.colMonto1.FieldName = "Monto";
             this.colMonto1.Name = "colMonto1";
+            this.colMonto1.OptionsColumn.AllowEdit = false;
             this.colMonto1.Visible = true;
             this.colMonto1.VisibleIndex = 2;
             // 
@@ -256,6 +278,7 @@
             // 
             this.colNumeroCuenta2.FieldName = "NumeroCuenta";
             this.colNumeroCuenta2.Name = "colNumeroCuenta2";
+            this.colNumeroCuenta2.OptionsColumn.AllowEdit = false;
             this.colNumeroCuenta2.Visible = true;
             this.colNumeroCuenta2.VisibleIndex = 3;
             // 
@@ -263,6 +286,7 @@
             // 
             this.colIdEmpresa.FieldName = "IdEmpresa";
             this.colIdEmpresa.Name = "colIdEmpresa";
+            this.colIdEmpresa.OptionsColumn.AllowEdit = false;
             this.colIdEmpresa.Visible = true;
             this.colIdEmpresa.VisibleIndex = 4;
             // 
@@ -270,6 +294,7 @@
             // 
             this.colIdBanco2.FieldName = "IdBanco";
             this.colIdBanco2.Name = "colIdBanco2";
+            this.colIdBanco2.OptionsColumn.AllowEdit = false;
             this.colIdBanco2.Visible = true;
             this.colIdBanco2.VisibleIndex = 5;
             // 
@@ -277,6 +302,7 @@
             // 
             this.colNumComprobante1.FieldName = "NumComprobante";
             this.colNumComprobante1.Name = "colNumComprobante1";
+            this.colNumComprobante1.OptionsColumn.AllowEdit = false;
             this.colNumComprobante1.Visible = true;
             this.colNumComprobante1.VisibleIndex = 6;
             // 
@@ -284,6 +310,7 @@
             // 
             this.colNumNominaCab.FieldName = "NumNominaCab";
             this.colNumNominaCab.Name = "colNumNominaCab";
+            this.colNumNominaCab.OptionsColumn.AllowEdit = false;
             this.colNumNominaCab.Visible = true;
             this.colNumNominaCab.VisibleIndex = 7;
             // 
@@ -291,6 +318,7 @@
             // 
             this.colNumPago1.FieldName = "NumPago";
             this.colNumPago1.Name = "colNumPago1";
+            this.colNumPago1.OptionsColumn.AllowEdit = false;
             this.colNumPago1.Visible = true;
             this.colNumPago1.VisibleIndex = 8;
             // 
@@ -304,7 +332,6 @@
             this.gdcdetalle.TabIndex = 9;
             this.gdcdetalle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.gdcdetalle.Click += new System.EventHandler(this.gdcdetalle_Click);
             // 
             // clsPagoDetalleBindingSource
             // 
@@ -537,7 +564,7 @@
             this.txtTotalPagar.Enabled = false;
             this.txtTotalPagar.Location = new System.Drawing.Point(797, 517);
             this.txtTotalPagar.Name = "txtTotalPagar";
-            this.txtTotalPagar.Size = new System.Drawing.Size(192, 20);
+            this.txtTotalPagar.Size = new System.Drawing.Size(172, 20);
             this.txtTotalPagar.TabIndex = 24;
             // 
             // tbcPagos
@@ -581,7 +608,7 @@
             // 
             // clsOrdenPagoDetalleBindingSource
             // 
-            this.clsOrdenPagoDetalleBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsOrdenPagoDetalle);
+            this.clsOrdenPagoDetalleBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsOrdenPagoDet);
             // 
             // gridView3
             // 
@@ -603,6 +630,7 @@
             // 
             this.colNumLinea.FieldName = "NumLinea";
             this.colNumLinea.Name = "colNumLinea";
+            this.colNumLinea.OptionsColumn.AllowEdit = false;
             this.colNumLinea.Visible = true;
             this.colNumLinea.VisibleIndex = 0;
             this.colNumLinea.Width = 48;
@@ -611,6 +639,7 @@
             // 
             this.colNumCuentaPorPagar.FieldName = "NumCuentaPorPagar";
             this.colNumCuentaPorPagar.Name = "colNumCuentaPorPagar";
+            this.colNumCuentaPorPagar.OptionsColumn.AllowEdit = false;
             this.colNumCuentaPorPagar.Visible = true;
             this.colNumCuentaPorPagar.VisibleIndex = 1;
             this.colNumCuentaPorPagar.Width = 119;
@@ -619,6 +648,7 @@
             // 
             this.colNumDetalleDeuda.FieldName = "NumDetalleDeuda";
             this.colNumDetalleDeuda.Name = "colNumDetalleDeuda";
+            this.colNumDetalleDeuda.OptionsColumn.AllowEdit = false;
             this.colNumDetalleDeuda.Visible = true;
             this.colNumDetalleDeuda.VisibleIndex = 2;
             this.colNumDetalleDeuda.Width = 103;
@@ -627,6 +657,7 @@
             // 
             this.colSaldoDeuda.FieldName = "SaldoDeuda";
             this.colSaldoDeuda.Name = "colSaldoDeuda";
+            this.colSaldoDeuda.OptionsColumn.AllowEdit = false;
             this.colSaldoDeuda.Visible = true;
             this.colSaldoDeuda.VisibleIndex = 3;
             this.colSaldoDeuda.Width = 86;
@@ -635,6 +666,7 @@
             // 
             this.colNumeroPagosRealizar.FieldName = "NumeroPagosRealizar";
             this.colNumeroPagosRealizar.Name = "colNumeroPagosRealizar";
+            this.colNumeroPagosRealizar.OptionsColumn.AllowEdit = false;
             this.colNumeroPagosRealizar.Visible = true;
             this.colNumeroPagosRealizar.VisibleIndex = 4;
             this.colNumeroPagosRealizar.Width = 122;
@@ -643,6 +675,7 @@
             // 
             this.colTotalPagar.FieldName = "TotalPagar";
             this.colTotalPagar.Name = "colTotalPagar";
+            this.colTotalPagar.OptionsColumn.AllowEdit = false;
             this.colTotalPagar.Visible = true;
             this.colTotalPagar.VisibleIndex = 5;
             this.colTotalPagar.Width = 155;
@@ -669,7 +702,7 @@
             // tbpEmpleados
             // 
             this.tbpEmpleados.Controls.Add(this.label11);
-            this.tbpEmpleados.Controls.Add(this.textEdit3);
+            this.tbpEmpleados.Controls.Add(this.txtTotalEmpleado);
             this.tbpEmpleados.Controls.Add(this.gdcNomina);
             this.tbpEmpleados.Location = new System.Drawing.Point(23, 4);
             this.tbpEmpleados.Name = "tbpEmpleados";
@@ -688,19 +721,19 @@
             this.label11.TabIndex = 12;
             this.label11.Text = "Total a Pagar:";
             // 
-            // textEdit3
+            // txtTotalEmpleado
             // 
-            this.textEdit3.Enabled = false;
-            this.textEdit3.Location = new System.Drawing.Point(813, 222);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Mask.EditMask = "c";
-            this.textEdit3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.textEdit3.Size = new System.Drawing.Size(117, 20);
-            this.textEdit3.TabIndex = 13;
+            this.txtTotalEmpleado.Enabled = false;
+            this.txtTotalEmpleado.Location = new System.Drawing.Point(813, 222);
+            this.txtTotalEmpleado.Name = "txtTotalEmpleado";
+            this.txtTotalEmpleado.Properties.Mask.EditMask = "c";
+            this.txtTotalEmpleado.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTotalEmpleado.Size = new System.Drawing.Size(117, 20);
+            this.txtTotalEmpleado.TabIndex = 13;
             // 
             // gdcNomina
             // 
-            this.gdcNomina.DataSource = this.clsNominaCabBindingSource;
+            this.gdcNomina.DataSource = this.clsOrdenPagoEmpleadoDetBindingSource;
             this.gdcNomina.Location = new System.Drawing.Point(23, 15);
             this.gdcNomina.MainView = this.gridView4;
             this.gdcNomina.Name = "gdcNomina";
@@ -711,57 +744,89 @@
             this.gdcNomina.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
             // 
-            // clsNominaCabBindingSource
+            // clsOrdenPagoEmpleadoDetBindingSource
             // 
-            this.clsNominaCabBindingSource.DataSource = typeof(clases.RecursosHumanos.clsNominaCab);
+            this.clsOrdenPagoEmpleadoDetBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsOrdenPagoEmpleadoDet);
             // 
             // gridView4
             // 
             this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colNumNomina,
-            this.colFechaEmision,
-            this.colTotal,
-            this.colIdEmpleado,
-            this.colObservacion});
+            this.colNumOrdenPago,
+            this.colIdEmpresa2,
+            this.colAutorizarPago,
+            this.colLinea,
+            this.colIdPersona,
+            this.colSueldoTotal,
+            this.colIngresoAdicional,
+            this.colDescuentoTotal,
+            this.colPagoNeto});
             this.gridView4.GridControl = this.gdcNomina;
             this.gridView4.Name = "gridView4";
             this.gridView4.OptionsView.ShowAutoFilterRow = true;
             this.gridView4.OptionsView.ShowGroupPanel = false;
             // 
-            // colNumNomina
+            // colNumOrdenPago
             // 
-            this.colNumNomina.FieldName = "NumNomina";
-            this.colNumNomina.Name = "colNumNomina";
-            this.colNumNomina.Visible = true;
-            this.colNumNomina.VisibleIndex = 0;
+            this.colNumOrdenPago.FieldName = "NumOrdenPago";
+            this.colNumOrdenPago.Name = "colNumOrdenPago";
+            this.colNumOrdenPago.Visible = true;
+            this.colNumOrdenPago.VisibleIndex = 0;
             // 
-            // colFechaEmision
+            // colIdEmpresa2
             // 
-            this.colFechaEmision.FieldName = "FechaEmision";
-            this.colFechaEmision.Name = "colFechaEmision";
-            this.colFechaEmision.Visible = true;
-            this.colFechaEmision.VisibleIndex = 1;
+            this.colIdEmpresa2.FieldName = "IdEmpresa";
+            this.colIdEmpresa2.Name = "colIdEmpresa2";
+            this.colIdEmpresa2.Visible = true;
+            this.colIdEmpresa2.VisibleIndex = 1;
             // 
-            // colTotal
+            // colAutorizarPago
             // 
-            this.colTotal.FieldName = "Total";
-            this.colTotal.Name = "colTotal";
-            this.colTotal.Visible = true;
-            this.colTotal.VisibleIndex = 2;
+            this.colAutorizarPago.FieldName = "AutorizarPago";
+            this.colAutorizarPago.Name = "colAutorizarPago";
+            this.colAutorizarPago.Visible = true;
+            this.colAutorizarPago.VisibleIndex = 2;
             // 
-            // colIdEmpleado
+            // colLinea
             // 
-            this.colIdEmpleado.FieldName = "IdEmpleado";
-            this.colIdEmpleado.Name = "colIdEmpleado";
-            this.colIdEmpleado.Visible = true;
-            this.colIdEmpleado.VisibleIndex = 3;
+            this.colLinea.FieldName = "Linea";
+            this.colLinea.Name = "colLinea";
+            this.colLinea.Visible = true;
+            this.colLinea.VisibleIndex = 3;
             // 
-            // colObservacion
+            // colIdPersona
             // 
-            this.colObservacion.FieldName = "Observacion";
-            this.colObservacion.Name = "colObservacion";
-            this.colObservacion.Visible = true;
-            this.colObservacion.VisibleIndex = 4;
+            this.colIdPersona.FieldName = "IdPersona";
+            this.colIdPersona.Name = "colIdPersona";
+            this.colIdPersona.Visible = true;
+            this.colIdPersona.VisibleIndex = 4;
+            // 
+            // colSueldoTotal
+            // 
+            this.colSueldoTotal.FieldName = "SueldoTotal";
+            this.colSueldoTotal.Name = "colSueldoTotal";
+            this.colSueldoTotal.Visible = true;
+            this.colSueldoTotal.VisibleIndex = 5;
+            // 
+            // colIngresoAdicional
+            // 
+            this.colIngresoAdicional.FieldName = "IngresoAdicional";
+            this.colIngresoAdicional.Name = "colIngresoAdicional";
+            this.colIngresoAdicional.Visible = true;
+            this.colIngresoAdicional.VisibleIndex = 6;
+            // 
+            // colDescuentoTotal
+            // 
+            this.colDescuentoTotal.FieldName = "DescuentoTotal";
+            this.colDescuentoTotal.Name = "colDescuentoTotal";
+            this.colDescuentoTotal.Visible = true;
+            this.colDescuentoTotal.VisibleIndex = 7;
+            // 
+            // colPagoNeto
+            // 
+            this.colPagoNeto.FieldName = "PagoNeto";
+            this.colPagoNeto.Name = "colPagoNeto";
+            this.colPagoNeto.Visible = true;
+            this.colPagoNeto.VisibleIndex = 8;
             // 
             // repositoryItemTextEdit2
             // 
@@ -781,7 +846,7 @@
             // 
             // gdcDeudaServicio
             // 
-            this.gdcDeudaServicio.Enabled = false;
+            this.gdcDeudaServicio.DataSource = this.clsOrdenPagoDetalleBindingSource;
             this.gdcDeudaServicio.Location = new System.Drawing.Point(14, 12);
             this.gdcDeudaServicio.MainView = this.gridView12;
             this.gdcDeudaServicio.Name = "gdcDeudaServicio";
@@ -793,43 +858,74 @@
             // gridView12
             // 
             this.gridView12.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gdcNroFactura,
-            this.gdcMotivo,
-            this.gdcTotalPagar});
+            this.colNumLinea3,
+            this.colNumCuentaPorPagar1,
+            this.colNumDetalleDeuda1,
+            this.colSaldoDeuda1,
+            this.colNumeroPagosRealizar1,
+            this.colNumOrdenCab,
+            this.colTotalPagar1,
+            this.colIdEmpresa3});
             this.gridView12.GridControl = this.gdcDeudaServicio;
             this.gridView12.Name = "gridView12";
             this.gridView12.OptionsView.ShowAutoFilterRow = true;
             this.gridView12.OptionsView.ShowGroupPanel = false;
             // 
-            // gdcNroFactura
+            // colNumLinea3
             // 
-            this.gdcNroFactura.AppearanceHeader.Options.UseTextOptions = true;
-            this.gdcNroFactura.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gdcNroFactura.Caption = "Nro. de Factura";
-            this.gdcNroFactura.Name = "gdcNroFactura";
-            this.gdcNroFactura.Visible = true;
-            this.gdcNroFactura.VisibleIndex = 0;
-            this.gdcNroFactura.Width = 332;
+            this.colNumLinea3.FieldName = "NumLinea";
+            this.colNumLinea3.Name = "colNumLinea3";
+            this.colNumLinea3.Visible = true;
+            this.colNumLinea3.VisibleIndex = 0;
             // 
-            // gdcMotivo
+            // colNumCuentaPorPagar1
             // 
-            this.gdcMotivo.AppearanceHeader.Options.UseTextOptions = true;
-            this.gdcMotivo.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gdcMotivo.Caption = "Motivo";
-            this.gdcMotivo.Name = "gdcMotivo";
-            this.gdcMotivo.Visible = true;
-            this.gdcMotivo.VisibleIndex = 1;
-            this.gdcMotivo.Width = 72;
+            this.colNumCuentaPorPagar1.FieldName = "NumCuentaPorPagar";
+            this.colNumCuentaPorPagar1.Name = "colNumCuentaPorPagar1";
+            this.colNumCuentaPorPagar1.Visible = true;
+            this.colNumCuentaPorPagar1.VisibleIndex = 1;
             // 
-            // gdcTotalPagar
+            // colNumDetalleDeuda1
             // 
-            this.gdcTotalPagar.AppearanceHeader.Options.UseTextOptions = true;
-            this.gdcTotalPagar.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gdcTotalPagar.Caption = "Total a pagar";
-            this.gdcTotalPagar.Name = "gdcTotalPagar";
-            this.gdcTotalPagar.Visible = true;
-            this.gdcTotalPagar.VisibleIndex = 2;
-            this.gdcTotalPagar.Width = 113;
+            this.colNumDetalleDeuda1.FieldName = "NumDetalleDeuda";
+            this.colNumDetalleDeuda1.Name = "colNumDetalleDeuda1";
+            this.colNumDetalleDeuda1.Visible = true;
+            this.colNumDetalleDeuda1.VisibleIndex = 2;
+            // 
+            // colSaldoDeuda1
+            // 
+            this.colSaldoDeuda1.FieldName = "SaldoDeuda";
+            this.colSaldoDeuda1.Name = "colSaldoDeuda1";
+            this.colSaldoDeuda1.Visible = true;
+            this.colSaldoDeuda1.VisibleIndex = 3;
+            // 
+            // colNumeroPagosRealizar1
+            // 
+            this.colNumeroPagosRealizar1.FieldName = "NumeroPagosRealizar";
+            this.colNumeroPagosRealizar1.Name = "colNumeroPagosRealizar1";
+            this.colNumeroPagosRealizar1.Visible = true;
+            this.colNumeroPagosRealizar1.VisibleIndex = 4;
+            // 
+            // colNumOrdenCab
+            // 
+            this.colNumOrdenCab.FieldName = "NumOrdenCab";
+            this.colNumOrdenCab.Name = "colNumOrdenCab";
+            this.colNumOrdenCab.Visible = true;
+            this.colNumOrdenCab.VisibleIndex = 5;
+            // 
+            // colTotalPagar1
+            // 
+            this.colTotalPagar1.FieldName = "TotalPagar";
+            this.colTotalPagar1.Name = "colTotalPagar1";
+            this.colTotalPagar1.Visible = true;
+            this.colTotalPagar1.VisibleIndex = 6;
+            // 
+            // colIdEmpresa3
+            // 
+            this.colIdEmpresa3.FieldName = "IdEmpresa";
+            this.colIdEmpresa3.Name = "colIdEmpresa3";
+            this.colIdEmpresa3.Visible = true;
+            this.colIdEmpresa3.VisibleIndex = 7;
             // 
             // cbxNroOrdenPagoProveedores
             // 
@@ -847,7 +943,7 @@
             // 
             // clsOrdenPagoBindingSource
             // 
-            this.clsOrdenPagoBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsOrdenPago);
+            this.clsOrdenPagoBindingSource.DataSource = typeof(clases.Cuentasxpagar.clsOrdenPagoCab);
             // 
             // searchLookUpEdit4View
             // 
@@ -882,15 +978,14 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
             this.tsbGuardar,
-            this.tsbModificar,
             this.tsbAnular,
-            this.tsbSalir});
+            this.tsbSalir,
+            this.tsbImprimir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1001, 25);
             this.toolStrip1.TabIndex = 21;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // tsbNuevo
             // 
@@ -914,14 +1009,6 @@
             this.tsbGuardar.Text = "Guardar";
             this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
-            // tsbModificar
-            // 
-            this.tsbModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificar.Image")));
-            this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbModificar.Name = "tsbModificar";
-            this.tsbModificar.Size = new System.Drawing.Size(78, 22);
-            this.tsbModificar.Text = "Modificar";
-            // 
             // tsbAnular
             // 
             this.tsbAnular.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -940,6 +1027,17 @@
             this.tsbSalir.Name = "tsbSalir";
             this.tsbSalir.Size = new System.Drawing.Size(49, 22);
             this.tsbSalir.Text = "Salir";
+            // 
+            // tsbImprimir
+            // 
+            this.tsbImprimir.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.tsbImprimir.ForeColor = System.Drawing.Color.Black;
+            this.tsbImprimir.Image = ((System.Drawing.Image)(resources.GetObject("tsbImprimir.Image")));
+            this.tsbImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbImprimir.Name = "tsbImprimir";
+            this.tsbImprimir.Size = new System.Drawing.Size(68, 22);
+            this.tsbImprimir.Text = "Generar";
+            this.tsbImprimir.Click += new System.EventHandler(this.tsbImprimir_Click);
             // 
             // label1
             // 
@@ -1021,6 +1119,7 @@
             // 
             this.colidCuentaBancaria.FieldName = "idCuentaBancaria";
             this.colidCuentaBancaria.Name = "colidCuentaBancaria";
+            this.colidCuentaBancaria.OptionsColumn.AllowEdit = false;
             this.colidCuentaBancaria.Visible = true;
             this.colidCuentaBancaria.VisibleIndex = 0;
             // 
@@ -1028,6 +1127,7 @@
             // 
             this.colidBanco1.FieldName = "idBanco";
             this.colidBanco1.Name = "colidBanco1";
+            this.colidBanco1.OptionsColumn.AllowEdit = false;
             this.colidBanco1.Visible = true;
             this.colidBanco1.VisibleIndex = 1;
             // 
@@ -1035,6 +1135,7 @@
             // 
             this.colNumeroCuenta1.FieldName = "NumeroCuenta";
             this.colNumeroCuenta1.Name = "colNumeroCuenta1";
+            this.colNumeroCuenta1.OptionsColumn.AllowEdit = false;
             this.colNumeroCuenta1.Visible = true;
             this.colNumeroCuenta1.VisibleIndex = 2;
             // 
@@ -1042,6 +1143,7 @@
             // 
             this.colTipoCuenta.FieldName = "TipoCuenta";
             this.colTipoCuenta.Name = "colTipoCuenta";
+            this.colTipoCuenta.OptionsColumn.AllowEdit = false;
             this.colTipoCuenta.Visible = true;
             this.colTipoCuenta.VisibleIndex = 3;
             // 
@@ -1049,6 +1151,7 @@
             // 
             this.colSaldo.FieldName = "Saldo";
             this.colSaldo.Name = "colSaldo";
+            this.colSaldo.OptionsColumn.AllowEdit = false;
             this.colSaldo.Visible = true;
             this.colSaldo.VisibleIndex = 4;
             // 
@@ -1066,22 +1169,63 @@
             this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxEstado.FormattingEnabled = true;
             this.cbxEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
+            "Generada",
+            "En Proceso",
+            "Pagada"});
             this.cbxEstado.Location = new System.Drawing.Point(865, 82);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(104, 21);
             this.cbxEstado.TabIndex = 34;
             // 
-            // clsNominaDetBindingSource
+            // cbxEmpleado
             // 
-            this.clsNominaDetBindingSource.DataSource = typeof(clases.RecursosHumanos.clsNominaDet);
+            this.cbxEmpleado.Location = new System.Drawing.Point(166, 79);
+            this.cbxEmpleado.Name = "cbxEmpleado";
+            this.cbxEmpleado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxEmpleado.Properties.DataSource = this.clsOrdenPagoBindingSource;
+            this.cbxEmpleado.Properties.DisplayMember = "NumOrdenPago";
+            this.cbxEmpleado.Properties.ValueMember = "NumOrdenPago";
+            this.cbxEmpleado.Properties.View = this.searchLookUpEdit1View;
+            this.cbxEmpleado.Size = new System.Drawing.Size(117, 20);
+            this.cbxEmpleado.TabIndex = 35;
+            this.cbxEmpleado.EditValueChanged += new System.EventHandler(this.cbxEmpleado_EditValueChanged);
+            // 
+            // searchLookUpEdit1View
+            // 
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // cbxVarios
+            // 
+            this.cbxVarios.Location = new System.Drawing.Point(166, 79);
+            this.cbxVarios.Name = "cbxVarios";
+            this.cbxVarios.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxVarios.Properties.DataSource = this.clsOrdenPagoBindingSource;
+            this.cbxVarios.Properties.DisplayMember = "NumOrdenPago";
+            this.cbxVarios.Properties.ValueMember = "NumOrdenPago";
+            this.cbxVarios.Properties.View = this.gridView7;
+            this.cbxVarios.Size = new System.Drawing.Size(117, 20);
+            this.cbxVarios.TabIndex = 36;
+            this.cbxVarios.EditValueChanged += new System.EventHandler(this.cbxVarios_EditValueChanged);
+            // 
+            // gridView7
+            // 
+            this.gridView7.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView7.Name = "gridView7";
+            this.gridView7.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView7.OptionsView.ShowGroupPanel = false;
             // 
             // frmPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 546);
+            this.Controls.Add(this.cbxVarios);
+            this.Controls.Add(this.cbxEmpleado);
             this.Controls.Add(this.cbxEstado);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.gdcConsultaBancaria);
@@ -1132,14 +1276,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalito.Properties)).EndInit();
             this.tbpEmpleados.ResumeLayout(false);
             this.tbpEmpleados.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalEmpleado.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdcNomina)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsNominaCabBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsOrdenPagoEmpleadoDetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             this.tbpServicios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gdcDeudaServicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsNominaCabBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxNroOrdenPagoProveedores.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsOrdenPagoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit4View)).EndInit();
@@ -1153,6 +1298,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gdcConsultaBancaria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsNominaDetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxEmpleado.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxVarios.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1193,11 +1342,7 @@
         private DevExpress.XtraEditors.SimpleButton btnModificar;
         private DevExpress.XtraGrid.GridControl gdcDeudaServicio;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView12;
-        private DevExpress.XtraGrid.Columns.GridColumn gdcNroFactura;
-        private DevExpress.XtraGrid.Columns.GridColumn gdcMotivo;
-        private DevExpress.XtraGrid.Columns.GridColumn gdcTotalPagar;
         private System.Windows.Forms.ToolStripButton tsbSalir;
-        private System.Windows.Forms.ToolStripButton tsbModificar;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.TextEdit txtNumPago;
         private System.Windows.Forms.Label label8;
@@ -1205,7 +1350,7 @@
         private System.Windows.Forms.Label label9;
         private DevExpress.XtraEditors.DateEdit deFechaActual;
         private System.Windows.Forms.Label label11;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtTotalEmpleado;
         private System.Windows.Forms.BindingSource clsMedioPagoBindingSource;
         private System.Windows.Forms.BindingSource clsOrdenPagoBindingSource;
         private System.Windows.Forms.BindingSource clsOrdenPagoDetalleBindingSource;
@@ -1243,11 +1388,6 @@
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.ComboBox cbxEstado;
         private System.Windows.Forms.BindingSource clsNominaCabBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colNumNomina;
-        private DevExpress.XtraGrid.Columns.GridColumn colFechaEmision;
-        private DevExpress.XtraGrid.Columns.GridColumn colTotal;
-        private DevExpress.XtraGrid.Columns.GridColumn colIdEmpleado;
-        private DevExpress.XtraGrid.Columns.GridColumn colObservacion;
         private System.Windows.Forms.BindingSource clsNominaDetBindingSource;
         private DevExpress.XtraGrid.GridControl gdcDetalleNomina;
         private System.Windows.Forms.BindingSource clsPagoDetalleDosBindingSource;
@@ -1261,5 +1401,28 @@
         private DevExpress.XtraGrid.Columns.GridColumn colNumComprobante1;
         private DevExpress.XtraGrid.Columns.GridColumn colNumNominaCab;
         private DevExpress.XtraGrid.Columns.GridColumn colNumPago1;
+        private DevExpress.XtraEditors.SearchLookUpEdit cbxEmpleado;
+        private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
+        private DevExpress.XtraEditors.SearchLookUpEdit cbxVarios;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView7;
+        private System.Windows.Forms.BindingSource clsOrdenPagoEmpleadoDetBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colNumOrdenPago;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdEmpresa2;
+        private DevExpress.XtraGrid.Columns.GridColumn colAutorizarPago;
+        private DevExpress.XtraGrid.Columns.GridColumn colLinea;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdPersona;
+        private DevExpress.XtraGrid.Columns.GridColumn colSueldoTotal;
+        private DevExpress.XtraGrid.Columns.GridColumn colIngresoAdicional;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescuentoTotal;
+        private DevExpress.XtraGrid.Columns.GridColumn colPagoNeto;
+        private DevExpress.XtraGrid.Columns.GridColumn colNumLinea3;
+        private DevExpress.XtraGrid.Columns.GridColumn colNumCuentaPorPagar1;
+        private DevExpress.XtraGrid.Columns.GridColumn colNumDetalleDeuda1;
+        private DevExpress.XtraGrid.Columns.GridColumn colSaldoDeuda1;
+        private DevExpress.XtraGrid.Columns.GridColumn colNumeroPagosRealizar1;
+        private DevExpress.XtraGrid.Columns.GridColumn colNumOrdenCab;
+        private DevExpress.XtraGrid.Columns.GridColumn colTotalPagar1;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdEmpresa3;
+        private System.Windows.Forms.ToolStripButton tsbImprimir;
     }
 }

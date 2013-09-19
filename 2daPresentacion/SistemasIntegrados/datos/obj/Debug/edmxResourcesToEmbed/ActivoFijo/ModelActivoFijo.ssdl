@@ -10,6 +10,7 @@
     <EntitySet Name="Edifico" EntityType="ActivoFijoModel.Store.Edifico" store:Type="Tables" Schema="ActivoFijo" />
     <EntitySet Name="EquipoMaquinariaMuebles" EntityType="ActivoFijoModel.Store.EquipoMaquinariaMuebles" store:Type="Tables" Schema="ActivoFijo" />
     <EntitySet Name="Imagen" EntityType="ActivoFijoModel.Store.Imagen" store:Type="Tables" Schema="ActivoFijo" />
+    <EntitySet Name="MotivoBaja" EntityType="ActivoFijoModel.Store.MotivoBaja" store:Type="Tables" Schema="ActivoFijo" />
     <EntitySet Name="revalorizacion" EntityType="ActivoFijoModel.Store.revalorizacion" store:Type="Tables" Schema="ActivoFijo" />
     <EntitySet Name="SubGrupos" EntityType="ActivoFijoModel.Store.SubGrupos" store:Type="Tables" Schema="ActivoFijo" />
     <EntitySet Name="Terreno" EntityType="ActivoFijoModel.Store.Terreno" store:Type="Tables" Schema="ActivoFijo" />
@@ -18,71 +19,71 @@
     <EntitySet Name="Vehiculo" EntityType="ActivoFijoModel.Store.Vehiculo" store:Type="Tables" Schema="ActivoFijo" />
     <EntitySet Name="VentaGarageCab" EntityType="ActivoFijoModel.Store.VentaGarageCab" store:Type="Tables" Schema="ActivoFijo" />
     <EntitySet Name="VentaGarageDet" EntityType="ActivoFijoModel.Store.VentaGarageDet" store:Type="Tables" Schema="ActivoFijo" />
-    <AssociationSet Name="FK__ActivoFij__IdCod__7FD5EEA5" Association="ActivoFijoModel.Store.FK__ActivoFij__IdCod__7FD5EEA5">
+    <AssociationSet Name="FK__ActivoFij__IdCod__0682EC34" Association="ActivoFijoModel.Store.FK__ActivoFij__IdCod__0682EC34">
       <End Role="CodigoBarra" EntitySet="CodigoBarra" />
       <End Role="ActivoFijo" EntitySet="ActivoFijo" />
     </AssociationSet>
-    <AssociationSet Name="FK__ActivoFij__IdSub__7CF981FA" Association="ActivoFijoModel.Store.FK__ActivoFij__IdSub__7CF981FA">
+    <AssociationSet Name="FK__ActivoFij__IdSub__03A67F89" Association="ActivoFijoModel.Store.FK__ActivoFij__IdSub__03A67F89">
       <End Role="SubGrupos" EntitySet="SubGrupos" />
       <End Role="ActivoFijo" EntitySet="ActivoFijo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Articulos__IdAct__27E3DFFF" Association="ActivoFijoModel.Store.FK__Articulos__IdAct__27E3DFFF">
+    <AssociationSet Name="FK__Articulos__IdAct__2E90DD8E" Association="ActivoFijoModel.Store.FK__Articulos__IdAct__2E90DD8E">
       <End Role="ActivoFijo" EntitySet="ActivoFijo" />
       <End Role="Articulos_SuministrosOficina" EntitySet="Articulos_SuministrosOficina" />
     </AssociationSet>
-    <AssociationSet Name="FK__BajaActiv__IdAct__4297D63B" Association="ActivoFijoModel.Store.FK__BajaActiv__IdAct__4297D63B">
+    <AssociationSet Name="FK__BajaActiv__IdAct__4E0988E7" Association="ActivoFijoModel.Store.FK__BajaActiv__IdAct__4E0988E7">
       <End Role="ActivoFijo" EntitySet="ActivoFijo" />
       <End Role="BajaActivo" EntitySet="BajaActivo" />
     </AssociationSet>
-    <AssociationSet Name="FK__BajaActiv__IdIma__4850AF91" Association="ActivoFijoModel.Store.FK__BajaActiv__IdIma__4850AF91">
+    <AssociationSet Name="FK__BajaActiv__IdIma__4FF1D159" Association="ActivoFijoModel.Store.FK__BajaActiv__IdIma__4FF1D159">
       <End Role="Imagen" EntitySet="Imagen" />
       <End Role="BajaActivo" EntitySet="BajaActivo" />
     </AssociationSet>
-    <AssociationSet Name="FK__BajaActiv__IdSub__44801EAD" Association="ActivoFijoModel.Store.FK__BajaActiv__IdSub__44801EAD">
-      <End Role="SubGrupos" EntitySet="SubGrupos" />
+    <AssociationSet Name="FK__BajaActiv__IdMot__51DA19CB" Association="ActivoFijoModel.Store.FK__BajaActiv__IdMot__51DA19CB">
+      <End Role="MotivoBaja" EntitySet="MotivoBaja" />
       <End Role="BajaActivo" EntitySet="BajaActivo" />
     </AssociationSet>
-    <AssociationSet Name="FK__CodigoBar__Idfor__7093AB15" Association="ActivoFijoModel.Store.FK__CodigoBar__Idfor__7093AB15">
+    <AssociationSet Name="FK__CodigoBar__Idfor__7740A8A4" Association="ActivoFijoModel.Store.FK__CodigoBar__Idfor__7740A8A4">
       <End Role="TipoFormato" EntitySet="TipoFormato" />
       <End Role="CodigoBarra" EntitySet="CodigoBarra" />
     </AssociationSet>
-    <AssociationSet Name="FK__CodigoBar__IdIma__7187CF4E" Association="ActivoFijoModel.Store.FK__CodigoBar__IdIma__7187CF4E">
+    <AssociationSet Name="FK__CodigoBar__IdIma__7834CCDD" Association="ActivoFijoModel.Store.FK__CodigoBar__IdIma__7834CCDD">
       <End Role="Imagen" EntitySet="Imagen" />
       <End Role="CodigoBarra" EntitySet="CodigoBarra" />
     </AssociationSet>
-    <AssociationSet Name="FK__Depreciac__IdAct__17AD7836" Association="ActivoFijoModel.Store.FK__Depreciac__IdAct__17AD7836">
+    <AssociationSet Name="FK__Depreciac__IdAct__1E5A75C5" Association="ActivoFijoModel.Store.FK__Depreciac__IdAct__1E5A75C5">
       <End Role="ActivoFijo" EntitySet="ActivoFijo" />
       <End Role="DepreciacionDet" EntitySet="DepreciacionDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__DepreciacionDet__18A19C6F" Association="ActivoFijoModel.Store.FK__DepreciacionDet__18A19C6F">
+    <AssociationSet Name="FK__DepreciacionDet__1F4E99FE" Association="ActivoFijoModel.Store.FK__DepreciacionDet__1F4E99FE">
       <End Role="DepreciacionCab" EntitySet="DepreciacionCab" />
       <End Role="DepreciacionDet" EntitySet="DepreciacionDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__Edifico__IdActiv__381A47C8" Association="ActivoFijoModel.Store.FK__Edifico__IdActiv__381A47C8">
+    <AssociationSet Name="FK__Edifico__IdActiv__3EC74557" Association="ActivoFijoModel.Store.FK__Edifico__IdActiv__3EC74557">
       <End Role="ActivoFijo" EntitySet="ActivoFijo" />
       <End Role="Edifico" EntitySet="Edifico" />
     </AssociationSet>
-    <AssociationSet Name="FK__EquipoMaq__IdAct__0A537D18" Association="ActivoFijoModel.Store.FK__EquipoMaq__IdAct__0A537D18">
+    <AssociationSet Name="FK__EquipoMaq__IdAct__11007AA7" Association="ActivoFijoModel.Store.FK__EquipoMaq__IdAct__11007AA7">
       <End Role="ActivoFijo" EntitySet="ActivoFijo" />
       <End Role="EquipoMaquinariaMuebles" EntitySet="EquipoMaquinariaMuebles" />
     </AssociationSet>
-    <AssociationSet Name="FK__revaloriz__IdAct__3DD3211E" Association="ActivoFijoModel.Store.FK__revaloriz__IdAct__3DD3211E">
+    <AssociationSet Name="FK__revaloriz__IdAct__44801EAD" Association="ActivoFijoModel.Store.FK__revaloriz__IdAct__44801EAD">
       <End Role="ActivoFijo" EntitySet="ActivoFijo" />
       <End Role="revalorizacion" EntitySet="revalorizacion" />
     </AssociationSet>
-    <AssociationSet Name="FK__Terreno__IdActiv__058EC7FB" Association="ActivoFijoModel.Store.FK__Terreno__IdActiv__058EC7FB">
+    <AssociationSet Name="FK__Terreno__IdActiv__0C3BC58A" Association="ActivoFijoModel.Store.FK__Terreno__IdActiv__0C3BC58A">
       <End Role="ActivoFijo" EntitySet="ActivoFijo" />
       <End Role="Terreno" EntitySet="Terreno" />
     </AssociationSet>
-    <AssociationSet Name="FK__Transfere__IdAct__30792600" Association="ActivoFijoModel.Store.FK__Transfere__IdAct__30792600">
+    <AssociationSet Name="FK__Transfere__IdAct__3726238F" Association="ActivoFijoModel.Store.FK__Transfere__IdAct__3726238F">
       <End Role="ActivoFijo" EntitySet="ActivoFijo" />
       <End Role="Transferencia" EntitySet="Transferencia" />
     </AssociationSet>
-    <AssociationSet Name="FK__Vehiculo__IdActi__1D66518C" Association="ActivoFijoModel.Store.FK__Vehiculo__IdActi__1D66518C">
+    <AssociationSet Name="FK__Vehiculo__IdActi__24134F1B" Association="ActivoFijoModel.Store.FK__Vehiculo__IdActi__24134F1B">
       <End Role="ActivoFijo" EntitySet="ActivoFijo" />
       <End Role="Vehiculo" EntitySet="Vehiculo" />
     </AssociationSet>
-    <AssociationSet Name="FK__VentaGarageDet__54B68676" Association="ActivoFijoModel.Store.FK__VentaGarageDet__54B68676">
+    <AssociationSet Name="FK__VentaGarageDet__5D4BCC77" Association="ActivoFijoModel.Store.FK__VentaGarageDet__5D4BCC77">
       <End Role="VentaGarageCab" EntitySet="VentaGarageCab" />
       <End Role="VentaGarageDet" EntitySet="VentaGarageDet" />
     </AssociationSet>
@@ -133,14 +134,10 @@
     <Property Name="idBajaActivo" Type="int" Nullable="false" />
     <Property Name="EstadoProceso" Type="varchar" MaxLength="30" />
     <Property Name="IdActivoFIjo" Type="int" />
-    <Property Name="IdGrupo" Type="int" />
-    <Property Name="IdSubgrupo" Type="int" />
     <Property Name="Fecha" Type="date" />
-    <Property Name="IdEstado" Type="int" />
     <Property Name="IdEmpresa" Type="int" />
     <Property Name="Descripcion" Type="varchar" MaxLength="50" />
-    <Property Name="Motivo" Type="varchar" MaxLength="25" />
-    <Property Name="IdProveedor" Type="int" />
+    <Property Name="IdMotivoBaja" Type="int" />
     <Property Name="IdCabeceraComprobante" Type="numeric" Precision="4" />
     <Property Name="Observacion" Type="varchar" MaxLength="300" />
     <Property Name="IdImagen" Type="int" />
@@ -196,7 +193,7 @@
     </Key>
     <Property Name="IdActivoFijo" Type="int" Nullable="false" />
     <Property Name="FechaConstruccion" Type="date" />
-    <Property Name="CodigoCatastral" Type="int" />
+    <Property Name="CodigoCatastral" Type="varchar" MaxLength="12" />
     <Property Name="NumeroPisos" Type="int" />
     <Property Name="AniosDepreciados" Type="int" />
     <Property Name="Ubicacion" Type="varchar" MaxLength="100" />
@@ -212,7 +209,7 @@
     <Property Name="IdMarca" Type="int" />
     <Property Name="IdModelo" Type="int" />
     <Property Name="IdColor" Type="int" />
-    <Property Name="Carga" Type="int" />
+    <Property Name="Carga" Type="numeric" Precision="10" Scale="2" />
     <Property Name="AniosDepreciados" Type="int" />
     <Property Name="DimensionAncho" Type="numeric" Precision="10" Scale="2" />
     <Property Name="DimensionLargo" Type="numeric" Precision="10" Scale="2" />
@@ -226,6 +223,14 @@
     <Property Name="IdImagen" Type="int" Nullable="false" />
     <Property Name="descripcion" Type="varchar" MaxLength="250" />
     <Property Name="Imagen" Type="image" />
+  </EntityType>
+  <EntityType Name="MotivoBaja">
+    <Key>
+      <PropertyRef Name="IdMotivoBaja" />
+    </Key>
+    <Property Name="IdMotivoBaja" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="50" />
+    <Property Name="Idestado" Type="int" />
   </EntityType>
   <EntityType Name="revalorizacion">
     <Key>
@@ -346,7 +351,7 @@
     <Property Name="Total" Type="int" />
     <Property Name="IdCabeceraComprobante" Type="numeric" Precision="4" />
   </EntityType>
-  <Association Name="FK__ActivoFij__IdCod__7FD5EEA5">
+  <Association Name="FK__ActivoFij__IdCod__0682EC34">
     <End Role="CodigoBarra" Type="ActivoFijoModel.Store.CodigoBarra" Multiplicity="0..1" />
     <End Role="ActivoFijo" Type="ActivoFijoModel.Store.ActivoFijo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -358,7 +363,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ActivoFij__IdSub__7CF981FA">
+  <Association Name="FK__ActivoFij__IdSub__03A67F89">
     <End Role="SubGrupos" Type="ActivoFijoModel.Store.SubGrupos" Multiplicity="0..1" />
     <End Role="ActivoFijo" Type="ActivoFijoModel.Store.ActivoFijo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -370,7 +375,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Articulos__IdAct__27E3DFFF">
+  <Association Name="FK__Articulos__IdAct__2E90DD8E">
     <End Role="ActivoFijo" Type="ActivoFijoModel.Store.ActivoFijo" Multiplicity="1" />
     <End Role="Articulos_SuministrosOficina" Type="ActivoFijoModel.Store.Articulos_SuministrosOficina" Multiplicity="0..1" />
     <ReferentialConstraint>
@@ -382,7 +387,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BajaActiv__IdAct__4297D63B">
+  <Association Name="FK__BajaActiv__IdAct__4E0988E7">
     <End Role="ActivoFijo" Type="ActivoFijoModel.Store.ActivoFijo" Multiplicity="0..1" />
     <End Role="BajaActivo" Type="ActivoFijoModel.Store.BajaActivo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -394,7 +399,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BajaActiv__IdIma__4850AF91">
+  <Association Name="FK__BajaActiv__IdIma__4FF1D159">
     <End Role="Imagen" Type="ActivoFijoModel.Store.Imagen" Multiplicity="0..1" />
     <End Role="BajaActivo" Type="ActivoFijoModel.Store.BajaActivo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -406,19 +411,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__BajaActiv__IdSub__44801EAD">
-    <End Role="SubGrupos" Type="ActivoFijoModel.Store.SubGrupos" Multiplicity="0..1" />
+  <Association Name="FK__BajaActiv__IdMot__51DA19CB">
+    <End Role="MotivoBaja" Type="ActivoFijoModel.Store.MotivoBaja" Multiplicity="0..1" />
     <End Role="BajaActivo" Type="ActivoFijoModel.Store.BajaActivo" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="SubGrupos">
-        <PropertyRef Name="IdSubGrupo" />
+      <Principal Role="MotivoBaja">
+        <PropertyRef Name="IdMotivoBaja" />
       </Principal>
       <Dependent Role="BajaActivo">
-        <PropertyRef Name="IdSubgrupo" />
+        <PropertyRef Name="IdMotivoBaja" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CodigoBar__Idfor__7093AB15">
+  <Association Name="FK__CodigoBar__Idfor__7740A8A4">
     <End Role="TipoFormato" Type="ActivoFijoModel.Store.TipoFormato" Multiplicity="0..1" />
     <End Role="CodigoBarra" Type="ActivoFijoModel.Store.CodigoBarra" Multiplicity="*" />
     <ReferentialConstraint>
@@ -430,7 +435,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CodigoBar__IdIma__7187CF4E">
+  <Association Name="FK__CodigoBar__IdIma__7834CCDD">
     <End Role="Imagen" Type="ActivoFijoModel.Store.Imagen" Multiplicity="0..1" />
     <End Role="CodigoBarra" Type="ActivoFijoModel.Store.CodigoBarra" Multiplicity="*" />
     <ReferentialConstraint>
@@ -442,7 +447,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Depreciac__IdAct__17AD7836">
+  <Association Name="FK__Depreciac__IdAct__1E5A75C5">
     <End Role="ActivoFijo" Type="ActivoFijoModel.Store.ActivoFijo" Multiplicity="0..1" />
     <End Role="DepreciacionDet" Type="ActivoFijoModel.Store.DepreciacionDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -454,7 +459,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__DepreciacionDet__18A19C6F">
+  <Association Name="FK__DepreciacionDet__1F4E99FE">
     <End Role="DepreciacionCab" Type="ActivoFijoModel.Store.DepreciacionCab" Multiplicity="0..1" />
     <End Role="DepreciacionDet" Type="ActivoFijoModel.Store.DepreciacionDet" Multiplicity="*" />
     <ReferentialConstraint>
@@ -468,7 +473,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Edifico__IdActiv__381A47C8">
+  <Association Name="FK__Edifico__IdActiv__3EC74557">
     <End Role="ActivoFijo" Type="ActivoFijoModel.Store.ActivoFijo" Multiplicity="1" />
     <End Role="Edifico" Type="ActivoFijoModel.Store.Edifico" Multiplicity="0..1" />
     <ReferentialConstraint>
@@ -480,7 +485,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__EquipoMaq__IdAct__0A537D18">
+  <Association Name="FK__EquipoMaq__IdAct__11007AA7">
     <End Role="ActivoFijo" Type="ActivoFijoModel.Store.ActivoFijo" Multiplicity="1" />
     <End Role="EquipoMaquinariaMuebles" Type="ActivoFijoModel.Store.EquipoMaquinariaMuebles" Multiplicity="0..1" />
     <ReferentialConstraint>
@@ -492,7 +497,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__revaloriz__IdAct__3DD3211E">
+  <Association Name="FK__revaloriz__IdAct__44801EAD">
     <End Role="ActivoFijo" Type="ActivoFijoModel.Store.ActivoFijo" Multiplicity="0..1" />
     <End Role="revalorizacion" Type="ActivoFijoModel.Store.revalorizacion" Multiplicity="*" />
     <ReferentialConstraint>
@@ -504,7 +509,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Terreno__IdActiv__058EC7FB">
+  <Association Name="FK__Terreno__IdActiv__0C3BC58A">
     <End Role="ActivoFijo" Type="ActivoFijoModel.Store.ActivoFijo" Multiplicity="1" />
     <End Role="Terreno" Type="ActivoFijoModel.Store.Terreno" Multiplicity="0..1" />
     <ReferentialConstraint>
@@ -516,7 +521,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Transfere__IdAct__30792600">
+  <Association Name="FK__Transfere__IdAct__3726238F">
     <End Role="ActivoFijo" Type="ActivoFijoModel.Store.ActivoFijo" Multiplicity="0..1" />
     <End Role="Transferencia" Type="ActivoFijoModel.Store.Transferencia" Multiplicity="*" />
     <ReferentialConstraint>
@@ -528,7 +533,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Vehiculo__IdActi__1D66518C">
+  <Association Name="FK__Vehiculo__IdActi__24134F1B">
     <End Role="ActivoFijo" Type="ActivoFijoModel.Store.ActivoFijo" Multiplicity="1" />
     <End Role="Vehiculo" Type="ActivoFijoModel.Store.Vehiculo" Multiplicity="0..1" />
     <ReferentialConstraint>
@@ -540,7 +545,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__VentaGarageDet__54B68676">
+  <Association Name="FK__VentaGarageDet__5D4BCC77">
     <End Role="VentaGarageCab" Type="ActivoFijoModel.Store.VentaGarageCab" Multiplicity="0..1" />
     <End Role="VentaGarageDet" Type="ActivoFijoModel.Store.VentaGarageDet" Multiplicity="*" />
     <ReferentialConstraint>

@@ -74,7 +74,7 @@ namespace datos.RecursosHumanos
             using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
             {
 
-                var x = (from q in ent.Persona where q.Identificacion == pe.Identificacion select q).First();
+                var x = (from q in ent.Persona  where q.Identificacion == pe.Identificacion select q).First();
                 x.IdPersona = pe.IdPersona;
                 x.Identificacion = pe.Identificacion;
                 x.IdTipoPersona = pe.IdTipoPersona;

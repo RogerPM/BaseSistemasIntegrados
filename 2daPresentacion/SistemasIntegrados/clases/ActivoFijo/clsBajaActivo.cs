@@ -15,7 +15,7 @@ namespace clases.ActivoFijo
         public int       IdEstado { get; set; }
         public int       IdEmpresa { get; set; }
         public string    Descripcion { get; set; }
-        public string    Motivo { get; set; }
+        public int    Motivo { get; set; }
         public int       Proveedor { get; set; }
         public int IdCabeceraComprobante { get; set; }
         public string    Observacion { get; set; }

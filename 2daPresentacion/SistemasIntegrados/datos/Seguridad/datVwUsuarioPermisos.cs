@@ -41,7 +41,74 @@ namespace datos.Seguridad
                 return null;
             }
         }
-
+        public List<clsVwUsuarioPermisos> LeerPermisoVista()
+        {
+            try
+            {
+                List<clsVwUsuarioPermisos> listaPermisos = new List<clsVwUsuarioPermisos>();
+                TECAv8Entities ent = new TECAv8Entities();
+                var con = from w in ent.UsuariodPermisos select w;
+                // var con = from w in ent.UsuarioPermisos select w;
+                // var con = from w in ent.UsuarioPermisos select w;
+                // var con = from w in ent.UsuarioPermisos select w; 
+                foreach (var item in con) //se cae xq es version antigua no tiene sector
+                {
+                    clsVwUsuarioPermisos p = new clsVwUsuarioPermisos();
+                    p.idUsuario = item.IdUsuario;
+                    p.nombreUsuario = item.NombreUsuario;
+                    p.perfil = item.Descripcion;
+                    p.idModulo = item.IdModulo;
+                    p.nombre = item.Nombre;
+                    p.nombreFormulario = item.NombreFormulario;
+                    p.lectura = item.Lectura;
+                    p.escritura = item.Escritura;
+                    p.eliminacion = item.Eliminacion;
+                    //p.descripcion = item.Descripcion;
+                    listaPermisos.Add(p);
+                }
+                return listaPermisos;
+                //var ee = from w in listaEmpresa select w;   
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex);
+                return null;
+            }
+        }
+        public List<clsVwUsuarioPermisos> ConsultarPermisos()
+        {
+            try
+            {
+                List<clsVwUsuarioPermisos> listaPermisos = new List<clsVwUsuarioPermisos>();
+                TECAv8Entities ent = new TECAv8Entities();
+                var con = from w in ent.UsuariodPermisos select w;
+                // var con = from w in ent.UsuarioPermisos select w;
+                // var con = from w in ent.UsuarioPermisos select w;
+                // var con = from w in ent.UsuarioPermisos select w; 
+                foreach (var item in con) //se cae xq es version antigua no tiene sector
+                {
+                    clsVwUsuarioPermisos p = new clsVwUsuarioPermisos();
+                    p.idUsuario = item.IdUsuario;
+                    p.nombreUsuario = item.NombreUsuario;
+                    p.perfil = item.Descripcion;
+                    p.idModulo = item.IdModulo;
+                    p.nombre = item.Nombre;
+                    p.nombreFormulario = item.NombreFormulario;
+                    p.lectura = item.Lectura;
+                    p.escritura = item.Escritura;
+                    p.eliminacion = item.Eliminacion;
+                    //p.descripcion = item.Descripcion;
+                    listaPermisos.Add(p);
+                }
+                return listaPermisos;
+                //var ee = from w in listaEmpresa select w;   
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex);
+                return null;
+            }
+        }
     }
 }
 /*

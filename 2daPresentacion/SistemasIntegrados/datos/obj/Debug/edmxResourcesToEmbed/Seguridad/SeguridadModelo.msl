@@ -83,17 +83,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="MenuPorEmpresa">
-      <EntityTypeMapping TypeName="TECAv8Model.MenuPorEmpresa">
-        <MappingFragment StoreEntitySet="MenuPorEmpresa">
-          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
-          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
-          <ScalarProperty Name="NombreAsamblyPorEmpresa" ColumnName="NombreAsamblyPorEmpresa" />
-          <ScalarProperty Name="NomFormularioPorEmpresa" ColumnName="NomFormularioPorEmpresa" />
-          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Modulo">
       <EntityTypeMapping TypeName="TECAv8Model.Modulo">
         <MappingFragment StoreEntitySet="Modulo">
@@ -178,18 +167,12 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="UsuarioInformacion">
-      <EntityTypeMapping TypeName="TECAv8Model.UsuarioInformacion">
-        <MappingFragment StoreEntitySet="UsuarioInformacion">
-          <ScalarProperty Name="Ruc" ColumnName="Ruc" />
-          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
-          <ScalarProperty Name="NombreComercial" ColumnName="NombreComercial" />
-          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
-          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
-          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
-          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
-          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+    <EntitySetMapping Name="Historial">
+      <EntityTypeMapping TypeName="TECAv8Model.Historial">
+        <MappingFragment StoreEntitySet="Historial">
+          <ScalarProperty Name="FechaInicioSesion" ColumnName="FechaInicioSesion" />
           <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdHistorial" ColumnName="IdHistorial" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -205,6 +188,33 @@
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
           <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioInformacion">
+      <EntityTypeMapping TypeName="TECAv8Model.UsuarioInformacion">
+        <MappingFragment StoreEntitySet="UsuarioInformacion">
+          <ScalarProperty Name="Ruc" ColumnName="Ruc" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="NombreComercial" ColumnName="NombreComercial" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IniciosDeSesion">
+      <EntityTypeMapping TypeName="TECAv8Model.IniciosDeSesion">
+        <MappingFragment StoreEntitySet="IniciosDeSesion">
+          <ScalarProperty Name="FechaInicioSesion" ColumnName="FechaInicioSesion" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdHistorial" ColumnName="IdHistorial" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>

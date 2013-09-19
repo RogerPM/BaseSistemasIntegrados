@@ -15,5 +15,10 @@ namespace forms.RecursosHumanos
         {
             InitializeComponent();
         }
+
+        private void frmConsultaPermisos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

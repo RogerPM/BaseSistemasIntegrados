@@ -68,10 +68,6 @@
             this.txtCedula = new DevExpress.XtraEditors.TextEdit();
             this.lblApellido = new DevExpress.XtraEditors.LabelControl();
             this.cmbTipoDiscapacidad = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.lblNU = new DevExpress.XtraEditors.LabelControl();
-            this.lblUsuario = new DevExpress.XtraEditors.LabelControl();
-            this.timeEdit1 = new DevExpress.XtraEditors.TimeEdit();
-            this.lblHora = new DevExpress.XtraEditors.LabelControl();
             this.tsMenu = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.txbGuardar = new System.Windows.Forms.ToolStripButton();
@@ -101,7 +97,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtApellidos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCedula.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTipoDiscapacidad.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit1.Properties)).BeginInit();
             this.tsMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -284,10 +279,6 @@
             // clsTipoContratoBindingSource
             // 
             this.clsTipoContratoBindingSource.DataSource = typeof(clases.RecursosHumanos.clsTipoContrato);
-            // 
-            // clsJornadaBindingSource
-            // 
-            //this.clsJornadaBindingSource.DataSource = typeof(clases.RecursosHumanos.clsJornada);
             // 
             // gcEmpleado
             // 
@@ -513,43 +504,6 @@
             this.cmbTipoDiscapacidad.Size = new System.Drawing.Size(131, 20);
             this.cmbTipoDiscapacidad.TabIndex = 36;
             // 
-            // lblNU
-            // 
-            this.lblNU.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNU.Location = new System.Drawing.Point(65, 522);
-            this.lblNU.Name = "lblNU";
-            this.lblNU.Size = new System.Drawing.Size(56, 13);
-            this.lblNU.TabIndex = 32;
-            this.lblNU.Text = "María Perez";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(13, 522);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
-            this.lblUsuario.TabIndex = 31;
-            this.lblUsuario.Text = "Usuario:";
-            // 
-            // timeEdit1
-            // 
-            this.timeEdit1.EditValue = new System.DateTime(2013, 6, 20, 0, 0, 0, 0);
-            this.timeEdit1.Location = new System.Drawing.Point(353, 519);
-            this.timeEdit1.Name = "timeEdit1";
-            this.timeEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.timeEdit1.Size = new System.Drawing.Size(100, 20);
-            this.timeEdit1.TabIndex = 34;
-            // 
-            // lblHora
-            // 
-            this.lblHora.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(300, 522);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(30, 13);
-            this.lblHora.TabIndex = 33;
-            this.lblHora.Text = "Hora:";
-            // 
             // tsMenu
             // 
             this.tsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -558,7 +512,7 @@
             this.tsbModificar});
             this.tsMenu.Location = new System.Drawing.Point(0, 0);
             this.tsMenu.Name = "tsMenu";
-            this.tsMenu.Size = new System.Drawing.Size(466, 25);
+            this.tsMenu.Size = new System.Drawing.Size(472, 25);
             this.tsMenu.TabIndex = 46;
             this.tsMenu.Text = "toolStrip1";
             // 
@@ -595,17 +549,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 578);
+            this.ClientSize = new System.Drawing.Size(472, 481);
             this.Controls.Add(this.tsMenu);
-            this.Controls.Add(this.timeEdit1);
-            this.Controls.Add(this.lblHora);
-            this.Controls.Add(this.lblNU);
-            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.gcEmpleado);
             this.Controls.Add(this.gcDatosContrato);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(482, 616);
-            this.MinimumSize = new System.Drawing.Size(482, 616);
             this.Name = "frmProcesoContratos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contratos";
@@ -637,7 +585,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtApellidos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCedula.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTipoDiscapacidad.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeEdit1.Properties)).EndInit();
             this.tsMenu.ResumeLayout(false);
             this.tsMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -679,10 +626,6 @@
         private DevExpress.XtraEditors.SimpleButton btnBuscarCedula;
         private DevExpress.XtraEditors.DateEdit deFecha;
         private DevExpress.XtraEditors.DateEdit deFechaNacimiento;
-        private DevExpress.XtraEditors.LabelControl lblNU;
-        private DevExpress.XtraEditors.LabelControl lblUsuario;
-        private DevExpress.XtraEditors.TimeEdit timeEdit1;
-        private DevExpress.XtraEditors.LabelControl lblHora;
         private DevExpress.XtraEditors.LookUpEdit cmbCargo;
         private System.Windows.Forms.BindingSource clsCargoBindingSource;
         private DevExpress.XtraEditors.LookUpEdit cmbTipoContrato;

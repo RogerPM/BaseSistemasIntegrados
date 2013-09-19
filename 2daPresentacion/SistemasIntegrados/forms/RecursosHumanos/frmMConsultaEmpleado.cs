@@ -18,16 +18,17 @@ namespace forms.RecursosHumanos
         public frmMConsultaEmpleado()
         {
             InitializeComponent();
+            
         }
 
-     
-
+        
+        public int band{ get; set; }
        
 
             public void Cargar()
         {
-            clsDatosPersona  Persoana = new clsDatosPersona();
-            gdPersona .DataSource = Persoana.ConsultaPersona();
+            clsDatosPersona   Persoana = new clsDatosPersona ();
+            gdPersona .DataSource = Persoana.ConsultaPersona1(band);
         }
            
         

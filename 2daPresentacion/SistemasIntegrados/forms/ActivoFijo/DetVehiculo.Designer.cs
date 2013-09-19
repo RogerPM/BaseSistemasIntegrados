@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gbxVehiculos = new System.Windows.Forms.GroupBox();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.txtAñosVidaUtil = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtNumPuertas = new DevExpress.XtraEditors.TextEdit();
+            this.LlbNumPuertas = new DevExpress.XtraEditors.LabelControl();
             this.txtCosto = new DevExpress.XtraEditors.TextEdit();
             this.lblCosto = new DevExpress.XtraEditors.LabelControl();
             this.lblV_Adquisición = new DevExpress.XtraEditors.LabelControl();
@@ -36,24 +43,54 @@
             this.lblV_Residual = new DevExpress.XtraEditors.LabelControl();
             this.txtV_Adquisicion = new DevExpress.XtraEditors.TextEdit();
             this.cbxChasis = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsTipoChasisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbxMaterial = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsTipoMaterialBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbxColor = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsColorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbxMotor = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsTipoMotorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbxMarca = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsMarcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colempresa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colcodigo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colestado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbxModelo = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsModeloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colmarca = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cbxTransmision = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblTransmision = new DevExpress.XtraEditors.LabelControl();
             this.txtPlaca = new DevExpress.XtraEditors.TextEdit();
             this.lblPlaca = new DevExpress.XtraEditors.LabelControl();
             this.lblSerieMotor = new DevExpress.XtraEditors.LabelControl();
             this.txtAñosDepreciados = new DevExpress.XtraEditors.TextEdit();
-            this.AñosVidaUtil = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblAñosDepreciados = new DevExpress.XtraEditors.LabelControl();
             this.lblAñosVidaUtil = new DevExpress.XtraEditors.LabelControl();
             this.dtFechaCreacion = new DevExpress.XtraEditors.DateEdit();
@@ -77,6 +114,7 @@
             this.lblMarca = new DevExpress.XtraEditors.LabelControl();
             this.lblProveedor = new DevExpress.XtraEditors.LabelControl();
             this.cbxProveedor = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdPersona = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdentificacion = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -85,41 +123,47 @@
             this.colNombreRazonSocial = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colApellido = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFechaNacimiento = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colGenero = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTipoIdentificacion = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnAdicional = new DevExpress.XtraEditors.SimpleButton();
+            this.rtbObservacion = new System.Windows.Forms.RichTextBox();
+            this.lblObservacion = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.colGenero = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTelefonoGneral = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTelefonoMovil = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTelefonoCasa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTelefonoOtros = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMail = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFoto = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnAdicional = new DevExpress.XtraEditors.SimpleButton();
-            this.rtbObservacion = new System.Windows.Forms.RichTextBox();
-            this.lblObservacion = new DevExpress.XtraEditors.LabelControl();
-            this.txtNumPuertas = new DevExpress.XtraEditors.TextEdit();
-            this.LlbNumPuertas = new DevExpress.XtraEditors.LabelControl();
             this.gbxVehiculos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAñosVidaUtil.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumPuertas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCosto.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtV_Residual.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtV_Adquisicion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxChasis.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTipoChasisBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxMaterial.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTipoMaterialBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxColor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsColorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxMotor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTipoMotorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxMarca.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsMarcaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxModelo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsModeloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxTransmision.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlaca.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAñosDepreciados.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AñosVidaUtil.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaCreacion.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaCreacion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaAdquisicion.Properties.VistaTimeProperties)).BeginInit();
@@ -130,12 +174,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSerieMotor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatricula.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxProveedor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsPersonaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumPuertas.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxVehiculos
             // 
+            this.gbxVehiculos.Controls.Add(this.labelControl4);
+            this.gbxVehiculos.Controls.Add(this.txtAñosVidaUtil);
+            this.gbxVehiculos.Controls.Add(this.labelControl3);
+            this.gbxVehiculos.Controls.Add(this.labelControl1);
             this.gbxVehiculos.Controls.Add(this.txtNumPuertas);
             this.gbxVehiculos.Controls.Add(this.LlbNumPuertas);
             this.gbxVehiculos.Controls.Add(this.txtCosto);
@@ -156,7 +204,6 @@
             this.gbxVehiculos.Controls.Add(this.lblPlaca);
             this.gbxVehiculos.Controls.Add(this.lblSerieMotor);
             this.gbxVehiculos.Controls.Add(this.txtAñosDepreciados);
-            this.gbxVehiculos.Controls.Add(this.AñosVidaUtil);
             this.gbxVehiculos.Controls.Add(this.lblAñosDepreciados);
             this.gbxVehiculos.Controls.Add(this.lblAñosVidaUtil);
             this.gbxVehiculos.Controls.Add(this.dtFechaCreacion);
@@ -185,12 +232,75 @@
             this.gbxVehiculos.TabStop = false;
             this.gbxVehiculos.Text = "Vehiculo";
             // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Location = new System.Drawing.Point(168, 269);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(28, 16);
+            this.labelControl4.TabIndex = 335;
+            this.labelControl4.Text = "Años";
+            // 
+            // txtAñosVidaUtil
+            // 
+            this.txtAñosVidaUtil.EditValue = "";
+            this.txtAñosVidaUtil.Enabled = false;
+            this.txtAñosVidaUtil.Location = new System.Drawing.Point(134, 268);
+            this.txtAñosVidaUtil.Name = "txtAñosVidaUtil";
+            this.txtAñosVidaUtil.Properties.Mask.EditMask = "n0";
+            this.txtAñosVidaUtil.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtAñosVidaUtil.Properties.MaxLength = 3;
+            this.txtAñosVidaUtil.Size = new System.Drawing.Size(28, 20);
+            this.txtAñosVidaUtil.TabIndex = 334;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Location = new System.Drawing.Point(412, 94);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(14, 16);
+            this.labelControl3.TabIndex = 331;
+            this.labelControl3.Text = "Kg";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(410, 118);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(31, 16);
+            this.labelControl1.TabIndex = 330;
+            this.labelControl1.Text = "Km/H";
+            // 
+            // txtNumPuertas
+            // 
+            this.txtNumPuertas.EditValue = "Ninguna";
+            this.txtNumPuertas.Location = new System.Drawing.Point(87, 163);
+            this.txtNumPuertas.Name = "txtNumPuertas";
+            this.txtNumPuertas.Properties.Mask.EditMask = "n0";
+            this.txtNumPuertas.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtNumPuertas.Properties.MaxLength = 2;
+            this.txtNumPuertas.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtNumPuertas.Size = new System.Drawing.Size(109, 20);
+            this.txtNumPuertas.TabIndex = 329;
+            // 
+            // LlbNumPuertas
+            // 
+            this.LlbNumPuertas.Location = new System.Drawing.Point(23, 166);
+            this.LlbNumPuertas.Name = "LlbNumPuertas";
+            this.LlbNumPuertas.Size = new System.Drawing.Size(52, 13);
+            this.LlbNumPuertas.TabIndex = 328;
+            this.LlbNumPuertas.Text = "N.Puertas:";
+            // 
             // txtCosto
             // 
             this.txtCosto.Location = new System.Drawing.Point(335, 204);
             this.txtCosto.Name = "txtCosto";
+            this.txtCosto.Properties.Mask.EditMask = "n2";
+            this.txtCosto.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtCosto.Properties.MaxLength = 12;
             this.txtCosto.Size = new System.Drawing.Size(73, 20);
             this.txtCosto.TabIndex = 327;
+            this.txtCosto.EditValueChanged += new System.EventHandler(this.txtCosto_EditValueChanged);
             // 
             // lblCosto
             // 
@@ -210,8 +320,15 @@
             // 
             // txtV_Residual
             // 
+            this.txtV_Residual.EditValue = "0";
+            this.txtV_Residual.Enabled = false;
             this.txtV_Residual.Location = new System.Drawing.Point(335, 253);
             this.txtV_Residual.Name = "txtV_Residual";
+            this.txtV_Residual.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtV_Residual.Properties.Appearance.Options.UseForeColor = true;
+            this.txtV_Residual.Properties.Mask.EditMask = "n2";
+            this.txtV_Residual.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtV_Residual.Properties.MaxLength = 12;
             this.txtV_Residual.Size = new System.Drawing.Size(73, 20);
             this.txtV_Residual.TabIndex = 324;
             // 
@@ -227,8 +344,12 @@
             // 
             this.txtV_Adquisicion.Location = new System.Drawing.Point(335, 228);
             this.txtV_Adquisicion.Name = "txtV_Adquisicion";
+            this.txtV_Adquisicion.Properties.Mask.EditMask = "n2";
+            this.txtV_Adquisicion.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtV_Adquisicion.Properties.MaxLength = 12;
             this.txtV_Adquisicion.Size = new System.Drawing.Size(73, 20);
             this.txtV_Adquisicion.TabIndex = 322;
+            this.txtV_Adquisicion.EditValueChanged += new System.EventHandler(this.txtV_Adquisicion_EditValueChanged);
             // 
             // cbxChasis
             // 
@@ -236,16 +357,54 @@
             this.cbxChasis.Name = "cbxChasis";
             this.cbxChasis.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxChasis.Properties.DataSource = this.clsTipoChasisBindingSource;
+            this.cbxChasis.Properties.DisplayMember = "descripcion";
+            this.cbxChasis.Properties.ValueMember = "descripcion";
             this.cbxChasis.Properties.View = this.gridView3;
             this.cbxChasis.Size = new System.Drawing.Size(109, 20);
             this.cbxChasis.TabIndex = 321;
             // 
+            // clsTipoChasisBindingSource
+            // 
+            this.clsTipoChasisBindingSource.DataSource = typeof(clases.Inventario.clsTipoChasis);
+            // 
             // gridView3
             // 
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn20,
+            this.gridColumn21,
+            this.gridColumn22,
+            this.gridColumn23});
             this.gridView3.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView3.Name = "gridView3";
             this.gridView3.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView3.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn20
+            // 
+            this.gridColumn20.FieldName = "empresa";
+            this.gridColumn20.Name = "gridColumn20";
+            // 
+            // gridColumn21
+            // 
+            this.gridColumn21.FieldName = "codigo";
+            this.gridColumn21.Name = "gridColumn21";
+            this.gridColumn21.Visible = true;
+            this.gridColumn21.VisibleIndex = 0;
+            this.gridColumn21.Width = 101;
+            // 
+            // gridColumn22
+            // 
+            this.gridColumn22.FieldName = "descripcion";
+            this.gridColumn22.Name = "gridColumn22";
+            this.gridColumn22.Visible = true;
+            this.gridColumn22.VisibleIndex = 1;
+            this.gridColumn22.Width = 632;
+            // 
+            // gridColumn23
+            // 
+            this.gridColumn23.FieldName = "estado";
+            this.gridColumn23.Name = "gridColumn23";
             // 
             // cbxMaterial
             // 
@@ -253,16 +412,54 @@
             this.cbxMaterial.Name = "cbxMaterial";
             this.cbxMaterial.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxMaterial.Properties.DataSource = this.clsTipoMaterialBindingSource;
+            this.cbxMaterial.Properties.DisplayMember = "descripcion";
+            this.cbxMaterial.Properties.ValueMember = "descripcion";
             this.cbxMaterial.Properties.View = this.gridView6;
             this.cbxMaterial.Size = new System.Drawing.Size(111, 20);
             this.cbxMaterial.TabIndex = 316;
             // 
+            // clsTipoMaterialBindingSource
+            // 
+            this.clsTipoMaterialBindingSource.DataSource = typeof(clases.Inventario.clsTipoMaterial);
+            // 
             // gridView6
             // 
+            this.gridView6.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn12,
+            this.gridColumn13,
+            this.gridColumn14,
+            this.gridColumn15});
             this.gridView6.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView6.Name = "gridView6";
             this.gridView6.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView6.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.FieldName = "empresa";
+            this.gridColumn12.Name = "gridColumn12";
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.FieldName = "codigo";
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 0;
+            this.gridColumn13.Width = 92;
+            // 
+            // gridColumn14
+            // 
+            this.gridColumn14.FieldName = "descripcion";
+            this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.Visible = true;
+            this.gridColumn14.VisibleIndex = 1;
+            this.gridColumn14.Width = 641;
+            // 
+            // gridColumn15
+            // 
+            this.gridColumn15.FieldName = "estado";
+            this.gridColumn15.Name = "gridColumn15";
             // 
             // cbxColor
             // 
@@ -270,16 +467,56 @@
             this.cbxColor.Name = "cbxColor";
             this.cbxColor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxColor.Properties.DataSource = this.clsColorBindingSource;
+            this.cbxColor.Properties.DisplayMember = "descripcion";
+            this.cbxColor.Properties.ValueMember = "descripcion";
             this.cbxColor.Properties.View = this.gridView4;
             this.cbxColor.Size = new System.Drawing.Size(111, 20);
             this.cbxColor.TabIndex = 315;
             // 
+            // clsColorBindingSource
+            // 
+            this.clsColorBindingSource.DataSource = typeof(clases.Inventario.clsColor);
+            // 
             // gridView4
             // 
+            this.gridView4.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn8,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn11});
             this.gridView4.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView4.Name = "gridView4";
             this.gridView4.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView4.OptionsView.ShowGroupPanel = false;
+            this.gridView4.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn11, DevExpress.Data.ColumnSortOrder.Ascending)});
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.FieldName = "empresa";
+            this.gridColumn8.Name = "gridColumn8";
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.FieldName = "codigo";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 0;
+            this.gridColumn9.Width = 106;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.FieldName = "descripcion";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 1;
+            this.gridColumn10.Width = 627;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.FieldName = "estado";
+            this.gridColumn11.Name = "gridColumn11";
             // 
             // cbxMotor
             // 
@@ -287,16 +524,54 @@
             this.cbxMotor.Name = "cbxMotor";
             this.cbxMotor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxMotor.Properties.DataSource = this.clsTipoMotorBindingSource;
+            this.cbxMotor.Properties.DisplayMember = "descripcion";
+            this.cbxMotor.Properties.ValueMember = "descripcion";
             this.cbxMotor.Properties.View = this.gridView5;
             this.cbxMotor.Size = new System.Drawing.Size(111, 20);
             this.cbxMotor.TabIndex = 315;
             // 
+            // clsTipoMotorBindingSource
+            // 
+            this.clsTipoMotorBindingSource.DataSource = typeof(clases.Inventario.clsTipoMotor);
+            // 
             // gridView5
             // 
+            this.gridView5.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn16,
+            this.gridColumn17,
+            this.gridColumn18,
+            this.gridColumn19});
             this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView5.Name = "gridView5";
             this.gridView5.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView5.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn16
+            // 
+            this.gridColumn16.FieldName = "empresa";
+            this.gridColumn16.Name = "gridColumn16";
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.FieldName = "codigo";
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 0;
+            this.gridColumn17.Width = 109;
+            // 
+            // gridColumn18
+            // 
+            this.gridColumn18.FieldName = "descripcion";
+            this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.Visible = true;
+            this.gridColumn18.VisibleIndex = 1;
+            this.gridColumn18.Width = 624;
+            // 
+            // gridColumn19
+            // 
+            this.gridColumn19.FieldName = "estado";
+            this.gridColumn19.Name = "gridColumn19";
             // 
             // cbxMarca
             // 
@@ -304,16 +579,57 @@
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxMarca.Properties.DataSource = this.clsMarcaBindingSource;
+            this.cbxMarca.Properties.DisplayMember = "descripcion";
+            this.cbxMarca.Properties.ValueMember = "descripcion";
             this.cbxMarca.Properties.View = this.gridLookUpEdit1View;
             this.cbxMarca.Size = new System.Drawing.Size(111, 20);
             this.cbxMarca.TabIndex = 312;
             // 
+            // clsMarcaBindingSource
+            // 
+            this.clsMarcaBindingSource.DataSource = typeof(clases.Inventario.clsMarca);
+            // 
             // gridLookUpEdit1View
             // 
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colempresa,
+            this.colcodigo,
+            this.coldescripcion,
+            this.colestado});
             this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            this.gridLookUpEdit1View.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colcodigo, DevExpress.Data.ColumnSortOrder.Ascending)});
+            // 
+            // colempresa
+            // 
+            this.colempresa.FieldName = "empresa";
+            this.colempresa.Name = "colempresa";
+            // 
+            // colcodigo
+            // 
+            this.colcodigo.FieldName = "codigo";
+            this.colcodigo.Name = "colcodigo";
+            this.colcodigo.Visible = true;
+            this.colcodigo.VisibleIndex = 0;
+            this.colcodigo.Width = 133;
+            // 
+            // coldescripcion
+            // 
+            this.coldescripcion.FieldName = "descripcion";
+            this.coldescripcion.Name = "coldescripcion";
+            this.coldescripcion.Visible = true;
+            this.coldescripcion.VisibleIndex = 1;
+            this.coldescripcion.Width = 299;
+            // 
+            // colestado
+            // 
+            this.colestado.FieldName = "estado";
+            this.colestado.Name = "colestado";
+            this.colestado.Width = 301;
             // 
             // cbxModelo
             // 
@@ -321,16 +637,60 @@
             this.cbxModelo.Name = "cbxModelo";
             this.cbxModelo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxModelo.Properties.DataSource = this.clsModeloBindingSource;
+            this.cbxModelo.Properties.DisplayMember = "descripcion";
+            this.cbxModelo.Properties.ValueMember = "descripcion";
             this.cbxModelo.Properties.View = this.gridView2;
             this.cbxModelo.Size = new System.Drawing.Size(111, 20);
             this.cbxModelo.TabIndex = 313;
             // 
+            // clsModeloBindingSource
+            // 
+            this.clsModeloBindingSource.DataSource = typeof(clases.Inventario.clsModelo);
+            // 
             // gridView2
             // 
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.colmarca,
+            this.gridColumn4});
             this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.FieldName = "empresa";
+            this.gridColumn1.Name = "gridColumn1";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.FieldName = "codigo";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 0;
+            this.gridColumn2.Width = 118;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.FieldName = "descripcion";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 1;
+            this.gridColumn3.Width = 615;
+            // 
+            // colmarca
+            // 
+            this.colmarca.FieldName = "marca";
+            this.colmarca.Name = "colmarca";
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.FieldName = "estado";
+            this.gridColumn4.Name = "gridColumn4";
             // 
             // cbxTransmision
             // 
@@ -342,7 +702,7 @@
             this.cbxTransmision.Properties.Items.AddRange(new object[] {
             "Manual",
             "Automática"});
-            this.cbxTransmision.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cbxTransmision.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.cbxTransmision.Size = new System.Drawing.Size(111, 20);
             this.cbxTransmision.TabIndex = 136;
             // 
@@ -359,7 +719,10 @@
             this.txtPlaca.EditValue = "Ninguna";
             this.txtPlaca.Location = new System.Drawing.Point(87, 117);
             this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtPlaca.Properties.Mask.EditMask = "[a-zA-Z0-9-]+";
+            this.txtPlaca.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtPlaca.Properties.MaxLength = 10;
+            this.txtPlaca.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPlaca.Size = new System.Drawing.Size(109, 20);
             this.txtPlaca.TabIndex = 133;
             // 
@@ -383,17 +746,11 @@
             // 
             this.txtAñosDepreciados.Location = new System.Drawing.Point(134, 239);
             this.txtAñosDepreciados.Name = "txtAñosDepreciados";
+            this.txtAñosDepreciados.Properties.Mask.EditMask = "n0";
+            this.txtAñosDepreciados.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtAñosDepreciados.Properties.MaxLength = 3;
             this.txtAñosDepreciados.Size = new System.Drawing.Size(62, 20);
             this.txtAñosDepreciados.TabIndex = 130;
-            // 
-            // AñosVidaUtil
-            // 
-            this.AñosVidaUtil.Location = new System.Drawing.Point(134, 266);
-            this.AñosVidaUtil.Name = "AñosVidaUtil";
-            this.AñosVidaUtil.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.AñosVidaUtil.Size = new System.Drawing.Size(62, 20);
-            this.AñosVidaUtil.TabIndex = 129;
             // 
             // lblAñosDepreciados
             // 
@@ -455,7 +812,10 @@
             // 
             this.txtKilometro.Location = new System.Drawing.Point(335, 117);
             this.txtKilometro.Name = "txtKilometro";
-            this.txtKilometro.Size = new System.Drawing.Size(111, 20);
+            this.txtKilometro.Properties.Mask.EditMask = "n0";
+            this.txtKilometro.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtKilometro.Properties.MaxLength = 12;
+            this.txtKilometro.Size = new System.Drawing.Size(73, 20);
             this.txtKilometro.TabIndex = 106;
             // 
             // lblKilometraje
@@ -470,6 +830,9 @@
             // 
             this.txtCarga.Location = new System.Drawing.Point(87, 212);
             this.txtCarga.Name = "txtCarga";
+            this.txtCarga.Properties.Mask.EditMask = "n2";
+            this.txtCarga.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtCarga.Properties.MaxLength = 12;
             this.txtCarga.Size = new System.Drawing.Size(109, 20);
             this.txtCarga.TabIndex = 104;
             // 
@@ -485,16 +848,19 @@
             // 
             this.txtCapacidad.Location = new System.Drawing.Point(335, 91);
             this.txtCapacidad.Name = "txtCapacidad";
-            this.txtCapacidad.Size = new System.Drawing.Size(111, 20);
+            this.txtCapacidad.Properties.Mask.EditMask = "n0";
+            this.txtCapacidad.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtCapacidad.Properties.MaxLength = 12;
+            this.txtCapacidad.Size = new System.Drawing.Size(73, 20);
             this.txtCapacidad.TabIndex = 104;
             // 
             // lblCapacidad
             // 
-            this.lblCapacidad.Location = new System.Drawing.Point(272, 94);
+            this.lblCapacidad.Location = new System.Drawing.Point(227, 94);
             this.lblCapacidad.Name = "lblCapacidad";
-            this.lblCapacidad.Size = new System.Drawing.Size(54, 13);
+            this.lblCapacidad.Size = new System.Drawing.Size(99, 13);
             this.lblCapacidad.TabIndex = 103;
-            this.lblCapacidad.Text = "Capacidad:";
+            this.lblCapacidad.Text = "Capacidad de carga:";
             // 
             // lblChasis
             // 
@@ -508,6 +874,8 @@
             // 
             this.txtSerieMotor.Location = new System.Drawing.Point(335, 65);
             this.txtSerieMotor.Name = "txtSerieMotor";
+            this.txtSerieMotor.Properties.Mask.EditMask = "[a-zA-Z0-9 -#]+";
+            this.txtSerieMotor.Properties.MaxLength = 12;
             this.txtSerieMotor.Size = new System.Drawing.Size(111, 20);
             this.txtSerieMotor.TabIndex = 100;
             // 
@@ -524,7 +892,10 @@
             this.txtMatricula.EditValue = "Ninguna";
             this.txtMatricula.Location = new System.Drawing.Point(87, 91);
             this.txtMatricula.Name = "txtMatricula";
-            this.txtMatricula.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtMatricula.Properties.Mask.EditMask = "[a-zA-Z0-9 -#]+";
+            this.txtMatricula.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtMatricula.Properties.MaxLength = 12;
+            this.txtMatricula.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtMatricula.Size = new System.Drawing.Size(109, 20);
             this.txtMatricula.TabIndex = 98;
             // 
@@ -582,11 +953,16 @@
             this.cbxProveedor.Name = "cbxProveedor";
             this.cbxProveedor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxProveedor.Properties.DataSource = this.clsPersonaBindingSource;
             this.cbxProveedor.Properties.DisplayMember = "NombreRazonSocial";
             this.cbxProveedor.Properties.ValueMember = "NombreRazonSocial";
             this.cbxProveedor.Properties.View = this.gridView1;
             this.cbxProveedor.Size = new System.Drawing.Size(129, 20);
             this.cbxProveedor.TabIndex = 311;
+            // 
+            // clsPersonaBindingSource
+            // 
+            this.clsPersonaBindingSource.DataSource = typeof(clases.RecursosHumanos.clsPersona);
             // 
             // gridView1
             // 
@@ -660,15 +1036,59 @@
             this.colFechaNacimiento.FieldName = "FechaNacimiento";
             this.colFechaNacimiento.Name = "colFechaNacimiento";
             // 
-            // colGenero
-            // 
-            this.colGenero.FieldName = "Genero";
-            this.colGenero.Name = "colGenero";
-            // 
             // colTipoIdentificacion
             // 
             this.colTipoIdentificacion.FieldName = "TipoIdentificacion";
             this.colTipoIdentificacion.Name = "colTipoIdentificacion";
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.FieldName = "IdEstado";
+            this.gridColumn7.Name = "gridColumn7";
+            // 
+            // btnAdicional
+            // 
+            this.btnAdicional.Image = global::forms.Properties.Resources._24_arrow_first;
+            this.btnAdicional.Location = new System.Drawing.Point(372, 343);
+            this.btnAdicional.Name = "btnAdicional";
+            this.btnAdicional.Size = new System.Drawing.Size(84, 23);
+            this.btnAdicional.TabIndex = 314;
+            this.btnAdicional.Text = "Adicional";
+            this.btnAdicional.Click += new System.EventHandler(this.btnAdicional_Click);
+            // 
+            // rtbObservacion
+            // 
+            this.rtbObservacion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.rtbObservacion.Enabled = false;
+            this.rtbObservacion.Location = new System.Drawing.Point(140, 340);
+            this.rtbObservacion.MaxLength = 50;
+            this.rtbObservacion.Name = "rtbObservacion";
+            this.rtbObservacion.Size = new System.Drawing.Size(215, 36);
+            this.rtbObservacion.TabIndex = 313;
+            this.rtbObservacion.Text = "Ninguna";
+            // 
+            // lblObservacion
+            // 
+            this.lblObservacion.Location = new System.Drawing.Point(14, 343);
+            this.lblObservacion.Name = "lblObservacion";
+            this.lblObservacion.Size = new System.Drawing.Size(120, 13);
+            this.lblObservacion.TabIndex = 312;
+            this.lblObservacion.Text = "Observación Descriptiva:";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelControl2.Location = new System.Drawing.Point(321, 17);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(157, 13);
+            this.labelControl2.TabIndex = 315;
+            this.labelControl2.Text = "*La Medicion de la Carga sera(T)";
+            // 
+            // colGenero
+            // 
+            this.colGenero.FieldName = "Genero";
+            this.colGenero.Name = "colGenero";
             // 
             // gridColumn6
             // 
@@ -704,64 +1124,16 @@
             this.colMail.VisibleIndex = 2;
             this.colMail.Width = 121;
             // 
-            // gridColumn7
-            // 
-            this.gridColumn7.FieldName = "IdEstado";
-            this.gridColumn7.Name = "gridColumn7";
-            // 
             // colFoto
             // 
             this.colFoto.FieldName = "Foto";
             this.colFoto.Name = "colFoto";
             // 
-            // btnAdicional
-            // 
-            this.btnAdicional.Image = global::forms.Properties.Resources._24_arrow_first;
-            this.btnAdicional.Location = new System.Drawing.Point(372, 343);
-            this.btnAdicional.Name = "btnAdicional";
-            this.btnAdicional.Size = new System.Drawing.Size(84, 23);
-            this.btnAdicional.TabIndex = 314;
-            this.btnAdicional.Text = "Adicional";
-            // 
-            // rtbObservacion
-            // 
-            this.rtbObservacion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rtbObservacion.Enabled = false;
-            this.rtbObservacion.Location = new System.Drawing.Point(124, 340);
-            this.rtbObservacion.Name = "rtbObservacion";
-            this.rtbObservacion.Size = new System.Drawing.Size(231, 61);
-            this.rtbObservacion.TabIndex = 313;
-            this.rtbObservacion.Text = "";
-            // 
-            // lblObservacion
-            // 
-            this.lblObservacion.Location = new System.Drawing.Point(46, 343);
-            this.lblObservacion.Name = "lblObservacion";
-            this.lblObservacion.Size = new System.Drawing.Size(64, 13);
-            this.lblObservacion.TabIndex = 312;
-            this.lblObservacion.Text = "Observación:";
-            // 
-            // txtNumPuertas
-            // 
-            this.txtNumPuertas.EditValue = "Ninguna";
-            this.txtNumPuertas.Location = new System.Drawing.Point(87, 163);
-            this.txtNumPuertas.Name = "txtNumPuertas";
-            this.txtNumPuertas.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtNumPuertas.Size = new System.Drawing.Size(109, 20);
-            this.txtNumPuertas.TabIndex = 329;
-            // 
-            // LlbNumPuertas
-            // 
-            this.LlbNumPuertas.Location = new System.Drawing.Point(23, 166);
-            this.LlbNumPuertas.Name = "LlbNumPuertas";
-            this.LlbNumPuertas.Size = new System.Drawing.Size(52, 13);
-            this.LlbNumPuertas.TabIndex = 328;
-            this.LlbNumPuertas.Text = "N.Puertas:";
-            // 
             // DetVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.btnAdicional);
             this.Controls.Add(this.rtbObservacion);
             this.Controls.Add(this.lblObservacion);
@@ -773,25 +1145,32 @@
             this.Load += new System.EventHandler(this.DetVehiculo_Load);
             this.gbxVehiculos.ResumeLayout(false);
             this.gbxVehiculos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAñosVidaUtil.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumPuertas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCosto.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtV_Residual.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtV_Adquisicion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxChasis.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTipoChasisBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxMaterial.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTipoMaterialBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxColor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsColorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxMotor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTipoMotorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxMarca.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsMarcaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxModelo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsModeloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxTransmision.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlaca.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAñosDepreciados.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AñosVidaUtil.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaCreacion.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaCreacion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaAdquisicion.Properties.VistaTimeProperties)).EndInit();
@@ -802,8 +1181,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSerieMotor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatricula.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxProveedor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsPersonaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumPuertas.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -849,7 +1228,6 @@
         public DevExpress.XtraEditors.LabelControl lblPlaca;
         public DevExpress.XtraEditors.LabelControl lblSerieMotor;
         public DevExpress.XtraEditors.TextEdit txtAñosDepreciados;
-        public DevExpress.XtraEditors.ComboBoxEdit AñosVidaUtil;
         public DevExpress.XtraEditors.LabelControl lblAñosDepreciados;
         public DevExpress.XtraEditors.LabelControl lblAñosVidaUtil;
         public DevExpress.XtraEditors.DateEdit dtFechaCreacion;
@@ -883,5 +1261,42 @@
         public DevExpress.XtraEditors.GridLookUpEdit cbxChasis;
         public DevExpress.XtraEditors.TextEdit txtNumPuertas;
         public DevExpress.XtraEditors.LabelControl LlbNumPuertas;
+        private System.Windows.Forms.BindingSource clsPersonaBindingSource;
+        private System.Windows.Forms.BindingSource clsMarcaBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colempresa;
+        private DevExpress.XtraGrid.Columns.GridColumn colcodigo;
+        private DevExpress.XtraGrid.Columns.GridColumn coldescripcion;
+        private DevExpress.XtraGrid.Columns.GridColumn colestado;
+        private System.Windows.Forms.BindingSource clsModeloBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn colmarca;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private System.Windows.Forms.BindingSource clsColorBindingSource;
+        private System.Windows.Forms.BindingSource clsTipoMaterialBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private System.Windows.Forms.BindingSource clsTipoMotorBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
+        private System.Windows.Forms.BindingSource clsTipoChasisBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
+        public DevExpress.XtraEditors.LabelControl labelControl1;
+        public DevExpress.XtraEditors.LabelControl labelControl2;
+        public DevExpress.XtraEditors.LabelControl labelControl3;
+        public DevExpress.XtraEditors.LabelControl labelControl4;
+        public DevExpress.XtraEditors.TextEdit txtAñosVidaUtil;
     }
 }

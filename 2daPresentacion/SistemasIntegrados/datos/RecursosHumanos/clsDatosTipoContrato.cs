@@ -36,22 +36,22 @@ namespace datos.RecursosHumanos
             }
         }
 
-        public Boolean Guardar(clsTipoContrato un)
+        public Boolean Guardar(clsTipoContrato  tc)
         {
             try
             {
 
                 using (RecursosHumanosEntities ent = new RecursosHumanosEntities())
                 {
-                    TipoContrato uni = new TipoContrato()
+                    TipoContrato tp = new TipoContrato()
                     {
-                        IdTipoContrato = un.IdTipoContrato,
-                        Descripcion = un.Descripcion,
-                        Periodo = un.Periodo, 
-                        IdEmpresa = un.IdEmpresa,
-                        IdEstado = un.IdEstado, 
+                        IdTipoContrato = tc.IdTipoContrato,
+                        Descripcion = tc.Descripcion,
+                        Periodo = tc.Periodo, 
+                        IdEmpresa = tc.IdEmpresa,
+                        IdEstado = tc.IdEstado, 
                     };
-                    ent.AddToTipoContrato(uni);
+                    ent.AddToTipoContrato(tp);
                     ent.SaveChanges();
                 }
                 return true;
@@ -110,5 +110,7 @@ namespace datos.RecursosHumanos
                 return 1; //en caso de que no exista algun registro
             }
         }
+
+       
     }
 }

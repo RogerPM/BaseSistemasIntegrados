@@ -20,11 +20,9 @@ using System.Xml.Serialization;
 #region Metadatos de relaciones en EDM
 
 [assembly: EdmRelationshipAttribute("TECAv8Model", "FK__Empresa__IdEstad__08EA5793", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Seguridad.Estado), "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.Empresa), true)]
-[assembly: EdmRelationshipAttribute("TECAv8Model", "FK__MenuPorEm__IdEmp__0B5CAFEA", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Seguridad.Empresa), "MenuPorEmpresa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.MenuPorEmpresa), true)]
 [assembly: EdmRelationshipAttribute("TECAv8Model", "FK__TelefonoE__IdEmp__1D7B6025", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Seguridad.Empresa), "TelefonoEmpresa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.TelefonoEmpresa), true)]
 [assembly: EdmRelationshipAttribute("TECAv8Model", "FK__UsuarioPo__IdEmp__7B264821", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Seguridad.Empresa), "UsuarioPorEmpresa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.UsuarioPorEmpresa), true)]
 [assembly: EdmRelationshipAttribute("TECAv8Model", "FK__Menu__IdEstado__0697FACD", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Seguridad.Estado), "Menu", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.Menu), true)]
-[assembly: EdmRelationshipAttribute("TECAv8Model", "FK__MenuPorEm__IdEst__0D44F85C", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Seguridad.Estado), "MenuPorEmpresa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.MenuPorEmpresa), true)]
 [assembly: EdmRelationshipAttribute("TECAv8Model", "FK__Modulo__IdEstado__7FEAFD3E", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Seguridad.Estado), "Modulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.Modulo), true)]
 [assembly: EdmRelationshipAttribute("TECAv8Model", "FK__Perfil__IdEstado__35BCFE0A", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Seguridad.Estado), "Perfil", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.Perfil), true)]
 [assembly: EdmRelationshipAttribute("TECAv8Model", "FK__Usuario__IdEstad__3A81B327", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Seguridad.Estado), "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.Usuario), true)]
@@ -32,11 +30,11 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("TECAv8Model", "FK__Usuario__IdImage__3B75D760", "Imagen", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Seguridad.Imagen), "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.Usuario), true)]
 [assembly: EdmRelationshipAttribute("TECAv8Model", "FK__Menu__IdModulo__04AFB25B", "Modulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Seguridad.Modulo), "Menu", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.Menu), true)]
 [assembly: EdmRelationshipAttribute("TECAv8Model", "FK__Menu__IdPadre__05A3D694", "Menu", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Seguridad.Menu), "Menu1", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.Menu), true)]
-[assembly: EdmRelationshipAttribute("TECAv8Model", "FK__MenuPorEm__IdMen__0C50D423", "Menu", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Seguridad.Menu), "MenuPorEmpresa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.MenuPorEmpresa), true)]
 [assembly: EdmRelationshipAttribute("TECAv8Model", "FK__Permiso__IdMenu__17C286CF", "Menu", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Seguridad.Menu), "Permiso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.Permiso), true)]
 [assembly: EdmRelationshipAttribute("TECAv8Model", "FK__Permiso__IdModul__18B6AB08", "Modulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Seguridad.Modulo), "Permiso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.Permiso), true)]
 [assembly: EdmRelationshipAttribute("TECAv8Model", "FK__Permiso__IdPerfi__16CE6296", "Perfil", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Seguridad.Perfil), "Permiso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.Permiso), true)]
 [assembly: EdmRelationshipAttribute("TECAv8Model", "FK__UsuarioPo__IdUsu__7A3223E8", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Seguridad.Usuario), "UsuarioPorEmpresa", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.UsuarioPorEmpresa), true)]
+[assembly: EdmRelationshipAttribute("TECAv8Model", "FK__Historial__Fecha__1B13F4C6", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Seguridad.Usuario), "Historial", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Seguridad.Historial), true)]
 
 #endregion
 
@@ -171,22 +169,6 @@ namespace datos.Seguridad
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        public ObjectSet<MenuPorEmpresa> MenuPorEmpresa
-        {
-            get
-            {
-                if ((_MenuPorEmpresa == null))
-                {
-                    _MenuPorEmpresa = base.CreateObjectSet<MenuPorEmpresa>("MenuPorEmpresa");
-                }
-                return _MenuPorEmpresa;
-            }
-        }
-        private ObjectSet<MenuPorEmpresa> _MenuPorEmpresa;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
         public ObjectSet<Modulo> Modulo
         {
             get
@@ -299,18 +281,18 @@ namespace datos.Seguridad
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        public ObjectSet<UsuarioInformacion> UsuarioInformacion
+        public ObjectSet<Historial> Historial
         {
             get
             {
-                if ((_UsuarioInformacion == null))
+                if ((_Historial == null))
                 {
-                    _UsuarioInformacion = base.CreateObjectSet<UsuarioInformacion>("UsuarioInformacion");
+                    _Historial = base.CreateObjectSet<Historial>("Historial");
                 }
-                return _UsuarioInformacion;
+                return _Historial;
             }
         }
-        private ObjectSet<UsuarioInformacion> _UsuarioInformacion;
+        private ObjectSet<Historial> _Historial;
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -327,6 +309,38 @@ namespace datos.Seguridad
             }
         }
         private ObjectSet<UsuariodPermisos> _UsuariodPermisos;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<UsuarioInformacion> UsuarioInformacion
+        {
+            get
+            {
+                if ((_UsuarioInformacion == null))
+                {
+                    _UsuarioInformacion = base.CreateObjectSet<UsuarioInformacion>("UsuarioInformacion");
+                }
+                return _UsuarioInformacion;
+            }
+        }
+        private ObjectSet<UsuarioInformacion> _UsuarioInformacion;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<IniciosDeSesion> IniciosDeSesion
+        {
+            get
+            {
+                if ((_IniciosDeSesion == null))
+                {
+                    _IniciosDeSesion = base.CreateObjectSet<IniciosDeSesion>("IniciosDeSesion");
+                }
+                return _IniciosDeSesion;
+            }
+        }
+        private ObjectSet<IniciosDeSesion> _IniciosDeSesion;
 
         #endregion
 
@@ -370,14 +384,6 @@ namespace datos.Seguridad
         public void AddToMenu(Menu menu)
         {
             base.AddObject("Menu", menu);
-        }
-    
-        /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet MenuPorEmpresa. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToMenuPorEmpresa(MenuPorEmpresa menuPorEmpresa)
-        {
-            base.AddObject("MenuPorEmpresa", menuPorEmpresa);
         }
     
         /// <summary>
@@ -437,11 +443,11 @@ namespace datos.Seguridad
         }
     
         /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet UsuarioInformacion. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// Método desusado para agregar un nuevo objeto al EntitySet Historial. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
         /// </summary>
-        public void AddToUsuarioInformacion(UsuarioInformacion usuarioInformacion)
+        public void AddToHistorial(Historial historial)
         {
-            base.AddObject("UsuarioInformacion", usuarioInformacion);
+            base.AddObject("Historial", historial);
         }
     
         /// <summary>
@@ -450,6 +456,22 @@ namespace datos.Seguridad
         public void AddToUsuariodPermisos(UsuariodPermisos usuariodPermisos)
         {
             base.AddObject("UsuariodPermisos", usuariodPermisos);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet UsuarioInformacion. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToUsuarioInformacion(UsuarioInformacion usuarioInformacion)
+        {
+            base.AddObject("UsuarioInformacion", usuarioInformacion);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet IniciosDeSesion. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToIniciosDeSesion(IniciosDeSesion iniciosDeSesion)
+        {
+            base.AddObject("IniciosDeSesion", iniciosDeSesion);
         }
 
         #endregion
@@ -825,28 +847,6 @@ namespace datos.Seguridad
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAv8Model", "FK__MenuPorEm__IdEmp__0B5CAFEA", "MenuPorEmpresa")]
-        public EntityCollection<MenuPorEmpresa> MenuPorEmpresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MenuPorEmpresa>("TECAv8Model.FK__MenuPorEm__IdEmp__0B5CAFEA", "MenuPorEmpresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MenuPorEmpresa>("TECAv8Model.FK__MenuPorEm__IdEmp__0B5CAFEA", "MenuPorEmpresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("TECAv8Model", "FK__TelefonoE__IdEmp__1D7B6025", "TelefonoEmpresa")]
         public EntityCollection<TelefonoEmpresa> TelefonoEmpresa
         {
@@ -1020,28 +1020,6 @@ namespace datos.Seguridad
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAv8Model", "FK__MenuPorEm__IdEst__0D44F85C", "MenuPorEmpresa")]
-        public EntityCollection<MenuPorEmpresa> MenuPorEmpresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MenuPorEmpresa>("TECAv8Model.FK__MenuPorEm__IdEst__0D44F85C", "MenuPorEmpresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MenuPorEmpresa>("TECAv8Model.FK__MenuPorEm__IdEst__0D44F85C", "MenuPorEmpresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("TECAv8Model", "FK__Modulo__IdEstado__7FEAFD3E", "Modulo")]
         public EntityCollection<Modulo> Modulo
         {
@@ -1098,6 +1076,157 @@ namespace datos.Seguridad
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Usuario>("TECAv8Model.FK__Usuario__IdEstad__3A81B327", "Usuario", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TECAv8Model", Name="Historial")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Historial : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto Historial.
+        /// </summary>
+        /// <param name="idHistorial">Valor inicial de la propiedad IdHistorial.</param>
+        /// <param name="idUsuario">Valor inicial de la propiedad IdUsuario.</param>
+        /// <param name="fechaInicioSesion">Valor inicial de la propiedad FechaInicioSesion.</param>
+        public static Historial CreateHistorial(global::System.Int32 idHistorial, global::System.Int32 idUsuario, global::System.DateTime fechaInicioSesion)
+        {
+            Historial historial = new Historial();
+            historial.IdHistorial = idHistorial;
+            historial.IdUsuario = idUsuario;
+            historial.FechaInicioSesion = fechaInicioSesion;
+            return historial;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdHistorial
+        {
+            get
+            {
+                return _IdHistorial;
+            }
+            set
+            {
+                if (_IdHistorial != value)
+                {
+                    OnIdHistorialChanging(value);
+                    ReportPropertyChanging("IdHistorial");
+                    _IdHistorial = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdHistorial");
+                    OnIdHistorialChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdHistorial;
+        partial void OnIdHistorialChanging(global::System.Int32 value);
+        partial void OnIdHistorialChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdUsuario
+        {
+            get
+            {
+                return _IdUsuario;
+            }
+            set
+            {
+                OnIdUsuarioChanging(value);
+                ReportPropertyChanging("IdUsuario");
+                _IdUsuario = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdUsuario");
+                OnIdUsuarioChanged();
+            }
+        }
+        private global::System.Int32 _IdUsuario;
+        partial void OnIdUsuarioChanging(global::System.Int32 value);
+        partial void OnIdUsuarioChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime FechaInicioSesion
+        {
+            get
+            {
+                return _FechaInicioSesion;
+            }
+            set
+            {
+                OnFechaInicioSesionChanging(value);
+                ReportPropertyChanging("FechaInicioSesion");
+                _FechaInicioSesion = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FechaInicioSesion");
+                OnFechaInicioSesionChanged();
+            }
+        }
+        private global::System.DateTime _FechaInicioSesion;
+        partial void OnFechaInicioSesionChanging(global::System.DateTime value);
+        partial void OnFechaInicioSesionChanged();
+
+        #endregion
+
+    
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAv8Model", "FK__Historial__Fecha__1B13F4C6", "Usuario")]
+        public Usuario Usuario
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("TECAv8Model.FK__Historial__Fecha__1B13F4C6", "Usuario").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("TECAv8Model.FK__Historial__Fecha__1B13F4C6", "Usuario").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Usuario> UsuarioReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("TECAv8Model.FK__Historial__Fecha__1B13F4C6", "Usuario");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("TECAv8Model.FK__Historial__Fecha__1B13F4C6", "Usuario", value);
                 }
             }
         }
@@ -2045,6 +2174,203 @@ namespace datos.Seguridad
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TECAv8Model", Name="IniciosDeSesion")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class IniciosDeSesion : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto IniciosDeSesion.
+        /// </summary>
+        /// <param name="id">Valor inicial de la propiedad id.</param>
+        /// <param name="idHistorial">Valor inicial de la propiedad IdHistorial.</param>
+        /// <param name="idUsuario">Valor inicial de la propiedad IdUsuario.</param>
+        /// <param name="nombreUsuario">Valor inicial de la propiedad NombreUsuario.</param>
+        /// <param name="fechaInicioSesion">Valor inicial de la propiedad FechaInicioSesion.</param>
+        public static IniciosDeSesion CreateIniciosDeSesion(global::System.Int64 id, global::System.Int32 idHistorial, global::System.Int32 idUsuario, global::System.String nombreUsuario, global::System.DateTime fechaInicioSesion)
+        {
+            IniciosDeSesion iniciosDeSesion = new IniciosDeSesion();
+            iniciosDeSesion.id = id;
+            iniciosDeSesion.IdHistorial = idHistorial;
+            iniciosDeSesion.IdUsuario = idUsuario;
+            iniciosDeSesion.NombreUsuario = nombreUsuario;
+            iniciosDeSesion.FechaInicioSesion = fechaInicioSesion;
+            return iniciosDeSesion;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int64 id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.Int64 _id;
+        partial void OnidChanging(global::System.Int64 value);
+        partial void OnidChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdHistorial
+        {
+            get
+            {
+                return _IdHistorial;
+            }
+            set
+            {
+                if (_IdHistorial != value)
+                {
+                    OnIdHistorialChanging(value);
+                    ReportPropertyChanging("IdHistorial");
+                    _IdHistorial = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdHistorial");
+                    OnIdHistorialChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdHistorial;
+        partial void OnIdHistorialChanging(global::System.Int32 value);
+        partial void OnIdHistorialChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdUsuario
+        {
+            get
+            {
+                return _IdUsuario;
+            }
+            set
+            {
+                if (_IdUsuario != value)
+                {
+                    OnIdUsuarioChanging(value);
+                    ReportPropertyChanging("IdUsuario");
+                    _IdUsuario = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdUsuario");
+                    OnIdUsuarioChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdUsuario;
+        partial void OnIdUsuarioChanging(global::System.Int32 value);
+        partial void OnIdUsuarioChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String NombreUsuario
+        {
+            get
+            {
+                return _NombreUsuario;
+            }
+            set
+            {
+                if (_NombreUsuario != value)
+                {
+                    OnNombreUsuarioChanging(value);
+                    ReportPropertyChanging("NombreUsuario");
+                    _NombreUsuario = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("NombreUsuario");
+                    OnNombreUsuarioChanged();
+                }
+            }
+        }
+        private global::System.String _NombreUsuario;
+        partial void OnNombreUsuarioChanging(global::System.String value);
+        partial void OnNombreUsuarioChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Descripcion
+        {
+            get
+            {
+                return _Descripcion;
+            }
+            set
+            {
+                OnDescripcionChanging(value);
+                ReportPropertyChanging("Descripcion");
+                _Descripcion = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Descripcion");
+                OnDescripcionChanged();
+            }
+        }
+        private global::System.String _Descripcion;
+        partial void OnDescripcionChanging(global::System.String value);
+        partial void OnDescripcionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime FechaInicioSesion
+        {
+            get
+            {
+                return _FechaInicioSesion;
+            }
+            set
+            {
+                if (_FechaInicioSesion != value)
+                {
+                    OnFechaInicioSesionChanging(value);
+                    ReportPropertyChanging("FechaInicioSesion");
+                    _FechaInicioSesion = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("FechaInicioSesion");
+                    OnFechaInicioSesionChanged();
+                }
+            }
+        }
+        private global::System.DateTime _FechaInicioSesion;
+        partial void OnFechaInicioSesionChanging(global::System.DateTime value);
+        partial void OnFechaInicioSesionChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="TECAv8Model", Name="Menu")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -2385,28 +2711,6 @@ namespace datos.Seguridad
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAv8Model", "FK__MenuPorEm__IdMen__0C50D423", "MenuPorEmpresa")]
-        public EntityCollection<MenuPorEmpresa> MenuPorEmpresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MenuPorEmpresa>("TECAv8Model.FK__MenuPorEm__IdMen__0C50D423", "MenuPorEmpresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MenuPorEmpresa>("TECAv8Model.FK__MenuPorEm__IdMen__0C50D423", "MenuPorEmpresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("TECAv8Model", "FK__Permiso__IdMenu__17C286CF", "Permiso")]
         public EntityCollection<Permiso> Permiso
         {
@@ -2441,16 +2745,20 @@ namespace datos.Seguridad
         /// Crear un nuevo objeto Menu_X_Usuario.
         /// </summary>
         /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
+        /// <param name="nombreUsuario">Valor inicial de la propiedad NombreUsuario.</param>
+        /// <param name="contrasena">Valor inicial de la propiedad Contrasena.</param>
         /// <param name="idMenu">Valor inicial de la propiedad IdMenu.</param>
         /// <param name="idPerfil">Valor inicial de la propiedad IdPerfil.</param>
         /// <param name="idPermiso">Valor inicial de la propiedad IdPermiso.</param>
         /// <param name="lectura">Valor inicial de la propiedad Lectura.</param>
         /// <param name="escritura">Valor inicial de la propiedad Escritura.</param>
         /// <param name="eliminacion">Valor inicial de la propiedad Eliminacion.</param>
-        public static Menu_X_Usuario CreateMenu_X_Usuario(global::System.Int32 idEmpresa, global::System.Int32 idMenu, global::System.Int32 idPerfil, global::System.Int32 idPermiso, global::System.Boolean lectura, global::System.Boolean escritura, global::System.Boolean eliminacion)
+        public static Menu_X_Usuario CreateMenu_X_Usuario(global::System.Int32 idEmpresa, global::System.String nombreUsuario, global::System.String contrasena, global::System.Int32 idMenu, global::System.Int32 idPerfil, global::System.Int32 idPermiso, global::System.Boolean lectura, global::System.Boolean escritura, global::System.Boolean eliminacion)
         {
             Menu_X_Usuario menu_X_Usuario = new Menu_X_Usuario();
             menu_X_Usuario.IdEmpresa = idEmpresa;
+            menu_X_Usuario.NombreUsuario = nombreUsuario;
+            menu_X_Usuario.Contrasena = contrasena;
             menu_X_Usuario.IdMenu = idMenu;
             menu_X_Usuario.IdPerfil = idPerfil;
             menu_X_Usuario.IdPermiso = idPermiso;
@@ -2494,7 +2802,7 @@ namespace datos.Seguridad
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String NombreUsuario
         {
@@ -2506,7 +2814,7 @@ namespace datos.Seguridad
             {
                 OnNombreUsuarioChanging(value);
                 ReportPropertyChanging("NombreUsuario");
-                _NombreUsuario = StructuralObject.SetValidValue(value, true);
+                _NombreUsuario = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("NombreUsuario");
                 OnNombreUsuarioChanged();
             }
@@ -2518,7 +2826,7 @@ namespace datos.Seguridad
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String Contrasena
         {
@@ -2530,7 +2838,7 @@ namespace datos.Seguridad
             {
                 OnContrasenaChanging(value);
                 ReportPropertyChanging("Contrasena");
-                _Contrasena = StructuralObject.SetValidValue(value, true);
+                _Contrasena = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Contrasena");
                 OnContrasenaChanged();
             }
@@ -2896,282 +3204,6 @@ namespace datos.Seguridad
         #endregion
 
     
-    }
-    
-    /// <summary>
-    /// No hay documentación de metadatos disponible.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="TECAv8Model", Name="MenuPorEmpresa")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class MenuPorEmpresa : EntityObject
-    {
-        #region Método de generador
-    
-        /// <summary>
-        /// Crear un nuevo objeto MenuPorEmpresa.
-        /// </summary>
-        /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
-        /// <param name="idMenu">Valor inicial de la propiedad IdMenu.</param>
-        public static MenuPorEmpresa CreateMenuPorEmpresa(global::System.Int32 idEmpresa, global::System.Int32 idMenu)
-        {
-            MenuPorEmpresa menuPorEmpresa = new MenuPorEmpresa();
-            menuPorEmpresa.IdEmpresa = idEmpresa;
-            menuPorEmpresa.IdMenu = idMenu;
-            return menuPorEmpresa;
-        }
-
-        #endregion
-
-        #region Propiedades primitivas
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdEmpresa
-        {
-            get
-            {
-                return _IdEmpresa;
-            }
-            set
-            {
-                if (_IdEmpresa != value)
-                {
-                    OnIdEmpresaChanging(value);
-                    ReportPropertyChanging("IdEmpresa");
-                    _IdEmpresa = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdEmpresa");
-                    OnIdEmpresaChanged();
-                }
-            }
-        }
-        private global::System.Int32 _IdEmpresa;
-        partial void OnIdEmpresaChanging(global::System.Int32 value);
-        partial void OnIdEmpresaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdMenu
-        {
-            get
-            {
-                return _IdMenu;
-            }
-            set
-            {
-                if (_IdMenu != value)
-                {
-                    OnIdMenuChanging(value);
-                    ReportPropertyChanging("IdMenu");
-                    _IdMenu = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdMenu");
-                    OnIdMenuChanged();
-                }
-            }
-        }
-        private global::System.Int32 _IdMenu;
-        partial void OnIdMenuChanging(global::System.Int32 value);
-        partial void OnIdMenuChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String NombreAsamblyPorEmpresa
-        {
-            get
-            {
-                return _NombreAsamblyPorEmpresa;
-            }
-            set
-            {
-                OnNombreAsamblyPorEmpresaChanging(value);
-                ReportPropertyChanging("NombreAsamblyPorEmpresa");
-                _NombreAsamblyPorEmpresa = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("NombreAsamblyPorEmpresa");
-                OnNombreAsamblyPorEmpresaChanged();
-            }
-        }
-        private global::System.String _NombreAsamblyPorEmpresa;
-        partial void OnNombreAsamblyPorEmpresaChanging(global::System.String value);
-        partial void OnNombreAsamblyPorEmpresaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String NomFormularioPorEmpresa
-        {
-            get
-            {
-                return _NomFormularioPorEmpresa;
-            }
-            set
-            {
-                OnNomFormularioPorEmpresaChanging(value);
-                ReportPropertyChanging("NomFormularioPorEmpresa");
-                _NomFormularioPorEmpresa = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("NomFormularioPorEmpresa");
-                OnNomFormularioPorEmpresaChanged();
-            }
-        }
-        private global::System.String _NomFormularioPorEmpresa;
-        partial void OnNomFormularioPorEmpresaChanging(global::System.String value);
-        partial void OnNomFormularioPorEmpresaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdEstado
-        {
-            get
-            {
-                return _IdEstado;
-            }
-            set
-            {
-                OnIdEstadoChanging(value);
-                ReportPropertyChanging("IdEstado");
-                _IdEstado = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdEstado");
-                OnIdEstadoChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdEstado;
-        partial void OnIdEstadoChanging(Nullable<global::System.Int32> value);
-        partial void OnIdEstadoChanged();
-
-        #endregion
-
-    
-        #region Propiedades de navegación
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAv8Model", "FK__MenuPorEm__IdEmp__0B5CAFEA", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAv8Model.FK__MenuPorEm__IdEmp__0B5CAFEA", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAv8Model.FK__MenuPorEm__IdEmp__0B5CAFEA", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("TECAv8Model.FK__MenuPorEm__IdEmp__0B5CAFEA", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("TECAv8Model.FK__MenuPorEm__IdEmp__0B5CAFEA", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAv8Model", "FK__MenuPorEm__IdEst__0D44F85C", "Estado")]
-        public Estado Estado
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("TECAv8Model.FK__MenuPorEm__IdEst__0D44F85C", "Estado").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("TECAv8Model.FK__MenuPorEm__IdEst__0D44F85C", "Estado").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Estado> EstadoReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("TECAv8Model.FK__MenuPorEm__IdEst__0D44F85C", "Estado");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Estado>("TECAv8Model.FK__MenuPorEm__IdEst__0D44F85C", "Estado", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("TECAv8Model", "FK__MenuPorEm__IdMen__0C50D423", "Menu")]
-        public Menu Menu
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Menu>("TECAv8Model.FK__MenuPorEm__IdMen__0C50D423", "Menu").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Menu>("TECAv8Model.FK__MenuPorEm__IdMen__0C50D423", "Menu").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Menu> MenuReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Menu>("TECAv8Model.FK__MenuPorEm__IdMen__0C50D423", "Menu");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Menu>("TECAv8Model.FK__MenuPorEm__IdMen__0C50D423", "Menu", value);
-                }
-            }
-        }
-
-        #endregion
-
     }
     
     /// <summary>
@@ -4052,10 +4084,14 @@ namespace datos.Seguridad
         /// Crear un nuevo objeto Usuario.
         /// </summary>
         /// <param name="idUsuario">Valor inicial de la propiedad IdUsuario.</param>
-        public static Usuario CreateUsuario(global::System.Int32 idUsuario)
+        /// <param name="nombreUsuario">Valor inicial de la propiedad NombreUsuario.</param>
+        /// <param name="contrasena">Valor inicial de la propiedad Contrasena.</param>
+        public static Usuario CreateUsuario(global::System.Int32 idUsuario, global::System.String nombreUsuario, global::System.String contrasena)
         {
             Usuario usuario = new Usuario();
             usuario.IdUsuario = idUsuario;
+            usuario.NombreUsuario = nombreUsuario;
+            usuario.Contrasena = contrasena;
             return usuario;
         }
 
@@ -4093,7 +4129,7 @@ namespace datos.Seguridad
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String NombreUsuario
         {
@@ -4105,7 +4141,7 @@ namespace datos.Seguridad
             {
                 OnNombreUsuarioChanging(value);
                 ReportPropertyChanging("NombreUsuario");
-                _NombreUsuario = StructuralObject.SetValidValue(value, true);
+                _NombreUsuario = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("NombreUsuario");
                 OnNombreUsuarioChanged();
             }
@@ -4117,7 +4153,7 @@ namespace datos.Seguridad
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String Contrasena
         {
@@ -4129,7 +4165,7 @@ namespace datos.Seguridad
             {
                 OnContrasenaChanging(value);
                 ReportPropertyChanging("Contrasena");
-                _Contrasena = StructuralObject.SetValidValue(value, true);
+                _Contrasena = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Contrasena");
                 OnContrasenaChanged();
             }
@@ -4312,6 +4348,28 @@ namespace datos.Seguridad
                 }
             }
         }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TECAv8Model", "FK__Historial__Fecha__1B13F4C6", "Historial")]
+        public EntityCollection<Historial> Historial
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Historial>("TECAv8Model.FK__Historial__Fecha__1B13F4C6", "Historial");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Historial>("TECAv8Model.FK__Historial__Fecha__1B13F4C6", "Historial", value);
+                }
+            }
+        }
 
         #endregion
 
@@ -4332,15 +4390,17 @@ namespace datos.Seguridad
         /// </summary>
         /// <param name="id">Valor inicial de la propiedad id.</param>
         /// <param name="idUsuario">Valor inicial de la propiedad IdUsuario.</param>
+        /// <param name="nombreUsuario">Valor inicial de la propiedad NombreUsuario.</param>
         /// <param name="idModulo">Valor inicial de la propiedad IdModulo.</param>
         /// <param name="lectura">Valor inicial de la propiedad Lectura.</param>
         /// <param name="escritura">Valor inicial de la propiedad Escritura.</param>
         /// <param name="eliminacion">Valor inicial de la propiedad Eliminacion.</param>
-        public static UsuariodPermisos CreateUsuariodPermisos(global::System.Int64 id, global::System.Int32 idUsuario, global::System.Int32 idModulo, global::System.Boolean lectura, global::System.Boolean escritura, global::System.Boolean eliminacion)
+        public static UsuariodPermisos CreateUsuariodPermisos(global::System.Int64 id, global::System.Int32 idUsuario, global::System.String nombreUsuario, global::System.Int32 idModulo, global::System.Boolean lectura, global::System.Boolean escritura, global::System.Boolean eliminacion)
         {
             UsuariodPermisos usuariodPermisos = new UsuariodPermisos();
             usuariodPermisos.id = id;
             usuariodPermisos.IdUsuario = idUsuario;
+            usuariodPermisos.NombreUsuario = nombreUsuario;
             usuariodPermisos.IdModulo = idModulo;
             usuariodPermisos.Lectura = lectura;
             usuariodPermisos.Escritura = escritura;
@@ -4409,7 +4469,7 @@ namespace datos.Seguridad
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String NombreUsuario
         {
@@ -4419,11 +4479,14 @@ namespace datos.Seguridad
             }
             set
             {
-                OnNombreUsuarioChanging(value);
-                ReportPropertyChanging("NombreUsuario");
-                _NombreUsuario = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("NombreUsuario");
-                OnNombreUsuarioChanged();
+                if (_NombreUsuario != value)
+                {
+                    OnNombreUsuarioChanging(value);
+                    ReportPropertyChanging("NombreUsuario");
+                    _NombreUsuario = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("NombreUsuario");
+                    OnNombreUsuarioChanged();
+                }
             }
         }
         private global::System.String _NombreUsuario;
@@ -4629,11 +4692,15 @@ namespace datos.Seguridad
         /// Crear un nuevo objeto UsuarioInformacion.
         /// </summary>
         /// <param name="idUsuario">Valor inicial de la propiedad IdUsuario.</param>
+        /// <param name="nombreUsuario">Valor inicial de la propiedad NombreUsuario.</param>
+        /// <param name="contrasena">Valor inicial de la propiedad Contrasena.</param>
         /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
-        public static UsuarioInformacion CreateUsuarioInformacion(global::System.Int32 idUsuario, global::System.Int32 idEmpresa)
+        public static UsuarioInformacion CreateUsuarioInformacion(global::System.Int32 idUsuario, global::System.String nombreUsuario, global::System.String contrasena, global::System.Int32 idEmpresa)
         {
             UsuarioInformacion usuarioInformacion = new UsuarioInformacion();
             usuarioInformacion.IdUsuario = idUsuario;
+            usuarioInformacion.NombreUsuario = nombreUsuario;
+            usuarioInformacion.Contrasena = contrasena;
             usuarioInformacion.IdEmpresa = idEmpresa;
             return usuarioInformacion;
         }
@@ -4672,7 +4739,7 @@ namespace datos.Seguridad
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String NombreUsuario
         {
@@ -4682,11 +4749,14 @@ namespace datos.Seguridad
             }
             set
             {
-                OnNombreUsuarioChanging(value);
-                ReportPropertyChanging("NombreUsuario");
-                _NombreUsuario = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("NombreUsuario");
-                OnNombreUsuarioChanged();
+                if (_NombreUsuario != value)
+                {
+                    OnNombreUsuarioChanging(value);
+                    ReportPropertyChanging("NombreUsuario");
+                    _NombreUsuario = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("NombreUsuario");
+                    OnNombreUsuarioChanged();
+                }
             }
         }
         private global::System.String _NombreUsuario;
@@ -4696,7 +4766,7 @@ namespace datos.Seguridad
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String Contrasena
         {
@@ -4706,11 +4776,14 @@ namespace datos.Seguridad
             }
             set
             {
-                OnContrasenaChanging(value);
-                ReportPropertyChanging("Contrasena");
-                _Contrasena = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Contrasena");
-                OnContrasenaChanged();
+                if (_Contrasena != value)
+                {
+                    OnContrasenaChanging(value);
+                    ReportPropertyChanging("Contrasena");
+                    _Contrasena = StructuralObject.SetValidValue(value, false);
+                    ReportPropertyChanged("Contrasena");
+                    OnContrasenaChanged();
+                }
             }
         }
         private global::System.String _Contrasena;

@@ -37,7 +37,6 @@ namespace forms.CuentasxCobrar
         {
             banc.idBanco = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colidBanco));
             banc.Nombre = Convert.ToString(gridView1.GetFocusedRowCellValue(colNombre));
-            banc.idEmpresa = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colIdEmpresa));
             //banc.idestado = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colidestado));
             //banc.idUsuario = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colidUsuario));
 

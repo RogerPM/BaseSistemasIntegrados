@@ -12,11 +12,11 @@ namespace clases.RecursosHumanos
         public DateTime FechaModificacion { get; set; }
         public int Periodo { get; set; }
         public double Total { get; set; }
-        public int IdEstado { get; set; }
+        public int IdEstado  { get; set; }
         public int IdEmpresa { get; set; }
         public string Observacion { get; set; }
 
-
+        
         public clsNominaCab()
         {
 

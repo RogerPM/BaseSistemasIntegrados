@@ -396,8 +396,11 @@ namespace forms.ActivoFijo
             // dtFecha
             // 
             this.dtFecha.EditValue = null;
+            this.dtFecha.Enabled = false;
             this.dtFecha.Location = new System.Drawing.Point(397, 41);
             this.dtFecha.Name = "dtFecha";
+            this.dtFecha.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dtFecha.Properties.Appearance.Options.UseBackColor = true;
             this.dtFecha.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtFecha.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -544,6 +547,7 @@ namespace forms.ActivoFijo
             this.rtbObservacion.BackColor = System.Drawing.Color.White;
             this.rtbObservacion.Enabled = false;
             this.rtbObservacion.Location = new System.Drawing.Point(93, 401);
+            this.rtbObservacion.MaxLength = 150;
             this.rtbObservacion.Name = "rtbObservacion";
             this.rtbObservacion.Size = new System.Drawing.Size(231, 27);
             this.rtbObservacion.TabIndex = 343;

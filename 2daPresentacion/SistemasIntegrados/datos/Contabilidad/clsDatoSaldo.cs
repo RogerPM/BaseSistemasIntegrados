@@ -96,7 +96,17 @@ namespace datos.Contabilidad
                     clase.IdEmpresa = item.IdEmpresa;
                     clase.glosa = item.glosa;
                     clase.numero_comprobante = item.numero_comprobante;
-                    lista.Add(clase);
+                    try
+                    {
+                        int nume=0;
+                        nume=(from q in ent.SaldoxComprobante where q.numero_comprobante==clase.numero_comprobante select q).Count();
+                        if(nume==0){
+                        lista.Add(clase);}
+
+                    }
+                    catch (Exception)
+                    {
+                    }
                 }
 
                 return lista;

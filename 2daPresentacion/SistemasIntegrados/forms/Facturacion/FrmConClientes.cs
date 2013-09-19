@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using datos;
 using datos.Facturacion;
 
-namespace forms.Facturacion.Consultas
+namespace forms.Facturacion
 {
     public partial class FrmConClientes : Form
     {

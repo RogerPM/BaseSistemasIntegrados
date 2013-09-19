@@ -28,165 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTotalPrestamo = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblNumero = new System.Windows.Forms.Label();
-            this.lblRegistro = new System.Windows.Forms.Label();
-            this.lblPeriodo = new System.Windows.Forms.Label();
-            this.lblValorPrestamo = new System.Windows.Forms.Label();
-            this.lblObservacion = new System.Windows.Forms.Label();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.lblTipoPrestamo = new System.Windows.Forms.Label();
             this.tsMenu = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
-            this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
-            this.dateEdit3 = new DevExpress.XtraEditors.DateEdit();
-            this.btnBuscarEmpleado = new DevExpress.XtraEditors.SimpleButton();
-            this.txtGenerarTabla = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.gdcPrestamo = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.grdColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.chePeriodo = new DevExpress.XtraEditors.CheckEdit();
-            this.cmbTipoPrestamo = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.btnNumero = new DevExpress.XtraEditors.SimpleButton();
-            this.txtNumero = new DevExpress.XtraEditors.TextEdit();
-            this.txtId = new DevExpress.XtraEditors.TextEdit();
-            this.txtNombre = new DevExpress.XtraEditors.TextEdit();
-            this.txtObservacion = new DevExpress.XtraEditors.MemoEdit();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.txtInteres = new DevExpress.XtraEditors.TextEdit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtPrestamo = new DevExpress.XtraEditors.TextEdit();
-            this.txtPeriodo = new DevExpress.XtraEditors.TextEdit();
+            this.lblPrestamo = new System.Windows.Forms.Label();
+            this.lblCedula = new System.Windows.Forms.Label();
             this.txtTotalPrestamo = new DevExpress.XtraEditors.TextEdit();
-            this.teHora = new DevExpress.XtraEditors.TimeEdit();
-            this.lblHora = new DevExpress.XtraEditors.LabelControl();
-            this.lblPUsuario = new DevExpress.XtraEditors.LabelControl();
-            this.lblUsuario = new DevExpress.XtraEditors.LabelControl();
+            this.txtPeriodo = new DevExpress.XtraEditors.TextEdit();
+            this.txtPagos = new DevExpress.XtraEditors.TextEdit();
+            this.txtCedula = new DevExpress.XtraEditors.TextEdit();
+            this.txtNombre = new DevExpress.XtraEditors.TextEdit();
+            this.txtNumero = new DevExpress.XtraEditors.TextEdit();
+            this.btnNumero = new DevExpress.XtraEditors.SimpleButton();
+            this.cmbEstado = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.btnBuscarEmpleado = new DevExpress.XtraEditors.SimpleButton();
+            this.deFecha = new DevExpress.XtraEditors.DateEdit();
+            this.lblTotalPrestamo = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.lblPeriodo = new System.Windows.Forms.Label();
+            this.lblPagos = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblct = new System.Windows.Forms.Label();
+            this.lblde = new System.Windows.Forms.Label();
+            this.lblcp = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTotalPagado = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.label3 = new System.Windows.Forms.Label();
             this.tsMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gdcPrestamo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chePeriodo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoPrestamo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumero.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtObservacion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteres.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrestamo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPeriodo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalPrestamo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teHora.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPeriodo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPagos.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCedula.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumero.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbEstado.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deFecha.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deFecha.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalPagado.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTotalPrestamo
-            // 
-            this.lblTotalPrestamo.AutoSize = true;
-            this.lblTotalPrestamo.Location = new System.Drawing.Point(511, 329);
-            this.lblTotalPrestamo.Name = "lblTotalPrestamo";
-            this.lblTotalPrestamo.Size = new System.Drawing.Size(95, 13);
-            this.lblTotalPrestamo.TabIndex = 51;
-            this.lblTotalPrestamo.Text = "Total del Prestamo";
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Location = new System.Drawing.Point(555, 68);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(40, 13);
-            this.lblFecha.TabIndex = 46;
-            this.lblFecha.Text = "Fecha:";
-            // 
-            // lblNumero
-            // 
-            this.lblNumero.AutoSize = true;
-            this.lblNumero.Location = new System.Drawing.Point(69, 56);
-            this.lblNumero.Name = "lblNumero";
-            this.lblNumero.Size = new System.Drawing.Size(47, 13);
-            this.lblNumero.TabIndex = 43;
-            this.lblNumero.Text = "Número:";
-            // 
-            // lblRegistro
-            // 
-            this.lblRegistro.AutoSize = true;
-            this.lblRegistro.Location = new System.Drawing.Point(511, 99);
-            this.lblRegistro.Name = "lblRegistro";
-            this.lblRegistro.Size = new System.Drawing.Size(85, 13);
-            this.lblRegistro.TabIndex = 42;
-            this.lblRegistro.Text = "Estado Registro:";
-            // 
-            // lblPeriodo
-            // 
-            this.lblPeriodo.AutoSize = true;
-            this.lblPeriodo.Location = new System.Drawing.Point(31, 230);
-            this.lblPeriodo.Name = "lblPeriodo";
-            this.lblPeriodo.Size = new System.Drawing.Size(88, 13);
-            this.lblPeriodo.TabIndex = 34;
-            this.lblPeriodo.Text = "Cantidad Periodo";
-            // 
-            // lblValorPrestamo
-            // 
-            this.lblValorPrestamo.AutoSize = true;
-            this.lblValorPrestamo.Location = new System.Drawing.Point(39, 204);
-            this.lblValorPrestamo.Name = "lblValorPrestamo";
-            this.lblValorPrestamo.Size = new System.Drawing.Size(78, 13);
-            this.lblValorPrestamo.TabIndex = 33;
-            this.lblValorPrestamo.Text = "Valor Prestamo";
-            // 
-            // lblObservacion
-            // 
-            this.lblObservacion.AutoSize = true;
-            this.lblObservacion.Location = new System.Drawing.Point(46, 149);
-            this.lblObservacion.Name = "lblObservacion";
-            this.lblObservacion.Size = new System.Drawing.Size(70, 13);
-            this.lblObservacion.TabIndex = 32;
-            this.lblObservacion.Text = "Observación:";
-            // 
-            // lblEstado
-            // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(57, 118);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(60, 13);
-            this.lblEstado.TabIndex = 31;
-            this.lblEstado.Text = "Empleado :";
-            // 
-            // lblTipoPrestamo
-            // 
-            this.lblTipoPrestamo.AutoSize = true;
-            this.lblTipoPrestamo.Location = new System.Drawing.Point(23, 89);
-            this.lblTipoPrestamo.Name = "lblTipoPrestamo";
-            this.lblTipoPrestamo.Size = new System.Drawing.Size(93, 13);
-            this.lblTipoPrestamo.TabIndex = 30;
-            this.lblTipoPrestamo.Text = "Tipo de Prestamo:";
             // 
             // tsMenu
             // 
             this.tsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
             this.tsbGuardar,
-            this.tsbModificar,
-            this.tsbEliminar});
+            this.tsbModificar});
             this.tsMenu.Location = new System.Drawing.Point(0, 0);
             this.tsMenu.Name = "tsMenu";
-            this.tsMenu.Size = new System.Drawing.Size(757, 25);
+            this.tsMenu.Size = new System.Drawing.Size(594, 25);
             this.tsMenu.TabIndex = 53;
             this.tsMenu.Text = "toolStrip1";
             // 
             // tsbNuevo
             // 
+            this.tsbNuevo.Enabled = false;
             this.tsbNuevo.Image = global::forms.Properties.Resources.nuevo;
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbGuardar
             // 
@@ -195,305 +110,388 @@
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
             this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
             // tsbModificar
             // 
+            this.tsbModificar.Enabled = false;
             this.tsbModificar.Image = global::forms.Properties.Resources.modificar;
             this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbModificar.Name = "tsbModificar";
             this.tsbModificar.Size = new System.Drawing.Size(78, 22);
             this.tsbModificar.Text = "Modificar";
+            this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
             // 
-            // tsbEliminar
+            // btnCalcular
             // 
-            this.tsbEliminar.Image = global::forms.Properties.Resources.eliminar1;
-            this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEliminar.Name = "tsbEliminar";
-            this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
-            this.tsbEliminar.Text = "Eliminar";
+            this.btnCalcular.Location = new System.Drawing.Point(133, 251);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.TabIndex = 155;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click_1);
             // 
-            // dateEdit3
+            // labelControl3
             // 
-            this.dateEdit3.EditValue = new System.DateTime(2013, 7, 11, 21, 20, 29, 313);
-            this.dateEdit3.Location = new System.Drawing.Point(610, 65);
-            this.dateEdit3.Name = "dateEdit3";
-            this.dateEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit3.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEdit3.Size = new System.Drawing.Size(100, 20);
-            this.dateEdit3.TabIndex = 75;
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Enabled = false;
+            this.labelControl3.Location = new System.Drawing.Point(239, 183);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(13, 13);
+            this.labelControl3.TabIndex = 154;
+            this.labelControl3.Text = "%";
             // 
-            // btnBuscarEmpleado
+            // txtInteres
             // 
-            this.btnBuscarEmpleado.Image = global::forms.Properties.Resources.consultar;
-            this.btnBuscarEmpleado.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnBuscarEmpleado.Location = new System.Drawing.Point(201, 118);
-            this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
-            this.btnBuscarEmpleado.Size = new System.Drawing.Size(23, 20);
-            this.btnBuscarEmpleado.TabIndex = 76;
+            this.txtInteres.EditValue = "";
+            this.txtInteres.Location = new System.Drawing.Point(133, 180);
+            this.txtInteres.Name = "txtInteres";
+            this.txtInteres.Size = new System.Drawing.Size(92, 20);
+            this.txtInteres.TabIndex = 153;
             // 
-            // txtGenerarTabla
+            // label1
             // 
-            this.txtGenerarTabla.Location = new System.Drawing.Point(72, 291);
-            this.txtGenerarTabla.Name = "txtGenerarTabla";
-            this.txtGenerarTabla.Size = new System.Drawing.Size(122, 30);
-            this.txtGenerarTabla.TabIndex = 79;
-            this.txtGenerarTabla.Text = "Generar Tabla de Pago";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(72, 183);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 152;
+            this.label1.Text = "Interes :";
             // 
-            // labelControl9
+            // labelControl2
             // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Enabled = false;
-            this.labelControl9.Location = new System.Drawing.Point(225, 204);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(7, 13);
-            this.labelControl9.TabIndex = 80;
-            this.labelControl9.Text = "$";
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Enabled = false;
+            this.labelControl2.Location = new System.Drawing.Point(239, 151);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(7, 13);
+            this.labelControl2.TabIndex = 151;
+            this.labelControl2.Text = "$";
             // 
-            // labelControl1
+            // txtPrestamo
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Enabled = false;
-            this.labelControl1.Location = new System.Drawing.Point(618, 329);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(7, 13);
-            this.labelControl1.TabIndex = 82;
-            this.labelControl1.Text = "$";
+            this.txtPrestamo.Location = new System.Drawing.Point(133, 148);
+            this.txtPrestamo.Name = "txtPrestamo";
+            this.txtPrestamo.Size = new System.Drawing.Size(92, 20);
+            this.txtPrestamo.TabIndex = 150;
             // 
-            // gdcPrestamo
+            // lblPrestamo
             // 
-            this.gdcPrestamo.Location = new System.Drawing.Point(250, 206);
-            this.gdcPrestamo.MainView = this.gridView1;
-            this.gdcPrestamo.Name = "gdcPrestamo";
-            this.gdcPrestamo.Size = new System.Drawing.Size(481, 102);
-            this.gdcPrestamo.TabIndex = 83;
-            this.gdcPrestamo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.lblPrestamo.AutoSize = true;
+            this.lblPrestamo.Location = new System.Drawing.Point(59, 155);
+            this.lblPrestamo.Name = "lblPrestamo";
+            this.lblPrestamo.Size = new System.Drawing.Size(57, 13);
+            this.lblPrestamo.TabIndex = 149;
+            this.lblPrestamo.Text = "Prestamo :";
             // 
-            // gridView1
+            // lblCedula
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.grdColumn1,
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3});
-            this.gridView1.GridControl = this.gdcPrestamo;
-            this.gridView1.Name = "gridView1";
+            this.lblCedula.AutoSize = true;
+            this.lblCedula.Location = new System.Drawing.Point(70, 93);
+            this.lblCedula.Name = "lblCedula";
+            this.lblCedula.Size = new System.Drawing.Size(46, 13);
+            this.lblCedula.TabIndex = 148;
+            this.lblCedula.Text = "Cedula :";
             // 
-            // grdColumn1
+            // txtTotalPrestamo
             // 
-            this.grdColumn1.Caption = "Número Periodo";
-            this.grdColumn1.Name = "grdColumn1";
-            this.grdColumn1.Visible = true;
-            this.grdColumn1.VisibleIndex = 0;
-            this.grdColumn1.Width = 88;
+            this.txtTotalPrestamo.Enabled = false;
+            this.txtTotalPrestamo.Location = new System.Drawing.Point(419, 180);
+            this.txtTotalPrestamo.Name = "txtTotalPrestamo";
+            this.txtTotalPrestamo.Size = new System.Drawing.Size(84, 20);
+            this.txtTotalPrestamo.TabIndex = 147;
             // 
-            // gridColumn1
+            // txtPeriodo
             // 
-            this.gridColumn1.Caption = "Fecha Cobro (DD/MM/AA)";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 137;
+            this.txtPeriodo.EditValue = "";
+            this.txtPeriodo.Location = new System.Drawing.Point(133, 208);
+            this.txtPeriodo.Name = "txtPeriodo";
+            this.txtPeriodo.Size = new System.Drawing.Size(108, 20);
+            this.txtPeriodo.TabIndex = 146;
             // 
-            // gridColumn2
+            // txtPagos
             // 
-            this.gridColumn2.Caption = "Valor";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 95;
+            this.txtPagos.Enabled = false;
+            this.txtPagos.Location = new System.Drawing.Point(419, 152);
+            this.txtPagos.Name = "txtPagos";
+            this.txtPagos.Size = new System.Drawing.Size(84, 20);
+            this.txtPagos.TabIndex = 145;
             // 
-            // gridColumn3
+            // txtCedula
             // 
-            this.gridColumn3.Caption = "Estado Proceso";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 143;
+            this.txtCedula.Location = new System.Drawing.Point(133, 92);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(129, 20);
+            this.txtCedula.TabIndex = 144;
             // 
-            // chePeriodo
+            // txtNombre
             // 
-            this.chePeriodo.EditValue = true;
-            this.chePeriodo.Location = new System.Drawing.Point(26, 256);
-            this.chePeriodo.Name = "chePeriodo";
-            this.chePeriodo.Properties.Caption = "Periodo Anual";
-            this.chePeriodo.Size = new System.Drawing.Size(100, 19);
-            this.chePeriodo.TabIndex = 84;
+            this.txtNombre.Location = new System.Drawing.Point(133, 122);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(394, 20);
+            this.txtNombre.TabIndex = 143;
             // 
-            // cmbTipoPrestamo
+            // txtNumero
             // 
-            this.cmbTipoPrestamo.Location = new System.Drawing.Point(132, 86);
-            this.cmbTipoPrestamo.Name = "cmbTipoPrestamo";
-            this.cmbTipoPrestamo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbTipoPrestamo.Size = new System.Drawing.Size(127, 20);
-            this.cmbTipoPrestamo.TabIndex = 85;
-            // 
-            // comboBoxEdit1
-            // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(610, 96);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(127, 20);
-            this.comboBoxEdit1.TabIndex = 86;
+            this.txtNumero.Location = new System.Drawing.Point(133, 66);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(92, 20);
+            this.txtNumero.TabIndex = 142;
             // 
             // btnNumero
             // 
             this.btnNumero.Image = global::forms.Properties.Resources.consultar;
             this.btnNumero.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnNumero.Location = new System.Drawing.Point(238, 53);
+            this.btnNumero.Location = new System.Drawing.Point(239, 66);
             this.btnNumero.Name = "btnNumero";
             this.btnNumero.Size = new System.Drawing.Size(23, 20);
-            this.btnNumero.TabIndex = 87;
+            this.btnNumero.TabIndex = 141;
+            this.btnNumero.Click += new System.EventHandler(this.btnNumero_Click_1);
             // 
-            // txtNumero
+            // cmbEstado
             // 
-            this.txtNumero.Location = new System.Drawing.Point(132, 53);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(92, 20);
-            this.txtNumero.TabIndex = 88;
+            this.cmbEstado.Location = new System.Drawing.Point(407, 94);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbEstado.Properties.Items.AddRange(new object[] {
+            "--Seleccione un estado",
+            "Aprobado",
+            "Espera",
+            "Finalizado",
+            "Anulado"});
+            this.cmbEstado.Size = new System.Drawing.Size(120, 20);
+            this.cmbEstado.TabIndex = 140;
             // 
-            // txtId
+            // labelControl1
             // 
-            this.txtId.Location = new System.Drawing.Point(132, 119);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(64, 20);
-            this.txtId.TabIndex = 89;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Enabled = false;
+            this.labelControl1.Location = new System.Drawing.Point(520, 183);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(7, 13);
+            this.labelControl1.TabIndex = 139;
+            this.labelControl1.Text = "$";
             // 
-            // txtNombre
+            // labelControl9
             // 
-            this.txtNombre.Location = new System.Drawing.Point(230, 119);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(249, 20);
-            this.txtNombre.TabIndex = 90;
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Enabled = false;
+            this.labelControl9.Location = new System.Drawing.Point(515, 155);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(7, 13);
+            this.labelControl9.TabIndex = 138;
+            this.labelControl9.Text = "$";
             // 
-            // txtObservacion
+            // btnBuscarEmpleado
             // 
-            this.txtObservacion.Location = new System.Drawing.Point(132, 146);
-            this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(347, 49);
-            this.txtObservacion.TabIndex = 91;
+            this.btnBuscarEmpleado.Image = global::forms.Properties.Resources.consultar;
+            this.btnBuscarEmpleado.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnBuscarEmpleado.Location = new System.Drawing.Point(277, 90);
+            this.btnBuscarEmpleado.Name = "btnBuscarEmpleado";
+            this.btnBuscarEmpleado.Size = new System.Drawing.Size(23, 20);
+            this.btnBuscarEmpleado.TabIndex = 137;
+            this.btnBuscarEmpleado.Click += new System.EventHandler(this.btnBuscarEmpleado_Click);
             // 
-            // txtPrestamo
+            // deFecha
             // 
-            this.txtPrestamo.Location = new System.Drawing.Point(132, 201);
-            this.txtPrestamo.Name = "txtPrestamo";
-            this.txtPrestamo.Size = new System.Drawing.Size(84, 20);
-            this.txtPrestamo.TabIndex = 92;
-            // 
-            // txtPeriodo
-            // 
-            this.txtPeriodo.Location = new System.Drawing.Point(132, 227);
-            this.txtPeriodo.Name = "txtPeriodo";
-            this.txtPeriodo.Size = new System.Drawing.Size(84, 20);
-            this.txtPeriodo.TabIndex = 93;
-            // 
-            // txtTotalPrestamo
-            // 
-            this.txtTotalPrestamo.Location = new System.Drawing.Point(639, 326);
-            this.txtTotalPrestamo.Name = "txtTotalPrestamo";
-            this.txtTotalPrestamo.Size = new System.Drawing.Size(92, 20);
-            this.txtTotalPrestamo.TabIndex = 94;
-            // 
-            // teHora
-            // 
-            this.teHora.EditValue = new System.DateTime(2013, 6, 20, 0, 0, 0, 0);
-            this.teHora.Location = new System.Drawing.Point(631, 368);
-            this.teHora.Name = "teHora";
-            this.teHora.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.deFecha.EditValue = new System.DateTime(2013, 7, 11, 21, 20, 29, 313);
+            this.deFecha.Enabled = false;
+            this.deFecha.Location = new System.Drawing.Point(407, 66);
+            this.deFecha.Name = "deFecha";
+            this.deFecha.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.deFecha.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.teHora.Size = new System.Drawing.Size(100, 20);
-            this.teHora.TabIndex = 98;
+            this.deFecha.Size = new System.Drawing.Size(120, 20);
+            this.deFecha.TabIndex = 136;
             // 
-            // lblHora
+            // lblTotalPrestamo
             // 
-            this.lblHora.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(595, 371);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(30, 13);
-            this.lblHora.TabIndex = 97;
-            this.lblHora.Text = "Hora:";
+            this.lblTotalPrestamo.AutoSize = true;
+            this.lblTotalPrestamo.Location = new System.Drawing.Point(327, 187);
+            this.lblTotalPrestamo.Name = "lblTotalPrestamo";
+            this.lblTotalPrestamo.Size = new System.Drawing.Size(74, 13);
+            this.lblTotalPrestamo.TabIndex = 135;
+            this.lblTotalPrestamo.Text = "Total a Pagar:";
             // 
-            // lblPUsuario
+            // lblFecha
             // 
-            this.lblPUsuario.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPUsuario.Location = new System.Drawing.Point(72, 375);
-            this.lblPUsuario.Name = "lblPUsuario";
-            this.lblPUsuario.Size = new System.Drawing.Size(56, 13);
-            this.lblPUsuario.TabIndex = 96;
-            this.lblPUsuario.Text = "María Perez";
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Location = new System.Drawing.Point(361, 69);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(40, 13);
+            this.lblFecha.TabIndex = 134;
+            this.lblFecha.Text = "Fecha:";
             // 
-            // lblUsuario
+            // lblNumero
             // 
-            this.lblUsuario.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(18, 375);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
-            this.lblUsuario.TabIndex = 95;
-            this.lblUsuario.Text = "Usuario:";
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Location = new System.Drawing.Point(70, 69);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(47, 13);
+            this.lblNumero.TabIndex = 133;
+            this.lblNumero.Text = "Número:";
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Location = new System.Drawing.Point(316, 97);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(85, 13);
+            this.lblEstado.TabIndex = 132;
+            this.lblEstado.Text = "Estado Registro:";
+            // 
+            // lblPeriodo
+            // 
+            this.lblPeriodo.AutoSize = true;
+            this.lblPeriodo.Location = new System.Drawing.Point(30, 211);
+            this.lblPeriodo.Name = "lblPeriodo";
+            this.lblPeriodo.Size = new System.Drawing.Size(89, 13);
+            this.lblPeriodo.TabIndex = 131;
+            this.lblPeriodo.Text = "PeriodoMensual :";
+            // 
+            // lblPagos
+            // 
+            this.lblPagos.AutoSize = true;
+            this.lblPagos.Location = new System.Drawing.Point(358, 155);
+            this.lblPagos.Name = "lblPagos";
+            this.lblPagos.Size = new System.Drawing.Size(43, 13);
+            this.lblPagos.TabIndex = 130;
+            this.lblPagos.Text = "Pagos :";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(56, 125);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(60, 13);
+            this.lblNombre.TabIndex = 129;
+            this.lblNombre.Text = "Empleado :";
+            // 
+            // lblct
+            // 
+            this.lblct.AutoSize = true;
+            this.lblct.Location = new System.Drawing.Point(458, 240);
+            this.lblct.Name = "lblct";
+            this.lblct.Size = new System.Drawing.Size(13, 13);
+            this.lblct.TabIndex = 163;
+            this.lblct.Text = "0";
+            // 
+            // lblde
+            // 
+            this.lblde.AutoSize = true;
+            this.lblde.Location = new System.Drawing.Point(440, 240);
+            this.lblde.Name = "lblde";
+            this.lblde.Size = new System.Drawing.Size(12, 13);
+            this.lblde.TabIndex = 162;
+            this.lblde.Text = "/";
+            // 
+            // lblcp
+            // 
+            this.lblcp.AutoSize = true;
+            this.lblcp.Location = new System.Drawing.Point(421, 240);
+            this.lblcp.Name = "lblcp";
+            this.lblcp.Size = new System.Drawing.Size(13, 13);
+            this.lblcp.TabIndex = 161;
+            this.lblcp.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(307, 240);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 13);
+            this.label2.TabIndex = 160;
+            this.label2.Text = "Numero de Cuotas :";
+            // 
+            // txtTotalPagado
+            // 
+            this.txtTotalPagado.Enabled = false;
+            this.txtTotalPagado.Location = new System.Drawing.Point(419, 206);
+            this.txtTotalPagado.Name = "txtTotalPagado";
+            this.txtTotalPagado.Size = new System.Drawing.Size(84, 20);
+            this.txtTotalPagado.TabIndex = 166;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Enabled = false;
+            this.labelControl4.Location = new System.Drawing.Point(520, 209);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(7, 13);
+            this.labelControl4.TabIndex = 165;
+            this.labelControl4.Text = "$";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(327, 213);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.TabIndex = 164;
+            this.label3.Text = "Total Pagado :";
             // 
             // frmProcesoPrestamoEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 410);
-            this.Controls.Add(this.teHora);
-            this.Controls.Add(this.lblHora);
-            this.Controls.Add(this.lblPUsuario);
-            this.Controls.Add(this.lblUsuario);
+            this.ClientSize = new System.Drawing.Size(594, 311);
+            this.Controls.Add(this.txtTotalPagado);
+            this.Controls.Add(this.labelControl4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblct);
+            this.Controls.Add(this.lblde);
+            this.Controls.Add(this.lblcp);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnCalcular);
+            this.Controls.Add(this.labelControl3);
+            this.Controls.Add(this.txtInteres);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.txtPrestamo);
+            this.Controls.Add(this.lblPrestamo);
+            this.Controls.Add(this.lblCedula);
             this.Controls.Add(this.txtTotalPrestamo);
             this.Controls.Add(this.txtPeriodo);
-            this.Controls.Add(this.txtPrestamo);
+            this.Controls.Add(this.txtPagos);
+            this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.btnNumero);
-            this.Controls.Add(this.comboBoxEdit1);
-            this.Controls.Add(this.cmbTipoPrestamo);
-            this.Controls.Add(this.chePeriodo);
-            this.Controls.Add(this.gdcPrestamo);
+            this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.labelControl9);
-            this.Controls.Add(this.txtGenerarTabla);
             this.Controls.Add(this.btnBuscarEmpleado);
-            this.Controls.Add(this.dateEdit3);
-            this.Controls.Add(this.tsMenu);
+            this.Controls.Add(this.deFecha);
             this.Controls.Add(this.lblTotalPrestamo);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblNumero);
-            this.Controls.Add(this.lblRegistro);
-            this.Controls.Add(this.lblPeriodo);
-            this.Controls.Add(this.lblValorPrestamo);
-            this.Controls.Add(this.lblObservacion);
             this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.lblTipoPrestamo);
-            this.Controls.Add(this.txtObservacion);
+            this.Controls.Add(this.lblPeriodo);
+            this.Controls.Add(this.lblPagos);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.tsMenu);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(773, 448);
-            this.MinimumSize = new System.Drawing.Size(773, 448);
             this.Name = "frmProcesoPrestamoEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prestamos Empleado";
+            this.Load += new System.EventHandler(this.frmProcesoPrestamoEmpleado_Load);
             this.tsMenu.ResumeLayout(false);
             this.tsMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gdcPrestamo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chePeriodo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoPrestamo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumero.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtObservacion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtInteres.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrestamo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPeriodo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalPrestamo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teHora.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPeriodo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPagos.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCedula.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumero.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbEstado.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deFecha.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deFecha.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalPagado.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -501,45 +499,43 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTotalPrestamo;
-        private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.Label lblNumero;
-        private System.Windows.Forms.Label lblRegistro;
-        private System.Windows.Forms.Label lblPeriodo;
-        private System.Windows.Forms.Label lblValorPrestamo;
-        private System.Windows.Forms.Label lblObservacion;
-        private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Label lblTipoPrestamo;
         private System.Windows.Forms.ToolStrip tsMenu;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbModificar;
-        private System.Windows.Forms.ToolStripButton tsbEliminar;
-        private DevExpress.XtraEditors.DateEdit dateEdit3;
-        private DevExpress.XtraEditors.SimpleButton btnBuscarEmpleado;
-        private DevExpress.XtraEditors.SimpleButton txtGenerarTabla;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraGrid.GridControl gdcPrestamo;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn grdColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraEditors.CheckEdit chePeriodo;
-        private DevExpress.XtraEditors.ComboBoxEdit cmbTipoPrestamo;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
-        private DevExpress.XtraEditors.SimpleButton btnNumero;
-        private DevExpress.XtraEditors.TextEdit txtNumero;
-        private DevExpress.XtraEditors.TextEdit txtId;
-        private DevExpress.XtraEditors.TextEdit txtNombre;
-        private DevExpress.XtraEditors.MemoEdit txtObservacion;
+        private System.Windows.Forms.Button btnCalcular;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.TextEdit txtInteres;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtPrestamo;
-        private DevExpress.XtraEditors.TextEdit txtPeriodo;
+        private System.Windows.Forms.Label lblPrestamo;
+        private System.Windows.Forms.Label lblCedula;
         private DevExpress.XtraEditors.TextEdit txtTotalPrestamo;
-        private DevExpress.XtraEditors.TimeEdit teHora;
-        private DevExpress.XtraEditors.LabelControl lblHora;
-        private DevExpress.XtraEditors.LabelControl lblPUsuario;
-        private DevExpress.XtraEditors.LabelControl lblUsuario;
+        private DevExpress.XtraEditors.TextEdit txtPeriodo;
+        private DevExpress.XtraEditors.TextEdit txtPagos;
+        private DevExpress.XtraEditors.TextEdit txtCedula;
+        private DevExpress.XtraEditors.TextEdit txtNombre;
+        private DevExpress.XtraEditors.TextEdit txtNumero;
+        private DevExpress.XtraEditors.SimpleButton btnNumero;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbEstado;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.SimpleButton btnBuscarEmpleado;
+        private DevExpress.XtraEditors.DateEdit deFecha;
+        private System.Windows.Forms.Label lblTotalPrestamo;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblNumero;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.Label lblPeriodo;
+        private System.Windows.Forms.Label lblPagos;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblct;
+        private System.Windows.Forms.Label lblde;
+        private System.Windows.Forms.Label lblcp;
+        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.TextEdit txtTotalPagado;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private System.Windows.Forms.Label label3;
     }
 }

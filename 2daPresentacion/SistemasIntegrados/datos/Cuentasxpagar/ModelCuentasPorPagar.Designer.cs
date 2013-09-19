@@ -19,76 +19,65 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region Metadatos de relaciones en EDM
 
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CabeceraC__IdEmp__4865BE2A", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "CabeceraComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CabeceraComprobante), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Comision__5555A4F4", "CabeceraComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.CabeceraComprobante), "Comision", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Comision), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__DetalleComproban__4F12BBB9", "CabeceraComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.CabeceraComprobante), "DetalleComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.DetalleComprobante), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoDet__670A40DB", "CabeceraComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.CabeceraComprobante), "PagoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__DetalleCo__IdEmp__4D2A7347", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "DetalleComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.DetalleComprobante), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Banco__idEmpresa__379037E3", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "Banco", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Banco), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaBan__IdBan__2FBA0BF1", "Banco", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Banco), "CuentaBancaria2", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaBancaria2), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaBan__idBan__5BCD9859", "Banco", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Banco), "CuentaBancaria", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaBancaria), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoDet__IdBanco__67FE6514", "Banco", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Banco), "PagoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaBan__idEmp__5AD97420", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "CuentaBancaria", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaBancaria), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaBan__idTit__5CC1BC92", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.Persona), "CuentaBancaria", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaBancaria), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaBan__IdEmp__30AE302A", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "CuentaBancaria2", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaBancaria2), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaBancaria2__2EC5E7B8", "EmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.EmpresaServicio), "CuentaBancaria2", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaBancaria2), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdEmp__3572E547", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaPorPagar), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdEmp__3B2BBE9D", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaPorPagar), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdUsu__36670980", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaPorPagar), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__375B2DB9", "FrecuenciaPago", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.FrecuenciaPago), "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaPorPagar), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__384F51F2", "EmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.EmpresaServicio), "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaPorPagar), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__3A379A64", "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.IngresoEgresoCab), "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaPorPagar), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__DeudaDet__3FF073BA", "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.CuentaPorPagar), "DeudaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.DeudaDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__ImpuestoCuenta__469D7149", "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.CuentaPorPagar), "ImpuestoCuenta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.ImpuestoCuenta), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__OrdenPagoDet__57C7FD4B", "DeudaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.DeudaDet), "OrdenPagoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.OrdenPagoDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdEmp__16EE5E27", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "EmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.EmpresaServicio), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdTip__15FA39EE", "TipoPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.TipoPersona), "EmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.EmpresaServicio), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdUsu__17E28260", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "EmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.EmpresaServicio), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__TelefonoEmpresaS__1D9B5BB6", "EmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.EmpresaServicio), "TelefonoEmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.TelefonoEmpresaServicio), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Frecuenci__IdEmp__2A01329B", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "FrecuenciaPago", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.FrecuenciaPago), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Frecuenci__IdUsu__290D0E62", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "FrecuenciaPago", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.FrecuenciaPago), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Impuesto__IdEmpr__24485945", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "Impuesto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Impuesto), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Impuesto__IdUsua__2354350C", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "Impuesto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Impuesto), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__ImpuestoCuenta__45A94D10", "Impuesto", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Impuesto), "ImpuestoCuenta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.ImpuestoCuenta), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__ImpuestoC__IdEmp__44B528D7", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "ImpuestoCuenta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.ImpuestoCuenta), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__MedioPago__IdEmp__1CDC41A7", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "MedioPago", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.MedioPago), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__MedioPago__IdUsu__1DD065E0", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "MedioPago", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.MedioPago), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoDet__66161CA2", "MedioPago", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.MedioPago), "PagoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdEmp__4C564A9F", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "OrdenPagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.OrdenPagoCab), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdUsu__4B622666", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "OrdenPagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.OrdenPagoCab), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__OrdenPagoDet__56D3D912", "OrdenPagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.OrdenPagoCab), "OrdenPagoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.OrdenPagoDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__OrdenPagoEmplead__511AFFBC", "OrdenPagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.OrdenPagoCab), "OrdenPagoEmpleadoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.OrdenPagoEmpleadoDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoCab__5E74FADA", "OrdenPagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.OrdenPagoCab), "PagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoCab), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdEmp__520F23F5", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "OrdenPagoEmpleadoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.OrdenPagoEmpleadoDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoCab__IdEmpre__5D80D6A1", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "PagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoCab), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoCab__IdUsuar__5C8CB268", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "PagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoCab), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoDet__6339AFF7", "PagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.PagoCab), "PagoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoDet__6521F869", "NominaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.NominaCab), "PagoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoDet__NumComi__642DD430", "Comision", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.Comision), "PagoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__TelefonoE__IdEmp__1CA7377D", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "TelefonoEmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.TelefonoEmpresaServicio), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__TelefonoE__IdTel__1E8F7FEF", "Telefono", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Telefono), "TelefonoEmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.TelefonoEmpresaServicio), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Comision__idUsua__5649C92D", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "Comision", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Comision), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__ComisionD__IdNum__63A3C44B", "Comision", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Comision), "ComisionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.ComisionDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__ComisionD__IdEmp__668030F6", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "ComisionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.ComisionDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__ComisionD__idUsu__6774552F", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "ComisionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.ComisionDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__ComisionDet__658C0CBD", "Empleado", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.Empleado), "ComisionDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.ComisionDet), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__IngresoEg__IdRes__10766AC2", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.Persona), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.IngresoEgresoCab), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__IngresoEg__IdUsu__116A8EFB", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.Usuario), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.IngresoEgresoCab), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__IngresoEgresoDet__162F4418", "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.IngresoEgresoCab), "IngresoEgresoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.IngresoEgresoDet), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Compra__idEmpres__14B10FFA", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "Compra", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Compra), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Compra__IdUsuari__15A53433", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "Compra", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Compra), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdPro__3C1FE2D6", "Proveedor", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.Proveedor), "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaPorPagar), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Proveedor__IdEmp__7814D14C", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "Proveedor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Proveedor), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Proveedor__IdPer__7720AD13", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Persona), "Proveedor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Proveedor), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CabeceraC__IdEmp__4C364F0E", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "CabeceraComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CabeceraComprobante), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__DetalleComproban__52E34C9D", "CabeceraComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.CabeceraComprobante), "DetalleComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.DetalleComprobante), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoDet__69E6AD86", "CabeceraComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.CabeceraComprobante), "PagoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoDet), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__DetalleCo__IdEmp__50FB042B", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "DetalleComprobante", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.DetalleComprobante), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Banco__idEmpresa__47C69FAC", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "Banco", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Banco), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaBan__IdBan__3296789C", "Banco", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Banco), "CuentaBancaria2", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaBancaria2), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaBan__idBan__6C040022", "Banco", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Banco), "CuentaBancaria", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaBancaria), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoDet__IdBanco__6ADAD1BF", "Banco", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Banco), "PagoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoDet), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaBan__idEmp__6B0FDBE9", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "CuentaBancaria", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaBancaria), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaBan__idTit__6CF8245B", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.Persona), "CuentaBancaria", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaBancaria), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaBan__IdEmp__338A9CD5", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "CuentaBancaria2", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaBancaria2), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaBancaria2__31A25463", "EmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.EmpresaServicio), "CuentaBancaria2", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaBancaria2), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdEmp__384F51F2", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaPorPagar), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdEmp__3E082B48", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaPorPagar), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdUsu__3943762B", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaPorPagar), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__3A379A64", "FrecuenciaPago", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.FrecuenciaPago), "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaPorPagar), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__3B2BBE9D", "EmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.EmpresaServicio), "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.CuentaPorPagar), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__DeudaDet__42CCE065", "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.CuentaPorPagar), "DeudaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.DeudaDet), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__ImpuestoCuenta__4979DDF4", "CuentaPorPagar", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.CuentaPorPagar), "ImpuestoCuenta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.ImpuestoCuenta), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__OrdenPagoDet__5AA469F6", "DeudaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.DeudaDet), "OrdenPagoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.OrdenPagoDet), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdEmp__19CACAD2", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "EmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.EmpresaServicio), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdTip__18D6A699", "TipoPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.TipoPersona), "EmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.EmpresaServicio), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdUsu__1ABEEF0B", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "EmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.EmpresaServicio), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__TelefonoEmpresaS__2077C861", "EmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.EmpresaServicio), "TelefonoEmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.TelefonoEmpresaServicio), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Frecuenci__IdEmp__2CDD9F46", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "FrecuenciaPago", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.FrecuenciaPago), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Frecuenci__IdUsu__2BE97B0D", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "FrecuenciaPago", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.FrecuenciaPago), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Impuesto__IdEmpr__2724C5F0", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "Impuesto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Impuesto), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Impuesto__IdUsua__2630A1B7", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "Impuesto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Impuesto), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__ImpuestoCuenta__4885B9BB", "Impuesto", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Impuesto), "ImpuestoCuenta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.ImpuestoCuenta), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__ImpuestoC__IdEmp__47919582", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "ImpuestoCuenta", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.ImpuestoCuenta), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__MedioPago__IdEmp__2D12A970", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "MedioPago", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.MedioPago), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__MedioPago__IdUsu__2E06CDA9", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "MedioPago", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.MedioPago), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoDet__68F2894D", "MedioPago", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.MedioPago), "PagoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoDet), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdEmp__4F32B74A", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "OrdenPagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.OrdenPagoCab), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdUsu__4E3E9311", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "OrdenPagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.OrdenPagoCab), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__OrdenPagoDet__59B045BD", "OrdenPagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.OrdenPagoCab), "OrdenPagoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.OrdenPagoDet), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__OrdenPagoEmplead__53F76C67", "OrdenPagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.OrdenPagoCab), "OrdenPagoEmpleadoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.OrdenPagoEmpleadoDet), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoCab__61516785", "OrdenPagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.OrdenPagoCab), "PagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoCab), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdEmp__54EB90A0", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "OrdenPagoEmpleadoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.OrdenPagoEmpleadoDet), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoCab__IdEmpre__605D434C", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "PagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoCab), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoCab__IdUsuar__5F691F13", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Usuario), "PagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoCab), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__PagoDet__66161CA2", "PagoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.PagoCab), "PagoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.PagoDet), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__TelefonoE__IdEmp__1F83A428", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "TelefonoEmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.TelefonoEmpresaServicio), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__TelefonoE__IdTel__216BEC9A", "Telefono", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Telefono), "TelefonoEmpresaServicio", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.TelefonoEmpresaServicio), true)]
 [assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Empleado__IdEmpr__239E4DCF", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "Empleado", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Empleado), true)]
 [assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Empleado__IdPers__24927208", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Persona), "Empleado", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Empleado), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Liquidaci__IdEmp__690797E6", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "Liquidacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Liquidacion), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Liquidaci__IdPer__681373AD", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Persona), "Liquidacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Liquidacion), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__NominaCab__IdEmp__43D61337", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "NominaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.NominaCab), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__NominaDet__489AC854", "NominaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.NominaCab), "NominaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.NominaDet), true)]
 [assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Persona__IdEmpre__1BFD2C07", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Persona), true)]
 [assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Persona__IdTipoP__1CF15040", "TipoPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.TipoPersona), "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Persona), true)]
 [assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Persona__TipoIde__1DE57479", "TipoIdentificacion", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.TipoIdentificacion), "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Persona), true)]
 [assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Usuario__IdUsuar__3C69FB99", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Persona), "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Cuentasxpagar.Usuario), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Telefono__IdTipo__5BE2A6F2", "TipoTelefono", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.TipoTelefono), "Telefono", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Telefono), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__Telefono__IdTipo__60A75C0F", "TipoTelefono", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.TipoTelefono), "Telefono", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.Telefono), true)]
 [assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__TipoIdent__IdEmp__173876EA", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "TipoIdentificacion", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.TipoIdentificacion), true)]
 [assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__TipoPerso__IdEmp__117F9D94", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "TipoPersona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.TipoPersona), true)]
-[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__TipoTelef__IdEmp__571DF1D5", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "TipoTelefono", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.TipoTelefono), true)]
+[assembly: EdmRelationshipAttribute("CuentasPorPagarModel", "FK__TipoTelef__IdEmp__5BE2A6F2", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Cuentasxpagar.Empresa), "TipoTelefono", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Cuentasxpagar.TipoTelefono), true)]
 
 #endregion
 
@@ -139,6 +128,38 @@ namespace datos.Cuentasxpagar
         #endregion
     
         #region Propiedades de ObjectSet
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<Compra> Compra
+        {
+            get
+            {
+                if ((_Compra == null))
+                {
+                    _Compra = base.CreateObjectSet<Compra>("Compra");
+                }
+                return _Compra;
+            }
+        }
+        private ObjectSet<Compra> _Compra;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<Proveedor> Proveedor
+        {
+            get
+            {
+                if ((_Proveedor == null))
+                {
+                    _Proveedor = base.CreateObjectSet<Proveedor>("Proveedor");
+                }
+                return _Proveedor;
+            }
+        }
+        private ObjectSet<Proveedor> _Proveedor;
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -431,70 +452,6 @@ namespace datos.Cuentasxpagar
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        public ObjectSet<Comision> Comision
-        {
-            get
-            {
-                if ((_Comision == null))
-                {
-                    _Comision = base.CreateObjectSet<Comision>("Comision");
-                }
-                return _Comision;
-            }
-        }
-        private ObjectSet<Comision> _Comision;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        public ObjectSet<ComisionDet> ComisionDet
-        {
-            get
-            {
-                if ((_ComisionDet == null))
-                {
-                    _ComisionDet = base.CreateObjectSet<ComisionDet>("ComisionDet");
-                }
-                return _ComisionDet;
-            }
-        }
-        private ObjectSet<ComisionDet> _ComisionDet;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        public ObjectSet<IngresoEgresoCab> IngresoEgresoCab
-        {
-            get
-            {
-                if ((_IngresoEgresoCab == null))
-                {
-                    _IngresoEgresoCab = base.CreateObjectSet<IngresoEgresoCab>("IngresoEgresoCab");
-                }
-                return _IngresoEgresoCab;
-            }
-        }
-        private ObjectSet<IngresoEgresoCab> _IngresoEgresoCab;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        public ObjectSet<IngresoEgresoDet> IngresoEgresoDet
-        {
-            get
-            {
-                if ((_IngresoEgresoDet == null))
-                {
-                    _IngresoEgresoDet = base.CreateObjectSet<IngresoEgresoDet>("IngresoEgresoDet");
-                }
-                return _IngresoEgresoDet;
-            }
-        }
-        private ObjectSet<IngresoEgresoDet> _IngresoEgresoDet;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
         public ObjectSet<Empleado> Empleado
         {
             get
@@ -507,54 +464,6 @@ namespace datos.Cuentasxpagar
             }
         }
         private ObjectSet<Empleado> _Empleado;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        public ObjectSet<Liquidacion> Liquidacion
-        {
-            get
-            {
-                if ((_Liquidacion == null))
-                {
-                    _Liquidacion = base.CreateObjectSet<Liquidacion>("Liquidacion");
-                }
-                return _Liquidacion;
-            }
-        }
-        private ObjectSet<Liquidacion> _Liquidacion;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        public ObjectSet<NominaCab> NominaCab
-        {
-            get
-            {
-                if ((_NominaCab == null))
-                {
-                    _NominaCab = base.CreateObjectSet<NominaCab>("NominaCab");
-                }
-                return _NominaCab;
-            }
-        }
-        private ObjectSet<NominaCab> _NominaCab;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        public ObjectSet<NominaDet> NominaDet
-        {
-            get
-            {
-                if ((_NominaDet == null))
-                {
-                    _NominaDet = base.CreateObjectSet<NominaDet>("NominaDet");
-                }
-                return _NominaDet;
-            }
-        }
-        private ObjectSet<NominaDet> _NominaDet;
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -671,6 +580,22 @@ namespace datos.Cuentasxpagar
         #endregion
 
         #region Métodos AddTo
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet Compra. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToCompra(Compra compra)
+        {
+            base.AddObject("Compra", compra);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet Proveedor. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToProveedor(Proveedor proveedor)
+        {
+            base.AddObject("Proveedor", proveedor);
+        }
     
         /// <summary>
         /// Método desusado para agregar un nuevo objeto al EntitySet CabeceraComprobante. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
@@ -817,67 +742,11 @@ namespace datos.Cuentasxpagar
         }
     
         /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet Comision. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToComision(Comision comision)
-        {
-            base.AddObject("Comision", comision);
-        }
-    
-        /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet ComisionDet. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToComisionDet(ComisionDet comisionDet)
-        {
-            base.AddObject("ComisionDet", comisionDet);
-        }
-    
-        /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet IngresoEgresoCab. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToIngresoEgresoCab(IngresoEgresoCab ingresoEgresoCab)
-        {
-            base.AddObject("IngresoEgresoCab", ingresoEgresoCab);
-        }
-    
-        /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet IngresoEgresoDet. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToIngresoEgresoDet(IngresoEgresoDet ingresoEgresoDet)
-        {
-            base.AddObject("IngresoEgresoDet", ingresoEgresoDet);
-        }
-    
-        /// <summary>
         /// Método desusado para agregar un nuevo objeto al EntitySet Empleado. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
         /// </summary>
         public void AddToEmpleado(Empleado empleado)
         {
             base.AddObject("Empleado", empleado);
-        }
-    
-        /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet Liquidacion. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToLiquidacion(Liquidacion liquidacion)
-        {
-            base.AddObject("Liquidacion", liquidacion);
-        }
-    
-        /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet NominaCab. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToNominaCab(NominaCab nominaCab)
-        {
-            base.AddObject("NominaCab", nominaCab);
-        }
-    
-        /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet NominaDet. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToNominaDet(NominaDet nominaDet)
-        {
-            base.AddObject("NominaDet", nominaDet);
         }
     
         /// <summary>
@@ -1083,16 +952,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Banco__idEmpresa__379037E3", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Banco__idEmpresa__47C69FAC", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Banco__idEmpresa__379037E3", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Banco__idEmpresa__47C69FAC", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Banco__idEmpresa__379037E3", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Banco__idEmpresa__47C69FAC", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -1104,13 +973,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Banco__idEmpresa__379037E3", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Banco__idEmpresa__47C69FAC", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__Banco__idEmpresa__379037E3", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__Banco__idEmpresa__47C69FAC", "Empresa", value);
                 }
             }
         }
@@ -1121,18 +990,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__IdBan__2FBA0BF1", "CuentaBancaria2")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__IdBan__3296789C", "CuentaBancaria2")]
         public EntityCollection<CuentaBancaria2> CuentaBancaria2
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaBancaria2>("CuentasPorPagarModel.FK__CuentaBan__IdBan__2FBA0BF1", "CuentaBancaria2");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaBancaria2>("CuentasPorPagarModel.FK__CuentaBan__IdBan__3296789C", "CuentaBancaria2");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaBancaria2>("CuentasPorPagarModel.FK__CuentaBan__IdBan__2FBA0BF1", "CuentaBancaria2", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaBancaria2>("CuentasPorPagarModel.FK__CuentaBan__IdBan__3296789C", "CuentaBancaria2", value);
                 }
             }
         }
@@ -1143,18 +1012,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__idBan__5BCD9859", "CuentaBancaria")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__idBan__6C040022", "CuentaBancaria")]
         public EntityCollection<CuentaBancaria> CuentaBancaria
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaBancaria>("CuentasPorPagarModel.FK__CuentaBan__idBan__5BCD9859", "CuentaBancaria");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaBancaria>("CuentasPorPagarModel.FK__CuentaBan__idBan__6C040022", "CuentaBancaria");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaBancaria>("CuentasPorPagarModel.FK__CuentaBan__idBan__5BCD9859", "CuentaBancaria", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaBancaria>("CuentasPorPagarModel.FK__CuentaBan__idBan__6C040022", "CuentaBancaria", value);
                 }
             }
         }
@@ -1165,18 +1034,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__IdBanco__67FE6514", "PagoDet")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__IdBanco__6ADAD1BF", "PagoDet")]
         public EntityCollection<PagoDet> PagoDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__IdBanco__67FE6514", "PagoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__IdBanco__6ADAD1BF", "PagoDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__IdBanco__67FE6514", "PagoDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__IdBanco__6ADAD1BF", "PagoDet", value);
                 }
             }
         }
@@ -1413,6 +1282,30 @@ namespace datos.Cuentasxpagar
         private Nullable<global::System.DateTime> _FechaModificacion;
         partial void OnFechaModificacionChanging(Nullable<global::System.DateTime> value);
         partial void OnFechaModificacionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> TipoTransaccion
+        {
+            get
+            {
+                return _TipoTransaccion;
+            }
+            set
+            {
+                OnTipoTransaccionChanging(value);
+                ReportPropertyChanging("TipoTransaccion");
+                _TipoTransaccion = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("TipoTransaccion");
+                OnTipoTransaccionChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _TipoTransaccion;
+        partial void OnTipoTransaccionChanging(Nullable<global::System.Int32> value);
+        partial void OnTipoTransaccionChanged();
 
         #endregion
 
@@ -1425,16 +1318,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CabeceraC__IdEmp__4865BE2A", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CabeceraC__IdEmp__4C364F0E", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CabeceraC__IdEmp__4865BE2A", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CabeceraC__IdEmp__4C364F0E", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CabeceraC__IdEmp__4865BE2A", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CabeceraC__IdEmp__4C364F0E", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -1446,13 +1339,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CabeceraC__IdEmp__4865BE2A", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CabeceraC__IdEmp__4C364F0E", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__CabeceraC__IdEmp__4865BE2A", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__CabeceraC__IdEmp__4C364F0E", "Empresa", value);
                 }
             }
         }
@@ -1463,40 +1356,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Comision__5555A4F4", "Comision")]
-        public EntityCollection<Comision> Comision
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Comision>("CuentasPorPagarModel.FK__Comision__5555A4F4", "Comision");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Comision>("CuentasPorPagarModel.FK__Comision__5555A4F4", "Comision", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__DetalleComproban__4F12BBB9", "DetalleComprobante")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__DetalleComproban__52E34C9D", "DetalleComprobante")]
         public EntityCollection<DetalleComprobante> DetalleComprobante
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DetalleComprobante>("CuentasPorPagarModel.FK__DetalleComproban__4F12BBB9", "DetalleComprobante");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DetalleComprobante>("CuentasPorPagarModel.FK__DetalleComproban__52E34C9D", "DetalleComprobante");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DetalleComprobante>("CuentasPorPagarModel.FK__DetalleComproban__4F12BBB9", "DetalleComprobante", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DetalleComprobante>("CuentasPorPagarModel.FK__DetalleComproban__52E34C9D", "DetalleComprobante", value);
                 }
             }
         }
@@ -1507,18 +1378,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__670A40DB", "PagoDet")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__69E6AD86", "PagoDet")]
         public EntityCollection<PagoDet> PagoDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__670A40DB", "PagoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__69E6AD86", "PagoDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__670A40DB", "PagoDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__69E6AD86", "PagoDet", value);
                 }
             }
         }
@@ -1530,30 +1401,34 @@ namespace datos.Cuentasxpagar
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CuentasPorPagarModel", Name="Comision")]
+    [EdmEntityTypeAttribute(NamespaceName="CuentasPorPagarModel", Name="Compra")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class Comision : EntityObject
+    public partial class Compra : EntityObject
     {
         #region Método de generador
     
         /// <summary>
-        /// Crear un nuevo objeto Comision.
+        /// Crear un nuevo objeto Compra.
         /// </summary>
-        /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
-        /// <param name="idUsuario">Valor inicial de la propiedad idUsuario.</param>
-        /// <param name="idNumeroComision">Valor inicial de la propiedad IdNumeroComision.</param>
-        /// <param name="idNumeroPorcComision">Valor inicial de la propiedad IdNumeroPorcComision.</param>
+        /// <param name="numero">Valor inicial de la propiedad Numero.</param>
+        /// <param name="idEmpresa">Valor inicial de la propiedad idEmpresa.</param>
+        /// <param name="idUsuario">Valor inicial de la propiedad IdUsuario.</param>
+        /// <param name="idOrdenCompra">Valor inicial de la propiedad idOrdenCompra.</param>
+        /// <param name="fecha">Valor inicial de la propiedad Fecha.</param>
+        /// <param name="fechaModificacion">Valor inicial de la propiedad FechaModificacion.</param>
         /// <param name="idEstado">Valor inicial de la propiedad idEstado.</param>
-        public static Comision CreateComision(global::System.Int32 idEmpresa, global::System.Int32 idUsuario, global::System.Int32 idNumeroComision, global::System.Int32 idNumeroPorcComision, global::System.Int32 idEstado)
+        public static Compra CreateCompra(global::System.Int32 numero, global::System.Int32 idEmpresa, global::System.Int32 idUsuario, global::System.Int32 idOrdenCompra, global::System.DateTime fecha, global::System.DateTime fechaModificacion, global::System.Int32 idEstado)
         {
-            Comision comision = new Comision();
-            comision.IdEmpresa = idEmpresa;
-            comision.idUsuario = idUsuario;
-            comision.IdNumeroComision = idNumeroComision;
-            comision.IdNumeroPorcComision = idNumeroPorcComision;
-            comision.idEstado = idEstado;
-            return comision;
+            Compra compra = new Compra();
+            compra.Numero = numero;
+            compra.idEmpresa = idEmpresa;
+            compra.IdUsuario = idUsuario;
+            compra.idOrdenCompra = idOrdenCompra;
+            compra.Fecha = fecha;
+            compra.FechaModificacion = fechaModificacion;
+            compra.idEstado = idEstado;
+            return compra;
         }
 
         #endregion
@@ -1563,197 +1438,152 @@ namespace datos.Cuentasxpagar
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 IdEmpresa
+        public global::System.Int32 Numero
         {
             get
             {
-                return _IdEmpresa;
+                return _Numero;
             }
             set
             {
-                OnIdEmpresaChanging(value);
-                ReportPropertyChanging("IdEmpresa");
-                _IdEmpresa = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdEmpresa");
-                OnIdEmpresaChanged();
+                if (_Numero != value)
+                {
+                    OnNumeroChanging(value);
+                    ReportPropertyChanging("Numero");
+                    _Numero = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Numero");
+                    OnNumeroChanged();
+                }
             }
         }
-        private global::System.Int32 _IdEmpresa;
-        partial void OnIdEmpresaChanging(global::System.Int32 value);
-        partial void OnIdEmpresaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> cabecera_comprobante
-        {
-            get
-            {
-                return _cabecera_comprobante;
-            }
-            set
-            {
-                Oncabecera_comprobanteChanging(value);
-                ReportPropertyChanging("cabecera_comprobante");
-                _cabecera_comprobante = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("cabecera_comprobante");
-                Oncabecera_comprobanteChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _cabecera_comprobante;
-        partial void Oncabecera_comprobanteChanging(Nullable<global::System.Decimal> value);
-        partial void Oncabecera_comprobanteChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 idUsuario
-        {
-            get
-            {
-                return _idUsuario;
-            }
-            set
-            {
-                OnidUsuarioChanging(value);
-                ReportPropertyChanging("idUsuario");
-                _idUsuario = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idUsuario");
-                OnidUsuarioChanged();
-            }
-        }
-        private global::System.Int32 _idUsuario;
-        partial void OnidUsuarioChanging(global::System.Int32 value);
-        partial void OnidUsuarioChanged();
+        private global::System.Int32 _Numero;
+        partial void OnNumeroChanging(global::System.Int32 value);
+        partial void OnNumeroChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 IdNumeroComision
+        public global::System.Int32 idEmpresa
         {
             get
             {
-                return _IdNumeroComision;
+                return _idEmpresa;
             }
             set
             {
-                if (_IdNumeroComision != value)
+                if (_idEmpresa != value)
                 {
-                    OnIdNumeroComisionChanging(value);
-                    ReportPropertyChanging("IdNumeroComision");
-                    _IdNumeroComision = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdNumeroComision");
-                    OnIdNumeroComisionChanged();
+                    OnidEmpresaChanging(value);
+                    ReportPropertyChanging("idEmpresa");
+                    _idEmpresa = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("idEmpresa");
+                    OnidEmpresaChanged();
                 }
             }
         }
-        private global::System.Int32 _IdNumeroComision;
-        partial void OnIdNumeroComisionChanging(global::System.Int32 value);
-        partial void OnIdNumeroComisionChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> FechaInicial
-        {
-            get
-            {
-                return _FechaInicial;
-            }
-            set
-            {
-                OnFechaInicialChanging(value);
-                ReportPropertyChanging("FechaInicial");
-                _FechaInicial = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FechaInicial");
-                OnFechaInicialChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _FechaInicial;
-        partial void OnFechaInicialChanging(Nullable<global::System.DateTime> value);
-        partial void OnFechaInicialChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> FechaFinal
-        {
-            get
-            {
-                return _FechaFinal;
-            }
-            set
-            {
-                OnFechaFinalChanging(value);
-                ReportPropertyChanging("FechaFinal");
-                _FechaFinal = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FechaFinal");
-                OnFechaFinalChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _FechaFinal;
-        partial void OnFechaFinalChanging(Nullable<global::System.DateTime> value);
-        partial void OnFechaFinalChanged();
+        private global::System.Int32 _idEmpresa;
+        partial void OnidEmpresaChanging(global::System.Int32 value);
+        partial void OnidEmpresaChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 IdNumeroPorcComision
+        public global::System.Int32 IdUsuario
         {
             get
             {
-                return _IdNumeroPorcComision;
+                return _IdUsuario;
             }
             set
             {
-                OnIdNumeroPorcComisionChanging(value);
-                ReportPropertyChanging("IdNumeroPorcComision");
-                _IdNumeroPorcComision = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdNumeroPorcComision");
-                OnIdNumeroPorcComisionChanged();
+                OnIdUsuarioChanging(value);
+                ReportPropertyChanging("IdUsuario");
+                _IdUsuario = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdUsuario");
+                OnIdUsuarioChanged();
             }
         }
-        private global::System.Int32 _IdNumeroPorcComision;
-        partial void OnIdNumeroPorcComisionChanging(global::System.Int32 value);
-        partial void OnIdNumeroPorcComisionChanged();
+        private global::System.Int32 _IdUsuario;
+        partial void OnIdUsuarioChanging(global::System.Int32 value);
+        partial void OnIdUsuarioChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> MontoVenta
+        public global::System.Int32 idOrdenCompra
         {
             get
             {
-                return _MontoVenta;
+                return _idOrdenCompra;
             }
             set
             {
-                OnMontoVentaChanging(value);
-                ReportPropertyChanging("MontoVenta");
-                _MontoVenta = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MontoVenta");
-                OnMontoVentaChanged();
+                OnidOrdenCompraChanging(value);
+                ReportPropertyChanging("idOrdenCompra");
+                _idOrdenCompra = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("idOrdenCompra");
+                OnidOrdenCompraChanged();
             }
         }
-        private Nullable<global::System.Decimal> _MontoVenta;
-        partial void OnMontoVentaChanging(Nullable<global::System.Decimal> value);
-        partial void OnMontoVentaChanged();
+        private global::System.Int32 _idOrdenCompra;
+        partial void OnidOrdenCompraChanging(global::System.Int32 value);
+        partial void OnidOrdenCompraChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime Fecha
+        {
+            get
+            {
+                return _Fecha;
+            }
+            set
+            {
+                OnFechaChanging(value);
+                ReportPropertyChanging("Fecha");
+                _Fecha = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Fecha");
+                OnFechaChanged();
+            }
+        }
+        private global::System.DateTime _Fecha;
+        partial void OnFechaChanging(global::System.DateTime value);
+        partial void OnFechaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime FechaModificacion
+        {
+            get
+            {
+                return _FechaModificacion;
+            }
+            set
+            {
+                OnFechaModificacionChanging(value);
+                ReportPropertyChanging("FechaModificacion");
+                _FechaModificacion = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FechaModificacion");
+                OnFechaModificacionChanged();
+            }
+        }
+        private global::System.DateTime _FechaModificacion;
+        partial void OnFechaModificacionChanging(global::System.DateTime value);
+        partial void OnFechaModificacionChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -1790,438 +1620,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Comision__5555A4F4", "CabeceraComprobante")]
-        public CabeceraComprobante CabeceraComprobante
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__Comision__5555A4F4", "CabeceraComprobante").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__Comision__5555A4F4", "CabeceraComprobante").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<CabeceraComprobante> CabeceraComprobanteReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__Comision__5555A4F4", "CabeceraComprobante");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__Comision__5555A4F4", "CabeceraComprobante", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__NumComi__642DD430", "PagoDet")]
-        public EntityCollection<PagoDet> PagoDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__NumComi__642DD430", "PagoDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__NumComi__642DD430", "PagoDet", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Comision__idUsua__5649C92D", "Usuario")]
-        public Usuario Usuario
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Comision__idUsua__5649C92D", "Usuario").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Comision__idUsua__5649C92D", "Usuario").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Usuario> UsuarioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Comision__idUsua__5649C92D", "Usuario");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__Comision__idUsua__5649C92D", "Usuario", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ComisionD__IdNum__63A3C44B", "ComisionDet")]
-        public EntityCollection<ComisionDet> ComisionDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ComisionDet>("CuentasPorPagarModel.FK__ComisionD__IdNum__63A3C44B", "ComisionDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ComisionDet>("CuentasPorPagarModel.FK__ComisionD__IdNum__63A3C44B", "ComisionDet", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No hay documentación de metadatos disponible.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CuentasPorPagarModel", Name="ComisionDet")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class ComisionDet : EntityObject
-    {
-        #region Método de generador
-    
-        /// <summary>
-        /// Crear un nuevo objeto ComisionDet.
-        /// </summary>
-        /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
-        /// <param name="idUsuario">Valor inicial de la propiedad idUsuario.</param>
-        /// <param name="linea">Valor inicial de la propiedad Linea.</param>
-        /// <param name="idNumeroComision">Valor inicial de la propiedad IdNumeroComision.</param>
-        /// <param name="idEstado">Valor inicial de la propiedad idEstado.</param>
-        public static ComisionDet CreateComisionDet(global::System.Int32 idEmpresa, global::System.Int32 idUsuario, global::System.Int32 linea, global::System.Int32 idNumeroComision, global::System.Int32 idEstado)
-        {
-            ComisionDet comisionDet = new ComisionDet();
-            comisionDet.IdEmpresa = idEmpresa;
-            comisionDet.idUsuario = idUsuario;
-            comisionDet.Linea = linea;
-            comisionDet.IdNumeroComision = idNumeroComision;
-            comisionDet.idEstado = idEstado;
-            return comisionDet;
-        }
-
-        #endregion
-
-        #region Propiedades primitivas
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdEmpresa
-        {
-            get
-            {
-                return _IdEmpresa;
-            }
-            set
-            {
-                OnIdEmpresaChanging(value);
-                ReportPropertyChanging("IdEmpresa");
-                _IdEmpresa = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdEmpresa");
-                OnIdEmpresaChanged();
-            }
-        }
-        private global::System.Int32 _IdEmpresa;
-        partial void OnIdEmpresaChanging(global::System.Int32 value);
-        partial void OnIdEmpresaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 idUsuario
-        {
-            get
-            {
-                return _idUsuario;
-            }
-            set
-            {
-                OnidUsuarioChanging(value);
-                ReportPropertyChanging("idUsuario");
-                _idUsuario = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idUsuario");
-                OnidUsuarioChanged();
-            }
-        }
-        private global::System.Int32 _idUsuario;
-        partial void OnidUsuarioChanging(global::System.Int32 value);
-        partial void OnidUsuarioChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 Linea
-        {
-            get
-            {
-                return _Linea;
-            }
-            set
-            {
-                if (_Linea != value)
-                {
-                    OnLineaChanging(value);
-                    ReportPropertyChanging("Linea");
-                    _Linea = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Linea");
-                    OnLineaChanged();
-                }
-            }
-        }
-        private global::System.Int32 _Linea;
-        partial void OnLineaChanging(global::System.Int32 value);
-        partial void OnLineaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdNumeroComision
-        {
-            get
-            {
-                return _IdNumeroComision;
-            }
-            set
-            {
-                if (_IdNumeroComision != value)
-                {
-                    OnIdNumeroComisionChanging(value);
-                    ReportPropertyChanging("IdNumeroComision");
-                    _IdNumeroComision = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdNumeroComision");
-                    OnIdNumeroComisionChanged();
-                }
-            }
-        }
-        private global::System.Int32 _IdNumeroComision;
-        partial void OnIdNumeroComisionChanging(global::System.Int32 value);
-        partial void OnIdNumeroComisionChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> idEmpleado
-        {
-            get
-            {
-                return _idEmpleado;
-            }
-            set
-            {
-                OnidEmpleadoChanging(value);
-                ReportPropertyChanging("idEmpleado");
-                _idEmpleado = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idEmpleado");
-                OnidEmpleadoChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _idEmpleado;
-        partial void OnidEmpleadoChanging(Nullable<global::System.Int32> value);
-        partial void OnidEmpleadoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdNumeroFactura
-        {
-            get
-            {
-                return _IdNumeroFactura;
-            }
-            set
-            {
-                OnIdNumeroFacturaChanging(value);
-                ReportPropertyChanging("IdNumeroFactura");
-                _IdNumeroFactura = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdNumeroFactura");
-                OnIdNumeroFacturaChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdNumeroFactura;
-        partial void OnIdNumeroFacturaChanging(Nullable<global::System.Int32> value);
-        partial void OnIdNumeroFacturaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> MontoComision
-        {
-            get
-            {
-                return _MontoComision;
-            }
-            set
-            {
-                OnMontoComisionChanging(value);
-                ReportPropertyChanging("MontoComision");
-                _MontoComision = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MontoComision");
-                OnMontoComisionChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _MontoComision;
-        partial void OnMontoComisionChanging(Nullable<global::System.Decimal> value);
-        partial void OnMontoComisionChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> FechaPago
-        {
-            get
-            {
-                return _FechaPago;
-            }
-            set
-            {
-                OnFechaPagoChanging(value);
-                ReportPropertyChanging("FechaPago");
-                _FechaPago = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FechaPago");
-                OnFechaPagoChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _FechaPago;
-        partial void OnFechaPagoChanging(Nullable<global::System.DateTime> value);
-        partial void OnFechaPagoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 idEstado
-        {
-            get
-            {
-                return _idEstado;
-            }
-            set
-            {
-                OnidEstadoChanging(value);
-                ReportPropertyChanging("idEstado");
-                _idEstado = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("idEstado");
-                OnidEstadoChanged();
-            }
-        }
-        private global::System.Int32 _idEstado;
-        partial void OnidEstadoChanging(global::System.Int32 value);
-        partial void OnidEstadoChanged();
-
-        #endregion
-
-    
-        #region Propiedades de navegación
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ComisionD__IdNum__63A3C44B", "Comision")]
-        public Comision Comision
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Comision>("CuentasPorPagarModel.FK__ComisionD__IdNum__63A3C44B", "Comision").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Comision>("CuentasPorPagarModel.FK__ComisionD__IdNum__63A3C44B", "Comision").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Comision> ComisionReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Comision>("CuentasPorPagarModel.FK__ComisionD__IdNum__63A3C44B", "Comision");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Comision>("CuentasPorPagarModel.FK__ComisionD__IdNum__63A3C44B", "Comision", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ComisionD__IdEmp__668030F6", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Compra__idEmpres__14B10FFA", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__ComisionD__IdEmp__668030F6", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Compra__idEmpres__14B10FFA", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__ComisionD__IdEmp__668030F6", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Compra__idEmpres__14B10FFA", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -2233,13 +1641,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__ComisionD__IdEmp__668030F6", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Compra__idEmpres__14B10FFA", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__ComisionD__IdEmp__668030F6", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__Compra__idEmpres__14B10FFA", "Empresa", value);
                 }
             }
         }
@@ -2250,16 +1658,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ComisionD__idUsu__6774552F", "Usuario")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Compra__IdUsuari__15A53433", "Usuario")]
         public Usuario Usuario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__ComisionD__idUsu__6774552F", "Usuario").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Compra__IdUsuari__15A53433", "Usuario").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__ComisionD__idUsu__6774552F", "Usuario").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Compra__IdUsuari__15A53433", "Usuario").Value = value;
             }
         }
         /// <summary>
@@ -2271,51 +1679,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__ComisionD__idUsu__6774552F", "Usuario");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Compra__IdUsuari__15A53433", "Usuario");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__ComisionD__idUsu__6774552F", "Usuario", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ComisionDet__658C0CBD", "Empleado")]
-        public Empleado Empleado
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empleado>("CuentasPorPagarModel.FK__ComisionDet__658C0CBD", "Empleado").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empleado>("CuentasPorPagarModel.FK__ComisionDet__658C0CBD", "Empleado").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empleado> EmpleadoReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empleado>("CuentasPorPagarModel.FK__ComisionDet__658C0CBD", "Empleado");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empleado>("CuentasPorPagarModel.FK__ComisionDet__658C0CBD", "Empleado", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__Compra__IdUsuari__15A53433", "Usuario", value);
                 }
             }
         }
@@ -2565,16 +1935,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__idBan__5BCD9859", "Banco")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__idBan__6C040022", "Banco")]
         public Banco Banco
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__idBan__5BCD9859", "Banco").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__idBan__6C040022", "Banco").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__idBan__5BCD9859", "Banco").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__idBan__6C040022", "Banco").Value = value;
             }
         }
         /// <summary>
@@ -2586,13 +1956,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__idBan__5BCD9859", "Banco");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__idBan__6C040022", "Banco");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__idBan__5BCD9859", "Banco", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__idBan__6C040022", "Banco", value);
                 }
             }
         }
@@ -2603,16 +1973,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__idEmp__5AD97420", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__idEmp__6B0FDBE9", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__idEmp__5AD97420", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__idEmp__6B0FDBE9", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__idEmp__5AD97420", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__idEmp__6B0FDBE9", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -2624,13 +1994,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__idEmp__5AD97420", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__idEmp__6B0FDBE9", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__idEmp__5AD97420", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__idEmp__6B0FDBE9", "Empresa", value);
                 }
             }
         }
@@ -2641,16 +2011,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__idTit__5CC1BC92", "Persona")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__idTit__6CF8245B", "Persona")]
         public Persona Persona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__CuentaBan__idTit__5CC1BC92", "Persona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__CuentaBan__idTit__6CF8245B", "Persona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__CuentaBan__idTit__5CC1BC92", "Persona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__CuentaBan__idTit__6CF8245B", "Persona").Value = value;
             }
         }
         /// <summary>
@@ -2662,13 +2032,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__CuentaBan__idTit__5CC1BC92", "Persona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__CuentaBan__idTit__6CF8245B", "Persona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("CuentasPorPagarModel.FK__CuentaBan__idTit__5CC1BC92", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("CuentasPorPagarModel.FK__CuentaBan__idTit__6CF8245B", "Persona", value);
                 }
             }
         }
@@ -2873,16 +2243,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__IdBan__2FBA0BF1", "Banco")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__IdBan__3296789C", "Banco")]
         public Banco Banco
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__IdBan__2FBA0BF1", "Banco").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__IdBan__3296789C", "Banco").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__IdBan__2FBA0BF1", "Banco").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__IdBan__3296789C", "Banco").Value = value;
             }
         }
         /// <summary>
@@ -2894,13 +2264,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__IdBan__2FBA0BF1", "Banco");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__IdBan__3296789C", "Banco");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__IdBan__2FBA0BF1", "Banco", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Banco>("CuentasPorPagarModel.FK__CuentaBan__IdBan__3296789C", "Banco", value);
                 }
             }
         }
@@ -2911,16 +2281,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__IdEmp__30AE302A", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__IdEmp__338A9CD5", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__IdEmp__30AE302A", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__IdEmp__338A9CD5", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__IdEmp__30AE302A", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__IdEmp__338A9CD5", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -2932,13 +2302,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__IdEmp__30AE302A", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__IdEmp__338A9CD5", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__IdEmp__30AE302A", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaBan__IdEmp__338A9CD5", "Empresa", value);
                 }
             }
         }
@@ -2949,16 +2319,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBancaria2__2EC5E7B8", "EmpresaServicio")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBancaria2__31A25463", "EmpresaServicio")]
         public EmpresaServicio EmpresaServicio
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaBancaria2__2EC5E7B8", "EmpresaServicio").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaBancaria2__31A25463", "EmpresaServicio").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaBancaria2__2EC5E7B8", "EmpresaServicio").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaBancaria2__31A25463", "EmpresaServicio").Value = value;
             }
         }
         /// <summary>
@@ -2970,13 +2340,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaBancaria2__2EC5E7B8", "EmpresaServicio");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaBancaria2__31A25463", "EmpresaServicio");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaBancaria2__2EC5E7B8", "EmpresaServicio", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaBancaria2__31A25463", "EmpresaServicio", value);
                 }
             }
         }
@@ -3003,14 +2373,12 @@ namespace datos.Cuentasxpagar
         /// <param name="numeroFactura">Valor inicial de la propiedad NumeroFactura.</param>
         /// <param name="fechaTransaccion">Valor inicial de la propiedad FechaTransaccion.</param>
         /// <param name="motivo">Valor inicial de la propiedad Motivo.</param>
-        /// <param name="detalle">Valor inicial de la propiedad Detalle.</param>
         /// <param name="subtotal">Valor inicial de la propiedad Subtotal.</param>
-        /// <param name="descuento">Valor inicial de la propiedad Descuento.</param>
         /// <param name="total">Valor inicial de la propiedad Total.</param>
         /// <param name="formaPago">Valor inicial de la propiedad FormaPago.</param>
         /// <param name="idUsuario">Valor inicial de la propiedad IdUsuario.</param>
         /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
-        public static CuentaPorPagar CreateCuentaPorPagar(global::System.Int32 numCuentaPorPagar, global::System.DateTime fechaIngreso, global::System.String numeroFactura, global::System.DateTime fechaTransaccion, global::System.String motivo, global::System.String detalle, global::System.Decimal subtotal, global::System.Decimal descuento, global::System.Decimal total, global::System.String formaPago, global::System.Int32 idUsuario, global::System.Int32 idEmpresa)
+        public static CuentaPorPagar CreateCuentaPorPagar(global::System.Int32 numCuentaPorPagar, global::System.DateTime fechaIngreso, global::System.String numeroFactura, global::System.DateTime fechaTransaccion, global::System.String motivo, global::System.Decimal subtotal, global::System.Decimal total, global::System.String formaPago, global::System.Int32 idUsuario, global::System.Int32 idEmpresa)
         {
             CuentaPorPagar cuentaPorPagar = new CuentaPorPagar();
             cuentaPorPagar.NumCuentaPorPagar = numCuentaPorPagar;
@@ -3018,9 +2386,7 @@ namespace datos.Cuentasxpagar
             cuentaPorPagar.NumeroFactura = numeroFactura;
             cuentaPorPagar.FechaTransaccion = fechaTransaccion;
             cuentaPorPagar.Motivo = motivo;
-            cuentaPorPagar.Detalle = detalle;
             cuentaPorPagar.Subtotal = subtotal;
-            cuentaPorPagar.Descuento = descuento;
             cuentaPorPagar.Total = total;
             cuentaPorPagar.FormaPago = formaPago;
             cuentaPorPagar.IdUsuario = idUsuario;
@@ -3230,7 +2596,7 @@ namespace datos.Cuentasxpagar
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String Detalle
         {
@@ -3242,7 +2608,7 @@ namespace datos.Cuentasxpagar
             {
                 OnDetalleChanging(value);
                 ReportPropertyChanging("Detalle");
-                _Detalle = StructuralObject.SetValidValue(value, false);
+                _Detalle = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Detalle");
                 OnDetalleChanged();
             }
@@ -3278,9 +2644,9 @@ namespace datos.Cuentasxpagar
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal Descuento
+        public Nullable<global::System.Decimal> Descuento
         {
             get
             {
@@ -3295,8 +2661,8 @@ namespace datos.Cuentasxpagar
                 OnDescuentoChanged();
             }
         }
-        private global::System.Decimal _Descuento;
-        partial void OnDescuentoChanging(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _Descuento;
+        partial void OnDescuentoChanging(Nullable<global::System.Decimal> value);
         partial void OnDescuentoChanged();
     
         /// <summary>
@@ -3529,16 +2895,54 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdEmp__3572E547", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdPro__3C1FE2D6", "Proveedor")]
+        public Proveedor Proveedor
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Proveedor>("CuentasPorPagarModel.FK__CuentaPor__IdPro__3C1FE2D6", "Proveedor").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Proveedor>("CuentasPorPagarModel.FK__CuentaPor__IdPro__3C1FE2D6", "Proveedor").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Proveedor> ProveedorReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Proveedor>("CuentasPorPagarModel.FK__CuentaPor__IdPro__3C1FE2D6", "Proveedor");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Proveedor>("CuentasPorPagarModel.FK__CuentaPor__IdPro__3C1FE2D6", "Proveedor", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdEmp__384F51F2", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3572E547", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__384F51F2", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3572E547", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__384F51F2", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -3550,13 +2954,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3572E547", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__384F51F2", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3572E547", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__384F51F2", "Empresa", value);
                 }
             }
         }
@@ -3567,16 +2971,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdEmp__3B2BBE9D", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdEmp__3E082B48", "Empresa")]
         public Empresa Empresa1
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3B2BBE9D", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3E082B48", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3B2BBE9D", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3E082B48", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -3588,13 +2992,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3B2BBE9D", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3E082B48", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3B2BBE9D", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3E082B48", "Empresa", value);
                 }
             }
         }
@@ -3605,16 +3009,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdUsu__36670980", "Usuario")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdUsu__3943762B", "Usuario")]
         public Usuario Usuario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__CuentaPor__IdUsu__36670980", "Usuario").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__CuentaPor__IdUsu__3943762B", "Usuario").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__CuentaPor__IdUsu__36670980", "Usuario").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__CuentaPor__IdUsu__3943762B", "Usuario").Value = value;
             }
         }
         /// <summary>
@@ -3626,13 +3030,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__CuentaPor__IdUsu__36670980", "Usuario");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__CuentaPor__IdUsu__3943762B", "Usuario");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__CuentaPor__IdUsu__36670980", "Usuario", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__CuentaPor__IdUsu__3943762B", "Usuario", value);
                 }
             }
         }
@@ -3643,16 +3047,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__375B2DB9", "FrecuenciaPago")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__3A379A64", "FrecuenciaPago")]
         public FrecuenciaPago FrecuenciaPago
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FrecuenciaPago>("CuentasPorPagarModel.FK__CuentaPorPagar__375B2DB9", "FrecuenciaPago").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FrecuenciaPago>("CuentasPorPagarModel.FK__CuentaPorPagar__3A379A64", "FrecuenciaPago").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FrecuenciaPago>("CuentasPorPagarModel.FK__CuentaPorPagar__375B2DB9", "FrecuenciaPago").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FrecuenciaPago>("CuentasPorPagarModel.FK__CuentaPorPagar__3A379A64", "FrecuenciaPago").Value = value;
             }
         }
         /// <summary>
@@ -3664,13 +3068,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FrecuenciaPago>("CuentasPorPagarModel.FK__CuentaPorPagar__375B2DB9", "FrecuenciaPago");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FrecuenciaPago>("CuentasPorPagarModel.FK__CuentaPorPagar__3A379A64", "FrecuenciaPago");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<FrecuenciaPago>("CuentasPorPagarModel.FK__CuentaPorPagar__375B2DB9", "FrecuenciaPago", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<FrecuenciaPago>("CuentasPorPagarModel.FK__CuentaPorPagar__3A379A64", "FrecuenciaPago", value);
                 }
             }
         }
@@ -3681,16 +3085,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__384F51F2", "EmpresaServicio")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__3B2BBE9D", "EmpresaServicio")]
         public EmpresaServicio EmpresaServicio
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaPorPagar__384F51F2", "EmpresaServicio").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaPorPagar__3B2BBE9D", "EmpresaServicio").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaPorPagar__384F51F2", "EmpresaServicio").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaPorPagar__3B2BBE9D", "EmpresaServicio").Value = value;
             }
         }
         /// <summary>
@@ -3702,13 +3106,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaPorPagar__384F51F2", "EmpresaServicio");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaPorPagar__3B2BBE9D", "EmpresaServicio");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaPorPagar__384F51F2", "EmpresaServicio", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__CuentaPorPagar__3B2BBE9D", "EmpresaServicio", value);
                 }
             }
         }
@@ -3719,56 +3123,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__3A379A64", "IngresoEgresoCab")]
-        public IngresoEgresoCab IngresoEgresoCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("CuentasPorPagarModel.FK__CuentaPorPagar__3A379A64", "IngresoEgresoCab").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("CuentasPorPagarModel.FK__CuentaPorPagar__3A379A64", "IngresoEgresoCab").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<IngresoEgresoCab> IngresoEgresoCabReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("CuentasPorPagarModel.FK__CuentaPorPagar__3A379A64", "IngresoEgresoCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<IngresoEgresoCab>("CuentasPorPagarModel.FK__CuentaPorPagar__3A379A64", "IngresoEgresoCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__DeudaDet__3FF073BA", "DeudaDet")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__DeudaDet__42CCE065", "DeudaDet")]
         public EntityCollection<DeudaDet> DeudaDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DeudaDet>("CuentasPorPagarModel.FK__DeudaDet__3FF073BA", "DeudaDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DeudaDet>("CuentasPorPagarModel.FK__DeudaDet__42CCE065", "DeudaDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DeudaDet>("CuentasPorPagarModel.FK__DeudaDet__3FF073BA", "DeudaDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DeudaDet>("CuentasPorPagarModel.FK__DeudaDet__42CCE065", "DeudaDet", value);
                 }
             }
         }
@@ -3779,18 +3145,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ImpuestoCuenta__469D7149", "ImpuestoCuenta")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ImpuestoCuenta__4979DDF4", "ImpuestoCuenta")]
         public EntityCollection<ImpuestoCuenta> ImpuestoCuenta
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ImpuestoCuenta>("CuentasPorPagarModel.FK__ImpuestoCuenta__469D7149", "ImpuestoCuenta");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ImpuestoCuenta>("CuentasPorPagarModel.FK__ImpuestoCuenta__4979DDF4", "ImpuestoCuenta");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ImpuestoCuenta>("CuentasPorPagarModel.FK__ImpuestoCuenta__469D7149", "ImpuestoCuenta", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ImpuestoCuenta>("CuentasPorPagarModel.FK__ImpuestoCuenta__4979DDF4", "ImpuestoCuenta", value);
                 }
             }
         }
@@ -3998,16 +3364,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__DetalleComproban__4F12BBB9", "CabeceraComprobante")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__DetalleComproban__52E34C9D", "CabeceraComprobante")]
         public CabeceraComprobante CabeceraComprobante
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__DetalleComproban__4F12BBB9", "CabeceraComprobante").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__DetalleComproban__52E34C9D", "CabeceraComprobante").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__DetalleComproban__4F12BBB9", "CabeceraComprobante").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__DetalleComproban__52E34C9D", "CabeceraComprobante").Value = value;
             }
         }
         /// <summary>
@@ -4019,13 +3385,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__DetalleComproban__4F12BBB9", "CabeceraComprobante");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__DetalleComproban__52E34C9D", "CabeceraComprobante");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__DetalleComproban__4F12BBB9", "CabeceraComprobante", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__DetalleComproban__52E34C9D", "CabeceraComprobante", value);
                 }
             }
         }
@@ -4036,16 +3402,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__DetalleCo__IdEmp__4D2A7347", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__DetalleCo__IdEmp__50FB042B", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__DetalleCo__IdEmp__4D2A7347", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__DetalleCo__IdEmp__50FB042B", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__DetalleCo__IdEmp__4D2A7347", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__DetalleCo__IdEmp__50FB042B", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -4057,13 +3423,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__DetalleCo__IdEmp__4D2A7347", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__DetalleCo__IdEmp__50FB042B", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__DetalleCo__IdEmp__4D2A7347", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__DetalleCo__IdEmp__50FB042B", "Empresa", value);
                 }
             }
         }
@@ -4271,16 +3637,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__DeudaDet__3FF073BA", "CuentaPorPagar")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__DeudaDet__42CCE065", "CuentaPorPagar")]
         public CuentaPorPagar CuentaPorPagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__DeudaDet__3FF073BA", "CuentaPorPagar").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__DeudaDet__42CCE065", "CuentaPorPagar").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__DeudaDet__3FF073BA", "CuentaPorPagar").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__DeudaDet__42CCE065", "CuentaPorPagar").Value = value;
             }
         }
         /// <summary>
@@ -4292,13 +3658,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__DeudaDet__3FF073BA", "CuentaPorPagar");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__DeudaDet__42CCE065", "CuentaPorPagar");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__DeudaDet__3FF073BA", "CuentaPorPagar", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__DeudaDet__42CCE065", "CuentaPorPagar", value);
                 }
             }
         }
@@ -4309,18 +3675,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPagoDet__57C7FD4B", "OrdenPagoDet")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPagoDet__5AA469F6", "OrdenPagoDet")]
         public EntityCollection<OrdenPagoDet> OrdenPagoDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoDet>("CuentasPorPagarModel.FK__OrdenPagoDet__57C7FD4B", "OrdenPagoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoDet>("CuentasPorPagarModel.FK__OrdenPagoDet__5AA469F6", "OrdenPagoDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoDet>("CuentasPorPagarModel.FK__OrdenPagoDet__57C7FD4B", "OrdenPagoDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoDet>("CuentasPorPagarModel.FK__OrdenPagoDet__5AA469F6", "OrdenPagoDet", value);
                 }
             }
         }
@@ -4492,28 +3858,6 @@ namespace datos.Cuentasxpagar
 
     
         #region Propiedades de navegación
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ComisionDet__658C0CBD", "ComisionDet")]
-        public EntityCollection<ComisionDet> ComisionDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ComisionDet>("CuentasPorPagarModel.FK__ComisionDet__658C0CBD", "ComisionDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ComisionDet>("CuentasPorPagarModel.FK__ComisionDet__658C0CBD", "ComisionDet", value);
-                }
-            }
-        }
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -4922,18 +4266,62 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CabeceraC__IdEmp__4865BE2A", "CabeceraComprobante")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Compra__idEmpres__14B10FFA", "Compra")]
+        public EntityCollection<Compra> Compra
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Compra>("CuentasPorPagarModel.FK__Compra__idEmpres__14B10FFA", "Compra");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Compra>("CuentasPorPagarModel.FK__Compra__idEmpres__14B10FFA", "Compra", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Proveedor__IdEmp__7814D14C", "Proveedor")]
+        public EntityCollection<Proveedor> Proveedor
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Proveedor>("CuentasPorPagarModel.FK__Proveedor__IdEmp__7814D14C", "Proveedor");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Proveedor>("CuentasPorPagarModel.FK__Proveedor__IdEmp__7814D14C", "Proveedor", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CabeceraC__IdEmp__4C364F0E", "CabeceraComprobante")]
         public EntityCollection<CabeceraComprobante> CabeceraComprobante
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CabeceraComprobante>("CuentasPorPagarModel.FK__CabeceraC__IdEmp__4865BE2A", "CabeceraComprobante");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CabeceraComprobante>("CuentasPorPagarModel.FK__CabeceraC__IdEmp__4C364F0E", "CabeceraComprobante");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CabeceraComprobante>("CuentasPorPagarModel.FK__CabeceraC__IdEmp__4865BE2A", "CabeceraComprobante", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CabeceraComprobante>("CuentasPorPagarModel.FK__CabeceraC__IdEmp__4C364F0E", "CabeceraComprobante", value);
                 }
             }
         }
@@ -4944,18 +4332,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__DetalleCo__IdEmp__4D2A7347", "DetalleComprobante")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__DetalleCo__IdEmp__50FB042B", "DetalleComprobante")]
         public EntityCollection<DetalleComprobante> DetalleComprobante
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DetalleComprobante>("CuentasPorPagarModel.FK__DetalleCo__IdEmp__4D2A7347", "DetalleComprobante");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<DetalleComprobante>("CuentasPorPagarModel.FK__DetalleCo__IdEmp__50FB042B", "DetalleComprobante");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DetalleComprobante>("CuentasPorPagarModel.FK__DetalleCo__IdEmp__4D2A7347", "DetalleComprobante", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<DetalleComprobante>("CuentasPorPagarModel.FK__DetalleCo__IdEmp__50FB042B", "DetalleComprobante", value);
                 }
             }
         }
@@ -4966,18 +4354,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Banco__idEmpresa__379037E3", "Banco")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Banco__idEmpresa__47C69FAC", "Banco")]
         public EntityCollection<Banco> Banco
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Banco>("CuentasPorPagarModel.FK__Banco__idEmpresa__379037E3", "Banco");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Banco>("CuentasPorPagarModel.FK__Banco__idEmpresa__47C69FAC", "Banco");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Banco>("CuentasPorPagarModel.FK__Banco__idEmpresa__379037E3", "Banco", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Banco>("CuentasPorPagarModel.FK__Banco__idEmpresa__47C69FAC", "Banco", value);
                 }
             }
         }
@@ -4988,18 +4376,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__idEmp__5AD97420", "CuentaBancaria")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__idEmp__6B0FDBE9", "CuentaBancaria")]
         public EntityCollection<CuentaBancaria> CuentaBancaria
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaBancaria>("CuentasPorPagarModel.FK__CuentaBan__idEmp__5AD97420", "CuentaBancaria");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaBancaria>("CuentasPorPagarModel.FK__CuentaBan__idEmp__6B0FDBE9", "CuentaBancaria");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaBancaria>("CuentasPorPagarModel.FK__CuentaBan__idEmp__5AD97420", "CuentaBancaria", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaBancaria>("CuentasPorPagarModel.FK__CuentaBan__idEmp__6B0FDBE9", "CuentaBancaria", value);
                 }
             }
         }
@@ -5010,18 +4398,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__IdEmp__30AE302A", "CuentaBancaria2")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__IdEmp__338A9CD5", "CuentaBancaria2")]
         public EntityCollection<CuentaBancaria2> CuentaBancaria2
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaBancaria2>("CuentasPorPagarModel.FK__CuentaBan__IdEmp__30AE302A", "CuentaBancaria2");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaBancaria2>("CuentasPorPagarModel.FK__CuentaBan__IdEmp__338A9CD5", "CuentaBancaria2");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaBancaria2>("CuentasPorPagarModel.FK__CuentaBan__IdEmp__30AE302A", "CuentaBancaria2", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaBancaria2>("CuentasPorPagarModel.FK__CuentaBan__IdEmp__338A9CD5", "CuentaBancaria2", value);
                 }
             }
         }
@@ -5032,18 +4420,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdEmp__3572E547", "CuentaPorPagar")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdEmp__384F51F2", "CuentaPorPagar")]
         public EntityCollection<CuentaPorPagar> CuentaPorPagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3572E547", "CuentaPorPagar");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__384F51F2", "CuentaPorPagar");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3572E547", "CuentaPorPagar", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__384F51F2", "CuentaPorPagar", value);
                 }
             }
         }
@@ -5054,18 +4442,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdEmp__3B2BBE9D", "CuentaPorPagar")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdEmp__3E082B48", "CuentaPorPagar")]
         public EntityCollection<CuentaPorPagar> CuentaPorPagar1
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3B2BBE9D", "CuentaPorPagar");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3E082B48", "CuentaPorPagar");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3B2BBE9D", "CuentaPorPagar", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPor__IdEmp__3E082B48", "CuentaPorPagar", value);
                 }
             }
         }
@@ -5076,18 +4464,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdEmp__16EE5E27", "EmpresaServicio")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdEmp__19CACAD2", "EmpresaServicio")]
         public EntityCollection<EmpresaServicio> EmpresaServicio
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EmpresaServicio>("CuentasPorPagarModel.FK__EmpresaSe__IdEmp__16EE5E27", "EmpresaServicio");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EmpresaServicio>("CuentasPorPagarModel.FK__EmpresaSe__IdEmp__19CACAD2", "EmpresaServicio");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EmpresaServicio>("CuentasPorPagarModel.FK__EmpresaSe__IdEmp__16EE5E27", "EmpresaServicio", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EmpresaServicio>("CuentasPorPagarModel.FK__EmpresaSe__IdEmp__19CACAD2", "EmpresaServicio", value);
                 }
             }
         }
@@ -5098,18 +4486,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Frecuenci__IdEmp__2A01329B", "FrecuenciaPago")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Frecuenci__IdEmp__2CDD9F46", "FrecuenciaPago")]
         public EntityCollection<FrecuenciaPago> FrecuenciaPago
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FrecuenciaPago>("CuentasPorPagarModel.FK__Frecuenci__IdEmp__2A01329B", "FrecuenciaPago");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FrecuenciaPago>("CuentasPorPagarModel.FK__Frecuenci__IdEmp__2CDD9F46", "FrecuenciaPago");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FrecuenciaPago>("CuentasPorPagarModel.FK__Frecuenci__IdEmp__2A01329B", "FrecuenciaPago", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FrecuenciaPago>("CuentasPorPagarModel.FK__Frecuenci__IdEmp__2CDD9F46", "FrecuenciaPago", value);
                 }
             }
         }
@@ -5120,18 +4508,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Impuesto__IdEmpr__24485945", "Impuesto")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Impuesto__IdEmpr__2724C5F0", "Impuesto")]
         public EntityCollection<Impuesto> Impuesto
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Impuesto>("CuentasPorPagarModel.FK__Impuesto__IdEmpr__24485945", "Impuesto");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Impuesto>("CuentasPorPagarModel.FK__Impuesto__IdEmpr__2724C5F0", "Impuesto");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Impuesto>("CuentasPorPagarModel.FK__Impuesto__IdEmpr__24485945", "Impuesto", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Impuesto>("CuentasPorPagarModel.FK__Impuesto__IdEmpr__2724C5F0", "Impuesto", value);
                 }
             }
         }
@@ -5142,18 +4530,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ImpuestoC__IdEmp__44B528D7", "ImpuestoCuenta")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ImpuestoC__IdEmp__47919582", "ImpuestoCuenta")]
         public EntityCollection<ImpuestoCuenta> ImpuestoCuenta
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ImpuestoCuenta>("CuentasPorPagarModel.FK__ImpuestoC__IdEmp__44B528D7", "ImpuestoCuenta");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ImpuestoCuenta>("CuentasPorPagarModel.FK__ImpuestoC__IdEmp__47919582", "ImpuestoCuenta");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ImpuestoCuenta>("CuentasPorPagarModel.FK__ImpuestoC__IdEmp__44B528D7", "ImpuestoCuenta", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ImpuestoCuenta>("CuentasPorPagarModel.FK__ImpuestoC__IdEmp__47919582", "ImpuestoCuenta", value);
                 }
             }
         }
@@ -5164,18 +4552,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__MedioPago__IdEmp__1CDC41A7", "MedioPago")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__MedioPago__IdEmp__2D12A970", "MedioPago")]
         public EntityCollection<MedioPago> MedioPago
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MedioPago>("CuentasPorPagarModel.FK__MedioPago__IdEmp__1CDC41A7", "MedioPago");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MedioPago>("CuentasPorPagarModel.FK__MedioPago__IdEmp__2D12A970", "MedioPago");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MedioPago>("CuentasPorPagarModel.FK__MedioPago__IdEmp__1CDC41A7", "MedioPago", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MedioPago>("CuentasPorPagarModel.FK__MedioPago__IdEmp__2D12A970", "MedioPago", value);
                 }
             }
         }
@@ -5186,18 +4574,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdEmp__4C564A9F", "OrdenPagoCab")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdEmp__4F32B74A", "OrdenPagoCab")]
         public EntityCollection<OrdenPagoCab> OrdenPagoCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__4C564A9F", "OrdenPagoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__4F32B74A", "OrdenPagoCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__4C564A9F", "OrdenPagoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__4F32B74A", "OrdenPagoCab", value);
                 }
             }
         }
@@ -5208,18 +4596,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdEmp__520F23F5", "OrdenPagoEmpleadoDet")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdEmp__54EB90A0", "OrdenPagoEmpleadoDet")]
         public EntityCollection<OrdenPagoEmpleadoDet> OrdenPagoEmpleadoDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoEmpleadoDet>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__520F23F5", "OrdenPagoEmpleadoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoEmpleadoDet>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__54EB90A0", "OrdenPagoEmpleadoDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoEmpleadoDet>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__520F23F5", "OrdenPagoEmpleadoDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoEmpleadoDet>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__54EB90A0", "OrdenPagoEmpleadoDet", value);
                 }
             }
         }
@@ -5230,18 +4618,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoCab__IdEmpre__5D80D6A1", "PagoCab")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoCab__IdEmpre__605D434C", "PagoCab")]
         public EntityCollection<PagoCab> PagoCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoCab>("CuentasPorPagarModel.FK__PagoCab__IdEmpre__5D80D6A1", "PagoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoCab>("CuentasPorPagarModel.FK__PagoCab__IdEmpre__605D434C", "PagoCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoCab>("CuentasPorPagarModel.FK__PagoCab__IdEmpre__5D80D6A1", "PagoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoCab>("CuentasPorPagarModel.FK__PagoCab__IdEmpre__605D434C", "PagoCab", value);
                 }
             }
         }
@@ -5252,40 +4640,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TelefonoE__IdEmp__1CA7377D", "TelefonoEmpresaServicio")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TelefonoE__IdEmp__1F83A428", "TelefonoEmpresaServicio")]
         public EntityCollection<TelefonoEmpresaServicio> TelefonoEmpresaServicio
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TelefonoEmpresaServicio>("CuentasPorPagarModel.FK__TelefonoE__IdEmp__1CA7377D", "TelefonoEmpresaServicio");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TelefonoEmpresaServicio>("CuentasPorPagarModel.FK__TelefonoE__IdEmp__1F83A428", "TelefonoEmpresaServicio");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TelefonoEmpresaServicio>("CuentasPorPagarModel.FK__TelefonoE__IdEmp__1CA7377D", "TelefonoEmpresaServicio", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ComisionD__IdEmp__668030F6", "ComisionDet")]
-        public EntityCollection<ComisionDet> ComisionDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ComisionDet>("CuentasPorPagarModel.FK__ComisionD__IdEmp__668030F6", "ComisionDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ComisionDet>("CuentasPorPagarModel.FK__ComisionD__IdEmp__668030F6", "ComisionDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TelefonoEmpresaServicio>("CuentasPorPagarModel.FK__TelefonoE__IdEmp__1F83A428", "TelefonoEmpresaServicio", value);
                 }
             }
         }
@@ -5308,50 +4674,6 @@ namespace datos.Cuentasxpagar
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Empleado>("CuentasPorPagarModel.FK__Empleado__IdEmpr__239E4DCF", "Empleado", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Liquidaci__IdEmp__690797E6", "Liquidacion")]
-        public EntityCollection<Liquidacion> Liquidacion
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Liquidacion>("CuentasPorPagarModel.FK__Liquidaci__IdEmp__690797E6", "Liquidacion");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Liquidacion>("CuentasPorPagarModel.FK__Liquidaci__IdEmp__690797E6", "Liquidacion", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__NominaCab__IdEmp__43D61337", "NominaCab")]
-        public EntityCollection<NominaCab> NominaCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<NominaCab>("CuentasPorPagarModel.FK__NominaCab__IdEmp__43D61337", "NominaCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<NominaCab>("CuentasPorPagarModel.FK__NominaCab__IdEmp__43D61337", "NominaCab", value);
                 }
             }
         }
@@ -5428,18 +4750,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TipoTelef__IdEmp__571DF1D5", "TipoTelefono")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TipoTelef__IdEmp__5BE2A6F2", "TipoTelefono")]
         public EntityCollection<TipoTelefono> TipoTelefono
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoTelefono>("CuentasPorPagarModel.FK__TipoTelef__IdEmp__571DF1D5", "TipoTelefono");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoTelefono>("CuentasPorPagarModel.FK__TipoTelef__IdEmp__5BE2A6F2", "TipoTelefono");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoTelefono>("CuentasPorPagarModel.FK__TipoTelef__IdEmp__571DF1D5", "TipoTelefono", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoTelefono>("CuentasPorPagarModel.FK__TipoTelef__IdEmp__5BE2A6F2", "TipoTelefono", value);
                 }
             }
         }
@@ -5744,18 +5066,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBancaria2__2EC5E7B8", "CuentaBancaria2")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBancaria2__31A25463", "CuentaBancaria2")]
         public EntityCollection<CuentaBancaria2> CuentaBancaria2
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaBancaria2>("CuentasPorPagarModel.FK__CuentaBancaria2__2EC5E7B8", "CuentaBancaria2");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaBancaria2>("CuentasPorPagarModel.FK__CuentaBancaria2__31A25463", "CuentaBancaria2");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaBancaria2>("CuentasPorPagarModel.FK__CuentaBancaria2__2EC5E7B8", "CuentaBancaria2", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaBancaria2>("CuentasPorPagarModel.FK__CuentaBancaria2__31A25463", "CuentaBancaria2", value);
                 }
             }
         }
@@ -5766,18 +5088,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__384F51F2", "CuentaPorPagar")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__3B2BBE9D", "CuentaPorPagar")]
         public EntityCollection<CuentaPorPagar> CuentaPorPagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPorPagar__384F51F2", "CuentaPorPagar");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPorPagar__3B2BBE9D", "CuentaPorPagar");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPorPagar__384F51F2", "CuentaPorPagar", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPorPagar__3B2BBE9D", "CuentaPorPagar", value);
                 }
             }
         }
@@ -5788,16 +5110,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdEmp__16EE5E27", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdEmp__19CACAD2", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__EmpresaSe__IdEmp__16EE5E27", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__EmpresaSe__IdEmp__19CACAD2", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__EmpresaSe__IdEmp__16EE5E27", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__EmpresaSe__IdEmp__19CACAD2", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -5809,13 +5131,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__EmpresaSe__IdEmp__16EE5E27", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__EmpresaSe__IdEmp__19CACAD2", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__EmpresaSe__IdEmp__16EE5E27", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__EmpresaSe__IdEmp__19CACAD2", "Empresa", value);
                 }
             }
         }
@@ -5826,16 +5148,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdTip__15FA39EE", "TipoPersona")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdTip__18D6A699", "TipoPersona")]
         public TipoPersona TipoPersona
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPersona>("CuentasPorPagarModel.FK__EmpresaSe__IdTip__15FA39EE", "TipoPersona").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPersona>("CuentasPorPagarModel.FK__EmpresaSe__IdTip__18D6A699", "TipoPersona").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPersona>("CuentasPorPagarModel.FK__EmpresaSe__IdTip__15FA39EE", "TipoPersona").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPersona>("CuentasPorPagarModel.FK__EmpresaSe__IdTip__18D6A699", "TipoPersona").Value = value;
             }
         }
         /// <summary>
@@ -5847,13 +5169,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPersona>("CuentasPorPagarModel.FK__EmpresaSe__IdTip__15FA39EE", "TipoPersona");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoPersona>("CuentasPorPagarModel.FK__EmpresaSe__IdTip__18D6A699", "TipoPersona");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoPersona>("CuentasPorPagarModel.FK__EmpresaSe__IdTip__15FA39EE", "TipoPersona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoPersona>("CuentasPorPagarModel.FK__EmpresaSe__IdTip__18D6A699", "TipoPersona", value);
                 }
             }
         }
@@ -5864,16 +5186,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdUsu__17E28260", "Usuario")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdUsu__1ABEEF0B", "Usuario")]
         public Usuario Usuario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__EmpresaSe__IdUsu__17E28260", "Usuario").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__EmpresaSe__IdUsu__1ABEEF0B", "Usuario").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__EmpresaSe__IdUsu__17E28260", "Usuario").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__EmpresaSe__IdUsu__1ABEEF0B", "Usuario").Value = value;
             }
         }
         /// <summary>
@@ -5885,13 +5207,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__EmpresaSe__IdUsu__17E28260", "Usuario");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__EmpresaSe__IdUsu__1ABEEF0B", "Usuario");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__EmpresaSe__IdUsu__17E28260", "Usuario", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__EmpresaSe__IdUsu__1ABEEF0B", "Usuario", value);
                 }
             }
         }
@@ -5902,18 +5224,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TelefonoEmpresaS__1D9B5BB6", "TelefonoEmpresaServicio")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TelefonoEmpresaS__2077C861", "TelefonoEmpresaServicio")]
         public EntityCollection<TelefonoEmpresaServicio> TelefonoEmpresaServicio
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TelefonoEmpresaServicio>("CuentasPorPagarModel.FK__TelefonoEmpresaS__1D9B5BB6", "TelefonoEmpresaServicio");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TelefonoEmpresaServicio>("CuentasPorPagarModel.FK__TelefonoEmpresaS__2077C861", "TelefonoEmpresaServicio");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TelefonoEmpresaServicio>("CuentasPorPagarModel.FK__TelefonoEmpresaS__1D9B5BB6", "TelefonoEmpresaServicio", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TelefonoEmpresaServicio>("CuentasPorPagarModel.FK__TelefonoEmpresaS__2077C861", "TelefonoEmpresaServicio", value);
                 }
             }
         }
@@ -6118,18 +5440,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__375B2DB9", "CuentaPorPagar")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__3A379A64", "CuentaPorPagar")]
         public EntityCollection<CuentaPorPagar> CuentaPorPagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPorPagar__375B2DB9", "CuentaPorPagar");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPorPagar__3A379A64", "CuentaPorPagar");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPorPagar__375B2DB9", "CuentaPorPagar", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPorPagar__3A379A64", "CuentaPorPagar", value);
                 }
             }
         }
@@ -6140,16 +5462,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Frecuenci__IdEmp__2A01329B", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Frecuenci__IdEmp__2CDD9F46", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Frecuenci__IdEmp__2A01329B", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Frecuenci__IdEmp__2CDD9F46", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Frecuenci__IdEmp__2A01329B", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Frecuenci__IdEmp__2CDD9F46", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -6161,13 +5483,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Frecuenci__IdEmp__2A01329B", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Frecuenci__IdEmp__2CDD9F46", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__Frecuenci__IdEmp__2A01329B", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__Frecuenci__IdEmp__2CDD9F46", "Empresa", value);
                 }
             }
         }
@@ -6178,16 +5500,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Frecuenci__IdUsu__290D0E62", "Usuario")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Frecuenci__IdUsu__2BE97B0D", "Usuario")]
         public Usuario Usuario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Frecuenci__IdUsu__290D0E62", "Usuario").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Frecuenci__IdUsu__2BE97B0D", "Usuario").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Frecuenci__IdUsu__290D0E62", "Usuario").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Frecuenci__IdUsu__2BE97B0D", "Usuario").Value = value;
             }
         }
         /// <summary>
@@ -6199,13 +5521,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Frecuenci__IdUsu__290D0E62", "Usuario");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Frecuenci__IdUsu__2BE97B0D", "Usuario");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__Frecuenci__IdUsu__290D0E62", "Usuario", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__Frecuenci__IdUsu__2BE97B0D", "Usuario", value);
                 }
             }
         }
@@ -6234,7 +5556,8 @@ namespace datos.Cuentasxpagar
         /// <param name="estado">Valor inicial de la propiedad Estado.</param>
         /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
         /// <param name="idUsuario">Valor inicial de la propiedad IdUsuario.</param>
-        public static Impuesto CreateImpuesto(global::System.Int32 idImpuesto, global::System.String descripcion, global::System.Decimal porcentaje, global::System.DateTime fechaRegistro, global::System.Int32 estado, global::System.Int32 idEmpresa, global::System.Int32 idUsuario)
+        /// <param name="natureAcree">Valor inicial de la propiedad NatureAcree.</param>
+        public static Impuesto CreateImpuesto(global::System.Int32 idImpuesto, global::System.String descripcion, global::System.Decimal porcentaje, global::System.DateTime fechaRegistro, global::System.Int32 estado, global::System.Int32 idEmpresa, global::System.Int32 idUsuario, global::System.Int32 natureAcree)
         {
             Impuesto impuesto = new Impuesto();
             impuesto.IdImpuesto = idImpuesto;
@@ -6244,6 +5567,7 @@ namespace datos.Cuentasxpagar
             impuesto.Estado = estado;
             impuesto.IdEmpresa = idEmpresa;
             impuesto.IdUsuario = idUsuario;
+            impuesto.NatureAcree = natureAcree;
             return impuesto;
         }
 
@@ -6424,6 +5748,30 @@ namespace datos.Cuentasxpagar
         private global::System.Int32 _IdUsuario;
         partial void OnIdUsuarioChanging(global::System.Int32 value);
         partial void OnIdUsuarioChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 NatureAcree
+        {
+            get
+            {
+                return _NatureAcree;
+            }
+            set
+            {
+                OnNatureAcreeChanging(value);
+                ReportPropertyChanging("NatureAcree");
+                _NatureAcree = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("NatureAcree");
+                OnNatureAcreeChanged();
+            }
+        }
+        private global::System.Int32 _NatureAcree;
+        partial void OnNatureAcreeChanging(global::System.Int32 value);
+        partial void OnNatureAcreeChanged();
 
         #endregion
 
@@ -6436,16 +5784,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Impuesto__IdEmpr__24485945", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Impuesto__IdEmpr__2724C5F0", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Impuesto__IdEmpr__24485945", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Impuesto__IdEmpr__2724C5F0", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Impuesto__IdEmpr__24485945", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Impuesto__IdEmpr__2724C5F0", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -6457,13 +5805,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Impuesto__IdEmpr__24485945", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Impuesto__IdEmpr__2724C5F0", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__Impuesto__IdEmpr__24485945", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__Impuesto__IdEmpr__2724C5F0", "Empresa", value);
                 }
             }
         }
@@ -6474,16 +5822,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Impuesto__IdUsua__2354350C", "Usuario")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Impuesto__IdUsua__2630A1B7", "Usuario")]
         public Usuario Usuario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Impuesto__IdUsua__2354350C", "Usuario").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Impuesto__IdUsua__2630A1B7", "Usuario").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Impuesto__IdUsua__2354350C", "Usuario").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Impuesto__IdUsua__2630A1B7", "Usuario").Value = value;
             }
         }
         /// <summary>
@@ -6495,13 +5843,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Impuesto__IdUsua__2354350C", "Usuario");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__Impuesto__IdUsua__2630A1B7", "Usuario");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__Impuesto__IdUsua__2354350C", "Usuario", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__Impuesto__IdUsua__2630A1B7", "Usuario", value);
                 }
             }
         }
@@ -6512,18 +5860,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ImpuestoCuenta__45A94D10", "ImpuestoCuenta")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ImpuestoCuenta__4885B9BB", "ImpuestoCuenta")]
         public EntityCollection<ImpuestoCuenta> ImpuestoCuenta
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ImpuestoCuenta>("CuentasPorPagarModel.FK__ImpuestoCuenta__45A94D10", "ImpuestoCuenta");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ImpuestoCuenta>("CuentasPorPagarModel.FK__ImpuestoCuenta__4885B9BB", "ImpuestoCuenta");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ImpuestoCuenta>("CuentasPorPagarModel.FK__ImpuestoCuenta__45A94D10", "ImpuestoCuenta", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ImpuestoCuenta>("CuentasPorPagarModel.FK__ImpuestoCuenta__4885B9BB", "ImpuestoCuenta", value);
                 }
             }
         }
@@ -6679,16 +6027,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ImpuestoCuenta__469D7149", "CuentaPorPagar")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ImpuestoCuenta__4979DDF4", "CuentaPorPagar")]
         public CuentaPorPagar CuentaPorPagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__ImpuestoCuenta__469D7149", "CuentaPorPagar").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__ImpuestoCuenta__4979DDF4", "CuentaPorPagar").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__ImpuestoCuenta__469D7149", "CuentaPorPagar").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__ImpuestoCuenta__4979DDF4", "CuentaPorPagar").Value = value;
             }
         }
         /// <summary>
@@ -6700,13 +6048,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__ImpuestoCuenta__469D7149", "CuentaPorPagar");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__ImpuestoCuenta__4979DDF4", "CuentaPorPagar");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__ImpuestoCuenta__469D7149", "CuentaPorPagar", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CuentaPorPagar>("CuentasPorPagarModel.FK__ImpuestoCuenta__4979DDF4", "CuentaPorPagar", value);
                 }
             }
         }
@@ -6717,16 +6065,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ImpuestoCuenta__45A94D10", "Impuesto")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ImpuestoCuenta__4885B9BB", "Impuesto")]
         public Impuesto Impuesto
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Impuesto>("CuentasPorPagarModel.FK__ImpuestoCuenta__45A94D10", "Impuesto").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Impuesto>("CuentasPorPagarModel.FK__ImpuestoCuenta__4885B9BB", "Impuesto").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Impuesto>("CuentasPorPagarModel.FK__ImpuestoCuenta__45A94D10", "Impuesto").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Impuesto>("CuentasPorPagarModel.FK__ImpuestoCuenta__4885B9BB", "Impuesto").Value = value;
             }
         }
         /// <summary>
@@ -6738,13 +6086,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Impuesto>("CuentasPorPagarModel.FK__ImpuestoCuenta__45A94D10", "Impuesto");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Impuesto>("CuentasPorPagarModel.FK__ImpuestoCuenta__4885B9BB", "Impuesto");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Impuesto>("CuentasPorPagarModel.FK__ImpuestoCuenta__45A94D10", "Impuesto", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Impuesto>("CuentasPorPagarModel.FK__ImpuestoCuenta__4885B9BB", "Impuesto", value);
                 }
             }
         }
@@ -6755,16 +6103,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ImpuestoC__IdEmp__44B528D7", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ImpuestoC__IdEmp__47919582", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__ImpuestoC__IdEmp__44B528D7", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__ImpuestoC__IdEmp__47919582", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__ImpuestoC__IdEmp__44B528D7", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__ImpuestoC__IdEmp__47919582", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -6776,1234 +6124,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__ImpuestoC__IdEmp__44B528D7", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__ImpuestoC__IdEmp__47919582", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__ImpuestoC__IdEmp__44B528D7", "Empresa", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No hay documentación de metadatos disponible.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CuentasPorPagarModel", Name="IngresoEgresoCab")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class IngresoEgresoCab : EntityObject
-    {
-        #region Método de generador
-    
-        /// <summary>
-        /// Crear un nuevo objeto IngresoEgresoCab.
-        /// </summary>
-        /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
-        /// <param name="nroMovimiento">Valor inicial de la propiedad NroMovimiento.</param>
-        public static IngresoEgresoCab CreateIngresoEgresoCab(global::System.Int32 idEmpresa, global::System.Int32 nroMovimiento)
-        {
-            IngresoEgresoCab ingresoEgresoCab = new IngresoEgresoCab();
-            ingresoEgresoCab.IdEmpresa = idEmpresa;
-            ingresoEgresoCab.NroMovimiento = nroMovimiento;
-            return ingresoEgresoCab;
-        }
-
-        #endregion
-
-        #region Propiedades primitivas
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdEmpresa
-        {
-            get
-            {
-                return _IdEmpresa;
-            }
-            set
-            {
-                if (_IdEmpresa != value)
-                {
-                    OnIdEmpresaChanging(value);
-                    ReportPropertyChanging("IdEmpresa");
-                    _IdEmpresa = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdEmpresa");
-                    OnIdEmpresaChanged();
-                }
-            }
-        }
-        private global::System.Int32 _IdEmpresa;
-        partial void OnIdEmpresaChanging(global::System.Int32 value);
-        partial void OnIdEmpresaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 NroMovimiento
-        {
-            get
-            {
-                return _NroMovimiento;
-            }
-            set
-            {
-                if (_NroMovimiento != value)
-                {
-                    OnNroMovimientoChanging(value);
-                    ReportPropertyChanging("NroMovimiento");
-                    _NroMovimiento = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("NroMovimiento");
-                    OnNroMovimientoChanged();
-                }
-            }
-        }
-        private global::System.Int32 _NroMovimiento;
-        partial void OnNroMovimientoChanging(global::System.Int32 value);
-        partial void OnNroMovimientoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdTipoMovimiento
-        {
-            get
-            {
-                return _IdTipoMovimiento;
-            }
-            set
-            {
-                OnIdTipoMovimientoChanging(value);
-                ReportPropertyChanging("IdTipoMovimiento");
-                _IdTipoMovimiento = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdTipoMovimiento");
-                OnIdTipoMovimientoChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdTipoMovimiento;
-        partial void OnIdTipoMovimientoChanging(Nullable<global::System.Int32> value);
-        partial void OnIdTipoMovimientoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> FechaMovimiento
-        {
-            get
-            {
-                return _FechaMovimiento;
-            }
-            set
-            {
-                OnFechaMovimientoChanging(value);
-                ReportPropertyChanging("FechaMovimiento");
-                _FechaMovimiento = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FechaMovimiento");
-                OnFechaMovimientoChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _FechaMovimiento;
-        partial void OnFechaMovimientoChanging(Nullable<global::System.DateTime> value);
-        partial void OnFechaMovimientoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdOrdenCompra
-        {
-            get
-            {
-                return _IdOrdenCompra;
-            }
-            set
-            {
-                OnIdOrdenCompraChanging(value);
-                ReportPropertyChanging("IdOrdenCompra");
-                _IdOrdenCompra = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdOrdenCompra");
-                OnIdOrdenCompraChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdOrdenCompra;
-        partial void OnIdOrdenCompraChanging(Nullable<global::System.Int32> value);
-        partial void OnIdOrdenCompraChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdMotivo
-        {
-            get
-            {
-                return _IdMotivo;
-            }
-            set
-            {
-                OnIdMotivoChanging(value);
-                ReportPropertyChanging("IdMotivo");
-                _IdMotivo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdMotivo");
-                OnIdMotivoChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdMotivo;
-        partial void OnIdMotivoChanging(Nullable<global::System.Int32> value);
-        partial void OnIdMotivoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdBodega
-        {
-            get
-            {
-                return _IdBodega;
-            }
-            set
-            {
-                OnIdBodegaChanging(value);
-                ReportPropertyChanging("IdBodega");
-                _IdBodega = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdBodega");
-                OnIdBodegaChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdBodega;
-        partial void OnIdBodegaChanging(Nullable<global::System.Int32> value);
-        partial void OnIdBodegaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdResponsable
-        {
-            get
-            {
-                return _IdResponsable;
-            }
-            set
-            {
-                OnIdResponsableChanging(value);
-                ReportPropertyChanging("IdResponsable");
-                _IdResponsable = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdResponsable");
-                OnIdResponsableChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdResponsable;
-        partial void OnIdResponsableChanging(Nullable<global::System.Int32> value);
-        partial void OnIdResponsableChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> TotalPagar
-        {
-            get
-            {
-                return _TotalPagar;
-            }
-            set
-            {
-                OnTotalPagarChanging(value);
-                ReportPropertyChanging("TotalPagar");
-                _TotalPagar = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("TotalPagar");
-                OnTotalPagarChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _TotalPagar;
-        partial void OnTotalPagarChanging(Nullable<global::System.Decimal> value);
-        partial void OnTotalPagarChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String Observacion
-        {
-            get
-            {
-                return _Observacion;
-            }
-            set
-            {
-                OnObservacionChanging(value);
-                ReportPropertyChanging("Observacion");
-                _Observacion = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Observacion");
-                OnObservacionChanged();
-            }
-        }
-        private global::System.String _Observacion;
-        partial void OnObservacionChanging(global::System.String value);
-        partial void OnObservacionChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdUsuario
-        {
-            get
-            {
-                return _IdUsuario;
-            }
-            set
-            {
-                OnIdUsuarioChanging(value);
-                ReportPropertyChanging("IdUsuario");
-                _IdUsuario = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdUsuario");
-                OnIdUsuarioChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdUsuario;
-        partial void OnIdUsuarioChanging(Nullable<global::System.Int32> value);
-        partial void OnIdUsuarioChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdEstado
-        {
-            get
-            {
-                return _IdEstado;
-            }
-            set
-            {
-                OnIdEstadoChanging(value);
-                ReportPropertyChanging("IdEstado");
-                _IdEstado = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdEstado");
-                OnIdEstadoChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdEstado;
-        partial void OnIdEstadoChanging(Nullable<global::System.Int32> value);
-        partial void OnIdEstadoChanged();
-
-        #endregion
-
-    
-        #region Propiedades de navegación
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPorPagar__3A379A64", "CuentaPorPagar")]
-        public EntityCollection<CuentaPorPagar> CuentaPorPagar
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPorPagar__3A379A64", "CuentaPorPagar");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPorPagar__3A379A64", "CuentaPorPagar", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__IngresoEg__IdRes__10766AC2", "Persona")]
-        public Persona Persona
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__IngresoEg__IdRes__10766AC2", "Persona").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__IngresoEg__IdRes__10766AC2", "Persona").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Persona> PersonaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__IngresoEg__IdRes__10766AC2", "Persona");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("CuentasPorPagarModel.FK__IngresoEg__IdRes__10766AC2", "Persona", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__IngresoEg__IdUsu__116A8EFB", "Usuario")]
-        public Usuario Usuario
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__IngresoEg__IdUsu__116A8EFB", "Usuario").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__IngresoEg__IdUsu__116A8EFB", "Usuario").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Usuario> UsuarioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__IngresoEg__IdUsu__116A8EFB", "Usuario");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__IngresoEg__IdUsu__116A8EFB", "Usuario", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__IngresoEgresoDet__162F4418", "IngresoEgresoDet")]
-        public EntityCollection<IngresoEgresoDet> IngresoEgresoDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoDet>("CuentasPorPagarModel.FK__IngresoEgresoDet__162F4418", "IngresoEgresoDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoDet>("CuentasPorPagarModel.FK__IngresoEgresoDet__162F4418", "IngresoEgresoDet", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No hay documentación de metadatos disponible.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CuentasPorPagarModel", Name="IngresoEgresoDet")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class IngresoEgresoDet : EntityObject
-    {
-        #region Método de generador
-    
-        /// <summary>
-        /// Crear un nuevo objeto IngresoEgresoDet.
-        /// </summary>
-        /// <param name="nroMovimiento">Valor inicial de la propiedad NroMovimiento.</param>
-        /// <param name="numero">Valor inicial de la propiedad numero.</param>
-        public static IngresoEgresoDet CreateIngresoEgresoDet(global::System.Int32 nroMovimiento, global::System.Int32 numero)
-        {
-            IngresoEgresoDet ingresoEgresoDet = new IngresoEgresoDet();
-            ingresoEgresoDet.NroMovimiento = nroMovimiento;
-            ingresoEgresoDet.numero = numero;
-            return ingresoEgresoDet;
-        }
-
-        #endregion
-
-        #region Propiedades primitivas
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdEmpresa
-        {
-            get
-            {
-                return _IdEmpresa;
-            }
-            set
-            {
-                OnIdEmpresaChanging(value);
-                ReportPropertyChanging("IdEmpresa");
-                _IdEmpresa = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdEmpresa");
-                OnIdEmpresaChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdEmpresa;
-        partial void OnIdEmpresaChanging(Nullable<global::System.Int32> value);
-        partial void OnIdEmpresaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 NroMovimiento
-        {
-            get
-            {
-                return _NroMovimiento;
-            }
-            set
-            {
-                if (_NroMovimiento != value)
-                {
-                    OnNroMovimientoChanging(value);
-                    ReportPropertyChanging("NroMovimiento");
-                    _NroMovimiento = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("NroMovimiento");
-                    OnNroMovimientoChanged();
-                }
-            }
-        }
-        private global::System.Int32 _NroMovimiento;
-        partial void OnNroMovimientoChanging(global::System.Int32 value);
-        partial void OnNroMovimientoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 numero
-        {
-            get
-            {
-                return _numero;
-            }
-            set
-            {
-                if (_numero != value)
-                {
-                    OnnumeroChanging(value);
-                    ReportPropertyChanging("numero");
-                    _numero = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("numero");
-                    OnnumeroChanged();
-                }
-            }
-        }
-        private global::System.Int32 _numero;
-        partial void OnnumeroChanging(global::System.Int32 value);
-        partial void OnnumeroChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdArticulo
-        {
-            get
-            {
-                return _IdArticulo;
-            }
-            set
-            {
-                OnIdArticuloChanging(value);
-                ReportPropertyChanging("IdArticulo");
-                _IdArticulo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdArticulo");
-                OnIdArticuloChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdArticulo;
-        partial void OnIdArticuloChanging(Nullable<global::System.Int32> value);
-        partial void OnIdArticuloChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdPercha
-        {
-            get
-            {
-                return _IdPercha;
-            }
-            set
-            {
-                OnIdPerchaChanging(value);
-                ReportPropertyChanging("IdPercha");
-                _IdPercha = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdPercha");
-                OnIdPerchaChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdPercha;
-        partial void OnIdPerchaChanging(Nullable<global::System.Int32> value);
-        partial void OnIdPerchaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> CantidadPedida
-        {
-            get
-            {
-                return _CantidadPedida;
-            }
-            set
-            {
-                OnCantidadPedidaChanging(value);
-                ReportPropertyChanging("CantidadPedida");
-                _CantidadPedida = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("CantidadPedida");
-                OnCantidadPedidaChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _CantidadPedida;
-        partial void OnCantidadPedidaChanging(Nullable<global::System.Int32> value);
-        partial void OnCantidadPedidaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> CantidadLlegada
-        {
-            get
-            {
-                return _CantidadLlegada;
-            }
-            set
-            {
-                OnCantidadLlegadaChanging(value);
-                ReportPropertyChanging("CantidadLlegada");
-                _CantidadLlegada = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("CantidadLlegada");
-                OnCantidadLlegadaChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _CantidadLlegada;
-        partial void OnCantidadLlegadaChanging(Nullable<global::System.Int32> value);
-        partial void OnCantidadLlegadaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> Costo
-        {
-            get
-            {
-                return _Costo;
-            }
-            set
-            {
-                OnCostoChanging(value);
-                ReportPropertyChanging("Costo");
-                _Costo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Costo");
-                OnCostoChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _Costo;
-        partial void OnCostoChanging(Nullable<global::System.Decimal> value);
-        partial void OnCostoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> Subtotal
-        {
-            get
-            {
-                return _Subtotal;
-            }
-            set
-            {
-                OnSubtotalChanging(value);
-                ReportPropertyChanging("Subtotal");
-                _Subtotal = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Subtotal");
-                OnSubtotalChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _Subtotal;
-        partial void OnSubtotalChanging(Nullable<global::System.Decimal> value);
-        partial void OnSubtotalChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> ValorIVA
-        {
-            get
-            {
-                return _ValorIVA;
-            }
-            set
-            {
-                OnValorIVAChanging(value);
-                ReportPropertyChanging("ValorIVA");
-                _ValorIVA = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ValorIVA");
-                OnValorIVAChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _ValorIVA;
-        partial void OnValorIVAChanging(Nullable<global::System.Decimal> value);
-        partial void OnValorIVAChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> ValorTotal
-        {
-            get
-            {
-                return _ValorTotal;
-            }
-            set
-            {
-                OnValorTotalChanging(value);
-                ReportPropertyChanging("ValorTotal");
-                _ValorTotal = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ValorTotal");
-                OnValorTotalChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _ValorTotal;
-        partial void OnValorTotalChanging(Nullable<global::System.Decimal> value);
-        partial void OnValorTotalChanged();
-
-        #endregion
-
-    
-        #region Propiedades de navegación
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__IngresoEgresoDet__162F4418", "IngresoEgresoCab")]
-        public IngresoEgresoCab IngresoEgresoCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("CuentasPorPagarModel.FK__IngresoEgresoDet__162F4418", "IngresoEgresoCab").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("CuentasPorPagarModel.FK__IngresoEgresoDet__162F4418", "IngresoEgresoCab").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<IngresoEgresoCab> IngresoEgresoCabReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("CuentasPorPagarModel.FK__IngresoEgresoDet__162F4418", "IngresoEgresoCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<IngresoEgresoCab>("CuentasPorPagarModel.FK__IngresoEgresoDet__162F4418", "IngresoEgresoCab", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No hay documentación de metadatos disponible.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CuentasPorPagarModel", Name="Liquidacion")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class Liquidacion : EntityObject
-    {
-        #region Método de generador
-    
-        /// <summary>
-        /// Crear un nuevo objeto Liquidacion.
-        /// </summary>
-        /// <param name="numLiquidacion">Valor inicial de la propiedad NumLiquidacion.</param>
-        /// <param name="idPersona">Valor inicial de la propiedad IdPersona.</param>
-        /// <param name="numContrato">Valor inicial de la propiedad NumContrato.</param>
-        /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
-        /// <param name="fecha">Valor inicial de la propiedad Fecha.</param>
-        /// <param name="causa">Valor inicial de la propiedad Causa.</param>
-        /// <param name="fechaSalida">Valor inicial de la propiedad FechaSalida.</param>
-        /// <param name="ingresos">Valor inicial de la propiedad Ingresos.</param>
-        /// <param name="egresos">Valor inicial de la propiedad Egresos.</param>
-        /// <param name="total">Valor inicial de la propiedad Total.</param>
-        /// <param name="idEstado">Valor inicial de la propiedad IdEstado.</param>
-        public static Liquidacion CreateLiquidacion(global::System.Int32 numLiquidacion, global::System.Int32 idPersona, global::System.Int32 numContrato, global::System.Int32 idEmpresa, global::System.DateTime fecha, global::System.String causa, global::System.DateTime fechaSalida, global::System.Decimal ingresos, global::System.Decimal egresos, global::System.Decimal total, global::System.Int32 idEstado)
-        {
-            Liquidacion liquidacion = new Liquidacion();
-            liquidacion.NumLiquidacion = numLiquidacion;
-            liquidacion.IdPersona = idPersona;
-            liquidacion.NumContrato = numContrato;
-            liquidacion.IdEmpresa = idEmpresa;
-            liquidacion.Fecha = fecha;
-            liquidacion.Causa = causa;
-            liquidacion.FechaSalida = fechaSalida;
-            liquidacion.Ingresos = ingresos;
-            liquidacion.Egresos = egresos;
-            liquidacion.Total = total;
-            liquidacion.IdEstado = idEstado;
-            return liquidacion;
-        }
-
-        #endregion
-
-        #region Propiedades primitivas
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 NumLiquidacion
-        {
-            get
-            {
-                return _NumLiquidacion;
-            }
-            set
-            {
-                if (_NumLiquidacion != value)
-                {
-                    OnNumLiquidacionChanging(value);
-                    ReportPropertyChanging("NumLiquidacion");
-                    _NumLiquidacion = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("NumLiquidacion");
-                    OnNumLiquidacionChanged();
-                }
-            }
-        }
-        private global::System.Int32 _NumLiquidacion;
-        partial void OnNumLiquidacionChanging(global::System.Int32 value);
-        partial void OnNumLiquidacionChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdPersona
-        {
-            get
-            {
-                return _IdPersona;
-            }
-            set
-            {
-                if (_IdPersona != value)
-                {
-                    OnIdPersonaChanging(value);
-                    ReportPropertyChanging("IdPersona");
-                    _IdPersona = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdPersona");
-                    OnIdPersonaChanged();
-                }
-            }
-        }
-        private global::System.Int32 _IdPersona;
-        partial void OnIdPersonaChanging(global::System.Int32 value);
-        partial void OnIdPersonaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 NumContrato
-        {
-            get
-            {
-                return _NumContrato;
-            }
-            set
-            {
-                OnNumContratoChanging(value);
-                ReportPropertyChanging("NumContrato");
-                _NumContrato = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("NumContrato");
-                OnNumContratoChanged();
-            }
-        }
-        private global::System.Int32 _NumContrato;
-        partial void OnNumContratoChanging(global::System.Int32 value);
-        partial void OnNumContratoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdEmpresa
-        {
-            get
-            {
-                return _IdEmpresa;
-            }
-            set
-            {
-                if (_IdEmpresa != value)
-                {
-                    OnIdEmpresaChanging(value);
-                    ReportPropertyChanging("IdEmpresa");
-                    _IdEmpresa = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdEmpresa");
-                    OnIdEmpresaChanged();
-                }
-            }
-        }
-        private global::System.Int32 _IdEmpresa;
-        partial void OnIdEmpresaChanging(global::System.Int32 value);
-        partial void OnIdEmpresaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime Fecha
-        {
-            get
-            {
-                return _Fecha;
-            }
-            set
-            {
-                OnFechaChanging(value);
-                ReportPropertyChanging("Fecha");
-                _Fecha = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Fecha");
-                OnFechaChanged();
-            }
-        }
-        private global::System.DateTime _Fecha;
-        partial void OnFechaChanging(global::System.DateTime value);
-        partial void OnFechaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> FechaModificacion
-        {
-            get
-            {
-                return _FechaModificacion;
-            }
-            set
-            {
-                OnFechaModificacionChanging(value);
-                ReportPropertyChanging("FechaModificacion");
-                _FechaModificacion = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FechaModificacion");
-                OnFechaModificacionChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _FechaModificacion;
-        partial void OnFechaModificacionChanging(Nullable<global::System.DateTime> value);
-        partial void OnFechaModificacionChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Causa
-        {
-            get
-            {
-                return _Causa;
-            }
-            set
-            {
-                OnCausaChanging(value);
-                ReportPropertyChanging("Causa");
-                _Causa = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Causa");
-                OnCausaChanged();
-            }
-        }
-        private global::System.String _Causa;
-        partial void OnCausaChanging(global::System.String value);
-        partial void OnCausaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime FechaSalida
-        {
-            get
-            {
-                return _FechaSalida;
-            }
-            set
-            {
-                OnFechaSalidaChanging(value);
-                ReportPropertyChanging("FechaSalida");
-                _FechaSalida = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FechaSalida");
-                OnFechaSalidaChanged();
-            }
-        }
-        private global::System.DateTime _FechaSalida;
-        partial void OnFechaSalidaChanging(global::System.DateTime value);
-        partial void OnFechaSalidaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Decimal Ingresos
-        {
-            get
-            {
-                return _Ingresos;
-            }
-            set
-            {
-                OnIngresosChanging(value);
-                ReportPropertyChanging("Ingresos");
-                _Ingresos = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Ingresos");
-                OnIngresosChanged();
-            }
-        }
-        private global::System.Decimal _Ingresos;
-        partial void OnIngresosChanging(global::System.Decimal value);
-        partial void OnIngresosChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Decimal Egresos
-        {
-            get
-            {
-                return _Egresos;
-            }
-            set
-            {
-                OnEgresosChanging(value);
-                ReportPropertyChanging("Egresos");
-                _Egresos = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Egresos");
-                OnEgresosChanged();
-            }
-        }
-        private global::System.Decimal _Egresos;
-        partial void OnEgresosChanging(global::System.Decimal value);
-        partial void OnEgresosChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Decimal Total
-        {
-            get
-            {
-                return _Total;
-            }
-            set
-            {
-                OnTotalChanging(value);
-                ReportPropertyChanging("Total");
-                _Total = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Total");
-                OnTotalChanged();
-            }
-        }
-        private global::System.Decimal _Total;
-        partial void OnTotalChanging(global::System.Decimal value);
-        partial void OnTotalChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdEstado
-        {
-            get
-            {
-                return _IdEstado;
-            }
-            set
-            {
-                OnIdEstadoChanging(value);
-                ReportPropertyChanging("IdEstado");
-                _IdEstado = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdEstado");
-                OnIdEstadoChanged();
-            }
-        }
-        private global::System.Int32 _IdEstado;
-        partial void OnIdEstadoChanging(global::System.Int32 value);
-        partial void OnIdEstadoChanged();
-
-        #endregion
-
-    
-        #region Propiedades de navegación
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Liquidaci__IdEmp__690797E6", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Liquidaci__IdEmp__690797E6", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Liquidaci__IdEmp__690797E6", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Liquidaci__IdEmp__690797E6", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__Liquidaci__IdEmp__690797E6", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Liquidaci__IdPer__681373AD", "Persona")]
-        public Persona Persona
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__Liquidaci__IdPer__681373AD", "Persona").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__Liquidaci__IdPer__681373AD", "Persona").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Persona> PersonaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__Liquidaci__IdPer__681373AD", "Persona");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("CuentasPorPagarModel.FK__Liquidaci__IdPer__681373AD", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__ImpuestoC__IdEmp__47919582", "Empresa", value);
                 }
             }
         }
@@ -8208,16 +6335,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__MedioPago__IdEmp__1CDC41A7", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__MedioPago__IdEmp__2D12A970", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__MedioPago__IdEmp__1CDC41A7", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__MedioPago__IdEmp__2D12A970", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__MedioPago__IdEmp__1CDC41A7", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__MedioPago__IdEmp__2D12A970", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -8229,13 +6356,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__MedioPago__IdEmp__1CDC41A7", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__MedioPago__IdEmp__2D12A970", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__MedioPago__IdEmp__1CDC41A7", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__MedioPago__IdEmp__2D12A970", "Empresa", value);
                 }
             }
         }
@@ -8246,16 +6373,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__MedioPago__IdUsu__1DD065E0", "Usuario")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__MedioPago__IdUsu__2E06CDA9", "Usuario")]
         public Usuario Usuario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__MedioPago__IdUsu__1DD065E0", "Usuario").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__MedioPago__IdUsu__2E06CDA9", "Usuario").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__MedioPago__IdUsu__1DD065E0", "Usuario").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__MedioPago__IdUsu__2E06CDA9", "Usuario").Value = value;
             }
         }
         /// <summary>
@@ -8267,13 +6394,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__MedioPago__IdUsu__1DD065E0", "Usuario");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__MedioPago__IdUsu__2E06CDA9", "Usuario");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__MedioPago__IdUsu__1DD065E0", "Usuario", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__MedioPago__IdUsu__2E06CDA9", "Usuario", value);
                 }
             }
         }
@@ -8284,671 +6411,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__66161CA2", "PagoDet")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__68F2894D", "PagoDet")]
         public EntityCollection<PagoDet> PagoDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__66161CA2", "PagoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__68F2894D", "PagoDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__66161CA2", "PagoDet", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No hay documentación de metadatos disponible.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CuentasPorPagarModel", Name="NominaCab")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class NominaCab : EntityObject
-    {
-        #region Método de generador
-    
-        /// <summary>
-        /// Crear un nuevo objeto NominaCab.
-        /// </summary>
-        /// <param name="numNomina">Valor inicial de la propiedad NumNomina.</param>
-        /// <param name="fecha">Valor inicial de la propiedad Fecha.</param>
-        /// <param name="periodo">Valor inicial de la propiedad Periodo.</param>
-        /// <param name="total">Valor inicial de la propiedad Total.</param>
-        /// <param name="idEstado">Valor inicial de la propiedad IdEstado.</param>
-        /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
-        public static NominaCab CreateNominaCab(global::System.Int32 numNomina, global::System.DateTime fecha, global::System.Int32 periodo, global::System.Decimal total, global::System.Int32 idEstado, global::System.Int32 idEmpresa)
-        {
-            NominaCab nominaCab = new NominaCab();
-            nominaCab.NumNomina = numNomina;
-            nominaCab.Fecha = fecha;
-            nominaCab.Periodo = periodo;
-            nominaCab.Total = total;
-            nominaCab.IdEstado = idEstado;
-            nominaCab.IdEmpresa = idEmpresa;
-            return nominaCab;
-        }
-
-        #endregion
-
-        #region Propiedades primitivas
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 NumNomina
-        {
-            get
-            {
-                return _NumNomina;
-            }
-            set
-            {
-                if (_NumNomina != value)
-                {
-                    OnNumNominaChanging(value);
-                    ReportPropertyChanging("NumNomina");
-                    _NumNomina = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("NumNomina");
-                    OnNumNominaChanged();
-                }
-            }
-        }
-        private global::System.Int32 _NumNomina;
-        partial void OnNumNominaChanging(global::System.Int32 value);
-        partial void OnNumNominaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime Fecha
-        {
-            get
-            {
-                return _Fecha;
-            }
-            set
-            {
-                OnFechaChanging(value);
-                ReportPropertyChanging("Fecha");
-                _Fecha = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Fecha");
-                OnFechaChanged();
-            }
-        }
-        private global::System.DateTime _Fecha;
-        partial void OnFechaChanging(global::System.DateTime value);
-        partial void OnFechaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> FechaModificacion
-        {
-            get
-            {
-                return _FechaModificacion;
-            }
-            set
-            {
-                OnFechaModificacionChanging(value);
-                ReportPropertyChanging("FechaModificacion");
-                _FechaModificacion = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FechaModificacion");
-                OnFechaModificacionChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _FechaModificacion;
-        partial void OnFechaModificacionChanging(Nullable<global::System.DateTime> value);
-        partial void OnFechaModificacionChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 Periodo
-        {
-            get
-            {
-                return _Periodo;
-            }
-            set
-            {
-                OnPeriodoChanging(value);
-                ReportPropertyChanging("Periodo");
-                _Periodo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Periodo");
-                OnPeriodoChanged();
-            }
-        }
-        private global::System.Int32 _Periodo;
-        partial void OnPeriodoChanging(global::System.Int32 value);
-        partial void OnPeriodoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Decimal Total
-        {
-            get
-            {
-                return _Total;
-            }
-            set
-            {
-                OnTotalChanging(value);
-                ReportPropertyChanging("Total");
-                _Total = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Total");
-                OnTotalChanged();
-            }
-        }
-        private global::System.Decimal _Total;
-        partial void OnTotalChanging(global::System.Decimal value);
-        partial void OnTotalChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdEstado
-        {
-            get
-            {
-                return _IdEstado;
-            }
-            set
-            {
-                OnIdEstadoChanging(value);
-                ReportPropertyChanging("IdEstado");
-                _IdEstado = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdEstado");
-                OnIdEstadoChanged();
-            }
-        }
-        private global::System.Int32 _IdEstado;
-        partial void OnIdEstadoChanging(global::System.Int32 value);
-        partial void OnIdEstadoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdEmpresa
-        {
-            get
-            {
-                return _IdEmpresa;
-            }
-            set
-            {
-                if (_IdEmpresa != value)
-                {
-                    OnIdEmpresaChanging(value);
-                    ReportPropertyChanging("IdEmpresa");
-                    _IdEmpresa = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdEmpresa");
-                    OnIdEmpresaChanged();
-                }
-            }
-        }
-        private global::System.Int32 _IdEmpresa;
-        partial void OnIdEmpresaChanging(global::System.Int32 value);
-        partial void OnIdEmpresaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String Observacion
-        {
-            get
-            {
-                return _Observacion;
-            }
-            set
-            {
-                OnObservacionChanging(value);
-                ReportPropertyChanging("Observacion");
-                _Observacion = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Observacion");
-                OnObservacionChanged();
-            }
-        }
-        private global::System.String _Observacion;
-        partial void OnObservacionChanging(global::System.String value);
-        partial void OnObservacionChanged();
-
-        #endregion
-
-    
-        #region Propiedades de navegación
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__6521F869", "PagoDet")]
-        public EntityCollection<PagoDet> PagoDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__6521F869", "PagoDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__6521F869", "PagoDet", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__NominaCab__IdEmp__43D61337", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__NominaCab__IdEmp__43D61337", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__NominaCab__IdEmp__43D61337", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__NominaCab__IdEmp__43D61337", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__NominaCab__IdEmp__43D61337", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__NominaDet__489AC854", "NominaDet")]
-        public EntityCollection<NominaDet> NominaDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<NominaDet>("CuentasPorPagarModel.FK__NominaDet__489AC854", "NominaDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<NominaDet>("CuentasPorPagarModel.FK__NominaDet__489AC854", "NominaDet", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No hay documentación de metadatos disponible.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="CuentasPorPagarModel", Name="NominaDet")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class NominaDet : EntityObject
-    {
-        #region Método de generador
-    
-        /// <summary>
-        /// Crear un nuevo objeto NominaDet.
-        /// </summary>
-        /// <param name="numLinea">Valor inicial de la propiedad NumLinea.</param>
-        /// <param name="numNomina">Valor inicial de la propiedad NumNomina.</param>
-        /// <param name="idPersona">Valor inicial de la propiedad IdPersona.</param>
-        /// <param name="sueldoNominal">Valor inicial de la propiedad SueldoNominal.</param>
-        /// <param name="sueldoGanado">Valor inicial de la propiedad SueldoGanado.</param>
-        /// <param name="iess">Valor inicial de la propiedad Iess.</param>
-        /// <param name="valorLiquido">Valor inicial de la propiedad ValorLiquido.</param>
-        /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
-        public static NominaDet CreateNominaDet(global::System.Int32 numLinea, global::System.Int32 numNomina, global::System.Int32 idPersona, global::System.Decimal sueldoNominal, global::System.Decimal sueldoGanado, global::System.Decimal iess, global::System.Decimal valorLiquido, global::System.Int32 idEmpresa)
-        {
-            NominaDet nominaDet = new NominaDet();
-            nominaDet.NumLinea = numLinea;
-            nominaDet.NumNomina = numNomina;
-            nominaDet.IdPersona = idPersona;
-            nominaDet.SueldoNominal = sueldoNominal;
-            nominaDet.SueldoGanado = sueldoGanado;
-            nominaDet.Iess = iess;
-            nominaDet.ValorLiquido = valorLiquido;
-            nominaDet.IdEmpresa = idEmpresa;
-            return nominaDet;
-        }
-
-        #endregion
-
-        #region Propiedades primitivas
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 NumLinea
-        {
-            get
-            {
-                return _NumLinea;
-            }
-            set
-            {
-                if (_NumLinea != value)
-                {
-                    OnNumLineaChanging(value);
-                    ReportPropertyChanging("NumLinea");
-                    _NumLinea = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("NumLinea");
-                    OnNumLineaChanged();
-                }
-            }
-        }
-        private global::System.Int32 _NumLinea;
-        partial void OnNumLineaChanging(global::System.Int32 value);
-        partial void OnNumLineaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 NumNomina
-        {
-            get
-            {
-                return _NumNomina;
-            }
-            set
-            {
-                OnNumNominaChanging(value);
-                ReportPropertyChanging("NumNomina");
-                _NumNomina = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("NumNomina");
-                OnNumNominaChanged();
-            }
-        }
-        private global::System.Int32 _NumNomina;
-        partial void OnNumNominaChanging(global::System.Int32 value);
-        partial void OnNumNominaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdPersona
-        {
-            get
-            {
-                return _IdPersona;
-            }
-            set
-            {
-                OnIdPersonaChanging(value);
-                ReportPropertyChanging("IdPersona");
-                _IdPersona = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdPersona");
-                OnIdPersonaChanged();
-            }
-        }
-        private global::System.Int32 _IdPersona;
-        partial void OnIdPersonaChanging(global::System.Int32 value);
-        partial void OnIdPersonaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Decimal SueldoNominal
-        {
-            get
-            {
-                return _SueldoNominal;
-            }
-            set
-            {
-                OnSueldoNominalChanging(value);
-                ReportPropertyChanging("SueldoNominal");
-                _SueldoNominal = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("SueldoNominal");
-                OnSueldoNominalChanged();
-            }
-        }
-        private global::System.Decimal _SueldoNominal;
-        partial void OnSueldoNominalChanging(global::System.Decimal value);
-        partial void OnSueldoNominalChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Decimal SueldoGanado
-        {
-            get
-            {
-                return _SueldoGanado;
-            }
-            set
-            {
-                OnSueldoGanadoChanging(value);
-                ReportPropertyChanging("SueldoGanado");
-                _SueldoGanado = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("SueldoGanado");
-                OnSueldoGanadoChanged();
-            }
-        }
-        private global::System.Decimal _SueldoGanado;
-        partial void OnSueldoGanadoChanging(global::System.Decimal value);
-        partial void OnSueldoGanadoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Decimal Iess
-        {
-            get
-            {
-                return _Iess;
-            }
-            set
-            {
-                OnIessChanging(value);
-                ReportPropertyChanging("Iess");
-                _Iess = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Iess");
-                OnIessChanged();
-            }
-        }
-        private global::System.Decimal _Iess;
-        partial void OnIessChanging(global::System.Decimal value);
-        partial void OnIessChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> Prestamo
-        {
-            get
-            {
-                return _Prestamo;
-            }
-            set
-            {
-                OnPrestamoChanging(value);
-                ReportPropertyChanging("Prestamo");
-                _Prestamo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Prestamo");
-                OnPrestamoChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _Prestamo;
-        partial void OnPrestamoChanging(Nullable<global::System.Decimal> value);
-        partial void OnPrestamoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> Anticipo
-        {
-            get
-            {
-                return _Anticipo;
-            }
-            set
-            {
-                OnAnticipoChanging(value);
-                ReportPropertyChanging("Anticipo");
-                _Anticipo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Anticipo");
-                OnAnticipoChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _Anticipo;
-        partial void OnAnticipoChanging(Nullable<global::System.Decimal> value);
-        partial void OnAnticipoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Decimal ValorLiquido
-        {
-            get
-            {
-                return _ValorLiquido;
-            }
-            set
-            {
-                OnValorLiquidoChanging(value);
-                ReportPropertyChanging("ValorLiquido");
-                _ValorLiquido = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ValorLiquido");
-                OnValorLiquidoChanged();
-            }
-        }
-        private global::System.Decimal _ValorLiquido;
-        partial void OnValorLiquidoChanging(global::System.Decimal value);
-        partial void OnValorLiquidoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdEmpresa
-        {
-            get
-            {
-                return _IdEmpresa;
-            }
-            set
-            {
-                OnIdEmpresaChanging(value);
-                ReportPropertyChanging("IdEmpresa");
-                _IdEmpresa = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdEmpresa");
-                OnIdEmpresaChanged();
-            }
-        }
-        private global::System.Int32 _IdEmpresa;
-        partial void OnIdEmpresaChanging(global::System.Int32 value);
-        partial void OnIdEmpresaChanged();
-
-        #endregion
-
-    
-        #region Propiedades de navegación
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__NominaDet__489AC854", "NominaCab")]
-        public NominaCab NominaCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NominaCab>("CuentasPorPagarModel.FK__NominaDet__489AC854", "NominaCab").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NominaCab>("CuentasPorPagarModel.FK__NominaDet__489AC854", "NominaCab").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<NominaCab> NominaCabReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NominaCab>("CuentasPorPagarModel.FK__NominaDet__489AC854", "NominaCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<NominaCab>("CuentasPorPagarModel.FK__NominaDet__489AC854", "NominaCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__68F2894D", "PagoDet", value);
                 }
             }
         }
@@ -9203,16 +6677,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdEmp__4C564A9F", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdEmp__4F32B74A", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__4C564A9F", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__4F32B74A", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__4C564A9F", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__4F32B74A", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -9224,13 +6698,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__4C564A9F", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__4F32B74A", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__4C564A9F", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__4F32B74A", "Empresa", value);
                 }
             }
         }
@@ -9241,16 +6715,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdUsu__4B622666", "Usuario")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdUsu__4E3E9311", "Usuario")]
         public Usuario Usuario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__OrdenPago__IdUsu__4B622666", "Usuario").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__OrdenPago__IdUsu__4E3E9311", "Usuario").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__OrdenPago__IdUsu__4B622666", "Usuario").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__OrdenPago__IdUsu__4E3E9311", "Usuario").Value = value;
             }
         }
         /// <summary>
@@ -9262,13 +6736,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__OrdenPago__IdUsu__4B622666", "Usuario");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__OrdenPago__IdUsu__4E3E9311", "Usuario");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__OrdenPago__IdUsu__4B622666", "Usuario", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__OrdenPago__IdUsu__4E3E9311", "Usuario", value);
                 }
             }
         }
@@ -9279,18 +6753,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPagoDet__56D3D912", "OrdenPagoDet")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPagoDet__59B045BD", "OrdenPagoDet")]
         public EntityCollection<OrdenPagoDet> OrdenPagoDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoDet>("CuentasPorPagarModel.FK__OrdenPagoDet__56D3D912", "OrdenPagoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoDet>("CuentasPorPagarModel.FK__OrdenPagoDet__59B045BD", "OrdenPagoDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoDet>("CuentasPorPagarModel.FK__OrdenPagoDet__56D3D912", "OrdenPagoDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoDet>("CuentasPorPagarModel.FK__OrdenPagoDet__59B045BD", "OrdenPagoDet", value);
                 }
             }
         }
@@ -9301,18 +6775,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPagoEmplead__511AFFBC", "OrdenPagoEmpleadoDet")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPagoEmplead__53F76C67", "OrdenPagoEmpleadoDet")]
         public EntityCollection<OrdenPagoEmpleadoDet> OrdenPagoEmpleadoDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoEmpleadoDet>("CuentasPorPagarModel.FK__OrdenPagoEmplead__511AFFBC", "OrdenPagoEmpleadoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoEmpleadoDet>("CuentasPorPagarModel.FK__OrdenPagoEmplead__53F76C67", "OrdenPagoEmpleadoDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoEmpleadoDet>("CuentasPorPagarModel.FK__OrdenPagoEmplead__511AFFBC", "OrdenPagoEmpleadoDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoEmpleadoDet>("CuentasPorPagarModel.FK__OrdenPagoEmplead__53F76C67", "OrdenPagoEmpleadoDet", value);
                 }
             }
         }
@@ -9323,18 +6797,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoCab__5E74FADA", "PagoCab")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoCab__61516785", "PagoCab")]
         public EntityCollection<PagoCab> PagoCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoCab>("CuentasPorPagarModel.FK__PagoCab__5E74FADA", "PagoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoCab>("CuentasPorPagarModel.FK__PagoCab__61516785", "PagoCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoCab>("CuentasPorPagarModel.FK__PagoCab__5E74FADA", "PagoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoCab>("CuentasPorPagarModel.FK__PagoCab__61516785", "PagoCab", value);
                 }
             }
         }
@@ -9364,7 +6838,8 @@ namespace datos.Cuentasxpagar
         /// <param name="numOrdenCab">Valor inicial de la propiedad NumOrdenCab.</param>
         /// <param name="totalPagar">Valor inicial de la propiedad TotalPagar.</param>
         /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
-        public static OrdenPagoDet CreateOrdenPagoDet(global::System.Int32 numLinea, global::System.Int32 numCuentaPorPagar, global::System.Int32 numDetalleDeuda, global::System.Decimal saldoDeuda, global::System.Int32 numeroPagosRealizar, global::System.Int32 numOrdenCab, global::System.Decimal totalPagar, global::System.Int32 idEmpresa)
+        /// <param name="autorizarPago">Valor inicial de la propiedad AutorizarPago.</param>
+        public static OrdenPagoDet CreateOrdenPagoDet(global::System.Int32 numLinea, global::System.Int32 numCuentaPorPagar, global::System.Int32 numDetalleDeuda, global::System.Decimal saldoDeuda, global::System.Int32 numeroPagosRealizar, global::System.Int32 numOrdenCab, global::System.Decimal totalPagar, global::System.Int32 idEmpresa, global::System.Boolean autorizarPago)
         {
             OrdenPagoDet ordenPagoDet = new OrdenPagoDet();
             ordenPagoDet.NumLinea = numLinea;
@@ -9375,6 +6850,7 @@ namespace datos.Cuentasxpagar
             ordenPagoDet.NumOrdenCab = numOrdenCab;
             ordenPagoDet.TotalPagar = totalPagar;
             ordenPagoDet.IdEmpresa = idEmpresa;
+            ordenPagoDet.AutorizarPago = autorizarPago;
             return ordenPagoDet;
         }
 
@@ -9582,6 +7058,30 @@ namespace datos.Cuentasxpagar
         private global::System.Int32 _IdEmpresa;
         partial void OnIdEmpresaChanging(global::System.Int32 value);
         partial void OnIdEmpresaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Boolean AutorizarPago
+        {
+            get
+            {
+                return _AutorizarPago;
+            }
+            set
+            {
+                OnAutorizarPagoChanging(value);
+                ReportPropertyChanging("AutorizarPago");
+                _AutorizarPago = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("AutorizarPago");
+                OnAutorizarPagoChanged();
+            }
+        }
+        private global::System.Boolean _AutorizarPago;
+        partial void OnAutorizarPagoChanging(global::System.Boolean value);
+        partial void OnAutorizarPagoChanged();
 
         #endregion
 
@@ -9594,16 +7094,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPagoDet__57C7FD4B", "DeudaDet")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPagoDet__5AA469F6", "DeudaDet")]
         public DeudaDet DeudaDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DeudaDet>("CuentasPorPagarModel.FK__OrdenPagoDet__57C7FD4B", "DeudaDet").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DeudaDet>("CuentasPorPagarModel.FK__OrdenPagoDet__5AA469F6", "DeudaDet").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DeudaDet>("CuentasPorPagarModel.FK__OrdenPagoDet__57C7FD4B", "DeudaDet").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DeudaDet>("CuentasPorPagarModel.FK__OrdenPagoDet__5AA469F6", "DeudaDet").Value = value;
             }
         }
         /// <summary>
@@ -9615,13 +7115,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DeudaDet>("CuentasPorPagarModel.FK__OrdenPagoDet__57C7FD4B", "DeudaDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DeudaDet>("CuentasPorPagarModel.FK__OrdenPagoDet__5AA469F6", "DeudaDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DeudaDet>("CuentasPorPagarModel.FK__OrdenPagoDet__57C7FD4B", "DeudaDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DeudaDet>("CuentasPorPagarModel.FK__OrdenPagoDet__5AA469F6", "DeudaDet", value);
                 }
             }
         }
@@ -9632,16 +7132,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPagoDet__56D3D912", "OrdenPagoCab")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPagoDet__59B045BD", "OrdenPagoCab")]
         public OrdenPagoCab OrdenPagoCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoDet__56D3D912", "OrdenPagoCab").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoDet__59B045BD", "OrdenPagoCab").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoDet__56D3D912", "OrdenPagoCab").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoDet__59B045BD", "OrdenPagoCab").Value = value;
             }
         }
         /// <summary>
@@ -9653,13 +7153,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoDet__56D3D912", "OrdenPagoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoDet__59B045BD", "OrdenPagoCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoDet__56D3D912", "OrdenPagoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoDet__59B045BD", "OrdenPagoCab", value);
                 }
             }
         }
@@ -9683,14 +7183,16 @@ namespace datos.Cuentasxpagar
         /// </summary>
         /// <param name="numOrdenPago">Valor inicial de la propiedad NumOrdenPago.</param>
         /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
+        /// <param name="autorizarPago">Valor inicial de la propiedad AutorizarPago.</param>
         /// <param name="linea">Valor inicial de la propiedad Linea.</param>
         /// <param name="idPersona">Valor inicial de la propiedad IdPersona.</param>
         /// <param name="pagoNeto">Valor inicial de la propiedad PagoNeto.</param>
-        public static OrdenPagoEmpleadoDet CreateOrdenPagoEmpleadoDet(global::System.Int32 numOrdenPago, global::System.Int32 idEmpresa, global::System.Int32 linea, global::System.Int32 idPersona, global::System.Decimal pagoNeto)
+        public static OrdenPagoEmpleadoDet CreateOrdenPagoEmpleadoDet(global::System.Int32 numOrdenPago, global::System.Int32 idEmpresa, global::System.Boolean autorizarPago, global::System.Int32 linea, global::System.Int32 idPersona, global::System.Decimal pagoNeto)
         {
             OrdenPagoEmpleadoDet ordenPagoEmpleadoDet = new OrdenPagoEmpleadoDet();
             ordenPagoEmpleadoDet.NumOrdenPago = numOrdenPago;
             ordenPagoEmpleadoDet.IdEmpresa = idEmpresa;
+            ordenPagoEmpleadoDet.AutorizarPago = autorizarPago;
             ordenPagoEmpleadoDet.Linea = linea;
             ordenPagoEmpleadoDet.IdPersona = idPersona;
             ordenPagoEmpleadoDet.PagoNeto = pagoNeto;
@@ -9754,6 +7256,30 @@ namespace datos.Cuentasxpagar
         private global::System.Int32 _IdEmpresa;
         partial void OnIdEmpresaChanging(global::System.Int32 value);
         partial void OnIdEmpresaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Boolean AutorizarPago
+        {
+            get
+            {
+                return _AutorizarPago;
+            }
+            set
+            {
+                OnAutorizarPagoChanging(value);
+                ReportPropertyChanging("AutorizarPago");
+                _AutorizarPago = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("AutorizarPago");
+                OnAutorizarPagoChanged();
+            }
+        }
+        private global::System.Boolean _AutorizarPago;
+        partial void OnAutorizarPagoChanging(global::System.Boolean value);
+        partial void OnAutorizarPagoChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -9913,16 +7439,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPagoEmplead__511AFFBC", "OrdenPagoCab")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPagoEmplead__53F76C67", "OrdenPagoCab")]
         public OrdenPagoCab OrdenPagoCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoEmplead__511AFFBC", "OrdenPagoCab").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoEmplead__53F76C67", "OrdenPagoCab").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoEmplead__511AFFBC", "OrdenPagoCab").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoEmplead__53F76C67", "OrdenPagoCab").Value = value;
             }
         }
         /// <summary>
@@ -9934,13 +7460,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoEmplead__511AFFBC", "OrdenPagoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoEmplead__53F76C67", "OrdenPagoCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoEmplead__511AFFBC", "OrdenPagoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPagoEmplead__53F76C67", "OrdenPagoCab", value);
                 }
             }
         }
@@ -9951,16 +7477,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdEmp__520F23F5", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdEmp__54EB90A0", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__520F23F5", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__54EB90A0", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__520F23F5", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__54EB90A0", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -9972,13 +7498,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__520F23F5", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__54EB90A0", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__520F23F5", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__OrdenPago__IdEmp__54EB90A0", "Empresa", value);
                 }
             }
         }
@@ -10233,16 +7759,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoCab__5E74FADA", "OrdenPagoCab")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoCab__61516785", "OrdenPagoCab")]
         public OrdenPagoCab OrdenPagoCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__PagoCab__5E74FADA", "OrdenPagoCab").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__PagoCab__61516785", "OrdenPagoCab").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__PagoCab__5E74FADA", "OrdenPagoCab").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__PagoCab__61516785", "OrdenPagoCab").Value = value;
             }
         }
         /// <summary>
@@ -10254,13 +7780,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__PagoCab__5E74FADA", "OrdenPagoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__PagoCab__61516785", "OrdenPagoCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__PagoCab__5E74FADA", "OrdenPagoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrdenPagoCab>("CuentasPorPagarModel.FK__PagoCab__61516785", "OrdenPagoCab", value);
                 }
             }
         }
@@ -10271,16 +7797,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoCab__IdEmpre__5D80D6A1", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoCab__IdEmpre__605D434C", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__PagoCab__IdEmpre__5D80D6A1", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__PagoCab__IdEmpre__605D434C", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__PagoCab__IdEmpre__5D80D6A1", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__PagoCab__IdEmpre__605D434C", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -10292,13 +7818,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__PagoCab__IdEmpre__5D80D6A1", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__PagoCab__IdEmpre__605D434C", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__PagoCab__IdEmpre__5D80D6A1", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__PagoCab__IdEmpre__605D434C", "Empresa", value);
                 }
             }
         }
@@ -10309,16 +7835,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoCab__IdUsuar__5C8CB268", "Usuario")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoCab__IdUsuar__5F691F13", "Usuario")]
         public Usuario Usuario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__PagoCab__IdUsuar__5C8CB268", "Usuario").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__PagoCab__IdUsuar__5F691F13", "Usuario").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__PagoCab__IdUsuar__5C8CB268", "Usuario").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__PagoCab__IdUsuar__5F691F13", "Usuario").Value = value;
             }
         }
         /// <summary>
@@ -10330,13 +7856,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__PagoCab__IdUsuar__5C8CB268", "Usuario");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("CuentasPorPagarModel.FK__PagoCab__IdUsuar__5F691F13", "Usuario");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__PagoCab__IdUsuar__5C8CB268", "Usuario", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("CuentasPorPagarModel.FK__PagoCab__IdUsuar__5F691F13", "Usuario", value);
                 }
             }
         }
@@ -10347,18 +7873,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__6339AFF7", "PagoDet")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__66161CA2", "PagoDet")]
         public EntityCollection<PagoDet> PagoDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__6339AFF7", "PagoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__66161CA2", "PagoDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__6339AFF7", "PagoDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoDet>("CuentasPorPagarModel.FK__PagoDet__66161CA2", "PagoDet", value);
                 }
             }
         }
@@ -10663,16 +8189,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__670A40DB", "CabeceraComprobante")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__69E6AD86", "CabeceraComprobante")]
         public CabeceraComprobante CabeceraComprobante
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__PagoDet__670A40DB", "CabeceraComprobante").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__PagoDet__69E6AD86", "CabeceraComprobante").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__PagoDet__670A40DB", "CabeceraComprobante").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__PagoDet__69E6AD86", "CabeceraComprobante").Value = value;
             }
         }
         /// <summary>
@@ -10684,13 +8210,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__PagoDet__670A40DB", "CabeceraComprobante");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__PagoDet__69E6AD86", "CabeceraComprobante");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__PagoDet__670A40DB", "CabeceraComprobante", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CabeceraComprobante>("CuentasPorPagarModel.FK__PagoDet__69E6AD86", "CabeceraComprobante", value);
                 }
             }
         }
@@ -10701,16 +8227,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__IdBanco__67FE6514", "Banco")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__IdBanco__6ADAD1BF", "Banco")]
         public Banco Banco
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__PagoDet__IdBanco__67FE6514", "Banco").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__PagoDet__IdBanco__6ADAD1BF", "Banco").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__PagoDet__IdBanco__67FE6514", "Banco").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__PagoDet__IdBanco__6ADAD1BF", "Banco").Value = value;
             }
         }
         /// <summary>
@@ -10722,13 +8248,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__PagoDet__IdBanco__67FE6514", "Banco");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Banco>("CuentasPorPagarModel.FK__PagoDet__IdBanco__6ADAD1BF", "Banco");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Banco>("CuentasPorPagarModel.FK__PagoDet__IdBanco__67FE6514", "Banco", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Banco>("CuentasPorPagarModel.FK__PagoDet__IdBanco__6ADAD1BF", "Banco", value);
                 }
             }
         }
@@ -10739,16 +8265,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__66161CA2", "MedioPago")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__68F2894D", "MedioPago")]
         public MedioPago MedioPago
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MedioPago>("CuentasPorPagarModel.FK__PagoDet__66161CA2", "MedioPago").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MedioPago>("CuentasPorPagarModel.FK__PagoDet__68F2894D", "MedioPago").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MedioPago>("CuentasPorPagarModel.FK__PagoDet__66161CA2", "MedioPago").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MedioPago>("CuentasPorPagarModel.FK__PagoDet__68F2894D", "MedioPago").Value = value;
             }
         }
         /// <summary>
@@ -10760,13 +8286,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MedioPago>("CuentasPorPagarModel.FK__PagoDet__66161CA2", "MedioPago");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<MedioPago>("CuentasPorPagarModel.FK__PagoDet__68F2894D", "MedioPago");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MedioPago>("CuentasPorPagarModel.FK__PagoDet__66161CA2", "MedioPago", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<MedioPago>("CuentasPorPagarModel.FK__PagoDet__68F2894D", "MedioPago", value);
                 }
             }
         }
@@ -10777,16 +8303,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__6339AFF7", "PagoCab")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__66161CA2", "PagoCab")]
         public PagoCab PagoCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PagoCab>("CuentasPorPagarModel.FK__PagoDet__6339AFF7", "PagoCab").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PagoCab>("CuentasPorPagarModel.FK__PagoDet__66161CA2", "PagoCab").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PagoCab>("CuentasPorPagarModel.FK__PagoDet__6339AFF7", "PagoCab").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PagoCab>("CuentasPorPagarModel.FK__PagoDet__66161CA2", "PagoCab").Value = value;
             }
         }
         /// <summary>
@@ -10798,89 +8324,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PagoCab>("CuentasPorPagarModel.FK__PagoDet__6339AFF7", "PagoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PagoCab>("CuentasPorPagarModel.FK__PagoDet__66161CA2", "PagoCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PagoCab>("CuentasPorPagarModel.FK__PagoDet__6339AFF7", "PagoCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__6521F869", "NominaCab")]
-        public NominaCab NominaCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NominaCab>("CuentasPorPagarModel.FK__PagoDet__6521F869", "NominaCab").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NominaCab>("CuentasPorPagarModel.FK__PagoDet__6521F869", "NominaCab").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<NominaCab> NominaCabReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<NominaCab>("CuentasPorPagarModel.FK__PagoDet__6521F869", "NominaCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<NominaCab>("CuentasPorPagarModel.FK__PagoDet__6521F869", "NominaCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoDet__NumComi__642DD430", "Comision")]
-        public Comision Comision
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Comision>("CuentasPorPagarModel.FK__PagoDet__NumComi__642DD430", "Comision").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Comision>("CuentasPorPagarModel.FK__PagoDet__NumComi__642DD430", "Comision").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Comision> ComisionReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Comision>("CuentasPorPagarModel.FK__PagoDet__NumComi__642DD430", "Comision");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Comision>("CuentasPorPagarModel.FK__PagoDet__NumComi__642DD430", "Comision", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PagoCab>("CuentasPorPagarModel.FK__PagoDet__66161CA2", "PagoCab", value);
                 }
             }
         }
@@ -11332,18 +8782,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__idTit__5CC1BC92", "CuentaBancaria")]
-        public EntityCollection<CuentaBancaria> CuentaBancaria
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Proveedor__IdPer__7720AD13", "Proveedor")]
+        public EntityCollection<Proveedor> Proveedor
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaBancaria>("CuentasPorPagarModel.FK__CuentaBan__idTit__5CC1BC92", "CuentaBancaria");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Proveedor>("CuentasPorPagarModel.FK__Proveedor__IdPer__7720AD13", "Proveedor");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaBancaria>("CuentasPorPagarModel.FK__CuentaBan__idTit__5CC1BC92", "CuentaBancaria", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Proveedor>("CuentasPorPagarModel.FK__Proveedor__IdPer__7720AD13", "Proveedor", value);
                 }
             }
         }
@@ -11354,18 +8804,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__IngresoEg__IdRes__10766AC2", "IngresoEgresoCab")]
-        public EntityCollection<IngresoEgresoCab> IngresoEgresoCab
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaBan__idTit__6CF8245B", "CuentaBancaria")]
+        public EntityCollection<CuentaBancaria> CuentaBancaria
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("CuentasPorPagarModel.FK__IngresoEg__IdRes__10766AC2", "IngresoEgresoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaBancaria>("CuentasPorPagarModel.FK__CuentaBan__idTit__6CF8245B", "CuentaBancaria");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("CuentasPorPagarModel.FK__IngresoEg__IdRes__10766AC2", "IngresoEgresoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaBancaria>("CuentasPorPagarModel.FK__CuentaBan__idTit__6CF8245B", "CuentaBancaria", value);
                 }
             }
         }
@@ -11388,28 +8838,6 @@ namespace datos.Cuentasxpagar
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Empleado>("CuentasPorPagarModel.FK__Empleado__IdPers__24927208", "Empleado", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Liquidaci__IdPer__681373AD", "Liquidacion")]
-        public EntityCollection<Liquidacion> Liquidacion
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Liquidacion>("CuentasPorPagarModel.FK__Liquidaci__IdPer__681373AD", "Liquidacion");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Liquidacion>("CuentasPorPagarModel.FK__Liquidaci__IdPer__681373AD", "Liquidacion", value);
                 }
             }
         }
@@ -11573,6 +9001,269 @@ namespace datos.Cuentasxpagar
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="CuentasPorPagarModel", Name="Proveedor")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Proveedor : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto Proveedor.
+        /// </summary>
+        /// <param name="idProveedor">Valor inicial de la propiedad IdProveedor.</param>
+        /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
+        /// <param name="idPersona">Valor inicial de la propiedad IdPersona.</param>
+        /// <param name="idTipoArticulo">Valor inicial de la propiedad IdTipoArticulo.</param>
+        /// <param name="estado">Valor inicial de la propiedad Estado.</param>
+        public static Proveedor CreateProveedor(global::System.Int32 idProveedor, global::System.Int32 idEmpresa, global::System.Int32 idPersona, global::System.Int32 idTipoArticulo, global::System.Int32 estado)
+        {
+            Proveedor proveedor = new Proveedor();
+            proveedor.IdProveedor = idProveedor;
+            proveedor.IdEmpresa = idEmpresa;
+            proveedor.IdPersona = idPersona;
+            proveedor.IdTipoArticulo = idTipoArticulo;
+            proveedor.Estado = estado;
+            return proveedor;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdProveedor
+        {
+            get
+            {
+                return _IdProveedor;
+            }
+            set
+            {
+                if (_IdProveedor != value)
+                {
+                    OnIdProveedorChanging(value);
+                    ReportPropertyChanging("IdProveedor");
+                    _IdProveedor = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdProveedor");
+                    OnIdProveedorChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdProveedor;
+        partial void OnIdProveedorChanging(global::System.Int32 value);
+        partial void OnIdProveedorChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdEmpresa
+        {
+            get
+            {
+                return _IdEmpresa;
+            }
+            set
+            {
+                OnIdEmpresaChanging(value);
+                ReportPropertyChanging("IdEmpresa");
+                _IdEmpresa = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdEmpresa");
+                OnIdEmpresaChanged();
+            }
+        }
+        private global::System.Int32 _IdEmpresa;
+        partial void OnIdEmpresaChanging(global::System.Int32 value);
+        partial void OnIdEmpresaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdPersona
+        {
+            get
+            {
+                return _IdPersona;
+            }
+            set
+            {
+                OnIdPersonaChanging(value);
+                ReportPropertyChanging("IdPersona");
+                _IdPersona = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPersona");
+                OnIdPersonaChanged();
+            }
+        }
+        private global::System.Int32 _IdPersona;
+        partial void OnIdPersonaChanging(global::System.Int32 value);
+        partial void OnIdPersonaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdTipoArticulo
+        {
+            get
+            {
+                return _IdTipoArticulo;
+            }
+            set
+            {
+                OnIdTipoArticuloChanging(value);
+                ReportPropertyChanging("IdTipoArticulo");
+                _IdTipoArticulo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdTipoArticulo");
+                OnIdTipoArticuloChanged();
+            }
+        }
+        private global::System.Int32 _IdTipoArticulo;
+        partial void OnIdTipoArticuloChanging(global::System.Int32 value);
+        partial void OnIdTipoArticuloChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+            set
+            {
+                OnEstadoChanging(value);
+                ReportPropertyChanging("Estado");
+                _Estado = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Estado");
+                OnEstadoChanged();
+            }
+        }
+        private global::System.Int32 _Estado;
+        partial void OnEstadoChanging(global::System.Int32 value);
+        partial void OnEstadoChanged();
+
+        #endregion
+
+    
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdPro__3C1FE2D6", "CuentaPorPagar")]
+        public EntityCollection<CuentaPorPagar> CuentaPorPagar
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPor__IdPro__3C1FE2D6", "CuentaPorPagar");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPor__IdPro__3C1FE2D6", "CuentaPorPagar", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Proveedor__IdEmp__7814D14C", "Empresa")]
+        public Empresa Empresa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Proveedor__IdEmp__7814D14C", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Proveedor__IdEmp__7814D14C", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__Proveedor__IdEmp__7814D14C", "Empresa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__Proveedor__IdEmp__7814D14C", "Empresa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Proveedor__IdPer__7720AD13", "Persona")]
+        public Persona Persona
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__Proveedor__IdPer__7720AD13", "Persona").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__Proveedor__IdPer__7720AD13", "Persona").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Persona> PersonaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("CuentasPorPagarModel.FK__Proveedor__IdPer__7720AD13", "Persona");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("CuentasPorPagarModel.FK__Proveedor__IdPer__7720AD13", "Persona", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="CuentasPorPagarModel", Name="Telefono")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -11685,18 +9376,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TelefonoE__IdTel__1E8F7FEF", "TelefonoEmpresaServicio")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TelefonoE__IdTel__216BEC9A", "TelefonoEmpresaServicio")]
         public EntityCollection<TelefonoEmpresaServicio> TelefonoEmpresaServicio
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TelefonoEmpresaServicio>("CuentasPorPagarModel.FK__TelefonoE__IdTel__1E8F7FEF", "TelefonoEmpresaServicio");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TelefonoEmpresaServicio>("CuentasPorPagarModel.FK__TelefonoE__IdTel__216BEC9A", "TelefonoEmpresaServicio");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TelefonoEmpresaServicio>("CuentasPorPagarModel.FK__TelefonoE__IdTel__1E8F7FEF", "TelefonoEmpresaServicio", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TelefonoEmpresaServicio>("CuentasPorPagarModel.FK__TelefonoE__IdTel__216BEC9A", "TelefonoEmpresaServicio", value);
                 }
             }
         }
@@ -11707,16 +9398,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Telefono__IdTipo__5BE2A6F2", "TipoTelefono")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Telefono__IdTipo__60A75C0F", "TipoTelefono")]
         public TipoTelefono TipoTelefono
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTelefono>("CuentasPorPagarModel.FK__Telefono__IdTipo__5BE2A6F2", "TipoTelefono").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTelefono>("CuentasPorPagarModel.FK__Telefono__IdTipo__60A75C0F", "TipoTelefono").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTelefono>("CuentasPorPagarModel.FK__Telefono__IdTipo__5BE2A6F2", "TipoTelefono").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTelefono>("CuentasPorPagarModel.FK__Telefono__IdTipo__60A75C0F", "TipoTelefono").Value = value;
             }
         }
         /// <summary>
@@ -11728,13 +9419,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTelefono>("CuentasPorPagarModel.FK__Telefono__IdTipo__5BE2A6F2", "TipoTelefono");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoTelefono>("CuentasPorPagarModel.FK__Telefono__IdTipo__60A75C0F", "TipoTelefono");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoTelefono>("CuentasPorPagarModel.FK__Telefono__IdTipo__5BE2A6F2", "TipoTelefono", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoTelefono>("CuentasPorPagarModel.FK__Telefono__IdTipo__60A75C0F", "TipoTelefono", value);
                 }
             }
         }
@@ -11759,14 +9450,12 @@ namespace datos.Cuentasxpagar
         /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
         /// <param name="idEmpresaServicio">Valor inicial de la propiedad IdEmpresaServicio.</param>
         /// <param name="idTelefono">Valor inicial de la propiedad IdTelefono.</param>
-        /// <param name="serie">Valor inicial de la propiedad Serie.</param>
-        public static TelefonoEmpresaServicio CreateTelefonoEmpresaServicio(global::System.Int32 idEmpresa, global::System.String idEmpresaServicio, global::System.Int32 idTelefono, global::System.Int32 serie)
+        public static TelefonoEmpresaServicio CreateTelefonoEmpresaServicio(global::System.Int32 idEmpresa, global::System.String idEmpresaServicio, global::System.Int32 idTelefono)
         {
             TelefonoEmpresaServicio telefonoEmpresaServicio = new TelefonoEmpresaServicio();
             telefonoEmpresaServicio.IdEmpresa = idEmpresa;
             telefonoEmpresaServicio.IdEmpresaServicio = idEmpresaServicio;
             telefonoEmpresaServicio.IdTelefono = idTelefono;
-            telefonoEmpresaServicio.Serie = serie;
             return telefonoEmpresaServicio;
         }
 
@@ -11854,33 +9543,6 @@ namespace datos.Cuentasxpagar
         private global::System.Int32 _IdTelefono;
         partial void OnIdTelefonoChanging(global::System.Int32 value);
         partial void OnIdTelefonoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 Serie
-        {
-            get
-            {
-                return _Serie;
-            }
-            set
-            {
-                if (_Serie != value)
-                {
-                    OnSerieChanging(value);
-                    ReportPropertyChanging("Serie");
-                    _Serie = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Serie");
-                    OnSerieChanged();
-                }
-            }
-        }
-        private global::System.Int32 _Serie;
-        partial void OnSerieChanging(global::System.Int32 value);
-        partial void OnSerieChanged();
 
         #endregion
 
@@ -11893,16 +9555,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TelefonoEmpresaS__1D9B5BB6", "EmpresaServicio")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TelefonoEmpresaS__2077C861", "EmpresaServicio")]
         public EmpresaServicio EmpresaServicio
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__TelefonoEmpresaS__1D9B5BB6", "EmpresaServicio").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__TelefonoEmpresaS__2077C861", "EmpresaServicio").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__TelefonoEmpresaS__1D9B5BB6", "EmpresaServicio").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__TelefonoEmpresaS__2077C861", "EmpresaServicio").Value = value;
             }
         }
         /// <summary>
@@ -11914,13 +9576,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__TelefonoEmpresaS__1D9B5BB6", "EmpresaServicio");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__TelefonoEmpresaS__2077C861", "EmpresaServicio");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__TelefonoEmpresaS__1D9B5BB6", "EmpresaServicio", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<EmpresaServicio>("CuentasPorPagarModel.FK__TelefonoEmpresaS__2077C861", "EmpresaServicio", value);
                 }
             }
         }
@@ -11931,16 +9593,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TelefonoE__IdEmp__1CA7377D", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TelefonoE__IdEmp__1F83A428", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__TelefonoE__IdEmp__1CA7377D", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__TelefonoE__IdEmp__1F83A428", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__TelefonoE__IdEmp__1CA7377D", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__TelefonoE__IdEmp__1F83A428", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -11952,13 +9614,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__TelefonoE__IdEmp__1CA7377D", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__TelefonoE__IdEmp__1F83A428", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__TelefonoE__IdEmp__1CA7377D", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__TelefonoE__IdEmp__1F83A428", "Empresa", value);
                 }
             }
         }
@@ -11969,16 +9631,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TelefonoE__IdTel__1E8F7FEF", "Telefono")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TelefonoE__IdTel__216BEC9A", "Telefono")]
         public Telefono Telefono
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Telefono>("CuentasPorPagarModel.FK__TelefonoE__IdTel__1E8F7FEF", "Telefono").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Telefono>("CuentasPorPagarModel.FK__TelefonoE__IdTel__216BEC9A", "Telefono").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Telefono>("CuentasPorPagarModel.FK__TelefonoE__IdTel__1E8F7FEF", "Telefono").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Telefono>("CuentasPorPagarModel.FK__TelefonoE__IdTel__216BEC9A", "Telefono").Value = value;
             }
         }
         /// <summary>
@@ -11990,13 +9652,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Telefono>("CuentasPorPagarModel.FK__TelefonoE__IdTel__1E8F7FEF", "Telefono");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Telefono>("CuentasPorPagarModel.FK__TelefonoE__IdTel__216BEC9A", "Telefono");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Telefono>("CuentasPorPagarModel.FK__TelefonoE__IdTel__1E8F7FEF", "Telefono", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Telefono>("CuentasPorPagarModel.FK__TelefonoE__IdTel__216BEC9A", "Telefono", value);
                 }
             }
         }
@@ -12345,18 +10007,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdTip__15FA39EE", "EmpresaServicio")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdTip__18D6A699", "EmpresaServicio")]
         public EntityCollection<EmpresaServicio> EmpresaServicio
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EmpresaServicio>("CuentasPorPagarModel.FK__EmpresaSe__IdTip__15FA39EE", "EmpresaServicio");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EmpresaServicio>("CuentasPorPagarModel.FK__EmpresaSe__IdTip__18D6A699", "EmpresaServicio");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EmpresaServicio>("CuentasPorPagarModel.FK__EmpresaSe__IdTip__15FA39EE", "EmpresaServicio", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EmpresaServicio>("CuentasPorPagarModel.FK__EmpresaSe__IdTip__18D6A699", "EmpresaServicio", value);
                 }
             }
         }
@@ -12566,18 +10228,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Telefono__IdTipo__5BE2A6F2", "Telefono")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Telefono__IdTipo__60A75C0F", "Telefono")]
         public EntityCollection<Telefono> Telefono
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Telefono>("CuentasPorPagarModel.FK__Telefono__IdTipo__5BE2A6F2", "Telefono");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Telefono>("CuentasPorPagarModel.FK__Telefono__IdTipo__60A75C0F", "Telefono");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Telefono>("CuentasPorPagarModel.FK__Telefono__IdTipo__5BE2A6F2", "Telefono", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Telefono>("CuentasPorPagarModel.FK__Telefono__IdTipo__60A75C0F", "Telefono", value);
                 }
             }
         }
@@ -12588,16 +10250,16 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TipoTelef__IdEmp__571DF1D5", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__TipoTelef__IdEmp__5BE2A6F2", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__TipoTelef__IdEmp__571DF1D5", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__TipoTelef__IdEmp__5BE2A6F2", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__TipoTelef__IdEmp__571DF1D5", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__TipoTelef__IdEmp__5BE2A6F2", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -12609,13 +10271,13 @@ namespace datos.Cuentasxpagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__TipoTelef__IdEmp__571DF1D5", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("CuentasPorPagarModel.FK__TipoTelef__IdEmp__5BE2A6F2", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__TipoTelef__IdEmp__571DF1D5", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("CuentasPorPagarModel.FK__TipoTelef__IdEmp__5BE2A6F2", "Empresa", value);
                 }
             }
         }
@@ -12811,18 +10473,40 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdUsu__36670980", "CuentaPorPagar")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Compra__IdUsuari__15A53433", "Compra")]
+        public EntityCollection<Compra> Compra
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Compra>("CuentasPorPagarModel.FK__Compra__IdUsuari__15A53433", "Compra");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Compra>("CuentasPorPagarModel.FK__Compra__IdUsuari__15A53433", "Compra", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__CuentaPor__IdUsu__3943762B", "CuentaPorPagar")]
         public EntityCollection<CuentaPorPagar> CuentaPorPagar
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPor__IdUsu__36670980", "CuentaPorPagar");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPor__IdUsu__3943762B", "CuentaPorPagar");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPor__IdUsu__36670980", "CuentaPorPagar", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CuentaPorPagar>("CuentasPorPagarModel.FK__CuentaPor__IdUsu__3943762B", "CuentaPorPagar", value);
                 }
             }
         }
@@ -12833,18 +10517,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdUsu__17E28260", "EmpresaServicio")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__EmpresaSe__IdUsu__1ABEEF0B", "EmpresaServicio")]
         public EntityCollection<EmpresaServicio> EmpresaServicio
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EmpresaServicio>("CuentasPorPagarModel.FK__EmpresaSe__IdUsu__17E28260", "EmpresaServicio");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EmpresaServicio>("CuentasPorPagarModel.FK__EmpresaSe__IdUsu__1ABEEF0B", "EmpresaServicio");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EmpresaServicio>("CuentasPorPagarModel.FK__EmpresaSe__IdUsu__17E28260", "EmpresaServicio", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EmpresaServicio>("CuentasPorPagarModel.FK__EmpresaSe__IdUsu__1ABEEF0B", "EmpresaServicio", value);
                 }
             }
         }
@@ -12855,18 +10539,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Frecuenci__IdUsu__290D0E62", "FrecuenciaPago")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Frecuenci__IdUsu__2BE97B0D", "FrecuenciaPago")]
         public EntityCollection<FrecuenciaPago> FrecuenciaPago
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FrecuenciaPago>("CuentasPorPagarModel.FK__Frecuenci__IdUsu__290D0E62", "FrecuenciaPago");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FrecuenciaPago>("CuentasPorPagarModel.FK__Frecuenci__IdUsu__2BE97B0D", "FrecuenciaPago");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FrecuenciaPago>("CuentasPorPagarModel.FK__Frecuenci__IdUsu__290D0E62", "FrecuenciaPago", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FrecuenciaPago>("CuentasPorPagarModel.FK__Frecuenci__IdUsu__2BE97B0D", "FrecuenciaPago", value);
                 }
             }
         }
@@ -12877,18 +10561,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Impuesto__IdUsua__2354350C", "Impuesto")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Impuesto__IdUsua__2630A1B7", "Impuesto")]
         public EntityCollection<Impuesto> Impuesto
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Impuesto>("CuentasPorPagarModel.FK__Impuesto__IdUsua__2354350C", "Impuesto");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Impuesto>("CuentasPorPagarModel.FK__Impuesto__IdUsua__2630A1B7", "Impuesto");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Impuesto>("CuentasPorPagarModel.FK__Impuesto__IdUsua__2354350C", "Impuesto", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Impuesto>("CuentasPorPagarModel.FK__Impuesto__IdUsua__2630A1B7", "Impuesto", value);
                 }
             }
         }
@@ -12899,18 +10583,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__MedioPago__IdUsu__1DD065E0", "MedioPago")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__MedioPago__IdUsu__2E06CDA9", "MedioPago")]
         public EntityCollection<MedioPago> MedioPago
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MedioPago>("CuentasPorPagarModel.FK__MedioPago__IdUsu__1DD065E0", "MedioPago");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MedioPago>("CuentasPorPagarModel.FK__MedioPago__IdUsu__2E06CDA9", "MedioPago");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MedioPago>("CuentasPorPagarModel.FK__MedioPago__IdUsu__1DD065E0", "MedioPago", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MedioPago>("CuentasPorPagarModel.FK__MedioPago__IdUsu__2E06CDA9", "MedioPago", value);
                 }
             }
         }
@@ -12921,18 +10605,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdUsu__4B622666", "OrdenPagoCab")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__OrdenPago__IdUsu__4E3E9311", "OrdenPagoCab")]
         public EntityCollection<OrdenPagoCab> OrdenPagoCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPago__IdUsu__4B622666", "OrdenPagoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPago__IdUsu__4E3E9311", "OrdenPagoCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPago__IdUsu__4B622666", "OrdenPagoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenPagoCab>("CuentasPorPagarModel.FK__OrdenPago__IdUsu__4E3E9311", "OrdenPagoCab", value);
                 }
             }
         }
@@ -12943,84 +10627,18 @@ namespace datos.Cuentasxpagar
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoCab__IdUsuar__5C8CB268", "PagoCab")]
+        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__PagoCab__IdUsuar__5F691F13", "PagoCab")]
         public EntityCollection<PagoCab> PagoCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoCab>("CuentasPorPagarModel.FK__PagoCab__IdUsuar__5C8CB268", "PagoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PagoCab>("CuentasPorPagarModel.FK__PagoCab__IdUsuar__5F691F13", "PagoCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoCab>("CuentasPorPagarModel.FK__PagoCab__IdUsuar__5C8CB268", "PagoCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__Comision__idUsua__5649C92D", "Comision")]
-        public EntityCollection<Comision> Comision
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Comision>("CuentasPorPagarModel.FK__Comision__idUsua__5649C92D", "Comision");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Comision>("CuentasPorPagarModel.FK__Comision__idUsua__5649C92D", "Comision", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__ComisionD__idUsu__6774552F", "ComisionDet")]
-        public EntityCollection<ComisionDet> ComisionDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ComisionDet>("CuentasPorPagarModel.FK__ComisionD__idUsu__6774552F", "ComisionDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ComisionDet>("CuentasPorPagarModel.FK__ComisionD__idUsu__6774552F", "ComisionDet", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("CuentasPorPagarModel", "FK__IngresoEg__IdUsu__116A8EFB", "IngresoEgresoCab")]
-        public EntityCollection<IngresoEgresoCab> IngresoEgresoCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("CuentasPorPagarModel.FK__IngresoEg__IdUsu__116A8EFB", "IngresoEgresoCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("CuentasPorPagarModel.FK__IngresoEg__IdUsu__116A8EFB", "IngresoEgresoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PagoCab>("CuentasPorPagarModel.FK__PagoCab__IdUsuar__5F691F13", "PagoCab", value);
                 }
             }
         }

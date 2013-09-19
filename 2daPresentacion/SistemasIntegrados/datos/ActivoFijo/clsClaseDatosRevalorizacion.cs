@@ -51,7 +51,7 @@ namespace datos.ActivoFijo
                         //reval.usuario=Convert.ToInt32 (item.IdUsuario);
                         reval.Fecha=Convert.ToDateTime(  item.Fecha );
                         reval.nomActivo =Convert.ToString (x.descripcion);
-                        reval.valorActual = Convert.ToDouble(item.ValorAtual  );
+                        reval.ValoAdquisicion = Convert.ToDouble(item.ValorAtual  );
                         reval.valorRevalorizado  = Convert.ToDouble(item.ValorRevalorizado);
                         reval.valorResidual = Convert.ToDouble(item.ValorResidual);
 
@@ -77,10 +77,10 @@ namespace datos.ActivoFijo
                     //First obtiene un registro que coincida con el codigo y luego mas a bajo
                     //modifico dicho registro y guardo eso lo modifica en la base 
                         x.IdRevalorizacion = reval.Codigo;
-                       // x.IdUsuario  = reval.usuario;
+                        x.IdUsuario  = reval.usuario;
                         x.Fecha = reval.Fecha;
                         x.IdActivoFijo = reval._idActivoFijo;
-                        x.ValorAtual  = Convert.ToInt32(reval.valorActual);
+                        x.ValorAtual  = Convert.ToInt32(reval.ValoAdquisicion);
                         x.ValorRevalorizado = Convert.ToInt32(reval.valorRevalorizado);
                         x.ValorResidual = Convert.ToInt32(reval.valorResidual);
                     ent.SaveChanges();
@@ -106,10 +106,10 @@ namespace datos.ActivoFijo
                     revalorizacion revalor = new revalorizacion()
                     {
                         IdRevalorizacion = reval.Codigo,
-                        //IdUsuario  = reval.usuario,
+                        IdUsuario  = reval.usuario,
                         Fecha = reval.Fecha,
                         IdActivoFijo = reval._idActivoFijo ,
-                        ValorAtual  = Convert.ToInt32(reval.valorActual),
+                        ValorAtual  = Convert.ToInt32(reval.ValoAdquisicion),
                         ValorRevalorizado = Convert.ToInt32(reval.valorRevalorizado),
                         ValorResidual = Convert.ToInt32 (reval.valorResidual),
                     };

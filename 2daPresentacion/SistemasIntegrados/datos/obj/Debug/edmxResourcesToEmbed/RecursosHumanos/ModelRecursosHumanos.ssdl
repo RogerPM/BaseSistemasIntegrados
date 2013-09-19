@@ -1,344 +1,384 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="TECAModel1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-  <EntityContainer Name="TECAModel1StoreContainer">
-    <EntitySet Name="Academico" EntityType="TECAModel1.Store.Academico" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="AnticipoCab" EntityType="TECAModel1.Store.AnticipoCab" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="AnticipoDet" EntityType="TECAModel1.Store.AnticipoDet" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Beneficios" EntityType="TECAModel1.Store.Beneficios" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="CargaFamiliar" EntityType="TECAModel1.Store.CargaFamiliar" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Cargo" EntityType="TECAModel1.Store.Cargo" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="CargoxDepartamento" EntityType="TECAModel1.Store.CargoxDepartamento" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Contrato" EntityType="TECAModel1.Store.Contrato" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Curso" EntityType="TECAModel1.Store.Curso" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Departamento" EntityType="TECAModel1.Store.Departamento" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Empleado" EntityType="TECAModel1.Store.Empleado" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Jornada" EntityType="TECAModel1.Store.Jornada" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Liquidacion" EntityType="TECAModel1.Store.Liquidacion" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Maternidad" EntityType="TECAModel1.Store.Maternidad" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Multa" EntityType="TECAModel1.Store.Multa" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="MultaxPersona" EntityType="TECAModel1.Store.MultaxPersona" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="NominaCab" EntityType="TECAModel1.Store.NominaCab" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="NominaDet" EntityType="TECAModel1.Store.NominaDet" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Parentesco" EntityType="TECAModel1.Store.Parentesco" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Permiso" EntityType="TECAModel1.Store.Permiso" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Persona" EntityType="TECAModel1.Store.Persona" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="PersonaxCargo" EntityType="TECAModel1.Store.PersonaxCargo" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="PersonaxCurso" EntityType="TECAModel1.Store.PersonaxCurso" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="PersonaxDepartamento" EntityType="TECAModel1.Store.PersonaxDepartamento" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="PersonaxTitulo" EntityType="TECAModel1.Store.PersonaxTitulo" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Prestamo" EntityType="TECAModel1.Store.Prestamo" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Proveedor" EntityType="TECAModel1.Store.Proveedor" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Telefono" EntityType="TECAModel1.Store.Telefono" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="TipoContrato" EntityType="TECAModel1.Store.TipoContrato" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="TipoIdentificacion" EntityType="TECAModel1.Store.TipoIdentificacion" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="TipoJornada" EntityType="TECAModel1.Store.TipoJornada" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="TipoPermiso" EntityType="TECAModel1.Store.TipoPermiso" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="TipoPersona" EntityType="TECAModel1.Store.TipoPersona" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="TipoPrestamo" EntityType="TECAModel1.Store.TipoPrestamo" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="TipoTelefono" EntityType="TECAModel1.Store.TipoTelefono" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Titulo" EntityType="TECAModel1.Store.Titulo" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="TrabajoDiarioCab" EntityType="TECAModel1.Store.TrabajoDiarioCab" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="TrabajoDiarioDet" EntityType="TECAModel1.Store.TrabajoDiarioDet" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Universidad" EntityType="TECAModel1.Store.Universidad" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Vacacion" EntityType="TECAModel1.Store.Vacacion" store:Type="Tables" Schema="RecursosHumanos" />
-    <EntitySet Name="Empresa" EntityType="TECAModel1.Store.Empresa" store:Type="Tables" Schema="Seguridad" />
-    <AssociationSet Name="FK__Academico__IdEmp__1BC821DD" Association="TECAModel1.Store.FK__Academico__IdEmp__1BC821DD">
+<Schema Namespace="TECAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TECAModelStoreContainer">
+    <EntitySet Name="OrdenPagoCab" EntityType="TECAModel.Store.OrdenPagoCab" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="OrdenPagoEmpleadoDet" EntityType="TECAModel.Store.OrdenPagoEmpleadoDet" store:Type="Tables" Schema="CuentaxPagar" />
+    <EntitySet Name="Academico" EntityType="TECAModel.Store.Academico" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="AnticipoCab" EntityType="TECAModel.Store.AnticipoCab" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="AnticipoDet" EntityType="TECAModel.Store.AnticipoDet" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Beneficios" EntityType="TECAModel.Store.Beneficios" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="CargaFamiliar" EntityType="TECAModel.Store.CargaFamiliar" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Cargo" EntityType="TECAModel.Store.Cargo" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="CargoxDepartamento" EntityType="TECAModel.Store.CargoxDepartamento" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Contrato" EntityType="TECAModel.Store.Contrato" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Curso" EntityType="TECAModel.Store.Curso" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Departamento" EntityType="TECAModel.Store.Departamento" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Empleado" EntityType="TECAModel.Store.Empleado" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Jornada" EntityType="TECAModel.Store.Jornada" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Liquidacion" EntityType="TECAModel.Store.Liquidacion" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Maternidad" EntityType="TECAModel.Store.Maternidad" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Multa" EntityType="TECAModel.Store.Multa" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="MultaxPersona" EntityType="TECAModel.Store.MultaxPersona" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="NominaCab" EntityType="TECAModel.Store.NominaCab" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="NominaDet" EntityType="TECAModel.Store.NominaDet" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Parentesco" EntityType="TECAModel.Store.Parentesco" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Permiso" EntityType="TECAModel.Store.Permiso" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Persona" EntityType="TECAModel.Store.Persona" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="PersonaxCargo" EntityType="TECAModel.Store.PersonaxCargo" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="PersonaxCurso" EntityType="TECAModel.Store.PersonaxCurso" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="PersonaxDepartamento" EntityType="TECAModel.Store.PersonaxDepartamento" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="PersonaxTitulo" EntityType="TECAModel.Store.PersonaxTitulo" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Prestamo" EntityType="TECAModel.Store.Prestamo" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Proveedor" EntityType="TECAModel.Store.Proveedor" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Rubro" EntityType="TECAModel.Store.Rubro" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Telefono" EntityType="TECAModel.Store.Telefono" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoContrato" EntityType="TECAModel.Store.TipoContrato" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoIdentificacion" EntityType="TECAModel.Store.TipoIdentificacion" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoJornada" EntityType="TECAModel.Store.TipoJornada" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoPermiso" EntityType="TECAModel.Store.TipoPermiso" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoPersona" EntityType="TECAModel.Store.TipoPersona" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoPrestamo" EntityType="TECAModel.Store.TipoPrestamo" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TipoTelefono" EntityType="TECAModel.Store.TipoTelefono" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Titulo" EntityType="TECAModel.Store.Titulo" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="TrabajoDiario" EntityType="TECAModel.Store.TrabajoDiario" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Universidad" EntityType="TECAModel.Store.Universidad" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Vacacion" EntityType="TECAModel.Store.Vacacion" store:Type="Tables" Schema="RecursosHumanos" />
+    <EntitySet Name="Empresa" EntityType="TECAModel.Store.Empresa" store:Type="Tables" Schema="Seguridad" />
+    <AssociationSet Name="FK__Academico__IdEmp__208CD6FA" Association="TECAModel.Store.FK__Academico__IdEmp__208CD6FA">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Academico" EntitySet="Academico" />
     </AssociationSet>
-    <AssociationSet Name="FK__Academico__IdPer__19DFD96B" Association="TECAModel1.Store.FK__Academico__IdPer__19DFD96B">
+    <AssociationSet Name="FK__Academico__IdPer__1EA48E88" Association="TECAModel.Store.FK__Academico__IdPer__1EA48E88">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Academico" EntitySet="Academico" />
     </AssociationSet>
-    <AssociationSet Name="FK__Academico__IdTit__1AD3FDA4" Association="TECAModel1.Store.FK__Academico__IdTit__1AD3FDA4">
+    <AssociationSet Name="FK__Academico__IdTit__1F98B2C1" Association="TECAModel.Store.FK__Academico__IdTit__1F98B2C1">
       <End Role="Titulo" EntitySet="Titulo" />
       <End Role="Academico" EntitySet="Academico" />
     </AssociationSet>
-    <AssociationSet Name="FK__Academico__IdUni__1CBC4616" Association="TECAModel1.Store.FK__Academico__IdUni__1CBC4616">
+    <AssociationSet Name="FK__Academico__IdUni__2180FB33" Association="TECAModel.Store.FK__Academico__IdUni__2180FB33">
       <End Role="Universidad" EntitySet="Universidad" />
       <End Role="Academico" EntitySet="Academico" />
     </AssociationSet>
-    <AssociationSet Name="FK__AnticipoC__IdEmp__339FAB6E" Association="TECAModel1.Store.FK__AnticipoC__IdEmp__339FAB6E">
+    <AssociationSet Name="FK__AnticipoC__IdEmp__3864608B" Association="TECAModel.Store.FK__AnticipoC__IdEmp__3864608B">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="AnticipoCab" EntitySet="AnticipoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AnticipoD__IdEmp__3D2915A8" Association="TECAModel.Store.FK__AnticipoD__IdEmp__3D2915A8">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="AnticipoDet" EntitySet="AnticipoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__AnticipoD__IdPer__3F115E1A" Association="TECAModel.Store.FK__AnticipoD__IdPer__3F115E1A">
       <End Role="Persona" EntitySet="Persona" />
-      <End Role="AnticipoCab" EntitySet="AnticipoCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__AnticipoC__IdEmp__3493CFA7" Association="TECAModel1.Store.FK__AnticipoC__IdEmp__3493CFA7">
-      <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="AnticipoCab" EntitySet="AnticipoCab" />
-    </AssociationSet>
-    <AssociationSet Name="FK__AnticipoD__IdEmp__395884C4" Association="TECAModel1.Store.FK__AnticipoD__IdEmp__395884C4">
-      <End Role="Empresa" EntitySet="Empresa" />
       <End Role="AnticipoDet" EntitySet="AnticipoDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__AnticipoDet__3A4CA8FD" Association="TECAModel1.Store.FK__AnticipoDet__3A4CA8FD">
+    <AssociationSet Name="FK__AnticipoDet__3E1D39E1" Association="TECAModel.Store.FK__AnticipoDet__3E1D39E1">
       <End Role="AnticipoCab" EntitySet="AnticipoCab" />
       <End Role="AnticipoDet" EntitySet="AnticipoDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__Beneficio__IdEmp__3F115E1A" Association="TECAModel1.Store.FK__Beneficio__IdEmp__3F115E1A">
+    <AssociationSet Name="FK__Beneficio__IdEmp__43D61337" Association="TECAModel.Store.FK__Beneficio__IdEmp__43D61337">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Beneficios" EntitySet="Beneficios" />
     </AssociationSet>
-    <AssociationSet Name="FK__CargaFami__IdEmp__2CF2ADDF" Association="TECAModel1.Store.FK__CargaFami__IdEmp__2CF2ADDF">
+    <AssociationSet Name="FK__CargaFami__IdEmp__31B762FC" Association="TECAModel.Store.FK__CargaFami__IdEmp__31B762FC">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="CargaFamiliar" EntitySet="CargaFamiliar" />
     </AssociationSet>
-    <AssociationSet Name="FK__CargaFami__IdPar__2EDAF651" Association="TECAModel1.Store.FK__CargaFami__IdPar__2EDAF651">
+    <AssociationSet Name="FK__CargaFami__IdPar__339FAB6E" Association="TECAModel.Store.FK__CargaFami__IdPar__339FAB6E">
       <End Role="Parentesco" EntitySet="Parentesco" />
       <End Role="CargaFamiliar" EntitySet="CargaFamiliar" />
     </AssociationSet>
-    <AssociationSet Name="FK__CargaFami__IdPer__2DE6D218" Association="TECAModel1.Store.FK__CargaFami__IdPer__2DE6D218">
+    <AssociationSet Name="FK__CargaFami__IdPer__32AB8735" Association="TECAModel.Store.FK__CargaFami__IdPer__32AB8735">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="CargaFamiliar" EntitySet="CargaFamiliar" />
     </AssociationSet>
-    <AssociationSet Name="FK__CargoxDep__IdCar__07C12930" Association="TECAModel1.Store.FK__CargoxDep__IdCar__07C12930">
+    <AssociationSet Name="FK__CargoxDep__IdCar__0C85DE4D" Association="TECAModel.Store.FK__CargoxDep__IdCar__0C85DE4D">
       <End Role="Cargo" EntitySet="Cargo" />
       <End Role="CargoxDepartamento" EntitySet="CargoxDepartamento" />
     </AssociationSet>
-    <AssociationSet Name="FK__CargoxDep__IdDep__08B54D69" Association="TECAModel1.Store.FK__CargoxDep__IdDep__08B54D69">
+    <AssociationSet Name="FK__CargoxDep__IdDep__0D7A0286" Association="TECAModel.Store.FK__CargoxDep__IdDep__0D7A0286">
       <End Role="Departamento" EntitySet="Departamento" />
       <End Role="CargoxDepartamento" EntitySet="CargoxDepartamento" />
     </AssociationSet>
-    <AssociationSet Name="FK__Contrato__IdCarg__55009F39" Association="TECAModel1.Store.FK__Contrato__IdCarg__55009F39">
+    <AssociationSet Name="FK__Contrato__IdCarg__59C55456" Association="TECAModel.Store.FK__Contrato__IdCarg__59C55456">
       <End Role="Cargo" EntitySet="Cargo" />
       <End Role="Contrato" EntitySet="Contrato" />
     </AssociationSet>
-    <AssociationSet Name="FK__Contrato__IdEmpr__5224328E" Association="TECAModel1.Store.FK__Contrato__IdEmpr__5224328E">
+    <AssociationSet Name="FK__Contrato__IdEmpr__56E8E7AB" Association="TECAModel.Store.FK__Contrato__IdEmpr__56E8E7AB">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Contrato" EntitySet="Contrato" />
     </AssociationSet>
-    <AssociationSet Name="FK__Contrato__IdJorn__55F4C372" Association="TECAModel1.Store.FK__Contrato__IdJorn__55F4C372">
+    <AssociationSet Name="FK__Contrato__IdJorn__5AB9788F" Association="TECAModel.Store.FK__Contrato__IdJorn__5AB9788F">
       <End Role="Jornada" EntitySet="Jornada" />
       <End Role="Contrato" EntitySet="Contrato" />
     </AssociationSet>
-    <AssociationSet Name="FK__Contrato__IdPers__531856C7" Association="TECAModel1.Store.FK__Contrato__IdPers__531856C7">
+    <AssociationSet Name="FK__Contrato__IdPers__57DD0BE4" Association="TECAModel.Store.FK__Contrato__IdPers__57DD0BE4">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Contrato" EntitySet="Contrato" />
     </AssociationSet>
-    <AssociationSet Name="FK__Contrato__IdTipo__540C7B00" Association="TECAModel1.Store.FK__Contrato__IdTipo__540C7B00">
+    <AssociationSet Name="FK__Contrato__IdTipo__58D1301D" Association="TECAModel.Store.FK__Contrato__IdTipo__58D1301D">
       <End Role="TipoContrato" EntitySet="TipoContrato" />
       <End Role="Contrato" EntitySet="Contrato" />
     </AssociationSet>
-    <AssociationSet Name="FK__Curso__IdEmpresa__45F365D3" Association="TECAModel1.Store.FK__Curso__IdEmpresa__45F365D3">
+    <AssociationSet Name="FK__Curso__IdEmpresa__4AB81AF0" Association="TECAModel.Store.FK__Curso__IdEmpresa__4AB81AF0">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Curso" EntitySet="Curso" />
     </AssociationSet>
-    <AssociationSet Name="FK__Empleado__IdEmpr__239E4DCF" Association="TECAModel1.Store.FK__Empleado__IdEmpr__239E4DCF">
+    <AssociationSet Name="FK__Empleado__IdEmpr__239E4DCF" Association="TECAModel.Store.FK__Empleado__IdEmpr__239E4DCF">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Empleado" EntitySet="Empleado" />
     </AssociationSet>
-    <AssociationSet Name="FK__Empleado__IdPers__24927208" Association="TECAModel1.Store.FK__Empleado__IdPers__24927208">
+    <AssociationSet Name="FK__Empleado__IdPers__24927208" Association="TECAModel.Store.FK__Empleado__IdPers__24927208">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Empleado" EntitySet="Empleado" />
     </AssociationSet>
-    <AssociationSet Name="FK__Jornada__IdEmpre__6C190EBB" Association="TECAModel1.Store.FK__Jornada__IdEmpre__6C190EBB">
+    <AssociationSet Name="FK__Jornada__IdEmpre__70DDC3D8" Association="TECAModel.Store.FK__Jornada__IdEmpre__70DDC3D8">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Jornada" EntitySet="Jornada" />
     </AssociationSet>
-    <AssociationSet Name="FK__Jornada__IdPerso__6D0D32F4" Association="TECAModel1.Store.FK__Jornada__IdPerso__6D0D32F4">
+    <AssociationSet Name="FK__Jornada__IdPerso__71D1E811" Association="TECAModel.Store.FK__Jornada__IdPerso__71D1E811">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Jornada" EntitySet="Jornada" />
     </AssociationSet>
-    <AssociationSet Name="FK__Jornada__IdTipoJ__6B24EA82" Association="TECAModel1.Store.FK__Jornada__IdTipoJ__6B24EA82">
+    <AssociationSet Name="FK__Jornada__IdTipoJ__6FE99F9F" Association="TECAModel.Store.FK__Jornada__IdTipoJ__6FE99F9F">
       <End Role="TipoJornada" EntitySet="TipoJornada" />
       <End Role="Jornada" EntitySet="Jornada" />
     </AssociationSet>
-    <AssociationSet Name="FK__Liquidaci__IdEmp__690797E6" Association="TECAModel1.Store.FK__Liquidaci__IdEmp__690797E6">
+    <AssociationSet Name="FK__Liquidaci__IdEmp__6DCC4D03" Association="TECAModel.Store.FK__Liquidaci__IdEmp__6DCC4D03">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Liquidacion" EntitySet="Liquidacion" />
     </AssociationSet>
-    <AssociationSet Name="FK__Liquidaci__IdPer__681373AD" Association="TECAModel1.Store.FK__Liquidaci__IdPer__681373AD">
+    <AssociationSet Name="FK__Liquidaci__IdPer__6CD828CA" Association="TECAModel.Store.FK__Liquidaci__IdPer__6CD828CA">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Liquidacion" EntitySet="Liquidacion" />
     </AssociationSet>
-    <AssociationSet Name="FK__Liquidacion__671F4F74" Association="TECAModel1.Store.FK__Liquidacion__671F4F74">
+    <AssociationSet Name="FK__Liquidacion__6BE40491" Association="TECAModel.Store.FK__Liquidacion__6BE40491">
       <End Role="Contrato" EntitySet="Contrato" />
       <End Role="Liquidacion" EntitySet="Liquidacion" />
     </AssociationSet>
-    <AssociationSet Name="FK__Maternidad__2A4B4B5E" Association="TECAModel1.Store.FK__Maternidad__2A4B4B5E">
+    <AssociationSet Name="FK__Maternidad__2A4B4B5E" Association="TECAModel.Store.FK__Maternidad__2A4B4B5E">
       <End Role="Empleado" EntitySet="Empleado" />
       <End Role="Maternidad" EntitySet="Maternidad" />
     </AssociationSet>
-    <AssociationSet Name="FK__Multa__IdEmpresa__71D1E811" Association="TECAModel1.Store.FK__Multa__IdEmpresa__71D1E811">
+    <AssociationSet Name="FK__Multa__IdEmpresa__76969D2E" Association="TECAModel.Store.FK__Multa__IdEmpresa__76969D2E">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Multa" EntitySet="Multa" />
     </AssociationSet>
-    <AssociationSet Name="FK__MultaxPer__IdEmp__778AC167" Association="TECAModel1.Store.FK__MultaxPer__IdEmp__778AC167">
+    <AssociationSet Name="FK__MultaxPer__IdEmp__7C4F7684" Association="TECAModel.Store.FK__MultaxPer__IdEmp__7C4F7684">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="MultaxPersona" EntitySet="MultaxPersona" />
     </AssociationSet>
-    <AssociationSet Name="FK__MultaxPer__IdMul__76969D2E" Association="TECAModel1.Store.FK__MultaxPer__IdMul__76969D2E">
+    <AssociationSet Name="FK__MultaxPer__IdMul__7B5B524B" Association="TECAModel.Store.FK__MultaxPer__IdMul__7B5B524B">
       <End Role="Multa" EntitySet="Multa" />
       <End Role="MultaxPersona" EntitySet="MultaxPersona" />
     </AssociationSet>
-    <AssociationSet Name="FK__MultaxPer__IdPer__787EE5A0" Association="TECAModel1.Store.FK__MultaxPer__IdPer__787EE5A0">
+    <AssociationSet Name="FK__MultaxPer__IdPer__7D439ABD" Association="TECAModel.Store.FK__MultaxPer__IdPer__7D439ABD">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="MultaxPersona" EntitySet="MultaxPersona" />
     </AssociationSet>
-    <AssociationSet Name="FK__NominaCab__IdEmp__43D61337" Association="TECAModel1.Store.FK__NominaCab__IdEmp__43D61337">
+    <AssociationSet Name="FK__NominaCab__IdEmp__489AC854" Association="TECAModel.Store.FK__NominaCab__IdEmp__489AC854">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="NominaCab" EntitySet="NominaCab" />
     </AssociationSet>
-    <AssociationSet Name="FK__NominaDet__489AC854" Association="TECAModel1.Store.FK__NominaDet__489AC854">
+    <AssociationSet Name="FK__NominaDet__4D5F7D71" Association="TECAModel.Store.FK__NominaDet__4D5F7D71">
       <End Role="NominaCab" EntitySet="NominaCab" />
       <End Role="NominaDet" EntitySet="NominaDet" />
     </AssociationSet>
-    <AssociationSet Name="FK__Parentesc__IdEmp__282DF8C2" Association="TECAModel1.Store.FK__Parentesc__IdEmp__282DF8C2">
+    <AssociationSet Name="FK__OrdenPago__IdEmp__4F32B74A" Association="TECAModel.Store.FK__OrdenPago__IdEmp__4F32B74A">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="OrdenPagoCab" EntitySet="OrdenPagoCab" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenPago__IdEmp__54EB90A0" Association="TECAModel.Store.FK__OrdenPago__IdEmp__54EB90A0">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="OrdenPagoEmpleadoDet" EntitySet="OrdenPagoEmpleadoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrdenPagoEmplead__53F76C67" Association="TECAModel.Store.FK__OrdenPagoEmplead__53F76C67">
+      <End Role="OrdenPagoCab" EntitySet="OrdenPagoCab" />
+      <End Role="OrdenPagoEmpleadoDet" EntitySet="OrdenPagoEmpleadoDet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Parentesc__IdEmp__2CF2ADDF" Association="TECAModel.Store.FK__Parentesc__IdEmp__2CF2ADDF">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Parentesco" EntitySet="Parentesco" />
     </AssociationSet>
-    <AssociationSet Name="FK__Permiso__IdEmple__607251E5" Association="TECAModel1.Store.FK__Permiso__IdEmple__607251E5">
+    <AssociationSet Name="FK__Permiso__IdEmple__65370702" Association="TECAModel.Store.FK__Permiso__IdEmple__65370702">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Permiso" EntitySet="Permiso" />
     </AssociationSet>
-    <AssociationSet Name="FK__Permiso__IdEmpre__625A9A57" Association="TECAModel1.Store.FK__Permiso__IdEmpre__625A9A57">
+    <AssociationSet Name="FK__Permiso__IdEmpre__671F4F74" Association="TECAModel.Store.FK__Permiso__IdEmpre__671F4F74">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Permiso" EntitySet="Permiso" />
     </AssociationSet>
-    <AssociationSet Name="FK__Permiso__IdTipoP__6166761E" Association="TECAModel1.Store.FK__Permiso__IdTipoP__6166761E">
+    <AssociationSet Name="FK__Permiso__IdTipoP__662B2B3B" Association="TECAModel.Store.FK__Permiso__IdTipoP__662B2B3B">
       <End Role="TipoPermiso" EntitySet="TipoPermiso" />
       <End Role="Permiso" EntitySet="Permiso" />
     </AssociationSet>
-    <AssociationSet Name="FK__Persona__IdEmpre__1BFD2C07" Association="TECAModel1.Store.FK__Persona__IdEmpre__1BFD2C07">
+    <AssociationSet Name="FK__Persona__IdEmpre__1BFD2C07" Association="TECAModel.Store.FK__Persona__IdEmpre__1BFD2C07">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Persona" EntitySet="Persona" />
     </AssociationSet>
-    <AssociationSet Name="FK__Persona__IdTipoP__1CF15040" Association="TECAModel1.Store.FK__Persona__IdTipoP__1CF15040">
+    <AssociationSet Name="FK__Persona__IdTipoP__1CF15040" Association="TECAModel.Store.FK__Persona__IdTipoP__1CF15040">
       <End Role="TipoPersona" EntitySet="TipoPersona" />
       <End Role="Persona" EntitySet="Persona" />
     </AssociationSet>
-    <AssociationSet Name="FK__Persona__TipoIde__1DE57479" Association="TECAModel1.Store.FK__Persona__TipoIde__1DE57479">
+    <AssociationSet Name="FK__Persona__TipoIde__1DE57479" Association="TECAModel.Store.FK__Persona__TipoIde__1DE57479">
       <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
       <End Role="Persona" EntitySet="Persona" />
     </AssociationSet>
-    <AssociationSet Name="FK__PersonaxC__IdCar__236943A5" Association="TECAModel1.Store.FK__PersonaxC__IdCar__236943A5">
+    <AssociationSet Name="FK__PersonaxC__IdCar__282DF8C2" Association="TECAModel.Store.FK__PersonaxC__IdCar__282DF8C2">
       <End Role="Cargo" EntitySet="Cargo" />
       <End Role="PersonaxCargo" EntitySet="PersonaxCargo" />
     </AssociationSet>
-    <AssociationSet Name="FK__PersonaxC__IdCur__5165187F" Association="TECAModel1.Store.FK__PersonaxC__IdCur__5165187F">
+    <AssociationSet Name="FK__PersonaxC__IdCur__5629CD9C" Association="TECAModel.Store.FK__PersonaxC__IdCur__5629CD9C">
       <End Role="Curso" EntitySet="Curso" />
       <End Role="PersonaxCurso" EntitySet="PersonaxCurso" />
     </AssociationSet>
-    <AssociationSet Name="FK__PersonaxC__IdEmp__22751F6C" Association="TECAModel1.Store.FK__PersonaxC__IdEmp__22751F6C">
+    <AssociationSet Name="FK__PersonaxC__IdEmp__2739D489" Association="TECAModel.Store.FK__PersonaxC__IdEmp__2739D489">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="PersonaxCargo" EntitySet="PersonaxCargo" />
     </AssociationSet>
-    <AssociationSet Name="FK__PersonaxC__IdEmp__4F7CD00D" Association="TECAModel1.Store.FK__PersonaxC__IdEmp__4F7CD00D">
+    <AssociationSet Name="FK__PersonaxC__IdEmp__5441852A" Association="TECAModel.Store.FK__PersonaxC__IdEmp__5441852A">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="PersonaxCurso" EntitySet="PersonaxCurso" />
     </AssociationSet>
-    <AssociationSet Name="FK__PersonaxC__IdPer__2180FB33" Association="TECAModel1.Store.FK__PersonaxC__IdPer__2180FB33">
+    <AssociationSet Name="FK__PersonaxC__IdPer__2645B050" Association="TECAModel.Store.FK__PersonaxC__IdPer__2645B050">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="PersonaxCargo" EntitySet="PersonaxCargo" />
     </AssociationSet>
-    <AssociationSet Name="FK__PersonaxC__IdPer__5070F446" Association="TECAModel1.Store.FK__PersonaxC__IdPer__5070F446">
+    <AssociationSet Name="FK__PersonaxC__IdPer__5535A963" Association="TECAModel.Store.FK__PersonaxC__IdPer__5535A963">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="PersonaxCurso" EntitySet="PersonaxCurso" />
     </AssociationSet>
-    <AssociationSet Name="FK__PersonaxD__IdDep__7D439ABD" Association="TECAModel1.Store.FK__PersonaxD__IdDep__7D439ABD">
+    <AssociationSet Name="FK__PersonaxD__IdDep__02084FDA" Association="TECAModel.Store.FK__PersonaxD__IdDep__02084FDA">
       <End Role="Departamento" EntitySet="Departamento" />
       <End Role="PersonaxDepartamento" EntitySet="PersonaxDepartamento" />
     </AssociationSet>
-    <AssociationSet Name="FK__PersonaxD__IdEmp__7E37BEF6" Association="TECAModel1.Store.FK__PersonaxD__IdEmp__7E37BEF6">
+    <AssociationSet Name="FK__PersonaxD__IdEmp__02FC7413" Association="TECAModel.Store.FK__PersonaxD__IdEmp__02FC7413">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="PersonaxDepartamento" EntitySet="PersonaxDepartamento" />
     </AssociationSet>
-    <AssociationSet Name="FK__PersonaxD__IdPer__7F2BE32F" Association="TECAModel1.Store.FK__PersonaxD__IdPer__7F2BE32F">
+    <AssociationSet Name="FK__PersonaxD__IdPer__03F0984C" Association="TECAModel.Store.FK__PersonaxD__IdPer__03F0984C">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="PersonaxDepartamento" EntitySet="PersonaxDepartamento" />
     </AssociationSet>
-    <AssociationSet Name="FK__PersonaxT__IdEmp__14270015" Association="TECAModel1.Store.FK__PersonaxT__IdEmp__14270015">
+    <AssociationSet Name="FK__PersonaxT__IdEmp__18EBB532" Association="TECAModel.Store.FK__PersonaxT__IdEmp__18EBB532">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="PersonaxTitulo" EntitySet="PersonaxTitulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__PersonaxT__IdPer__151B244E" Association="TECAModel1.Store.FK__PersonaxT__IdPer__151B244E">
+    <AssociationSet Name="FK__PersonaxT__IdPer__19DFD96B" Association="TECAModel.Store.FK__PersonaxT__IdPer__19DFD96B">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="PersonaxTitulo" EntitySet="PersonaxTitulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__PersonaxT__IdTit__1332DBDC" Association="TECAModel1.Store.FK__PersonaxT__IdTit__1332DBDC">
+    <AssociationSet Name="FK__PersonaxT__IdTit__17F790F9" Association="TECAModel.Store.FK__PersonaxT__IdTit__17F790F9">
       <End Role="Titulo" EntitySet="Titulo" />
       <End Role="PersonaxTitulo" EntitySet="PersonaxTitulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Prestamo__IdEmpr__793DFFAF" Association="TECAModel1.Store.FK__Prestamo__IdEmpr__793DFFAF">
+    <AssociationSet Name="FK__Prestamo__IdEmpr__7E02B4CC" Association="TECAModel.Store.FK__Prestamo__IdEmpr__7E02B4CC">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Prestamo" EntitySet="Prestamo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Prestamo__IdPers__7849DB76" Association="TECAModel1.Store.FK__Prestamo__IdPers__7849DB76">
+    <AssociationSet Name="FK__Prestamo__IdPers__7D0E9093" Association="TECAModel.Store.FK__Prestamo__IdPers__7D0E9093">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Prestamo" EntitySet="Prestamo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Prestamo__IdTipo__7A3223E8" Association="TECAModel1.Store.FK__Prestamo__IdTipo__7A3223E8">
-      <End Role="TipoPrestamo" EntitySet="TipoPrestamo" />
-      <End Role="Prestamo" EntitySet="Prestamo" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Proveedor__IdPer__412EB0B6" Association="TECAModel1.Store.FK__Proveedor__IdPer__412EB0B6">
+    <AssociationSet Name="FK__Proveedor__IdPer__45F365D3" Association="TECAModel.Store.FK__Proveedor__IdPer__45F365D3">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Proveedor" EntitySet="Proveedor" />
     </AssociationSet>
-    <AssociationSet Name="FK__Telefono__IdTipo__5BE2A6F2" Association="TECAModel1.Store.FK__Telefono__IdTipo__5BE2A6F2">
+    <AssociationSet Name="FK__Rubro__123EB7A3" Association="TECAModel.Store.FK__Rubro__123EB7A3">
+      <End Role="CargoxDepartamento" EntitySet="CargoxDepartamento" />
+      <End Role="Rubro" EntitySet="Rubro" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Rubro__IdEmpresa__1332DBDC" Association="TECAModel.Store.FK__Rubro__IdEmpresa__1332DBDC">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Rubro" EntitySet="Rubro" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Telefono__IdTipo__60A75C0F" Association="TECAModel.Store.FK__Telefono__IdTipo__60A75C0F">
       <End Role="TipoTelefono" EntitySet="TipoTelefono" />
       <End Role="Telefono" EntitySet="Telefono" />
     </AssociationSet>
-    <AssociationSet Name="FK__TipoContr__IdEmp__4D5F7D71" Association="TECAModel1.Store.FK__TipoContr__IdEmp__4D5F7D71">
+    <AssociationSet Name="FK__TipoContr__IdEmp__5224328E" Association="TECAModel.Store.FK__TipoContr__IdEmp__5224328E">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TipoContrato" EntitySet="TipoContrato" />
     </AssociationSet>
-    <AssociationSet Name="FK__TipoIdent__IdEmp__173876EA" Association="TECAModel1.Store.FK__TipoIdent__IdEmp__173876EA">
+    <AssociationSet Name="FK__TipoIdent__IdEmp__173876EA" Association="TECAModel.Store.FK__TipoIdent__IdEmp__173876EA">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TipoIdentificacion" EntitySet="TipoIdentificacion" />
     </AssociationSet>
-    <AssociationSet Name="FK__TipoJorna__IdEmp__66603565" Association="TECAModel1.Store.FK__TipoJorna__IdEmp__66603565">
+    <AssociationSet Name="FK__TipoJorna__IdEmp__6B24EA82" Association="TECAModel.Store.FK__TipoJorna__IdEmp__6B24EA82">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TipoJornada" EntitySet="TipoJornada" />
     </AssociationSet>
-    <AssociationSet Name="FK__TipoPermi__IdEmp__5AB9788F" Association="TECAModel1.Store.FK__TipoPermi__IdEmp__5AB9788F">
+    <AssociationSet Name="FK__TipoPermi__IdEmp__5F7E2DAC" Association="TECAModel.Store.FK__TipoPermi__IdEmp__5F7E2DAC">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TipoPermiso" EntitySet="TipoPermiso" />
     </AssociationSet>
-    <AssociationSet Name="FK__TipoPerso__IdEmp__117F9D94" Association="TECAModel1.Store.FK__TipoPerso__IdEmp__117F9D94">
+    <AssociationSet Name="FK__TipoPerso__IdEmp__117F9D94" Association="TECAModel.Store.FK__TipoPerso__IdEmp__117F9D94">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TipoPersona" EntitySet="TipoPersona" />
     </AssociationSet>
-    <AssociationSet Name="FK__TipoPrest__IdEmp__73852659" Association="TECAModel1.Store.FK__TipoPrest__IdEmp__73852659">
+    <AssociationSet Name="FK__TipoPrest__IdEmp__7849DB76" Association="TECAModel.Store.FK__TipoPrest__IdEmp__7849DB76">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TipoPrestamo" EntitySet="TipoPrestamo" />
     </AssociationSet>
-    <AssociationSet Name="FK__TipoTelef__IdEmp__571DF1D5" Association="TECAModel1.Store.FK__TipoTelef__IdEmp__571DF1D5">
+    <AssociationSet Name="FK__TipoTelef__IdEmp__5BE2A6F2" Association="TECAModel.Store.FK__TipoTelef__IdEmp__5BE2A6F2">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="TipoTelefono" EntitySet="TipoTelefono" />
     </AssociationSet>
-    <AssociationSet Name="FK__Titulo__IdEmpres__60A75C0F" Association="TECAModel1.Store.FK__Titulo__IdEmpres__60A75C0F">
+    <AssociationSet Name="FK__Titulo__IdEmpres__656C112C" Association="TECAModel.Store.FK__Titulo__IdEmpres__656C112C">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Titulo" EntitySet="Titulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__Titulo__IdUniver__619B8048" Association="TECAModel1.Store.FK__Titulo__IdUniver__619B8048">
+    <AssociationSet Name="FK__Titulo__IdUniver__66603565" Association="TECAModel.Store.FK__Titulo__IdUniver__66603565">
       <End Role="Universidad" EntitySet="Universidad" />
       <End Role="Titulo" EntitySet="Titulo" />
     </AssociationSet>
-    <AssociationSet Name="FK__TrabajoDi__IdEmp__03BB8E22" Association="TECAModel1.Store.FK__TrabajoDi__IdEmp__03BB8E22">
-      <End Role="Persona" EntitySet="Persona" />
-      <End Role="TrabajoDiarioDet" EntitySet="TrabajoDiarioDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TrabajoDi__IdEmp__7EF6D905" Association="TECAModel1.Store.FK__TrabajoDi__IdEmp__7EF6D905">
+    <AssociationSet Name="FK__TrabajoDi__IdEmp__02C769E9" Association="TECAModel.Store.FK__TrabajoDi__IdEmp__02C769E9">
       <End Role="Empresa" EntitySet="Empresa" />
-      <End Role="TrabajoDiarioCab" EntitySet="TrabajoDiarioCab" />
+      <End Role="TrabajoDiario" EntitySet="TrabajoDiario" />
     </AssociationSet>
-    <AssociationSet Name="FK__TrabajoDiarioDet__04AFB25B" Association="TECAModel1.Store.FK__TrabajoDiarioDet__04AFB25B">
-      <End Role="TrabajoDiarioCab" EntitySet="TrabajoDiarioCab" />
-      <End Role="TrabajoDiarioDet" EntitySet="TrabajoDiarioDet" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Universid__IdEmp__4AB81AF0" Association="TECAModel1.Store.FK__Universid__IdEmp__4AB81AF0">
+    <AssociationSet Name="FK__Universid__IdEmp__4F7CD00D" Association="TECAModel.Store.FK__Universid__IdEmp__4F7CD00D">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Universidad" EntitySet="Universidad" />
     </AssociationSet>
-    <AssociationSet Name="FK__Vacacion__IdEmpl__6DCC4D03" Association="TECAModel1.Store.FK__Vacacion__IdEmpl__6DCC4D03">
+    <AssociationSet Name="FK__Vacacion__IdEmpl__72910220" Association="TECAModel.Store.FK__Vacacion__IdEmpl__72910220">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Vacacion" EntitySet="Vacacion" />
     </AssociationSet>
-    <AssociationSet Name="FK__Vacacion__IdEmpr__6EC0713C" Association="TECAModel1.Store.FK__Vacacion__IdEmpr__6EC0713C">
+    <AssociationSet Name="FK__Vacacion__IdEmpr__73852659" Association="TECAModel.Store.FK__Vacacion__IdEmpr__73852659">
       <End Role="Empresa" EntitySet="Empresa" />
       <End Role="Vacacion" EntitySet="Vacacion" />
     </AssociationSet>
   </EntityContainer>
+  <EntityType Name="OrdenPagoCab">
+    <Key>
+      <PropertyRef Name="NumOrdenPago" />
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="NumOrdenPago" Type="int" Nullable="false" />
+    <Property Name="fechadeEmision" Type="date" Nullable="false" />
+    <Property Name="IdPersona" Type="int" />
+    <Property Name="Estado" Type="int" Nullable="false" />
+    <Property Name="TotalPagar" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="TipoOrdenPago" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrdenPagoEmpleadoDet">
+    <Key>
+      <PropertyRef Name="NumOrdenPago" />
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="Linea" />
+    </Key>
+    <Property Name="NumOrdenPago" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="AutorizarPago" Type="bit" Nullable="false" />
+    <Property Name="Linea" Type="int" Nullable="false" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="SueldoTotal" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="IngresoAdicional" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DescuentoTotal" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="PagoNeto" Type="numeric" Nullable="false" Precision="10" Scale="2" />
+  </EntityType>
   <EntityType Name="Academico">
     <Key>
       <PropertyRef Name="IdAcademico" />
@@ -356,13 +396,13 @@
       <PropertyRef Name="IdEmpresa" />
     </Key>
     <Property Name="NumAnticipo" Type="int" Nullable="false" />
-    <Property Name="IdEmpleado" Type="int" Nullable="false" />
     <Property Name="Fecha" Type="date" Nullable="false" />
     <Property Name="FechaModificacion" Type="datetime" />
     <Property Name="Total" Type="numeric" Nullable="false" Precision="10" Scale="2" />
     <Property Name="Observacion" Type="varchar" MaxLength="50" />
     <Property Name="IdEmpresa" Type="int" Nullable="false" />
     <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="Porcentaje" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="AnticipoDet">
     <Key>
@@ -371,8 +411,8 @@
     </Key>
     <Property Name="NumLinea" Type="int" Nullable="false" />
     <Property Name="NumAnticipo" Type="int" Nullable="false" />
-    <Property Name="FechaCobro" Type="date" Nullable="false" />
-    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="ValorLiquido" Type="money" Nullable="false" />
     <Property Name="IdEmpresa" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Beneficios">
@@ -653,11 +693,14 @@
       <PropertyRef Name="IdPrestamo" />
     </Key>
     <Property Name="IdPrestamo" Type="int" Nullable="false" />
-    <Property Name="IdTipoPrestamo" Type="int" Nullable="false" />
     <Property Name="IdPersona" Type="int" Nullable="false" />
     <Property Name="FechaModificacion" Type="datetime" />
     <Property Name="Monto" Type="money" Nullable="false" />
     <Property Name="Pago" Type="money" Nullable="false" />
+    <Property Name="Interes" Type="decimal" Nullable="false" />
+    <Property Name="Total" Type="money" Nullable="false" />
+    <Property Name="TotalPagado" Type="money" Nullable="false" />
+    <Property Name="Periodos" Type="int" Nullable="false" />
     <Property Name="IdEstado" Type="int" Nullable="false" />
     <Property Name="IdEmpresa" Type="int" Nullable="false" />
   </EntityType>
@@ -667,6 +710,18 @@
     </Key>
     <Property Name="IdProveedor" Type="int" Nullable="false" />
     <Property Name="IdPersona" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Rubro">
+    <Key>
+      <PropertyRef Name="IdRubro" />
+    </Key>
+    <Property Name="IdRubro" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="Porcentaje" Type="float" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdCargo" Type="int" Nullable="false" />
+    <Property Name="IdDepartamento" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Telefono">
     <Key>
@@ -751,32 +806,25 @@
     <Property Name="IdUniversidad" Type="int" Nullable="false" />
     <Property Name="IdEmpresa" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="TrabajoDiarioCab">
+  <EntityType Name="TrabajoDiario">
     <Key>
       <PropertyRef Name="NumTrabajo" />
       <PropertyRef Name="IdEmpresa" />
     </Key>
     <Property Name="NumTrabajo" Type="int" Nullable="false" />
-    <Property Name="Fecha" Type="datetime" Nullable="false" />
-    <Property Name="IdEstado" Type="int" Nullable="false" />
-    <Property Name="IdEmpresa" Type="int" Nullable="false" />
-    <Property Name="Observacion" Type="varchar" MaxLength="50" />
-  </EntityType>
-  <EntityType Name="TrabajoDiarioDet">
-    <Key>
-      <PropertyRef Name="NumLinea" />
-      <PropertyRef Name="IdEmpresa" />
-    </Key>
-    <Property Name="NumLinea" Type="int" Nullable="false" />
-    <Property Name="NumTrabajo" Type="int" Nullable="false" />
-    <Property Name="IdPersona" Type="int" Nullable="false" />
+    <Property Name="IdPersna" Type="int" Nullable="false" />
+    <Property Name="FechaDesde" Type="datetime" Nullable="false" />
+    <Property Name="FechaHasta" Type="datetime" Nullable="false" />
+    <Property Name="NDias" Type="int" Nullable="false" />
     <Property Name="HoraEntrada" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="HoraSalida" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="HoraTrabajada" Type="int" Nullable="false" />
     <Property Name="HoraExtraM" Type="int" />
     <Property Name="HoraExtraT" Type="int" />
     <Property Name="HoraRango" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
     <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Observacion" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Universidad">
     <Key>
@@ -815,9 +863,9 @@
     <Property Name="Descripcion" Type="varchar" MaxLength="250" />
     <Property Name="IdEstado" Type="int" />
   </EntityType>
-  <Association Name="FK__Academico__IdEmp__1BC821DD">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Academico" Type="TECAModel1.Store.Academico" Multiplicity="*" />
+  <Association Name="FK__Academico__IdEmp__208CD6FA">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Academico" Type="TECAModel.Store.Academico" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -827,9 +875,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Academico__IdPer__19DFD96B">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="Academico" Type="TECAModel1.Store.Academico" Multiplicity="*" />
+  <Association Name="FK__Academico__IdPer__1EA48E88">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="Academico" Type="TECAModel.Store.Academico" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -839,9 +887,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Academico__IdTit__1AD3FDA4">
-    <End Role="Titulo" Type="TECAModel1.Store.Titulo" Multiplicity="1" />
-    <End Role="Academico" Type="TECAModel1.Store.Academico" Multiplicity="*" />
+  <Association Name="FK__Academico__IdTit__1F98B2C1">
+    <End Role="Titulo" Type="TECAModel.Store.Titulo" Multiplicity="1" />
+    <End Role="Academico" Type="TECAModel.Store.Academico" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Titulo">
         <PropertyRef Name="IdTitulo" />
@@ -851,9 +899,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Academico__IdUni__1CBC4616">
-    <End Role="Universidad" Type="TECAModel1.Store.Universidad" Multiplicity="1" />
-    <End Role="Academico" Type="TECAModel1.Store.Academico" Multiplicity="*" />
+  <Association Name="FK__Academico__IdUni__2180FB33">
+    <End Role="Universidad" Type="TECAModel.Store.Universidad" Multiplicity="1" />
+    <End Role="Academico" Type="TECAModel.Store.Academico" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Universidad">
         <PropertyRef Name="IdUniversidad" />
@@ -863,21 +911,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__AnticipoC__IdEmp__339FAB6E">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="AnticipoCab" Type="TECAModel1.Store.AnticipoCab" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Persona">
-        <PropertyRef Name="IdPersona" />
-      </Principal>
-      <Dependent Role="AnticipoCab">
-        <PropertyRef Name="IdEmpleado" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__AnticipoC__IdEmp__3493CFA7">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="AnticipoCab" Type="TECAModel1.Store.AnticipoCab" Multiplicity="*" />
+  <Association Name="FK__AnticipoC__IdEmp__3864608B">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="AnticipoCab" Type="TECAModel.Store.AnticipoCab" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -887,9 +923,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__AnticipoD__IdEmp__395884C4">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="AnticipoDet" Type="TECAModel1.Store.AnticipoDet" Multiplicity="*" />
+  <Association Name="FK__AnticipoD__IdEmp__3D2915A8">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="AnticipoDet" Type="TECAModel.Store.AnticipoDet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -899,9 +935,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__AnticipoDet__3A4CA8FD">
-    <End Role="AnticipoCab" Type="TECAModel1.Store.AnticipoCab" Multiplicity="1" />
-    <End Role="AnticipoDet" Type="TECAModel1.Store.AnticipoDet" Multiplicity="*" />
+  <Association Name="FK__AnticipoD__IdPer__3F115E1A">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="AnticipoDet" Type="TECAModel.Store.AnticipoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="IdPersona" />
+      </Principal>
+      <Dependent Role="AnticipoDet">
+        <PropertyRef Name="IdPersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__AnticipoDet__3E1D39E1">
+    <End Role="AnticipoCab" Type="TECAModel.Store.AnticipoCab" Multiplicity="1" />
+    <End Role="AnticipoDet" Type="TECAModel.Store.AnticipoDet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="AnticipoCab">
         <PropertyRef Name="NumAnticipo" />
@@ -913,9 +961,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Beneficio__IdEmp__3F115E1A">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Beneficios" Type="TECAModel1.Store.Beneficios" Multiplicity="*" />
+  <Association Name="FK__Beneficio__IdEmp__43D61337">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Beneficios" Type="TECAModel.Store.Beneficios" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -925,9 +973,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CargaFami__IdEmp__2CF2ADDF">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="CargaFamiliar" Type="TECAModel1.Store.CargaFamiliar" Multiplicity="*" />
+  <Association Name="FK__CargaFami__IdEmp__31B762FC">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="CargaFamiliar" Type="TECAModel.Store.CargaFamiliar" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -937,9 +985,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CargaFami__IdPar__2EDAF651">
-    <End Role="Parentesco" Type="TECAModel1.Store.Parentesco" Multiplicity="1" />
-    <End Role="CargaFamiliar" Type="TECAModel1.Store.CargaFamiliar" Multiplicity="*" />
+  <Association Name="FK__CargaFami__IdPar__339FAB6E">
+    <End Role="Parentesco" Type="TECAModel.Store.Parentesco" Multiplicity="1" />
+    <End Role="CargaFamiliar" Type="TECAModel.Store.CargaFamiliar" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Parentesco">
         <PropertyRef Name="IdParentesco" />
@@ -949,9 +997,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CargaFami__IdPer__2DE6D218">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="CargaFamiliar" Type="TECAModel1.Store.CargaFamiliar" Multiplicity="*" />
+  <Association Name="FK__CargaFami__IdPer__32AB8735">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="CargaFamiliar" Type="TECAModel.Store.CargaFamiliar" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -961,9 +1009,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CargoxDep__IdCar__07C12930">
-    <End Role="Cargo" Type="TECAModel1.Store.Cargo" Multiplicity="1" />
-    <End Role="CargoxDepartamento" Type="TECAModel1.Store.CargoxDepartamento" Multiplicity="*" />
+  <Association Name="FK__CargoxDep__IdCar__0C85DE4D">
+    <End Role="Cargo" Type="TECAModel.Store.Cargo" Multiplicity="1" />
+    <End Role="CargoxDepartamento" Type="TECAModel.Store.CargoxDepartamento" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Cargo">
         <PropertyRef Name="IdCargo" />
@@ -973,9 +1021,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__CargoxDep__IdDep__08B54D69">
-    <End Role="Departamento" Type="TECAModel1.Store.Departamento" Multiplicity="1" />
-    <End Role="CargoxDepartamento" Type="TECAModel1.Store.CargoxDepartamento" Multiplicity="*" />
+  <Association Name="FK__CargoxDep__IdDep__0D7A0286">
+    <End Role="Departamento" Type="TECAModel.Store.Departamento" Multiplicity="1" />
+    <End Role="CargoxDepartamento" Type="TECAModel.Store.CargoxDepartamento" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Departamento">
         <PropertyRef Name="IdDepartamento" />
@@ -985,9 +1033,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Contrato__IdCarg__55009F39">
-    <End Role="Cargo" Type="TECAModel1.Store.Cargo" Multiplicity="1" />
-    <End Role="Contrato" Type="TECAModel1.Store.Contrato" Multiplicity="*" />
+  <Association Name="FK__Contrato__IdCarg__59C55456">
+    <End Role="Cargo" Type="TECAModel.Store.Cargo" Multiplicity="1" />
+    <End Role="Contrato" Type="TECAModel.Store.Contrato" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Cargo">
         <PropertyRef Name="IdCargo" />
@@ -997,9 +1045,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Contrato__IdEmpr__5224328E">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Contrato" Type="TECAModel1.Store.Contrato" Multiplicity="*" />
+  <Association Name="FK__Contrato__IdEmpr__56E8E7AB">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Contrato" Type="TECAModel.Store.Contrato" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1009,9 +1057,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Contrato__IdJorn__55F4C372">
-    <End Role="Jornada" Type="TECAModel1.Store.Jornada" Multiplicity="1" />
-    <End Role="Contrato" Type="TECAModel1.Store.Contrato" Multiplicity="*" />
+  <Association Name="FK__Contrato__IdJorn__5AB9788F">
+    <End Role="Jornada" Type="TECAModel.Store.Jornada" Multiplicity="1" />
+    <End Role="Contrato" Type="TECAModel.Store.Contrato" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Jornada">
         <PropertyRef Name="IdJornada" />
@@ -1021,9 +1069,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Contrato__IdPers__531856C7">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="Contrato" Type="TECAModel1.Store.Contrato" Multiplicity="*" />
+  <Association Name="FK__Contrato__IdPers__57DD0BE4">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="Contrato" Type="TECAModel.Store.Contrato" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -1033,9 +1081,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Contrato__IdTipo__540C7B00">
-    <End Role="TipoContrato" Type="TECAModel1.Store.TipoContrato" Multiplicity="1" />
-    <End Role="Contrato" Type="TECAModel1.Store.Contrato" Multiplicity="*" />
+  <Association Name="FK__Contrato__IdTipo__58D1301D">
+    <End Role="TipoContrato" Type="TECAModel.Store.TipoContrato" Multiplicity="1" />
+    <End Role="Contrato" Type="TECAModel.Store.Contrato" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoContrato">
         <PropertyRef Name="IdTipoContrato" />
@@ -1045,9 +1093,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Curso__IdEmpresa__45F365D3">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Curso" Type="TECAModel1.Store.Curso" Multiplicity="*" />
+  <Association Name="FK__Curso__IdEmpresa__4AB81AF0">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Curso" Type="TECAModel.Store.Curso" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1058,8 +1106,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__Empleado__IdEmpr__239E4DCF">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Empleado" Type="TECAModel1.Store.Empleado" Multiplicity="*" />
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Empleado" Type="TECAModel.Store.Empleado" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1070,8 +1118,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__Empleado__IdPers__24927208">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="Empleado" Type="TECAModel1.Store.Empleado" Multiplicity="*" />
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="Empleado" Type="TECAModel.Store.Empleado" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -1081,9 +1129,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Jornada__IdEmpre__6C190EBB">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Jornada" Type="TECAModel1.Store.Jornada" Multiplicity="*" />
+  <Association Name="FK__Jornada__IdEmpre__70DDC3D8">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Jornada" Type="TECAModel.Store.Jornada" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1093,9 +1141,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Jornada__IdPerso__6D0D32F4">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="Jornada" Type="TECAModel1.Store.Jornada" Multiplicity="*" />
+  <Association Name="FK__Jornada__IdPerso__71D1E811">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="Jornada" Type="TECAModel.Store.Jornada" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -1105,9 +1153,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Jornada__IdTipoJ__6B24EA82">
-    <End Role="TipoJornada" Type="TECAModel1.Store.TipoJornada" Multiplicity="1" />
-    <End Role="Jornada" Type="TECAModel1.Store.Jornada" Multiplicity="*" />
+  <Association Name="FK__Jornada__IdTipoJ__6FE99F9F">
+    <End Role="TipoJornada" Type="TECAModel.Store.TipoJornada" Multiplicity="1" />
+    <End Role="Jornada" Type="TECAModel.Store.Jornada" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoJornada">
         <PropertyRef Name="IdTipoJornada" />
@@ -1117,9 +1165,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Liquidaci__IdEmp__690797E6">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Liquidacion" Type="TECAModel1.Store.Liquidacion" Multiplicity="*" />
+  <Association Name="FK__Liquidaci__IdEmp__6DCC4D03">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Liquidacion" Type="TECAModel.Store.Liquidacion" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1129,9 +1177,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Liquidaci__IdPer__681373AD">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="Liquidacion" Type="TECAModel1.Store.Liquidacion" Multiplicity="*" />
+  <Association Name="FK__Liquidaci__IdPer__6CD828CA">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="Liquidacion" Type="TECAModel.Store.Liquidacion" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -1141,9 +1189,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Liquidacion__671F4F74">
-    <End Role="Contrato" Type="TECAModel1.Store.Contrato" Multiplicity="1" />
-    <End Role="Liquidacion" Type="TECAModel1.Store.Liquidacion" Multiplicity="*" />
+  <Association Name="FK__Liquidacion__6BE40491">
+    <End Role="Contrato" Type="TECAModel.Store.Contrato" Multiplicity="1" />
+    <End Role="Liquidacion" Type="TECAModel.Store.Liquidacion" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Contrato">
         <PropertyRef Name="IdPersona" />
@@ -1158,8 +1206,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__Maternidad__2A4B4B5E">
-    <End Role="Empleado" Type="TECAModel1.Store.Empleado" Multiplicity="1" />
-    <End Role="Maternidad" Type="TECAModel1.Store.Maternidad" Multiplicity="*" />
+    <End Role="Empleado" Type="TECAModel.Store.Empleado" Multiplicity="1" />
+    <End Role="Maternidad" Type="TECAModel.Store.Maternidad" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empleado">
         <PropertyRef Name="IdEmpresa" />
@@ -1171,9 +1219,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Multa__IdEmpresa__71D1E811">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Multa" Type="TECAModel1.Store.Multa" Multiplicity="*" />
+  <Association Name="FK__Multa__IdEmpresa__76969D2E">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Multa" Type="TECAModel.Store.Multa" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1183,9 +1231,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__MultaxPer__IdEmp__778AC167">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="MultaxPersona" Type="TECAModel1.Store.MultaxPersona" Multiplicity="*" />
+  <Association Name="FK__MultaxPer__IdEmp__7C4F7684">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="MultaxPersona" Type="TECAModel.Store.MultaxPersona" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1195,9 +1243,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__MultaxPer__IdMul__76969D2E">
-    <End Role="Multa" Type="TECAModel1.Store.Multa" Multiplicity="1" />
-    <End Role="MultaxPersona" Type="TECAModel1.Store.MultaxPersona" Multiplicity="*" />
+  <Association Name="FK__MultaxPer__IdMul__7B5B524B">
+    <End Role="Multa" Type="TECAModel.Store.Multa" Multiplicity="1" />
+    <End Role="MultaxPersona" Type="TECAModel.Store.MultaxPersona" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Multa">
         <PropertyRef Name="IdMulta" />
@@ -1207,9 +1255,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__MultaxPer__IdPer__787EE5A0">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="MultaxPersona" Type="TECAModel1.Store.MultaxPersona" Multiplicity="*" />
+  <Association Name="FK__MultaxPer__IdPer__7D439ABD">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="MultaxPersona" Type="TECAModel.Store.MultaxPersona" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -1219,9 +1267,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__NominaCab__IdEmp__43D61337">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="NominaCab" Type="TECAModel1.Store.NominaCab" Multiplicity="*" />
+  <Association Name="FK__NominaCab__IdEmp__489AC854">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="NominaCab" Type="TECAModel.Store.NominaCab" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1231,9 +1279,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__NominaDet__489AC854">
-    <End Role="NominaCab" Type="TECAModel1.Store.NominaCab" Multiplicity="1" />
-    <End Role="NominaDet" Type="TECAModel1.Store.NominaDet" Multiplicity="*" />
+  <Association Name="FK__NominaDet__4D5F7D71">
+    <End Role="NominaCab" Type="TECAModel.Store.NominaCab" Multiplicity="1" />
+    <End Role="NominaDet" Type="TECAModel.Store.NominaDet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NominaCab">
         <PropertyRef Name="NumNomina" />
@@ -1245,9 +1293,47 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Parentesc__IdEmp__282DF8C2">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Parentesco" Type="TECAModel1.Store.Parentesco" Multiplicity="*" />
+  <Association Name="FK__OrdenPago__IdEmp__4F32B74A">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="OrdenPagoCab" Type="TECAModel.Store.OrdenPagoCab" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenPagoCab">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenPago__IdEmp__54EB90A0">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="OrdenPagoEmpleadoDet" Type="TECAModel.Store.OrdenPagoEmpleadoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenPagoEmpleadoDet">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrdenPagoEmplead__53F76C67">
+    <End Role="OrdenPagoCab" Type="TECAModel.Store.OrdenPagoCab" Multiplicity="1" />
+    <End Role="OrdenPagoEmpleadoDet" Type="TECAModel.Store.OrdenPagoEmpleadoDet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrdenPagoCab">
+        <PropertyRef Name="NumOrdenPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="OrdenPagoEmpleadoDet">
+        <PropertyRef Name="NumOrdenPago" />
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Parentesc__IdEmp__2CF2ADDF">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Parentesco" Type="TECAModel.Store.Parentesco" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1257,9 +1343,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Permiso__IdEmple__607251E5">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="Permiso" Type="TECAModel1.Store.Permiso" Multiplicity="*" />
+  <Association Name="FK__Permiso__IdEmple__65370702">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="Permiso" Type="TECAModel.Store.Permiso" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -1269,9 +1355,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Permiso__IdEmpre__625A9A57">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Permiso" Type="TECAModel1.Store.Permiso" Multiplicity="*" />
+  <Association Name="FK__Permiso__IdEmpre__671F4F74">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Permiso" Type="TECAModel.Store.Permiso" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1281,9 +1367,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Permiso__IdTipoP__6166761E">
-    <End Role="TipoPermiso" Type="TECAModel1.Store.TipoPermiso" Multiplicity="1" />
-    <End Role="Permiso" Type="TECAModel1.Store.Permiso" Multiplicity="*" />
+  <Association Name="FK__Permiso__IdTipoP__662B2B3B">
+    <End Role="TipoPermiso" Type="TECAModel.Store.TipoPermiso" Multiplicity="1" />
+    <End Role="Permiso" Type="TECAModel.Store.Permiso" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoPermiso">
         <PropertyRef Name="IdTipoPermiso" />
@@ -1294,8 +1380,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__Persona__IdEmpre__1BFD2C07">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="*" />
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1306,8 +1392,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__Persona__IdTipoP__1CF15040">
-    <End Role="TipoPersona" Type="TECAModel1.Store.TipoPersona" Multiplicity="1" />
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="*" />
+    <End Role="TipoPersona" Type="TECAModel.Store.TipoPersona" Multiplicity="1" />
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoPersona">
         <PropertyRef Name="IdTipoPersona" />
@@ -1318,8 +1404,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__Persona__TipoIde__1DE57479">
-    <End Role="TipoIdentificacion" Type="TECAModel1.Store.TipoIdentificacion" Multiplicity="1" />
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="*" />
+    <End Role="TipoIdentificacion" Type="TECAModel.Store.TipoIdentificacion" Multiplicity="1" />
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoIdentificacion">
         <PropertyRef Name="IdTipoIdentificacion" />
@@ -1329,9 +1415,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PersonaxC__IdCar__236943A5">
-    <End Role="Cargo" Type="TECAModel1.Store.Cargo" Multiplicity="1" />
-    <End Role="PersonaxCargo" Type="TECAModel1.Store.PersonaxCargo" Multiplicity="*" />
+  <Association Name="FK__PersonaxC__IdCar__282DF8C2">
+    <End Role="Cargo" Type="TECAModel.Store.Cargo" Multiplicity="1" />
+    <End Role="PersonaxCargo" Type="TECAModel.Store.PersonaxCargo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Cargo">
         <PropertyRef Name="IdCargo" />
@@ -1341,9 +1427,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PersonaxC__IdCur__5165187F">
-    <End Role="Curso" Type="TECAModel1.Store.Curso" Multiplicity="1" />
-    <End Role="PersonaxCurso" Type="TECAModel1.Store.PersonaxCurso" Multiplicity="*" />
+  <Association Name="FK__PersonaxC__IdCur__5629CD9C">
+    <End Role="Curso" Type="TECAModel.Store.Curso" Multiplicity="1" />
+    <End Role="PersonaxCurso" Type="TECAModel.Store.PersonaxCurso" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Curso">
         <PropertyRef Name="IdCurso" />
@@ -1353,9 +1439,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PersonaxC__IdEmp__22751F6C">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="PersonaxCargo" Type="TECAModel1.Store.PersonaxCargo" Multiplicity="*" />
+  <Association Name="FK__PersonaxC__IdEmp__2739D489">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="PersonaxCargo" Type="TECAModel.Store.PersonaxCargo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1365,9 +1451,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PersonaxC__IdEmp__4F7CD00D">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="PersonaxCurso" Type="TECAModel1.Store.PersonaxCurso" Multiplicity="*" />
+  <Association Name="FK__PersonaxC__IdEmp__5441852A">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="PersonaxCurso" Type="TECAModel.Store.PersonaxCurso" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1377,9 +1463,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PersonaxC__IdPer__2180FB33">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="PersonaxCargo" Type="TECAModel1.Store.PersonaxCargo" Multiplicity="*" />
+  <Association Name="FK__PersonaxC__IdPer__2645B050">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="PersonaxCargo" Type="TECAModel.Store.PersonaxCargo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -1389,9 +1475,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PersonaxC__IdPer__5070F446">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="PersonaxCurso" Type="TECAModel1.Store.PersonaxCurso" Multiplicity="*" />
+  <Association Name="FK__PersonaxC__IdPer__5535A963">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="PersonaxCurso" Type="TECAModel.Store.PersonaxCurso" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -1401,9 +1487,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PersonaxD__IdDep__7D439ABD">
-    <End Role="Departamento" Type="TECAModel1.Store.Departamento" Multiplicity="1" />
-    <End Role="PersonaxDepartamento" Type="TECAModel1.Store.PersonaxDepartamento" Multiplicity="*" />
+  <Association Name="FK__PersonaxD__IdDep__02084FDA">
+    <End Role="Departamento" Type="TECAModel.Store.Departamento" Multiplicity="1" />
+    <End Role="PersonaxDepartamento" Type="TECAModel.Store.PersonaxDepartamento" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Departamento">
         <PropertyRef Name="IdDepartamento" />
@@ -1413,9 +1499,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PersonaxD__IdEmp__7E37BEF6">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="PersonaxDepartamento" Type="TECAModel1.Store.PersonaxDepartamento" Multiplicity="*" />
+  <Association Name="FK__PersonaxD__IdEmp__02FC7413">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="PersonaxDepartamento" Type="TECAModel.Store.PersonaxDepartamento" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1425,9 +1511,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PersonaxD__IdPer__7F2BE32F">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="PersonaxDepartamento" Type="TECAModel1.Store.PersonaxDepartamento" Multiplicity="*" />
+  <Association Name="FK__PersonaxD__IdPer__03F0984C">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="PersonaxDepartamento" Type="TECAModel.Store.PersonaxDepartamento" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -1437,9 +1523,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PersonaxT__IdEmp__14270015">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="PersonaxTitulo" Type="TECAModel1.Store.PersonaxTitulo" Multiplicity="*" />
+  <Association Name="FK__PersonaxT__IdEmp__18EBB532">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="PersonaxTitulo" Type="TECAModel.Store.PersonaxTitulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1449,9 +1535,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PersonaxT__IdPer__151B244E">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="PersonaxTitulo" Type="TECAModel1.Store.PersonaxTitulo" Multiplicity="*" />
+  <Association Name="FK__PersonaxT__IdPer__19DFD96B">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="PersonaxTitulo" Type="TECAModel.Store.PersonaxTitulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -1461,9 +1547,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PersonaxT__IdTit__1332DBDC">
-    <End Role="Titulo" Type="TECAModel1.Store.Titulo" Multiplicity="1" />
-    <End Role="PersonaxTitulo" Type="TECAModel1.Store.PersonaxTitulo" Multiplicity="*" />
+  <Association Name="FK__PersonaxT__IdTit__17F790F9">
+    <End Role="Titulo" Type="TECAModel.Store.Titulo" Multiplicity="1" />
+    <End Role="PersonaxTitulo" Type="TECAModel.Store.PersonaxTitulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Titulo">
         <PropertyRef Name="IdTitulo" />
@@ -1473,9 +1559,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Prestamo__IdEmpr__793DFFAF">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Prestamo" Type="TECAModel1.Store.Prestamo" Multiplicity="*" />
+  <Association Name="FK__Prestamo__IdEmpr__7E02B4CC">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Prestamo" Type="TECAModel.Store.Prestamo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1485,9 +1571,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Prestamo__IdPers__7849DB76">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="Prestamo" Type="TECAModel1.Store.Prestamo" Multiplicity="*" />
+  <Association Name="FK__Prestamo__IdPers__7D0E9093">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="Prestamo" Type="TECAModel.Store.Prestamo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -1497,21 +1583,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Prestamo__IdTipo__7A3223E8">
-    <End Role="TipoPrestamo" Type="TECAModel1.Store.TipoPrestamo" Multiplicity="1" />
-    <End Role="Prestamo" Type="TECAModel1.Store.Prestamo" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TipoPrestamo">
-        <PropertyRef Name="IdTipoPrestamo" />
-      </Principal>
-      <Dependent Role="Prestamo">
-        <PropertyRef Name="IdTipoPrestamo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Proveedor__IdPer__412EB0B6">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="Proveedor" Type="TECAModel1.Store.Proveedor" Multiplicity="*" />
+  <Association Name="FK__Proveedor__IdPer__45F365D3">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="Proveedor" Type="TECAModel.Store.Proveedor" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -1521,9 +1595,35 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Telefono__IdTipo__5BE2A6F2">
-    <End Role="TipoTelefono" Type="TECAModel1.Store.TipoTelefono" Multiplicity="1" />
-    <End Role="Telefono" Type="TECAModel1.Store.Telefono" Multiplicity="*" />
+  <Association Name="FK__Rubro__123EB7A3">
+    <End Role="CargoxDepartamento" Type="TECAModel.Store.CargoxDepartamento" Multiplicity="1" />
+    <End Role="Rubro" Type="TECAModel.Store.Rubro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CargoxDepartamento">
+        <PropertyRef Name="IdCargo" />
+        <PropertyRef Name="IdDepartamento" />
+      </Principal>
+      <Dependent Role="Rubro">
+        <PropertyRef Name="IdCargo" />
+        <PropertyRef Name="IdDepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Rubro__IdEmpresa__1332DBDC">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Rubro" Type="TECAModel.Store.Rubro" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Rubro">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Telefono__IdTipo__60A75C0F">
+    <End Role="TipoTelefono" Type="TECAModel.Store.TipoTelefono" Multiplicity="1" />
+    <End Role="Telefono" Type="TECAModel.Store.Telefono" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TipoTelefono">
         <PropertyRef Name="IdTipoTelefono" />
@@ -1533,9 +1633,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TipoContr__IdEmp__4D5F7D71">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="TipoContrato" Type="TECAModel1.Store.TipoContrato" Multiplicity="*" />
+  <Association Name="FK__TipoContr__IdEmp__5224328E">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoContrato" Type="TECAModel.Store.TipoContrato" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1546,8 +1646,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__TipoIdent__IdEmp__173876EA">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="TipoIdentificacion" Type="TECAModel1.Store.TipoIdentificacion" Multiplicity="*" />
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoIdentificacion" Type="TECAModel.Store.TipoIdentificacion" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1557,9 +1657,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TipoJorna__IdEmp__66603565">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="TipoJornada" Type="TECAModel1.Store.TipoJornada" Multiplicity="*" />
+  <Association Name="FK__TipoJorna__IdEmp__6B24EA82">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoJornada" Type="TECAModel.Store.TipoJornada" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1569,9 +1669,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TipoPermi__IdEmp__5AB9788F">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="TipoPermiso" Type="TECAModel1.Store.TipoPermiso" Multiplicity="*" />
+  <Association Name="FK__TipoPermi__IdEmp__5F7E2DAC">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoPermiso" Type="TECAModel.Store.TipoPermiso" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1582,8 +1682,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__TipoPerso__IdEmp__117F9D94">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="TipoPersona" Type="TECAModel1.Store.TipoPersona" Multiplicity="*" />
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoPersona" Type="TECAModel.Store.TipoPersona" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1593,9 +1693,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TipoPrest__IdEmp__73852659">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="TipoPrestamo" Type="TECAModel1.Store.TipoPrestamo" Multiplicity="*" />
+  <Association Name="FK__TipoPrest__IdEmp__7849DB76">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoPrestamo" Type="TECAModel.Store.TipoPrestamo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1605,9 +1705,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TipoTelef__IdEmp__571DF1D5">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="TipoTelefono" Type="TECAModel1.Store.TipoTelefono" Multiplicity="*" />
+  <Association Name="FK__TipoTelef__IdEmp__5BE2A6F2">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="TipoTelefono" Type="TECAModel.Store.TipoTelefono" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1617,9 +1717,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Titulo__IdEmpres__60A75C0F">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Titulo" Type="TECAModel1.Store.Titulo" Multiplicity="*" />
+  <Association Name="FK__Titulo__IdEmpres__656C112C">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Titulo" Type="TECAModel.Store.Titulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1629,9 +1729,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Titulo__IdUniver__619B8048">
-    <End Role="Universidad" Type="TECAModel1.Store.Universidad" Multiplicity="1" />
-    <End Role="Titulo" Type="TECAModel1.Store.Titulo" Multiplicity="*" />
+  <Association Name="FK__Titulo__IdUniver__66603565">
+    <End Role="Universidad" Type="TECAModel.Store.Universidad" Multiplicity="1" />
+    <End Role="Titulo" Type="TECAModel.Store.Titulo" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Universidad">
         <PropertyRef Name="IdUniversidad" />
@@ -1641,47 +1741,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TrabajoDi__IdEmp__03BB8E22">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="TrabajoDiarioDet" Type="TECAModel1.Store.TrabajoDiarioDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Persona">
-        <PropertyRef Name="IdPersona" />
-      </Principal>
-      <Dependent Role="TrabajoDiarioDet">
-        <PropertyRef Name="IdPersona" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TrabajoDi__IdEmp__7EF6D905">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="TrabajoDiarioCab" Type="TECAModel1.Store.TrabajoDiarioCab" Multiplicity="*" />
+  <Association Name="FK__TrabajoDi__IdEmp__02C769E9">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="TrabajoDiario" Type="TECAModel.Store.TrabajoDiario" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
       </Principal>
-      <Dependent Role="TrabajoDiarioCab">
+      <Dependent Role="TrabajoDiario">
         <PropertyRef Name="IdEmpresa" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TrabajoDiarioDet__04AFB25B">
-    <End Role="TrabajoDiarioCab" Type="TECAModel1.Store.TrabajoDiarioCab" Multiplicity="1" />
-    <End Role="TrabajoDiarioDet" Type="TECAModel1.Store.TrabajoDiarioDet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TrabajoDiarioCab">
-        <PropertyRef Name="NumTrabajo" />
-        <PropertyRef Name="IdEmpresa" />
-      </Principal>
-      <Dependent Role="TrabajoDiarioDet">
-        <PropertyRef Name="NumTrabajo" />
-        <PropertyRef Name="IdEmpresa" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Universid__IdEmp__4AB81AF0">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Universidad" Type="TECAModel1.Store.Universidad" Multiplicity="*" />
+  <Association Name="FK__Universid__IdEmp__4F7CD00D">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Universidad" Type="TECAModel.Store.Universidad" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />
@@ -1691,9 +1765,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Vacacion__IdEmpl__6DCC4D03">
-    <End Role="Persona" Type="TECAModel1.Store.Persona" Multiplicity="1" />
-    <End Role="Vacacion" Type="TECAModel1.Store.Vacacion" Multiplicity="*" />
+  <Association Name="FK__Vacacion__IdEmpl__72910220">
+    <End Role="Persona" Type="TECAModel.Store.Persona" Multiplicity="1" />
+    <End Role="Vacacion" Type="TECAModel.Store.Vacacion" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
         <PropertyRef Name="IdPersona" />
@@ -1703,9 +1777,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Vacacion__IdEmpr__6EC0713C">
-    <End Role="Empresa" Type="TECAModel1.Store.Empresa" Multiplicity="1" />
-    <End Role="Vacacion" Type="TECAModel1.Store.Vacacion" Multiplicity="*" />
+  <Association Name="FK__Vacacion__IdEmpr__73852659">
+    <End Role="Empresa" Type="TECAModel.Store.Empresa" Multiplicity="1" />
+    <End Role="Vacacion" Type="TECAModel.Store.Vacacion" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Empresa">
         <PropertyRef Name="IdEmpresa" />

@@ -40,7 +40,7 @@ namespace forms.ActivoFijo
             this.colusuario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFecha = new DevExpress.XtraGrid.Columns.GridColumn();
             this.col_idActivoFijo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colvalorActual = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colValoAdquisicion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colvalorRevalorizado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colvalorResidual = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colnomActivo = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -101,12 +101,13 @@ namespace forms.ActivoFijo
             this.colusuario,
             this.colFecha,
             this.col_idActivoFijo,
-            this.colvalorActual,
+            this.colValoAdquisicion,
             this.colvalorRevalorizado,
             this.colvalorResidual,
             this.colnomActivo});
             this.gridView1.GridControl = this.GridConsultaRevaloriza;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             // 
             // colCodigo
@@ -115,7 +116,7 @@ namespace forms.ActivoFijo
             this.colCodigo.Name = "colCodigo";
             this.colCodigo.Visible = true;
             this.colCodigo.VisibleIndex = 0;
-            this.colCodigo.Width = 122;
+            this.colCodigo.Width = 104;
             // 
             // colusuario
             // 
@@ -128,20 +129,20 @@ namespace forms.ActivoFijo
             this.colFecha.Name = "colFecha";
             this.colFecha.Visible = true;
             this.colFecha.VisibleIndex = 1;
-            this.colFecha.Width = 117;
+            this.colFecha.Width = 81;
             // 
             // col_idActivoFijo
             // 
             this.col_idActivoFijo.FieldName = "_idActivoFijo";
             this.col_idActivoFijo.Name = "col_idActivoFijo";
             // 
-            // colvalorActual
+            // colValoAdquisicion
             // 
-            this.colvalorActual.FieldName = "valorActual";
-            this.colvalorActual.Name = "colvalorActual";
-            this.colvalorActual.Visible = true;
-            this.colvalorActual.VisibleIndex = 3;
-            this.colvalorActual.Width = 123;
+            this.colValoAdquisicion.FieldName = "ValoAdquisicion";
+            this.colValoAdquisicion.Name = "colValoAdquisicion";
+            this.colValoAdquisicion.Visible = true;
+            this.colValoAdquisicion.VisibleIndex = 3;
+            this.colValoAdquisicion.Width = 95;
             // 
             // colvalorRevalorizado
             // 
@@ -149,7 +150,7 @@ namespace forms.ActivoFijo
             this.colvalorRevalorizado.Name = "colvalorRevalorizado";
             this.colvalorRevalorizado.Visible = true;
             this.colvalorRevalorizado.VisibleIndex = 4;
-            this.colvalorRevalorizado.Width = 123;
+            this.colvalorRevalorizado.Width = 110;
             // 
             // colvalorResidual
             // 
@@ -165,7 +166,7 @@ namespace forms.ActivoFijo
             this.colnomActivo.Name = "colnomActivo";
             this.colnomActivo.Visible = true;
             this.colnomActivo.VisibleIndex = 2;
-            this.colnomActivo.Width = 123;
+            this.colnomActivo.Width = 74;
             // 
             // VtnConsultaRevalor
             // 
@@ -194,15 +195,15 @@ namespace forms.ActivoFijo
         private System.Windows.Forms.ToolStripLabel tslEnBlanco;
         private System.Windows.Forms.ToolStripButton btnCancelar;
         private DevExpress.XtraGrid.GridControl GridConsultaRevaloriza;
-        private System.Windows.Forms.BindingSource clsRevalorizacionBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colCodigo;
         private DevExpress.XtraGrid.Columns.GridColumn colusuario;
         private DevExpress.XtraGrid.Columns.GridColumn colFecha;
         private DevExpress.XtraGrid.Columns.GridColumn col_idActivoFijo;
-        private DevExpress.XtraGrid.Columns.GridColumn colvalorActual;
         private DevExpress.XtraGrid.Columns.GridColumn colvalorRevalorizado;
         private DevExpress.XtraGrid.Columns.GridColumn colvalorResidual;
         private DevExpress.XtraGrid.Columns.GridColumn colnomActivo;
+        private DevExpress.XtraGrid.Columns.GridColumn colValoAdquisicion;
+        private System.Windows.Forms.BindingSource clsRevalorizacionBindingSource;
     }
 }

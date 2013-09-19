@@ -5,7 +5,7 @@ using System.Text;
 
 namespace clases.Cuentasxpagar
 {
-   public  class clsPagoDetalle
+    public class clsPagoDetalle
     {
         public int NumLinea { get; set; }
         public int IdMedioPago { get; set; }
@@ -14,8 +14,8 @@ namespace clases.Cuentasxpagar
         public int IdEmpresa { get; set; }
         public int IdBanco { get; set; }
         public decimal NumComprobante { get; set; }
-       // public int  NumComision { get; set; }
-      //  public int NumNominaCab { get; set; }
+        // public int  NumComision { get; set; }
+        //  public int NumNominaCab { get; set; }
         public int NumPago { get; set; }
 
         public clsPagoDetalle()

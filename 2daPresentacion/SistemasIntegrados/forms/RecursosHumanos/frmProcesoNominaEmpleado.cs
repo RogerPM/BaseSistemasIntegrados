@@ -13,6 +13,22 @@ namespace forms.RecursosHumanos
 {
     public partial class frmProcesoNominaEmpleado : Form
     {
+        #region "Distributed by security team 3/3"
+        //si este bloque ha sido parcial o totalmente editado, los miembros del equipo de seguridad no 
+        //se responzabilizan en el caso de que exista un mal funcionamiento de este form.
+        private void Seguridad()
+        {
+            //lecturas
+            btnBuscar.Visible = frmPrincipal.Lectura;
+            //escrituras
+            tsbNuevo.Visible = frmPrincipal.Escritura;
+            //tsbGenerarNomina.Visible = frmPrincipal.Escritura;
+            btnGenerarNomina.Enabled = frmPrincipal.Escritura;
+            tsbModificar.Visible = frmPrincipal.Escritura;
+        }
+
+        #endregion
+
         public frmProcesoNominaEmpleado()
         {
             InitializeComponent();
@@ -21,10 +37,22 @@ namespace forms.RecursosHumanos
 #region variables
         DateTime FechaModificacion;
         int IdEmpresa;
+        int persona;
         int NumLinea;
         int var;
         int ban;
         int ban1;
+        int ban2;
+        int ban3;
+        int mes;
+        String  meses;
+        String  dia;
+        String  año;
+        String diau;
+        DateTime desde;
+        DateTime hasta;
+        String  desde1;
+        String  hasta1;
         int sumT;//GUARDA HORAS EXTRAS 100%
         int sumM;//GUARDA HORAS EXTRAS 50%
         int sumR;//GUARDA HORAS RANGO
@@ -39,6 +67,7 @@ namespace forms.RecursosHumanos
         Decimal totdesc;//TOTAL DE DESCUENTO
         Decimal valiq;//VALOR LIQUIDO
         Decimal total;//TOTAL
+        Decimal totpag;//TOTAL PAGADO PRESTAMO
 #endregion
 
 
@@ -52,11 +81,17 @@ namespace forms.RecursosHumanos
         public clsMensaje men = new clsMensaje();
         public clsNominaCab  clasNc = new clsNominaCab ();
         public clsNominaDet clasNd = new clsNominaDet();
+        public clsPrestamo clasPres = new clsPrestamo();
+        public clsOrdenPagCabRH clasOpc = new clsOrdenPagCabRH();
+        public clsOrdenPagoEmpleadoDetalle  clasOpe=new clsOrdenPagoEmpleadoDetalle ();
 
         //***************DATOS******************
 
         clsDatosNominaCab  DatosNc = new clsDatosNominaCab ();
         clsDatosNominaDet DatosNd = new clsDatosNominaDet();
+        clsDatosPrestamo DatosPres = new clsDatosPrestamo();
+        clsDatosOrdenPagCabRH  DatosOpc=new clsDatosOrdenPagCabRH ();
+        clsDatosOrdenPagoEmpleadoDetalle DatosOpe =new clsDatosOrdenPagoEmpleadoDetalle();
 
 #endregion
 
@@ -120,21 +155,57 @@ namespace forms.RecursosHumanos
                 {
 
                     clasNd.NumLinea = DatosNd .getIdSiguiente();
+                    clasOpc .NumOrdenPago =DatosOpc .getIdSiguiente ();
+                    clasOpe .NumOrdenPago =clasOpc .NumOrdenPago ;
+                    clasOpe .Linea =DatosOpe .getIdSiguiente ();
+                    clasOpc .FechaEmision =deFecha .DateTime;
+                    clasOpc .Estado =1;
                     clasNd.IdEmpresa = 1;
                     clasNd.NumNomina = Convert.ToInt32(txtNumero.Text);
                     clasNd .IdPersona =Convert.ToInt32(gvNomina.GetRowCellValue(i, colIdPersona));
+                    clasOpc .IdPersona =Convert.ToInt32(gvNomina.GetRowCellValue(i, colIdPersona));
+                    clasOpe .IdPersona =Convert.ToInt32(gvNomina.GetRowCellValue(i, colIdPersona));;
                     clasNd .SueldoNominal =Convert .ToDecimal (gvNomina .GetRowCellValue (i,colSueldoNominal ));
                     clasNd.SueldGanado =Convert .ToDecimal (gvNomina .GetRowCellValue (i,colSueldGanado   ));
+                    clasOpe .SueldoTotal =Convert .ToDecimal (gvNomina .GetRowCellValue (i,colSueldGanado   ));
                     clasNd .Iess =Convert .ToDecimal (gvNomina .GetRowCellValue (i,colIess));
                     clasNd .PrestamoPago =Convert .ToDecimal (gvNomina .GetRowCellValue (i,colPrestamoPago ));
 	                clasNd .Anticipo =Convert .ToDecimal (gvNomina .GetRowCellValue (i,colAnticipo));
                     clasNd .ValorLiquido =Convert .ToDecimal (gvNomina .GetRowCellValue (i,colValorLiquido));
-                    //clasNd .IdEmpresa =Convert .ToInt32  (gvNomina .GetRowCellValue (i,colIdEmpresa  ));
+                    clasOpc .TotalPagar =Convert .ToDecimal (gvNomina .GetRowCellValue (i,colValorLiquido));
+                    clasOpe .PagoNeto =Convert .ToDecimal (gvNomina .GetRowCellValue (i,colValorLiquido));
+                    clasOpc .TipoOrdenPago ='E';
+                    clasOpc .IdUsuario =11;
+                    clasOpc .IdEmpresa =1;
+                    clasOpe .IdEmpresa =1;
+                    clasOpe.IngresosAdicional=clasNd .TotalIngresos ;
+                    clasOpe .DescuentoTotal =clasNd .TotalDescuento;
+                    
+                    totpag = DatosPres.ConsultTotalPagado(clasNd.IdPersona);
+                   
+                    totpag = clasPres.TotPag(totpag, clasNd.PrestamoPago);
+                    clasPres.TotalPagado = totpag;
+                    DatosPres.ModificarTotalPago (clasNd .IdPersona ,totpag);
+
+            
+                    
+	
+
+                   
 
                     if (vars==1) {
                         if (DatosNd.Guardar(clasNd))
                         {
-                            ban = 1;
+                            if (DatosOpc.Guardar(clasOpc))
+                            {
+                                if (DatosOpe.Guardar(clasOpe))
+                                {
+                                    ban = 1;
+                                    ban2 = 1;
+                                    ban3 = 1;
+                                }
+                              
+                            }
                         }
                     }
                     
@@ -204,10 +275,14 @@ namespace forms.RecursosHumanos
 
                         if (ban == 1)
                         {
-                            MessageBox.Show(men.Guardar_ok, men.Titulo, MessageBoxButtons.OK);
-                            tsbGenerarNomina  .Enabled = false;
-                            tsbNuevo.Enabled = true;
-                            Limpiar();
+                            if (ban2 == 1)
+                            {
+                                MessageBox.Show(men.Guardar_ok, men.Titulo, MessageBoxButtons.OK);
+                                tsbGenerarNomina.Enabled = false;
+                                tsbNuevo.Enabled = true;
+                                Limpiar();
+                            }
+                           
                         }
                         else
                         {
@@ -243,7 +318,27 @@ namespace forms.RecursosHumanos
             tsbNuevo.Enabled = false;
             tsbModificar.Enabled = false;
             tsbGenerarNomina.Enabled = true;
-            gcNomina.DataSource = DatosNd.ConsultaNomDet ();
+            mes = cmbMes.SelectedIndex;
+            diau = "31";
+            dia = "1";
+            año = Convert.ToString(DateTime.Today.Year);
+            meses = Convert.ToString(mes);
+            desde1 = año + "-" + meses + "-" + dia;
+            hasta1 = año + "-" + meses + "-" + diau;
+            desde = Convert.ToDateTime(desde1);
+            try
+            {
+                hasta = Convert.ToDateTime(hasta1);
+            }
+            catch (Exception)
+            {
+
+                diau = "30";
+                hasta1 = diau + "-" + meses + "-" + año;
+                hasta = Convert.ToDateTime(hasta1);
+            }
+            
+            gcNomina.DataSource = DatosNd.ConsultaNomDet ( );
             
 
             for (int i = 0; i < gvNomina.RowCount; i++)
@@ -251,9 +346,9 @@ namespace forms.RecursosHumanos
 
                 clasNd.NumNomina = Convert.ToInt32(txtNumero.Text);
                 clasNd .IdPersona = Convert.ToInt32(gvNomina.GetRowCellValue(i, colIdPersona));
-                sumT = DatosNd.consultaHorasT(clasNd.IdPersona);
-                sumM = DatosNd.consultaHorasM(clasNd.IdPersona);
-                sumR = DatosNd.consultaHorasR  (clasNd.IdPersona);
+                sumT = DatosNd.consultaHorasT(clasNd.IdPersona,desde  ,hasta );
+                sumM = DatosNd.consultaHorasM(clasNd.IdPersona, desde, hasta);
+                sumR = DatosNd.consultaHorasR(clasNd.IdPersona, desde, hasta);
                 Tothe = clasNd.TotalHorasExtras(sumT, sumM);
                 sn=DatosNd.consultaSueldoN(clasNd.IdPersona, Tothe);
                 ValHe = clasNd.ValHorasExtras(sn,Tothe);
@@ -293,7 +388,7 @@ namespace forms.RecursosHumanos
              cmbPeriodo.Enabled = false;
              cmbEstado.SelectedIndex = 1;
              cmbEstado .Enabled = false;
-
+             deFecha.DateTime = DateTime.Today;
 
              if (accion == "M")
              {
@@ -303,6 +398,7 @@ namespace forms.RecursosHumanos
              {
                  Set();
              }
+             Seguridad();
          }
          private void btnBuscar_Click(object sender, EventArgs e)
          {
@@ -360,6 +456,11 @@ namespace forms.RecursosHumanos
          }
 
 #endregion
+
+         private void cmbMes_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             btnGenerarNomina.Enabled = true ;
+         }
 
         
 

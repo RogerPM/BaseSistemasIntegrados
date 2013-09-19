@@ -60,13 +60,13 @@
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtmovimiento = new DevExpress.XtraEditors.TextEdit();
-            this.ts = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbConsultar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
-            this.tsbImprimir = new System.Windows.Forms.ToolStripButton();
             this.tsbSalir = new System.Windows.Forms.ToolStripButton();
+            this.ts = new System.Windows.Forms.ToolStrip();
+            this.tsbImprimir = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdocumento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
@@ -281,8 +281,8 @@
             this.gleEstado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.gleEstado.Properties.DataSource = this.clsEstadoBindingSource;
-            this.gleEstado.Properties.DisplayMember = "descripcion";
-            this.gleEstado.Properties.ValueMember = "idEstado";
+            this.gleEstado.Properties.DisplayMember = "Descripcion";
+            this.gleEstado.Properties.ValueMember = "IdEstado";
             this.gleEstado.Properties.View = this.gridView1;
             this.gleEstado.Size = new System.Drawing.Size(128, 20);
             this.gleEstado.TabIndex = 122;
@@ -332,21 +332,6 @@
             this.txtmovimiento.Size = new System.Drawing.Size(130, 20);
             this.txtmovimiento.TabIndex = 125;
             // 
-            // ts
-            // 
-            this.ts.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNuevo,
-            this.tsbGuardar,
-            this.tsbConsultar,
-            this.tsbAnular,
-            this.tsbImprimir,
-            this.tsbSalir});
-            this.ts.Location = new System.Drawing.Point(0, 0);
-            this.ts.Name = "ts";
-            this.ts.Size = new System.Drawing.Size(476, 25);
-            this.ts.TabIndex = 130;
-            this.ts.Text = "toolStrip1";
-            // 
             // tsbNuevo
             // 
             this.tsbNuevo.Image = global::forms.Properties.Resources.nuevo;
@@ -383,14 +368,6 @@
             this.tsbAnular.Text = "Anular";
             this.tsbAnular.Click += new System.EventHandler(this.tsbAnular_Click);
             // 
-            // tsbImprimir
-            // 
-            this.tsbImprimir.Image = global::forms.Properties.Resources.imprimir;
-            this.tsbImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbImprimir.Name = "tsbImprimir";
-            this.tsbImprimir.Size = new System.Drawing.Size(58, 22);
-            this.tsbImprimir.Text = "Imprimir";
-            // 
             // tsbSalir
             // 
             this.tsbSalir.Image = global::forms.Properties.Resources.salir;
@@ -399,6 +376,30 @@
             this.tsbSalir.Size = new System.Drawing.Size(42, 22);
             this.tsbSalir.Text = "Salir";
             this.tsbSalir.Click += new System.EventHandler(this.tsbSalir_Click);
+            // 
+            // ts
+            // 
+            this.ts.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNuevo,
+            this.tsbGuardar,
+            this.tsbConsultar,
+            this.tsbAnular,
+            this.tsbImprimir,
+            this.tsbSalir});
+            this.ts.Location = new System.Drawing.Point(0, 0);
+            this.ts.Name = "ts";
+            this.ts.Size = new System.Drawing.Size(476, 25);
+            this.ts.TabIndex = 130;
+            this.ts.Text = "toolStrip1";
+            // 
+            // tsbImprimir
+            // 
+            this.tsbImprimir.Image = global::forms.Properties.Resources.imprimir;
+            this.tsbImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbImprimir.Name = "tsbImprimir";
+            this.tsbImprimir.Size = new System.Drawing.Size(58, 22);
+            this.tsbImprimir.Text = "Imprimir";
+            this.tsbImprimir.Click += new System.EventHandler(this.tsbImprimir_Click);
             // 
             // frm_MovimientoBancario
             // 
@@ -486,7 +487,7 @@
         private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbConsultar;
         private System.Windows.Forms.ToolStripButton tsbAnular;
-        private System.Windows.Forms.ToolStripButton tsbImprimir;
         private System.Windows.Forms.ToolStripButton tsbSalir;
+        private System.Windows.Forms.ToolStripButton tsbImprimir;
     }
 }

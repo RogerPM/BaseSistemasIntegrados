@@ -65,7 +65,15 @@ namespace forms
                     if (clsVwUsuarioInformacion.contrasena == pass)
                     {
                         //IniciarSesion();
-                        cargarModulos();
+                        datHistorial h = new datHistorial();
+                        if (h.GuardarIS(clsVwUsuarioInformacion.idUsuario, DateTime.Now)==true)
+                        {
+                            cargarModulos();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ocurrio un problema al tratar de iniciar sesión, por favor inténtelo más tarde", "TECA™");
+                        }
                     }
                     else
                     {
@@ -199,6 +207,12 @@ namespace forms
         {
             forms.Seguridad.frmCambiarContrasena f = new forms.Seguridad.frmCambiarContrasena();
             f.ShowDialog();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            AcercaDe info = new AcercaDe();
+            info.ShowDialog();
         }
     }
 }

@@ -23,7 +23,24 @@ namespace forms.CuentasxCobrar
         public clsBanco objBanco = new clsBanco();
 
         int idEmpresa = 1;
-        int idUsuario = 11;
+        int idUsuario = 1;
+
+
+        #region "Distributed by security team 3/3"
+        //si este bloque ha sido parcial o totalmente editado, los miembros del equipo de seguridad no 
+        //se responzabilizan en el caso de que exista un mal funcionamiento de este form.        
+        private void Seguridad()
+        {
+            //lecturas
+            btnBuscaPersona.Visible = frmPrincipal.Lectura;
+            btnBuscarInversion.Visible = frmPrincipal.Lectura;
+            //escrituras
+            btnNuevo.Enabled = frmPrincipal.Escritura;
+            btnGrabar.Enabled = frmPrincipal.Escritura;
+            //eliminacion
+            //btnEliminar.Visible = frmPrincipal.Eliminacion;
+        }
+        #endregion
 
         public frm_Inversion()
         {
@@ -36,7 +53,7 @@ namespace forms.CuentasxCobrar
             this.gueTipoInversion.Properties.DataSource = tipoInversion.consultaTipoInversionGeneral();
             /*this.Inactivar();*/
 
-
+            Seguridad();
         }
 
         private void btnBuscaPersona_Click(object sender, EventArgs e)

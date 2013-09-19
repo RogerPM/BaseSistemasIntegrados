@@ -18,7 +18,7 @@ namespace clases.Cuentasxpagar
         public int _IdEmpresa { get; set; }
         public int _IdUsuario { get; set; }
         
-        public List<clsDetalleTelefono> _DetalleTelefono { get; set; }
+        public List<clsDetalleTelefonoCXP> _DetalleTelefono { get; set; }
         public List<clsCtaBancaria2> _CuentaBancaria { get; set; }
 
         public clsEmpresaServicio()

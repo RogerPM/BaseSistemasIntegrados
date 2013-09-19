@@ -31,13 +31,11 @@
     <EntitySetMapping Name="CuentaxCobrar">
       <EntityTypeMapping TypeName="FacturacionModel.CuentaxCobrar">
         <MappingFragment StoreEntitySet="CuentaxCobrar">
-          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
           <ScalarProperty Name="porcentaje_interes" ColumnName="porcentaje_interes" />
           <ScalarProperty Name="TotalCuotas" ColumnName="TotalCuotas" />
-          <ScalarProperty Name="idCabeceraComprobante" ColumnName="idCabeceraComprobante" />
+          <ScalarProperty Name="idNumeroFactura" ColumnName="idNumeroFactura" />
           <ScalarProperty Name="Modulo" ColumnName="Modulo" />
-          <ScalarProperty Name="idFactura" ColumnName="idFactura" />
-          <ScalarProperty Name="idTransaccion" ColumnName="idTransaccion" />
           <ScalarProperty Name="numero_comprobante" ColumnName="numero_comprobante" />
           <ScalarProperty Name="idCuentaxCobrar" ColumnName="idCuentaxCobrar" />
           <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
@@ -48,7 +46,7 @@
     <EntitySetMapping Name="CuentaxCobrarDet">
       <EntityTypeMapping TypeName="FacturacionModel.CuentaxCobrarDet">
         <MappingFragment StoreEntitySet="CuentaxCobrarDet">
-          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
           <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
           <ScalarProperty Name="fecha_vencimiento" ColumnName="fecha_vencimiento" />
           <ScalarProperty Name="fecha_cobro" ColumnName="fecha_cobro" />
@@ -58,8 +56,6 @@
           <ScalarProperty Name="numero_cuota" ColumnName="numero_cuota" />
           <ScalarProperty Name="Numero" ColumnName="Numero" />
           <ScalarProperty Name="idCuentaxCobrar" ColumnName="idCuentaxCobrar" />
-          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
-          <ScalarProperty Name="idEmpresa" ColumnName="idEmpresa" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -133,24 +129,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CotizacionDet">
-      <EntityTypeMapping TypeName="FacturacionModel.CotizacionDet">
-        <MappingFragment StoreEntitySet="CotizacionDet">
-          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
-          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
-          <ScalarProperty Name="precio" ColumnName="precio" />
-          <ScalarProperty Name="FechaMaximaPago" ColumnName="FechaMaximaPago" />
-          <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
-          <ScalarProperty Name="Interes" ColumnName="Interes" />
-          <ScalarProperty Name="CuotaMensual" ColumnName="CuotaMensual" />
-          <ScalarProperty Name="IdArticulo" ColumnName="IdArticulo" />
-          <ScalarProperty Name="IdNumeroCotizacion" ColumnName="IdNumeroCotizacion" />
-          <ScalarProperty Name="Linea" ColumnName="Linea" />
-          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
-          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="DevolucionDet">
       <EntityTypeMapping TypeName="FacturacionModel.DevolucionDet">
         <MappingFragment StoreEntitySet="DevolucionDet">
@@ -174,47 +152,6 @@
           <ScalarProperty Name="IdNumeroDevolucion" ColumnName="IdNumeroDevolucion" />
           <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
           <ScalarProperty Name="cabecera_comprobante" ColumnName="cabecera_comprobante" />
-          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Factura">
-      <EntityTypeMapping TypeName="FacturacionModel.Factura">
-        <MappingFragment StoreEntitySet="Factura">
-          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
-          <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
-          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
-          <ScalarProperty Name="Ice" ColumnName="Ice" />
-          <ScalarProperty Name="Iva" ColumnName="Iva" />
-          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
-          <ScalarProperty Name="NumeroCuotaMensual" ColumnName="NumeroCuotaMensual" />
-          <ScalarProperty Name="ValorEntrada" ColumnName="ValorEntrada" />
-          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-          <ScalarProperty Name="IdNumeroCliente" ColumnName="IdNumeroCliente" />
-          <ScalarProperty Name="IdFormaPago" ColumnName="IdFormaPago" />
-          <ScalarProperty Name="IdPromocion" ColumnName="IdPromocion" />
-          <ScalarProperty Name="IdNumeroCotizacion" ColumnName="IdNumeroCotizacion" />
-          <ScalarProperty Name="IdNumeroFactura" ColumnName="IdNumeroFactura" />
-          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
-          <ScalarProperty Name="cabecera_comprobante" ColumnName="cabecera_comprobante" />
-          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="FacturaDet">
-      <EntityTypeMapping TypeName="FacturacionModel.FacturaDet">
-        <MappingFragment StoreEntitySet="FacturaDet">
-          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
-          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
-          <ScalarProperty Name="precio" ColumnName="precio" />
-          <ScalarProperty Name="FechaMaximaPago" ColumnName="FechaMaximaPago" />
-          <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
-          <ScalarProperty Name="Interes" ColumnName="Interes" />
-          <ScalarProperty Name="CuotaMensual" ColumnName="CuotaMensual" />
-          <ScalarProperty Name="IdArticulo" ColumnName="IdArticulo" />
-          <ScalarProperty Name="IdNumeroFactura" ColumnName="IdNumeroFactura" />
-          <ScalarProperty Name="Linea" ColumnName="Linea" />
-          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
           <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -489,6 +426,104 @@
           <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
           <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
           <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IngresoEgresoCab">
+      <EntityTypeMapping TypeName="FacturacionModel.IngresoEgresoCab">
+        <MappingFragment StoreEntitySet="IngresoEgresoCab">
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+          <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
+          <ScalarProperty Name="IdResponsable" ColumnName="IdResponsable" />
+          <ScalarProperty Name="IdBodega" ColumnName="IdBodega" />
+          <ScalarProperty Name="IdMotivo" ColumnName="IdMotivo" />
+          <ScalarProperty Name="IdOrdenCompra" ColumnName="IdOrdenCompra" />
+          <ScalarProperty Name="FechaMovimiento" ColumnName="FechaMovimiento" />
+          <ScalarProperty Name="IdTipoMovimiento" ColumnName="IdTipoMovimiento" />
+          <ScalarProperty Name="NroMovimiento" ColumnName="NroMovimiento" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IngresoEgresoDet">
+      <EntityTypeMapping TypeName="FacturacionModel.IngresoEgresoDet">
+        <MappingFragment StoreEntitySet="IngresoEgresoDet">
+          <ScalarProperty Name="ValorTotal" ColumnName="ValorTotal" />
+          <ScalarProperty Name="ValorIVA" ColumnName="ValorIVA" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="Costo" ColumnName="Costo" />
+          <ScalarProperty Name="CantidadLlegada" ColumnName="CantidadLlegada" />
+          <ScalarProperty Name="CantidadPedida" ColumnName="CantidadPedida" />
+          <ScalarProperty Name="IdPercha" ColumnName="IdPercha" />
+          <ScalarProperty Name="IdGrupo" ColumnName="IdGrupo" />
+          <ScalarProperty Name="IdArticulo" ColumnName="IdArticulo" />
+          <ScalarProperty Name="IdTipoArticulo" ColumnName="IdTipoArticulo" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="NroMovimiento" ColumnName="NroMovimiento" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Factura">
+      <EntityTypeMapping TypeName="FacturacionModel.Factura">
+        <MappingFragment StoreEntitySet="Factura">
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="Ice" ColumnName="Ice" />
+          <ScalarProperty Name="Iva" ColumnName="Iva" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="NumeroCuotaMensual" ColumnName="NumeroCuotaMensual" />
+          <ScalarProperty Name="ValorEntrada" ColumnName="ValorEntrada" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="IdNumeroCliente" ColumnName="IdNumeroCliente" />
+          <ScalarProperty Name="IdFormaPago" ColumnName="IdFormaPago" />
+          <ScalarProperty Name="IdPromocion" ColumnName="IdPromocion" />
+          <ScalarProperty Name="IdNumeroCotizacion" ColumnName="IdNumeroCotizacion" />
+          <ScalarProperty Name="IdNumeroFactura" ColumnName="IdNumeroFactura" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="cabecera_comprobante" ColumnName="cabecera_comprobante" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FacturaDet">
+      <EntityTypeMapping TypeName="FacturacionModel.FacturaDet">
+        <MappingFragment StoreEntitySet="FacturaDet">
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="costo" ColumnName="costo" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="FechaMaximaPago" ColumnName="FechaMaximaPago" />
+          <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
+          <ScalarProperty Name="Interes" ColumnName="Interes" />
+          <ScalarProperty Name="CuotaMensual" ColumnName="CuotaMensual" />
+          <ScalarProperty Name="IdArticulo" ColumnName="IdArticulo" />
+          <ScalarProperty Name="IdNumeroFactura" ColumnName="IdNumeroFactura" />
+          <ScalarProperty Name="Linea" ColumnName="Linea" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CotizacionDet">
+      <EntityTypeMapping TypeName="FacturacionModel.CotizacionDet">
+        <MappingFragment StoreEntitySet="CotizacionDet">
+          <ScalarProperty Name="idEstado" ColumnName="idEstado" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="costo" ColumnName="costo" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="FechaMaximaPago" ColumnName="FechaMaximaPago" />
+          <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
+          <ScalarProperty Name="Interes" ColumnName="Interes" />
+          <ScalarProperty Name="CuotaMensual" ColumnName="CuotaMensual" />
+          <ScalarProperty Name="IdArticulo" ColumnName="IdArticulo" />
+          <ScalarProperty Name="IdNumeroCotizacion" ColumnName="IdNumeroCotizacion" />
+          <ScalarProperty Name="Linea" ColumnName="Linea" />
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

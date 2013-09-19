@@ -135,7 +135,7 @@
             // 
             // barButtonItem8
             // 
-            this.barButtonItem8.Caption = "Estado de Cuenta";
+            this.barButtonItem8.Caption = "Movimiento Bancario";
             this.barButtonItem8.Glyph = global::forms.Properties.Resources._24_privilegiosusuarios;
             this.barButtonItem8.Id = 8;
             this.barButtonItem8.Name = "barButtonItem8";
@@ -198,7 +198,7 @@
             // 
             // barButtonItem15
             // 
-            this.barButtonItem15.Caption = "Cobro";
+            this.barButtonItem15.Caption = "Inversion";
             this.barButtonItem15.Glyph = global::forms.Properties.Resources.cuentasporcobrar;
             this.barButtonItem15.Id = 22;
             this.barButtonItem15.Name = "barButtonItem15";

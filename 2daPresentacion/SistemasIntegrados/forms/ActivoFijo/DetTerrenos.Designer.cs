@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gbxTerreno = new System.Windows.Forms.GroupBox();
             this.lblV_Adquisición = new DevExpress.XtraEditors.LabelControl();
             this.txtV_Residual = new DevExpress.XtraEditors.TextEdit();
@@ -49,6 +50,7 @@
             this.lblCodigoCatastral = new DevExpress.XtraEditors.LabelControl();
             this.lblProveedor = new DevExpress.XtraEditors.LabelControl();
             this.cbxProveedor = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdPersona = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdentificacion = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -84,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaLegalizacion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoCatastral.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxProveedor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsPersonaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,6 +129,9 @@
             // 
             this.txtV_Residual.Location = new System.Drawing.Point(347, 111);
             this.txtV_Residual.Name = "txtV_Residual";
+            this.txtV_Residual.Properties.Mask.EditMask = "n2";
+            this.txtV_Residual.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtV_Residual.Properties.MaxLength = 12;
             this.txtV_Residual.Size = new System.Drawing.Size(73, 20);
             this.txtV_Residual.TabIndex = 142;
             // 
@@ -141,6 +147,9 @@
             // 
             this.txtV_Adquisicion.Location = new System.Drawing.Point(347, 84);
             this.txtV_Adquisicion.Name = "txtV_Adquisicion";
+            this.txtV_Adquisicion.Properties.Mask.EditMask = "n2";
+            this.txtV_Adquisicion.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtV_Adquisicion.Properties.MaxLength = 12;
             this.txtV_Adquisicion.Size = new System.Drawing.Size(68, 20);
             this.txtV_Adquisicion.TabIndex = 140;
             // 
@@ -176,6 +185,9 @@
             // 
             this.txtAvaluo.Location = new System.Drawing.Point(347, 58);
             this.txtAvaluo.Name = "txtAvaluo";
+            this.txtAvaluo.Properties.Mask.EditMask = "n2";
+            this.txtAvaluo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtAvaluo.Properties.MaxLength = 12;
             this.txtAvaluo.Size = new System.Drawing.Size(76, 20);
             this.txtAvaluo.TabIndex = 136;
             // 
@@ -183,6 +195,9 @@
             // 
             this.txtDimAncho.Location = new System.Drawing.Point(108, 110);
             this.txtDimAncho.Name = "txtDimAncho";
+            this.txtDimAncho.Properties.Mask.EditMask = "n2";
+            this.txtDimAncho.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtDimAncho.Properties.MaxLength = 12;
             this.txtDimAncho.Size = new System.Drawing.Size(96, 20);
             this.txtDimAncho.TabIndex = 135;
             // 
@@ -198,6 +213,9 @@
             // 
             this.txtDimLargo.Location = new System.Drawing.Point(108, 84);
             this.txtDimLargo.Name = "txtDimLargo";
+            this.txtDimLargo.Properties.Mask.EditMask = "n2";
+            this.txtDimLargo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtDimLargo.Properties.MaxLength = 12;
             this.txtDimLargo.Size = new System.Drawing.Size(96, 20);
             this.txtDimLargo.TabIndex = 133;
             // 
@@ -213,6 +231,9 @@
             // 
             this.txtUbicacion.Location = new System.Drawing.Point(64, 142);
             this.txtUbicacion.Name = "txtUbicacion";
+            this.txtUbicacion.Properties.Mask.EditMask = "[a-zA-Z0-9 .,;:@()#]+";
+            this.txtUbicacion.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtUbicacion.Properties.MaxLength = 100;
             this.txtUbicacion.Size = new System.Drawing.Size(394, 20);
             this.txtUbicacion.TabIndex = 130;
             // 
@@ -248,6 +269,8 @@
             // 
             this.txtCodigoCatastral.Location = new System.Drawing.Point(108, 58);
             this.txtCodigoCatastral.Name = "txtCodigoCatastral";
+            this.txtCodigoCatastral.Properties.Mask.EditMask = "E-A-00-0000-000";
+            this.txtCodigoCatastral.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
             this.txtCodigoCatastral.Size = new System.Drawing.Size(111, 20);
             this.txtCodigoCatastral.TabIndex = 108;
             // 
@@ -273,11 +296,16 @@
             this.cbxProveedor.Name = "cbxProveedor";
             this.cbxProveedor.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxProveedor.Properties.DataSource = this.clsPersonaBindingSource;
             this.cbxProveedor.Properties.DisplayMember = "NombreRazonSocial";
             this.cbxProveedor.Properties.ValueMember = "NombreRazonSocial";
             this.cbxProveedor.Properties.View = this.gridView1;
             this.cbxProveedor.Size = new System.Drawing.Size(129, 20);
             this.cbxProveedor.TabIndex = 311;
+            // 
+            // clsPersonaBindingSource
+            // 
+            this.clsPersonaBindingSource.DataSource = typeof(clases.RecursosHumanos.clsPersona);
             // 
             // gridView1
             // 
@@ -423,12 +451,14 @@
             this.btnAdicional.Size = new System.Drawing.Size(84, 23);
             this.btnAdicional.TabIndex = 315;
             this.btnAdicional.Text = "Adicional";
+            this.btnAdicional.Click += new System.EventHandler(this.btnAdicional_Click);
             // 
             // rtbObservacion
             // 
             this.rtbObservacion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.rtbObservacion.Enabled = false;
             this.rtbObservacion.Location = new System.Drawing.Point(123, 247);
+            this.rtbObservacion.MaxLength = 449;
             this.rtbObservacion.Name = "rtbObservacion";
             this.rtbObservacion.Size = new System.Drawing.Size(231, 61);
             this.rtbObservacion.TabIndex = 314;
@@ -470,6 +500,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtFechaLegalizacion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoCatastral.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxProveedor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsPersonaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -521,5 +552,6 @@
         public DevExpress.XtraEditors.TextEdit txtCodigoCatastral;
         public DevExpress.XtraEditors.LabelControl lblCodigoCatastral;
         private DevExpress.XtraEditors.LabelControl lblComentario;
+        private System.Windows.Forms.BindingSource clsPersonaBindingSource;
     }
 }

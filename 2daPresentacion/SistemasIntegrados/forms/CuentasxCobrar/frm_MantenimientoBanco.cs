@@ -16,6 +16,22 @@ namespace forms.CuentasxCobrar
         int idEmpresa = 1;
         String AccionBotonAplastado;
 
+        #region "Distributed by security team 3/3"
+        //si este bloque ha sido parcial o totalmente editado, los miembros del equipo de seguridad no 
+        //se responzabilizan en el caso de que exista un mal funcionamiento de este form.        
+        private void Seguridad()
+        {
+            //lecturas
+            btnBuscar.Visible = frmPrincipal.Lectura;
+            //escrituras
+            btnNuevo.Enabled = frmPrincipal.Escritura;
+            btnGrabar.Enabled = frmPrincipal.Escritura;
+            btnModificar.Enabled = frmPrincipal.Escritura;
+            //eliminacion
+            btnEliminar.Enabled = frmPrincipal.Eliminacion;
+        }
+        #endregion
+
         public frm_MantenimientoBanco()
         {
             InitializeComponent();
@@ -24,6 +40,7 @@ namespace forms.CuentasxCobrar
         private void frm_MantenimientoBanco_Load(object sender, EventArgs e)
         {
             this.Inactivar();
+            Seguridad();
         }
         
         private void btnBuscar_Click(object sender, EventArgs e)

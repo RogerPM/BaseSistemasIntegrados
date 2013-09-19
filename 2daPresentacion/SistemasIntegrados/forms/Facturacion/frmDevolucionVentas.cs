@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using datos;
-using forms.Facturacion.Consultas;
 using datos.Facturacion;
 
 namespace forms.Facturacion
@@ -134,6 +133,8 @@ namespace forms.Facturacion
                     MessageBox.Show("Registro Ingresado con exito.", "Modulo de Facturacion",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //cargarpromociones();
+                    ImprimirReporte();
+
                     limpiar();
                 }
             }
@@ -215,6 +216,7 @@ namespace forms.Facturacion
             this.txtcodarticulo.Text = obj.Codigo;
             this.txtdesarticulo.Text = obj.desarticulo;
             this.txtcantidad.Text = obj.cantidad.ToString();
+            //this.txtcantidad.Text = obj.cantidad.ToString();
         }
 
         private void btnConsulta_Click(object sender, EventArgs e)
@@ -295,5 +297,24 @@ namespace forms.Facturacion
             txtFacturaDescripcion.Text = obj.Cliente;
             
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            ImprimirReporte();
+        }
+
+        private void ImprimirReporte()
+        {
+
+            FormviewDevolucion obj = new FormviewDevolucion(Int32.Parse(txtNumeroDevolucion .Text));
+            obj.ShowDialog();
+        }
+
+        private void btnAnular_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

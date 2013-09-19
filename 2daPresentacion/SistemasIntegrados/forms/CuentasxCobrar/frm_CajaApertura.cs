@@ -15,11 +15,21 @@ namespace forms.CuentasxCobrar
     {
         public clsAperturaCaja objAperturaCaja = new clsAperturaCaja();
         int idEmpresa = 1;
-        //int idEmpresa = clsVwUsuarioInformacion.idEmpresa;
-        int idUsuario = 11;
-        //int idUsuario = clsVwUsuarioInformacion.idUsuario;
+        int idUsuario = 1;
         int idEstado = 1;
         String AccionBotonAplastado;
+
+        #region "Distributed by security team 3/3"
+        //si este bloque ha sido parcial o totalmente editado, los miembros del equipo de seguridad no 
+        //se responzabilizan en el caso de que exista un mal funcionamiento de este form.        
+        private void Seguridad()
+        {
+            //lecturas
+            //btnBuscar.Visible = frmPrincipal.Lectura;
+            //escrituras
+            btnAperturar.Enabled = frmPrincipal.Escritura;
+        }
+        #endregion
 
         public frm_CajaApertura()
         {
@@ -28,62 +38,71 @@ namespace forms.CuentasxCobrar
 
         private void frm_CajaApertura_Load(object sender, EventArgs e)
         {
-
+            
             /*CARGANDO CODIGO*/
             clsDatosAperturaCaja objDatosAperturaCaja = new clsDatosAperturaCaja();
-            txtCodigo.Text = Convert.ToString(objDatosAperturaCaja.getIdSiguiente());
-            txtUsuario.Text = Convert.ToString(idUsuario);
-
-            /*CARGANDO EL DATAGRID DESDE LA BASE*/
-            clsDatosMonetarioDetalle objDatosMonetarioDetalle = new clsDatosMonetarioDetalle();
-            dgvApertura.DataSource = objDatosMonetarioDetalle.consultaMonetarioDetalleGeneral();
-
-            /* AGREGANDO LAS COLUMNAS CANTIDAD Y SUBTOTAL*/
-            DataGridViewCell cell = new DataGridViewTextBoxCell();
-
-            DataGridViewColumn colCantidad = new DataGridViewColumn();
-            colCantidad.CellTemplate = cell;
-            colCantidad.HeaderText = "Cantidad";
-            colCantidad.Name = "Cantidad";
-            colCantidad.Visible = true;
-            colCantidad.Width = 60;
-            dgvApertura.Columns.Insert(5, colCantidad);
-
-            DataGridViewColumn colSubtotal = new DataGridViewColumn();
-            colSubtotal.CellTemplate = cell;
-            colSubtotal.HeaderText = "Subtotal";
-            colSubtotal.Name = "Subtotal";
-            colSubtotal.Visible = true;
-            colSubtotal.Width = 60;
-            dgvApertura.Columns.Insert(6, colSubtotal);
-
-            /*OCULTANDO COLUNMAS*/
-            dgvApertura.Columns[0].Visible = false;
-            dgvApertura.Columns[1].Visible = false;
-            dgvApertura.Columns[3].Visible = false;
-
-            /*AJUSTANDO ANCHO DE COLUMNAS*/
-            /*dgvApertura.Columns[2].Width = 150;*/
-            dgvApertura.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            /*ESTABLECIENDO LAS CABECERAS*/
-            dgvApertura.Columns[0].HeaderText = "ID Empresa";
-            dgvApertura.Columns[1].HeaderText = "ID Detalle Monetario";
-            dgvApertura.Columns[2].HeaderText = "Descripcion";
-            dgvApertura.Columns[3].HeaderText = "Valor";
-            dgvApertura.Columns[4].HeaderText = "Estado";
-            dgvApertura.Columns[5].HeaderText = "Cantidad";
-            dgvApertura.Columns[6].HeaderText = "Subtotal";
-
-            /*OCULTANDO LAS DE ESTADO INACTIVO*/
-            for (int i = 0; i < dgvApertura.Rows.Count; i++)
+            if (objDatosAperturaCaja.consultaAperturada(DateTime.Today, idUsuario))
             {
-                if (Convert.ToString(dgvApertura.Rows[i].Cells[4].Value) == "I")
-                {
-                    dgvApertura.Rows[i].Visible = false;
-                }
+                MessageBox.Show("LA CAJA YA HA SIDO APERTURADA POR ESTE USUARIO EL DIA DE HOY");
+                this.Close();
             }
+            else
+            {
+                txtCodigo.Text = Convert.ToString(objDatosAperturaCaja.getIdSiguiente());
+                txtUsuario.Text = Convert.ToString(idUsuario);
 
-            dgvApertura.CellValueChanged += new DataGridViewCellEventHandler(dgvApertura_CellValueChanged);
+                /*CARGANDO EL DATAGRID DESDE LA BASE*/
+                clsDatosMonetarioDetalle objDatosMonetarioDetalle = new clsDatosMonetarioDetalle();
+                dgvApertura.DataSource = objDatosMonetarioDetalle.consultaMonetarioDetalleGeneral();
+
+                /* AGREGANDO LAS COLUMNAS CANTIDAD Y SUBTOTAL*/
+                DataGridViewCell cell = new DataGridViewTextBoxCell();
+
+                DataGridViewColumn colCantidad = new DataGridViewColumn();
+                colCantidad.CellTemplate = cell;
+                colCantidad.HeaderText = "Cantidad";
+                colCantidad.Name = "Cantidad";
+                colCantidad.Visible = true;
+                colCantidad.Width = 60;
+                dgvApertura.Columns.Insert(5, colCantidad);
+
+                DataGridViewColumn colSubtotal = new DataGridViewColumn();
+                colSubtotal.CellTemplate = cell;
+                colSubtotal.HeaderText = "Subtotal";
+                colSubtotal.Name = "Subtotal";
+                colSubtotal.Visible = true;
+                colSubtotal.Width = 60;
+                dgvApertura.Columns.Insert(6, colSubtotal);
+
+                /*OCULTANDO COLUNMAS*/
+                dgvApertura.Columns[0].Visible = false;
+                dgvApertura.Columns[1].Visible = false;
+                dgvApertura.Columns[3].Visible = false;
+
+                /*AJUSTANDO ANCHO DE COLUMNAS*/
+                /*dgvApertura.Columns[2].Width = 150;*/
+                dgvApertura.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                /*ESTABLECIENDO LAS CABECERAS*/
+                dgvApertura.Columns[0].HeaderText = "ID Empresa";
+                dgvApertura.Columns[1].HeaderText = "ID Detalle Monetario";
+                dgvApertura.Columns[2].HeaderText = "Descripcion";
+                dgvApertura.Columns[3].HeaderText = "Valor";
+                dgvApertura.Columns[4].HeaderText = "Estado";
+                dgvApertura.Columns[5].HeaderText = "Cantidad";
+                dgvApertura.Columns[6].HeaderText = "Subtotal";
+
+                /*OCULTANDO LAS DE ESTADO INACTIVO*/
+                for (int i = 0; i < dgvApertura.Rows.Count; i++)
+                {
+                    if (Convert.ToString(dgvApertura.Rows[i].Cells[4].Value) == "I")
+                    {
+                        dgvApertura.Rows[i].Visible = false;
+                    }
+                }
+
+                dgvApertura.CellValueChanged += new DataGridViewCellEventHandler(dgvApertura_CellValueChanged);
+            }
+            Seguridad();
         }
 
         private void btnAperturar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -106,22 +125,24 @@ namespace forms.CuentasxCobrar
                             {
                                 clsDatosAperturaDet objDatosAperturaDet = new clsDatosAperturaDet();
                                 clsAperturaDet objAperturaDet = new clsAperturaDet();
-                                objAperturaDet.idEmpresa = idEmpresa;
-                                objAperturaDet.idUsuario = idUsuario;
+                                objAperturaDet.idEmpresa=idEmpresa;
+                                objAperturaDet.idUsuario=idUsuario;
                                 objAperturaDet.idAperturaCaja = objAperturaCaja.idAperturaCaja;
                                 objAperturaDet.Denominacion = Convert.ToInt32(dgvApertura.Rows[i].Cells[1].Value);
                                 objAperturaDet.Cantidad = Convert.ToInt32(dgvApertura.Rows[i].Cells[5].Value);
                                 objAperturaDet.idEstado = idEstado;
                                 objDatosAperturaDet.guardar(objAperturaDet);
-
+                                
                             }
                         }
 
                         MessageBox.Show(objMensaje.Guardar_ok, objMensaje.Titulo, MessageBoxButtons.OK);
+                        this.Close();
                     }
                     else
                     {
                         MessageBox.Show(objMensaje.Guardar_error, objMensaje.Titulo, MessageBoxButtons.OK);
+                        this.Close();
                     }
                 }
             }
@@ -162,13 +183,13 @@ namespace forms.CuentasxCobrar
             decimal Subtotal = Convert.ToDecimal(dgvApertura.Rows[y].Cells[3].Value) * Convert.ToDecimal(dgvApertura.Rows[y].Cells[5].Value);
             dgvApertura.Rows[y].Cells[6].Value = Subtotal;
         }
-
+        
         public void CalculoMonto()
         {
             decimal Monto = dgvApertura.Rows.Cast<DataGridViewRow>().Sum(x => Convert.ToDecimal(x.Cells[6].Value));
 
             //mostramos la suma en el textbox y en la fila que agregamos 
-            txtMonto.Text = Convert.ToString(Monto);
+            txtMonto.Text = Convert.ToString(Monto); 
         }
 
         private void btnSalir_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -230,5 +230,37 @@ namespace datos.CuentasxCobrar
                 return false;
             }
         }
+
+        public List<clsCuentaBancaria> consulta(int cbanca)
+        {
+            try
+            {
+                List<clsCuentaBancaria> lista = new List<clsCuentaBancaria>();
+                CuentasPorCobrarEntities ent = new CuentasPorCobrarEntities();
+                var con = from w in ent.CuentaBancaria where w.idBanco == cbanca select w;
+                foreach (var item in con)
+                {
+                    clsCuentaBancaria cuenta = new clsCuentaBancaria();
+                    cuenta.idBanco = item.idBanco;
+                    cuenta.idCuentaBancaria = item.idCuentaBancaria;
+                    //cuenta.idTitular = (item.idTitular); ni la uso
+                    cuenta.NumeroCuenta = (item.NumeroCuenta);
+                    cuenta.TipoCuenta = (item.TipoCuenta);
+
+                    cuenta.idEmpresa = item.idEmpresa;
+                    lista.Add(cuenta);
+                    //cuenta.Estado = 'A';
+
+                }
+                return lista;
+
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+
+        }
     }
 }

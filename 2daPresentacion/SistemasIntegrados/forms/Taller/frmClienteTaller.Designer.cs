@@ -1,4 +1,5 @@
-﻿namespace forms.Taller
+﻿
+namespace forms.Taller
 {
     partial class frmClienteTaller
     {
@@ -28,13 +29,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClienteTaller));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.cbxFechaNacimiento = new DevExpress.XtraEditors.DateEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtApellido = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtNombre = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtIdentificacion = new DevExpress.XtraEditors.TextEdit();
@@ -47,9 +48,7 @@
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.cbxGenero = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.cbxTipoIdentificacion = new DevExpress.XtraEditors.ComboBoxEdit();
             this.btnBuscar = new DevExpress.XtraEditors.SimpleButton();
-            this.cbxTipoPersona = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.cbxEstado = new DevExpress.XtraEditors.ComboBoxEdit();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -58,24 +57,38 @@
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnSalir = new System.Windows.Forms.ToolStripButton();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.txtCodigo = new DevExpress.XtraEditors.TextEdit();
+            this.txtNombre = new DevExpress.XtraEditors.TextEdit();
+            this.cbxTipoIdentificacion = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsTipoIdentificacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.cbxTipoPersona = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsTipoPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.cbxFechaNacimiento.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxFechaNacimiento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtApellido.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxGenero.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxTipoIdentificacion.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxTipoPersona.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxEstado.Properties)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxTipoIdentificacion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTipoIdentificacionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxTipoPersona.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTipoPersonaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(47, 102);
+            this.labelControl1.Location = new System.Drawing.Point(47, 124);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(81, 13);
             this.labelControl1.TabIndex = 13;
@@ -84,18 +97,18 @@
             // cbxFechaNacimiento
             // 
             this.cbxFechaNacimiento.EditValue = null;
-            this.cbxFechaNacimiento.Location = new System.Drawing.Point(185, 188);
+            this.cbxFechaNacimiento.Location = new System.Drawing.Point(185, 210);
             this.cbxFechaNacimiento.Name = "cbxFechaNacimiento";
             this.cbxFechaNacimiento.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbxFechaNacimiento.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.cbxFechaNacimiento.Size = new System.Drawing.Size(137, 20);
-            this.cbxFechaNacimiento.TabIndex = 9;
+            this.cbxFechaNacimiento.TabIndex = 8;
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(46, 191);
+            this.labelControl7.Location = new System.Drawing.Point(46, 213);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(88, 13);
             this.labelControl7.TabIndex = 8;
@@ -103,29 +116,23 @@
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(185, 157);
+            this.txtApellido.Location = new System.Drawing.Point(185, 179);
             this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Properties.MaxLength = 50;
             this.txtApellido.Size = new System.Drawing.Size(137, 20);
-            this.txtApellido.TabIndex = 3;
+            this.txtApellido.TabIndex = 7;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(47, 160);
+            this.labelControl4.Location = new System.Drawing.Point(47, 182);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(41, 13);
             this.labelControl4.TabIndex = 2;
             this.labelControl4.Text = "Apellido:";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(185, 127);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(137, 20);
-            this.txtNombre.TabIndex = 1;
-            // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(46, 130);
+            this.labelControl3.Location = new System.Drawing.Point(46, 152);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(113, 13);
             this.labelControl3.TabIndex = 0;
@@ -133,7 +140,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(46, 74);
+            this.labelControl2.Location = new System.Drawing.Point(46, 96);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(68, 13);
             this.labelControl2.TabIndex = 17;
@@ -141,14 +148,15 @@
             // 
             // txtIdentificacion
             // 
-            this.txtIdentificacion.Location = new System.Drawing.Point(185, 71);
+            this.txtIdentificacion.Location = new System.Drawing.Point(185, 93);
             this.txtIdentificacion.Name = "txtIdentificacion";
+            this.txtIdentificacion.Properties.MaxLength = 14;
             this.txtIdentificacion.Size = new System.Drawing.Size(137, 20);
-            this.txtIdentificacion.TabIndex = 18;
+            this.txtIdentificacion.TabIndex = 3;
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(47, 248);
+            this.labelControl9.Location = new System.Drawing.Point(47, 270);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(47, 13);
             this.labelControl9.TabIndex = 19;
@@ -156,7 +164,7 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(47, 278);
+            this.labelControl10.Location = new System.Drawing.Point(47, 300);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(46, 13);
             this.labelControl10.TabIndex = 20;
@@ -164,7 +172,7 @@
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(47, 307);
+            this.labelControl11.Location = new System.Drawing.Point(47, 329);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(22, 13);
             this.labelControl11.TabIndex = 21;
@@ -172,28 +180,31 @@
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(185, 245);
+            this.txtDireccion.Location = new System.Drawing.Point(185, 267);
             this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Properties.MaxLength = 100;
             this.txtDireccion.Size = new System.Drawing.Size(137, 20);
-            this.txtDireccion.TabIndex = 22;
+            this.txtDireccion.TabIndex = 10;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(185, 275);
+            this.txtTelefono.Location = new System.Drawing.Point(185, 297);
             this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Properties.MaxLength = 10;
             this.txtTelefono.Size = new System.Drawing.Size(137, 20);
-            this.txtTelefono.TabIndex = 23;
+            this.txtTelefono.TabIndex = 11;
             // 
             // txtMail
             // 
-            this.txtMail.Location = new System.Drawing.Point(185, 304);
+            this.txtMail.Location = new System.Drawing.Point(185, 326);
             this.txtMail.Name = "txtMail";
+            this.txtMail.Properties.MaxLength = 30;
             this.txtMail.Size = new System.Drawing.Size(137, 20);
-            this.txtMail.TabIndex = 24;
+            this.txtMail.TabIndex = 12;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(47, 220);
+            this.labelControl5.Location = new System.Drawing.Point(47, 242);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(39, 13);
             this.labelControl5.TabIndex = 25;
@@ -201,7 +212,7 @@
             // 
             // cbxGenero
             // 
-            this.cbxGenero.Location = new System.Drawing.Point(185, 217);
+            this.cbxGenero.Location = new System.Drawing.Point(185, 239);
             this.cbxGenero.Name = "cbxGenero";
             this.cbxGenero.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -209,53 +220,28 @@
             "Masculino",
             "Femenino"});
             this.cbxGenero.Size = new System.Drawing.Size(137, 20);
-            this.cbxGenero.TabIndex = 26;
+            this.cbxGenero.TabIndex = 9;
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(46, 45);
+            this.labelControl6.Location = new System.Drawing.Point(46, 67);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(97, 13);
             this.labelControl6.TabIndex = 27;
             this.labelControl6.Text = "Tipo Indentificación:";
             // 
-            // cbxTipoIdentificacion
-            // 
-            this.cbxTipoIdentificacion.Location = new System.Drawing.Point(184, 42);
-            this.cbxTipoIdentificacion.Name = "cbxTipoIdentificacion";
-            this.cbxTipoIdentificacion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxTipoIdentificacion.Properties.Items.AddRange(new object[] {
-            "Cedula",
-            "Pasaporte",
-            "RUC"});
-            this.cbxTipoIdentificacion.Size = new System.Drawing.Size(138, 20);
-            this.cbxTipoIdentificacion.TabIndex = 28;
-            // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(337, 69);
+            this.btnBuscar.Location = new System.Drawing.Point(328, 92);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(33, 23);
-            this.btnBuscar.TabIndex = 31;
+            this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "...";
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // cbxTipoPersona
-            // 
-            this.cbxTipoPersona.Location = new System.Drawing.Point(185, 99);
-            this.cbxTipoPersona.Name = "cbxTipoPersona";
-            this.cbxTipoPersona.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxTipoPersona.Properties.Items.AddRange(new object[] {
-            "Natural",
-            "Juridica"});
-            this.cbxTipoPersona.Size = new System.Drawing.Size(137, 20);
-            this.cbxTipoPersona.TabIndex = 32;
-            // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(47, 337);
+            this.labelControl12.Location = new System.Drawing.Point(47, 359);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(37, 13);
             this.labelControl12.TabIndex = 33;
@@ -263,15 +249,16 @@
             // 
             // cbxEstado
             // 
-            this.cbxEstado.Location = new System.Drawing.Point(185, 334);
+            this.cbxEstado.EditValue = "Activo";
+            this.cbxEstado.Location = new System.Drawing.Point(185, 356);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbxEstado.Properties.Items.AddRange(new object[] {
-            "Activa",
-            "Inactiva"});
+            "Activo",
+            "Inactivo"});
             this.cbxEstado.Size = new System.Drawing.Size(137, 20);
-            this.cbxEstado.TabIndex = 34;
+            this.cbxEstado.TabIndex = 13;
             // 
             // toolStrip1
             // 
@@ -332,17 +319,96 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(47, 39);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(37, 13);
+            this.labelControl8.TabIndex = 36;
+            this.labelControl8.Text = "Código:";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Location = new System.Drawing.Point(184, 36);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(60, 20);
+            this.txtCodigo.TabIndex = 1;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(185, 149);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Properties.MaxLength = 50;
+            this.txtNombre.Size = new System.Drawing.Size(137, 20);
+            this.txtNombre.TabIndex = 6;
+            // 
+            // cbxTipoIdentificacion
+            // 
+            this.cbxTipoIdentificacion.Location = new System.Drawing.Point(184, 64);
+            this.cbxTipoIdentificacion.Name = "cbxTipoIdentificacion";
+            this.cbxTipoIdentificacion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxTipoIdentificacion.Properties.DataSource = this.clsTipoIdentificacionBindingSource;
+            this.cbxTipoIdentificacion.Properties.DisplayMember = "Descripcion";
+            this.cbxTipoIdentificacion.Properties.NullText = "";
+            this.cbxTipoIdentificacion.Properties.PopupSizeable = false;
+            this.cbxTipoIdentificacion.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cbxTipoIdentificacion.Properties.ValueMember = "Descripcion";
+            this.cbxTipoIdentificacion.Properties.View = this.gridLookUpEdit1View;
+            this.cbxTipoIdentificacion.Size = new System.Drawing.Size(138, 20);
+            this.cbxTipoIdentificacion.TabIndex = 2;
+            // 
+            // clsTipoIdentificacionBindingSource
+            // 
+            this.clsTipoIdentificacionBindingSource.DataSource = typeof(clases.Taller.clsTipoIdentificacion);
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // cbxTipoPersona
+            // 
+            this.cbxTipoPersona.Location = new System.Drawing.Point(185, 121);
+            this.cbxTipoPersona.Name = "cbxTipoPersona";
+            this.cbxTipoPersona.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxTipoPersona.Properties.DataSource = this.clsTipoPersonaBindingSource;
+            this.cbxTipoPersona.Properties.DisplayMember = "Descripcion";
+            this.cbxTipoPersona.Properties.NullText = "";
+            this.cbxTipoPersona.Properties.PopupSizeable = false;
+            this.cbxTipoPersona.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cbxTipoPersona.Properties.ValueMember = "Descripcion";
+            this.cbxTipoPersona.Properties.View = this.gridView1;
+            this.cbxTipoPersona.Size = new System.Drawing.Size(137, 20);
+            this.cbxTipoPersona.TabIndex = 5;
+            // 
+            // clsTipoPersonaBindingSource
+            // 
+            this.clsTipoPersonaBindingSource.DataSource = typeof(clases.Taller.clsTipoPersona);
+            // 
+            // gridView1
+            // 
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
             // frmClienteTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 374);
+            this.ClientSize = new System.Drawing.Size(412, 390);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.cbxEstado);
             this.Controls.Add(this.labelControl12);
-            this.Controls.Add(this.cbxTipoPersona);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.cbxTipoIdentificacion);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.cbxGenero);
             this.Controls.Add(this.labelControl5);
@@ -358,25 +424,32 @@
             this.Controls.Add(this.txtIdentificacion);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.cbxTipoIdentificacion);
+            this.Controls.Add(this.cbxTipoPersona);
             this.Name = "frmClienteTaller";
             this.Text = "Clientes";
+            this.Load += new System.EventHandler(this.frmClienteTaller_Load);
             ((System.ComponentModel.ISupportInitialize)(this.cbxFechaNacimiento.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxFechaNacimiento.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtApellido.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdentificacion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDireccion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefono.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxGenero.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxTipoIdentificacion.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxTipoPersona.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxEstado.Properties)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxTipoIdentificacion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTipoIdentificacionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxTipoPersona.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsTipoPersonaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,7 +463,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtApellido;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit txtNombre;
         private DevExpress.XtraEditors.DateEdit cbxFechaNacimiento;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl9;
@@ -402,9 +474,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.ComboBoxEdit cbxGenero;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.ComboBoxEdit cbxTipoIdentificacion;
         private DevExpress.XtraEditors.SimpleButton btnBuscar;
-        private DevExpress.XtraEditors.ComboBoxEdit cbxTipoPersona;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.ComboBoxEdit cbxEstado;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -413,6 +483,15 @@
         private System.Windows.Forms.ToolStripButton btnModificar;
         private System.Windows.Forms.ToolStripButton btnEliminar;
         private System.Windows.Forms.ToolStripButton btnSalir;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.TextEdit txtCodigo;
+        private DevExpress.XtraEditors.TextEdit txtNombre;
+        private DevExpress.XtraEditors.GridLookUpEdit cbxTipoIdentificacion;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private System.Windows.Forms.BindingSource clsTipoIdentificacionBindingSource;
+        private DevExpress.XtraEditors.GridLookUpEdit cbxTipoPersona;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.BindingSource clsTipoPersonaBindingSource;
 
 
     }

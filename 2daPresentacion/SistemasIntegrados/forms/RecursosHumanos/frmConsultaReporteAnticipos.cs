@@ -15,5 +15,10 @@ namespace forms.RecursosHumanos
         {
             InitializeComponent();
         }
+
+        private void frmConsultaReporteAnticipos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

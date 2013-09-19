@@ -26,7 +26,7 @@ namespace datos.Cuentasxpagar
                     clas.Estado = item.Estado;
                     clas.IdUsuario = item.IdUsuario;
                     clas.IdEmpresa = item.IdEmpresa;
-                   lista.Add(clas);
+                    lista.Add(clas);
 
                 }
 
@@ -40,7 +40,7 @@ namespace datos.Cuentasxpagar
 
         }
 
-     
+
         public void Modificar(clsMedioPago Medio)
         {
             using (CuentasPorPagarEntities ent = new CuentasPorPagarEntities())
@@ -49,7 +49,7 @@ namespace datos.Cuentasxpagar
 
                 x.Descripcion = Medio.Descripcion;
                 x.fechaRegistro = Medio.FechaRegistro;
-                x.Estado =Medio.Estado;
+                x.Estado = Medio.Estado;
                 x.IdEmpresa = Medio.IdEmpresa;
                 x.IdUsuario = Medio.IdUsuario;
                 ent.SaveChanges();
@@ -67,11 +67,11 @@ namespace datos.Cuentasxpagar
 
                     MedioPago pago = new MedioPago()
                     {
-                        IdMedioPago =id,
+                        IdMedioPago = id,
                         Descripcion = Medio.Descripcion,
                         fechaRegistro = DateTime.Today, // Medio.FechaRegistro,
                         Estado = Medio.Estado,
-                       IdEmpresa =Medio.IdEmpresa,
+                        IdEmpresa = Medio.IdEmpresa,
                         IdUsuario = Medio.IdUsuario,
 
                     };
@@ -117,9 +117,9 @@ namespace datos.Cuentasxpagar
             {
 
                 CuentasPorPagarEntities ent = new CuentasPorPagarEntities();
-            int x = ((from a in ent.MedioPago select a.IdMedioPago).Max()) + 1;
+                int x = ((from a in ent.MedioPago select a.IdMedioPago).Max()) + 1;
 
-            return x;
+                return x;
             }
             catch (Exception e)
             {
@@ -133,5 +133,3 @@ namespace datos.Cuentasxpagar
 
 
 }
-
-

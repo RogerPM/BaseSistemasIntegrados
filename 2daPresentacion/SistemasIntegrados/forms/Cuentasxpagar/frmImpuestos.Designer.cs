@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmImpuestos));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbxEstado = new System.Windows.Forms.ComboBox();
-            this.lblporcentaje = new System.Windows.Forms.Label();
             this.btnBuscar = new DevExpress.XtraEditors.SimpleButton();
             this.txtPorcentaje = new DevExpress.XtraEditors.TextEdit();
             this.txtDescripcion = new DevExpress.XtraEditors.TextEdit();
@@ -42,29 +39,29 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.dtpFechaRegistro = new DevExpress.XtraEditors.DateEdit();
+            this.cbxEstado = new DevExpress.XtraEditors.ComboBoxEdit();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsbSalir = new System.Windows.Forms.ToolStripButton();
-            this.deFechaRegistro = new DevExpress.XtraEditors.DateEdit();
-            this.clsEstadoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.clsEstadoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ckbAcreedor = new DevExpress.XtraEditors.CheckEdit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPorcentaje.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deFechaRegistro.Properties.VistaTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deFechaRegistro.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsEstadoBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsEstadoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFechaRegistro.Properties.VistaTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFechaRegistro.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxEstado.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckbAcreedor.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.ckbAcreedor);
             this.groupBox1.Controls.Add(this.cbxEstado);
-            this.groupBox1.Controls.Add(this.lblporcentaje);
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.txtPorcentaje);
             this.groupBox1.Controls.Add(this.txtDescripcion);
@@ -75,64 +72,43 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 60);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(396, 211);
+            this.groupBox1.Size = new System.Drawing.Size(396, 194);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // cbxEstado
-            // 
-            this.cbxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxEstado.FormattingEnabled = true;
-            this.cbxEstado.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.cbxEstado.Location = new System.Drawing.Point(112, 159);
-            this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(237, 21);
-            this.cbxEstado.TabIndex = 2;
-            // 
-            // lblporcentaje
-            // 
-            this.lblporcentaje.AutoSize = true;
-            this.lblporcentaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblporcentaje.Location = new System.Drawing.Point(334, 123);
-            this.lblporcentaje.Name = "lblporcentaje";
-            this.lblporcentaje.Size = new System.Drawing.Size(16, 13);
-            this.lblporcentaje.TabIndex = 29;
-            this.lblporcentaje.Text = "%";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(327, 36);
+            this.btnBuscar.Location = new System.Drawing.Point(355, 36);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(22, 17);
             this.btnBuscar.TabIndex = 28;
             this.btnBuscar.Text = "...";
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtPorcentaje
             // 
             this.txtPorcentaje.Location = new System.Drawing.Point(112, 116);
             this.txtPorcentaje.Name = "txtPorcentaje";
-            this.txtPorcentaje.Properties.Mask.EditMask = "f";
+            this.txtPorcentaje.Properties.Mask.EditMask = "P";
             this.txtPorcentaje.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtPorcentaje.Size = new System.Drawing.Size(200, 20);
-            this.txtPorcentaje.TabIndex = 1;
+            this.txtPorcentaje.Size = new System.Drawing.Size(61, 20);
+            this.txtPorcentaje.TabIndex = 27;
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(112, 75);
             this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Properties.Mask.EditMask = ".+";
+            this.txtDescripcion.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtDescripcion.Size = new System.Drawing.Size(237, 20);
-            this.txtDescripcion.TabIndex = 0;
+            this.txtDescripcion.TabIndex = 27;
             // 
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
             this.txtCodigo.Location = new System.Drawing.Point(112, 33);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(200, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(237, 20);
             this.txtCodigo.TabIndex = 27;
             // 
             // label1
@@ -186,6 +162,31 @@
             this.toolStrip1.TabIndex = 23;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // dtpFechaRegistro
+            // 
+            this.dtpFechaRegistro.EditValue = null;
+            this.dtpFechaRegistro.Enabled = false;
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(308, 37);
+            this.dtpFechaRegistro.Name = "dtpFechaRegistro";
+            this.dtpFechaRegistro.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtpFechaRegistro.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.dtpFechaRegistro.Size = new System.Drawing.Size(100, 20);
+            this.dtpFechaRegistro.TabIndex = 26;
+            // 
+            // cbxEstado
+            // 
+            this.cbxEstado.Location = new System.Drawing.Point(112, 159);
+            this.cbxEstado.Name = "cbxEstado";
+            this.cbxEstado.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxEstado.Properties.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cbxEstado.Size = new System.Drawing.Size(237, 20);
+            this.cbxEstado.TabIndex = 29;
+            // 
             // tsbNuevo
             // 
             this.tsbNuevo.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -217,7 +218,7 @@
             this.tsbModificar.Name = "tsbModificar";
             this.tsbModificar.Size = new System.Drawing.Size(78, 22);
             this.tsbModificar.Text = "Modificar";
-            this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click_1);
+            this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
             // 
             // tsbEliminar
             // 
@@ -228,7 +229,7 @@
             this.tsbEliminar.Name = "tsbEliminar";
             this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
             this.tsbEliminar.Text = "Eliminar";
-            this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click_1);
+            this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
             // tsbSalir
             // 
@@ -237,35 +238,22 @@
             this.tsbSalir.Name = "tsbSalir";
             this.tsbSalir.Size = new System.Drawing.Size(49, 22);
             this.tsbSalir.Text = "Salir";
-            this.tsbSalir.Click += new System.EventHandler(this.tsbSalir_Click_1);
+            this.tsbSalir.Click += new System.EventHandler(this.tsbSalir_Click);
             // 
-            // deFechaRegistro
+            // ckbAcreedor
             // 
-            this.deFechaRegistro.EditValue = null;
-            this.deFechaRegistro.Enabled = false;
-            this.deFechaRegistro.Location = new System.Drawing.Point(295, 34);
-            this.deFechaRegistro.Name = "deFechaRegistro";
-            this.deFechaRegistro.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deFechaRegistro.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.deFechaRegistro.Size = new System.Drawing.Size(100, 20);
-            this.deFechaRegistro.TabIndex = 26;
-            // 
-            // clsEstadoBindingSource1
-            // 
-            this.clsEstadoBindingSource1.DataSource = typeof(clases.Seguridad.clsEstado);
-            // 
-            // clsEstadoBindingSource
-            // 
-            this.clsEstadoBindingSource.DataSource = typeof(clases.Seguridad.clsEstado);
+            this.ckbAcreedor.Location = new System.Drawing.Point(223, 117);
+            this.ckbAcreedor.Name = "ckbAcreedor";
+            this.ckbAcreedor.Properties.Caption = "Naturaleza acreedora";
+            this.ckbAcreedor.Size = new System.Drawing.Size(126, 19);
+            this.ckbAcreedor.TabIndex = 30;
             // 
             // frmImpuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 274);
-            this.Controls.Add(this.deFechaRegistro);
+            this.ClientSize = new System.Drawing.Size(421, 266);
+            this.Controls.Add(this.dtpFechaRegistro);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -281,10 +269,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deFechaRegistro.Properties.VistaTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deFechaRegistro.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsEstadoBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsEstadoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFechaRegistro.Properties.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpFechaRegistro.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxEstado.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ckbAcreedor.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,10 +295,8 @@
         private DevExpress.XtraEditors.TextEdit txtDescripcion;
         private DevExpress.XtraEditors.TextEdit txtCodigo;
         private System.Windows.Forms.ToolStripButton tsbSalir;
-        private DevExpress.XtraEditors.DateEdit deFechaRegistro;
-        private System.Windows.Forms.BindingSource clsEstadoBindingSource;
-        private System.Windows.Forms.Label lblporcentaje;
-        private System.Windows.Forms.BindingSource clsEstadoBindingSource1;
-        private System.Windows.Forms.ComboBox cbxEstado;
+        private DevExpress.XtraEditors.DateEdit dtpFechaRegistro;
+        private DevExpress.XtraEditors.ComboBoxEdit cbxEstado;
+        private DevExpress.XtraEditors.CheckEdit ckbAcreedor;
     }
 }

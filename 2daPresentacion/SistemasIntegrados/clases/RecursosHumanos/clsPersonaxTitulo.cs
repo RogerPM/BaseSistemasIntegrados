@@ -11,8 +11,8 @@ namespace clases.RecursosHumanos
         public int IdEmpresa { get; set; }
         public int IdPersona { get; set; }
         public int IdEstado { get; set; }
-
-
+        
+        
 
         public clsPersonaxTitulo()
         {

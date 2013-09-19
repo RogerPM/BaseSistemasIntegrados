@@ -27,9 +27,11 @@ namespace forms.Contabilidad
             try
             {
                 clsDatoCuenta cuenta = new clsDatoCuenta();
+                clsDatoTipoTransaccion tipotr = new clsDatoTipoTransaccion();
                 var lista=cuenta.ConsultaCuentaComprobante();
                 lista.ForEach(q => q.nombre = "[" + q.IdCuenta + "] " + q.nombre);
                 comboCuenta.DataSource = lista;
+                cmbTipotransaccion.Properties.DataSource = tipotr.Consulta();
             }
             catch (Exception)
             {
@@ -60,6 +62,7 @@ namespace forms.Contabilidad
             try
             {
                 cabecera.fecha = dtFecha.Value;
+                cabecera.TipoTransaccion = Convert.ToInt32(cmbTipotransaccion.EditValue);
                 cabecera.glosa = txtGlosa.Text;
                 cabecera.IdEmpresa = 1;
                 //////////
@@ -102,6 +105,7 @@ namespace forms.Contabilidad
             try
             {
                 txtGlosa.Text = Comp.glosa;
+                cmbTipotransaccion.EditValue = Comp.TipoTransaccion;
                 dtFecha.Value= Comp.fecha;
                 gridControlComprobante.DataSource = Comp.Detalle;
                 NumeroComprobante = Comp.numero_comprobante;

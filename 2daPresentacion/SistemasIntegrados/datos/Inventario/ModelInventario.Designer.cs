@@ -19,69 +19,64 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region Metadatos de relaciones en EDM
 
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__OrdenComp__idEst__0D0FEE32", "Estado", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Estado), "OrdenCompra", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.OrdenCompra), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEgresoCab__0BB1B5A5", "OrdenCompra", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.OrdenCompra), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__OrdenComp__idEmp__0B27A5C0", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Empresa), "OrdenCompra", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.OrdenCompra), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__OrdenComp__IdUsu__0C1BC9F9", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Usuario), "OrdenCompra", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.OrdenCompra), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__OrdenCompraDet__63F8CA06", "OrdenCompra", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.OrdenCompra), "OrdenCompraDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.OrdenCompraDet), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__OrdenCompraDet__64ECEE3F", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Articulo), "OrdenCompraDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.OrdenCompraDet), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdChas__5C37ACAD", "Chasis", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Chasis), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdColo__5F141958", "Color", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Color), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdEmpr__58671BC9", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Empresa), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdGrup__5B438874", "Grupo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Grupo), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdMarc__60083D91", "Marca", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Marca), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdMode__60FC61CA", "Modelo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Modelo), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdTipo__5A4F643B", "TipoArticulo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.TipoArticulo), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdTipo__5D2BD0E6", "TipoMotor", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TipoMotor), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdTipo__5E1FF51F", "TipoCombustible", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TipoCombustible), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdTipo__61F08603", "TipoMaterial", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TipoMaterial), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdUnid__595B4002", "UnidadMedida", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.UnidadMedida), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__ArticuloBodega__184C96B4", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Articulo), "ArticuloBodega", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.ArticuloBodega), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEgresoDet__18178C8A", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Articulo), "IngresoEgresoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoDet), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TomaFisicaDet__0CDAE408", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Articulo), "TomaFisicaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TomaFisicaDet), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__ArticuloB__IdEmp__1758727B", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "ArticuloBodega", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.ArticuloBodega), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__ArticuloB__IdPer__1940BAED", "Percha", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Percha), "ArticuloBodega", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.ArticuloBodega), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Bodega__IdEmpres__220B0B18", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Empresa), "Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Bodega), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Bodega__IdRespon__22FF2F51", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Persona), "Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Bodega), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEgresoCab__0F824689", "Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Bodega), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Percha__67A95F59", "Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Bodega), "Percha", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Percha), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TomaFisicaCab__0539C240", "Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Bodega), "TomaFisicaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TomaFisicaCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TransferenciaBod__740F363E", "Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Bodega), "TransferenciaBodegaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TransferenciaBodegaCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TransferenciaBod__75035A77", "Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Bodega), "TransferenciaBodegaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TransferenciaBodegaCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Chasis__IdEmpres__2E70E1FD", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "Chasis", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Chasis), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Color__IdEmpresa__3F9B6DFF", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "Color", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Color), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Grupo__IdEmpresa__6ABAD62E", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "Grupo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Grupo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Grupo__IdTipoArt__6BAEFA67", "TipoArticulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TipoArticulo), "Grupo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Grupo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEg__IdGru__190BB0C3", "Grupo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Grupo), "IngresoEgresoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoDet), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEg__IdMot__0E8E2250", "Motivo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Motivo), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEg__IdRes__10766AC2", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Persona), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEg__IdTip__0CA5D9DE", "TipoMovimiento", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TipoMovimiento), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEg__IdUsu__116A8EFB", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Usuario), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEgresoDet__17236851", "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.IngresoEgresoCab), "IngresoEgresoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoDet), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEg__IdPer__19FFD4FC", "Percha", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Percha), "IngresoEgresoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoDet), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEg__IdTip__162F4418", "TipoArticulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TipoArticulo), "IngresoEgresoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoDet), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Marca__IdEmpresa__45544755", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "Marca", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Marca), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Modelo__IdMarca__4CF5691D", "Marca", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Marca), "Modelo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Modelo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Modelo__IdEmpres__4B0D20AB", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "Modelo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Modelo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Motivo__IdEmpres__6D6238AF", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "Motivo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Motivo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TomaFisic__IdMot__035179CE", "Motivo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Motivo), "TomaFisicaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TomaFisicaCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Transfere__IdMot__75F77EB0", "Motivo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Motivo), "TransferenciaBodegaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TransferenciaBodegaCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Percha__IdEmpres__66B53B20", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Empresa), "Percha", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Percha), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TipoArtic__IdEmp__6501FCD8", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TipoArticulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TipoArticulo), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TomaFisic__IdTip__04459E07", "TipoArticulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TipoArticulo), "TomaFisicaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TomaFisicaCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TipoCombu__IdEmp__39E294A9", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TipoCombustible", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TipoCombustible), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TipoMater__IdEmp__51BA1E3A", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TipoMaterial", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TipoMaterial), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TipoMotor__IdEmp__3429BB53", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TipoMotor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TipoMotor), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TipoMovim__IdEmp__119F9925", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TipoMovimiento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TipoMovimiento), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TomaFisic__IdEmp__025D5595", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TomaFisicaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TomaFisicaCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TomaFisic__IdUsu__062DE679", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Usuario), "TomaFisicaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TomaFisicaCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TomaFisic__IdEmp__0BE6BFCF", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TomaFisicaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TomaFisicaDet), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Transfere__IdEmp__731B1205", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TransferenciaBodegaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TransferenciaBodegaCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Transfere__IdUsu__77DFC722", "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Usuario), "TransferenciaBodegaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TransferenciaBodegaCab), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Transfere__NroTr__7CA47C3F", "TransferenciaBodegaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.TransferenciaBodegaCab), "TransferenciaBodegaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TransferenciaBodegaDet), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__UnidadMed__IdEmp__28B808A7", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "UnidadMedida", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.UnidadMedida), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Persona__IdEmpre__1BFD2C07", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Empresa), "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Persona), true)]
-[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Usuario__IdUsuar__3C69FB99", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Persona), "Usuario", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Usuario), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdChas__5006DFF2", "Chasis", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Chasis), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdColo__52E34C9D", "Color", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Color), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdGrup__4F12BBB9", "Grupo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Grupo), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdMode__54CB950F", "Modelo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Modelo), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdTipo__4E1E9780", "TipoArticulo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.TipoArticulo), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdTipo__50FB042B", "TipoMotor", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TipoMotor), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdTipo__51EF2864", "TipoCombustible", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TipoCombustible), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdTipo__55BFB948", "TipoMaterial", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TipoMaterial), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__ArticuloBodega__7CD98669", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Articulo), "ArticuloBodega", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.ArticuloBodega), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEgresoDet__5C37ACAD", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Articulo), "IngresoEgresoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoDet), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__LlegadaMercaderi__5AA469F6", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Articulo), "LlegadaMercaderiaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.LlegadaMercaderiaDet), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TomaFisicaDet__6BCEF5F8", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Articulo), "TomaFisicaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TomaFisicaDet), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__ArticuloB__IdPer__7DCDAAA2", "Percha", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Percha), "ArticuloBodega", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.ArticuloBodega), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__LlegadaMercaderi__64CCF2AE", "Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Bodega), "LlegadaMercaderiaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.LlegadaMercaderiaCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Percha__59904A2C", "Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Bodega), "Percha", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Percha), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TomaFisicaCab__6F7F8B4B", "Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Bodega), "TomaFisicaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TomaFisicaCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TransferenciaBod__6225902D", "Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Bodega), "TransferenciaBodegaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TransferenciaBodegaCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TransferenciaBod__6319B466", "Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Bodega), "TransferenciaBodegaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TransferenciaBodegaCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Grupo__IdTipoArt__7E02B4CC", "TipoArticulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TipoArticulo), "Grupo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Grupo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEg__IdPer__5D2BD0E6", "Percha", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Percha), "IngresoEgresoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoDet), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__LlegadaMe__IdMot__63D8CE75", "Motivo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Motivo), "LlegadaMercaderiaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.LlegadaMercaderiaCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__LlegadaMe__IdTip__61F08603", "TipoMovimiento", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TipoMovimiento), "LlegadaMercaderiaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.LlegadaMercaderiaCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__LlegadaMercaderi__59B045BD", "LlegadaMercaderiaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.LlegadaMercaderiaCab), "LlegadaMercaderiaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.LlegadaMercaderiaDet), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__LlegadaMe__IdPer__5B988E2F", "Percha", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Percha), "LlegadaMercaderiaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.LlegadaMercaderiaDet), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TomaFisic__IdMot__6D9742D9", "Motivo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Motivo), "TomaFisicaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TomaFisicaCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Transfere__IdMot__640DD89F", "Motivo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Motivo), "TransferenciaBodegaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TransferenciaBodegaCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TomaFisic__IdTip__6E8B6712", "TipoArticulo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TipoArticulo), "TomaFisicaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TomaFisicaCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Transfere__NroTr__68D28DBC", "TransferenciaBodegaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.TransferenciaBodegaCab), "TransferenciaBodegaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TransferenciaBodegaDet), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdMarc__53D770D6", "Marca", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Marca), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Modelo__IdMarca__44952D46", "Marca", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Marca), "Modelo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Modelo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__LlegadaMercaderi__60083D91", "OrdenCompra", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.OrdenCompra), "LlegadaMercaderiaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.LlegadaMercaderiaCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__OrdenCompraDet__48BAC3E5", "OrdenCompra", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.OrdenCompra), "OrdenCompraDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.OrdenCompraDet), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__OrdenCompraDet__49AEE81E", "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Articulo), "OrdenCompraDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.OrdenCompraDet), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdUnid__4D2A7347", "UnidadMedida", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.UnidadMedida), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__OrdenComp__idEmp__15DA3E5D", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Empresa), "OrdenCompra", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.OrdenCompra), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Articulo__IdEmpr__4C364F0E", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Empresa), "Articulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Articulo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__ArticuloB__IdEmp__7BE56230", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "ArticuloBodega", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.ArticuloBodega), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Bodega__IdEmpres__2704CA5F", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Empresa), "Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Bodega), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Chasis__IdEmpres__2F9A1060", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "Chasis", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Chasis), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Color__IdEmpresa__3B0BC30C", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "Color", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Color), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Grupo__IdEmpresa__7D0E9093", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "Grupo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Grupo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Marca__IdEmpresa__3EDC53F0", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "Marca", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Marca), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Modelo__IdEmpres__42ACE4D4", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "Modelo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Modelo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Motivo__IdEmpres__5D60DB10", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "Motivo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Motivo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Percha__IdEmpres__589C25F3", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(datos.Inventario.Empresa), "Percha", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.Percha), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TipoArtic__IdEmp__793DFFAF", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TipoArticulo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TipoArticulo), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TipoCombu__IdEmp__373B3228", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TipoCombustible", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TipoCombustible), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TipoMater__IdEmp__477199F1", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TipoMaterial", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TipoMaterial), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TipoMotor__IdEmp__336AA144", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TipoMotor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TipoMotor), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TipoMovim__IdEmp__7814D14C", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TipoMovimiento", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TipoMovimiento), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TomaFisic__IdEmp__6CA31EA0", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TomaFisicaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TomaFisicaCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__TomaFisic__IdEmp__6ADAD1BF", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TomaFisicaDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TomaFisicaDet), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__Transfere__IdEmp__61316BF4", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "TransferenciaBodegaCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.TransferenciaBodegaCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__UnidadMed__IdEmp__2BC97F7C", "Empresa", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Empresa), "UnidadMedida", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.UnidadMedida), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEgresoCab__0D99FE17", "Bodega", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Bodega), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEg__IdMot__0CA5D9DE", "Motivo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.Motivo), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEg__IdTip__0ABD916C", "TipoMovimiento", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.TipoMovimiento), "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoCab), true)]
+[assembly: EdmRelationshipAttribute("ModelInventario", "FK__IngresoEgresoDet__1446FBA6", "IngresoEgresoCab", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(datos.Inventario.IngresoEgresoCab), "IngresoEgresoDet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(datos.Inventario.IngresoEgresoDet), true)]
 
 #endregion
 
@@ -132,54 +127,6 @@ namespace datos.Inventario
         #endregion
     
         #region Propiedades de ObjectSet
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        public ObjectSet<Estado> Estado
-        {
-            get
-            {
-                if ((_Estado == null))
-                {
-                    _Estado = base.CreateObjectSet<Estado>("Estado");
-                }
-                return _Estado;
-            }
-        }
-        private ObjectSet<Estado> _Estado;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        public ObjectSet<OrdenCompra> OrdenCompra
-        {
-            get
-            {
-                if ((_OrdenCompra == null))
-                {
-                    _OrdenCompra = base.CreateObjectSet<OrdenCompra>("OrdenCompra");
-                }
-                return _OrdenCompra;
-            }
-        }
-        private ObjectSet<OrdenCompra> _OrdenCompra;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        public ObjectSet<OrdenCompraDet> OrdenCompraDet
-        {
-            get
-            {
-                if ((_OrdenCompraDet == null))
-                {
-                    _OrdenCompraDet = base.CreateObjectSet<OrdenCompraDet>("OrdenCompraDet");
-                }
-                return _OrdenCompraDet;
-            }
-        }
-        private ObjectSet<OrdenCompraDet> _OrdenCompraDet;
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -280,22 +227,6 @@ namespace datos.Inventario
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        public ObjectSet<IngresoEgresoCab> IngresoEgresoCab
-        {
-            get
-            {
-                if ((_IngresoEgresoCab == null))
-                {
-                    _IngresoEgresoCab = base.CreateObjectSet<IngresoEgresoCab>("IngresoEgresoCab");
-                }
-                return _IngresoEgresoCab;
-            }
-        }
-        private ObjectSet<IngresoEgresoCab> _IngresoEgresoCab;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
         public ObjectSet<IngresoEgresoDet> IngresoEgresoDet
         {
             get
@@ -312,18 +243,34 @@ namespace datos.Inventario
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        public ObjectSet<Marca> Marca
+        public ObjectSet<LlegadaMercaderiaCab> LlegadaMercaderiaCab
         {
             get
             {
-                if ((_Marca == null))
+                if ((_LlegadaMercaderiaCab == null))
                 {
-                    _Marca = base.CreateObjectSet<Marca>("Marca");
+                    _LlegadaMercaderiaCab = base.CreateObjectSet<LlegadaMercaderiaCab>("LlegadaMercaderiaCab");
                 }
-                return _Marca;
+                return _LlegadaMercaderiaCab;
             }
         }
-        private ObjectSet<Marca> _Marca;
+        private ObjectSet<LlegadaMercaderiaCab> _LlegadaMercaderiaCab;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<LlegadaMercaderiaDet> LlegadaMercaderiaDet
+        {
+            get
+            {
+                if ((_LlegadaMercaderiaDet == null))
+                {
+                    _LlegadaMercaderiaDet = base.CreateObjectSet<LlegadaMercaderiaDet>("LlegadaMercaderiaDet");
+                }
+                return _LlegadaMercaderiaDet;
+            }
+        }
+        private ObjectSet<LlegadaMercaderiaDet> _LlegadaMercaderiaDet;
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -520,6 +467,54 @@ namespace datos.Inventario
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
+        public ObjectSet<Marca> Marca
+        {
+            get
+            {
+                if ((_Marca == null))
+                {
+                    _Marca = base.CreateObjectSet<Marca>("Marca");
+                }
+                return _Marca;
+            }
+        }
+        private ObjectSet<Marca> _Marca;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<OrdenCompra> OrdenCompra
+        {
+            get
+            {
+                if ((_OrdenCompra == null))
+                {
+                    _OrdenCompra = base.CreateObjectSet<OrdenCompra>("OrdenCompra");
+                }
+                return _OrdenCompra;
+            }
+        }
+        private ObjectSet<OrdenCompra> _OrdenCompra;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<OrdenCompraDet> OrdenCompraDet
+        {
+            get
+            {
+                if ((_OrdenCompraDet == null))
+                {
+                    _OrdenCompraDet = base.CreateObjectSet<OrdenCompraDet>("OrdenCompraDet");
+                }
+                return _OrdenCompraDet;
+            }
+        }
+        private ObjectSet<OrdenCompraDet> _OrdenCompraDet;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
         public ObjectSet<UnidadMedida> UnidadMedida
         {
             get
@@ -532,22 +527,6 @@ namespace datos.Inventario
             }
         }
         private ObjectSet<UnidadMedida> _UnidadMedida;
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        public ObjectSet<Persona> Persona
-        {
-            get
-            {
-                if ((_Persona == null))
-                {
-                    _Persona = base.CreateObjectSet<Persona>("Persona");
-                }
-                return _Persona;
-            }
-        }
-        private ObjectSet<Persona> _Persona;
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -568,46 +547,22 @@ namespace datos.Inventario
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        public ObjectSet<Usuario> Usuario
+        public ObjectSet<IngresoEgresoCab> IngresoEgresoCab
         {
             get
             {
-                if ((_Usuario == null))
+                if ((_IngresoEgresoCab == null))
                 {
-                    _Usuario = base.CreateObjectSet<Usuario>("Usuario");
+                    _IngresoEgresoCab = base.CreateObjectSet<IngresoEgresoCab>("IngresoEgresoCab");
                 }
-                return _Usuario;
+                return _IngresoEgresoCab;
             }
         }
-        private ObjectSet<Usuario> _Usuario;
+        private ObjectSet<IngresoEgresoCab> _IngresoEgresoCab;
 
         #endregion
 
         #region Métodos AddTo
-    
-        /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet Estado. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToEstado(Estado estado)
-        {
-            base.AddObject("Estado", estado);
-        }
-    
-        /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet OrdenCompra. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToOrdenCompra(OrdenCompra ordenCompra)
-        {
-            base.AddObject("OrdenCompra", ordenCompra);
-        }
-    
-        /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet OrdenCompraDet. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToOrdenCompraDet(OrdenCompraDet ordenCompraDet)
-        {
-            base.AddObject("OrdenCompraDet", ordenCompraDet);
-        }
     
         /// <summary>
         /// Método desusado para agregar un nuevo objeto al EntitySet Articulo. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
@@ -658,14 +613,6 @@ namespace datos.Inventario
         }
     
         /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet IngresoEgresoCab. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToIngresoEgresoCab(IngresoEgresoCab ingresoEgresoCab)
-        {
-            base.AddObject("IngresoEgresoCab", ingresoEgresoCab);
-        }
-    
-        /// <summary>
         /// Método desusado para agregar un nuevo objeto al EntitySet IngresoEgresoDet. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
         /// </summary>
         public void AddToIngresoEgresoDet(IngresoEgresoDet ingresoEgresoDet)
@@ -674,11 +621,19 @@ namespace datos.Inventario
         }
     
         /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet Marca. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// Método desusado para agregar un nuevo objeto al EntitySet LlegadaMercaderiaCab. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
         /// </summary>
-        public void AddToMarca(Marca marca)
+        public void AddToLlegadaMercaderiaCab(LlegadaMercaderiaCab llegadaMercaderiaCab)
         {
-            base.AddObject("Marca", marca);
+            base.AddObject("LlegadaMercaderiaCab", llegadaMercaderiaCab);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet LlegadaMercaderiaDet. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToLlegadaMercaderiaDet(LlegadaMercaderiaDet llegadaMercaderiaDet)
+        {
+            base.AddObject("LlegadaMercaderiaDet", llegadaMercaderiaDet);
         }
     
         /// <summary>
@@ -778,19 +733,35 @@ namespace datos.Inventario
         }
     
         /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet Marca. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToMarca(Marca marca)
+        {
+            base.AddObject("Marca", marca);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet OrdenCompra. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToOrdenCompra(OrdenCompra ordenCompra)
+        {
+            base.AddObject("OrdenCompra", ordenCompra);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet OrdenCompraDet. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToOrdenCompraDet(OrdenCompraDet ordenCompraDet)
+        {
+            base.AddObject("OrdenCompraDet", ordenCompraDet);
+        }
+    
+        /// <summary>
         /// Método desusado para agregar un nuevo objeto al EntitySet UnidadMedida. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
         /// </summary>
         public void AddToUnidadMedida(UnidadMedida unidadMedida)
         {
             base.AddObject("UnidadMedida", unidadMedida);
-        }
-    
-        /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet Persona. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
-        /// </summary>
-        public void AddToPersona(Persona persona)
-        {
-            base.AddObject("Persona", persona);
         }
     
         /// <summary>
@@ -802,11 +773,11 @@ namespace datos.Inventario
         }
     
         /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet Usuario. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// Método desusado para agregar un nuevo objeto al EntitySet IngresoEgresoCab. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
         /// </summary>
-        public void AddToUsuario(Usuario usuario)
+        public void AddToIngresoEgresoCab(IngresoEgresoCab ingresoEgresoCab)
         {
-            base.AddObject("Usuario", usuario);
+            base.AddObject("IngresoEgresoCab", ingresoEgresoCab);
         }
 
         #endregion
@@ -1419,38 +1390,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenCompraDet__64ECEE3F", "OrdenCompraDet")]
-        public EntityCollection<OrdenCompraDet> OrdenCompraDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenCompraDet>("ModelInventario.FK__OrdenCompraDet__64ECEE3F", "OrdenCompraDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenCompraDet>("ModelInventario.FK__OrdenCompraDet__64ECEE3F", "OrdenCompraDet", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdChas__5C37ACAD", "Chasis")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdChas__5006DFF2", "Chasis")]
         public Chasis Chasis
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Chasis>("ModelInventario.FK__Articulo__IdChas__5C37ACAD", "Chasis").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Chasis>("ModelInventario.FK__Articulo__IdChas__5006DFF2", "Chasis").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Chasis>("ModelInventario.FK__Articulo__IdChas__5C37ACAD", "Chasis").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Chasis>("ModelInventario.FK__Articulo__IdChas__5006DFF2", "Chasis").Value = value;
             }
         }
         /// <summary>
@@ -1462,13 +1411,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Chasis>("ModelInventario.FK__Articulo__IdChas__5C37ACAD", "Chasis");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Chasis>("ModelInventario.FK__Articulo__IdChas__5006DFF2", "Chasis");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Chasis>("ModelInventario.FK__Articulo__IdChas__5C37ACAD", "Chasis", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Chasis>("ModelInventario.FK__Articulo__IdChas__5006DFF2", "Chasis", value);
                 }
             }
         }
@@ -1479,16 +1428,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdColo__5F141958", "Color")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdColo__52E34C9D", "Color")]
         public Color Color
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Color>("ModelInventario.FK__Articulo__IdColo__5F141958", "Color").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Color>("ModelInventario.FK__Articulo__IdColo__52E34C9D", "Color").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Color>("ModelInventario.FK__Articulo__IdColo__5F141958", "Color").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Color>("ModelInventario.FK__Articulo__IdColo__52E34C9D", "Color").Value = value;
             }
         }
         /// <summary>
@@ -1500,13 +1449,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Color>("ModelInventario.FK__Articulo__IdColo__5F141958", "Color");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Color>("ModelInventario.FK__Articulo__IdColo__52E34C9D", "Color");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Color>("ModelInventario.FK__Articulo__IdColo__5F141958", "Color", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Color>("ModelInventario.FK__Articulo__IdColo__52E34C9D", "Color", value);
                 }
             }
         }
@@ -1517,54 +1466,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdEmpr__58671BC9", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Articulo__IdEmpr__58671BC9", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Articulo__IdEmpr__58671BC9", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Articulo__IdEmpr__58671BC9", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Articulo__IdEmpr__58671BC9", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdGrup__5B438874", "Grupo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdGrup__4F12BBB9", "Grupo")]
         public Grupo Grupo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Grupo>("ModelInventario.FK__Articulo__IdGrup__5B438874", "Grupo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Grupo>("ModelInventario.FK__Articulo__IdGrup__4F12BBB9", "Grupo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Grupo>("ModelInventario.FK__Articulo__IdGrup__5B438874", "Grupo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Grupo>("ModelInventario.FK__Articulo__IdGrup__4F12BBB9", "Grupo").Value = value;
             }
         }
         /// <summary>
@@ -1576,13 +1487,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Grupo>("ModelInventario.FK__Articulo__IdGrup__5B438874", "Grupo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Grupo>("ModelInventario.FK__Articulo__IdGrup__4F12BBB9", "Grupo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Grupo>("ModelInventario.FK__Articulo__IdGrup__5B438874", "Grupo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Grupo>("ModelInventario.FK__Articulo__IdGrup__4F12BBB9", "Grupo", value);
                 }
             }
         }
@@ -1593,54 +1504,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdMarc__60083D91", "Marca")]
-        public Marca Marca
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Marca>("ModelInventario.FK__Articulo__IdMarc__60083D91", "Marca").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Marca>("ModelInventario.FK__Articulo__IdMarc__60083D91", "Marca").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Marca> MarcaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Marca>("ModelInventario.FK__Articulo__IdMarc__60083D91", "Marca");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Marca>("ModelInventario.FK__Articulo__IdMarc__60083D91", "Marca", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdMode__60FC61CA", "Modelo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdMode__54CB950F", "Modelo")]
         public Modelo Modelo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Modelo>("ModelInventario.FK__Articulo__IdMode__60FC61CA", "Modelo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Modelo>("ModelInventario.FK__Articulo__IdMode__54CB950F", "Modelo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Modelo>("ModelInventario.FK__Articulo__IdMode__60FC61CA", "Modelo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Modelo>("ModelInventario.FK__Articulo__IdMode__54CB950F", "Modelo").Value = value;
             }
         }
         /// <summary>
@@ -1652,13 +1525,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Modelo>("ModelInventario.FK__Articulo__IdMode__60FC61CA", "Modelo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Modelo>("ModelInventario.FK__Articulo__IdMode__54CB950F", "Modelo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Modelo>("ModelInventario.FK__Articulo__IdMode__60FC61CA", "Modelo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Modelo>("ModelInventario.FK__Articulo__IdMode__54CB950F", "Modelo", value);
                 }
             }
         }
@@ -1669,16 +1542,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__5A4F643B", "TipoArticulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__4E1E9780", "TipoArticulo")]
         public TipoArticulo TipoArticulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__Articulo__IdTipo__5A4F643B", "TipoArticulo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__Articulo__IdTipo__4E1E9780", "TipoArticulo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__Articulo__IdTipo__5A4F643B", "TipoArticulo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__Articulo__IdTipo__4E1E9780", "TipoArticulo").Value = value;
             }
         }
         /// <summary>
@@ -1690,13 +1563,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__Articulo__IdTipo__5A4F643B", "TipoArticulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__Articulo__IdTipo__4E1E9780", "TipoArticulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoArticulo>("ModelInventario.FK__Articulo__IdTipo__5A4F643B", "TipoArticulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoArticulo>("ModelInventario.FK__Articulo__IdTipo__4E1E9780", "TipoArticulo", value);
                 }
             }
         }
@@ -1707,16 +1580,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__5D2BD0E6", "TipoMotor")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__50FB042B", "TipoMotor")]
         public TipoMotor TipoMotor
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMotor>("ModelInventario.FK__Articulo__IdTipo__5D2BD0E6", "TipoMotor").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMotor>("ModelInventario.FK__Articulo__IdTipo__50FB042B", "TipoMotor").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMotor>("ModelInventario.FK__Articulo__IdTipo__5D2BD0E6", "TipoMotor").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMotor>("ModelInventario.FK__Articulo__IdTipo__50FB042B", "TipoMotor").Value = value;
             }
         }
         /// <summary>
@@ -1728,13 +1601,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMotor>("ModelInventario.FK__Articulo__IdTipo__5D2BD0E6", "TipoMotor");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMotor>("ModelInventario.FK__Articulo__IdTipo__50FB042B", "TipoMotor");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoMotor>("ModelInventario.FK__Articulo__IdTipo__5D2BD0E6", "TipoMotor", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoMotor>("ModelInventario.FK__Articulo__IdTipo__50FB042B", "TipoMotor", value);
                 }
             }
         }
@@ -1745,16 +1618,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__5E1FF51F", "TipoCombustible")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__51EF2864", "TipoCombustible")]
         public TipoCombustible TipoCombustible
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoCombustible>("ModelInventario.FK__Articulo__IdTipo__5E1FF51F", "TipoCombustible").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoCombustible>("ModelInventario.FK__Articulo__IdTipo__51EF2864", "TipoCombustible").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoCombustible>("ModelInventario.FK__Articulo__IdTipo__5E1FF51F", "TipoCombustible").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoCombustible>("ModelInventario.FK__Articulo__IdTipo__51EF2864", "TipoCombustible").Value = value;
             }
         }
         /// <summary>
@@ -1766,13 +1639,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoCombustible>("ModelInventario.FK__Articulo__IdTipo__5E1FF51F", "TipoCombustible");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoCombustible>("ModelInventario.FK__Articulo__IdTipo__51EF2864", "TipoCombustible");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoCombustible>("ModelInventario.FK__Articulo__IdTipo__5E1FF51F", "TipoCombustible", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoCombustible>("ModelInventario.FK__Articulo__IdTipo__51EF2864", "TipoCombustible", value);
                 }
             }
         }
@@ -1783,16 +1656,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__61F08603", "TipoMaterial")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__55BFB948", "TipoMaterial")]
         public TipoMaterial TipoMaterial
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMaterial>("ModelInventario.FK__Articulo__IdTipo__61F08603", "TipoMaterial").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMaterial>("ModelInventario.FK__Articulo__IdTipo__55BFB948", "TipoMaterial").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMaterial>("ModelInventario.FK__Articulo__IdTipo__61F08603", "TipoMaterial").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMaterial>("ModelInventario.FK__Articulo__IdTipo__55BFB948", "TipoMaterial").Value = value;
             }
         }
         /// <summary>
@@ -1804,13 +1677,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMaterial>("ModelInventario.FK__Articulo__IdTipo__61F08603", "TipoMaterial");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMaterial>("ModelInventario.FK__Articulo__IdTipo__55BFB948", "TipoMaterial");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoMaterial>("ModelInventario.FK__Articulo__IdTipo__61F08603", "TipoMaterial", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoMaterial>("ModelInventario.FK__Articulo__IdTipo__55BFB948", "TipoMaterial", value);
                 }
             }
         }
@@ -1821,16 +1694,164 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdUnid__595B4002", "UnidadMedida")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__ArticuloBodega__7CD98669", "ArticuloBodega")]
+        public EntityCollection<ArticuloBodega> ArticuloBodega
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ArticuloBodega>("ModelInventario.FK__ArticuloBodega__7CD98669", "ArticuloBodega");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ArticuloBodega>("ModelInventario.FK__ArticuloBodega__7CD98669", "ArticuloBodega", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEgresoDet__5C37ACAD", "IngresoEgresoDet")]
+        public EntityCollection<IngresoEgresoDet> IngresoEgresoDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEgresoDet__5C37ACAD", "IngresoEgresoDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEgresoDet__5C37ACAD", "IngresoEgresoDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__LlegadaMercaderi__5AA469F6", "LlegadaMercaderiaDet")]
+        public EntityCollection<LlegadaMercaderiaDet> LlegadaMercaderiaDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<LlegadaMercaderiaDet>("ModelInventario.FK__LlegadaMercaderi__5AA469F6", "LlegadaMercaderiaDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<LlegadaMercaderiaDet>("ModelInventario.FK__LlegadaMercaderi__5AA469F6", "LlegadaMercaderiaDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisicaDet__6BCEF5F8", "TomaFisicaDet")]
+        public EntityCollection<TomaFisicaDet> TomaFisicaDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TomaFisicaDet>("ModelInventario.FK__TomaFisicaDet__6BCEF5F8", "TomaFisicaDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TomaFisicaDet>("ModelInventario.FK__TomaFisicaDet__6BCEF5F8", "TomaFisicaDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdMarc__53D770D6", "Marca")]
+        public Marca Marca
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Marca>("ModelInventario.FK__Articulo__IdMarc__53D770D6", "Marca").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Marca>("ModelInventario.FK__Articulo__IdMarc__53D770D6", "Marca").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Marca> MarcaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Marca>("ModelInventario.FK__Articulo__IdMarc__53D770D6", "Marca");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Marca>("ModelInventario.FK__Articulo__IdMarc__53D770D6", "Marca", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenCompraDet__49AEE81E", "OrdenCompraDet")]
+        public EntityCollection<OrdenCompraDet> OrdenCompraDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenCompraDet>("ModelInventario.FK__OrdenCompraDet__49AEE81E", "OrdenCompraDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenCompraDet>("ModelInventario.FK__OrdenCompraDet__49AEE81E", "OrdenCompraDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdUnid__4D2A7347", "UnidadMedida")]
         public UnidadMedida UnidadMedida
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UnidadMedida>("ModelInventario.FK__Articulo__IdUnid__595B4002", "UnidadMedida").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UnidadMedida>("ModelInventario.FK__Articulo__IdUnid__4D2A7347", "UnidadMedida").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UnidadMedida>("ModelInventario.FK__Articulo__IdUnid__595B4002", "UnidadMedida").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UnidadMedida>("ModelInventario.FK__Articulo__IdUnid__4D2A7347", "UnidadMedida").Value = value;
             }
         }
         /// <summary>
@@ -1842,13 +1863,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UnidadMedida>("ModelInventario.FK__Articulo__IdUnid__595B4002", "UnidadMedida");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UnidadMedida>("ModelInventario.FK__Articulo__IdUnid__4D2A7347", "UnidadMedida");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UnidadMedida>("ModelInventario.FK__Articulo__IdUnid__595B4002", "UnidadMedida", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UnidadMedida>("ModelInventario.FK__Articulo__IdUnid__4D2A7347", "UnidadMedida", value);
                 }
             }
         }
@@ -1859,62 +1880,34 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__ArticuloBodega__184C96B4", "ArticuloBodega")]
-        public EntityCollection<ArticuloBodega> ArticuloBodega
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdEmpr__4C364F0E", "Empresa")]
+        public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ArticuloBodega>("ModelInventario.FK__ArticuloBodega__184C96B4", "ArticuloBodega");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Articulo__IdEmpr__4C364F0E", "Empresa").Value;
             }
             set
             {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ArticuloBodega>("ModelInventario.FK__ArticuloBodega__184C96B4", "ArticuloBodega", value);
-                }
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Articulo__IdEmpr__4C364F0E", "Empresa").Value = value;
             }
         }
-    
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
+        [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEgresoDet__18178C8A", "IngresoEgresoDet")]
-        public EntityCollection<IngresoEgresoDet> IngresoEgresoDet
+        public EntityReference<Empresa> EmpresaReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEgresoDet__18178C8A", "IngresoEgresoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Articulo__IdEmpr__4C364F0E", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEgresoDet__18178C8A", "IngresoEgresoDet", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisicaDet__0CDAE408", "TomaFisicaDet")]
-        public EntityCollection<TomaFisicaDet> TomaFisicaDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TomaFisicaDet>("ModelInventario.FK__TomaFisicaDet__0CDAE408", "TomaFisicaDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TomaFisicaDet>("ModelInventario.FK__TomaFisicaDet__0CDAE408", "TomaFisicaDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Articulo__IdEmpr__4C364F0E", "Empresa", value);
                 }
             }
         }
@@ -2082,16 +2075,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__ArticuloBodega__184C96B4", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__ArticuloBodega__7CD98669", "Articulo")]
         public Articulo Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__ArticuloBodega__184C96B4", "Articulo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__ArticuloBodega__7CD98669", "Articulo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__ArticuloBodega__184C96B4", "Articulo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__ArticuloBodega__7CD98669", "Articulo").Value = value;
             }
         }
         /// <summary>
@@ -2103,13 +2096,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__ArticuloBodega__184C96B4", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__ArticuloBodega__7CD98669", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Articulo>("ModelInventario.FK__ArticuloBodega__184C96B4", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Articulo>("ModelInventario.FK__ArticuloBodega__7CD98669", "Articulo", value);
                 }
             }
         }
@@ -2120,54 +2113,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__ArticuloB__IdEmp__1758727B", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__ArticuloB__IdEmp__1758727B", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__ArticuloB__IdEmp__1758727B", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__ArticuloB__IdEmp__1758727B", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__ArticuloB__IdEmp__1758727B", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__ArticuloB__IdPer__1940BAED", "Percha")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__ArticuloB__IdPer__7DCDAAA2", "Percha")]
         public Percha Percha
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__ArticuloB__IdPer__1940BAED", "Percha").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__ArticuloB__IdPer__7DCDAAA2", "Percha").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__ArticuloB__IdPer__1940BAED", "Percha").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__ArticuloB__IdPer__7DCDAAA2", "Percha").Value = value;
             }
         }
         /// <summary>
@@ -2179,13 +2134,51 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__ArticuloB__IdPer__1940BAED", "Percha");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__ArticuloB__IdPer__7DCDAAA2", "Percha");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Percha>("ModelInventario.FK__ArticuloB__IdPer__1940BAED", "Percha", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Percha>("ModelInventario.FK__ArticuloB__IdPer__7DCDAAA2", "Percha", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__ArticuloB__IdEmp__7BE56230", "Empresa")]
+        public Empresa Empresa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__ArticuloB__IdEmp__7BE56230", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__ArticuloB__IdEmp__7BE56230", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__ArticuloB__IdEmp__7BE56230", "Empresa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__ArticuloB__IdEmp__7BE56230", "Empresa", value);
                 }
             }
         }
@@ -2454,16 +2447,126 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Bodega__IdEmpres__220B0B18", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__LlegadaMercaderi__64CCF2AE", "LlegadaMercaderiaCab")]
+        public EntityCollection<LlegadaMercaderiaCab> LlegadaMercaderiaCab
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<LlegadaMercaderiaCab>("ModelInventario.FK__LlegadaMercaderi__64CCF2AE", "LlegadaMercaderiaCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<LlegadaMercaderiaCab>("ModelInventario.FK__LlegadaMercaderi__64CCF2AE", "LlegadaMercaderiaCab", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Percha__59904A2C", "Percha")]
+        public EntityCollection<Percha> Percha
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Percha>("ModelInventario.FK__Percha__59904A2C", "Percha");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Percha>("ModelInventario.FK__Percha__59904A2C", "Percha", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisicaCab__6F7F8B4B", "TomaFisicaCab")]
+        public EntityCollection<TomaFisicaCab> TomaFisicaCab
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisicaCab__6F7F8B4B", "TomaFisicaCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisicaCab__6F7F8B4B", "TomaFisicaCab", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TransferenciaBod__6225902D", "TransferenciaBodegaCab")]
+        public EntityCollection<TransferenciaBodegaCab> TransferenciaBodegaCab
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__TransferenciaBod__6225902D", "TransferenciaBodegaCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__TransferenciaBod__6225902D", "TransferenciaBodegaCab", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TransferenciaBod__6319B466", "TransferenciaBodegaCab")]
+        public EntityCollection<TransferenciaBodegaCab> TransferenciaBodegaCab1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__TransferenciaBod__6319B466", "TransferenciaBodegaCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__TransferenciaBod__6319B466", "TransferenciaBodegaCab", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Bodega__IdEmpres__2704CA5F", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Bodega__IdEmpres__220B0B18", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Bodega__IdEmpres__2704CA5F", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Bodega__IdEmpres__220B0B18", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Bodega__IdEmpres__2704CA5F", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -2475,13 +2578,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Bodega__IdEmpres__220B0B18", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Bodega__IdEmpres__2704CA5F", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Bodega__IdEmpres__220B0B18", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Bodega__IdEmpres__2704CA5F", "Empresa", value);
                 }
             }
         }
@@ -2492,144 +2595,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Bodega__IdRespon__22FF2F51", "Persona")]
-        public Persona Persona
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("ModelInventario.FK__Bodega__IdRespon__22FF2F51", "Persona").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("ModelInventario.FK__Bodega__IdRespon__22FF2F51", "Persona").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Persona> PersonaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("ModelInventario.FK__Bodega__IdRespon__22FF2F51", "Persona");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("ModelInventario.FK__Bodega__IdRespon__22FF2F51", "Persona", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEgresoCab__0F824689", "IngresoEgresoCab")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEgresoCab__0D99FE17", "IngresoEgresoCab")]
         public EntityCollection<IngresoEgresoCab> IngresoEgresoCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEgresoCab__0F824689", "IngresoEgresoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEgresoCab__0D99FE17", "IngresoEgresoCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEgresoCab__0F824689", "IngresoEgresoCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Percha__67A95F59", "Percha")]
-        public EntityCollection<Percha> Percha
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Percha>("ModelInventario.FK__Percha__67A95F59", "Percha");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Percha>("ModelInventario.FK__Percha__67A95F59", "Percha", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisicaCab__0539C240", "TomaFisicaCab")]
-        public EntityCollection<TomaFisicaCab> TomaFisicaCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisicaCab__0539C240", "TomaFisicaCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisicaCab__0539C240", "TomaFisicaCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TransferenciaBod__740F363E", "TransferenciaBodegaCab")]
-        public EntityCollection<TransferenciaBodegaCab> TransferenciaBodegaCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__TransferenciaBod__740F363E", "TransferenciaBodegaCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__TransferenciaBod__740F363E", "TransferenciaBodegaCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TransferenciaBod__75035A77", "TransferenciaBodegaCab")]
-        public EntityCollection<TransferenciaBodegaCab> TransferenciaBodegaCab1
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__TransferenciaBod__75035A77", "TransferenciaBodegaCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__TransferenciaBod__75035A77", "TransferenciaBodegaCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEgresoCab__0D99FE17", "IngresoEgresoCab", value);
                 }
             }
         }
@@ -2775,18 +2752,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdChas__5C37ACAD", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdChas__5006DFF2", "Articulo")]
         public EntityCollection<Articulo> Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdChas__5C37ACAD", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdChas__5006DFF2", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdChas__5C37ACAD", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdChas__5006DFF2", "Articulo", value);
                 }
             }
         }
@@ -2797,16 +2774,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Chasis__IdEmpres__2E70E1FD", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Chasis__IdEmpres__2F9A1060", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Chasis__IdEmpres__2E70E1FD", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Chasis__IdEmpres__2F9A1060", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Chasis__IdEmpres__2E70E1FD", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Chasis__IdEmpres__2F9A1060", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -2818,13 +2795,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Chasis__IdEmpres__2E70E1FD", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Chasis__IdEmpres__2F9A1060", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Chasis__IdEmpres__2E70E1FD", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Chasis__IdEmpres__2F9A1060", "Empresa", value);
                 }
             }
         }
@@ -2970,18 +2947,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdColo__5F141958", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdColo__52E34C9D", "Articulo")]
         public EntityCollection<Articulo> Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdColo__5F141958", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdColo__52E34C9D", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdColo__5F141958", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdColo__52E34C9D", "Articulo", value);
                 }
             }
         }
@@ -2992,16 +2969,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Color__IdEmpresa__3F9B6DFF", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Color__IdEmpresa__3B0BC30C", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Color__IdEmpresa__3F9B6DFF", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Color__IdEmpresa__3B0BC30C", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Color__IdEmpresa__3F9B6DFF", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Color__IdEmpresa__3B0BC30C", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -3013,13 +2990,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Color__IdEmpresa__3F9B6DFF", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Color__IdEmpresa__3B0BC30C", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Color__IdEmpresa__3F9B6DFF", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Color__IdEmpresa__3B0BC30C", "Empresa", value);
                 }
             }
         }
@@ -3355,18 +3332,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenComp__idEmp__0B27A5C0", "OrdenCompra")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenComp__idEmp__15DA3E5D", "OrdenCompra")]
         public EntityCollection<OrdenCompra> OrdenCompra
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenCompra>("ModelInventario.FK__OrdenComp__idEmp__0B27A5C0", "OrdenCompra");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenCompra>("ModelInventario.FK__OrdenComp__idEmp__15DA3E5D", "OrdenCompra");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenCompra>("ModelInventario.FK__OrdenComp__idEmp__0B27A5C0", "OrdenCompra", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenCompra>("ModelInventario.FK__OrdenComp__idEmp__15DA3E5D", "OrdenCompra", value);
                 }
             }
         }
@@ -3377,18 +3354,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdEmpr__58671BC9", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdEmpr__4C364F0E", "Articulo")]
         public EntityCollection<Articulo> Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdEmpr__58671BC9", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdEmpr__4C364F0E", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdEmpr__58671BC9", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdEmpr__4C364F0E", "Articulo", value);
                 }
             }
         }
@@ -3399,18 +3376,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__ArticuloB__IdEmp__1758727B", "ArticuloBodega")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__ArticuloB__IdEmp__7BE56230", "ArticuloBodega")]
         public EntityCollection<ArticuloBodega> ArticuloBodega
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ArticuloBodega>("ModelInventario.FK__ArticuloB__IdEmp__1758727B", "ArticuloBodega");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ArticuloBodega>("ModelInventario.FK__ArticuloB__IdEmp__7BE56230", "ArticuloBodega");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ArticuloBodega>("ModelInventario.FK__ArticuloB__IdEmp__1758727B", "ArticuloBodega", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ArticuloBodega>("ModelInventario.FK__ArticuloB__IdEmp__7BE56230", "ArticuloBodega", value);
                 }
             }
         }
@@ -3421,18 +3398,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Bodega__IdEmpres__220B0B18", "Bodega")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Bodega__IdEmpres__2704CA5F", "Bodega")]
         public EntityCollection<Bodega> Bodega
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Bodega>("ModelInventario.FK__Bodega__IdEmpres__220B0B18", "Bodega");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Bodega>("ModelInventario.FK__Bodega__IdEmpres__2704CA5F", "Bodega");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Bodega>("ModelInventario.FK__Bodega__IdEmpres__220B0B18", "Bodega", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Bodega>("ModelInventario.FK__Bodega__IdEmpres__2704CA5F", "Bodega", value);
                 }
             }
         }
@@ -3443,18 +3420,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Chasis__IdEmpres__2E70E1FD", "Chasis")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Chasis__IdEmpres__2F9A1060", "Chasis")]
         public EntityCollection<Chasis> Chasis
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Chasis>("ModelInventario.FK__Chasis__IdEmpres__2E70E1FD", "Chasis");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Chasis>("ModelInventario.FK__Chasis__IdEmpres__2F9A1060", "Chasis");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Chasis>("ModelInventario.FK__Chasis__IdEmpres__2E70E1FD", "Chasis", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Chasis>("ModelInventario.FK__Chasis__IdEmpres__2F9A1060", "Chasis", value);
                 }
             }
         }
@@ -3465,18 +3442,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Color__IdEmpresa__3F9B6DFF", "Color")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Color__IdEmpresa__3B0BC30C", "Color")]
         public EntityCollection<Color> Color
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Color>("ModelInventario.FK__Color__IdEmpresa__3F9B6DFF", "Color");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Color>("ModelInventario.FK__Color__IdEmpresa__3B0BC30C", "Color");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Color>("ModelInventario.FK__Color__IdEmpresa__3F9B6DFF", "Color", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Color>("ModelInventario.FK__Color__IdEmpresa__3B0BC30C", "Color", value);
                 }
             }
         }
@@ -3487,18 +3464,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Grupo__IdEmpresa__6ABAD62E", "Grupo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Grupo__IdEmpresa__7D0E9093", "Grupo")]
         public EntityCollection<Grupo> Grupo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Grupo>("ModelInventario.FK__Grupo__IdEmpresa__6ABAD62E", "Grupo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Grupo>("ModelInventario.FK__Grupo__IdEmpresa__7D0E9093", "Grupo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Grupo>("ModelInventario.FK__Grupo__IdEmpresa__6ABAD62E", "Grupo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Grupo>("ModelInventario.FK__Grupo__IdEmpresa__7D0E9093", "Grupo", value);
                 }
             }
         }
@@ -3509,18 +3486,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Marca__IdEmpresa__45544755", "Marca")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Marca__IdEmpresa__3EDC53F0", "Marca")]
         public EntityCollection<Marca> Marca
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Marca>("ModelInventario.FK__Marca__IdEmpresa__45544755", "Marca");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Marca>("ModelInventario.FK__Marca__IdEmpresa__3EDC53F0", "Marca");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Marca>("ModelInventario.FK__Marca__IdEmpresa__45544755", "Marca", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Marca>("ModelInventario.FK__Marca__IdEmpresa__3EDC53F0", "Marca", value);
                 }
             }
         }
@@ -3531,18 +3508,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Modelo__IdEmpres__4B0D20AB", "Modelo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Modelo__IdEmpres__42ACE4D4", "Modelo")]
         public EntityCollection<Modelo> Modelo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Modelo>("ModelInventario.FK__Modelo__IdEmpres__4B0D20AB", "Modelo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Modelo>("ModelInventario.FK__Modelo__IdEmpres__42ACE4D4", "Modelo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Modelo>("ModelInventario.FK__Modelo__IdEmpres__4B0D20AB", "Modelo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Modelo>("ModelInventario.FK__Modelo__IdEmpres__42ACE4D4", "Modelo", value);
                 }
             }
         }
@@ -3553,18 +3530,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Motivo__IdEmpres__6D6238AF", "Motivo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Motivo__IdEmpres__5D60DB10", "Motivo")]
         public EntityCollection<Motivo> Motivo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Motivo>("ModelInventario.FK__Motivo__IdEmpres__6D6238AF", "Motivo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Motivo>("ModelInventario.FK__Motivo__IdEmpres__5D60DB10", "Motivo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Motivo>("ModelInventario.FK__Motivo__IdEmpres__6D6238AF", "Motivo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Motivo>("ModelInventario.FK__Motivo__IdEmpres__5D60DB10", "Motivo", value);
                 }
             }
         }
@@ -3575,18 +3552,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Percha__IdEmpres__66B53B20", "Percha")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Percha__IdEmpres__589C25F3", "Percha")]
         public EntityCollection<Percha> Percha
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Percha>("ModelInventario.FK__Percha__IdEmpres__66B53B20", "Percha");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Percha>("ModelInventario.FK__Percha__IdEmpres__589C25F3", "Percha");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Percha>("ModelInventario.FK__Percha__IdEmpres__66B53B20", "Percha", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Percha>("ModelInventario.FK__Percha__IdEmpres__589C25F3", "Percha", value);
                 }
             }
         }
@@ -3597,18 +3574,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoArtic__IdEmp__6501FCD8", "TipoArticulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoArtic__IdEmp__793DFFAF", "TipoArticulo")]
         public EntityCollection<TipoArticulo> TipoArticulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoArticulo>("ModelInventario.FK__TipoArtic__IdEmp__6501FCD8", "TipoArticulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoArticulo>("ModelInventario.FK__TipoArtic__IdEmp__793DFFAF", "TipoArticulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoArticulo>("ModelInventario.FK__TipoArtic__IdEmp__6501FCD8", "TipoArticulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoArticulo>("ModelInventario.FK__TipoArtic__IdEmp__793DFFAF", "TipoArticulo", value);
                 }
             }
         }
@@ -3619,18 +3596,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoCombu__IdEmp__39E294A9", "TipoCombustible")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoCombu__IdEmp__373B3228", "TipoCombustible")]
         public EntityCollection<TipoCombustible> TipoCombustible
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoCombustible>("ModelInventario.FK__TipoCombu__IdEmp__39E294A9", "TipoCombustible");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoCombustible>("ModelInventario.FK__TipoCombu__IdEmp__373B3228", "TipoCombustible");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoCombustible>("ModelInventario.FK__TipoCombu__IdEmp__39E294A9", "TipoCombustible", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoCombustible>("ModelInventario.FK__TipoCombu__IdEmp__373B3228", "TipoCombustible", value);
                 }
             }
         }
@@ -3641,18 +3618,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoMater__IdEmp__51BA1E3A", "TipoMaterial")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoMater__IdEmp__477199F1", "TipoMaterial")]
         public EntityCollection<TipoMaterial> TipoMaterial
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoMaterial>("ModelInventario.FK__TipoMater__IdEmp__51BA1E3A", "TipoMaterial");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoMaterial>("ModelInventario.FK__TipoMater__IdEmp__477199F1", "TipoMaterial");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoMaterial>("ModelInventario.FK__TipoMater__IdEmp__51BA1E3A", "TipoMaterial", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoMaterial>("ModelInventario.FK__TipoMater__IdEmp__477199F1", "TipoMaterial", value);
                 }
             }
         }
@@ -3663,18 +3640,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoMotor__IdEmp__3429BB53", "TipoMotor")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoMotor__IdEmp__336AA144", "TipoMotor")]
         public EntityCollection<TipoMotor> TipoMotor
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoMotor>("ModelInventario.FK__TipoMotor__IdEmp__3429BB53", "TipoMotor");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoMotor>("ModelInventario.FK__TipoMotor__IdEmp__336AA144", "TipoMotor");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoMotor>("ModelInventario.FK__TipoMotor__IdEmp__3429BB53", "TipoMotor", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoMotor>("ModelInventario.FK__TipoMotor__IdEmp__336AA144", "TipoMotor", value);
                 }
             }
         }
@@ -3685,18 +3662,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoMovim__IdEmp__119F9925", "TipoMovimiento")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoMovim__IdEmp__7814D14C", "TipoMovimiento")]
         public EntityCollection<TipoMovimiento> TipoMovimiento
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoMovimiento>("ModelInventario.FK__TipoMovim__IdEmp__119F9925", "TipoMovimiento");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TipoMovimiento>("ModelInventario.FK__TipoMovim__IdEmp__7814D14C", "TipoMovimiento");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoMovimiento>("ModelInventario.FK__TipoMovim__IdEmp__119F9925", "TipoMovimiento", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TipoMovimiento>("ModelInventario.FK__TipoMovim__IdEmp__7814D14C", "TipoMovimiento", value);
                 }
             }
         }
@@ -3707,18 +3684,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdEmp__025D5595", "TomaFisicaCab")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdEmp__6CA31EA0", "TomaFisicaCab")]
         public EntityCollection<TomaFisicaCab> TomaFisicaCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisic__IdEmp__025D5595", "TomaFisicaCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisic__IdEmp__6CA31EA0", "TomaFisicaCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisic__IdEmp__025D5595", "TomaFisicaCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisic__IdEmp__6CA31EA0", "TomaFisicaCab", value);
                 }
             }
         }
@@ -3729,18 +3706,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdEmp__0BE6BFCF", "TomaFisicaDet")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdEmp__6ADAD1BF", "TomaFisicaDet")]
         public EntityCollection<TomaFisicaDet> TomaFisicaDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TomaFisicaDet>("ModelInventario.FK__TomaFisic__IdEmp__0BE6BFCF", "TomaFisicaDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TomaFisicaDet>("ModelInventario.FK__TomaFisic__IdEmp__6ADAD1BF", "TomaFisicaDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TomaFisicaDet>("ModelInventario.FK__TomaFisic__IdEmp__0BE6BFCF", "TomaFisicaDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TomaFisicaDet>("ModelInventario.FK__TomaFisic__IdEmp__6ADAD1BF", "TomaFisicaDet", value);
                 }
             }
         }
@@ -3751,18 +3728,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Transfere__IdEmp__731B1205", "TransferenciaBodegaCab")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Transfere__IdEmp__61316BF4", "TransferenciaBodegaCab")]
         public EntityCollection<TransferenciaBodegaCab> TransferenciaBodegaCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__IdEmp__731B1205", "TransferenciaBodegaCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__IdEmp__61316BF4", "TransferenciaBodegaCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__IdEmp__731B1205", "TransferenciaBodegaCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__IdEmp__61316BF4", "TransferenciaBodegaCab", value);
                 }
             }
         }
@@ -3773,147 +3750,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__UnidadMed__IdEmp__28B808A7", "UnidadMedida")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__UnidadMed__IdEmp__2BC97F7C", "UnidadMedida")]
         public EntityCollection<UnidadMedida> UnidadMedida
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<UnidadMedida>("ModelInventario.FK__UnidadMed__IdEmp__28B808A7", "UnidadMedida");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<UnidadMedida>("ModelInventario.FK__UnidadMed__IdEmp__2BC97F7C", "UnidadMedida");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<UnidadMedida>("ModelInventario.FK__UnidadMed__IdEmp__28B808A7", "UnidadMedida", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Persona__IdEmpre__1BFD2C07", "Persona")]
-        public EntityCollection<Persona> Persona
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Persona>("ModelInventario.FK__Persona__IdEmpre__1BFD2C07", "Persona");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Persona>("ModelInventario.FK__Persona__IdEmpre__1BFD2C07", "Persona", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No hay documentación de metadatos disponible.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="ModelInventario", Name="Estado")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class Estado : EntityObject
-    {
-        #region Método de generador
-    
-        /// <summary>
-        /// Crear un nuevo objeto Estado.
-        /// </summary>
-        /// <param name="idEstado">Valor inicial de la propiedad idEstado.</param>
-        public static Estado CreateEstado(global::System.Int32 idEstado)
-        {
-            Estado estado = new Estado();
-            estado.idEstado = idEstado;
-            return estado;
-        }
-
-        #endregion
-
-        #region Propiedades primitivas
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 idEstado
-        {
-            get
-            {
-                return _idEstado;
-            }
-            set
-            {
-                if (_idEstado != value)
-                {
-                    OnidEstadoChanging(value);
-                    ReportPropertyChanging("idEstado");
-                    _idEstado = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("idEstado");
-                    OnidEstadoChanged();
-                }
-            }
-        }
-        private global::System.Int32 _idEstado;
-        partial void OnidEstadoChanging(global::System.Int32 value);
-        partial void OnidEstadoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String Descripcion
-        {
-            get
-            {
-                return _Descripcion;
-            }
-            set
-            {
-                OnDescripcionChanging(value);
-                ReportPropertyChanging("Descripcion");
-                _Descripcion = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Descripcion");
-                OnDescripcionChanged();
-            }
-        }
-        private global::System.String _Descripcion;
-        partial void OnDescripcionChanging(global::System.String value);
-        partial void OnDescripcionChanged();
-
-        #endregion
-
-    
-        #region Propiedades de navegación
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenComp__idEst__0D0FEE32", "OrdenCompra")]
-        public EntityCollection<OrdenCompra> OrdenCompra
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenCompra>("ModelInventario.FK__OrdenComp__idEst__0D0FEE32", "OrdenCompra");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenCompra>("ModelInventario.FK__OrdenComp__idEst__0D0FEE32", "OrdenCompra", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<UnidadMedida>("ModelInventario.FK__UnidadMed__IdEmp__2BC97F7C", "UnidadMedida", value);
                 }
             }
         }
@@ -4083,18 +3931,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdGrup__5B438874", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdGrup__4F12BBB9", "Articulo")]
         public EntityCollection<Articulo> Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdGrup__5B438874", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdGrup__4F12BBB9", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdGrup__5B438874", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdGrup__4F12BBB9", "Articulo", value);
                 }
             }
         }
@@ -4105,54 +3953,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Grupo__IdEmpresa__6ABAD62E", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Grupo__IdEmpresa__6ABAD62E", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Grupo__IdEmpresa__6ABAD62E", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Grupo__IdEmpresa__6ABAD62E", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Grupo__IdEmpresa__6ABAD62E", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Grupo__IdTipoArt__6BAEFA67", "TipoArticulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Grupo__IdTipoArt__7E02B4CC", "TipoArticulo")]
         public TipoArticulo TipoArticulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__Grupo__IdTipoArt__6BAEFA67", "TipoArticulo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__Grupo__IdTipoArt__7E02B4CC", "TipoArticulo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__Grupo__IdTipoArt__6BAEFA67", "TipoArticulo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__Grupo__IdTipoArt__7E02B4CC", "TipoArticulo").Value = value;
             }
         }
         /// <summary>
@@ -4164,13 +3974,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__Grupo__IdTipoArt__6BAEFA67", "TipoArticulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__Grupo__IdTipoArt__7E02B4CC", "TipoArticulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoArticulo>("ModelInventario.FK__Grupo__IdTipoArt__6BAEFA67", "TipoArticulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoArticulo>("ModelInventario.FK__Grupo__IdTipoArt__7E02B4CC", "TipoArticulo", value);
                 }
             }
         }
@@ -4181,18 +3991,34 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdGru__190BB0C3", "IngresoEgresoDet")]
-        public EntityCollection<IngresoEgresoDet> IngresoEgresoDet
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Grupo__IdEmpresa__7D0E9093", "Empresa")]
+        public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEg__IdGru__190BB0C3", "IngresoEgresoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Grupo__IdEmpresa__7D0E9093", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Grupo__IdEmpresa__7D0E9093", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Grupo__IdEmpresa__7D0E9093", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEg__IdGru__190BB0C3", "IngresoEgresoDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Grupo__IdEmpresa__7D0E9093", "Empresa", value);
                 }
             }
         }
@@ -4335,30 +4161,6 @@ namespace datos.Inventario
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdOrdenCompra
-        {
-            get
-            {
-                return _IdOrdenCompra;
-            }
-            set
-            {
-                OnIdOrdenCompraChanging(value);
-                ReportPropertyChanging("IdOrdenCompra");
-                _IdOrdenCompra = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdOrdenCompra");
-                OnIdOrdenCompraChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdOrdenCompra;
-        partial void OnIdOrdenCompraChanging(Nullable<global::System.Int32> value);
-        partial void OnIdOrdenCompraChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
         public Nullable<global::System.Int32> IdMotivo
         {
             get
@@ -4425,30 +4227,6 @@ namespace datos.Inventario
         private Nullable<global::System.Int32> _IdResponsable;
         partial void OnIdResponsableChanging(Nullable<global::System.Int32> value);
         partial void OnIdResponsableChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> TotalPagar
-        {
-            get
-            {
-                return _TotalPagar;
-            }
-            set
-            {
-                OnTotalPagarChanging(value);
-                ReportPropertyChanging("TotalPagar");
-                _TotalPagar = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("TotalPagar");
-                OnTotalPagarChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _TotalPagar;
-        partial void OnTotalPagarChanging(Nullable<global::System.Decimal> value);
-        partial void OnTotalPagarChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -4533,54 +4311,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEgresoCab__0BB1B5A5", "OrdenCompra")]
-        public OrdenCompra OrdenCompra
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("ModelInventario.FK__IngresoEgresoCab__0BB1B5A5", "OrdenCompra").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("ModelInventario.FK__IngresoEgresoCab__0BB1B5A5", "OrdenCompra").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<OrdenCompra> OrdenCompraReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("ModelInventario.FK__IngresoEgresoCab__0BB1B5A5", "OrdenCompra");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrdenCompra>("ModelInventario.FK__IngresoEgresoCab__0BB1B5A5", "OrdenCompra", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEgresoCab__0F824689", "Bodega")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEgresoCab__0D99FE17", "Bodega")]
         public Bodega Bodega
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__IngresoEgresoCab__0F824689", "Bodega").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__IngresoEgresoCab__0D99FE17", "Bodega").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__IngresoEgresoCab__0F824689", "Bodega").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__IngresoEgresoCab__0D99FE17", "Bodega").Value = value;
             }
         }
         /// <summary>
@@ -4592,13 +4332,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__IngresoEgresoCab__0F824689", "Bodega");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__IngresoEgresoCab__0D99FE17", "Bodega");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Bodega>("ModelInventario.FK__IngresoEgresoCab__0F824689", "Bodega", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Bodega>("ModelInventario.FK__IngresoEgresoCab__0D99FE17", "Bodega", value);
                 }
             }
         }
@@ -4609,16 +4349,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdMot__0E8E2250", "Motivo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdMot__0CA5D9DE", "Motivo")]
         public Motivo Motivo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__IngresoEg__IdMot__0E8E2250", "Motivo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__IngresoEg__IdMot__0CA5D9DE", "Motivo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__IngresoEg__IdMot__0E8E2250", "Motivo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__IngresoEg__IdMot__0CA5D9DE", "Motivo").Value = value;
             }
         }
         /// <summary>
@@ -4630,13 +4370,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__IngresoEg__IdMot__0E8E2250", "Motivo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__IngresoEg__IdMot__0CA5D9DE", "Motivo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Motivo>("ModelInventario.FK__IngresoEg__IdMot__0E8E2250", "Motivo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Motivo>("ModelInventario.FK__IngresoEg__IdMot__0CA5D9DE", "Motivo", value);
                 }
             }
         }
@@ -4647,54 +4387,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdRes__10766AC2", "Persona")]
-        public Persona Persona
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("ModelInventario.FK__IngresoEg__IdRes__10766AC2", "Persona").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("ModelInventario.FK__IngresoEg__IdRes__10766AC2", "Persona").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Persona> PersonaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("ModelInventario.FK__IngresoEg__IdRes__10766AC2", "Persona");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("ModelInventario.FK__IngresoEg__IdRes__10766AC2", "Persona", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdTip__0CA5D9DE", "TipoMovimiento")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdTip__0ABD916C", "TipoMovimiento")]
         public TipoMovimiento TipoMovimiento
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMovimiento>("ModelInventario.FK__IngresoEg__IdTip__0CA5D9DE", "TipoMovimiento").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMovimiento>("ModelInventario.FK__IngresoEg__IdTip__0ABD916C", "TipoMovimiento").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMovimiento>("ModelInventario.FK__IngresoEg__IdTip__0CA5D9DE", "TipoMovimiento").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMovimiento>("ModelInventario.FK__IngresoEg__IdTip__0ABD916C", "TipoMovimiento").Value = value;
             }
         }
         /// <summary>
@@ -4706,13 +4408,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMovimiento>("ModelInventario.FK__IngresoEg__IdTip__0CA5D9DE", "TipoMovimiento");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMovimiento>("ModelInventario.FK__IngresoEg__IdTip__0ABD916C", "TipoMovimiento");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoMovimiento>("ModelInventario.FK__IngresoEg__IdTip__0CA5D9DE", "TipoMovimiento", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoMovimiento>("ModelInventario.FK__IngresoEg__IdTip__0ABD916C", "TipoMovimiento", value);
                 }
             }
         }
@@ -4723,56 +4425,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdUsu__116A8EFB", "Usuario")]
-        public Usuario Usuario
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__IngresoEg__IdUsu__116A8EFB", "Usuario").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__IngresoEg__IdUsu__116A8EFB", "Usuario").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Usuario> UsuarioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__IngresoEg__IdUsu__116A8EFB", "Usuario");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("ModelInventario.FK__IngresoEg__IdUsu__116A8EFB", "Usuario", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEgresoDet__17236851", "IngresoEgresoDet")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEgresoDet__1446FBA6", "IngresoEgresoDet")]
         public EntityCollection<IngresoEgresoDet> IngresoEgresoDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEgresoDet__17236851", "IngresoEgresoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEgresoDet__1446FBA6", "IngresoEgresoDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEgresoDet__17236851", "IngresoEgresoDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEgresoDet__1446FBA6", "IngresoEgresoDet", value);
                 }
             }
         }
@@ -4891,30 +4555,6 @@ namespace datos.Inventario
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdTipoArticulo
-        {
-            get
-            {
-                return _IdTipoArticulo;
-            }
-            set
-            {
-                OnIdTipoArticuloChanging(value);
-                ReportPropertyChanging("IdTipoArticulo");
-                _IdTipoArticulo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdTipoArticulo");
-                OnIdTipoArticuloChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdTipoArticulo;
-        partial void OnIdTipoArticuloChanging(Nullable<global::System.Int32> value);
-        partial void OnIdTipoArticuloChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
         public Nullable<global::System.Int32> IdArticulo
         {
             get
@@ -4939,24 +4579,833 @@ namespace datos.Inventario
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdGrupo
+        public Nullable<global::System.Int32> IdPercha
         {
             get
             {
-                return _IdGrupo;
+                return _IdPercha;
             }
             set
             {
-                OnIdGrupoChanging(value);
-                ReportPropertyChanging("IdGrupo");
-                _IdGrupo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdGrupo");
-                OnIdGrupoChanged();
+                OnIdPerchaChanging(value);
+                ReportPropertyChanging("IdPercha");
+                _IdPercha = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdPercha");
+                OnIdPerchaChanged();
             }
         }
-        private Nullable<global::System.Int32> _IdGrupo;
-        partial void OnIdGrupoChanging(Nullable<global::System.Int32> value);
-        partial void OnIdGrupoChanged();
+        private Nullable<global::System.Int32> _IdPercha;
+        partial void OnIdPerchaChanging(Nullable<global::System.Int32> value);
+        partial void OnIdPerchaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> Cantidad
+        {
+            get
+            {
+                return _Cantidad;
+            }
+            set
+            {
+                OnCantidadChanging(value);
+                ReportPropertyChanging("Cantidad");
+                _Cantidad = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Cantidad");
+                OnCantidadChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _Cantidad;
+        partial void OnCantidadChanging(Nullable<global::System.Int32> value);
+        partial void OnCantidadChanged();
+
+        #endregion
+
+    
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEgresoDet__5C37ACAD", "Articulo")]
+        public Articulo Articulo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__IngresoEgresoDet__5C37ACAD", "Articulo").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__IngresoEgresoDet__5C37ACAD", "Articulo").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Articulo> ArticuloReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__IngresoEgresoDet__5C37ACAD", "Articulo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Articulo>("ModelInventario.FK__IngresoEgresoDet__5C37ACAD", "Articulo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdPer__5D2BD0E6", "Percha")]
+        public Percha Percha
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__IngresoEg__IdPer__5D2BD0E6", "Percha").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__IngresoEg__IdPer__5D2BD0E6", "Percha").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Percha> PerchaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__IngresoEg__IdPer__5D2BD0E6", "Percha");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Percha>("ModelInventario.FK__IngresoEg__IdPer__5D2BD0E6", "Percha", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEgresoDet__1446FBA6", "IngresoEgresoCab")]
+        public IngresoEgresoCab IngresoEgresoCab
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("ModelInventario.FK__IngresoEgresoDet__1446FBA6", "IngresoEgresoCab").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("ModelInventario.FK__IngresoEgresoDet__1446FBA6", "IngresoEgresoCab").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<IngresoEgresoCab> IngresoEgresoCabReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("ModelInventario.FK__IngresoEgresoDet__1446FBA6", "IngresoEgresoCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<IngresoEgresoCab>("ModelInventario.FK__IngresoEgresoDet__1446FBA6", "IngresoEgresoCab", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="ModelInventario", Name="LlegadaMercaderiaCab")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class LlegadaMercaderiaCab : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto LlegadaMercaderiaCab.
+        /// </summary>
+        /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
+        /// <param name="nroMovimiento">Valor inicial de la propiedad NroMovimiento.</param>
+        public static LlegadaMercaderiaCab CreateLlegadaMercaderiaCab(global::System.Int32 idEmpresa, global::System.Int32 nroMovimiento)
+        {
+            LlegadaMercaderiaCab llegadaMercaderiaCab = new LlegadaMercaderiaCab();
+            llegadaMercaderiaCab.IdEmpresa = idEmpresa;
+            llegadaMercaderiaCab.NroMovimiento = nroMovimiento;
+            return llegadaMercaderiaCab;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdEmpresa
+        {
+            get
+            {
+                return _IdEmpresa;
+            }
+            set
+            {
+                if (_IdEmpresa != value)
+                {
+                    OnIdEmpresaChanging(value);
+                    ReportPropertyChanging("IdEmpresa");
+                    _IdEmpresa = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdEmpresa");
+                    OnIdEmpresaChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdEmpresa;
+        partial void OnIdEmpresaChanging(global::System.Int32 value);
+        partial void OnIdEmpresaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 NroMovimiento
+        {
+            get
+            {
+                return _NroMovimiento;
+            }
+            set
+            {
+                if (_NroMovimiento != value)
+                {
+                    OnNroMovimientoChanging(value);
+                    ReportPropertyChanging("NroMovimiento");
+                    _NroMovimiento = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("NroMovimiento");
+                    OnNroMovimientoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _NroMovimiento;
+        partial void OnNroMovimientoChanging(global::System.Int32 value);
+        partial void OnNroMovimientoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdTipoMovimiento
+        {
+            get
+            {
+                return _IdTipoMovimiento;
+            }
+            set
+            {
+                OnIdTipoMovimientoChanging(value);
+                ReportPropertyChanging("IdTipoMovimiento");
+                _IdTipoMovimiento = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdTipoMovimiento");
+                OnIdTipoMovimientoChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdTipoMovimiento;
+        partial void OnIdTipoMovimientoChanging(Nullable<global::System.Int32> value);
+        partial void OnIdTipoMovimientoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdOrdenCompra
+        {
+            get
+            {
+                return _IdOrdenCompra;
+            }
+            set
+            {
+                OnIdOrdenCompraChanging(value);
+                ReportPropertyChanging("IdOrdenCompra");
+                _IdOrdenCompra = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdOrdenCompra");
+                OnIdOrdenCompraChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdOrdenCompra;
+        partial void OnIdOrdenCompraChanging(Nullable<global::System.Int32> value);
+        partial void OnIdOrdenCompraChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdProveedor
+        {
+            get
+            {
+                return _IdProveedor;
+            }
+            set
+            {
+                OnIdProveedorChanging(value);
+                ReportPropertyChanging("IdProveedor");
+                _IdProveedor = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdProveedor");
+                OnIdProveedorChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdProveedor;
+        partial void OnIdProveedorChanging(Nullable<global::System.Int32> value);
+        partial void OnIdProveedorChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Decimal> Factura
+        {
+            get
+            {
+                return _Factura;
+            }
+            set
+            {
+                OnFacturaChanging(value);
+                ReportPropertyChanging("Factura");
+                _Factura = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Factura");
+                OnFacturaChanged();
+            }
+        }
+        private Nullable<global::System.Decimal> _Factura;
+        partial void OnFacturaChanging(Nullable<global::System.Decimal> value);
+        partial void OnFacturaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> FechaMovimiento
+        {
+            get
+            {
+                return _FechaMovimiento;
+            }
+            set
+            {
+                OnFechaMovimientoChanging(value);
+                ReportPropertyChanging("FechaMovimiento");
+                _FechaMovimiento = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FechaMovimiento");
+                OnFechaMovimientoChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _FechaMovimiento;
+        partial void OnFechaMovimientoChanging(Nullable<global::System.DateTime> value);
+        partial void OnFechaMovimientoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdMotivo
+        {
+            get
+            {
+                return _IdMotivo;
+            }
+            set
+            {
+                OnIdMotivoChanging(value);
+                ReportPropertyChanging("IdMotivo");
+                _IdMotivo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdMotivo");
+                OnIdMotivoChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdMotivo;
+        partial void OnIdMotivoChanging(Nullable<global::System.Int32> value);
+        partial void OnIdMotivoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdBodega
+        {
+            get
+            {
+                return _IdBodega;
+            }
+            set
+            {
+                OnIdBodegaChanging(value);
+                ReportPropertyChanging("IdBodega");
+                _IdBodega = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdBodega");
+                OnIdBodegaChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdBodega;
+        partial void OnIdBodegaChanging(Nullable<global::System.Int32> value);
+        partial void OnIdBodegaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdResponsable
+        {
+            get
+            {
+                return _IdResponsable;
+            }
+            set
+            {
+                OnIdResponsableChanging(value);
+                ReportPropertyChanging("IdResponsable");
+                _IdResponsable = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdResponsable");
+                OnIdResponsableChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdResponsable;
+        partial void OnIdResponsableChanging(Nullable<global::System.Int32> value);
+        partial void OnIdResponsableChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Observacion
+        {
+            get
+            {
+                return _Observacion;
+            }
+            set
+            {
+                OnObservacionChanging(value);
+                ReportPropertyChanging("Observacion");
+                _Observacion = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Observacion");
+                OnObservacionChanged();
+            }
+        }
+        private global::System.String _Observacion;
+        partial void OnObservacionChanging(global::System.String value);
+        partial void OnObservacionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdUsuario
+        {
+            get
+            {
+                return _IdUsuario;
+            }
+            set
+            {
+                OnIdUsuarioChanging(value);
+                ReportPropertyChanging("IdUsuario");
+                _IdUsuario = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdUsuario");
+                OnIdUsuarioChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdUsuario;
+        partial void OnIdUsuarioChanging(Nullable<global::System.Int32> value);
+        partial void OnIdUsuarioChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdEstado
+        {
+            get
+            {
+                return _IdEstado;
+            }
+            set
+            {
+                OnIdEstadoChanging(value);
+                ReportPropertyChanging("IdEstado");
+                _IdEstado = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdEstado");
+                OnIdEstadoChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdEstado;
+        partial void OnIdEstadoChanging(Nullable<global::System.Int32> value);
+        partial void OnIdEstadoChanged();
+
+        #endregion
+
+    
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__LlegadaMercaderi__64CCF2AE", "Bodega")]
+        public Bodega Bodega
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__LlegadaMercaderi__64CCF2AE", "Bodega").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__LlegadaMercaderi__64CCF2AE", "Bodega").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Bodega> BodegaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__LlegadaMercaderi__64CCF2AE", "Bodega");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Bodega>("ModelInventario.FK__LlegadaMercaderi__64CCF2AE", "Bodega", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__LlegadaMe__IdMot__63D8CE75", "Motivo")]
+        public Motivo Motivo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__LlegadaMe__IdMot__63D8CE75", "Motivo").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__LlegadaMe__IdMot__63D8CE75", "Motivo").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Motivo> MotivoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__LlegadaMe__IdMot__63D8CE75", "Motivo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Motivo>("ModelInventario.FK__LlegadaMe__IdMot__63D8CE75", "Motivo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__LlegadaMe__IdTip__61F08603", "TipoMovimiento")]
+        public TipoMovimiento TipoMovimiento
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMovimiento>("ModelInventario.FK__LlegadaMe__IdTip__61F08603", "TipoMovimiento").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMovimiento>("ModelInventario.FK__LlegadaMe__IdTip__61F08603", "TipoMovimiento").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<TipoMovimiento> TipoMovimientoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoMovimiento>("ModelInventario.FK__LlegadaMe__IdTip__61F08603", "TipoMovimiento");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoMovimiento>("ModelInventario.FK__LlegadaMe__IdTip__61F08603", "TipoMovimiento", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__LlegadaMercaderi__59B045BD", "LlegadaMercaderiaDet")]
+        public EntityCollection<LlegadaMercaderiaDet> LlegadaMercaderiaDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<LlegadaMercaderiaDet>("ModelInventario.FK__LlegadaMercaderi__59B045BD", "LlegadaMercaderiaDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<LlegadaMercaderiaDet>("ModelInventario.FK__LlegadaMercaderi__59B045BD", "LlegadaMercaderiaDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__LlegadaMercaderi__60083D91", "OrdenCompra")]
+        public OrdenCompra OrdenCompra
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("ModelInventario.FK__LlegadaMercaderi__60083D91", "OrdenCompra").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("ModelInventario.FK__LlegadaMercaderi__60083D91", "OrdenCompra").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<OrdenCompra> OrdenCompraReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("ModelInventario.FK__LlegadaMercaderi__60083D91", "OrdenCompra");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrdenCompra>("ModelInventario.FK__LlegadaMercaderi__60083D91", "OrdenCompra", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="ModelInventario", Name="LlegadaMercaderiaDet")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class LlegadaMercaderiaDet : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto LlegadaMercaderiaDet.
+        /// </summary>
+        /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
+        /// <param name="nroMovimiento">Valor inicial de la propiedad NroMovimiento.</param>
+        /// <param name="numero">Valor inicial de la propiedad numero.</param>
+        public static LlegadaMercaderiaDet CreateLlegadaMercaderiaDet(global::System.Int32 idEmpresa, global::System.Int32 nroMovimiento, global::System.Int32 numero)
+        {
+            LlegadaMercaderiaDet llegadaMercaderiaDet = new LlegadaMercaderiaDet();
+            llegadaMercaderiaDet.IdEmpresa = idEmpresa;
+            llegadaMercaderiaDet.NroMovimiento = nroMovimiento;
+            llegadaMercaderiaDet.numero = numero;
+            return llegadaMercaderiaDet;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 IdEmpresa
+        {
+            get
+            {
+                return _IdEmpresa;
+            }
+            set
+            {
+                if (_IdEmpresa != value)
+                {
+                    OnIdEmpresaChanging(value);
+                    ReportPropertyChanging("IdEmpresa");
+                    _IdEmpresa = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("IdEmpresa");
+                    OnIdEmpresaChanged();
+                }
+            }
+        }
+        private global::System.Int32 _IdEmpresa;
+        partial void OnIdEmpresaChanging(global::System.Int32 value);
+        partial void OnIdEmpresaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 NroMovimiento
+        {
+            get
+            {
+                return _NroMovimiento;
+            }
+            set
+            {
+                if (_NroMovimiento != value)
+                {
+                    OnNroMovimientoChanging(value);
+                    ReportPropertyChanging("NroMovimiento");
+                    _NroMovimiento = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("NroMovimiento");
+                    OnNroMovimientoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _NroMovimiento;
+        partial void OnNroMovimientoChanging(global::System.Int32 value);
+        partial void OnNroMovimientoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 numero
+        {
+            get
+            {
+                return _numero;
+            }
+            set
+            {
+                if (_numero != value)
+                {
+                    OnnumeroChanging(value);
+                    ReportPropertyChanging("numero");
+                    _numero = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("numero");
+                    OnnumeroChanged();
+                }
+            }
+        }
+        private global::System.Int32 _numero;
+        partial void OnnumeroChanging(global::System.Int32 value);
+        partial void OnnumeroChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IdArticulo
+        {
+            get
+            {
+                return _IdArticulo;
+            }
+            set
+            {
+                OnIdArticuloChanging(value);
+                ReportPropertyChanging("IdArticulo");
+                _IdArticulo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("IdArticulo");
+                OnIdArticuloChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IdArticulo;
+        partial void OnIdArticuloChanging(Nullable<global::System.Int32> value);
+        partial void OnIdArticuloChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -5035,24 +5484,24 @@ namespace datos.Inventario
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> Costo
+        public Nullable<global::System.Decimal> Precio
         {
             get
             {
-                return _Costo;
+                return _Precio;
             }
             set
             {
-                OnCostoChanging(value);
-                ReportPropertyChanging("Costo");
-                _Costo = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Costo");
-                OnCostoChanged();
+                OnPrecioChanging(value);
+                ReportPropertyChanging("Precio");
+                _Precio = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Precio");
+                OnPrecioChanged();
             }
         }
-        private Nullable<global::System.Decimal> _Costo;
-        partial void OnCostoChanging(Nullable<global::System.Decimal> value);
-        partial void OnCostoChanged();
+        private Nullable<global::System.Decimal> _Precio;
+        partial void OnPrecioChanging(Nullable<global::System.Decimal> value);
+        partial void OnPrecioChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -5137,16 +5586,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEgresoDet__18178C8A", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__LlegadaMercaderi__5AA469F6", "Articulo")]
         public Articulo Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__IngresoEgresoDet__18178C8A", "Articulo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__LlegadaMercaderi__5AA469F6", "Articulo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__IngresoEgresoDet__18178C8A", "Articulo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__LlegadaMercaderi__5AA469F6", "Articulo").Value = value;
             }
         }
         /// <summary>
@@ -5158,13 +5607,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__IngresoEgresoDet__18178C8A", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__LlegadaMercaderi__5AA469F6", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Articulo>("ModelInventario.FK__IngresoEgresoDet__18178C8A", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Articulo>("ModelInventario.FK__LlegadaMercaderi__5AA469F6", "Articulo", value);
                 }
             }
         }
@@ -5175,16 +5624,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdGru__190BB0C3", "Grupo")]
-        public Grupo Grupo
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__LlegadaMercaderi__59B045BD", "LlegadaMercaderiaCab")]
+        public LlegadaMercaderiaCab LlegadaMercaderiaCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Grupo>("ModelInventario.FK__IngresoEg__IdGru__190BB0C3", "Grupo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LlegadaMercaderiaCab>("ModelInventario.FK__LlegadaMercaderi__59B045BD", "LlegadaMercaderiaCab").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Grupo>("ModelInventario.FK__IngresoEg__IdGru__190BB0C3", "Grupo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LlegadaMercaderiaCab>("ModelInventario.FK__LlegadaMercaderi__59B045BD", "LlegadaMercaderiaCab").Value = value;
             }
         }
         /// <summary>
@@ -5192,17 +5641,17 @@ namespace datos.Inventario
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<Grupo> GrupoReference
+        public EntityReference<LlegadaMercaderiaCab> LlegadaMercaderiaCabReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Grupo>("ModelInventario.FK__IngresoEg__IdGru__190BB0C3", "Grupo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<LlegadaMercaderiaCab>("ModelInventario.FK__LlegadaMercaderi__59B045BD", "LlegadaMercaderiaCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Grupo>("ModelInventario.FK__IngresoEg__IdGru__190BB0C3", "Grupo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<LlegadaMercaderiaCab>("ModelInventario.FK__LlegadaMercaderi__59B045BD", "LlegadaMercaderiaCab", value);
                 }
             }
         }
@@ -5213,54 +5662,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEgresoDet__17236851", "IngresoEgresoCab")]
-        public IngresoEgresoCab IngresoEgresoCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("ModelInventario.FK__IngresoEgresoDet__17236851", "IngresoEgresoCab").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("ModelInventario.FK__IngresoEgresoDet__17236851", "IngresoEgresoCab").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<IngresoEgresoCab> IngresoEgresoCabReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<IngresoEgresoCab>("ModelInventario.FK__IngresoEgresoDet__17236851", "IngresoEgresoCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<IngresoEgresoCab>("ModelInventario.FK__IngresoEgresoDet__17236851", "IngresoEgresoCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdPer__19FFD4FC", "Percha")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__LlegadaMe__IdPer__5B988E2F", "Percha")]
         public Percha Percha
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__IngresoEg__IdPer__19FFD4FC", "Percha").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__LlegadaMe__IdPer__5B988E2F", "Percha").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__IngresoEg__IdPer__19FFD4FC", "Percha").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__LlegadaMe__IdPer__5B988E2F", "Percha").Value = value;
             }
         }
         /// <summary>
@@ -5272,51 +5683,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__IngresoEg__IdPer__19FFD4FC", "Percha");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Percha>("ModelInventario.FK__LlegadaMe__IdPer__5B988E2F", "Percha");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Percha>("ModelInventario.FK__IngresoEg__IdPer__19FFD4FC", "Percha", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdTip__162F4418", "TipoArticulo")]
-        public TipoArticulo TipoArticulo
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__IngresoEg__IdTip__162F4418", "TipoArticulo").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__IngresoEg__IdTip__162F4418", "TipoArticulo").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<TipoArticulo> TipoArticuloReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__IngresoEg__IdTip__162F4418", "TipoArticulo");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoArticulo>("ModelInventario.FK__IngresoEg__IdTip__162F4418", "TipoArticulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Percha>("ModelInventario.FK__LlegadaMe__IdPer__5B988E2F", "Percha", value);
                 }
             }
         }
@@ -5462,18 +5835,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdMarc__60083D91", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdMarc__53D770D6", "Articulo")]
         public EntityCollection<Articulo> Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdMarc__60083D91", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdMarc__53D770D6", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdMarc__60083D91", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdMarc__53D770D6", "Articulo", value);
                 }
             }
         }
@@ -5484,16 +5857,38 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Marca__IdEmpresa__45544755", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Modelo__IdMarca__44952D46", "Modelo")]
+        public EntityCollection<Modelo> Modelo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Modelo>("ModelInventario.FK__Modelo__IdMarca__44952D46", "Modelo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Modelo>("ModelInventario.FK__Modelo__IdMarca__44952D46", "Modelo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Marca__IdEmpresa__3EDC53F0", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Marca__IdEmpresa__45544755", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Marca__IdEmpresa__3EDC53F0", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Marca__IdEmpresa__45544755", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Marca__IdEmpresa__3EDC53F0", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -5505,35 +5900,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Marca__IdEmpresa__45544755", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Marca__IdEmpresa__3EDC53F0", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Marca__IdEmpresa__45544755", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Modelo__IdMarca__4CF5691D", "Modelo")]
-        public EntityCollection<Modelo> Modelo
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Modelo>("ModelInventario.FK__Modelo__IdMarca__4CF5691D", "Modelo");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Modelo>("ModelInventario.FK__Modelo__IdMarca__4CF5691D", "Modelo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Marca__IdEmpresa__3EDC53F0", "Empresa", value);
                 }
             }
         }
@@ -5703,18 +6076,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdMode__60FC61CA", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdMode__54CB950F", "Articulo")]
         public EntityCollection<Articulo> Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdMode__60FC61CA", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdMode__54CB950F", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdMode__60FC61CA", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdMode__54CB950F", "Articulo", value);
                 }
             }
         }
@@ -5725,16 +6098,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Modelo__IdMarca__4CF5691D", "Marca")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Modelo__IdMarca__44952D46", "Marca")]
         public Marca Marca
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Marca>("ModelInventario.FK__Modelo__IdMarca__4CF5691D", "Marca").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Marca>("ModelInventario.FK__Modelo__IdMarca__44952D46", "Marca").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Marca>("ModelInventario.FK__Modelo__IdMarca__4CF5691D", "Marca").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Marca>("ModelInventario.FK__Modelo__IdMarca__44952D46", "Marca").Value = value;
             }
         }
         /// <summary>
@@ -5746,13 +6119,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Marca>("ModelInventario.FK__Modelo__IdMarca__4CF5691D", "Marca");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Marca>("ModelInventario.FK__Modelo__IdMarca__44952D46", "Marca");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Marca>("ModelInventario.FK__Modelo__IdMarca__4CF5691D", "Marca", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Marca>("ModelInventario.FK__Modelo__IdMarca__44952D46", "Marca", value);
                 }
             }
         }
@@ -5763,16 +6136,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Modelo__IdEmpres__4B0D20AB", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Modelo__IdEmpres__42ACE4D4", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Modelo__IdEmpres__4B0D20AB", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Modelo__IdEmpres__42ACE4D4", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Modelo__IdEmpres__4B0D20AB", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Modelo__IdEmpres__42ACE4D4", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -5784,13 +6157,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Modelo__IdEmpres__4B0D20AB", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Modelo__IdEmpres__42ACE4D4", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Modelo__IdEmpres__4B0D20AB", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Modelo__IdEmpres__42ACE4D4", "Empresa", value);
                 }
             }
         }
@@ -5936,18 +6309,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdMot__0E8E2250", "IngresoEgresoCab")]
-        public EntityCollection<IngresoEgresoCab> IngresoEgresoCab
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__LlegadaMe__IdMot__63D8CE75", "LlegadaMercaderiaCab")]
+        public EntityCollection<LlegadaMercaderiaCab> LlegadaMercaderiaCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEg__IdMot__0E8E2250", "IngresoEgresoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<LlegadaMercaderiaCab>("ModelInventario.FK__LlegadaMe__IdMot__63D8CE75", "LlegadaMercaderiaCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEg__IdMot__0E8E2250", "IngresoEgresoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<LlegadaMercaderiaCab>("ModelInventario.FK__LlegadaMe__IdMot__63D8CE75", "LlegadaMercaderiaCab", value);
                 }
             }
         }
@@ -5958,16 +6331,60 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Motivo__IdEmpres__6D6238AF", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdMot__6D9742D9", "TomaFisicaCab")]
+        public EntityCollection<TomaFisicaCab> TomaFisicaCab
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisic__IdMot__6D9742D9", "TomaFisicaCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisic__IdMot__6D9742D9", "TomaFisicaCab", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Transfere__IdMot__640DD89F", "TransferenciaBodegaCab")]
+        public EntityCollection<TransferenciaBodegaCab> TransferenciaBodegaCab
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__IdMot__640DD89F", "TransferenciaBodegaCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__IdMot__640DD89F", "TransferenciaBodegaCab", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Motivo__IdEmpres__5D60DB10", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Motivo__IdEmpres__6D6238AF", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Motivo__IdEmpres__5D60DB10", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Motivo__IdEmpres__6D6238AF", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Motivo__IdEmpres__5D60DB10", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -5979,13 +6396,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Motivo__IdEmpres__6D6238AF", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Motivo__IdEmpres__5D60DB10", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Motivo__IdEmpres__6D6238AF", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Motivo__IdEmpres__5D60DB10", "Empresa", value);
                 }
             }
         }
@@ -5996,40 +6413,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdMot__035179CE", "TomaFisicaCab")]
-        public EntityCollection<TomaFisicaCab> TomaFisicaCab
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdMot__0CA5D9DE", "IngresoEgresoCab")]
+        public EntityCollection<IngresoEgresoCab> IngresoEgresoCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisic__IdMot__035179CE", "TomaFisicaCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEg__IdMot__0CA5D9DE", "IngresoEgresoCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisic__IdMot__035179CE", "TomaFisicaCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Transfere__IdMot__75F77EB0", "TransferenciaBodegaCab")]
-        public EntityCollection<TransferenciaBodegaCab> TransferenciaBodegaCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__IdMot__75F77EB0", "TransferenciaBodegaCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__IdMot__75F77EB0", "TransferenciaBodegaCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEg__IdMot__0CA5D9DE", "IngresoEgresoCab", value);
                 }
             }
         }
@@ -6310,34 +6705,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenComp__idEst__0D0FEE32", "Estado")]
-        public Estado Estado
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__LlegadaMercaderi__60083D91", "LlegadaMercaderiaCab")]
+        public EntityCollection<LlegadaMercaderiaCab> LlegadaMercaderiaCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("ModelInventario.FK__OrdenComp__idEst__0D0FEE32", "Estado").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("ModelInventario.FK__OrdenComp__idEst__0D0FEE32", "Estado").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Estado> EstadoReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Estado>("ModelInventario.FK__OrdenComp__idEst__0D0FEE32", "Estado");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<LlegadaMercaderiaCab>("ModelInventario.FK__LlegadaMercaderi__60083D91", "LlegadaMercaderiaCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Estado>("ModelInventario.FK__OrdenComp__idEst__0D0FEE32", "Estado", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<LlegadaMercaderiaCab>("ModelInventario.FK__LlegadaMercaderi__60083D91", "LlegadaMercaderiaCab", value);
                 }
             }
         }
@@ -6348,18 +6727,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEgresoCab__0BB1B5A5", "IngresoEgresoCab")]
-        public EntityCollection<IngresoEgresoCab> IngresoEgresoCab
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenCompraDet__48BAC3E5", "OrdenCompraDet")]
+        public EntityCollection<OrdenCompraDet> OrdenCompraDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEgresoCab__0BB1B5A5", "IngresoEgresoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenCompraDet>("ModelInventario.FK__OrdenCompraDet__48BAC3E5", "OrdenCompraDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEgresoCab__0BB1B5A5", "IngresoEgresoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenCompraDet>("ModelInventario.FK__OrdenCompraDet__48BAC3E5", "OrdenCompraDet", value);
                 }
             }
         }
@@ -6370,16 +6749,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenComp__idEmp__0B27A5C0", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenComp__idEmp__15DA3E5D", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__OrdenComp__idEmp__0B27A5C0", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__OrdenComp__idEmp__15DA3E5D", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__OrdenComp__idEmp__0B27A5C0", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__OrdenComp__idEmp__15DA3E5D", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -6391,73 +6770,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__OrdenComp__idEmp__0B27A5C0", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__OrdenComp__idEmp__15DA3E5D", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__OrdenComp__idEmp__0B27A5C0", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenComp__IdUsu__0C1BC9F9", "Usuario")]
-        public Usuario Usuario
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__OrdenComp__IdUsu__0C1BC9F9", "Usuario").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__OrdenComp__IdUsu__0C1BC9F9", "Usuario").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Usuario> UsuarioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__OrdenComp__IdUsu__0C1BC9F9", "Usuario");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("ModelInventario.FK__OrdenComp__IdUsu__0C1BC9F9", "Usuario", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenCompraDet__63F8CA06", "OrdenCompraDet")]
-        public EntityCollection<OrdenCompraDet> OrdenCompraDet
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenCompraDet>("ModelInventario.FK__OrdenCompraDet__63F8CA06", "OrdenCompraDet");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenCompraDet>("ModelInventario.FK__OrdenCompraDet__63F8CA06", "OrdenCompraDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__OrdenComp__idEmp__15DA3E5D", "Empresa", value);
                 }
             }
         }
@@ -6665,16 +6984,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenCompraDet__63F8CA06", "OrdenCompra")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenCompraDet__48BAC3E5", "OrdenCompra")]
         public OrdenCompra OrdenCompra
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("ModelInventario.FK__OrdenCompraDet__63F8CA06", "OrdenCompra").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("ModelInventario.FK__OrdenCompraDet__48BAC3E5", "OrdenCompra").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("ModelInventario.FK__OrdenCompraDet__63F8CA06", "OrdenCompra").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("ModelInventario.FK__OrdenCompraDet__48BAC3E5", "OrdenCompra").Value = value;
             }
         }
         /// <summary>
@@ -6686,13 +7005,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("ModelInventario.FK__OrdenCompraDet__63F8CA06", "OrdenCompra");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrdenCompra>("ModelInventario.FK__OrdenCompraDet__48BAC3E5", "OrdenCompra");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrdenCompra>("ModelInventario.FK__OrdenCompraDet__63F8CA06", "OrdenCompra", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrdenCompra>("ModelInventario.FK__OrdenCompraDet__48BAC3E5", "OrdenCompra", value);
                 }
             }
         }
@@ -6703,16 +7022,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenCompraDet__64ECEE3F", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenCompraDet__49AEE81E", "Articulo")]
         public Articulo Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__OrdenCompraDet__64ECEE3F", "Articulo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__OrdenCompraDet__49AEE81E", "Articulo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__OrdenCompraDet__64ECEE3F", "Articulo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__OrdenCompraDet__49AEE81E", "Articulo").Value = value;
             }
         }
         /// <summary>
@@ -6724,13 +7043,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__OrdenCompraDet__64ECEE3F", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__OrdenCompraDet__49AEE81E", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Articulo>("ModelInventario.FK__OrdenCompraDet__64ECEE3F", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Articulo>("ModelInventario.FK__OrdenCompraDet__49AEE81E", "Articulo", value);
                 }
             }
         }
@@ -6928,18 +7247,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__ArticuloB__IdPer__1940BAED", "ArticuloBodega")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__ArticuloB__IdPer__7DCDAAA2", "ArticuloBodega")]
         public EntityCollection<ArticuloBodega> ArticuloBodega
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ArticuloBodega>("ModelInventario.FK__ArticuloB__IdPer__1940BAED", "ArticuloBodega");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ArticuloBodega>("ModelInventario.FK__ArticuloB__IdPer__7DCDAAA2", "ArticuloBodega");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ArticuloBodega>("ModelInventario.FK__ArticuloB__IdPer__1940BAED", "ArticuloBodega", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ArticuloBodega>("ModelInventario.FK__ArticuloB__IdPer__7DCDAAA2", "ArticuloBodega", value);
                 }
             }
         }
@@ -6950,16 +7269,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Percha__67A95F59", "Bodega")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Percha__59904A2C", "Bodega")]
         public Bodega Bodega
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__Percha__67A95F59", "Bodega").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__Percha__59904A2C", "Bodega").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__Percha__67A95F59", "Bodega").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__Percha__59904A2C", "Bodega").Value = value;
             }
         }
         /// <summary>
@@ -6971,13 +7290,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__Percha__67A95F59", "Bodega");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__Percha__59904A2C", "Bodega");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Bodega>("ModelInventario.FK__Percha__67A95F59", "Bodega", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Bodega>("ModelInventario.FK__Percha__59904A2C", "Bodega", value);
                 }
             }
         }
@@ -6988,18 +7307,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdPer__19FFD4FC", "IngresoEgresoDet")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdPer__5D2BD0E6", "IngresoEgresoDet")]
         public EntityCollection<IngresoEgresoDet> IngresoEgresoDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEg__IdPer__19FFD4FC", "IngresoEgresoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEg__IdPer__5D2BD0E6", "IngresoEgresoDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEg__IdPer__19FFD4FC", "IngresoEgresoDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEg__IdPer__5D2BD0E6", "IngresoEgresoDet", value);
                 }
             }
         }
@@ -7010,16 +7329,38 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Percha__IdEmpres__66B53B20", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__LlegadaMe__IdPer__5B988E2F", "LlegadaMercaderiaDet")]
+        public EntityCollection<LlegadaMercaderiaDet> LlegadaMercaderiaDet
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<LlegadaMercaderiaDet>("ModelInventario.FK__LlegadaMe__IdPer__5B988E2F", "LlegadaMercaderiaDet");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<LlegadaMercaderiaDet>("ModelInventario.FK__LlegadaMe__IdPer__5B988E2F", "LlegadaMercaderiaDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Percha__IdEmpres__589C25F3", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Percha__IdEmpres__66B53B20", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Percha__IdEmpres__589C25F3", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Percha__IdEmpres__66B53B20", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Percha__IdEmpres__589C25F3", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -7031,574 +7372,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Percha__IdEmpres__66B53B20", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Percha__IdEmpres__589C25F3", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Percha__IdEmpres__66B53B20", "Empresa", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No hay documentación de metadatos disponible.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="ModelInventario", Name="Persona")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class Persona : EntityObject
-    {
-        #region Método de generador
-    
-        /// <summary>
-        /// Crear un nuevo objeto Persona.
-        /// </summary>
-        /// <param name="idPersona">Valor inicial de la propiedad IdPersona.</param>
-        /// <param name="identificacion">Valor inicial de la propiedad Identificacion.</param>
-        /// <param name="idTipoPersona">Valor inicial de la propiedad IdTipoPersona.</param>
-        /// <param name="idEmpresa">Valor inicial de la propiedad IdEmpresa.</param>
-        /// <param name="nombreRazonSocial">Valor inicial de la propiedad NombreRazonSocial.</param>
-        /// <param name="tipoIdentificacion">Valor inicial de la propiedad TipoIdentificacion.</param>
-        /// <param name="direccion">Valor inicial de la propiedad direccion.</param>
-        /// <param name="telefonoMovil">Valor inicial de la propiedad TelefonoMovil.</param>
-        /// <param name="telefonoCasa">Valor inicial de la propiedad TelefonoCasa.</param>
-        /// <param name="mail">Valor inicial de la propiedad mail.</param>
-        /// <param name="idEstado">Valor inicial de la propiedad IdEstado.</param>
-        public static Persona CreatePersona(global::System.Int32 idPersona, global::System.Decimal identificacion, global::System.Int32 idTipoPersona, global::System.Int32 idEmpresa, global::System.String nombreRazonSocial, global::System.Int32 tipoIdentificacion, global::System.String direccion, global::System.Decimal telefonoMovil, global::System.Decimal telefonoCasa, global::System.String mail, global::System.Int32 idEstado)
-        {
-            Persona persona = new Persona();
-            persona.IdPersona = idPersona;
-            persona.Identificacion = identificacion;
-            persona.IdTipoPersona = idTipoPersona;
-            persona.IdEmpresa = idEmpresa;
-            persona.NombreRazonSocial = nombreRazonSocial;
-            persona.TipoIdentificacion = tipoIdentificacion;
-            persona.direccion = direccion;
-            persona.TelefonoMovil = telefonoMovil;
-            persona.TelefonoCasa = telefonoCasa;
-            persona.mail = mail;
-            persona.IdEstado = idEstado;
-            return persona;
-        }
-
-        #endregion
-
-        #region Propiedades primitivas
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdPersona
-        {
-            get
-            {
-                return _IdPersona;
-            }
-            set
-            {
-                if (_IdPersona != value)
-                {
-                    OnIdPersonaChanging(value);
-                    ReportPropertyChanging("IdPersona");
-                    _IdPersona = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdPersona");
-                    OnIdPersonaChanged();
-                }
-            }
-        }
-        private global::System.Int32 _IdPersona;
-        partial void OnIdPersonaChanging(global::System.Int32 value);
-        partial void OnIdPersonaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Decimal Identificacion
-        {
-            get
-            {
-                return _Identificacion;
-            }
-            set
-            {
-                OnIdentificacionChanging(value);
-                ReportPropertyChanging("Identificacion");
-                _Identificacion = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("Identificacion");
-                OnIdentificacionChanged();
-            }
-        }
-        private global::System.Decimal _Identificacion;
-        partial void OnIdentificacionChanging(global::System.Decimal value);
-        partial void OnIdentificacionChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdTipoPersona
-        {
-            get
-            {
-                return _IdTipoPersona;
-            }
-            set
-            {
-                OnIdTipoPersonaChanging(value);
-                ReportPropertyChanging("IdTipoPersona");
-                _IdTipoPersona = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdTipoPersona");
-                OnIdTipoPersonaChanged();
-            }
-        }
-        private global::System.Int32 _IdTipoPersona;
-        partial void OnIdTipoPersonaChanging(global::System.Int32 value);
-        partial void OnIdTipoPersonaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdEmpresa
-        {
-            get
-            {
-                return _IdEmpresa;
-            }
-            set
-            {
-                OnIdEmpresaChanging(value);
-                ReportPropertyChanging("IdEmpresa");
-                _IdEmpresa = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdEmpresa");
-                OnIdEmpresaChanged();
-            }
-        }
-        private global::System.Int32 _IdEmpresa;
-        partial void OnIdEmpresaChanging(global::System.Int32 value);
-        partial void OnIdEmpresaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String NombreRazonSocial
-        {
-            get
-            {
-                return _NombreRazonSocial;
-            }
-            set
-            {
-                OnNombreRazonSocialChanging(value);
-                ReportPropertyChanging("NombreRazonSocial");
-                _NombreRazonSocial = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("NombreRazonSocial");
-                OnNombreRazonSocialChanged();
-            }
-        }
-        private global::System.String _NombreRazonSocial;
-        partial void OnNombreRazonSocialChanging(global::System.String value);
-        partial void OnNombreRazonSocialChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String Apellido
-        {
-            get
-            {
-                return _Apellido;
-            }
-            set
-            {
-                OnApellidoChanging(value);
-                ReportPropertyChanging("Apellido");
-                _Apellido = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Apellido");
-                OnApellidoChanged();
-            }
-        }
-        private global::System.String _Apellido;
-        partial void OnApellidoChanging(global::System.String value);
-        partial void OnApellidoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.DateTime> FechaNacimiento
-        {
-            get
-            {
-                return _FechaNacimiento;
-            }
-            set
-            {
-                OnFechaNacimientoChanging(value);
-                ReportPropertyChanging("FechaNacimiento");
-                _FechaNacimiento = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("FechaNacimiento");
-                OnFechaNacimientoChanged();
-            }
-        }
-        private Nullable<global::System.DateTime> _FechaNacimiento;
-        partial void OnFechaNacimientoChanging(Nullable<global::System.DateTime> value);
-        partial void OnFechaNacimientoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String genero
-        {
-            get
-            {
-                return _genero;
-            }
-            set
-            {
-                OngeneroChanging(value);
-                ReportPropertyChanging("genero");
-                _genero = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("genero");
-                OngeneroChanged();
-            }
-        }
-        private global::System.String _genero;
-        partial void OngeneroChanging(global::System.String value);
-        partial void OngeneroChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 TipoIdentificacion
-        {
-            get
-            {
-                return _TipoIdentificacion;
-            }
-            set
-            {
-                OnTipoIdentificacionChanging(value);
-                ReportPropertyChanging("TipoIdentificacion");
-                _TipoIdentificacion = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("TipoIdentificacion");
-                OnTipoIdentificacionChanged();
-            }
-        }
-        private global::System.Int32 _TipoIdentificacion;
-        partial void OnTipoIdentificacionChanging(global::System.Int32 value);
-        partial void OnTipoIdentificacionChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String direccion
-        {
-            get
-            {
-                return _direccion;
-            }
-            set
-            {
-                OndireccionChanging(value);
-                ReportPropertyChanging("direccion");
-                _direccion = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("direccion");
-                OndireccionChanged();
-            }
-        }
-        private global::System.String _direccion;
-        partial void OndireccionChanging(global::System.String value);
-        partial void OndireccionChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> TelefonoGneral
-        {
-            get
-            {
-                return _TelefonoGneral;
-            }
-            set
-            {
-                OnTelefonoGneralChanging(value);
-                ReportPropertyChanging("TelefonoGneral");
-                _TelefonoGneral = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("TelefonoGneral");
-                OnTelefonoGneralChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _TelefonoGneral;
-        partial void OnTelefonoGneralChanging(Nullable<global::System.Decimal> value);
-        partial void OnTelefonoGneralChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Decimal TelefonoMovil
-        {
-            get
-            {
-                return _TelefonoMovil;
-            }
-            set
-            {
-                OnTelefonoMovilChanging(value);
-                ReportPropertyChanging("TelefonoMovil");
-                _TelefonoMovil = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("TelefonoMovil");
-                OnTelefonoMovilChanged();
-            }
-        }
-        private global::System.Decimal _TelefonoMovil;
-        partial void OnTelefonoMovilChanging(global::System.Decimal value);
-        partial void OnTelefonoMovilChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Decimal TelefonoCasa
-        {
-            get
-            {
-                return _TelefonoCasa;
-            }
-            set
-            {
-                OnTelefonoCasaChanging(value);
-                ReportPropertyChanging("TelefonoCasa");
-                _TelefonoCasa = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("TelefonoCasa");
-                OnTelefonoCasaChanged();
-            }
-        }
-        private global::System.Decimal _TelefonoCasa;
-        partial void OnTelefonoCasaChanging(global::System.Decimal value);
-        partial void OnTelefonoCasaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Decimal> TelefonoOtros
-        {
-            get
-            {
-                return _TelefonoOtros;
-            }
-            set
-            {
-                OnTelefonoOtrosChanging(value);
-                ReportPropertyChanging("TelefonoOtros");
-                _TelefonoOtros = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("TelefonoOtros");
-                OnTelefonoOtrosChanged();
-            }
-        }
-        private Nullable<global::System.Decimal> _TelefonoOtros;
-        partial void OnTelefonoOtrosChanging(Nullable<global::System.Decimal> value);
-        partial void OnTelefonoOtrosChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String mail
-        {
-            get
-            {
-                return _mail;
-            }
-            set
-            {
-                OnmailChanging(value);
-                ReportPropertyChanging("mail");
-                _mail = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("mail");
-                OnmailChanged();
-            }
-        }
-        private global::System.String _mail;
-        partial void OnmailChanging(global::System.String value);
-        partial void OnmailChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdEstado
-        {
-            get
-            {
-                return _IdEstado;
-            }
-            set
-            {
-                OnIdEstadoChanging(value);
-                ReportPropertyChanging("IdEstado");
-                _IdEstado = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdEstado");
-                OnIdEstadoChanged();
-            }
-        }
-        private global::System.Int32 _IdEstado;
-        partial void OnIdEstadoChanging(global::System.Int32 value);
-        partial void OnIdEstadoChanged();
-
-        #endregion
-
-    
-        #region Propiedades de navegación
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Bodega__IdRespon__22FF2F51", "Bodega")]
-        public EntityCollection<Bodega> Bodega
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Bodega>("ModelInventario.FK__Bodega__IdRespon__22FF2F51", "Bodega");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Bodega>("ModelInventario.FK__Bodega__IdRespon__22FF2F51", "Bodega", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdRes__10766AC2", "IngresoEgresoCab")]
-        public EntityCollection<IngresoEgresoCab> IngresoEgresoCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEg__IdRes__10766AC2", "IngresoEgresoCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEg__IdRes__10766AC2", "IngresoEgresoCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Persona__IdEmpre__1BFD2C07", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Persona__IdEmpre__1BFD2C07", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Persona__IdEmpre__1BFD2C07", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Persona__IdEmpre__1BFD2C07", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Persona__IdEmpre__1BFD2C07", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Usuario__IdUsuar__3C69FB99", "Usuario")]
-        public Usuario Usuario
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__Usuario__IdUsuar__3C69FB99", "Usuario").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__Usuario__IdUsuar__3C69FB99", "Usuario").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Usuario> UsuarioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__Usuario__IdUsuar__3C69FB99", "Usuario");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("ModelInventario.FK__Usuario__IdUsuar__3C69FB99", "Usuario", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Percha__IdEmpres__589C25F3", "Empresa", value);
                 }
             }
         }
@@ -7744,18 +7524,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__5A4F643B", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__4E1E9780", "Articulo")]
         public EntityCollection<Articulo> Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__5A4F643B", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__4E1E9780", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__5A4F643B", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__4E1E9780", "Articulo", value);
                 }
             }
         }
@@ -7766,18 +7546,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Grupo__IdTipoArt__6BAEFA67", "Grupo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Grupo__IdTipoArt__7E02B4CC", "Grupo")]
         public EntityCollection<Grupo> Grupo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Grupo>("ModelInventario.FK__Grupo__IdTipoArt__6BAEFA67", "Grupo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Grupo>("ModelInventario.FK__Grupo__IdTipoArt__7E02B4CC", "Grupo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Grupo>("ModelInventario.FK__Grupo__IdTipoArt__6BAEFA67", "Grupo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Grupo>("ModelInventario.FK__Grupo__IdTipoArt__7E02B4CC", "Grupo", value);
                 }
             }
         }
@@ -7788,18 +7568,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdTip__162F4418", "IngresoEgresoDet")]
-        public EntityCollection<IngresoEgresoDet> IngresoEgresoDet
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdTip__6E8B6712", "TomaFisicaCab")]
+        public EntityCollection<TomaFisicaCab> TomaFisicaCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEg__IdTip__162F4418", "IngresoEgresoDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisic__IdTip__6E8B6712", "TomaFisicaCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoDet>("ModelInventario.FK__IngresoEg__IdTip__162F4418", "IngresoEgresoDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisic__IdTip__6E8B6712", "TomaFisicaCab", value);
                 }
             }
         }
@@ -7810,16 +7590,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoArtic__IdEmp__6501FCD8", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoArtic__IdEmp__793DFFAF", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoArtic__IdEmp__6501FCD8", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoArtic__IdEmp__793DFFAF", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoArtic__IdEmp__6501FCD8", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoArtic__IdEmp__793DFFAF", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -7831,35 +7611,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoArtic__IdEmp__6501FCD8", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoArtic__IdEmp__793DFFAF", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__TipoArtic__IdEmp__6501FCD8", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdTip__04459E07", "TomaFisicaCab")]
-        public EntityCollection<TomaFisicaCab> TomaFisicaCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisic__IdTip__04459E07", "TomaFisicaCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisic__IdTip__04459E07", "TomaFisicaCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__TipoArtic__IdEmp__793DFFAF", "Empresa", value);
                 }
             }
         }
@@ -8003,18 +7761,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__5E1FF51F", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__51EF2864", "Articulo")]
         public EntityCollection<Articulo> Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__5E1FF51F", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__51EF2864", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__5E1FF51F", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__51EF2864", "Articulo", value);
                 }
             }
         }
@@ -8025,16 +7783,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoCombu__IdEmp__39E294A9", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoCombu__IdEmp__373B3228", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoCombu__IdEmp__39E294A9", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoCombu__IdEmp__373B3228", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoCombu__IdEmp__39E294A9", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoCombu__IdEmp__373B3228", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -8046,13 +7804,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoCombu__IdEmp__39E294A9", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoCombu__IdEmp__373B3228", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__TipoCombu__IdEmp__39E294A9", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__TipoCombu__IdEmp__373B3228", "Empresa", value);
                 }
             }
         }
@@ -8196,18 +7954,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__61F08603", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__55BFB948", "Articulo")]
         public EntityCollection<Articulo> Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__61F08603", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__55BFB948", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__61F08603", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__55BFB948", "Articulo", value);
                 }
             }
         }
@@ -8218,16 +7976,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoMater__IdEmp__51BA1E3A", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoMater__IdEmp__477199F1", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMater__IdEmp__51BA1E3A", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMater__IdEmp__477199F1", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMater__IdEmp__51BA1E3A", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMater__IdEmp__477199F1", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -8239,13 +7997,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMater__IdEmp__51BA1E3A", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMater__IdEmp__477199F1", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__TipoMater__IdEmp__51BA1E3A", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__TipoMater__IdEmp__477199F1", "Empresa", value);
                 }
             }
         }
@@ -8389,18 +8147,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__5D2BD0E6", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdTipo__50FB042B", "Articulo")]
         public EntityCollection<Articulo> Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__5D2BD0E6", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__50FB042B", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__5D2BD0E6", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdTipo__50FB042B", "Articulo", value);
                 }
             }
         }
@@ -8411,16 +8169,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoMotor__IdEmp__3429BB53", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoMotor__IdEmp__336AA144", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMotor__IdEmp__3429BB53", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMotor__IdEmp__336AA144", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMotor__IdEmp__3429BB53", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMotor__IdEmp__336AA144", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -8432,13 +8190,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMotor__IdEmp__3429BB53", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMotor__IdEmp__336AA144", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__TipoMotor__IdEmp__3429BB53", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__TipoMotor__IdEmp__336AA144", "Empresa", value);
                 }
             }
         }
@@ -8582,18 +8340,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdTip__0CA5D9DE", "IngresoEgresoCab")]
-        public EntityCollection<IngresoEgresoCab> IngresoEgresoCab
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__LlegadaMe__IdTip__61F08603", "LlegadaMercaderiaCab")]
+        public EntityCollection<LlegadaMercaderiaCab> LlegadaMercaderiaCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEg__IdTip__0CA5D9DE", "IngresoEgresoCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<LlegadaMercaderiaCab>("ModelInventario.FK__LlegadaMe__IdTip__61F08603", "LlegadaMercaderiaCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEg__IdTip__0CA5D9DE", "IngresoEgresoCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<LlegadaMercaderiaCab>("ModelInventario.FK__LlegadaMe__IdTip__61F08603", "LlegadaMercaderiaCab", value);
                 }
             }
         }
@@ -8604,16 +8362,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoMovim__IdEmp__119F9925", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TipoMovim__IdEmp__7814D14C", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMovim__IdEmp__119F9925", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMovim__IdEmp__7814D14C", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMovim__IdEmp__119F9925", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMovim__IdEmp__7814D14C", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -8625,13 +8383,35 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMovim__IdEmp__119F9925", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TipoMovim__IdEmp__7814D14C", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__TipoMovim__IdEmp__119F9925", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__TipoMovim__IdEmp__7814D14C", "Empresa", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdTip__0ABD916C", "IngresoEgresoCab")]
+        public EntityCollection<IngresoEgresoCab> IngresoEgresoCab
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEg__IdTip__0ABD916C", "IngresoEgresoCab");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEg__IdTip__0ABD916C", "IngresoEgresoCab", value);
                 }
             }
         }
@@ -8967,16 +8747,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisicaCab__0539C240", "Bodega")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisicaCab__6F7F8B4B", "Bodega")]
         public Bodega Bodega
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TomaFisicaCab__0539C240", "Bodega").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TomaFisicaCab__6F7F8B4B", "Bodega").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TomaFisicaCab__0539C240", "Bodega").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TomaFisicaCab__6F7F8B4B", "Bodega").Value = value;
             }
         }
         /// <summary>
@@ -8988,13 +8768,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TomaFisicaCab__0539C240", "Bodega");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TomaFisicaCab__6F7F8B4B", "Bodega");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Bodega>("ModelInventario.FK__TomaFisicaCab__0539C240", "Bodega", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Bodega>("ModelInventario.FK__TomaFisicaCab__6F7F8B4B", "Bodega", value);
                 }
             }
         }
@@ -9005,16 +8785,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdMot__035179CE", "Motivo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdMot__6D9742D9", "Motivo")]
         public Motivo Motivo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__TomaFisic__IdMot__035179CE", "Motivo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__TomaFisic__IdMot__6D9742D9", "Motivo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__TomaFisic__IdMot__035179CE", "Motivo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__TomaFisic__IdMot__6D9742D9", "Motivo").Value = value;
             }
         }
         /// <summary>
@@ -9026,13 +8806,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__TomaFisic__IdMot__035179CE", "Motivo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__TomaFisic__IdMot__6D9742D9", "Motivo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Motivo>("ModelInventario.FK__TomaFisic__IdMot__035179CE", "Motivo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Motivo>("ModelInventario.FK__TomaFisic__IdMot__6D9742D9", "Motivo", value);
                 }
             }
         }
@@ -9043,16 +8823,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdTip__04459E07", "TipoArticulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdTip__6E8B6712", "TipoArticulo")]
         public TipoArticulo TipoArticulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__TomaFisic__IdTip__04459E07", "TipoArticulo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__TomaFisic__IdTip__6E8B6712", "TipoArticulo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__TomaFisic__IdTip__04459E07", "TipoArticulo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__TomaFisic__IdTip__6E8B6712", "TipoArticulo").Value = value;
             }
         }
         /// <summary>
@@ -9064,13 +8844,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__TomaFisic__IdTip__04459E07", "TipoArticulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TipoArticulo>("ModelInventario.FK__TomaFisic__IdTip__6E8B6712", "TipoArticulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoArticulo>("ModelInventario.FK__TomaFisic__IdTip__04459E07", "TipoArticulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TipoArticulo>("ModelInventario.FK__TomaFisic__IdTip__6E8B6712", "TipoArticulo", value);
                 }
             }
         }
@@ -9081,16 +8861,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdEmp__025D5595", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdEmp__6CA31EA0", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__025D5595", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__6CA31EA0", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__025D5595", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__6CA31EA0", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -9102,51 +8882,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__025D5595", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__6CA31EA0", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__025D5595", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdUsu__062DE679", "Usuario")]
-        public Usuario Usuario1
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__TomaFisic__IdUsu__062DE679", "Usuario").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__TomaFisic__IdUsu__062DE679", "Usuario").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Usuario> Usuario1Reference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__TomaFisic__IdUsu__062DE679", "Usuario");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("ModelInventario.FK__TomaFisic__IdUsu__062DE679", "Usuario", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__6CA31EA0", "Empresa", value);
                 }
             }
         }
@@ -9169,10 +8911,12 @@ namespace datos.Inventario
         /// Crear un nuevo objeto TomaFisicaDet.
         /// </summary>
         /// <param name="nroTomaFisica">Valor inicial de la propiedad NroTomaFisica.</param>
-        public static TomaFisicaDet CreateTomaFisicaDet(global::System.Int32 nroTomaFisica)
+        /// <param name="linea">Valor inicial de la propiedad linea.</param>
+        public static TomaFisicaDet CreateTomaFisicaDet(global::System.Int32 nroTomaFisica, global::System.Int32 linea)
         {
             TomaFisicaDet tomaFisicaDet = new TomaFisicaDet();
             tomaFisicaDet.NroTomaFisica = nroTomaFisica;
+            tomaFisicaDet.linea = linea;
             return tomaFisicaDet;
         }
 
@@ -9230,6 +8974,33 @@ namespace datos.Inventario
         private global::System.Int32 _NroTomaFisica;
         partial void OnNroTomaFisicaChanging(global::System.Int32 value);
         partial void OnNroTomaFisicaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 linea
+        {
+            get
+            {
+                return _linea;
+            }
+            set
+            {
+                if (_linea != value)
+                {
+                    OnlineaChanging(value);
+                    ReportPropertyChanging("linea");
+                    _linea = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("linea");
+                    OnlineaChanged();
+                }
+            }
+        }
+        private global::System.Int32 _linea;
+        partial void OnlineaChanging(global::System.Int32 value);
+        partial void OnlineaChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -9362,16 +9133,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisicaDet__0CDAE408", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisicaDet__6BCEF5F8", "Articulo")]
         public Articulo Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__TomaFisicaDet__0CDAE408", "Articulo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__TomaFisicaDet__6BCEF5F8", "Articulo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__TomaFisicaDet__0CDAE408", "Articulo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__TomaFisicaDet__6BCEF5F8", "Articulo").Value = value;
             }
         }
         /// <summary>
@@ -9383,13 +9154,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__TomaFisicaDet__0CDAE408", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Articulo>("ModelInventario.FK__TomaFisicaDet__6BCEF5F8", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Articulo>("ModelInventario.FK__TomaFisicaDet__0CDAE408", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Articulo>("ModelInventario.FK__TomaFisicaDet__6BCEF5F8", "Articulo", value);
                 }
             }
         }
@@ -9400,16 +9171,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdEmp__0BE6BFCF", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdEmp__6ADAD1BF", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__0BE6BFCF", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__6ADAD1BF", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__0BE6BFCF", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__6ADAD1BF", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -9421,13 +9192,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__0BE6BFCF", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__6ADAD1BF", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__0BE6BFCF", "Empresa", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__TomaFisic__IdEmp__6ADAD1BF", "Empresa", value);
                 }
             }
         }
@@ -9739,16 +9510,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TransferenciaBod__740F363E", "Bodega")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TransferenciaBod__6225902D", "Bodega")]
         public Bodega Bodega
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__740F363E", "Bodega").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__6225902D", "Bodega").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__740F363E", "Bodega").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__6225902D", "Bodega").Value = value;
             }
         }
         /// <summary>
@@ -9760,13 +9531,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__740F363E", "Bodega");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__6225902D", "Bodega");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__740F363E", "Bodega", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__6225902D", "Bodega", value);
                 }
             }
         }
@@ -9777,16 +9548,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TransferenciaBod__75035A77", "Bodega")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TransferenciaBod__6319B466", "Bodega")]
         public Bodega Bodega1
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__75035A77", "Bodega").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__6319B466", "Bodega").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__75035A77", "Bodega").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__6319B466", "Bodega").Value = value;
             }
         }
         /// <summary>
@@ -9798,13 +9569,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__75035A77", "Bodega");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__6319B466", "Bodega");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__75035A77", "Bodega", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Bodega>("ModelInventario.FK__TransferenciaBod__6319B466", "Bodega", value);
                 }
             }
         }
@@ -9815,16 +9586,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Transfere__IdMot__75F77EB0", "Motivo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Transfere__IdMot__640DD89F", "Motivo")]
         public Motivo Motivo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__Transfere__IdMot__75F77EB0", "Motivo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__Transfere__IdMot__640DD89F", "Motivo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__Transfere__IdMot__75F77EB0", "Motivo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__Transfere__IdMot__640DD89F", "Motivo").Value = value;
             }
         }
         /// <summary>
@@ -9836,13 +9607,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__Transfere__IdMot__75F77EB0", "Motivo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Motivo>("ModelInventario.FK__Transfere__IdMot__640DD89F", "Motivo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Motivo>("ModelInventario.FK__Transfere__IdMot__75F77EB0", "Motivo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Motivo>("ModelInventario.FK__Transfere__IdMot__640DD89F", "Motivo", value);
                 }
             }
         }
@@ -9853,92 +9624,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Transfere__IdEmp__731B1205", "Empresa")]
-        public Empresa Empresa
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Transfere__IdEmp__731B1205", "Empresa").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Transfere__IdEmp__731B1205", "Empresa").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Empresa> EmpresaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Transfere__IdEmp__731B1205", "Empresa");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Transfere__IdEmp__731B1205", "Empresa", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Transfere__IdUsu__77DFC722", "Usuario")]
-        public Usuario Usuario
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__Transfere__IdUsu__77DFC722", "Usuario").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__Transfere__IdUsu__77DFC722", "Usuario").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Usuario> UsuarioReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Usuario>("ModelInventario.FK__Transfere__IdUsu__77DFC722", "Usuario");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Usuario>("ModelInventario.FK__Transfere__IdUsu__77DFC722", "Usuario", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Transfere__NroTr__7CA47C3F", "TransferenciaBodegaDet")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Transfere__NroTr__68D28DBC", "TransferenciaBodegaDet")]
         public TransferenciaBodegaDet TransferenciaBodegaDet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TransferenciaBodegaDet>("ModelInventario.FK__Transfere__NroTr__7CA47C3F", "TransferenciaBodegaDet").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TransferenciaBodegaDet>("ModelInventario.FK__Transfere__NroTr__68D28DBC", "TransferenciaBodegaDet").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TransferenciaBodegaDet>("ModelInventario.FK__Transfere__NroTr__7CA47C3F", "TransferenciaBodegaDet").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TransferenciaBodegaDet>("ModelInventario.FK__Transfere__NroTr__68D28DBC", "TransferenciaBodegaDet").Value = value;
             }
         }
         /// <summary>
@@ -9950,13 +9645,51 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TransferenciaBodegaDet>("ModelInventario.FK__Transfere__NroTr__7CA47C3F", "TransferenciaBodegaDet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TransferenciaBodegaDet>("ModelInventario.FK__Transfere__NroTr__68D28DBC", "TransferenciaBodegaDet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TransferenciaBodegaDet>("ModelInventario.FK__Transfere__NroTr__7CA47C3F", "TransferenciaBodegaDet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TransferenciaBodegaDet>("ModelInventario.FK__Transfere__NroTr__68D28DBC", "TransferenciaBodegaDet", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Transfere__IdEmp__61316BF4", "Empresa")]
+        public Empresa Empresa
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Transfere__IdEmp__61316BF4", "Empresa").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Transfere__IdEmp__61316BF4", "Empresa").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Empresa> EmpresaReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__Transfere__IdEmp__61316BF4", "Empresa");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__Transfere__IdEmp__61316BF4", "Empresa", value);
                 }
             }
         }
@@ -10124,16 +9857,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Transfere__NroTr__7CA47C3F", "TransferenciaBodegaCab")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Transfere__NroTr__68D28DBC", "TransferenciaBodegaCab")]
         public TransferenciaBodegaCab TransferenciaBodegaCab
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__NroTr__7CA47C3F", "TransferenciaBodegaCab").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__NroTr__68D28DBC", "TransferenciaBodegaCab").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__NroTr__7CA47C3F", "TransferenciaBodegaCab").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__NroTr__68D28DBC", "TransferenciaBodegaCab").Value = value;
             }
         }
         /// <summary>
@@ -10145,13 +9878,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__NroTr__7CA47C3F", "TransferenciaBodegaCab");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__NroTr__68D28DBC", "TransferenciaBodegaCab");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__NroTr__7CA47C3F", "TransferenciaBodegaCab", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__NroTr__68D28DBC", "TransferenciaBodegaCab", value);
                 }
             }
         }
@@ -10297,18 +10030,18 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdUnid__595B4002", "Articulo")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Articulo__IdUnid__4D2A7347", "Articulo")]
         public EntityCollection<Articulo> Articulo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdUnid__595B4002", "Articulo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdUnid__4D2A7347", "Articulo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdUnid__595B4002", "Articulo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Articulo>("ModelInventario.FK__Articulo__IdUnid__4D2A7347", "Articulo", value);
                 }
             }
         }
@@ -10319,16 +10052,16 @@ namespace datos.Inventario
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__UnidadMed__IdEmp__28B808A7", "Empresa")]
+        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__UnidadMed__IdEmp__2BC97F7C", "Empresa")]
         public Empresa Empresa
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__UnidadMed__IdEmp__28B808A7", "Empresa").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__UnidadMed__IdEmp__2BC97F7C", "Empresa").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__UnidadMed__IdEmp__28B808A7", "Empresa").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__UnidadMed__IdEmp__2BC97F7C", "Empresa").Value = value;
             }
         }
         /// <summary>
@@ -10340,324 +10073,13 @@ namespace datos.Inventario
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__UnidadMed__IdEmp__28B808A7", "Empresa");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Empresa>("ModelInventario.FK__UnidadMed__IdEmp__2BC97F7C", "Empresa");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__UnidadMed__IdEmp__28B808A7", "Empresa", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No hay documentación de metadatos disponible.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="ModelInventario", Name="Usuario")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class Usuario : EntityObject
-    {
-        #region Método de generador
-    
-        /// <summary>
-        /// Crear un nuevo objeto Usuario.
-        /// </summary>
-        /// <param name="idUsuario">Valor inicial de la propiedad IdUsuario.</param>
-        /// <param name="nombreUsuario">Valor inicial de la propiedad NombreUsuario.</param>
-        /// <param name="contrasena">Valor inicial de la propiedad Contrasena.</param>
-        public static Usuario CreateUsuario(global::System.Int32 idUsuario, global::System.String nombreUsuario, global::System.String contrasena)
-        {
-            Usuario usuario = new Usuario();
-            usuario.IdUsuario = idUsuario;
-            usuario.NombreUsuario = nombreUsuario;
-            usuario.Contrasena = contrasena;
-            return usuario;
-        }
-
-        #endregion
-
-        #region Propiedades primitivas
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 IdUsuario
-        {
-            get
-            {
-                return _IdUsuario;
-            }
-            set
-            {
-                if (_IdUsuario != value)
-                {
-                    OnIdUsuarioChanging(value);
-                    ReportPropertyChanging("IdUsuario");
-                    _IdUsuario = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("IdUsuario");
-                    OnIdUsuarioChanged();
-                }
-            }
-        }
-        private global::System.Int32 _IdUsuario;
-        partial void OnIdUsuarioChanging(global::System.Int32 value);
-        partial void OnIdUsuarioChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String NombreUsuario
-        {
-            get
-            {
-                return _NombreUsuario;
-            }
-            set
-            {
-                OnNombreUsuarioChanging(value);
-                ReportPropertyChanging("NombreUsuario");
-                _NombreUsuario = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("NombreUsuario");
-                OnNombreUsuarioChanged();
-            }
-        }
-        private global::System.String _NombreUsuario;
-        partial void OnNombreUsuarioChanging(global::System.String value);
-        partial void OnNombreUsuarioChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Contrasena
-        {
-            get
-            {
-                return _Contrasena;
-            }
-            set
-            {
-                OnContrasenaChanging(value);
-                ReportPropertyChanging("Contrasena");
-                _Contrasena = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Contrasena");
-                OnContrasenaChanged();
-            }
-        }
-        private global::System.String _Contrasena;
-        partial void OnContrasenaChanging(global::System.String value);
-        partial void OnContrasenaChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdEstado
-        {
-            get
-            {
-                return _IdEstado;
-            }
-            set
-            {
-                OnIdEstadoChanging(value);
-                ReportPropertyChanging("IdEstado");
-                _IdEstado = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdEstado");
-                OnIdEstadoChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdEstado;
-        partial void OnIdEstadoChanging(Nullable<global::System.Int32> value);
-        partial void OnIdEstadoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdImagen
-        {
-            get
-            {
-                return _IdImagen;
-            }
-            set
-            {
-                OnIdImagenChanging(value);
-                ReportPropertyChanging("IdImagen");
-                _IdImagen = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdImagen");
-                OnIdImagenChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdImagen;
-        partial void OnIdImagenChanging(Nullable<global::System.Int32> value);
-        partial void OnIdImagenChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> IdPerfil
-        {
-            get
-            {
-                return _IdPerfil;
-            }
-            set
-            {
-                OnIdPerfilChanging(value);
-                ReportPropertyChanging("IdPerfil");
-                _IdPerfil = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("IdPerfil");
-                OnIdPerfilChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _IdPerfil;
-        partial void OnIdPerfilChanging(Nullable<global::System.Int32> value);
-        partial void OnIdPerfilChanged();
-
-        #endregion
-
-    
-        #region Propiedades de navegación
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__OrdenComp__IdUsu__0C1BC9F9", "OrdenCompra")]
-        public EntityCollection<OrdenCompra> OrdenCompra
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrdenCompra>("ModelInventario.FK__OrdenComp__IdUsu__0C1BC9F9", "OrdenCompra");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrdenCompra>("ModelInventario.FK__OrdenComp__IdUsu__0C1BC9F9", "OrdenCompra", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__IngresoEg__IdUsu__116A8EFB", "IngresoEgresoCab")]
-        public EntityCollection<IngresoEgresoCab> IngresoEgresoCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEg__IdUsu__116A8EFB", "IngresoEgresoCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<IngresoEgresoCab>("ModelInventario.FK__IngresoEg__IdUsu__116A8EFB", "IngresoEgresoCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__TomaFisic__IdUsu__062DE679", "TomaFisicaCab")]
-        public EntityCollection<TomaFisicaCab> TomaFisicaCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisic__IdUsu__062DE679", "TomaFisicaCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TomaFisicaCab>("ModelInventario.FK__TomaFisic__IdUsu__062DE679", "TomaFisicaCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Transfere__IdUsu__77DFC722", "TransferenciaBodegaCab")]
-        public EntityCollection<TransferenciaBodegaCab> TransferenciaBodegaCab
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__IdUsu__77DFC722", "TransferenciaBodegaCab");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TransferenciaBodegaCab>("ModelInventario.FK__Transfere__IdUsu__77DFC722", "TransferenciaBodegaCab", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("ModelInventario", "FK__Usuario__IdUsuar__3C69FB99", "Persona")]
-        public Persona Persona
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("ModelInventario.FK__Usuario__IdUsuar__3C69FB99", "Persona").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("ModelInventario.FK__Usuario__IdUsuar__3C69FB99", "Persona").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Persona> PersonaReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Persona>("ModelInventario.FK__Usuario__IdUsuar__3C69FB99", "Persona");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Persona>("ModelInventario.FK__Usuario__IdUsuar__3C69FB99", "Persona", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Empresa>("ModelInventario.FK__UnidadMed__IdEmp__2BC97F7C", "Empresa", value);
                 }
             }
         }

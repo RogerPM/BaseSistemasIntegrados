@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPConsultaNomina));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbConsultado = new System.Windows.Forms.ToolStripButton();
             this.gcConsultaNomina = new DevExpress.XtraGrid.GridControl();
@@ -63,7 +64,7 @@
             // 
             this.tsbConsultado.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tsbConsultado.ForeColor = System.Drawing.Color.Black;
-            this.tsbConsultado.Image = global::forms.Properties.Resources._24_aceptar;
+            this.tsbConsultado.Image = ((System.Drawing.Image)(resources.GetObject("tsbConsultado.Image")));
             this.tsbConsultado.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbConsultado.Name = "tsbConsultado";
             this.tsbConsultado.Size = new System.Drawing.Size(88, 22);
@@ -80,6 +81,10 @@
             this.gcConsultaNomina.TabIndex = 30;
             this.gcConsultaNomina.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvConsultaNomina});
+            // 
+            // clsNominaCabBindingSource
+            // 
+            this.clsNominaCabBindingSource.DataSource = typeof(clases.RecursosHumanos.clsNominaCab);
             // 
             // gvConsultaNomina
             // 

@@ -38,13 +38,13 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIdEmpresa = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdArticulo = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colIdPersona = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFechaProduccion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCantidadMinima = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCantidadMaxima = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCantidadActual = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdUnidadMedida = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colIdTipoArticulo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdGrupo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdChasis = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdTipoMotor = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -54,6 +54,7 @@
             this.colIdMarca = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdModelo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdTipoMaterial = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPrecioUnitario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colObservacion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdUsuario = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdEstado = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -102,20 +103,20 @@
             // 
             // clsArticuloBindingSource
             // 
-            this.clsArticuloBindingSource.DataSource = typeof(clases.Taller.clsArticulo);
+            this.clsArticuloBindingSource.DataSource = typeof(clases.Taller.clsArticuloTaller);
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colIdEmpresa,
             this.colIdArticulo,
+            this.colIdPersona,
             this.colDescripcion,
             this.colFechaProduccion,
             this.colCantidadMinima,
             this.colCantidadMaxima,
             this.colCantidadActual,
             this.colIdUnidadMedida,
-            this.colIdTipoArticulo,
             this.colIdGrupo,
             this.colIdChasis,
             this.colIdTipoMotor,
@@ -125,6 +126,7 @@
             this.colIdMarca,
             this.colIdModelo,
             this.colIdTipoMaterial,
+            this.colPrecioUnitario,
             this.colObservacion,
             this.colIdUsuario,
             this.colIdEstado});
@@ -135,15 +137,20 @@
             // 
             this.colIdEmpresa.FieldName = "IdEmpresa";
             this.colIdEmpresa.Name = "colIdEmpresa";
-            this.colIdEmpresa.Visible = true;
-            this.colIdEmpresa.VisibleIndex = 0;
             // 
             // colIdArticulo
             // 
             this.colIdArticulo.FieldName = "IdArticulo";
             this.colIdArticulo.Name = "colIdArticulo";
             this.colIdArticulo.Visible = true;
-            this.colIdArticulo.VisibleIndex = 1;
+            this.colIdArticulo.VisibleIndex = 0;
+            // 
+            // colIdPersona
+            // 
+            this.colIdPersona.FieldName = "IdPersona";
+            this.colIdPersona.Name = "colIdPersona";
+            this.colIdPersona.Visible = true;
+            this.colIdPersona.VisibleIndex = 1;
             // 
             // colDescripcion
             // 
@@ -187,96 +194,76 @@
             this.colIdUnidadMedida.Visible = true;
             this.colIdUnidadMedida.VisibleIndex = 7;
             // 
-            // colIdTipoArticulo
-            // 
-            this.colIdTipoArticulo.FieldName = "IdTipoArticulo";
-            this.colIdTipoArticulo.Name = "colIdTipoArticulo";
-            this.colIdTipoArticulo.Visible = true;
-            this.colIdTipoArticulo.VisibleIndex = 8;
-            // 
             // colIdGrupo
             // 
             this.colIdGrupo.FieldName = "IdGrupo";
             this.colIdGrupo.Name = "colIdGrupo";
-            this.colIdGrupo.Visible = true;
-            this.colIdGrupo.VisibleIndex = 9;
             // 
             // colIdChasis
             // 
             this.colIdChasis.FieldName = "IdChasis";
             this.colIdChasis.Name = "colIdChasis";
-            this.colIdChasis.Visible = true;
-            this.colIdChasis.VisibleIndex = 10;
             // 
             // colIdTipoMotor
             // 
             this.colIdTipoMotor.FieldName = "IdTipoMotor";
             this.colIdTipoMotor.Name = "colIdTipoMotor";
-            this.colIdTipoMotor.Visible = true;
-            this.colIdTipoMotor.VisibleIndex = 11;
             // 
             // colNroPlaca
             // 
             this.colNroPlaca.FieldName = "NroPlaca";
             this.colNroPlaca.Name = "colNroPlaca";
             this.colNroPlaca.Visible = true;
-            this.colNroPlaca.VisibleIndex = 12;
+            this.colNroPlaca.VisibleIndex = 8;
             // 
             // colIdTipoCombustible
             // 
             this.colIdTipoCombustible.FieldName = "IdTipoCombustible";
             this.colIdTipoCombustible.Name = "colIdTipoCombustible";
-            this.colIdTipoCombustible.Visible = true;
-            this.colIdTipoCombustible.VisibleIndex = 13;
             // 
             // colIdColor
             // 
             this.colIdColor.FieldName = "IdColor";
             this.colIdColor.Name = "colIdColor";
-            this.colIdColor.Visible = true;
-            this.colIdColor.VisibleIndex = 14;
             // 
             // colIdMarca
             // 
             this.colIdMarca.FieldName = "IdMarca";
             this.colIdMarca.Name = "colIdMarca";
-            this.colIdMarca.Visible = true;
-            this.colIdMarca.VisibleIndex = 15;
             // 
             // colIdModelo
             // 
             this.colIdModelo.FieldName = "IdModelo";
             this.colIdModelo.Name = "colIdModelo";
-            this.colIdModelo.Visible = true;
-            this.colIdModelo.VisibleIndex = 16;
             // 
             // colIdTipoMaterial
             // 
             this.colIdTipoMaterial.FieldName = "IdTipoMaterial";
             this.colIdTipoMaterial.Name = "colIdTipoMaterial";
-            this.colIdTipoMaterial.Visible = true;
-            this.colIdTipoMaterial.VisibleIndex = 17;
+            // 
+            // colPrecioUnitario
+            // 
+            this.colPrecioUnitario.FieldName = "PrecioUnitario";
+            this.colPrecioUnitario.Name = "colPrecioUnitario";
+            this.colPrecioUnitario.Visible = true;
+            this.colPrecioUnitario.VisibleIndex = 9;
             // 
             // colObservacion
             // 
             this.colObservacion.FieldName = "Observacion";
             this.colObservacion.Name = "colObservacion";
             this.colObservacion.Visible = true;
-            this.colObservacion.VisibleIndex = 18;
+            this.colObservacion.VisibleIndex = 10;
             // 
             // colIdUsuario
             // 
             this.colIdUsuario.FieldName = "IdUsuario";
             this.colIdUsuario.Name = "colIdUsuario";
-            this.colIdUsuario.Visible = true;
-            this.colIdUsuario.VisibleIndex = 19;
             // 
             // colIdEstado
             // 
             this.colIdEstado.FieldName = "IdEstado";
             this.colIdEstado.Name = "colIdEstado";
-            this.colIdEstado.Visible = true;
-            this.colIdEstado.VisibleIndex = 20;
             // 
             // frmConsultarArticulo
             // 
@@ -304,17 +291,17 @@
         private System.Windows.Forms.ToolStripButton btnSelec;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private System.Windows.Forms.BindingSource clsArticuloBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.BindingSource clsArticuloBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colIdEmpresa;
         private DevExpress.XtraGrid.Columns.GridColumn colIdArticulo;
+        private DevExpress.XtraGrid.Columns.GridColumn colIdPersona;
         private DevExpress.XtraGrid.Columns.GridColumn colDescripcion;
         private DevExpress.XtraGrid.Columns.GridColumn colFechaProduccion;
         private DevExpress.XtraGrid.Columns.GridColumn colCantidadMinima;
         private DevExpress.XtraGrid.Columns.GridColumn colCantidadMaxima;
         private DevExpress.XtraGrid.Columns.GridColumn colCantidadActual;
         private DevExpress.XtraGrid.Columns.GridColumn colIdUnidadMedida;
-        private DevExpress.XtraGrid.Columns.GridColumn colIdTipoArticulo;
         private DevExpress.XtraGrid.Columns.GridColumn colIdGrupo;
         private DevExpress.XtraGrid.Columns.GridColumn colIdChasis;
         private DevExpress.XtraGrid.Columns.GridColumn colIdTipoMotor;
@@ -324,6 +311,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colIdMarca;
         private DevExpress.XtraGrid.Columns.GridColumn colIdModelo;
         private DevExpress.XtraGrid.Columns.GridColumn colIdTipoMaterial;
+        private DevExpress.XtraGrid.Columns.GridColumn colPrecioUnitario;
         private DevExpress.XtraGrid.Columns.GridColumn colObservacion;
         private DevExpress.XtraGrid.Columns.GridColumn colIdUsuario;
         private DevExpress.XtraGrid.Columns.GridColumn colIdEstado;

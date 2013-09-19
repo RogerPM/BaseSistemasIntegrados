@@ -29,29 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSesion));
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnCambiar = new DevExpress.XtraEditors.SimpleButton();
             this.gridLookUpEdit1 = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.clsEmpresaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colnombreComercial = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colrazonSocial = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.clsEmpresaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsEmpresaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // textEdit1
@@ -76,10 +78,11 @@
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Right;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
-            this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(249, 0);
+            this.toolStripButton2,
+            this.toolStripButton3});
+            this.toolStrip1.Location = new System.Drawing.Point(241, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(24, 153);
+            this.toolStrip1.Size = new System.Drawing.Size(32, 153);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -89,7 +92,7 @@
             this.toolStripButton1.Image = global::forms.Properties.Resources._24_aceptar;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 20);
             this.toolStripButton1.Text = "Continuar";
             this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
@@ -100,9 +103,19 @@
             this.toolStripButton2.Image = global::forms.Properties.Resources._24_cancelar;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(21, 20);
+            this.toolStripButton2.Size = new System.Drawing.Size(29, 20);
             this.toolStripButton2.Text = "Regresar al inicio";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(29, 20);
+            this.toolStripButton3.Text = "Acerca de TECA";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // groupControl1
             // 
@@ -116,7 +129,7 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(249, 153);
+            this.groupControl1.Size = new System.Drawing.Size(241, 153);
             this.groupControl1.TabIndex = 5;
             this.groupControl1.Text = "Sesión";
             // 
@@ -142,6 +155,10 @@
             this.gridLookUpEdit1.Properties.View = this.gridLookUpEdit1View;
             this.gridLookUpEdit1.Size = new System.Drawing.Size(139, 20);
             this.gridLookUpEdit1.TabIndex = 2;
+            // 
+            // clsEmpresaBindingSource
+            // 
+            this.clsEmpresaBindingSource.DataSource = typeof(clases.Seguridad.clsEmpresa);
             // 
             // gridLookUpEdit1View
             // 
@@ -193,10 +210,6 @@
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Nombre de usuario:";
             // 
-            // clsEmpresaBindingSource
-            // 
-            this.clsEmpresaBindingSource.DataSource = typeof(clases.Seguridad.clsEmpresa);
-            // 
             // frmSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,8 +231,8 @@
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsEmpresaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,6 +255,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colnombreComercial;
         private DevExpress.XtraGrid.Columns.GridColumn colrazonSocial;
         private DevExpress.XtraEditors.SimpleButton btnCambiar;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
 
     }
 }

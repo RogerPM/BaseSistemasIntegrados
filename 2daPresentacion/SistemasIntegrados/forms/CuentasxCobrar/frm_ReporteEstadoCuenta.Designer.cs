@@ -404,6 +404,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "frm_ReporteEstadoCuenta";
             this.Text = "Reporte Estado de Cuenta";
+            this.Load += new System.EventHandler(this.frm_ReporteEstadoCuenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();

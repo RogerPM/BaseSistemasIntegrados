@@ -29,12 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMConsultaEmpleado));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbConsultado = new System.Windows.Forms.ToolStripButton();
+            //this.personaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            //this.recursosHumanosConsultaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            //this.recursosHumanosConsultaPersonaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            //this.consultaPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            //this.clsDatosPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            //this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            //this.recursosHumanosConsultaPersonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clsPersonaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gdPersona = new DevExpress.XtraGrid.GridControl();
-            this.clsPersonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gvEmpleado = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.clsPersonaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.colIdPersona = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdentificacion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdTipoPersona = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,10 +61,17 @@
             this.colIdEstado = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colfoto = new DevExpress.XtraGrid.Columns.GridColumn();
             this.toolStrip1.SuspendLayout();
+            //((System.ComponentModel.ISupportInitialize)(this.personaBindingSource1)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.recursosHumanosConsultaPersonaBindingSource)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.recursosHumanosConsultaPersonaBindingSource2)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.consultaPersonaBindingSource)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.clsDatosPersonaBindingSource)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.recursosHumanosConsultaPersonaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsPersonaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdPersona)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsPersonaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvEmpleado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsPersonaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -74,12 +89,30 @@
             // 
             this.tsbConsultado.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tsbConsultado.ForeColor = System.Drawing.Color.Black;
-            this.tsbConsultado.Image = global::forms.Properties.Resources._24_aceptar;
+            this.tsbConsultado.Image = ((System.Drawing.Image)(resources.GetObject("tsbConsultado.Image")));
             this.tsbConsultado.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbConsultado.Name = "tsbConsultado";
             this.tsbConsultado.Size = new System.Drawing.Size(88, 22);
             this.tsbConsultado.Text = "Consultado";
             this.tsbConsultado.Click += new System.EventHandler(this.tsbConsultado_Click_1);
+            // 
+            // recursosHumanosConsultaPersonaBindingSource2
+            // 
+            //this.recursosHumanosConsultaPersonaBindingSource2.DataMember = "RecursosHumanos.ConsultaPersona";
+            //this.recursosHumanosConsultaPersonaBindingSource2.DataSource = this.consultaPersonaBindingSource;
+            // 
+            // clsDatosPersonaBindingSource
+            // 
+            //this.clsDatosPersonaBindingSource.DataSource = typeof(datos.RecursosHumanos.clsDatosPersona);
+            // 
+            // personaBindingSource
+            // 
+            //this.personaBindingSource.DataMember = "Persona";
+            // 
+            // recursosHumanosConsultaPersonaBindingSource1
+            // 
+            //this.recursosHumanosConsultaPersonaBindingSource1.DataMember = "RecursosHumanos.ConsultaPersona";
+            //this.recursosHumanosConsultaPersonaBindingSource1.DataSource = this.consultaPersonaBindingSource;
             // 
             // clsPersonaBindingSource
             // 
@@ -95,10 +128,6 @@
             this.gdPersona.TabIndex = 27;
             this.gdPersona.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvEmpleado});
-            // 
-            // clsPersonaBindingSource1
-            // 
-            this.clsPersonaBindingSource1.DataSource = typeof(clases.RecursosHumanos.clsPersona);
             // 
             // gvEmpleado
             // 
@@ -122,6 +151,10 @@
             this.colfoto});
             this.gvEmpleado.GridControl = this.gdPersona;
             this.gvEmpleado.Name = "gvEmpleado";
+            // 
+            // clsPersonaBindingSource1
+            // 
+            this.clsPersonaBindingSource1.DataSource = typeof(clases.RecursosHumanos.clsPersona);
             // 
             // colIdPersona
             // 
@@ -244,10 +277,17 @@
             this.Load += new System.EventHandler(this.frmMConsultaEmpleado_Load_1);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+           // ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource1)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.recursosHumanosConsultaPersonaBindingSource)).EndInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.recursosHumanosConsultaPersonaBindingSource2)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.consultaPersonaBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.clsDatosPersonaBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.recursosHumanosConsultaPersonaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsPersonaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdPersona)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clsPersonaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvEmpleado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsPersonaBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
