@@ -2224,12 +2224,13 @@ create table CuentaxPagar.OrdenPagoCab
 (
 	NumOrdenPago 			int not null,
 	fechadeEmision			date not null,
-	IdPersona 				int null,
+	IdEmpresaServicio 		varchar(13) not null,
 	Estado 					int not null,
 	TotalPagar				numeric(10,2) not null,
 	TipoOrdenPago			char not null,
 	IdUsuario 				int not null,
     IdEmpresa 				int not null,
+    foreign key (IdEmpresaServicio, IdEmpresa) references CuentaxPagar.EmpresaServicio,
     foreign key (IdUsuario)references Seguridad.Usuario,
     foreign key (IdEmpresa)references Seguridad.Empresa, 
 	primary key (NumOrdenPago, IdEmpresa) 
